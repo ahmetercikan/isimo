@@ -1,0 +1,83 @@
+import { Minus, Plus } from 'lucide-react';
+import { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { Doodles } from '../components/Doodles';
+import { SettingsForm } from '../components/SettingsForm';
+import { TopBar, useToast } from '../components/ui';
+import { BOT_LEVELS, BOT_PROFILES } from '../game/bots';
+import { sfx } from '../lib/sfx';
+import { useGame } from '../store/useGame';
+import { useProfile } from '../store/useProfile';
+
+export default function Setup() {
+  const nav = useNavigate();
+  const bots = useParams().mode === 'bot';
+  const p = useProfile();
+  const [settings, setSettings] = useState(p.settings);
+  const [count, setCount] = useState(p.bots.count);
+  const [level, setLevel] = useState(p.bots.level);
+  const [busy, setBusy] = useState(false);
+  const [toast, show] = useToast();
+
+  const go = async () => {
+    if (busy) return;
+    sfx.pop();
+    p.set({ settings, bots: { count, level } });
+    if (bots) {
+      useGame.getState().startBots(settings, count, level);
+      nav('/oyun', { replace: true });
+      return;
+    }
+    setBusy(true);
+    try {
+      const { createRoom } = await import('../online/firebase');
+      const t = await createRoom({ name: p.name, avatar: p.avatar, color: p.color }, settings);
+      p.set({ lastRoom: { code: t.code, at: Date.now() } });
+      useGame.getState().attach(t);
+      nav('/oyun', { replace: true });
+    } catch {
+      show('Oda kurulamadı. İnternet bağlantını kontrol et.');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <main className="bg page setup">
+      <Doodles variant={2} />
+      <TopBar title={bots ? 'Botlara Karşı' : 'Oda Kur'} />
+
+      {bots && (
+        <section className="paper-card setup__bots rise">
+          <div className="settings__title"><h3>Rakipler</h3></div>
+          <div className="bot-row">
+            <button className="round-btn round-btn--soft" aria-label="Azalt" disabled={count <= 1} onClick={() => (sfx.tap(), setCount(count - 1))}><Minus size={22} strokeWidth={3} /></button>
+            <div className="bot-faces">
+              {BOT_PROFILES.slice(0, count).map((b, i) => (
+                <span key={b.name} className="bot-face pop-in" style={{ background: b.color, animationDelay: `${i * 0.03}s` }}>{b.avatar}</span>
+              ))}
+            </div>
+            <button className="round-btn round-btn--soft" aria-label="Arttır" disabled={count >= 9} onClick={() => (sfx.tap(), setCount(count + 1))}><Plus size={22} strokeWidth={3} /></button>
+          </div>
+          <p className="muted bot-count">{count} bot</p>
+          <div className="seg">
+            {BOT_LEVELS.map((l) => (
+              <button key={l.level} className={`seg__btn ${level === l.level ? 'is-on' : ''}`} onClick={() => (sfx.tap(), setLevel(l.level))}>{l.label}</button>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <section className="paper-card setup__card rise" style={{ animationDelay: '0.06s' }}>
+        <SettingsForm value={settings} onChange={setSettings} />
+      </section>
+
+      <div className="page__cta page__cta--sticky">
+        <button className="pill pill--big" onClick={go} disabled={busy}>
+          {busy ? 'Oda kuruluyor…' : bots ? 'Oyunu Başlat' : 'Odayı Kur'}
+        </button>
+      </div>
+      {toast}
+    </main>
+  );
+}

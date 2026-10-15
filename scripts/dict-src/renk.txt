@@ -1,0 +1,24 @@
+ak|al|açık mavi|açık yeşil|açık pembe|açık gri|açık kahverengi|altın sarısı|altın|amber|antrasit|ateş kırmızısı|avokado yeşili|akuamarin|ametist|aşı boyası|açık lacivert|abanoz
+beyaz|bej|bordo|buz mavisi|bal rengi|bebek mavisi|bebek pembesi|bakır|bronz|boz|bal köpüğü|bezelye yeşili
+camgöbeği|ceviz rengi
+çivit mavisi|çimen yeşili|çam yeşili|çikolata rengi|çağla yeşili|çivit
+deniz mavisi|deve tüyü|dore|deniz yeşili|denim mavisi
+eflatun|ekru|elma yeşili|erguvan|erguvani|ela|elektrik mavisi
+fuşya|füme|fıstık yeşili|fildişi|firuze
+gri|gümüş|gül kurusu|gülkurusu|gece mavisi|gök mavisi|gümüşi|gümüş grisi|gül pembesi
+haki|hardal|hardal sarısı
+indigo|inci beyazı
+kırmızı|kahverengi|kara|krem|kestane|kiremit rengi|kızıl|koyu mavi|koyu yeşil|kum rengi|kanarya sarısı|karamel|kavuniçi|kobalt mavisi|kraliyet mavisi|kül rengi|kurşuni|kahve rengi|koyu kırmızı|koyu gri|krem rengi|kurşun grisi|kayısı rengi|kiremit
+lacivert|lila|limon sarısı|leylak rengi|lavanta rengi|lal
+mavi|mor|mürdüm|mercan|menekşe|magenta|maun|mint yeşili|metalik gri|mercan kırmızısı
+nar çiçeği|nefti|nil yeşili|nohudi|neon yeşili
+oranj|okyanus mavisi|orman yeşili
+ördekbaşı|ördek başı
+pembe|petrol mavisi|platin|pudra|pudra pembesi|portakal rengi|pas rengi|pastel mavi|pastel pembe|patlıcan moru|petrol yeşili
+sarı|siyah|saks mavisi|somon|sütlü kahve|safran sarısı|sedef|sepya|saman sarısı|su yeşili|süt beyazı|safir mavisi|siyah beyaz?
+şarap kırmızısı|şampanya rengi|şeftali rengi|şeker pembe|şarabi|şampanya
+turuncu|turkuaz|toprak rengi|taba|tarçın rengi|tavşan kanı|tuğla rengi|tozpembe|toz pembe
+ultramarin|uçuk mavi|uçuk pembe|uçuk sarı|uçuk yeşil
+vişne çürüğü|vişne rengi|vizon
+yeşil|yavruağzı|yavru ağzı|yağ yeşili|yosun yeşili|yaprak yeşili|yakut|yakut kırmızısı
+zeytin yeşili|zümrüt yeşili|zümrüt|zeytuni|zinober

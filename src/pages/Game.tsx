@@ -1,0 +1,107 @@
+/** Oyun ekranı: aşamaya göre lobi, harf, yazma, değerlendirme, puanlar ve final. */
+import { X } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
+import { Confirm } from '../components/ui';
+import { Doodles } from '../components/Doodles';
+import { Final } from '../game/screens/Final';
+import { Lobby } from '../game/screens/Lobby';
+import { Review } from '../game/screens/Review';
+import { Scores } from '../game/screens/Scores';
+import { Spin } from '../game/screens/Spin';
+import { Write } from '../game/screens/Write';
+import { sfx } from '../lib/sfx';
+import { preloadDicts, useGame } from '../store/useGame';
+
+export default function Game() {
+  const nav = useNavigate();
+  const t = useGame((g) => g.t);
+  const s = useGame((g) => g.s);
+  const lost = useGame((g) => g.lost);
+  const [ask, setAsk] = useState(false);
+  const joinedPlayers = useRef<number | null>(null);
+
+  useEffect(() => {
+    const h = () => setAsk(true);
+    window.addEventListener('game-back', h);
+    return () => window.removeEventListener('game-back', h);
+  }, []);
+
+  // Sözlükler oyun başlamadan yüklensin
+  const catKey = s?.settings.cats.map((c) => c.id).join(',');
+  useEffect(() => void (s && preloadDicts(s)), [catKey]);
+
+  // Yeni oyuncu katılınca ses
+  const count = s ? Object.values(s.players).filter((p) => !p.left).length : 0;
+  useEffect(() => {
+    if (joinedPlayers.current !== null && count > joinedPlayers.current) sfx.join();
+    joinedPlayers.current = count;
+  }, [count]);
+
+  if (!t) return <Navigate to="/" replace />;
+
+  const leave = async () => {
+    await useGame.getState().leave();
+    nav('/', { replace: true });
+  };
+
+  if (lost)
+    return (
+      <main className="bg page game-lost">
+        <Doodles variant={2} />
+        <div className="paper-card lost-card pop-in">
+          <span className="lost-card__emoji">🔌</span>
+          <h2 className="title-lg">Oda kapandı</h2>
+          <p className="muted">Herkes ayrıldı ya da bağlantı koptu.</p>
+          <button className="pill" onClick={leave}>Ana Sayfa</button>
+        </div>
+      </main>
+    );
+
+  if (s && t.kind === 'online' && !s.players[t.me])
+    return (
+      <main className="bg page game-lost">
+        <Doodles variant={2} />
+        <div className="paper-card lost-card pop-in">
+          <span className="lost-card__emoji">👋</span>
+          <h2 className="title-lg">Odadan çıkarıldın</h2>
+          <p className="muted">Ev sahibi seni bu odadan çıkardı.</p>
+          <button className="pill" onClick={leave}>Ana Sayfa</button>
+        </div>
+      </main>
+    );
+
+  if (!s)
+    return (
+      <main className="bg page page-wait">
+        <div className="loader" aria-label="Yükleniyor" />
+      </main>
+    );
+
+  const phase = s.ctl.phase;
+  return (
+    <main className={`bg page game game--${phase}`}>
+      <Doodles variant={s.ctl.round % 4} />
+      <button className="round-btn round-btn--soft game__exit" aria-label="Oyundan çık" onClick={() => (sfx.tap(), setAsk(true))}>
+        <X size={24} strokeWidth={2.8} />
+      </button>
+      {phase === 'lobby' && <Lobby t={t} s={s} />}
+      {phase === 'spin' && <Spin t={t} s={s} />}
+      {phase === 'write' && <Write key={s.ctl.round} t={t} s={s} />}
+      {phase === 'review' && <Review t={t} s={s} />}
+      {phase === 'scores' && <Scores t={t} s={s} />}
+      {phase === 'final' && <Final t={t} s={s} onExit={leave} />}
+      {ask && (
+        <Confirm
+          title="Oyundan çıkılsın mı?"
+          text={t.kind === 'online' && phase !== 'lobby' ? 'Puanların tabloda kalır; aynı kodla geri dönebilirsin.' : undefined}
+          yes="Çık"
+          no="Kal"
+          danger
+          onYes={leave}
+          onNo={() => setAsk(false)}
+        />
+      )}
+    </main>
+  );
+}

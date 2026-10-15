@@ -1,0 +1,26 @@
+ayak|ağız|alın|avuç|ayak bileği|ayak parmağı|ayak tabanı|aort|apandis|akciğer|atardamar|adem elması|alt çene|adale|aşil tendonu|alyuvar|akyuvar|ayak sırtı|avuç içi|ayak tırnağı|alt dudak|alveol|ayak başparmağı
+baş|boyun|burun|bel|bacak|bilek|böbrek|bağırsak|beyin|bıyık|baldır|bademcik|bel kemiği|burun deliği|başparmak|bronş|beyincik|boğaz|böbreküstü bezi|burun kemiği|beyin sapı|beyin zarı|beden|bağ doku|bilek kemiği
+ciğer|cilt
+çene|çene kemiği|çehre|çil|çene eklemi
+dil|diş|dudak|dirsek|diz|damar|dalak|dizkapağı|diz kapağı|deri|diyafram|diş eti|dişeti|doku|diş minesi|dil kemiği|dış kulak|diş kökü
+el|ense|eklem|elmacık kemiği|el bileği|el ayası|el sırtı|el parmağı|epidermis|el tırnağı
+femur|farinks|fibula
+göz|göğüs|gırtlak|göbek|gözbebeği|göz bebeği|göz kapağı|gözkapağı|gözyaşı bezi|göğüs kafesi|gövde|göz akı|gerdan|gamze|göz çukuru|göğüs kemiği|göz merceği
+hücre|hipofiz|hançere|hipotalamus|humerus|hava kesesi
+ilik|iskelet|iris|iç kulak|işaret parmağı|ince bağırsak|idrar kesesi|incik|incik kemiği|iç organlar|iç kulak?
+kol|kafa|kalp|karın|kulak|kirpik|kaş|kaburga|karaciğer|kalça|kas|kemik|kafatası|kulak memesi|kulak zarı|kulak kepçesi|küçük parmak|kıkırdak|kılcal damar|kalın bağırsak|kan|kan damarı|kornea|köprücük kemiği|kürek kemiği|kuyruk sokumu|kıl|kemik iliği|kalp kapakçığı|karın kası|kasık|kaval kemiği|kulak kanalı|kafa derisi|kalp kası|kulak yolu|kulak salyangozu|kalça kemiği|kaş kemiği|kalın kemik? |kas lifi
+lenf|lenf düğümü|lenf bezi|lökosit
+mide|mesane|menisküs|mukoza|mercek|mafsal|mide zarı?
+nefes borusu|nöron|nabız?
+omuz|omurga|omurilik|omur|orta kulak|orta parmak|omuz başı|omuz kemiği|onikiparmak bağırsağı|organ
+ön kol|öd kesesi|özofagus|ön diş
+parmak|pankreas|parmak ucu|pazı|parmak boğumu|pelvis|pupilla|pazı kası|perçem|parmak eklemi
+retina|radius
+saç|sakal|sırt|sinir|safra kesesi|sternum|sinüs|sinir hücresi|saç teli|saç kökü|sindirim sistemi|sarı nokta|salgı bezi|soluk borusu|sinir sistemi|serçe parmak|sol karıncık|sağ karıncık|sol kulakçık|sağ kulakçık
+şakak|şah damarı|şakak kemiği
+tırnak|topuk|taban|tendon|tükürük bezi|tiroid|tiroit bezi|timus|toplardamar|tüy|ter bezi|tepe|trakea|tat tomurcuğu|tırnak eti|tibia|tepe kemiği?
+uyluk|uyluk kemiği|uvula
+üst dudak|üst çene|üreter
+vücut|vertebra
+yüz|yanak|yemek borusu|yürek|yüzük parmağı|yutak|yağ bezi|yumruk|yağ dokusu|yanak kemiği?
+zülüf

@@ -1,0 +1,15 @@
+node_modules
+dist
+.render
+*.log
+.DS_Store
+.env*.local
+
+# Android imza anahtarı bilgileri (asla depoya girmez)
+android/keystore.properties
+*.jks
+*.keystore
+
+# Mağaza paketleri
+store/release/
+*.tsbuildinfo

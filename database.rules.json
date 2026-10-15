@@ -1,0 +1,69 @@
+{
+  "rules": {
+    "isimsehir": {
+      "rooms": {
+        "$code": {
+          ".read": "auth != null",
+          ".write": "auth != null && ((!data.exists() && newData.child('host').val() === auth.uid) || (data.exists() && !newData.exists() && data.child('players').child(auth.uid).exists()))",
+          ".validate": "$code.length <= 8",
+          "host": {
+            ".write": "auth != null && data.parent().child('players').child(auth.uid).exists()",
+            ".validate": "newData.isString() && newData.parent().child('players').child(newData.val()).exists()"
+          },
+          "settings": {
+            ".write": "auth != null && data.parent().child('host').val() === auth.uid",
+            ".validate": "newData.hasChildren(['cats', 'rounds', 'time']) && newData.child('rounds').isNumber() && newData.child('rounds').val() <= 10 && newData.child('time').isNumber() && newData.child('time').val() <= 300"
+          },
+          "ctl": {
+            ".write": "auth != null && data.parent().child('players').child(auth.uid).exists()",
+            ".validate": "newData.hasChildren(['phase', 'round', 'seq'])"
+          },
+          "players": {
+            "$pid": {
+              ".write": "auth != null && ($pid === auth.uid || (!newData.exists() && data.parent().parent().child('players').child(auth.uid).exists()))",
+              ".validate": "!newData.exists() || (newData.child('name').isString() && newData.child('name').val().length <= 20 && newData.child('avatar').isString() && newData.child('avatar').val().length <= 16)"
+            }
+          },
+          "answers": {
+            ".write": "auth != null && !newData.exists() && data.parent().child('players').child(auth.uid).exists()",
+            "$r": {
+              "$pid": {
+                ".write": "auth != null && $pid === auth.uid",
+                "$cat": { ".validate": "newData.isString() && newData.val().length <= 40" }
+              }
+            }
+          },
+          "votes": {
+            ".write": "auth != null && !newData.exists() && data.parent().child('players').child(auth.uid).exists()",
+            "$r": { "$cat": { "$target": { "$voter": {
+              ".write": "auth != null && $voter === auth.uid",
+              ".validate": "newData.val() === true"
+            } } } }
+          },
+          "ready": {
+            ".write": "auth != null && !newData.exists() && data.parent().child('players').child(auth.uid).exists()",
+            "$r": { "$pid": { ".write": "auth != null && $pid === auth.uid", ".validate": "newData.isNumber()" } }
+          },
+          "results": {
+            ".write": "auth != null && data.parent().child('players').child(auth.uid).exists()"
+          },
+          "reactions": {
+            ".write": "auth != null && data.parent().child('players').child(auth.uid).exists()",
+            "$id": { ".validate": "!newData.exists() || (newData.child('e').isString() && newData.child('e').val().length <= 8)" }
+          },
+          "$other": { ".validate": "$other === 'code' || $other === 'created'" }
+        }
+      },
+      "ink": {
+        "$code": {
+          ".read": "auth != null",
+          ".write": "auth != null && !newData.exists() && root.child('isimsehir/rooms/' + $code + '/players/' + auth.uid).exists()",
+          "$r": { "$pid": { "$cat": {
+            ".write": "auth != null && $pid === auth.uid",
+            ".validate": "newData.isString() && newData.val().length <= 4000"
+          } } }
+        }
+      }
+    }
+  }
+}

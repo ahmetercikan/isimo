@@ -1,0 +1,57 @@
+# iller
+Adana|Adıyaman|Afyonkarahisar|Ağrı|Aksaray|Amasya|Ankara|Antalya|Ardahan|Artvin|Aydın|Balıkesir|Bartın|Batman|Bayburt|Bilecik|Bingöl|Bitlis|Bolu|Burdur|Bursa|Çanakkale|Çankırı|Çorum|Denizli|Diyarbakır|Düzce|Edirne|Elazığ|Erzincan|Erzurum|Eskişehir|Gaziantep|Giresun|Gümüşhane|Hakkari|Hatay|Iğdır|Isparta|İstanbul|İzmir|Kahramanmaraş|Karabük|Karaman|Kars|Kastamonu|Kayseri|Kırıkkale|Kırklareli|Kırşehir|Kilis|Kocaeli|Konya|Kütahya|Malatya|Manisa|Mardin|Mersin|Muğla|Muş|Nevşehir|Niğde|Ordu|Osmaniye|Rize|Sakarya|Samsun|Siirt|Sinop|Sivas|Şanlıurfa|Şırnak|Tekirdağ|Tokat|Trabzon|Tunceli|Uşak|Van|Yalova|Yozgat|Zonguldak
+Afyon|Urfa|Antep|Maraş|İzmit|Adapazarı|Antakya|İçel
+# ilçe/kasaba
+Alanya|Akçakoca|Akşehir|Alaçatı|Amasra|Anamur|Ayvalık|Avanos|Akhisar|Ahlat|Alaşehir|Arsuz|Ataşehir|Avcılar|Ayaş|Adilcevaz|Akçaabat|Akyazı|Alaplı|Ardeşen|Arhavi|Altınoluk|Akçay|Arnavutköy|Atakum|Altındağ|Aliağa|Ağva|Ağlasun|Arguvan|Akseki|Ayancık|Ahırlı
+Bodrum|Bandırma|Bafra|Bergama|Beykoz|Beşiktaş|Beyoğlu|Bakırköy|Bağcılar|Bayrampaşa|Beylikdüzü|Büyükçekmece|Burhaniye|Bozcaada|Bulancak|Birecik|Bozüyük|Bornova|Buca|Bayındır|Biga|Bismil|Beypazarı|Beyşehir|Boyabat|Bucak|Bulanık|Babaeski|Bolvadin|Belek|Bozova|Bafra
+Cerablus|Cebu|Ceyhan|Cizre|Cide|Cihanbeyli|Ceylanpınar|Cumayeri|Cumayeri
+Çeşme|Çorlu|Çatalca|Çerkezköy|Çine|Çan|Çaycuma|Çarşamba|Çayeli|Çumra|Çivril|Çankaya|Çiğli|Çekmeköy|Çubuk|Çermik|Çaldıran|Çemişgezek|Çameli|Çaykara|Çınarcık|Çatalzeytin|Çağlayancerit
+Datça|Dalaman|Dalyan|Didim|Dikili|Divriği|Doğubayazıt|Dörtyol|Düziçi|Develi|Demre|Dinar|Devrek|Doğanşehir|Diyadin|Dursunbey|Derince|Darıca|Dilovası|Dicle|Dargeçit|Dinar
+Edremit|Eğirdir|Erdek|Ereğli|Ergani|Eyüpsultan|Elbistan|Emirdağ|Esenyurt|Esenler|Etimesgut|Eşme|Erciş|Eleşkirt|Elmalı|Emet|Espiye|Erbaa|Eruh|Ezine|Erdemli|Efeler|Ermenek
+Fethiye|Finike|Foça|Fatsa|Fatih|Feke|Ferizli|Fındıklı|Felahiye
+Gebze|Gelibolu|Gemlik|Gerede|Göcek|Gölcük|Gönen|Göreme|Görele|Güzelbahçe|Gaziemir|Gaziosmanpaşa|Güngören|Gülnar|Gökçeada|Gördes|Gediz|Germencik|Geyve|Göksun|Gürün|Gemerek|Gerze|Gazipaşa|Gölbaşı|Gümüşhacıköy|Gürpınar|Güroymak
+Hopa|Harran|Hendek|Hayrabolu|Hınıs|Hilvan|Hizan|Havza|Hekimhan|Haymana|Hadim|Halfeti|Hasankeyf|Hozat|Hisarcık|Hacıbektaş|Hassa|Havran
+Ilgın|Ilgaz|Ilıca|Iğneada
+İnegöl|İskenderun|İznik|İpsala|İdil|İslahiye|İnebolu|İliç|İspir|İskilip|İmamoğlu|İncirliova|İvrindi|İkizdere|İnönü|İzmit|İscehisar
+Kuşadası|Kemer|Kaş|Kalkan|Köyceğiz|Kadıköy|Kartal|Kağıthane|Küçükçekmece|Karşıyaka|Konak|Kemalpaşa|Kozan|Kadirli|Kızıltepe|Keşan|Kumluca|Karamürsel|Kandıra|Kırkağaç|Kula|Kızılcahamam|Keçiören|Kahta|Kangal|Kocasinan|Kulu|Karacabey|Keles|Kestel|Kozlu|Kelkit|Kalecik|Kapaklı|Kemaliye|Kağızman|Karasu|Kartepe|Kırıkhan
+Lapseki|Lüleburgaz|Lice|Laçin|Ladik
+Marmaris|Manavgat|Milas|Mudanya|Mudurnu|Mut|Malkara|Menemen|Menderes|Merzifon|Midyat|Mustafakemalpaşa|Maltepe|Mamak|Melikgazi|Mazıdağı|Mihalıççık|Mecitözü|Muradiye|Mucur|Mezitli|Merkezefendi|Malazgirt
+Nizip|Nazilli|Niksar|Nusaybin|Nallıhan|Narlıdere|Nilüfer|Nurdağı|Nazımiye|Nusaybin
+Ortaca|Osmancık|Olur|Oltu|Ovacık|Of|Orhangazi|Orhaneli|Osmaneli|Osmangazi|Odunpazarı|Ortahisar|Onikişubat|Oğuzeli
+Ödemiş|Ömerli|Özalp|Ören|Ölüdeniz|Ünye
+Pamukkale|Patnos|Perşembe|Polatlı|Pazar|Pazarcık|Pendik|Pınarbaşı|Pertek|Pozantı|Pülümür|Palandöken|Pasinler|Pervari|Pazaryeri|Pütürge
+Reşadiye|Reyhanlı|Refahiye
+Safranbolu|Side|Silifke|Sapanca|Sarıyer|Seferihisar|Selçuk|Söke|Siverek|Suruç|Sarıkamış|Silivri|Simav|Sorgun|Suluova|Susurluk|Sındırgı|Sultanbeyli|Sancaktepe|Sultangazi|Seyhan|Sarıçam|Selçuklu|Serik|Salihli|Silopi|Sungurlu|Suşehri|Sandıklı|Saray
+Şile|Şişli|Şavşat|Şarköy|Şereflikoçhisar|Şebinkarahisar|Şuhut|Şarkışla|Şemdinli|Şahinbey|Şehitkamil|Şenkaya|Şirvan|Şefaatli
+Tarsus|Tatvan|Turgutlu|Tire|Torbalı|Tosya|Turhal|Taşköprü|Tavşanlı|Tavas|Tefenni|Tercan|Tirebolu|Tonya|Tuzla|Tuşba|Tepebaşı|Tortum|Toroslar|Tomarza|Taşova
+Urla|Uzunköprü|Ulus|Uludere|Ulubey|Ula|Ulukışla|Uzundere|Ulaş|Uzungöl|Uşak
+Ürgüp|Üsküdar|Ümraniye|Üzümlü|Ünye|Ürgüp
+Vakfıkebir|Viranşehir|Vezirköprü|Varto|Vize|Vezirhan
+Yalvaç|Yenişehir|Yomra|Yerköy|Yeşilyurt|Yahyalı|Yüksekova|Yatağan|Yenice|Yunusemre|Yıldırım|Yüreğir|Yenimahalle|Yakutiye|Yığılca|Yumurtalık|Yusufeli
+Zile|Zara|Zeytinburnu|Zeytinbağı
+# dünya şehirleri
+Amsterdam|Atina|Abu Dabi|Adelaide|Addis Ababa|Akra|Antwerp|Asuncion|Astana|Aşkabat|Auckland|Atlanta|Agra|Ankara|Antalya
+Bakü|Berlin|Barselona|Belgrad|Brüksel|Budapeşte|Bükreş|Bern|Bağdat|Beyrut|Bangkok|Boston|Bombay|Bordo|Bratislava|Buenos Aires|Bogota|Brasilia|Bonn|Bremen|Birmingham|Bristol|Batum|Bişkek|Bologna|Bari|Basra|Bayreuth|Busan
+Cenevre|Cezayir|Cidde|Cakarta|Cebelitarık|Cenova|Canberra|Cardiff|Cannes|Cancun
+Dublin|Delhi|Dakka|Dakar|Doha|Dubai|Duşanbe|Detroit|Dallas|Denver|Dresden|Dortmund|Düsseldorf|Davos|Dodoma|Dubrovnik
+Edinburg|Erivan|Erbil|Essen|Eilat
+Floransa|Frankfurt|Fes|Freetown|Fukuoka
+Glasgow|Göteborg|Gazze|Gdansk|Graz|Granada|Grozni|Guatemala|Gence
+Hamburg|Helsinki|Havana|Hanoi|Harare|Hannover|Halep|Hayfa|Hong Kong|Houston|Hiroşima|Heidelberg|Hartum|Herat|Hama|Humus
+İslamabad|İsfahan|İskenderiye|İnnsbruck
+Johannesburg|Juba|Jaipur
+Kahire|Kabil|Kiev|Kopenhag|Kazan|Kandahar|Karaçi|Kalküta|Katmandu|Köln|Kerkük|Kudüs|Kuala Lumpur|Kuveyt|Kazablanka|Kiyoto|Krakov|Kişinev|Kampala|Kinşasa|Karakas|Kandiye|Kolombo|Kerbela|Kalamata|Kobe
+Londra|Lizbon|Lima|Lyon|Lahey|Leipzig|Liverpool|Los Angeles|Lagos|Lahor|Lefkoşa|Lozan|Lüksemburg|Las Vegas|Lille|Ljubljana|Luanda|La Paz|Lefke|Leeds
+Moskova|Madrid|Milano|Münih|Marsilya|Manchester|Melbourne|Montreal|Mumbai|Mekke|Medine|Manila|Minsk|Monako|Miami|Mogadişu|Musul|Maskat|Malaga|Mağusa|Montevideo|Meksiko|Marakeş|Mainz|Mostar
+Napoli|New York|Nairobi|Nice|Nantes|Nürnberg|Nahçıvan|Novosibirsk|Nanjing|Niamey|Nuakşot|New Orleans
+Oslo|Ottawa|Odessa|Osaka|Oxford|Orlando|Oran|Ohrid
+Paris|Prag|Pekin|Porto|Priştine|Pyongyang|Panama|Palermo|Pisa|Phuket|Pittsburgh|Philadelphia|Plovdiv|Portland|Podgorica
+Roma|Rio de Janeiro|Riga|Riyad|Rotterdam|Rabat|Reykjavik|Rostov|Rodos|Rimini|Rennes
+Seul|Sidney|Stockholm|Saraybosna|Selanik|Sofya|Singapur|Sevilla|San Francisco|Santiago|Sao Paulo|Sankt Petersburg|Strazburg|Semerkant|Sana|Seattle|Salzburg|Stuttgart|Split|Süleymaniye|Sapporo|San Diego|Saint Tropez
+Şam|Şanghay|Şikago|Şiraz|Şarm El Şeyh|Şımkent|Şuşa|Şeki|Şenzen
+Tokyo|Tahran|Tiflis|Taşkent|Tunus|Trablus|Toronto|Torino|Tallinn|Tel Aviv|Tebriz|Tiran|Toulouse|Tanca|Trieste|Tebük|Tampa
+Ulan Batur|Utrecht|Uppsala|Udine
+Ürümçi|Üsküp
+Viyana|Varşova|Venedik|Vancouver|Vilnius|Valensiya|Vaşington|Varna|Vatikan|Verona|Valletta|Vladivostok|Volgograd|Vientiane
+Yeni Delhi|Yokohama|Yalta|Yangon|Yaunde|Yafa|Yenbu
+Zürih|Zagreb|Zanzibar|Zaragoza|Zarka
