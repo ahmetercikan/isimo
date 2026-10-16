@@ -52,5 +52,5 @@ ne zaman çıkacağı (hemen ya da 5-30 saniye sonra) reklamın türüne göre G
 ## Notlar
 - Yeni reklam birimleri ilk saatlerde boş dönebilir; bu normaldir.
 - **Kendi reklamlarınıza asla tıklamayın** (hesap kapatılabilir). Deneme sırasında uygulama zaten deneme reklamları gösterir.
-- Reklam içeriği sınıfı: **Gençler (T)**: kumar, alkol gibi yetişkin reklamlar gösterilmez. AdMob → Engelleme kontrolleri'nden
+- Reklam içeriği sınıfı: **Ebeveyn rehberliği (PG)**: kumar, alkol ve yetişkin içerikli reklamlar gösterilmez (çocuklar da oynayabilir). AdMob → Engelleme kontrolleri'nden
   istemediğiniz kategorileri ayrıca kapatabilirsiniz.

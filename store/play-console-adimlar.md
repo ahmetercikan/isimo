@@ -30,10 +30,12 @@ Play Console → **Uygulama oluştur**
 - Beklenen sonuç: PEGI 3 / Herkes (+ "Kullanıcılar Etkileşimde Bulunur" notu)
 
 ### Hedef kitle ve içerik
-- Hedef yaş grupları: **18 ve üzeri** (oyun yetişkinlere yönelik; isterseniz 16-17 de eklenebilir)
+- Hedef yaş grupları: **13-15, 16-17, 18 ve üzeri**
+- Not: Bu ayar uygulamayı kimseden gizlemez. Mağazada kimin görebileceğini **içerik derecelendirmesi** belirler
+  (PEGI 3 / Herkes: herkes görür ve indirebilir; çocuklar dahil).
 - "Uygulamanız çocukların ilgisini çekebilir mi?" sorusu gelirse: **Hayır**; açıklama olarak:
-  `Yetişkinlere yönelik bir kelime ve parti oyunudur; çevrimiçi oyun, oda kodu ve reklam içerir.`
-- 13 yaş altını seçmeyin: seçilirse "Aileler" politikası ve çocuklara uygun reklam ayarı zorunlu olur.
+  `Her yaştan oyuncunun oynayabileceği, gençlere ve yetişkinlere yönelik bir kelime ve parti oyunudur; çevrimiçi oyun ve reklam içerir.`
+- 13 yaş altını seçmeyin: seçilirse "Aileler" politikası devreye girer (yaş sorusu, çocuklara özel reklam, daha uzun inceleme).
 
 ### Veri güvenliği
 "Uygulamanız kullanıcı verisi topluyor veya paylaşıyor mu?" → **Evet**

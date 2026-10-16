@@ -39,7 +39,7 @@ export function initAds(): Promise<boolean> {
       } catch {
         /* onay bilgisi alınamadı: kişiselleştirilmemiş reklamlarla devam */
       }
-      await AdMob.initialize({ maxAdContentRating: MaxAdContentRating.Teen, tagForChildDirectedTreatment: false, initializeForTesting: ADS_TESTING });
+      await AdMob.initialize({ maxAdContentRating: MaxAdContentRating.ParentalGuidance, tagForChildDirectedTreatment: false, initializeForTesting: ADS_TESTING });
       void AdMob.addListener(BannerAdPluginEvents.SizeChanged, (s) => setAdHeight(bannerShown ? s.height : 0));
       void AdMob.addListener(BannerAdPluginEvents.FailedToLoad, () => setAdHeight(0));
       void AdMob.addListener(InterstitialAdPluginEvents.Dismissed, () => void loadInterstitial());
