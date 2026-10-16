@@ -4,6 +4,7 @@ import App from './App';
 import './styles/theme.css';
 import './styles/app.css';
 import './styles/game.css';
+import './styles/tablet.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

@@ -42,7 +42,7 @@ export default function Home() {
           <span className="me-chip__name">{p.name}</span>
           <Pencil size={16} strokeWidth={2.6} />
         </button>
-        <button className="round-btn round-btn--soft" aria-label={p.sfx ? 'Sesi kapat' : 'Sesi aç'} onClick={() => p.set({ sfx: !p.sfx })}>
+        <button className="round-btn round-btn--soft" aria-label={p.sfx ? 'Sesi kapat' : 'Sesi aç'} onClick={() => p.set({ sfx: !p.sfx, music: !p.sfx })}>
           {p.sfx ? <Volume2 size={22} /> : <VolumeX size={22} />}
         </button>
       </header>

@@ -1,0 +1,227 @@
+/*
+ * Tablet ve geniş ekranlar: sayfa ekranın tamamını kullanır; öğeler büyür,
+ * uygun yerlerde iki sütuna geçer. Telefonda (700 px altı) hiçbir şey değişmez.
+ */
+@media (min-width: 700px) {
+  .page { padding: calc(var(--safe-top) + 24px) 32px calc(var(--safe-bottom) + 28px); gap: 22px; }
+  .game { padding-top: calc(var(--safe-top) + 20px); }
+
+  .pill { min-height: 66px; font-size: 24px; border-radius: 22px; }
+  .pill--big { min-height: 78px; font-size: 29px; }
+  .pill--sm { min-height: 52px; font-size: 19px; }
+  .round-btn { width: 60px; height: 60px; border-radius: 20px; }
+  .round-btn--soft { width: 54px; height: 54px; }
+  .btn-outline { min-height: 60px; font-size: 20px; }
+  .title-lg { font-size: 34px; }
+  .title-md { font-size: 25px; }
+  .sub { font-size: 20px; }
+  .toast { font-size: 19px; }
+  .modal { width: min(100%, 680px); padding: 34px; }
+  .waiting { font-size: 19px; }
+  .mini-cat { font-size: 16px; padding: 7px 14px; }
+
+  /* Alttaki büyük düğmeler: ekran genişliğinde ama okunaklı uzunlukta */
+  .page__cta .pill, .review__foot .pill, .scores__foot .pill, .final__foot .pill { max-width: 720px; }
+  .final__row { max-width: 720px; }
+
+  /* Ana sayfa */
+  .me-chip { font-size: 22px; padding: 8px 18px 8px 8px; }
+  .logo__tile { --size: clamp(66px, 10vw, 112px); border-radius: 24px; }
+  .logo__stop { font-size: 26px; padding: 8px 14px; right: -22px; bottom: -18px; }
+  .home__tag { font-size: 26px; }
+  .home__logo { margin: 18px 0 14px; gap: 22px; }
+  .home__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .mode-card { padding: 28px; border-radius: 36px; }
+  .mode-card__head { gap: 18px; }
+  .mode-card__head .title-md { font-size: 32px; }
+  .mode-card__head p { font-size: 18px; }
+  .mode-card__icon { width: 68px; height: 68px; border-radius: 20px; }
+  .mode-card__icon svg { width: 34px; height: 34px; }
+  .mode-card__btns { margin-top: 24px; gap: 14px; }
+  .mode-card__btns .pill { font-size: 22px; }
+  .mode-card--bots { display: flex; flex-direction: column; justify-content: center; }
+  .mode-card--bots .mode-card__head { flex-wrap: wrap; }
+  .mode-card__bots { font-size: 38px; letter-spacing: -4px; }
+  .home__logo { margin-top: auto; }
+  .stats span { font-size: 17px; padding: 8px 16px; }
+  .stats b { font-size: 20px; }
+  .howto-link { font-size: 19px; }
+
+  /* Profil */
+  .profile__card { padding: 30px; gap: 16px; }
+  .avatar-grid { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 10px; }
+  .avatar-pick { font-size: 40px; border-radius: 20px; }
+  .color-dot { width: 52px; height: 52px; }
+  .input { min-height: 64px; font-size: 24px; }
+  .field__label { font-size: 20px; }
+  .toggles { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 10px; }
+  .toggle__text b { font-size: 19px; }
+  .toggle__text small { font-size: 14.5px; }
+
+  /* Ayarlar */
+  .setup__card, .setup__bots { padding: 26px; }
+  .settings { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 32px; }
+  .settings > .settings__block:first-child, .settings > .toggles { grid-column: 1 / -1; }
+  .settings__title h3 { font-size: 23px; }
+  .cat-grid { gap: 10px; }
+  .cat-chip { font-size: 18px; padding: 10px 18px 10px 10px; }
+  .cat-chip__emoji { width: 34px; height: 34px; font-size: 20px; }
+  .seg__btn { min-height: 56px; font-size: 20px; }
+  .bot-face { width: 54px; height: 54px; font-size: 30px; }
+
+  /* Katıl */
+  .join__card { padding: 40px 32px; gap: 28px; }
+  .code-box { width: 92px; height: 108px; font-size: 56px; border-radius: 22px; }
+  .code-boxes { gap: 14px; }
+
+  /* Nasıl oynanır */
+  .howto__list { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 16px; }
+  .howto__step { padding: 22px; }
+  .howto__step p { font-size: 18px; }
+  .howto__tip { font-size: 16px; }
+
+  /* Lobi */
+  .code-card { padding: 26px; gap: 16px; }
+  .code-tile { width: 84px; height: 100px; font-size: 58px; border-radius: 20px; }
+  .code-card__code { gap: 10px; }
+  .code-card__label { font-size: 16px; }
+  .players-card, .rules-card { padding: 24px; }
+  .player-grid { grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 22px 12px; }
+  .player-slot .avatar, .empty-avatar { width: 80px !important; height: 80px !important; font-size: 44px !important; }
+  .me-tag { top: 66px; font-size: 13px; }
+  .player-slot__name { font-size: 17px; }
+  .rules-card__line { font-size: 19px; }
+
+  /* Harf sayacı */
+  .round-label { font-size: 24px; }
+  .letter-tile { --s: min(40vh, 46vw, 360px); }
+  .letter-tile--big { --s: min(46vh, 56vw, 430px); }
+  .alpha-strip { max-width: 820px; gap: 8px; }
+  .alpha { width: 50px; height: 56px; font-size: 27px; border-radius: 13px; }
+  .dur-btn { width: 190px; height: 190px; font-size: 46px; }
+  .dur-btn svg { width: 56px; height: 56px; }
+  .spin__hint { font-size: 23px; }
+  .spin__wait .avatar { width: 84px !important; height: 84px !important; font-size: 46px !important; }
+  .reveal__label { font-size: 36px; }
+  .reveal__count { font-size: 110px; height: 128px; }
+  .reveal__cats { max-width: 820px; gap: 10px; }
+
+  /* Yazma */
+  .write { gap: 16px; }
+  .letter-badge { width: 88px; height: 88px; font-size: 60px; border-radius: 26px; }
+  .letter-badge--sm { width: 68px; height: 68px; font-size: 44px; border-radius: 20px; }
+  .round-label--sm { font-size: 18px; }
+  .other .avatar { width: 42px !important; height: 42px !important; font-size: 24px !important; }
+  .other b { min-width: 22px; height: 22px; font-size: 13px; }
+  .timer { width: 88px; height: 88px; }
+  .timer span { font-size: 32px; }
+  .cat-tabs { margin: 0 -32px; padding-left: 32px; padding-right: 32px; gap: 10px; }
+  .cat-tab { font-size: 19px; padding: 8px 18px 8px 8px; }
+  .cat-tab__emoji { width: 36px; height: 36px; font-size: 20px; }
+  .write-card { padding: 22px; gap: 14px; border-radius: 36px; }
+  .write-card__title { font-size: 36px; }
+  .write-card__hint { font-size: 18px; }
+  .answer { height: 82px; padding: 8px 20px; border-radius: 20px; }
+  .answer__text { font-size: 42px; }
+  .answer__ph { font-size: 44px; }
+  .answer__warn { font-size: 16px; }
+  .alts__label { font-size: 15px; }
+  .alts { height: 50px; }
+  .alt { font-size: 20px; padding: 8px 16px; }
+  .stop-banner { top: 0; }
+  .pad-box { min-height: 320px; }
+  .inkpad {
+    background:
+      linear-gradient(90deg, transparent 54px, rgba(239, 75, 75, 0.35) 54px, rgba(239, 75, 75, 0.35) 56px, transparent 56px),
+      repeating-linear-gradient(180deg, #fffdf6 0 62px, #d8ecf6 62px 64px);
+  }
+  .inkpad__hint { font-size: 48px; }
+  .input--answer { font-size: 34px; min-height: 80px; }
+  .tool { min-width: 60px; height: 60px; border-radius: 18px; font-size: 21px; }
+  .tool svg { width: 28px; height: 28px; }
+  .stop-btn { min-height: 80px; font-size: 26px; max-width: 760px; margin: 0 auto; }
+  .stop-btn.is-ready { font-size: 40px; }
+  .write__foot { padding-left: 76px; }
+  .stop-banner { font-size: 19px; padding: 14px 18px; }
+  .stop-sign { width: 58px; height: 58px; font-size: 16px; }
+  .time-up { font-size: 34px; }
+  .game--write .game__exit, .game--review .game__exit { width: 54px; height: 54px; }
+
+  /* Değerlendirme */
+  .review { gap: 14px; }
+  .review__emoji { width: 76px; height: 76px; font-size: 48px; border-radius: 22px; }
+  .review__step { font-size: 16px; }
+  .review__bar { height: 10px; }
+  .answers { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px; }
+  .answer-row { padding: 14px 16px; gap: 16px; border-radius: 24px; }
+  .answer-row .avatar { width: 58px !important; height: 58px !important; font-size: 32px !important; }
+  .answer-row__name { font-size: 15px; }
+  .answer-row__text { font-size: 30px; }
+  .inkview { height: 42px !important; width: auto !important; }
+  .pts { font-size: 21px; min-width: 58px; padding: 6px 10px; }
+  .vote { height: 40px; font-size: 16px; padding: 0 14px; }
+  .review__foot { padding-left: 76px; }
+  .react-btn { width: 54px; height: 54px; font-size: 30px; }
+  .react-float__e { font-size: 64px; }
+
+  /* Puanlar */
+  .scores { gap: 16px; }
+  .hl-chip { font-size: 17px; padding: 8px 16px; }
+  .board { gap: 12px; }
+  .board-row__btn { padding: 14px 18px; gap: 14px; border-radius: 24px; }
+  .board-row .avatar { width: 54px !important; height: 54px !important; font-size: 30px !important; }
+  .rank { width: 40px; font-size: 26px; }
+  .board-row__name { font-size: 20px; }
+  .board-row__bar { height: 10px; }
+  .gain { font-size: 19px; padding: 4px 12px; }
+  .board-row__total { font-size: 32px; min-width: 64px; }
+  .detail__ans { font-size: 22px; }
+  .detail__cat { font-size: 16px; width: 150px; }
+
+  /* Final */
+  .final { gap: 22px; }
+  .final__title { font-size: 52px; }
+  .podium { max-width: 820px; gap: 16px; }
+  .podium__col .avatar { width: 92px !important; height: 92px !important; font-size: 52px !important; }
+  .podium__col--1 .avatar { width: 116px !important; height: 116px !important; font-size: 66px !important; }
+  .podium__name { font-size: 20px; }
+  .podium__pts { font-size: 28px; }
+  .podium__block { font-size: 46px; border-radius: 24px 24px 8px 8px; }
+  .podium__col--1 .podium__block { height: 210px; }
+  .podium__col--2 .podium__block { height: 150px; }
+  .podium__col--3 .podium__block { height: 108px; }
+  .rest { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 10px; }
+  .rest li { font-size: 18px; padding: 12px 16px; }
+  .awards { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+  .award { padding: 18px 12px; }
+  .award__e { font-size: 42px; }
+  .award__t { font-size: 19px; }
+  .award__w { font-size: 18px; }
+  .award small { font-size: 13.5px; }
+}
+
+/* Geniş ekran (yatay tablet, bilgisayar): yan yana düzenler */
+@media (min-width: 980px) {
+  .lobby { display: grid; grid-template-columns: 1fr 1.2fr; gap: 22px; align-content: start; }
+  .lobby > .code-card { grid-column: 1; grid-row: 1; }
+  .lobby > .rules-card { grid-column: 1; grid-row: 2; align-self: start; }
+  .lobby > .players-card { grid-column: 2; grid-row: 1 / span 2; }
+  .lobby > .page__cta { grid-column: 1 / -1; }
+
+  .board { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; }
+}
+
+@media (min-width: 980px) and (orientation: landscape) {
+  /* Yazma: solda kategori ve cevap, sağda yazı defteri */
+  .write-card { display: grid; grid-template-columns: minmax(320px, 0.75fr) 1.25fr; grid-template-rows: auto auto auto 1fr auto; column-gap: 26px; }
+  .write-card__top { grid-column: 1; grid-row: 1; flex-direction: column; align-items: flex-start; gap: 6px; }
+  .write-card .answer { grid-column: 1; grid-row: 2; }
+  .write-card .alts { grid-column: 1; grid-row: 3; align-self: start; }
+  .write-card .pad-box, .write-card .kb-box { grid-column: 2; grid-row: 1 / -1; min-height: 0; }
+  .write-card .pad-tools { grid-column: 1; grid-row: 5; flex-wrap: wrap; }
+
+  /* Harf sayacı: harf ve DUR düğmesi yan yana */
+  .spin { flex-direction: row; flex-wrap: wrap; justify-content: center; align-content: center; column-gap: 70px; }
+  .spin > .round-label { width: 100%; }
+  .alpha-strip { order: 3; width: 100%; }
+}

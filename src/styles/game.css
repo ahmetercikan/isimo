@@ -165,7 +165,10 @@
 
 /* ---------- Yazma ---------- */
 
-.write { flex: 1; display: flex; flex-direction: column; gap: 10px; min-height: 0; }
+.write { position: relative; flex: 1; display: flex; flex-direction: column; gap: 10px; min-height: 0; }
+/* Yazarken hiçbir şey kaymasın: yazma ekranı tam ekran yüksekliğinde, sayfa kaydırılamaz. */
+.game--write { height: 100dvh; min-height: 0; overflow: hidden; overscroll-behavior: none; }
+.game--write .write-card { min-height: 0; }
 .write__head { display: flex; align-items: center; gap: 12px; }
 .write__mid { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
 .others { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 4px 2px 6px; }
@@ -196,6 +199,11 @@
 .timer.is-urgent span { color: var(--red); animation: pulse 0.5s ease-in-out infinite; }
 
 .stop-banner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 8;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -265,7 +273,9 @@
 
 .answer {
   position: relative;
-  min-height: 58px;
+  flex: none;
+  height: 58px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -277,18 +287,21 @@
 }
 .answer.has-text { background: color-mix(in srgb, var(--c) 12%, #fff); border-style: solid; border-color: color-mix(in srgb, var(--c) 45%, #fff); }
 .answer.is-wrong { background: #ffe8e8; border-color: #ffb3b3; }
-.answer__text { font-family: var(--display); font-weight: 700; font-size: 30px; color: var(--ink); line-height: 1.1; word-break: break-word; }
+.answer__text { font-family: var(--display); font-weight: 700; font-size: 30px; color: var(--ink); line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .answer__ph { font-family: var(--hand); font-size: 32px; color: #b5a59f; }
 .answer__busy { font-weight: 800; color: var(--muted); display: flex; align-items: center; gap: 8px; }
 .answer__ok { width: 26px; height: 26px; border-radius: 50%; background: var(--green); color: #fff; display: grid; place-items: center; flex: none; animation: pop-in 0.3s cubic-bezier(0.2, 1.6, 0.4, 1); }
 .answer__warn { margin-left: auto; font-weight: 800; font-size: 13px; color: var(--red); }
 
-.alts { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
-.alts__label { font-weight: 700; font-size: 13px; color: var(--muted); width: 100%; }
+.alts { flex: none; height: 38px; display: flex; flex-wrap: nowrap; align-items: center; gap: 6px; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
+.alts::-webkit-scrollbar { display: none; }
+.alts__label { flex: none; font-weight: 700; font-size: 13px; color: var(--muted); }
+.alts__label--idle { opacity: 0.75; }
+.alt { flex: none; }
 .alt { padding: 6px 12px; border-radius: 12px; background: var(--sun-soft); box-shadow: 0 2px 0 var(--sun-dark); font-family: var(--display); font-weight: 600; font-size: 16px; }
 .alt:active { transform: translateY(2px); box-shadow: none; }
 
-.pad-box { flex: 1; min-height: 190px; display: flex; }
+.pad-box { flex: 1; min-height: 150px; display: flex; }
 .inkpad {
   position: relative;
   flex: 1;
@@ -477,7 +490,7 @@
 .award__w { font-weight: 800; color: var(--coral-dark); font-size: 15px; }
 .award small { color: var(--muted); font-weight: 700; font-size: 11.5px; }
 
-.final__foot { width: 100%; }
+.final__foot { width: 100%; position: static; }
 .final__foot .pill { width: 100%; }
 .final__row { display: flex; gap: 10px; width: 100%; }
 .final__row > * { flex: 1; }
@@ -493,6 +506,6 @@
   .letter-tile { --s: min(40vw, 160px); }
   .pad-box { min-height: 150px; }
   .write-card { padding: 10px; gap: 8px; }
-  .answer { min-height: 50px; }
+  .answer { height: 50px; }
   .answer__text { font-size: 26px; }
 }

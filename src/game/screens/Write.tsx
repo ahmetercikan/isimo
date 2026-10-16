@@ -260,23 +260,29 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
         </div>
 
         {!kb && <div className={`answer ${slot.text ? 'has-text' : ''} ${wrongLetter ? 'is-wrong' : ''}`}>
-          {slot.busy ? (
-            <span className="answer__busy"><span className="dots"><i /><i /><i /></span> okunuyor</span>
-          ) : slot.text ? (
+          {slot.text ? (
             <span className="answer__text pop-in" key={slot.text}>{capitalize(slot.text)}</span>
-          ) : (
+          ) : slot.busy ? null : (
             <span className="answer__ph">{letter}…</span>
           )}
+          {slot.busy && <span className="answer__busy"><span className="dots"><i /><i /><i /></span></span>}
           {!slot.busy && slot.text && !wrongLetter && inDict && <span className="answer__ok" title="Sözlükte var"><Check size={16} strokeWidth={3.4} /></span>}
           {wrongLetter && <span className="answer__warn">{letter} ile başlamıyor</span>}
         </div>}
 
-        {!kb && slot.alts.length > 0 && !slot.busy && (
+        {/* Öneri satırı hep yerinde durur (yüksekliği sabit): öneri gelince yazı defteri kaymaz. */}
+        {!kb && (
           <div className="alts">
-            <span className="alts__label">Bunu mu demek istedin?</span>
-            {slot.alts.map((a) => (
-              <button key={a} className="alt" onClick={() => choose(fixFirstLetter(a, letter))}>{capitalize(a)}</button>
-            ))}
+            {slot.alts.length > 0 && !slot.busy ? (
+              <>
+                <span className="alts__label">Bunu mu demek istedin?</span>
+                {slot.alts.map((a) => (
+                  <button key={a} className="alt" onClick={() => choose(fixFirstLetter(a, letter))}>{capitalize(a)}</button>
+                ))}
+              </>
+            ) : (
+              <span className="alts__label alts__label--idle">{slot.text ? 'Yanlış okunduysa sil ve tekrar yaz' : 'Parmağınla büyük ve rahat yaz'}</span>
+            )}
           </div>
         )}
 

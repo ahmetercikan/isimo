@@ -10,7 +10,9 @@ import { Review } from '../game/screens/Review';
 import { Scores } from '../game/screens/Scores';
 import { Spin } from '../game/screens/Spin';
 import { Write } from '../game/screens/Write';
+import { setMood, type Mood } from '../lib/music';
 import { sfx } from '../lib/sfx';
+import { useNow } from '../components/ui';
 import { preloadDicts, useGame } from '../store/useGame';
 
 export default function Game() {
@@ -20,6 +22,17 @@ export default function Game() {
   const lost = useGame((g) => g.lost);
   const [ask, setAsk] = useState(false);
   const joinedPlayers = useRef<number | null>(null);
+
+  // Fon müziği aşamaya göre: lobi sakin, harf seçerken rulo, yazarken tempolu, son 10 sn gerilim, sonra yumuşak.
+  const now = useNow(() => (t ? t.now() : Date.now()), 500);
+  let mood: Mood = 'off';
+  if (s) {
+    const c = s.ctl;
+    mood = { lobby: 'lobby', spin: 'roll', review: 'chill', scores: 'chill', final: 'off', write: 'write' }[c.phase] as Mood;
+    if (c.phase === 'write') mood = now < c.startAt || now >= c.endAt ? 'off' : c.endAt - now <= 10500 ? 'tension' : 'write';
+  }
+  useEffect(() => setMood(mood), [mood]);
+  useEffect(() => () => setMood('off'), []);
 
   useEffect(() => {
     const h = () => setAsk(true);

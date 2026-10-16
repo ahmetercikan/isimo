@@ -1,4 +1,4 @@
-import { Check, Shuffle, Volume2, Vibrate, Megaphone } from 'lucide-react';
+import { Check, Headphones, Megaphone, Music, Shuffle, Vibrate, Volume2 } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Doodles } from '../components/Doodles';
@@ -82,9 +82,13 @@ export default function Profile() {
             <span className="field__label">Ayarlar</span>
             <div className="toggles">
               <Toggle icon={<Volume2 size={20} />} label="Ses efektleri" on={p.sfx} set={(v) => p.set({ sfx: v })} />
+              <Toggle icon={<Music size={20} />} label="Müzik" desc="Oyun sırasında fon müziği" on={p.music !== false} set={(v) => p.set({ music: v })} />
               <Toggle icon={<Megaphone size={20} />} label="Harfi sesli söyle" on={p.voice} set={(v) => p.set({ voice: v })} />
               <Toggle icon={<Vibrate size={20} />} label="Titreşim" on={p.haptics} set={(v) => p.set({ haptics: v })} />
             </div>
+            <button className="btn-outline" onClick={() => (sfx.tap(), nav('/sesler'))}>
+              <Headphones size={20} /> Sesleri dinle
+            </button>
           </>
         )}
       </div>

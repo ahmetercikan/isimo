@@ -31,6 +31,7 @@ interface ProfileState {
   avatar: string;
   color: string;
   sfx: boolean;
+  music: boolean;
   voice: boolean;
   haptics: boolean;
   /** Son oyun ayarları (bir sonraki odada aynısıyla başlar). */
@@ -50,6 +51,7 @@ export const useProfile = create<ProfileState>()(
       avatar: AVATARS[0],
       color: COLORS[0],
       sfx: true,
+      music: true,
       voice: true,
       haptics: true,
       settings: DEFAULT_SETTINGS,

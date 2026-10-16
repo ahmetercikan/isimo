@@ -5,6 +5,7 @@
 import getStroke from 'perfect-freehand';
 import { useEffect, useLayoutEffect, useRef } from 'react';
 import type { Stroke } from '../lib/ink';
+import { sfx } from '../lib/sfx';
 
 const PEN = { size: 7, thinning: 0.6, smoothing: 0.55, streamline: 0.4, simulatePressure: true };
 
@@ -84,6 +85,7 @@ export function InkPad({ strokes, onChange, onStart, color = '#3a2b27', disabled
   };
 
   const finish = () => {
+    sfx.scribble(0);
     const s = live.current;
     live.current = null;
     pointer.current = null;
@@ -110,6 +112,13 @@ export function InkPad({ strokes, onChange, onStart, color = '#3a2b27', disabled
           if (e.pointerId !== pointer.current) return;
           const evs = e.nativeEvent.getCoalescedEvents?.() ?? [e.nativeEvent];
           for (const ev of evs.length ? evs : [e.nativeEvent]) add(ev);
+          // Kalem hışırtısı: hızla orantılı
+          const s = live.current;
+          if (s && s.x.length > 2) {
+            const n = s.x.length - 1;
+            const dt = Math.max(1, s.t[n] - s.t[n - 2]);
+            sfx.scribble(Math.hypot(s.x[n] - s.x[n - 2], s.y[n] - s.y[n - 2]) / dt);
+          }
           cancelAnimationFrame(raf.current);
           raf.current = requestAnimationFrame(draw);
         }}
