@@ -5,6 +5,7 @@ import { CATEGORIES, MAX_CATS, MIN_CATS, type Category } from '../engine/categor
 import type { Settings } from '../engine/types';
 import { sfx } from '../lib/sfx';
 import { Toggle } from '../pages/Profile';
+import { CatIcon } from './Icon';
 
 const ROUNDS = [3, 5, 7, 10];
 const TIMES = [60, 90, 120, 180];
@@ -27,7 +28,7 @@ export function SettingsForm({ value, onChange }: { value: Settings; onChange: (
     if (label.length < 2 || full) return;
     sfx.pop();
     const id = `c${Date.now().toString(36)}`;
-    set({ cats: [...value.cats, { id, label: label[0].toLocaleUpperCase('tr-TR') + label.slice(1), emoji: '✨', custom: true }] });
+    set({ cats: [...value.cats, { id, label: label[0].toLocaleUpperCase('tr-TR') + label.slice(1), emoji: '', custom: true }] });
     setCustom('');
   };
 
@@ -41,13 +42,13 @@ export function SettingsForm({ value, onChange }: { value: Settings; onChange: (
         <div className="cat-grid">
           {CATEGORIES.map((c) => (
             <button key={c.id} className={`cat-chip ${has(c.id) ? 'is-on' : ''}`} style={{ '--c': c.color } as React.CSSProperties} onClick={() => toggleCat(c)} disabled={!has(c.id) && full}>
-              <span className="cat-chip__emoji">{c.emoji}</span>
+              <span className="cat-chip__emoji"><CatIcon cat={c} size={24} /></span>
               {c.label}
             </button>
           ))}
           {value.cats.filter((c) => c.custom).map((c) => (
             <button key={c.id} className="cat-chip is-on cat-chip--custom" onClick={() => value.cats.length > MIN_CATS && set({ cats: value.cats.filter((x) => x.id !== c.id) })}>
-              <span className="cat-chip__emoji">{c.emoji}</span>
+              <span className="cat-chip__emoji"><CatIcon cat={c} size={24} /></span>
               {c.label}
               <X size={16} strokeWidth={3} />
             </button>

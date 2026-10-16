@@ -1,6 +1,7 @@
 /** Tur sonu: puan tablosu (bu turun puanı + toplam), turun öne çıkanları ve sonraki tur. */
 import { ChevronRight, Trophy } from 'lucide-react';
 import { useEffect, useMemo, useState, type CSSProperties } from 'react';
+import { CatIcon, Icon } from '../../components/Icon';
 import { Avatar, Modal, useNow } from '../../components/ui';
 import { judgeRound, ranking, scoreRound } from '../../engine/scoring';
 import { capitalize } from '../../engine/tr';
@@ -9,6 +10,8 @@ import { sfx } from '../../lib/sfx';
 import type { Transport } from '../../online/transport';
 import { actingHost, nextRound } from '../director';
 import { Reactions } from './Reactions';
+import { say } from '../../lib/voice';
+import { VOICE } from '../../voice/lines';
 
 export function Scores({ t, s }: { t: Transport; s: RoomState }) {
   const now = useNow(() => t.now(), 500);
@@ -26,13 +29,14 @@ export function Scores({ t, s }: { t: Transport; s: RoomState }) {
 
   useEffect(() => {
     rank.forEach((_, i) => setTimeout(() => sfx.coin(i), 300 + i * 110));
+    void say(VOICE.scores, 200);
   }, []);
 
   // Turun yıldızı: 20 puanlık (tek kalan) cevaplar
   const judged = useMemo(() => judgeRound(withThis, c.round, result.letter), [withThis, c.round, result.letter]);
-  const stars: { pid: string; text: string; cat: string }[] = [];
+  const stars: { pid: string; text: string; cat: string; catId: string }[] = [];
   for (const cat of s.settings.cats)
-    for (const [pid, v] of Object.entries(judged[cat.id] ?? {})) if (v.pts === 20) stars.push({ pid, text: v.text, cat: `${cat.emoji} ${cat.label}` });
+    for (const [pid, v] of Object.entries(judged[cat.id] ?? {})) if (v.pts === 20) stars.push({ pid, text: v.text, cat: cat.label, catId: cat.id });
 
   return (
     <div className="scores">
@@ -50,7 +54,7 @@ export function Scores({ t, s }: { t: Transport; s: RoomState }) {
             <span className="hl-chip"><span className="stop-mini">STOP</span> {s.players[result.stopBy].name}</span>
           )}
           {stars.slice(0, 3).map((x) => (
-            <span key={x.pid + x.cat} className="hl-chip">🌟 {s.players[x.pid]?.name}: <b>{capitalize(x.text)}</b> <small>{x.cat}</small></span>
+            <span key={x.pid + x.cat} className="hl-chip"><Icon name="yildiz" size={20} /> {s.players[x.pid]?.name}: <b>{capitalize(x.text)}</b> <CatIcon cat={{ id: x.catId }} size={18} /><small>{x.cat}</small></span>
           ))}
         </div>
       )}
@@ -63,7 +67,7 @@ export function Scores({ t, s }: { t: Transport; s: RoomState }) {
           return (
             <li key={r.pid} className={`board-row ${r.pid === t.me ? 'is-me' : ''}`} style={{ animationDelay: `${0.1 + i * 0.08}s` } as CSSProperties}>
               <button className="board-row__btn" onClick={() => (sfx.tap(), setOpen(r.pid))}>
-                <span className={`rank rank--${r.rank}`}>{r.rank <= 3 ? ['🥇', '🥈', '🥉'][r.rank - 1] : r.rank}</span>
+                <span className={`rank rank--${r.rank}`}>{r.rank <= 3 ? <Icon name={`m${r.rank}`} size={30} /> : r.rank}</span>
                 <Avatar emoji={p.avatar} color={p.color} size={40} off={!p.on && !p.bot} />
                 <span className="board-row__main">
                   <span className="board-row__name">{r.pid === t.me ? `${p.name} (sen)` : p.name}</span>
@@ -104,7 +108,7 @@ export function Scores({ t, s }: { t: Transport; s: RoomState }) {
               const v = judged[cat.id]?.[open];
               return (
                 <li key={cat.id}>
-                  <span className="detail__cat">{cat.emoji} {cat.label}</span>
+                  <span className="detail__cat"><CatIcon cat={cat} size={20} /> {cat.label}</span>
                   <span className={`detail__ans ${v?.valid ? '' : 'is-bad'}`}>{v?.text ? capitalize(v.text) : '—'}</span>
                   <span className={`pts pts--${v?.pts ?? 0}`}>{v?.pts ? `+${v.pts}` : '0'}</span>
                 </li>

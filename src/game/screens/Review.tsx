@@ -4,6 +4,7 @@
  */
 import { BookCheck, ThumbsDown, ThumbsUp } from 'lucide-react';
 import { useEffect, useMemo, useState, type CSSProperties } from 'react';
+import { CatIcon } from '../../components/Icon';
 import { InkView } from '../../components/InkPad';
 import { Avatar, useNow } from '../../components/ui';
 import { catInfo } from '../../engine/categories';
@@ -15,6 +16,8 @@ import { sfx } from '../../lib/sfx';
 import type { Transport } from '../../online/transport';
 import { activeHumans, markReady, reviewMs } from '../director';
 import { Reactions } from './Reactions';
+import { say } from '../../lib/voice';
+import { VOICE } from '../../voice/lines';
 
 export function Review({ t, s }: { t: Transport; s: RoomState }) {
   const now = useNow(() => t.now(), 250);
@@ -37,6 +40,7 @@ export function Review({ t, s }: { t: Transport; s: RoomState }) {
   }, [t, c.round]);
 
   useEffect(() => sfx.whoosh(), [c.cat]);
+  useEffect(() => void say(VOICE.review, 400), []);
 
   const pids = useMemo(() => roundPids(s, c.round), [s, c.round]);
   const verdicts = useMemo(() => {
@@ -69,7 +73,7 @@ export function Review({ t, s }: { t: Transport; s: RoomState }) {
       <header className="review__head">
         <div className="letter-badge letter-badge--sm">{c.letter}</div>
         <div className="review__title" style={{ '--c': info.color } as CSSProperties} key={cat.id}>
-          <span className="review__emoji pop-in">{cat.emoji}</span>
+          <span className="review__emoji pop-in"><CatIcon cat={cat} size={40} /></span>
           <div>
             <h2 className="title-lg">{cat.label}</h2>
             <span className="review__step">Kategori {c.cat + 1} / {s.settings.cats.length}</span>

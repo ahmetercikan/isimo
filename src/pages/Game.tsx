@@ -2,6 +2,7 @@
 import { X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { Icon } from '../components/Icon';
 import { Confirm } from '../components/ui';
 import { Doodles } from '../components/Doodles';
 import { Final } from '../game/screens/Final';
@@ -11,6 +12,8 @@ import { Scores } from '../game/screens/Scores';
 import { Spin } from '../game/screens/Spin';
 import { Write } from '../game/screens/Write';
 import { setMood, type Mood } from '../lib/music';
+import { preloadVoice } from '../lib/voice';
+import { VOICE_LINES } from '../voice/lines';
 import { sfx } from '../lib/sfx';
 import { useNow } from '../components/ui';
 import { preloadDicts, useGame } from '../store/useGame';
@@ -33,6 +36,7 @@ export default function Game() {
   }
   useEffect(() => setMood(mood), [mood]);
   useEffect(() => () => setMood('off'), []);
+  useEffect(() => void preloadVoice(VOICE_LINES), []);
 
   useEffect(() => {
     const h = () => setAsk(true);
@@ -63,7 +67,7 @@ export default function Game() {
       <main className="bg page game-lost">
         <Doodles variant={2} />
         <div className="paper-card lost-card pop-in">
-          <span className="lost-card__emoji">🔌</span>
+          <Icon name="fis" size={72} />
           <h2 className="title-lg">Oda kapandı</h2>
           <p className="muted">Herkes ayrıldı ya da bağlantı koptu.</p>
           <button className="pill" onClick={leave}>Ana Sayfa</button>
@@ -76,7 +80,7 @@ export default function Game() {
       <main className="bg page game-lost">
         <Doodles variant={2} />
         <div className="paper-card lost-card pop-in">
-          <span className="lost-card__emoji">👋</span>
+          <Icon name="el" size={72} />
           <h2 className="title-lg">Odadan çıkarıldın</h2>
           <p className="muted">Ev sahibi seni bu odadan çıkardı.</p>
           <button className="pill" onClick={leave}>Ana Sayfa</button>

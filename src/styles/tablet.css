@@ -41,7 +41,7 @@
   .mode-card__btns .pill { font-size: 22px; }
   .mode-card--bots { display: flex; flex-direction: column; justify-content: center; }
   .mode-card--bots .mode-card__head { flex-wrap: wrap; }
-  .mode-card__bots { font-size: 38px; letter-spacing: -4px; }
+  .mode-card__bots .avatar { width: 54px !important; height: 54px !important; }
   .home__logo { margin-top: auto; }
   .stats span { font-size: 17px; padding: 8px 16px; }
   .stats b { font-size: 20px; }

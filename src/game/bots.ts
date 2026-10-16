@@ -10,15 +10,15 @@ import type { LocalTransport } from '../online/local';
 import { stopLetter } from './director';
 
 export const BOT_PROFILES: Pick<Player, 'name' | 'avatar' | 'color'>[] = [
-  { name: 'Robo Ramiz', avatar: '🤖', color: '#5b6cff' },
-  { name: 'Bilge Baykuş', avatar: '🦉', color: '#e8a200' },
-  { name: 'Kurnaz Tilki', avatar: '🦊', color: '#ff6b4a' },
-  { name: 'Hızlı Çita', avatar: '🐆', color: '#f2711c' },
-  { name: 'Zeki Ahtapot', avatar: '🐙', color: '#e9487d' },
-  { name: 'Tospik', avatar: '🐢', color: '#2bb673' },
-  { name: 'Pofuduk', avatar: '🐼', color: '#3ea6f0' },
-  { name: 'Uzaylı Zıpzıp', avatar: '👽', color: '#0ca678' },
-  { name: 'Ejder Ece', avatar: '🐲', color: '#7c5cff' },
+  { name: 'Robo Ramiz', avatar: 'robot', color: '#5b6cff' },
+  { name: 'Bilge Baykuş', avatar: 'baykus', color: '#e8a200' },
+  { name: 'Kurnaz Tilki', avatar: 'tilki', color: '#ff6b4a' },
+  { name: 'Hızlı Çita', avatar: 'cita', color: '#f2711c' },
+  { name: 'Zeki Ahtapot', avatar: 'ahtapot', color: '#e9487d' },
+  { name: 'Tospik', avatar: 'kaplumbaga', color: '#2bb673' },
+  { name: 'Pofuduk', avatar: 'panda', color: '#3ea6f0' },
+  { name: 'Uzaylı Zıpzıp', avatar: 'uzayli', color: '#0ca678' },
+  { name: 'Ejder Ece', avatar: 'ejderha', color: '#7c5cff' },
 ];
 
 export const BOT_LEVELS = [
@@ -27,7 +27,7 @@ export const BOT_LEVELS = [
   { level: 3 as const, label: 'Zor', fill: 0.93, from: 0.18, to: 0.55, strict: 1 },
 ];
 
-const REACT = ['😂', '👏', '😮', '🔥', '🤔'];
+const REACT = ['haha', 'vay', 'ates', 'kalp', 'hmm'];
 const rand = (a: number, b: number) => a + Math.random() * (b - a);
 const pick = <T,>(xs: T[]) => xs[Math.floor(Math.random() * xs.length)];
 

@@ -1,9 +1,13 @@
 import { Check, Headphones, Megaphone, Music, Shuffle, Vibrate, Volume2 } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Doodles } from '../components/Doodles';
+import { Icon } from '../components/Icon';
 import { Avatar, Logo, TopBar } from '../components/ui';
+import { avatarIcon } from '../art/icons';
 import { sfx } from '../lib/sfx';
+import { say } from '../lib/voice';
+import { VOICE } from '../voice/lines';
 import { AVATARS, COLORS, useProfile } from '../store/useProfile';
 
 const FUN_NAMES = ['Harf Avcısı', 'Kalem Ustası', 'Hızlı Parmak', 'Sözlük Kurdu', 'STOP Kralı', 'Kelime Cambazı'];
@@ -13,9 +17,16 @@ export default function Profile() {
   const first = useSearchParams()[0].get('ilk') === '1';
   const p = useProfile();
   const [name, setName] = useState(p.name);
-  const [avatar, setAvatar] = useState(p.avatar);
+  const [avatar, setAvatar] = useState(avatarIcon(p.avatar) || p.avatar);
   const [color, setColor] = useState(p.color);
   const ok = name.trim().length >= 2;
+  // İlk açılışta sunucu karşılasın (tarayıcı sesi ilk dokunuştan sonra açar)
+  useEffect(() => {
+    if (!first) return;
+    const h = () => void say(VOICE.welcome);
+    window.addEventListener('pointerdown', h, { once: true });
+    return () => window.removeEventListener('pointerdown', h);
+  }, [first]);
 
   const save = () => {
     if (!ok) return;
@@ -63,7 +74,7 @@ export default function Profile() {
         <div className="avatar-grid">
           {AVATARS.map((a) => (
             <button key={a} className={`avatar-pick ${a === avatar ? 'is-on' : ''}`} onClick={() => (sfx.tap(), setAvatar(a))} aria-label={a}>
-              {a}
+              <Icon name={a} size={44} />
             </button>
           ))}
         </div>
@@ -83,7 +94,7 @@ export default function Profile() {
             <div className="toggles">
               <Toggle icon={<Volume2 size={20} />} label="Ses efektleri" on={p.sfx} set={(v) => p.set({ sfx: v })} />
               <Toggle icon={<Music size={20} />} label="Müzik" desc="Oyun sırasında fon müziği" on={p.music !== false} set={(v) => p.set({ music: v })} />
-              <Toggle icon={<Megaphone size={20} />} label="Harfi sesli söyle" on={p.voice} set={(v) => p.set({ voice: v })} />
+              <Toggle icon={<Megaphone size={20} />} label="Sunucu sesi" desc="Harfi ve oyun anlarını sesli söyler" on={p.voice} set={(v) => p.set({ voice: v })} />
               <Toggle icon={<Vibrate size={20} />} label="Titreşim" on={p.haptics} set={(v) => p.set({ haptics: v })} />
             </div>
             <button className="btn-outline" onClick={() => (sfx.tap(), nav('/sesler'))}>

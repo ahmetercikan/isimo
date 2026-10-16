@@ -7,6 +7,8 @@ import type { RoomState } from '../../engine/types';
 import { buzz } from '../../lib/feel';
 import { sfx } from '../../lib/sfx';
 import type { Transport } from '../../online/transport';
+import { say } from '../../lib/voice';
+import { VOICE } from '../../voice/lines';
 import { letterAt, stopLetter } from '../director';
 
 export function Spin({ t, s }: { t: Transport; s: RoomState }) {
@@ -18,6 +20,14 @@ export function Spin({ t, s }: { t: Transport; s: RoomState }) {
   const pressed = useRef(false);
   const last = useRef('');
   const ticks = useRef(0);
+
+  // Sunucu: ilk turda "oyun başlıyor", son turda "son tur", sıra bendeyse "sıra sende"
+  useEffect(() => {
+    const intro = c.round === 1 || c.round === s.settings.rounds;
+    if (c.round === 1) void say(VOICE.gameStart);
+    else if (c.round === s.settings.rounds) void say(VOICE.lastRound);
+    if (mine) void say(VOICE.myTurn, intro ? 2200 : 300);
+  }, [c.round]); // eslint-disable-line
 
   useEffect(() => {
     if (cur !== last.current) {

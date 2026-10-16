@@ -89,7 +89,11 @@ export default function Home() {
               <h2 className="title-md">Botlara Karşı</h2>
               <p>İnternetsiz · hemen başla · ısın!</p>
             </div>
-            <span className="mode-card__bots" aria-hidden="true">🤖🦉🦊</span>
+            <span className="mode-card__bots" aria-hidden="true">
+              <Avatar emoji="robot" color="#a5b4fc" size={38} />
+              <Avatar emoji="baykus" color="#ffc83d" size={38} />
+              <Avatar emoji="tilki" color="#ff8a3d" size={38} />
+            </span>
           </div>
         </button>
       </section>

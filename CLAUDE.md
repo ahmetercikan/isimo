@@ -8,7 +8,11 @@
   - geliştirme: `npm run dev` (port 5290); çevrimiçi deneme: `npm run emulators` + `VITE_FIREBASE_EMULATOR=1 npx vite --port 5291`
   - test: `npm test` · tip kontrolü + derleme: `npm run build`
   - Android: `npm run android:apk` (debug), `npm run android:aab` (mağaza). Gradle JDK 21 ister (android/gradle.properties).
-  - ikonlar: `npx tsx scripts/make-icons.mts && npx capacitor-assets generate --android`
+  - uygulama ikonu: `npx tsx scripts/make-icons.mts && npx capacitor-assets generate --android --iconBackgroundColor '#16a6c4' --splashBackgroundColor '#cfeee6'`
+  - uygulama içi simgeler: `src/art/icons.ts` (Çizio'nun el çizimi simge dili; emoji kullanılmaz)
+  - sunucu sesi (Çizio ile aynı Gemini sesi, Sulafat): cümleler `src/voice/lines.ts` → `npx tsx scripts/generate-voice.mts`
+    (anahtar: `.env.local` GEMINI_API_KEY); doğrulama: `python scripts/voice-verify.py`
+  - mağaza görselleri: `npm run dev` açıkken `npx tsx scripts/store-shots.mts phone|tablet`, sonra `npx tsx scripts/store-promo.mts`
   - sözlükler: `scripts/dict-src/*.txt` düzenle → `node scripts/dict-src/build.cjs`
 - **Yapı:**
   - `src/engine/`: Türkçe harf işlemleri (tr.ts), kategoriler, sözlük, puanlama (saf; testler `__tests__`)

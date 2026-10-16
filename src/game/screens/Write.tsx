@@ -5,13 +5,16 @@
 import { ArrowLeft, ArrowRight, Check, Eraser, Keyboard, PenLine, Undo2 } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import confetti from 'canvas-confetti';
+import { CatIcon } from '../../components/Icon';
 import { InkPad } from '../../components/InkPad';
 import { Avatar, useNow } from '../../components/ui';
 import { catInfo } from '../../engine/categories';
 import { lookup } from '../../engine/dict';
 import { capitalize, fixFirstLetter, startsWithLetter } from '../../engine/tr';
 import { rKey, type RoomState } from '../../engine/types';
-import { buzz, sayLetter, speak } from '../../lib/feel';
+import { buzz } from '../../lib/feel';
+import { say } from '../../lib/voice';
+import { VOICE } from '../../voice/lines';
 import { chooseCandidate, inkToPath, recognize, type Stroke } from '../../lib/ink';
 import { sfx } from '../../lib/sfx';
 import type { Transport } from '../../online/transport';
@@ -136,7 +139,7 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
       revealed.current = true;
       sfx.reveal();
       buzz.success();
-      speak(`Harfimiz ${sayLetter(letter)}!`);
+      void say(VOICE.letter(letter), 600);
       void confetti({ particleCount: 70, spread: 80, startVelocity: 38, origin: { y: 0.42 }, colors: ['#ff6b4a', '#14a89a', '#ffc83d', '#e9487d', '#7c5cff'] });
     }
   }, [started, letter]);
@@ -151,11 +154,19 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
     if (started && !wasStarted.current) {
       sfx.count(true);
       buzz.light();
+      if (now - c.startAt < 1500) void say(VOICE.go);
     }
     wasStarted.current = started;
   }, [started]);
 
   // ---- Son saniyeler, STOP ve süre bitti ----
+  const tenSaid = useRef(false);
+  useEffect(() => {
+    if (started && !over && !c.stopBy && left <= 10 && left > 8 && !tenSaid.current) {
+      tenSaid.current = true;
+      void say(VOICE.tenLeft);
+    }
+  }, [left, started, over, c.stopBy]);
   const lastTick = useRef(-1);
   useEffect(() => {
     if (started && !over && left <= 5 && left !== lastTick.current) {
@@ -169,7 +180,7 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
       stopSeen.current = c.stopBy;
       sfx.siren();
       buzz.warn();
-      if (c.stopBy !== t.me) speak('Stop!');
+      void say(VOICE.stop);
     }
   }, [c.stopBy, t.me]);
   const overSeen = useRef(false);
@@ -178,6 +189,7 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
       overSeen.current = true;
       sfx.timeUp();
       buzz.heavy();
+      void say(VOICE.timeUp, 500);
     }
   }, [over]);
 
@@ -204,7 +216,7 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
         <div className="reveal__count" key={countdown}>{countdown <= 3 ? (countdown > 0 ? countdown : 'YAZ!') : ''}</div>
         <div className="reveal__cats">
           {cats.map((x, i) => (
-            <span key={x.id} className="mini-cat rise" style={{ animationDelay: `${0.4 + i * 0.06}s` }}>{x.emoji} {x.label}</span>
+            <span key={x.id} className="mini-cat rise" style={{ animationDelay: `${0.4 + i * 0.06}s` }}><CatIcon cat={x} size={20} /> {x.label}</span>
           ))}
         </div>
       </div>
@@ -242,7 +254,7 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
           const done = !!slots[x.id]?.text.trim();
           return (
             <button key={x.id} className={`cat-tab ${i === cur ? 'is-cur' : ''} ${done ? 'is-done' : ''}`} style={{ '--c': catInfo(x).color } as CSSProperties} onClick={() => (sfx.tap(), setCur(i))}>
-              <span className="cat-tab__emoji">{done ? <Check size={16} strokeWidth={3.6} /> : x.emoji}</span>
+              <span className="cat-tab__emoji">{done ? <Check size={16} strokeWidth={3.6} /> : <CatIcon cat={x} size={22} />}</span>
               {x.label}
             </button>
           );
@@ -252,7 +264,7 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
       <section className="write-card" style={{ '--c': info.color } as CSSProperties} key={cat.id}>
         <div className="write-card__top">
           <h2 className="write-card__title">
-            <span>{cat.emoji}</span> {cat.label}
+            <CatIcon cat={cat} size={34} /> {cat.label}
           </h2>
           <span className="write-card__hint">
             <b>{letter}</b> ile başlayan {info.hint}
@@ -303,7 +315,7 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
           </div>
         ) : (
           <div className="pad-box" ref={padBox}>
-            <InkPad key={cat.id} strokes={slot.strokes} onChange={onStrokes} disabled={over} hint={`${letter} ile yaz ✍️`} />
+            <InkPad key={cat.id} strokes={slot.strokes} onChange={onStrokes} disabled={over} hint={`${letter} ile yaz`} />
           </div>
         )}
 

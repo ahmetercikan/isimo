@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Doodles } from '../components/Doodles';
 import { SettingsForm } from '../components/SettingsForm';
-import { TopBar, useToast } from '../components/ui';
+import { Avatar, TopBar, useToast } from '../components/ui';
 import { BOT_LEVELS, BOT_PROFILES } from '../game/bots';
 import { sfx } from '../lib/sfx';
 import { useGame } from '../store/useGame';
@@ -54,7 +54,7 @@ export default function Setup() {
             <button className="round-btn round-btn--soft" aria-label="Azalt" disabled={count <= 1} onClick={() => (sfx.tap(), setCount(count - 1))}><Minus size={22} strokeWidth={3} /></button>
             <div className="bot-faces">
               {BOT_PROFILES.slice(0, count).map((b, i) => (
-                <span key={b.name} className="bot-face pop-in" style={{ background: b.color, animationDelay: `${i * 0.03}s` }}>{b.avatar}</span>
+                <span key={b.name} className="pop-in" style={{ animationDelay: `${i * 0.03}s` }}><Avatar emoji={b.avatar} color={b.color} size={40} /></span>
               ))}
             </div>
             <button className="round-btn round-btn--soft" aria-label="Arttır" disabled={count >= 9} onClick={() => (sfx.tap(), setCount(count + 1))}><Plus size={22} strokeWidth={3} /></button>

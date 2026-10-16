@@ -61,7 +61,7 @@ await p.goto(URL);
 await p.evaluate(() =>
   localStorage.setItem('isimsehir-v1', JSON.stringify({
     state: {
-      name: 'Elif', avatar: '🦊', color: '#ff6b4a', sfx: false, music: false, voice: false, haptics: false,
+      name: 'Elif', avatar: 'tilki', color: '#ff6b4a', sfx: false, music: false, voice: false, haptics: false,
       settings: { cats: [['isim', 'İsim', '🧒'], ['sehir', 'Şehir', '🏙️'], ['hayvan', 'Hayvan', '🦁'], ['bitki', 'Bitki', '🌿'], ['esya', 'Eşya', '🪑'], ['ulke', 'Ülke', '🌍']].map(([id, label, emoji]) => ({ id, label, emoji })), rounds: 5, time: 120, stop: true, grace: 10, hard: false, manualStop: true },
       bots: { count: 9, level: 3 }, stats: { games: 12, wins: 7, best: 190, points: 1460 }, lastRoom: null,
     },

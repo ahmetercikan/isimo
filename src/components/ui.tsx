@@ -1,6 +1,7 @@
 import { ArrowLeft, Crown, WifiOff } from 'lucide-react';
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { avatarIcon, iconSvg } from '../art/icons';
 import { sfx } from '../lib/sfx';
 
 export function BackButton({ onBack }: { onBack?: () => void }) {
@@ -67,7 +68,11 @@ export function useToast(): [ReactNode, (msg: string) => void] {
 export function Avatar({ emoji, color, size = 48, host, off, style }: { emoji: string; color: string; size?: number; host?: boolean; off?: boolean; style?: CSSProperties }) {
   return (
     <span className={`avatar ${off ? 'avatar--off' : ''}`} style={{ width: size, height: size, fontSize: size * 0.56, '--c': color, ...style } as CSSProperties}>
-      <span className="avatar__emoji">{emoji}</span>
+      {avatarIcon(emoji) ? (
+        <span className="avatar__art" dangerouslySetInnerHTML={{ __html: iconSvg(avatarIcon(emoji), size) }} />
+      ) : (
+        <span className="avatar__emoji">{emoji}</span>
+      )}
       {host && (
         <span className="avatar__crown" aria-label="Ev sahibi">
           <Crown size={Math.max(12, size * 0.3)} fill="#ffc83d" stroke="#e8a200" strokeWidth={2.4} />

@@ -363,6 +363,23 @@ function duck(depth = 0.35, hold = 0.4) {
   g.setTargetAtTime(1, t + hold, 0.35);
 }
 
+/** Sunucu sesi kanalı: konuşurken müzik kısılır (voice.ts). */
+let voiceBus: GainNode | null = null;
+export function voiceOut(seconds: number): AudioNode {
+  const a = audio()!;
+  if (!voiceBus) {
+    voiceBus = a.createGain();
+    voiceBus.gain.value = 1.15;
+    voiceBus.connect(master);
+  }
+  const g = musicDuck.gain;
+  const t = a.currentTime;
+  g.cancelScheduledValues(t);
+  g.setTargetAtTime(0.3, t, 0.03);
+  g.setTargetAtTime(1, t + seconds, 0.3);
+  return voiceBus;
+}
+
 /** Müzik kanalının ses seviyesi (music.ts geçişleri için). */
 export function musicLevel(v: number, time = 0.6) {
   const a = audio();

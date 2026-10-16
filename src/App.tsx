@@ -4,6 +4,7 @@ import { HashRouter, Navigate, Route, Routes, useLocation, useNavigate } from 'r
 import { setFeel } from './lib/feel';
 import { prepareInk } from './lib/ink';
 import { setMusicEnabled } from './lib/music';
+import { setVoiceEnabled } from './lib/voice';
 import { audio, setSfxEnabled } from './lib/sfx';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
@@ -52,6 +53,7 @@ export default function App() {
     return () => window.removeEventListener('pointerdown', once);
   }, []);
   useEffect(() => setFeel({ voice, haptics }), [voice, haptics]);
+  useEffect(() => setVoiceEnabled(voice), [voice]);
   // El yazısı modeli arka planda hazırlansın (Android'de ilk açılışta iner).
   useEffect(() => void prepareInk(), []);
   // Uygulama kapanırken çevrimiçi odadan çıkmadan önce bağlantı "çevrimdışı" işaretlenir (onDisconnect).

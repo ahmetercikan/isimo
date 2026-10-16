@@ -3,10 +3,13 @@ import { Share } from '@capacitor/share';
 import confetti from 'canvas-confetti';
 import { Home, RotateCcw, Share2 } from 'lucide-react';
 import { useEffect, useMemo, useRef } from 'react';
+import { Icon } from '../../components/Icon';
 import { Avatar } from '../../components/ui';
 import { judgeRound, ranking } from '../../engine/scoring';
 import type { RoomState } from '../../engine/types';
-import { buzz, speak } from '../../lib/feel';
+import { buzz } from '../../lib/feel';
+import { say } from '../../lib/voice';
+import { VOICE } from '../../voice/lines';
 import { sfx } from '../../lib/sfx';
 import type { Transport } from '../../online/transport';
 import { useProfile } from '../../store/useProfile';
@@ -26,7 +29,7 @@ export function Final({ t, s, onExit }: { t: Transport; s: RoomState; onExit: ()
     fired.current = true;
     sfx.fanfare();
     buzz.success();
-    if (winner) speak(`Kazanan ${rank[0].pid === t.me ? 'sensin' : winner.name}!`);
+    void say(me?.rank === 1 ? VOICE.win : VOICE.end, 1400);
     const colors = ['#ff6b4a', '#14a89a', '#ffc83d', '#e9487d', '#7c5cff'];
     const end = Date.now() + 1800;
     const frame = () => {
@@ -60,9 +63,9 @@ export function Final({ t, s, onExit }: { t: Transport; s: RoomState; onExit: ()
     }
     const best = (m: Record<string, number>) => Object.entries(m).sort((a, b) => b[1] - a[1])[0];
     return [
-      { e: '🌟', t: 'Tek Kalan', d: 'en çok 20 puanlık cevap', w: best(alone) },
-      { e: '⚡', t: 'STOP Ustası', d: 'en çok STOP', w: best(stops) },
-      { e: '📚', t: 'Kelime Hazinesi', d: 'en çok geçerli cevap', w: best(valid) },
+      { e: 'yildiz', t: 'Tek Kalan', d: 'en çok 20 puanlık cevap', w: best(alone) },
+      { e: 'simsek', t: 'STOP Ustası', d: 'en çok STOP', w: best(stops) },
+      { e: 'kitap', t: 'Kelime Hazinesi', d: 'en çok geçerli cevap', w: best(valid) },
     ].filter((a) => a.w && s.players[a.w[0]]);
   }, [s]);
 
@@ -80,7 +83,7 @@ export function Final({ t, s, onExit }: { t: Transport; s: RoomState; onExit: ()
   const podium = [rank[1], rank[0], rank[2]];
   return (
     <div className="final">
-      <h2 className="final__title pop-in">{me?.rank === 1 ? 'Kazandın! 🎉' : `Kazanan: ${winner?.name ?? ''}`}</h2>
+      <h2 className="final__title pop-in">{me?.rank === 1 ? 'Kazandın!' : `Kazanan: ${winner?.name ?? ''}`} <Icon name="konfeti" size={44} /></h2>
       <div className="podium">
         {podium.map((r, i) => {
           if (!r) return <span key={i} className="podium__col podium__col--empty" />;
@@ -92,7 +95,7 @@ export function Final({ t, s, onExit }: { t: Transport; s: RoomState; onExit: ()
               <span className="podium__name">{p.name}</span>
               <span className="podium__pts">{r.total}</span>
               <div className="podium__block">
-                <span>{['🥇', '🥈', '🥉'][r.rank - 1] ?? r.rank}</span>
+                {r.rank <= 3 ? <Icon name={`m${r.rank}`} size={place === 1 ? 54 : 44} /> : <span>{r.rank}</span>}
               </div>
             </div>
           );
@@ -114,7 +117,7 @@ export function Final({ t, s, onExit }: { t: Transport; s: RoomState; onExit: ()
         <div className="awards">
           {awards.map((a, i) => (
             <div key={a.t} className="award rise" style={{ animationDelay: `${1.2 + i * 0.15}s` }}>
-              <span className="award__e">{a.e}</span>
+              <span className="award__e"><Icon name={a.e} size={46} /></span>
               <span className="award__t">{a.t}</span>
               <span className="award__w">{s.players[a.w![0]].name}</span>
               <small>{a.d}</small>

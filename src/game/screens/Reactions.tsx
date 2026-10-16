@@ -1,10 +1,13 @@
 /** Emoji tepkileri: basınca herkesin ekranında yukarı uçar. */
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
+import { hasIcon } from '../../art/icons';
+import { Icon } from '../../components/Icon';
+import { Avatar } from '../../components/ui';
 import type { RoomState } from '../../engine/types';
 import { sfx } from '../../lib/sfx';
 import type { Transport } from '../../online/transport';
 
-const EMOJIS = ['😂', '👏', '😮', '🔥', '🤔', '🙈'];
+const EMOJIS = ['haha', 'vay', 'ates', 'kalp', 'hmm', 'uzgun'];
 
 export function Reactions({ t, s }: { t: Transport; s: RoomState }) {
   const since = useRef(t.now() - 1500);
@@ -29,7 +32,7 @@ export function Reactions({ t, s }: { t: Transport; s: RoomState }) {
     <>
       <div className="react-bar">
         {EMOJIS.map((e) => (
-          <button key={e} className="react-btn" onClick={() => send(e)} aria-label={e}>{e}</button>
+          <button key={e} className="react-btn" onClick={() => send(e)} aria-label={e}><Icon name={e} size={30} /></button>
         ))}
       </div>
       <div className="react-fly" aria-hidden="true">
@@ -38,8 +41,8 @@ export function Reactions({ t, s }: { t: Transport; s: RoomState }) {
           const x = (parseInt(id.slice(-4), 10) % 70) + 10;
           return (
             <span key={id} className="react-float" style={{ '--x': `${x}%` } as CSSProperties}>
-              <span className="react-float__e">{r.e}</span>
-              {p && <span className="react-float__who" style={{ background: p.color }}>{p.avatar}</span>}
+              <span className="react-float__e">{hasIcon(r.e) ? <Icon name={r.e} size={52} /> : r.e}</span>
+              {p && <Avatar emoji={p.avatar} color={p.color} size={26} />}
             </span>
           );
         })}

@@ -1,10 +1,11 @@
 /** Cihazdaki oyuncu: ad, avatar, renk, ayarlar ve istatistikler (localStorage'da saklanır). */
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { AVATAR_IDS } from '../art/icons';
 import { DEFAULT_CATS, catById, type Category } from '../engine/categories';
 import type { Settings } from '../engine/types';
 
-export const AVATARS = ['🦊', '🐼', '🐸', '🐯', '🐙', '🦄', '🐵', '🐨', '🐰', '🐧', '🦁', '🐶', '🐱', '🐻', '🐷', '🐳', '🦖', '🐝', '🦋', '🐞', '🦜', '🐬', '🦔', '🐮'];
+export const AVATARS = AVATAR_IDS;
 
 /** Oyuncu renkleri: listelerde ve avatar halkalarında. */
 export const COLORS = ['#ff6b4a', '#14a89a', '#ffb703', '#e9487d', '#7c5cff', '#3ea6f0', '#2bb673', '#f2711c', '#d6336c', '#5b6cff'];

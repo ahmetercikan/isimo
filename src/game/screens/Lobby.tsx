@@ -2,6 +2,7 @@ import { Share } from '@capacitor/share';
 import { Copy, Settings2, Share2, UserX } from 'lucide-react';
 import { useState } from 'react';
 import { SettingsForm } from '../../components/SettingsForm';
+import { CatIcon, Icon } from '../../components/Icon';
 import { Avatar, Confirm, Modal, useToast } from '../../components/ui';
 import { MAX_PLAYERS, type RoomState } from '../../engine/types';
 import { sfx } from '../../lib/sfx';
@@ -54,7 +55,7 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
       ) : (
         <section className="code-card code-card--bots pop-in">
           <span className="code-card__label">Rakiplerin hazır</span>
-          <p className="title-lg">Kim daha hızlı? ⚡</p>
+          <p className="title-lg">Kim daha hızlı? <Icon name="simsek" size={30} /></p>
         </section>
       )}
 
@@ -89,7 +90,7 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
       <section className="paper-card rules-card rise" style={{ animationDelay: '0.08s' }}>
         <div className="rules-card__cats">
           {st.cats.map((c) => (
-            <span key={c.id} className="mini-cat">{c.emoji} {c.label}</span>
+            <span key={c.id} className="mini-cat"><CatIcon cat={c} size={20} /> {c.label}</span>
           ))}
         </div>
         <p className="rules-card__line">
