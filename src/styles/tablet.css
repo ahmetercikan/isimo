@@ -128,7 +128,7 @@
   .alts__label { font-size: 15px; }
   .alts { height: 50px; }
   .alt { font-size: 20px; padding: 8px 16px; }
-  .stop-banner { top: 0; }
+  .stop-banner { top: 100px; }
   .pad-box { min-height: 320px; }
   .inkpad {
     background:

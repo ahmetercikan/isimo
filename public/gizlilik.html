@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>İsim Şehir — Gizlilik Politikası</title>
+<style>
+  :root { color-scheme: light; }
+  body { margin: 0; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; background: #cfeee6; color: #3a2b27; line-height: 1.6; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 20px 60px; }
+  h1 { font-size: 30px; margin: 0 0 4px; color: #de4d2d; }
+  h2 { font-size: 20px; margin: 32px 0 8px; }
+  .muted { color: #8c766e; }
+  .card { background: #fff; border-radius: 16px; padding: 18px 20px; box-shadow: 0 6px 20px rgba(122, 72, 40, 0.1); margin-top: 20px; }
+  ul { padding-left: 22px; }
+  a { color: #0d8074; }
+</style>
+</head>
+<body>
+<main>
+  <h1>İsim Şehir — Gizlilik Politikası</h1>
+  <p class="muted">Son güncelleme: 16 Ekim 2026</p>
+
+  <div class="card">
+    <strong>Kısaca:</strong> İsim Şehir reklam ve analiz araçları içermez; üyelik, e-posta ya da telefon numarası istemez.
+    Çevrimiçi oyunda yalnızca seçtiğiniz takma ad, avatar ve oyun sırasında yazdığınız cevaplar o odadaki oyunculara gösterilir.
+    Botlara karşı oyun tamamen internetsiz çalışır ve hiçbir veri göndermez.
+  </div>
+
+  <h2>Uygulama nedir?</h2>
+  <p>İsim Şehir, klasik "İsim Şehir" kelime oyununun dijital sürümüdür. Oyuncular bir harf seçer, her kategoriye o harfle
+  başlayan bir kelime yazar ve puan toplar. Oyun arkadaşlarla çevrimiçi (oda koduyla) ya da cihazda botlara karşı oynanabilir.</p>
+
+  <h2>Cihazda kalan bilgiler</h2>
+  <ul>
+    <li>Takma adınız, avatarınız, renginiz, ayarlarınız ve istatistikleriniz (oyun sayısı, en iyi skor) yalnızca cihazınızda saklanır.</li>
+    <li>Botlara karşı oyunlar tamamen cihazda oynanır; hiçbir bilgi gönderilmez.</li>
+  </ul>
+
+  <h2>Çevrimiçi oyunda paylaşılan bilgiler</h2>
+  <p>Arkadaşlarla oynamak için oda kurduğunuzda ya da bir odaya katıldığınızda şu bilgiler, oyunun çalışması amacıyla
+  Google Firebase (Realtime Database, Avrupa / Belçika sunucusu) üzerinden o odadaki oyunculara iletilir:</p>
+  <ul>
+    <li><strong>Takma ad, avatar ve renk:</strong> oyuncu listesinde görünmesi için.</li>
+    <li><strong>Oyun cevapları ve el yazısı çizgileri:</strong> değerlendirme ekranında herkese gösterilmesi için.</li>
+    <li><strong>Oylar ve emoji tepkileri.</strong></li>
+    <li><strong>Anonim oyuncu kimliği:</strong> Firebase Anonim Giriş ile her cihaza rastgele bir kimlik verilir. Bu kimlik
+      adınızla, e-postanızla ya da telefon numaranızla ilişkili değildir; yalnızca odadaki kaydınızın size ait olduğunu doğrulamak için kullanılır.</li>
+  </ul>
+  <p>Bu bilgiler yalnızca aynı odadaki oyunculara gösterilir; satılmaz, reklam için kullanılmaz ve üçüncü taraflarla paylaşılmaz.
+  Odadaki son oyuncu çıktığında oda ve el yazısı çizgileri silinir. Veriler aktarım sırasında şifrelenir (HTTPS/TLS).
+  Mesajlaşma ya da serbest metin sohbeti yoktur.</p>
+
+  <h2>El yazısı tanıma</h2>
+  <ul>
+    <li><strong>Android uygulamasında</strong> el yazısı, Google ML Kit ile <strong>cihazın üzerinde</strong> tanınır. Türkçe tanıma modeli
+      ilk kullanımda bir kez Google sunucularından indirilir. ML Kit, hizmetin çalışması ve iyileştirilmesi için anonim kullanım ve
+      performans bilgileri gönderebilir (<a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener">ML Kit koşulları</a>).</li>
+    <li><strong>Web sürümünde</strong> (tarayıcıda) yazdığınız çizgiler tanınmak üzere Google'ın el yazısı giriş servisine gönderilir.</li>
+  </ul>
+
+  <h2>İzinler</h2>
+  <ul>
+    <li><strong>İnternet:</strong> çevrimiçi oyun ve el yazısı modelinin indirilmesi için.</li>
+    <li><strong>Titreşim:</strong> oyun sırasında dokunsal geri bildirim için (ayarlardan kapatılabilir).</li>
+  </ul>
+  <p>Uygulama kamera, mikrofon, konum, rehber ya da dosyalarınıza erişmez.</p>
+
+  <h2>Çocuklar</h2>
+  <p>İsim Şehir her yaştan oyuncuya uygun bir kelime oyunudur. Kişisel bilgi (gerçek ad, e-posta, telefon, konum) istemez;
+  çevrimiçi oyunda yalnızca oyuncunun seçtiği takma ad görünür. Çocuğunuzun gerçek adını değil bir takma ad kullanmasını öneririz.</p>
+
+  <h2>Verilerinizin silinmesi</h2>
+  <ul>
+    <li>Cihazdaki bilgiler, uygulama silindiğinde ya da uygulama verileri temizlendiğinde tamamen silinir.</li>
+    <li>Çevrimiçi oda bilgileri, odadaki son oyuncu çıktığında silinir.</li>
+    <li>Herhangi bir verinin silinmesini istiyorsanız Google Play'deki geliştirici e-posta adresinden bize yazabilirsiniz.</li>
+  </ul>
+
+  <h2>Değişiklikler</h2>
+  <p>Bu politika değişirse güncel hali bu sayfada yayınlanır ve "Son güncelleme" tarihi değişir.</p>
+
+  <h2>İletişim</h2>
+  <p>Sorularınız için Google Play'deki uygulama sayfasında yer alan geliştirici e-posta adresinden bize ulaşabilirsiniz.</p>
+</main>
+</body>
+</html>
