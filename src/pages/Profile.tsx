@@ -5,6 +5,7 @@ import { Doodles } from '../components/Doodles';
 import { Icon } from '../components/Icon';
 import { Avatar, Logo, TopBar } from '../components/ui';
 import { avatarIcon } from '../art/icons';
+import { privacyOptionsRequired, showPrivacyOptions } from '../lib/ads';
 import { sfx } from '../lib/sfx';
 import { say } from '../lib/voice';
 import { VOICE } from '../voice/lines';
@@ -100,6 +101,9 @@ export default function Profile() {
             <button className="btn-outline" onClick={() => (sfx.tap(), nav('/sesler'))}>
               <Headphones size={20} /> Sesleri dinle
             </button>
+            {privacyOptionsRequired() && (
+              <button className="link-btn" onClick={() => void showPrivacyOptions()}>Reklam gizlilik seçenekleri</button>
+            )}
           </>
         )}
       </div>

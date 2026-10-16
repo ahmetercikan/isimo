@@ -13,6 +13,7 @@ import { Spin } from '../game/screens/Spin';
 import { Write } from '../game/screens/Write';
 import { setMood, type Mood } from '../lib/music';
 import { preloadVoice } from '../lib/voice';
+import { maybeInterstitial } from '../lib/ads';
 import { VOICE_LINES } from '../voice/lines';
 import { sfx } from '../lib/sfx';
 import { useNow } from '../components/ui';
@@ -37,6 +38,13 @@ export default function Game() {
   useEffect(() => setMood(mood), [mood]);
   useEffect(() => () => setMood('off'), []);
   useEffect(() => void preloadVoice(VOICE_LINES), []);
+  // Oyun bitip lobiye dönülünce (oyun arası mola) geçiş reklamı; 3 dakikada en fazla bir kez
+  const prevPhase = useRef(s?.ctl.phase);
+  useEffect(() => {
+    const ph = s?.ctl.phase;
+    if (prevPhase.current === 'final' && ph === 'lobby') void maybeInterstitial();
+    prevPhase.current = ph;
+  }, [s?.ctl.phase]);
 
   useEffect(() => {
     const h = () => setAsk(true);

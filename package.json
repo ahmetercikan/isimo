@@ -16,6 +16,7 @@
     "emulators": "firebase emulators:start --only auth,database --project demo-isimsehir"
   },
   "dependencies": {
+    "@capacitor-community/admob": "^8.2.1",
     "@capacitor-community/text-to-speech": "^8.0.2",
     "@capacitor/android": "^8.5.3",
     "@capacitor/app": "^8.1.2",

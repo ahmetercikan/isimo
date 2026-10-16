@@ -20,7 +20,7 @@ Play Console → **Uygulama oluştur**
 **Tüm işlevler özel erişim olmadan kullanılabilir** (hesap/giriş yok).
 
 ### Reklamlar
-**Hayır, uygulamamda reklam yok.**
+**Evet, uygulamamda reklam var.** (Google AdMob; mağazada "Reklam içerir" etiketi görünür.)
 
 ### İçerik derecelendirmesi (IARC anketi)
 - E-posta: kendi adresiniz · Kategori: **Oyun**
@@ -30,22 +30,25 @@ Play Console → **Uygulama oluştur**
 - Beklenen sonuç: PEGI 3 / Herkes (+ "Kullanıcılar Etkileşimde Bulunur" notu)
 
 ### Hedef kitle ve içerik
-- Hedef yaş grupları: **13-15, 16-17, 18 ve üzeri**
-- "Uygulamanız çocukların ilgisini çekebilir mi?" sorusu gelirse: **Hayır** demek yerine dürüstçe değerlendirin; Google
-  renkli tasarımı çocuklara hitap ediyor sayarsa "Aileler" politikası istenir. O durumda bana haber verin, birlikte ayarlarız.
+- Hedef yaş grupları: **18 ve üzeri** (oyun yetişkinlere yönelik; isterseniz 16-17 de eklenebilir)
+- "Uygulamanız çocukların ilgisini çekebilir mi?" sorusu gelirse: **Hayır**; açıklama olarak:
+  `Yetişkinlere yönelik bir kelime ve parti oyunudur; çevrimiçi oyun, oda kodu ve reklam içerir.`
+- 13 yaş altını seçmeyin: seçilirse "Aileler" politikası ve çocuklara uygun reklam ayarı zorunlu olur.
 
 ### Veri güvenliği
 "Uygulamanız kullanıcı verisi topluyor veya paylaşıyor mu?" → **Evet**
 - Veriler aktarım sırasında şifreleniyor mu? → **Evet**
 - Kullanıcılar verilerinin silinmesini isteyebilir mi? → **Evet** (geliştirici e-postası; oda, son oyuncu çıkınca silinir)
 
-Toplanan veri türleri (hepsi **Toplanıyor**, **Paylaşılmıyor**, amaç: **Uygulama işlevselliği**, isteğe bağlı: **Evet** — çevrimiçi oyun isteğe bağlı):
-| Kategori | Tür | Not |
-|---|---|---|
-| Kişisel bilgiler | **Ad** | oyuncunun seçtiği takma ad |
-| Uygulama etkinliği | **Kullanıcı tarafından oluşturulan diğer içerik** | oyun cevapları ve el yazısı çizgileri |
-| Cihaz veya diğer kimlikler | **Cihaz veya diğer kimlikler** | Firebase anonim oyuncu kimliği |
-| Uygulama bilgileri ve performansı | **Tanılama** | Google ML Kit (el yazısı) anonim kullanım ölçümleri; amaç: **Analiz** |
+Toplanan veriler (Google AdMob'un resmi beyan rehberine göre reklam satırları "paylaşılıyor" işaretlenir):
+| Kategori | Tür | Toplanıyor | Paylaşılıyor | Amaç | İsteğe bağlı |
+|---|---|---|---|---|---|
+| Kişisel bilgiler | **Ad** (takma ad) | Evet | Hayır | Uygulama işlevselliği | Evet (yalnız çevrimiçi oyun) |
+| Uygulama etkinliği | **Kullanıcı tarafından oluşturulan diğer içerik** (cevaplar, el yazısı) | Evet | Hayır | Uygulama işlevselliği | Evet |
+| Uygulama etkinliği | **Uygulama etkileşimleri** | Evet | Evet | Reklam veya pazarlama, Analiz | Hayır |
+| Konum | **Yaklaşık konum** (IP'den) | Evet | Evet | Reklam veya pazarlama, Sahtekârlığı önleme | Hayır |
+| Cihaz veya diğer kimlikler | **Cihaz veya diğer kimlikler** (reklam kimliği, Firebase anonim kimliği) | Evet | Evet | Reklam veya pazarlama, Uygulama işlevselliği, Sahtekârlığı önleme | Hayır |
+| Uygulama bilgileri ve performansı | **Kilitlenme günlükleri**, **Tanılama** (AdMob, ML Kit) | Evet | Evet | Analiz | Hayır |
 
 ### Haber / COVID-19 / Devlet / Finans / Sağlık
 Hepsi **Hayır / geçerli değil**.

@@ -5,6 +5,7 @@ import { setFeel } from './lib/feel';
 import { prepareInk } from './lib/ink';
 import { setMusicEnabled } from './lib/music';
 import { setVoiceEnabled } from './lib/voice';
+import { initAds } from './lib/ads';
 import { audio, setSfxEnabled } from './lib/sfx';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
@@ -56,6 +57,11 @@ export default function App() {
   useEffect(() => setVoiceEnabled(voice), [voice]);
   // El yazısı modeli arka planda hazırlansın (Android'de ilk açılışta iner).
   useEffect(() => void prepareInk(), []);
+  // Reklamlar (yalnızca Android): ilk açılışta biraz sonra, ekran çizildikten sonra
+  useEffect(() => {
+    const t = setTimeout(() => void initAds(), 1500);
+    return () => clearTimeout(t);
+  }, []);
   // Uygulama kapanırken çevrimiçi odadan çıkmadan önce bağlantı "çevrimdışı" işaretlenir (onDisconnect).
   useEffect(() => () => void useGame.getState().leave(), []);
 

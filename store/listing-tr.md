@@ -51,11 +51,11 @@ Robo Ramiz, Bilge Baykuş, Kurnaz Tilki ve diğer botlara karşı internetsiz oy
 🎵 OYUN GİBİ OYUN
 Renkli ve sevimli tasarım, akıcı animasyonlar, harf sayacının tıkırtısı, STOP düdüğü, fanfarlar ve fon müziği. Telefonda da tablette de tam ekran.
 
-👨‍👩‍👧 AİLE VE PARTİ OYUNU
-İsim Şehir her yaştan oyuncuya hitap eder: aile akşamlarında, arkadaş buluşmalarında, okulda, tatilde ve yolculukta. Kelime oyunu ve harf oyunu sevenlerin vazgeçilmezi. Kelime dağarcığını geliştirir, hızlı düşünmeyi öğretir.
+🎉 ARKADAŞ, AİLE VE PARTİ OYUNU
+Arkadaş buluşmalarında, aile akşamlarında, ofis molalarında, tatilde ve yolculukta… İsim Şehir her toplantıyı oyuna çevirir. Kelime oyunu ve harf oyunu sevenlerin vazgeçilmezi: kelime dağarcığını geliştirir, hızlı düşündürür, bol bol güldürür.
 
-🔒 GÜVENLİ VE REKLAMSIZ
-• Reklam yok
+🔒 KOLAY VE GÜVENLİ
+• Ücretsiz
 • Üyelik, e-posta ya da telefon numarası istemez
 • Mesajlaşma yok; yalnızca takma ad, avatar ve oyun cevapları paylaşılır
 • Oyun bitince oda bilgileri silinir

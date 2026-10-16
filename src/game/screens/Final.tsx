@@ -10,6 +10,7 @@ import type { RoomState } from '../../engine/types';
 import { buzz } from '../../lib/feel';
 import { say } from '../../lib/voice';
 import { VOICE } from '../../voice/lines';
+import { maybeInterstitial } from '../../lib/ads';
 import { sfx } from '../../lib/sfx';
 import type { Transport } from '../../online/transport';
 import { useProfile } from '../../store/useProfile';
@@ -128,7 +129,11 @@ export function Final({ t, s, onExit }: { t: Transport; s: RoomState; onExit: ()
 
       <footer className="final__foot">
         {isHost ? (
-          <button className="pill pill--big" onClick={() => (sfx.pop(), void backToLobby(t))}>
+          <button className="pill pill--big" onClick={async () => {
+            sfx.pop();
+            await maybeInterstitial();
+            void backToLobby(t);
+          }}>
             <RotateCcw size={24} strokeWidth={2.6} /> Tekrar Oyna
           </button>
         ) : (
@@ -136,7 +141,7 @@ export function Final({ t, s, onExit }: { t: Transport; s: RoomState; onExit: ()
         )}
         <div className="final__row">
           <button className="btn-outline" onClick={share}><Share2 size={20} /> Paylaş</button>
-          <button className="btn-outline" onClick={onExit}><Home size={20} /> Ana Sayfa</button>
+          <button className="btn-outline" onClick={async () => (await maybeInterstitial(), onExit())}><Home size={20} /> Ana Sayfa</button>
         </div>
       </footer>
     </div>

@@ -21,6 +21,9 @@
   - `src/online/`: ortak arayüz (transport.ts), botlu oyun (local.ts), Firebase (firebase.ts, config.ts); kurallar `database.rules.json`
   - `src/lib/ink.ts`: el yazısı tanıma — Android'de `android/.../InkPlugin.java` (ML Kit Digital Ink, Türkçe model), web'de Google giriş servisi
 - **Firebase:** proje `isimo-1ce98` (Realtime Database europe-west1, anonim giriş). `src/online/config.ts` → `FIREBASE_CONFIG` null iken çevrimiçi oyun kapalı (botlu oyun çalışır).
+- **Reklam:** Google AdMob yalnızca Android'de (`src/lib/ads.ts`): ana sayfa ve lobi altında şerit, oyun bitince tam ekran
+  (3 dk'da en fazla bir). Oyun sırasında reklam yok. Kimlikler `src/lib/adsConfig.ts` + `strings.xml` (admob_app_id);
+  şu an Google deneme kimlikleri. Kurulum: `store/admob-adimlar.md`. Hedef kitle: yetişkinler (Play: 18+).
 - **Güvenlik:** anahtar, keystore ve `.env*` dosyaları asla commit edilmez. Firebase web ayarı gizli değildir.
 - **Yayın:** `main`e gönderilen her commit GitHub Pages'e yayınlanır (https://ahmetercikan.github.io/isimo/).
 - **Sürüm:** `package.json` → `version`; Android: `android/app/build.gradle` (versionCode/versionName).

@@ -1,8 +1,9 @@
 import { Bot, CircleHelp, LogIn, Pencil, Plus, RotateCcw, Volume2, VolumeX, Wifi } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Doodles } from '../components/Doodles';
 import { Avatar, Logo, useToast } from '../components/ui';
+import { hideBanner, showBanner } from '../lib/ads';
 import { sfx } from '../lib/sfx';
 import { ONLINE_AVAILABLE } from '../online/config';
 import { useGame } from '../store/useGame';
@@ -13,6 +14,10 @@ export default function Home() {
   const p = useProfile();
   const [toast, show] = useToast();
   const [busy, setBusy] = useState(false);
+  useEffect(() => {
+    void showBanner();
+    return () => void hideBanner();
+  }, []);
   const recent = p.lastRoom && Date.now() - p.lastRoom.at < 3 * 3600_000 ? p.lastRoom : null;
 
   const rejoin = async () => {

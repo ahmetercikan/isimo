@@ -1,10 +1,11 @@
 import { Share } from '@capacitor/share';
 import { Copy, Settings2, Share2, UserX } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SettingsForm } from '../../components/SettingsForm';
 import { CatIcon, Icon } from '../../components/Icon';
 import { Avatar, Confirm, Modal, useToast } from '../../components/ui';
 import { MAX_PLAYERS, type RoomState } from '../../engine/types';
+import { hideBanner, showBanner } from '../../lib/ads';
 import { sfx } from '../../lib/sfx';
 import type { Transport } from '../../online/transport';
 import { useProfile } from '../../store/useProfile';
@@ -14,6 +15,10 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
   const [edit, setEdit] = useState(false);
   const [kick, setKick] = useState<string | null>(null);
   const [toast, show] = useToast();
+  useEffect(() => {
+    void showBanner();
+    return () => void hideBanner();
+  }, []);
   const isHost = actingHost(s) === t.me;
   const online = t.kind === 'online';
   const players = Object.entries(s.players)

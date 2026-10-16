@@ -408,3 +408,7 @@
 .sound-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--line-2); }
 .sound-btn.is-on { background: var(--teal); color: #fff; box-shadow: 0 3px 0 var(--teal-dark); }
 .sound-btn.is-on svg { color: #fff; }
+
+/* ---------- Reklam şeridi (Android, ekranın altında; yüksekliği --ad-h) ---------- */
+body.has-ad .page { padding-bottom: calc(var(--safe-bottom) + 20px + var(--ad-h, 0px)); }
+body.has-ad .page__cta--sticky { bottom: calc(var(--safe-bottom) + 14px + var(--ad-h, 0px)); }
