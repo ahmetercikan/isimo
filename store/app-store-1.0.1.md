@@ -23,96 +23,51 @@ AdMob'da uygulama şu an "İnceleme gerekli" diyor: bu normal. Uygulama App Stor
 sonra AdMob'daki uygulamaya **Mağaza ekle** ile App Store bağlantısını eklersen Google onaylar ve
 reklamlar tam kapasite çalışmaya başlar.
 
-## Adım 2 — App Store Connect'te uygulamayı kaydet
+## Adım 2 — App Store Connect kaydı (tamamlandı ✅)
 
-https://appstoreconnect.apple.com → **Uygulamalar → + → Yeni Uygulama**
+Uygulama kaydı açıldı ve mağaza sayfası dolduruldu:
 
-| Alan | Yazılacak |
+| Alan | Değer |
 |---|---|
-| Platform | iOS |
-| Ad (en çok 30 karakter) | `İsim Şehir: Kelime Oyunu` |
-| Ana dil | Türkçe |
-| Paket kimliği | `com.ahmetercikan.isimsehir` |
-| SKU | `isimsehir-ios` |
-| Kullanıcı erişimi | Tam erişim |
+| Ad | İsim Şehir: Kelime Oyunu |
+| Alt başlık | Harfi çevir, yaz, STOP de! |
+| Apple ID | 6824006144 |
+| Paket kimliği | com.ahmetercikan.isimsehir |
+| SKU | isimsehir-ios |
+| Kategori | Oyunlar → Kelime, Aile |
+| Yaş | 4+ |
+| Fiyat | Ücretsiz, 175 ülke |
+| Gizlilik | Form dolduruldu ve yayımlandı |
+| Ekran görüntüleri | iPhone 8 + iPad 8 (geçişli/panoramik) |
+| Derleme | 1.0.1 (2) seçildi |
 
-**Uygulama Bilgileri** bölümünde:
-- Alt başlık (en çok 30 karakter): `Harfi çevir, yaz, STOP de!`
-- Kategori: **Oyunlar** → alt tür **Kelime**, ikinci alt tür **Aile**
-- Gizlilik politikası adresi: `https://ahmetercikan.github.io/isimo/gizlilik.html`
-- Destek adresi: `https://github.com/ahmetercikan/isimo/issues`
+## Adım 3 — Mağaza metinleri (tamamlandı ✅)
 
----
+Tanıtım metni, açıklama, anahtar kelimeler, destek ve pazarlama adresleri girildi.
+Açıklamada emoji kullanılamıyor (App Store "geçersiz karakter" diyor), o yüzden emojisiz sürüm yazıldı.
 
-## Adım 3 — Mağaza metinleri
+## Adım 4 — Yaş ve gizlilik (tamamlandı ✅)
 
-**Tanıtım metni** (en çok 170 karakter):
-> Arkadaşlarınla online İsim Şehir! Harfi çevir, cevapları parmağınla yaz, ilk sen STOP de. 14 kategori, el yazısı tanıma, otomatik puan tablosu.
+Yaş derecelendirmesi **4+**. Gizlilik formunda bildirilenler: Ad (takma ad), Diğer Kullanıcı İçeriği
+(cevaplar ve el yazısı), Kullanıcı Kimliği — uygulama işlevi için, kimliğe bağlı, izleme yok;
+Cihaz Kimliği ve Reklam Verileri — üçüncü taraf reklamcılık için, kimliğe bağlı değil, **izleme var**
+(bu yüzden uygulama Apple'ın izleme izni penceresini gösteriyor).
 
-**Açıklama:** `store/listing-tr.md` → "Tam açıklama" bölümünü olduğu gibi yapıştır.
-İçinde "Google Play" geçen bir yer varsa çıkar.
+## Adım 5 — Ekran görüntüleri (tamamlandı ✅)
 
-**Anahtar kelimeler** (en çok 100 karakter, virgülle):
-```
-isim şehir,kelime,harf,stop,online,arkadaş,parti,aile,türkçe,el yazısı,oyun
-```
+iPhone (1206×2622) ve iPad 13" (2064×2752) için sekizer görsel yüklendi. Görseller **geçişli
+(panoramik)**: arka plan, lekeler, harf karoları ve kalem çizgisi bir görselden diğerine akıyor,
+mağazada yan yana bakıldığında tek bir resim gibi görünüyor (Çizio'daki gibi).
+Kaynak: `store/promo/ios/`, üretim: `IOS.md` → Komutlar.
 
-**Sürüm notları:** `store/listing-tr.md` → "Sürüm notları".
+## Adım 6 — Son iki iş (sende)
 
----
+1. **İnceleme iletişim bilgileri.** App Store Connect → uygulama → sürüm sayfası → en altta
+   *App Review Information* → *Contact Information*: ad, soyad, telefon ve e-posta. Apple inceleme
+   ekibi gerekirse buradan ulaşıyor; bu bilgileri senin vermen gerekiyor (bana yazarsan ben de girerim).
+   Giriş bilgisi gerekmiyor ("Sign-in required" kapalı) ve inceleme notu yazıldı.
 
-## Adım 4 — Yaş derecelendirmesi ve gizlilik formu
-
-**Yaş derecelendirme anketi:** şiddet, korku, cinsellik, kumar → hepsine **Yok/Hayır**.
-- "Sınırsız web erişimi" → **Hayır**
-- "Kullanıcılar birbiriyle iletişim kurabiliyor mu" → **Evet** (oyun içinde takma ad, cevaplar ve
-  hazır emoji tepkileri paylaşılıyor; **mesajlaşma yok**)
-- Reklam içeriği → **Evet, sık olmayan/hafif** (AdMob reklamları)
-
-**Uygulama Gizliliği (App Privacy):** "Veri topluyor musunuz?" → **Evet**. Toplananlar:
-
-| Apple veri türü | Neden | Kimliğe bağlı mı? | İzleme? |
-|---|---|---|---|
-| İletişim bilgisi → **Ad** (oyuncunun takma adı) | Uygulama İşlevselliği | Evet (anonim hesaba) | Hayır |
-| Kullanıcı İçeriği → **Diğer Kullanıcı İçeriği** (cevaplar, el yazısı çizgileri, tepkiler) | Uygulama İşlevselliği | Evet | Hayır |
-| Tanımlayıcılar → **Kullanıcı Kimliği** (Firebase anonim kimlik) | Uygulama İşlevselliği | Evet | Hayır |
-| Tanımlayıcılar → **Cihaz Kimliği** (reklam kimliği) | Üçüncü Taraf Reklamcılığı | Hayır | **Evet** |
-| Kullanım Verileri → **Reklam Verileri** | Üçüncü Taraf Reklamcılığı | Hayır | **Evet** |
-
-> Son iki satır reklamlarla (AdMob) ilgili; reklamlar açık olduğu için işaretlenecek.
-> Konum, kişiler, sağlık, satın alma, arama geçmişi: **toplanmıyor**.
-
----
-
-## Adım 5 — Ekran görüntüleri
-
-Apple'ın istediği boyutlar:
-
-| Cihaz | Piksel | Durum |
-|---|---|---|
-| iPhone (Dynamic Island, orta) | 1206×2622 | **zorunlu** |
-| iPad 13" | 2064×2752 | iPad'i desteklediğimiz için **zorunlu** |
-
-Hazır görüntüler: `store/screenshots/ios/` (iPhone ve iPad). Saydamlık yok, PNG.
-Yenilemek gerekirse: `IOS.md` → "Komutlar".
-
----
-
-## Adım 6 — Paketi yükle ve gönder
-
-1. Paket hazır: `store/release/ios/App.ipa` (reklam kimlikleri işlenmiş, imzalı).
-2. **Transporter** uygulamasını Mac App Store'dan indir, ABDURRAHMAN KAAN DIKEC hesabıyla gir,
-   `store/release/ios/App.ipa` dosyasını sürükle → **Deliver**.
-   (Ya da Xcode → Organizer → Distribute App → App Store Connect.)
-3. 10-30 dakika sonra App Store Connect → **TestFlight**'ta derleme "Test için hazır" olur.
-   Kendi iPhone'unda TestFlight ile dene.
-4. **App Store** sekmesi → sürüm **1.0.1** → **Derleme** bölümünden bu derlemeyi seç.
-5. **İnceleme bilgileri** → "Oturum açma gerekli değil". Not olarak:
-   > Klasik İsim Şehir oyunu. Hesap/giriş yok, takma ad yeterli. Arkadaşlarla oyun 5 haneli oda
-   > koduyla kurulur; mesajlaşma yoktur, yalnızca oyun cevapları ve hazır emoji tepkileri paylaşılır.
-   > Cevaplar parmakla yazılır ve cihaz üzerinde (Apple Vision) tanınır. Uygulama içi satın alma yoktur.
-   > Reklamlar Google AdMob'dandır.
-6. Fiyat: **Ücretsiz**. Ülkeler: hepsi (ya da yalnızca Türkiye).
-7. **İncelemeye Gönder.**
+2. **İncelemeye gönder.** Aynı sayfanın sağ üstündeki **Add for Review** → sonra **Submit to App Review**.
+   Bu adımı senin onayınla yapacağım: gönderdikten sonra Apple incelemesi başlar (genelde 1-3 gün).
 
 Reddedilirse Apple'ın e-postasındaki madde numarasını bana ilet; düzeltip yeni derleme göndeririz.

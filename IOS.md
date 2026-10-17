@@ -6,7 +6,9 @@
 > iPhone ve iPad simülatöründe denendi: oyun, el yazısı tanıma ve düzen sorunsuz.
 > AdMob'da iOS uygulaması ve iki reklam birimi açıldı, kimlikler koda işlendi; reklamlar iOS'ta açık.
 > iPad'de yatay yön de açık.
-> **Kalan iş:** App Store Connect'te uygulama kaydı ve yükleme. Sade adımlar: `store/app-store-1.0.1.md`.
+> App Store Connect'te uygulama kaydı açıldı (Apple ID **6824006144**), mağaza sayfası dolduruldu
+> ve **derleme 2** yüklendi. **Kalan iş:** inceleme iletişim bilgileri ve incelemeye gönderme.
+> Sade adımlar: `store/app-store-1.0.1.md`.
 
 ## 1. Ne yapıldı
 
@@ -14,10 +16,10 @@
 |---|---|
 | iOS projesi (`ios/`) | Capacitor 8 ile oluşturuldu, depoya eklendi |
 | Paket kimliği | `com.ahmetercikan.isimsehir` — Android ile aynı (Apple'da boştu, ekibe alındı) |
-| Sürüm | 1.0.1 (build 1) — `package.json` ve Android ile aynı |
+| Sürüm | 1.0.1 (build 2) — `package.json` ve Android ile aynı |
 | İmza | Otomatik; ekip **AQ2Y664A4Z** (ABDURRAHMAN KAAN DIKEC). Kullanıcının kendi hesabı yalnızca ücretsiz *Personal Team* (`K5AVKBUJ8R`) olduğu için App Store'a yükleyemiyor |
 | El yazısı tanıma | **Apple Vision** ile cihazda, internetsiz (aşağıda) |
-| Reklamlar | Açık — AdMob iOS uygulaması `ca-app-pub-8025731390860952~9852483361` |
+| Reklamlar | Açık — AdMob iOS uygulaması `ca-app-pub-8025731390860952~9852483361`; iOS'ta reklam içerik sınıfı **PG** (App Store yaşı 4+ olduğu için) |
 | Simge ve açılış ekranı | `assets/` klasöründen üretildi (saydamlık yok — Apple şartı) |
 | Ekran yönü | iPhone dikey (Android ile aynı); **iPad'de yatay da açık** |
 | Ekran kararması | Oyun sırasında kapalı (`AppDelegate.swift`) |
@@ -73,6 +75,10 @@ npm run ios:ipa     # App Store paketi üret → store/release/ios/App.ipa
 npm run ios:ink     # el yazısı tanımayı Mac'te dene
 npm test            # 11 test geçmeli
 ```
+
+Mağaza görselleri (App Store kartları **geçişli/panoramik**, Çizio'daki gibi):
+`npx vite --port 5290` açıkken `npx tsx scripts/store-shots.mts iphone` ve `... ipad`,
+sonra `npx tsx scripts/store-promo.mts` → `store/promo/ios/` (iphone-6-3, iphone-6-9, ipad-13).
 
 Simge/açılış ekranını yenilemek için:
 `npx capacitor-assets generate --ios --iconBackgroundColor '#16a6c4' --splashBackgroundColor '#cfeee6'`

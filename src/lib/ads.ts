@@ -7,6 +7,8 @@
  * Avrupa (GDPR) için Google'ın onay penceresi (UMP) ilk açılışta gösterilir; ayarlardan değiştirilebilir.
  * iOS'ta bir de Apple'ın izleme izni penceresi çıkar (onay penceresinden sonra; izin verilmezse
  * reklamlar kişiselleştirilmeden gösterilir).
+ * Reklam içerik sınıfı platforma göre: Android'de en geniş (MA), iOS'ta PG — App Store'daki yaş
+ * derecelendirmesi 4+ olduğu için iOS'ta yetişkin reklamı gösterilemez (Apple kuralı).
  * Reklam kimlikleri: src/lib/adsConfig.ts — bir platformun kimlikleri boşsa orada reklam yoktur.
  */
 import { Capacitor } from '@capacitor/core';
@@ -15,8 +17,11 @@ import {
 } from '@capacitor-community/admob';
 import { adIdsFor, isTestIds } from './adsConfig';
 
-const ids = adIdsFor(Capacitor.getPlatform());
+const platform = Capacitor.getPlatform();
+const ids = adIdsFor(platform);
 const native = ids !== null;
+/** Gösterilebilecek en üst reklam içerik sınıfı (iOS'ta uygulama 4+ olduğu için daha dar). */
+const MAX_AD_RATING = platform === 'ios' ? MaxAdContentRating.ParentalGuidance : MaxAdContentRating.MatureAudience;
 const ADMOB = ids ?? { appId: '', banner: '', interstitial: '' };
 const ADS_TESTING = ids ? isTestIds(ids) : false;
 let ready: Promise<boolean> | null = null;
@@ -44,9 +49,9 @@ export function initAds(): Promise<boolean> {
       } catch {
         /* onay bilgisi alınamadı: kişiselleştirilmemiş reklamlarla devam */
       }
-      await AdMob.initialize({ maxAdContentRating: MaxAdContentRating.MatureAudience, tagForChildDirectedTreatment: false, initializeForTesting: ADS_TESTING });
+      await AdMob.initialize({ maxAdContentRating: MAX_AD_RATING, tagForChildDirectedTreatment: false, initializeForTesting: ADS_TESTING });
       // iOS: Apple'ın izleme izni penceresi (izin yoksa reklamlar kişiselleştirilmez, yine çıkar).
-      if (Capacitor.getPlatform() === 'ios') await AdMob.trackingAuthorizationStatus().then(
+      if (platform === 'ios') await AdMob.trackingAuthorizationStatus().then(
         (s) => (s.status === 'notDetermined' ? AdMob.requestTrackingAuthorization() : undefined),
       ).catch(() => {});
       void AdMob.addListener(BannerAdPluginEvents.SizeChanged, (s) => setAdHeight(bannerShown ? s.height : 0));

@@ -5,9 +5,13 @@
  *   - phone-01…08.png  (1080×1920, Google Play telefon)
  *   - tablet-01…08.png (1920×1200, Google Play 7" ve 10" tablet)
  *   - feature-graphic.png (1024×500, öne çıkan görsel)
+ *   - ios/<boyut>-01…08.png (App Store; boyutlar IOS_SIZES içinde)
+ * App Store kartları **geçişli (panoramik)**: sekiz görüntü tek bir geniş şeritten kesilir,
+ * böylece arka plan, lekeler, harf karoları ve kalem çizgisi bir görüntüden diğerine akar.
+ * Tarayıcı: CHROME_PATH ya da işletim sistemine göre Chrome/Edge.
  */
 import { chromium } from 'playwright-core';
-import { mkdirSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const OUT = resolve('store/promo');
@@ -85,7 +89,10 @@ function feature() {
   </div>`;
 }
 
-const b = await chromium.launch({ executablePath: process.env.CHROME_PATH ?? 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe' });
+const CANDIDATES = [process.env.CHROME_PATH, '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', 'C:/Program Files/Google/Chrome/Application/chrome.exe'].filter(Boolean) as string[];
+const exe = CANDIDATES.find((c) => existsSync(c));
+if (!exe) throw new Error('Chrome/Edge bulunamadı: CHROME_PATH verin.');
+const b = await chromium.launch({ executablePath: exe });
 const render = async (html: string, w: number, h: number, out: string) => {
   const p = await (await b.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 1 })).newPage();
   await p.setContent(`<!doctype html><html><head><meta charset="utf-8"><style>${css}</style></head><body style="--w:${w}px;--h:${h}px">${html}</body></html>`);
@@ -100,5 +107,84 @@ for (const [i, s] of SLIDES.entries()) {
   await render(tablet(s, i), 1920, 1200, `${OUT}/tablet-${n}.png`);
 }
 await render(feature(), 1024, 500, `${OUT}/feature-graphic.png`);
+
+// ——— App Store: geçişli (panoramik) kartlar ———
+// Sekiz görüntü tek bir geniş şeritten kesilir; arka plan, lekeler, harf karoları ve kalem
+// çizgisi slayt sınırlarını aşar, mağazada yan yana bakıldığında tek bir resim gibi akar.
+// Boyutlar: App Store Connect → "screenshot specifications".
+interface IosSize { id: string; w: number; h: number; shot: (s: Slide) => string; ar: number }
+const IOS_SIZES: IosSize[] = [
+  { id: 'iphone-6-3', w: 1206, h: 2622, shot: (s) => `ios/iphone-${s.shot}.png`, ar: 2622 / 1206 }, // zorunlu
+  { id: 'iphone-6-9', w: 1290, h: 2796, shot: (s) => `ios/iphone-${s.shot}.png`, ar: 2622 / 1206 },
+  { id: 'ipad-13', w: 2064, h: 2752, shot: (s) => `ios/ipad-${s.shot}.png`, ar: 2752 / 2064 }, // iPad'de çalışıyorsa zorunlu
+];
+
+/** Şeridin tamamı: genişlik = slayt sayısı × tek görüntü genişliği. */
+function serit(boyut: IosSize) {
+  const { w: W, h: H, ar } = boyut;
+  const dar = W / H < 0.6; // telefon mu tablet mi
+  const N = SLIDES.length;
+  const TW = W * N;
+  const u = W / (dar ? 1206 : 2064); // ölçek
+  const duraklar = SLIDES.map((s, i) => `${s.bg[0]} ${(((i + 0.18) / N) * 100).toFixed(2)}%, ${s.bg[1]} ${(((i + 0.74) / N) * 100).toFixed(2)}%`).join(', ');
+  // kalem çizgisi: şeridi baştan sona yumuşak bir dalgayla geçer
+  const dalga = SLIDES.map((_, i) => {
+    const x0 = i * W, y0 = (i % 2 ? 0.248 : 0.272) * H, y1 = (i % 2 ? 0.272 : 0.248) * H;
+    return `${i === 0 ? `M ${x0} ${y0}` : ''} C ${x0 + W * 0.3} ${y0 - H * 0.022}, ${x0 + W * 0.7} ${y1 + H * 0.022}, ${x0 + W} ${y1}`;
+  }).join(' ');
+  const lekeler = [0.1, 0.35, 0.6, 0.85].map((f, k) => {
+    const r = (k % 2 ? 0.95 : 1.3) * W;
+    return `<div class="blob" style="width:${r}px;height:${r}px;left:${TW * f - r / 2}px;top:${(k % 2 ? 0.55 : -0.2) * H}px"></div>`;
+  }).join('');
+  // harf karoları: slayt sınırlarını aşacak şekilde şeride eşit aralıklarla serpilir
+  const grup = Math.round(N * 1.3);
+  const karolar = Array.from({ length: grup }, (_, k) => {
+    const size = (dar ? 66 : 88) * u;
+    const x = (k + 0.3) * (TW / grup);
+    const y = (k % 2 ? 0.016 : 0.026) * H;
+    return deco(k, size, `left:${x}px;top:${y}px;gap:${10 * u}px`);
+  }).join('');
+  const kartlar = SLIDES.map((s, i) => {
+    const x = i * W;
+    const dw = (dar ? 0.66 : 0.64) * W;
+    const dh = dw * ar;
+    const kay = dar ? (i % 2 ? 0.04 : -0.04) * W : 0; // sırayla sağa/sola kayar
+    const dx = x + (W - dw) / 2 + kay;
+    const dy = 0.305 * H;
+    return `<div class="txt" style="left:${x + 72 * u}px;width:${W - 144 * u}px;top:${0.055 * H}px;gap:${18 * u}px;--ink:${s.ink}">
+      <h1 style="font-size:${(dar ? 104 : 132) * u}px">${s.title}</h1>
+      <p style="font-size:${(dar ? 40 : 50) * u}px">${s.sub}</p>
+      ${s.badge ? `<div class="badge" style="font-size:${(dar ? 38 : 48) * u}px;padding:${13 * u}px ${30 * u}px;--ink:${s.ink}">${s.badge}</div>` : ''}
+    </div>
+    <div class="dev" style="left:${dx}px;top:${dy}px;width:${dw}px;height:${dh}px;border-radius:${(dar ? 48 : 56) * u}px;padding:${(dar ? 14 : 18) * u}px;transform:rotate(${i % 2 ? 2.2 : -2.2}deg)"><img src="${img(boyut.shot(s))}" style="border-radius:${(dar ? 36 : 40) * u}px"></div>`;
+  }).join('');
+  return `<div class="serit" style="width:${TW}px;height:${H}px;background:linear-gradient(100deg, ${duraklar})">
+    <div class="dots"></div>${lekeler}
+    <svg width="${TW}" height="${H}" style="position:absolute;inset:0"><path d="${dalga}" fill="none" stroke="rgba(255,255,255,.65)" stroke-width="${8 * u}" stroke-linecap="round" stroke-dasharray="${28 * u} ${32 * u}"/></svg>
+    ${karolar}${kartlar}
+  </div>`;
+}
+
+const IOS_OUT = resolve('store/promo/ios');
+mkdirSync(IOS_OUT, { recursive: true });
+for (const boyut of IOS_SIZES) {
+  const { w: W, h: H } = boyut;
+  const sayfa = await (await b.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1 })).newPage();
+  await sayfa.setContent(`<!doctype html><html><head><meta charset="utf-8"><style>${css}
+    body { width: ${W}px; height: ${H}px; overflow: hidden; }
+    .pencere { position: absolute; inset: 0; overflow: hidden; }
+    .serit { position: absolute; left: 0; top: 0; }
+    .txt { color: var(--ink); }
+    .txt h1, .txt p { color: var(--ink); }
+  </style></head><body><div class="pencere">${serit(boyut)}</div></body></html>`);
+  await sayfa.evaluate(() => document.fonts.ready);
+  await sayfa.waitForTimeout(600);
+  for (let i = 0; i < SLIDES.length; i++) {
+    await sayfa.evaluate((dx) => { (document.querySelector('.serit') as HTMLElement).style.transform = `translateX(${dx}px)`; }, -i * W);
+    await sayfa.waitForTimeout(150);
+    await sayfa.screenshot({ path: `${IOS_OUT}/${boyut.id}-${String(i + 1).padStart(2, '0')}.png` });
+  }
+  await sayfa.close();
+}
 await b.close();
-console.log('hazır:', OUT);
+console.log('hazır:', OUT, 've', IOS_OUT);
