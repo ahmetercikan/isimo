@@ -25,11 +25,11 @@ export const ADMOB_ANDROID: AdIds = {
   interstitial: 'ca-app-pub-8025731390860952/5596318824',
 };
 
-/** iOS — AdMob'da iOS uygulaması açılıp kimlikler buraya yazılana kadar reklam yok. */
+/** iOS (gerçek kimlikler, 17 Ekim 2026'da AdMob'da açılan iOS uygulaması). */
 export const ADMOB_IOS: AdIds = {
-  appId: '',
-  banner: '',
-  interstitial: '',
+  appId: 'ca-app-pub-8025731390860952~9852483361',
+  banner: 'ca-app-pub-8025731390860952/5370312876',
+  interstitial: 'ca-app-pub-8025731390860952/3878846817',
 };
 
 /** Platformun kimlikleri; reklam gösterilemeyecekse null (web, ya da kimlikleri girilmemiş platform). */

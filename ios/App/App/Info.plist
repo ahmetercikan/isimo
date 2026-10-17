@@ -22,6 +22,10 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<!-- AdMob uygulama kimliği (src/lib/adsConfig.ts → ADMOB_IOS.appId ile aynı olmalı).
+	     Google'ın reklam kütüphanesi bu anahtar yoksa uygulamayı AÇILIŞTA çökertiyor: hep dolu kalmalı. -->
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-8025731390860952~9852483361</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
@@ -65,14 +69,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
-	<!-- AdMob uygulama kimliği. Google'ın reklam kütüphanesi bu anahtar yoksa uygulamayı AÇILIŞTA çökertiyor,
-	     bu yüzden burada hep bir kimlik olmalı. Şu anki değer Google'ın DENEME kimliği: AdMob'da
-	     İsim Şehir için iOS uygulaması açılınca gerçek kimlikle değiştirilecek
-	     (src/lib/adsConfig.ts → ADMOB_IOS.appId ile aynı olmalı). -->
-	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-3940256099942544~1458002511</string>
 </dict>
 </plist>

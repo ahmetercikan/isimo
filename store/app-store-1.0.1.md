@@ -4,26 +4,24 @@ Bu dosya **senin yapacağın** işleri anlatır. Teknik taraf (iOS sürümü, im
 `store/release/ios/App.ipa`. Ayrıntılar: `IOS.md`.
 
 Apple hesabı: **ABDURRAHMAN KAAN DIKEC** (Çizio'yu da bu hesapla yayınlıyoruz).
+Uygulama iPhone'da dikey, iPad'de hem dikey hem yatay çalışıyor.
 
 ---
 
-## Adım 1 — AdMob'da iOS uygulaması aç (reklamlar için)
+## Adım 1 — AdMob (tamamlandı ✅)
 
-Reklamların iOS'ta da çıkmasını istedin. Android'in kimlikleri iOS'ta çalışmıyor, ayrı uygulama gerekiyor.
+iOS için AdMob'da ayrı uygulama ve iki reklam birimi açıldı, kimlikler uygulamaya işlendi.
+Senin yapacağın bir şey yok; bilgi olsun diye:
 
-1. https://admob.google.com adresine gir.
-2. Sol menüden **Uygulamalar → Uygulama ekle**.
-3. **iOS**'u seç. "Uygulama App Store'da yayınlandı mı?" sorusuna **Hayır** de.
-4. Uygulama adı: `İsim Şehir` → **Uygulama ekle**.
-5. Açılan sayfada **Uygulama kimliği** yazıyor (`ca-app-pub-...~...` şeklinde). Kopyala.
-6. Soldan **Reklam birimleri → Reklam birimi ekle**:
-   - **Banner** seç, ad: `Alt şerit` → oluştur → çıkan **Reklam birimi kimliğini** kopyala.
-   - Tekrar **Reklam birimi ekle** → **Geçiş reklamı** seç, ad: `Oyun sonu` → kimliği kopyala.
-7. Bu **üç kimliği** bana gönder; uygulamaya işleyip yeni paket üreteceğim.
+| Ne | Kimlik |
+|---|---|
+| Uygulama (iOS) | `ca-app-pub-8025731390860952~9852483361` |
+| Alt şerit | `ca-app-pub-8025731390860952/5370312876` |
+| Oyun sonu | `ca-app-pub-8025731390860952/3878846817` |
 
-> Bu adım bitmeden mağazaya göndermeyelim: şu an iOS'ta reklam kapalı.
-
----
+AdMob'da uygulama şu an "İnceleme gerekli" diyor: bu normal. Uygulama App Store'da yayınlandıktan
+sonra AdMob'daki uygulamaya **Mağaza ekle** ile App Store bağlantısını eklersen Google onaylar ve
+reklamlar tam kapasite çalışmaya başlar.
 
 ## Adım 2 — App Store Connect'te uygulamayı kaydet
 
@@ -81,8 +79,7 @@ isim şehir,kelime,harf,stop,online,arkadaş,parti,aile,türkçe,el yazısı,oyu
 | Tanımlayıcılar → **Cihaz Kimliği** (reklam kimliği) | Üçüncü Taraf Reklamcılığı | Hayır | **Evet** |
 | Kullanım Verileri → **Reklam Verileri** | Üçüncü Taraf Reklamcılığı | Hayır | **Evet** |
 
-> Son iki satır **yalnızca reklamlar açıkken** geçerli (Adım 1 bitince). Reklamsız gönderilirse
-> o iki satırı işaretleme ve "İzleme: Hayır" de.
+> Son iki satır reklamlarla (AdMob) ilgili; reklamlar açık olduğu için işaretlenecek.
 > Konum, kişiler, sağlık, satın alma, arama geçmişi: **toplanmıyor**.
 
 ---
@@ -103,7 +100,7 @@ Yenilemek gerekirse: `IOS.md` → "Komutlar".
 
 ## Adım 6 — Paketi yükle ve gönder
 
-1. Bana haber ver; `npm run ios:ipa` ile güncel paketi üretirim (reklam kimlikleri girilmiş olarak).
+1. Paket hazır: `store/release/ios/App.ipa` (reklam kimlikleri işlenmiş, imzalı).
 2. **Transporter** uygulamasını Mac App Store'dan indir, ABDURRAHMAN KAAN DIKEC hesabıyla gir,
    `store/release/ios/App.ipa` dosyasını sürükle → **Deliver**.
    (Ya da Xcode → Organizer → Distribute App → App Store Connect.)

@@ -25,9 +25,9 @@
     iOS'ta `ios/App/App/InkVision.swift` + `InkPlugin.swift` (Apple Vision, cihazda, internetsiz; denemek: `npm run ios:ink`),
     web'de Google giriş servisi
 - **Firebase:** proje `isimo-1ce98` (Realtime Database europe-west1, anonim giriş). `src/online/config.ts` → `FIREBASE_CONFIG` null iken çevrimiçi oyun kapalı (botlu oyun çalışır).
-- **Reklam:** Google AdMob (`src/lib/ads.ts`); kimlikler platform başına `src/lib/adsConfig.ts` içinde.
-  iOS kimlikleri (`ADMOB_IOS`) boş olduğu sürece iOS'ta reklam yok — AdMob'da iOS uygulaması açılınca girilecek (`IOS.md` → 3).
-  Android'de: ana sayfa ve lobi altında şerit, oyun bitince tam ekran
+- **Reklam:** Google AdMob (`src/lib/ads.ts`); kimlikler platform başına `src/lib/adsConfig.ts` içinde
+  (Android ve iOS'un AdMob'da ayrı uygulaması var; iOS uygulama kimliği `Info.plist` → `GADApplicationIdentifier`
+  ile aynı olmalı, bu anahtar boşsa uygulama açılışta çöker). İki platformda da: ana sayfa ve lobi altında şerit, oyun bitince tam ekran
   (3 dk'da en fazla bir). Oyun sırasında reklam yok. Kimlikler `src/lib/adsConfig.ts` + `strings.xml` (admob_app_id);
   gerçek kimlikler (AdMob yayıncı 8025731390860952). Kurulum: `store/admob-adimlar.md`. Hedef kitle: 13+ (Play: 13-15, 16-17, 18+; içerik derecelendirmesi Herkes, mağazada herkese görünür); yaş sorusu yok; reklam sınıfı en geniş (MA), yalnızca Google'ın yasakladıkları gelmez.
 - **Güvenlik:** anahtar, keystore ve `.env*` dosyaları asla commit edilmez. Firebase web ayarı gizli değildir.

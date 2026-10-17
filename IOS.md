@@ -4,8 +4,9 @@
 > sertifika **Apple Distribution: ABDURRAHMAN KAAN DIKEC (AQ2Y664A4Z)**, paket kimliği
 > `com.ahmetercikan.isimsehir` (Android ile aynı), sürüm **1.0.1**, derleme **1**.
 > iPhone ve iPad simülatöründe denendi: oyun, el yazısı tanıma ve düzen sorunsuz.
-> **Kalan iş:** (1) AdMob'da iOS uygulaması ve reklam kimlikleri, (2) App Store Connect'te uygulama kaydı,
-> (3) ekran görüntüleri, (4) yükleme. Sade adımlar: `store/app-store-1.0.1.md`.
+> AdMob'da iOS uygulaması ve iki reklam birimi açıldı, kimlikler koda işlendi; reklamlar iOS'ta açık.
+> iPad'de yatay yön de açık.
+> **Kalan iş:** App Store Connect'te uygulama kaydı ve yükleme. Sade adımlar: `store/app-store-1.0.1.md`.
 
 ## 1. Ne yapıldı
 
@@ -16,9 +17,9 @@
 | Sürüm | 1.0.1 (build 1) — `package.json` ve Android ile aynı |
 | İmza | Otomatik; ekip **AQ2Y664A4Z** (ABDURRAHMAN KAAN DIKEC). Kullanıcının kendi hesabı yalnızca ücretsiz *Personal Team* (`K5AVKBUJ8R`) olduğu için App Store'a yükleyemiyor |
 | El yazısı tanıma | **Apple Vision** ile cihazda, internetsiz (aşağıda) |
-| Reklamlar | Kod hazır, kimlikler girilince açılır (aşağıda) |
+| Reklamlar | Açık — AdMob iOS uygulaması `ca-app-pub-8025731390860952~9852483361` |
 | Simge ve açılış ekranı | `assets/` klasöründen üretildi (saydamlık yok — Apple şartı) |
-| Ekran yönü | Yalnızca dikey (Android ile aynı) |
+| Ekran yönü | iPhone dikey (Android ile aynı); **iPad'de yatay da açık** |
 | Ekran kararması | Oyun sırasında kapalı (`AppDelegate.swift`) |
 
 ## 2. El yazısı tanıma iOS'ta nasıl çalışıyor
@@ -39,26 +40,29 @@ Son ölçüm: 10 kelimenin 10'u doğru okundu (çoğunda ilk aday). Uygulamanın
 Türkçe harfler (ç ş ğ ı ö ü) kaçarsa sorun olmaz: oyun sözlüğü `fold()` ile zaten eşliyor
 ("cilek" → "Çilek"), `fixFirstLetter` de turun harfine göre ilk harfi düzeltiyor.
 
-## 3. Reklamlar (yapılacak — senin adımların)
+## 3. Reklamlar
 
-iOS'ta reklam gösterebilmek için AdMob'da **ayrı bir iOS uygulaması** gerekiyor (Android'inki kullanılamaz):
+AdMob'da iOS için **ayrı** bir uygulama gerekiyordu (Android'inki iOS'ta çalışmaz); 17 Ekim 2026'da açıldı:
 
-1. https://admob.google.com → **Uygulamalar → Uygulama ekle → iOS → Hayır (mağazada değil)** → ad: `İsim Şehir`
-2. Açılan uygulamanın **Uygulama kimliği**ni not et (`ca-app-pub-…~…`).
-3. **Reklam birimleri → Reklam birimi ekle** ile iki tane oluştur:
-   - **Banner** (ad: `Alt şerit`)
-   - **Geçiş reklamı / Interstitial** (ad: `Oyun sonu`)
-4. Üç kimliği bana ver; şu iki yere yazılacak:
-   - `src/lib/adsConfig.ts` → `ADMOB_IOS`
-   - `ios/App/App/Info.plist` → `GADApplicationIdentifier`
+| Ne | Kimlik |
+|---|---|
+| Uygulama | `ca-app-pub-8025731390860952~9852483361` |
+| Alt şerit (banner) | `ca-app-pub-8025731390860952/5370312876` |
+| Oyun sonu (geçiş) | `ca-app-pub-8025731390860952/3878846817` |
 
-**Şu an:** `ADMOB_IOS` boş olduğu için iOS'ta reklam gösterilmiyor (oyunun geri kalanı normal çalışıyor).
-`Info.plist`teki `GADApplicationIdentifier` şimdilik Google'ın **deneme** kimliği — bu anahtar boş olursa
-Google'ın reklam kütüphanesi uygulamayı **açılışta çökertiyor**, bu yüzden hep dolu olmalı.
-Gerçek kimlik gelmeden mağazaya gönderilmemeli.
+Kimlikler iki yerde, **aynı** olmak zorunda:
+- `src/lib/adsConfig.ts` → `ADMOB_IOS`
+- `ios/App/App/Info.plist` → `GADApplicationIdentifier` (yalnızca uygulama kimliği)
 
-Reklamlar açılınca iOS'ta Apple'ın **izleme izni** penceresi de çıkar (metni `Info.plist` →
-`NSUserTrackingUsageDescription`); izin verilmezse reklamlar kişiselleştirilmeden gösterilir.
+`Info.plist`teki bu anahtar **boş bırakılamaz**: Google'ın reklam kütüphanesi anahtar yoksa uygulamayı
+açılışta çökertiyor (geliştirme sırasında yaşandı).
+
+Reklamlar Android'dekiyle aynı yerlerde: ana sayfa ve lobi altında şerit, oyun bitince tam ekran
+(3 dakikada en fazla bir). iOS'ta ek olarak Apple'ın **izleme izni** penceresi çıkar (metni
+`Info.plist` → `NSUserTrackingUsageDescription`); izin verilmezse reklamlar kişiselleştirilmeden gösterilir.
+
+AdMob uygulaması "İnceleme gerekli" durumunda: mağazada yayınlandıktan sonra App Store bağlantısı
+eklenince Google onaylıyor, o zamana kadar reklam sunumu sınırlı olabilir.
 
 ## 4. Komutlar
 
@@ -92,4 +96,17 @@ Simge/açılış ekranını yenilemek için:
   Web Audio sesleri susar — bu iOS'un davranışı.
 - **Durum çubuğu:** iOS'ta görünür bırakıldı (Android'de gizli). Düzen `env(safe-area-inset-*)` ile
   zaten doğru yerleşiyor.
-- **iPad:** dikey düzen kullanılıyor (`src/styles/tablet.css`). Android da dikey kilitli.
+- **iPad:** dikey ve yatay açık. Yatay düzen `src/styles/tablet.css` içinde
+  (`@media (min-width: 980px) and (orientation: landscape)`): yazma ekranında solda cevap, sağda yazı
+  defteri; harf ekranında harf ve DUR yan yana. Lobi, değerlendirme, puanlar ve final ekranları da
+  yatayda denendi. iPhone dikey kilitli (Android ile aynı).
+- **Ekran yönü tuzağı:** Yönü yalnızca `Info.plist`e yazmak yetmiyor. Capacitor'ın
+  `CAPBridgeViewController`ı `supportedInterfaceOrientations`u kendisi hesaplıyor ve bunu
+  Info.plist'in **genel** `UISupportedInterfaceOrientations` anahtarından okuyor; iPad'e özel
+  `UISupportedInterfaceOrientations~ipad` anahtarını görmüyor. Bu yüzden yön `ViewController.swift`
+  içinde cihaza göre belirleniyor (iPad'de yatay dahil, iPhone'da yalnızca dikey).
+  Simülatörde doğrulandı: iPad'de yön maskesi 30 (dikey + ters dikey + iki yatay), iPhone'da dikey.
+- **Simülatörde çevirme:** iPadOS 26 uygulamanın kendi kendine dönmesine izin vermiyor
+  ("window mode does not allow programmatic changes"), Mac'te de betikle ⌘+← gönderilemiyor
+  (erişilebilirlik izni). Yatayı görmek için simülatörde **⌘ + sol ok**'a basmak ya da gerçek iPad'de
+  denemek gerekiyor. Yatay düzenin kendisi tarayıcıda tam iPad yatay ölçüsünde (2064×1548) denendi.
