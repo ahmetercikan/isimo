@@ -6,9 +6,9 @@
 > iPhone ve iPad simülatöründe denendi: oyun, el yazısı tanıma ve düzen sorunsuz.
 > AdMob'da iOS uygulaması ve iki reklam birimi açıldı, kimlikler koda işlendi; reklamlar iOS'ta açık.
 > iPad'de yatay yön de açık.
-> App Store Connect'te uygulama kaydı açıldı (Apple ID **6824006144**), mağaza sayfası dolduruldu
-> ve **derleme 2** yüklendi. **Kalan iş:** inceleme iletişim bilgileri ve incelemeye gönderme.
-> Sade adımlar: `store/app-store-1.0.1.md`.
+> **17 Ekim 2026, 20:11 — uygulama App Store incelemesine gönderildi** (Apple ID **6824006144**,
+> sürüm 1.0.1, derleme 2, durum *Waiting for Review*). Apple en çok 48 saat içinde bakıyor,
+> sonuç e-posta ile geliyor. Ayrıntılar: `store/app-store-1.0.1.md`.
 
 ## 1. Ne yapıldı
 

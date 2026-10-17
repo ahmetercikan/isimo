@@ -60,14 +60,18 @@ iPhone (1206×2622) ve iPad 13" (2064×2752) için sekizer görsel yüklendi. G�
 mağazada yan yana bakıldığında tek bir resim gibi görünüyor (Çizio'daki gibi).
 Kaynak: `store/promo/ios/`, üretim: `IOS.md` → Komutlar.
 
-## Adım 6 — Son iki iş (sende)
+## Adım 6 — İncelemeye gönderildi ✅
 
-1. **İnceleme iletişim bilgileri.** App Store Connect → uygulama → sürüm sayfası → en altta
-   *App Review Information* → *Contact Information*: ad, soyad, telefon ve e-posta. Apple inceleme
-   ekibi gerekirse buradan ulaşıyor; bu bilgileri senin vermen gerekiyor (bana yazarsan ben de girerim).
-   Giriş bilgisi gerekmiyor ("Sign-in required" kapalı) ve inceleme notu yazıldı.
+17 Ekim 2026, 20:11'de gönderildi. Durum: **Waiting for Review**.
+İnceleme iletişim bilgileri: Ahmet Mesut Erçıkan · +90 543 970 76 03 · ahmetmesutercikan@hotmail.com
+(giriş şifresi gerekmiyor; inceleme notu İngilizce yazıldı).
 
-2. **İncelemeye gönder.** Aynı sayfanın sağ üstündeki **Add for Review** → sonra **Submit to App Review**.
-   Bu adımı senin onayınla yapacağım: gönderdikten sonra Apple incelemesi başlar (genelde 1-3 gün).
+**Bundan sonra ne olacak:**
+- Apple genelde 24-48 saatte bakar, sonucu e-posta ile bildirir.
+- Onaylanırsa uygulama App Store'da yayına girer (175 ülke, ücretsiz).
+- Beklerken **TestFlight**'tan kendi iPhone'una kurup deneyebilirsin.
+- Yayınlandıktan sonra AdMob'da iOS uygulamasına **Mağaza ekle** ile App Store bağlantısını
+  eklemeyi unutma; Google o zaman onaylıyor ve reklamlar tam kapasite çalışıyor.
 
-Reddedilirse Apple'ın e-postasındaki madde numarasını bana ilet; düzeltip yeni derleme göndeririz.
+**Reddedilirse:** Apple'ın e-postasındaki madde numarasını bana ilet (ör. 2.1, 4.3, 5.1.1).
+Düzeltip yeni derleme (build 3) göndeririz: `npm run ios:ipa` ve derleme numarasını artırmak yeterli.
