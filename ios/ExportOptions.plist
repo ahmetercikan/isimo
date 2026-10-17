@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- App Store'a yüklenecek paket (IPA) için dışa aktarma ayarları: scripts/ios-ipa.sh kullanır. -->
+	<key>method</key>
+	<string>app-store-connect</string>
+	<!-- İmza ekibi: ABDURRAHMAN KAAN DIKEC (Individual) -->
+	<key>teamID</key>
+	<string>AQ2Y664A4Z</string>
+	<key>signingStyle</key>
+	<string>automatic</string>
+	<key>uploadSymbols</key>
+	<true/>
+	<key>destination</key>
+	<string>export</string>
+</dict>
+</plist>

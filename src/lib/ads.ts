@@ -1,19 +1,24 @@
 /**
- * Reklamlar (Google AdMob, yalnızca Android uygulamasında; web sürümünde reklam yok).
+ * Reklamlar (Google AdMob; Android ve iOS uygulamasında, web sürümünde reklam yok).
  *
  * Nerede:
  *   - Ana sayfa ve lobi: ekranın altında küçük şerit (banner). Oyun sırasında hiç yok.
  *   - Oyun bitince (final ekranından çıkarken): tam ekran geçiş reklamı; en fazla 3 dakikada bir.
  * Avrupa (GDPR) için Google'ın onay penceresi (UMP) ilk açılışta gösterilir; ayarlardan değiştirilebilir.
- * Reklam kimlikleri: src/lib/adsConfig.ts (gerçek kimlikler gelene kadar Google'ın deneme kimlikleri).
+ * iOS'ta bir de Apple'ın izleme izni penceresi çıkar (onay penceresinden sonra; izin verilmezse
+ * reklamlar kişiselleştirilmeden gösterilir).
+ * Reklam kimlikleri: src/lib/adsConfig.ts — bir platformun kimlikleri boşsa orada reklam yoktur.
  */
 import { Capacitor } from '@capacitor/core';
 import {
   AdMob, AdmobConsentStatus, BannerAdPluginEvents, BannerAdPosition, BannerAdSize, InterstitialAdPluginEvents, MaxAdContentRating,
 } from '@capacitor-community/admob';
-import { ADMOB, ADS_TESTING } from './adsConfig';
+import { adIdsFor, isTestIds } from './adsConfig';
 
-const native = Capacitor.getPlatform() === 'android';
+const ids = adIdsFor(Capacitor.getPlatform());
+const native = ids !== null;
+const ADMOB = ids ?? { appId: '', banner: '', interstitial: '' };
+const ADS_TESTING = ids ? isTestIds(ids) : false;
 let ready: Promise<boolean> | null = null;
 let privacyRequired = false;
 let bannerWanted = 0;
@@ -40,6 +45,10 @@ export function initAds(): Promise<boolean> {
         /* onay bilgisi alınamadı: kişiselleştirilmemiş reklamlarla devam */
       }
       await AdMob.initialize({ maxAdContentRating: MaxAdContentRating.MatureAudience, tagForChildDirectedTreatment: false, initializeForTesting: ADS_TESTING });
+      // iOS: Apple'ın izleme izni penceresi (izin yoksa reklamlar kişiselleştirilmez, yine çıkar).
+      if (Capacitor.getPlatform() === 'ios') await AdMob.trackingAuthorizationStatus().then(
+        (s) => (s.status === 'notDetermined' ? AdMob.requestTrackingAuthorization() : undefined),
+      ).catch(() => {});
       void AdMob.addListener(BannerAdPluginEvents.SizeChanged, (s) => setAdHeight(bannerShown ? s.height : 0));
       void AdMob.addListener(BannerAdPluginEvents.FailedToLoad, () => setAdHeight(0));
       void AdMob.addListener(InterstitialAdPluginEvents.Dismissed, () => void loadInterstitial());

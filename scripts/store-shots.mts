@@ -1,18 +1,39 @@
 /**
  * Mağaza için ham ekran görüntüleri: gerçek bir oyun oynatılır, her ekran yakalanır.
- *   1) npm run dev   2) npx tsx scripts/store-shots.mts [phone|tablet]
- * Çıktı: store/screenshots/{phone|tablet}-*.png (telefon 1080×1920, tablet 1920×1200)
+ *   1) npm run dev   2) npx tsx scripts/store-shots.mts [phone|tablet|iphone|ipad]
+ * Çıktı:
+ *   Google Play: store/screenshots/{phone|tablet}-*.png (telefon 1080×1920, tablet 1920×1200)
+ *   App Store:   store/screenshots/ios/{iphone|ipad}-*.png (iPhone 1206×2622, iPad 2064×2752 — Apple'ın istediği boyutlar)
+ * Tarayıcı: Chrome ya da Edge. Bulunamazsa CHROME_PATH ile yolunu ver.
  * El yazısı: Hershey tek çizgili el yazısı fontu (hersheytext) parmak hareketine çevrilip yazı defterine çizilir.
  */
 import { chromium, type Page } from 'playwright-core';
-import { mkdirSync } from 'node:fs';
+import { existsSync, mkdirSync } from 'node:fs';
 import hershey from 'hersheytext';
 
 const URL = 'http://localhost:5290/';
-const KIND = (process.argv[2] ?? 'phone') as 'phone' | 'tablet';
-const VIEW = KIND === 'phone' ? { width: 405, height: 720, deviceScaleFactor: 1080 / 405 } : { width: 1280, height: 800, deviceScaleFactor: 1.5 };
-const OUT = 'store/screenshots';
+const KIND = (process.argv[2] ?? 'phone') as keyof typeof VIEWS;
+/** Her mağaza boyutu: CSS ölçüsü × deviceScaleFactor = istenen piksel. */
+const VIEWS = {
+  phone: { width: 405, height: 720, deviceScaleFactor: 1080 / 405 },   // Play telefon 1080×1920
+  tablet: { width: 1280, height: 800, deviceScaleFactor: 1.5 },        // Play tablet 1920×1200
+  iphone: { width: 402, height: 874, deviceScaleFactor: 3 },           // App Store iPhone 1206×2622
+  ipad: { width: 1032, height: 1376, deviceScaleFactor: 2 },           // App Store iPad 13" 2064×2752
+} as const;
+const VIEW = VIEWS[KIND] ?? VIEWS.phone;
+const OUT = KIND === 'iphone' || KIND === 'ipad' ? 'store/screenshots/ios' : 'store/screenshots';
 mkdirSync(OUT, { recursive: true });
+
+/** Chrome/Edge yolu: önce CHROME_PATH, sonra işletim sisteminin bilinen yerleri. */
+function browserPath(): string {
+  if (process.env.CHROME_PATH) return process.env.CHROME_PATH;
+  const guesses = process.platform === 'darwin'
+    ? ['/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge']
+    : ['C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', 'C:/Program Files/Google/Chrome/Application/chrome.exe'];
+  const found = guesses.find((g) => existsSync(g));
+  if (!found) throw new Error('Chrome ya da Edge bulunamadı; CHROME_PATH ile yolunu ver.');
+  return found;
+}
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 /** Kelimeyi el yazısı çizgilerine çevirir (0..1 aralığında, y aşağı). */
@@ -52,7 +73,7 @@ async function handwrite(p: Page, word: string) {
   await sleep(2600); // tanıma
 }
 
-const b = await chromium.launch({ executablePath: 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe' });
+const b = await chromium.launch({ executablePath: browserPath() });
 const p = await (await b.newContext({ viewport: { width: VIEW.width, height: VIEW.height }, deviceScaleFactor: VIEW.deviceScaleFactor, hasTouch: true, isMobile: true })).newPage();
 const shot = async (n: string) => p.screenshot({ path: `${OUT}/${KIND}-${n}.png` });
 const game = (js: string) => p.evaluate(`import('/src/store/useGame.ts').then(async (m) => { const g = m.useGame.getState(); const t = g.t, s = g.s; ${js} })`);

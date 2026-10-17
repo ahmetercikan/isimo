@@ -2,7 +2,10 @@
  * El yazısı tanıma.
  *   Android: Google ML Kit Digital Ink (Türkçe model ilk açılışta bir kez iner, sonra internetsiz çalışır).
  *            Yerel eklenti: android/app/src/main/java/com/ahmetercikan/isimsehir/InkPlugin.java
+ *   iOS:     Apple Vision (cihazda çalışır, indirilecek model yok, internetsiz çalışır).
+ *            Yerel eklenti: ios/App/App/InkPlugin.swift (motor: InkVision.swift)
  *   Web:     Google'ın el yazısı giriş servisi (geliştirme ve tarayıcıda oynamak için).
+ * Yerel tanıyıcı bir şey okuyamazsa web servisine düşülür.
  * Tanıyıcı birkaç aday döner; oyun turun harfi ve sözlüğe göre en uygununu seçer (chooseCandidate).
  */
 import { Capacitor, registerPlugin } from '@capacitor/core';
@@ -21,7 +24,8 @@ interface InkPlugin {
 }
 
 const Ink = registerPlugin<InkPlugin>('Ink');
-const native = () => Capacitor.getPlatform() === 'android';
+/** Yerel tanıyıcı: Android'de ML Kit, iOS'ta Vision. */
+const native = () => Capacitor.getPlatform() === 'android' || Capacitor.getPlatform() === 'ios';
 
 export type InkStatus = 'idle' | 'downloading' | 'ready' | 'error';
 let status: InkStatus = 'idle';
@@ -38,7 +42,7 @@ export function onInkStatus(cb: (s: InkStatus) => void) {
   return () => void listeners.delete(cb);
 }
 
-/** Türkçe el yazısı modelini hazırla (Android'de ilk seferde ~20 MB indirir). */
+/** Türkçe el yazısı tanıyıcıyı hazırla (Android'de ilk seferde ~20 MB model indirir; iOS'ta indirme yok). */
 export function prepareInk(): Promise<boolean> {
   if (!native()) {
     setStatus('ready');
@@ -46,7 +50,7 @@ export function prepareInk(): Promise<boolean> {
   }
   if (status === 'ready') return Promise.resolve(true);
   if (!preparing) {
-    setStatus('downloading');
+    if (Capacitor.getPlatform() === 'android') setStatus('downloading');
     preparing = Ink.prepare({ lang: 'tr' })
       .then((r) => {
         setStatus(r.ready ? 'ready' : 'error');
@@ -71,7 +75,7 @@ export async function recognize(strokes: Stroke[], width: number, height: number
       const r = await Ink.recognize({ strokes, width, height, lang: 'tr' });
       if (r.candidates?.length) return r.candidates;
     } catch {
-      /* model yoksa web servisine düş */
+      /* yerel tanıyıcı çalışmadıysa web servisine düş */
     }
   }
   return recognizeWeb(strokes, width, height);
