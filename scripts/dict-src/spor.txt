@@ -53,3 +53,6 @@ voleybol|vücut geliştirme|vale? |vatan oyunu? |video oyunu
 
 yüzme|yelken|yoga|yürüyüş|yakar top|yüksek atlama|yarış|yamaç paraşütü|yüzükoyun dalış
 zumba|zıpzıp|zıplama|zeka oyunu|zar oyunu
+
+# Genişletme: daha fazla spor
+Dalga sörfü|Duatlon|Go kart|Kungfu|Lacrosse|Muaythai|Ritmik cimnastik|Skeleton

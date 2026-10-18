@@ -52,3 +52,8 @@ Uğur Mumcu|Uğur Yücel|Ufuk Bayraktar|Umut Akyürek? |Uraz Kaygılaroğlu
 Volkan Konak|Volkan Demirel|Vedat Milor|Verda? 
 Yıldız Tilbe|Yılmaz Erdoğan|Yaşar Kemal|Yavuz Bingöl|Yunus Emre|Yalın|Yıldız Kenter|Yusuf Güney
 Zeki Müren|Zeki Alasya|Zerrin Özer|Zeynep Bastık|Zara|Ziynet Sali|Zuhal Topal|Zeynep Casalini
+
+# Genişletme: dünyadan ve Türkiye'den tanınmış kişiler
+Abdülhamid|Aleksandr Puşkin|Anne Frank|Beyazıt|Buzz Aldrin|Cleopatra|Dante|Farabi|Frederic Chopin|Gandhi|Graham Bell|Gutenberg|Harun Reşid|İbni Haldun|İbni Sina
+James Watt|Katip Çelebi|Mihri Hatun|Nene Hatun|Rosa Parks|Sabiha Gökçen|Salvador Dali|Shakespeare|Stephen King|Süleyman Çelebi|Thomas More|Uluğ Bey|Van Gogh
+Zaha Hadid|Halide Edip Adıvar|Necip Fazıl|Oktay Rifat|Orhan Kemal|Refik Halit Karay|Halil Mutlu|Ramil Guliyev|Süreyya Ayhan|Nurcan Taylan|Rıza Kayaalp|Servet Tazegül|Müzeyyen Senar|Safiye Ayla|Hamiyet Yüceses

@@ -50,3 +50,6 @@ tarçın|turunç|tere|turp|tütün|tohum|trüf|tarhun|tespih ağacı|tatula|teke
 vişne|vanilya|venüs çiçeği|vetiver
 yasemin|yonca|yulaf|yer fıstığı|yaban mersini|yosun|yabani gül|yaprak|yarpuz|yakı otu
 zeytin|zambak|zencefil|zerdali|zakkum|zerrin
+
+# Genişletme: daha fazla bitki
+Kara yosunu|Narçiçeği|Ökseotu

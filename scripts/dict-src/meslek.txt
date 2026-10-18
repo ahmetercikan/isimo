@@ -52,3 +52,6 @@ uçak mühendisi|ustabaşı|uzay mühendisi|uzman çavuş|ulaştırmacı
 veteriner|veznedar|vinç operatörü|vali|voleybolcu|video editörü
 yazar|yazılımcı|yayıncı|yönetmen|yönetici|yorumcu|yüzücü|yapımcı|yargıç|yer hizmetleri görevlisi|yoga eğitmeni
 zabıta|zanaatkar|ziraat mühendisi|zoolog|zücaciyeci
+
+# Genişletme: daha fazla meslek
+Akortçu|Ambalajcı|Bestekar|Celep|Doğramacı|Dökümcü|Santralci|Şarküterici|Tezgahtar|Ziraatçi

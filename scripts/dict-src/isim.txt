@@ -51,3 +51,8 @@ Ufuk|Uğurcan|Ulaş|Umut Can|Utku|Uzay|Ümit Can|Ümmügülsüm|Ümran|Ünal|Ün
 Vahap|Vahdettin|Vahit|Vakkas|Vasfiye|Vecdi|Vecihi|Vedat|Vehbi|Veysel|Vildan|Volkan|Vuslat|Vedia
 Yadigar|Yakup|Yalçın|Yaren|Yasemin|Yasin|Yavuz Selim|Yelda|Yeliz|Yeşim|Yetkin|Yıldırım|Yıldız|Yiğitcan|Yunus Emre|Yusuf Can|Yücel|Yüksel|Yankı|Yaman|Yağmur
 Zahide|Zahit|Zarife|Zehra|Zekeriya|Zeki|Zekiye|Zerrin|Zeyneb|Zeynel|Zihni|Ziya|Zöhre|Zuhal|Zülal|Zülfikar|Zümrüt|Zeynep Su|Zeren
+
+# Genişletme: daha az rastlanan Türkçe adlar
+Adil|Afife|Akgün|Algan|Alkan|Alpay|Alptekin|Atalay|Bakiye|Barbaros|Bargan|Bedir|Bedriye|Behzat|Benan|Birce
+Candan|Edibe|Ediz|Enver|Ergin|Gazanfer|Gözde|Gülser|Gün|Mahsun|Mefkure|Mehlika|Mete|Muazzez|Mübeccel|Münire
+Mürüvvet|Nahit|Naile|Naim|Nezaket|Nezih|Öztürk|Sabiha|Sadiye|Sefa|Sıdıka|Süha|Şehnaz|Şevki|Tayfur

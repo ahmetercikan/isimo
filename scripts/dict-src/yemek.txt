@@ -50,3 +50,7 @@ un helvası|umaç çorbası|urfa kebap|un kurabiyesi
 vişneli ekmek tatlısı|vişne suyu
 yaprak sarma|yayla çorbası|yoğurtlu kebap|yüksük çorbası|yeşil mercimek yemeği|yufka böreği|yoğurtlama
 zeytinyağlı fasulye|zerde|zeytinyağlı enginar|zeytinyağlı yaprak sarma
+
+# Genişletme: yöresel ve günlük yemekler
+Börülce|Bulamaç|Gavurdağ salatası|Girit ezmesi|Hünkarbeğendi|Keledoş|Kiremitte köfte|Mahluta çorbası|Mantarlı pilav|Papaz yahnisi|Tandır kebabı|Tepsi mantısı|Turşu kavurması|Lebeni|Mumbar
+Sarımsaklı yoğurt

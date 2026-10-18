@@ -48,3 +48,6 @@ uyluk|uzuv|üst çene|ürik?
 vücut|ven? 
 yanak|yüz|yürek|yumruk? |yutak|yemek borusu
 zar|zihin? 
+
+# Genişletme: daha fazla organ ve bölge
+Böğür|Köprücük|Şahdamarı

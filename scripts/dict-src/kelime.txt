@@ -104,7 +104,7 @@ abajur|abaküs|abanoz|abiye|acuka|açacak|açelya|açma|adale|aguti|ahlat|aikido
 # --- 4. parti: 4 harfli kelimeler (ikinci tarama) ---
 büfe|bile|çoğu|dama|dayı|deli|ebat|ekşi|fani|güya|hata|imla|kanı|karı|kaşe|kuma|kura|lobi|maça|mani|meta|müze|öbür|ödem|öğün|ökçe|pazı|peçe|püre|roka|saka|sema|sera|sıla|sini|sofa|suni|şark|taka|tazı|tipi|tire|toka|ülkü|vaka|vana|yeti|iyi|hara|bone|nice|komi
 blok|blöf|bono|brüt|disk|faks|flaş|grip|klip|logo|neon|skor|tank|test|tunç|modem|motel|moral|optik|parti|radar|robot|kolej|dolar|lazer|taksi|turist|tişört
-ebru|ecel|efes|ekol|elek|emaye|enfes|epik|erek|erim|esna|eşit|etap|evcil|evham|eyvah
+ebru|ecel|ekol|elek|emaye|enfes|epik|erek|erim|esna|eşit|etap|evcil|evham|eyvah
 acaba|adalet|afacan|ağabey|akarsu|akıncı|alacak|albeni|alfabe|altlık|anahtar|ananas|anıtsal
 # --- 5. parti: 4 harfli kelimeler (üçüncü tarama) ---
 aday|adaş|arık|arya|atik|atıl|azat|baro|bark|bira|caka|cefa|cura|çapa|çıpa|daha|dara|darp|dişi|doru|eğim|eğri|elik|emin|eter|füme|gala|gaza|gene|gezi|hale|hani|hare|hele|hora|ilam|imaj|imal|inan|inik|izan|kare|kazı|keçe|kepe|keza|kıda|kile|kira|koku|koma|kont|koyu|köse|kuğu|lala|mali|mark|mazi|mini|moka|nara|nark|nene|okur|olur|opak|oral|paha|pala|papa|pare|peni|pile|razı|saha|sapa|sara|sarf|saya|saye|seda|sefa|seri|sıpa|sine|sunu|şale|şike|şura|tapa|tart|tasa|töre|uçuk|umur|uyak|veba|yakı|yani|yatı|zade
@@ -118,3 +118,79 @@ eklem|erken|geliş|güveç|gerçi|hakim|hakan|hasar|hasım|hatır|hazan|hatta|he
 kabul|kabir|kadar|kalın|kanıt|karış|karma|kasıt|katık|kayıp|kayıt|kazık|keman|kesik|kesin|kilot|kırık|kısır|kucak|kurum|kusur|kutup|külah|karşı|lakin
 nesil|neden|niçin|nasıl|ancak|artık|aşağı|sanki|sonra|şayet|şöyle|saban|sarık|tanım|tabii
 yaban|yakın|yalın|yaman|yanık|yarar|yarık|yarın|yavaş|zaten
+
+# --- Genişletme 2: 3 harfliler (zincirin bel kemiği) ---
+aba|acı|ada|adi|ağa|ağı|ahi|ahu|ait|akü|ala|alo|alp|alt|ama|ana|ani|anı|ant|ara|arı|ark|arp|arş|art|arz|asa|asi|ast|aşı|aşk|ata|ati|aut|ayı|aza|azı
+bağ|bal|bap|bar|bas|baş|bat|bay|baz|bej|bel|ben|bey|bez|bin|bir|bit|biz|boa|bol|boş|bot|boy|boz|bön|bul|but|buz|bük
+caz|cam|can|cep|cet|cin|cop|cüz|çağ|çal|çam|çan|çap|çat|çay|çek|çil|çim|çit|çok|çöl|çöp|çul|çöz
+dağ|dal|dam|dar|dem|dev|dik|dil|din|dip|diş|diz|don|dul|dut|duş|düş|düz|dük
+ebe|ece|ego|ela|erk|fal|fan|far|fay|fes|fil|fiş|fit|fon|fos|fön
+gaf|gam|gar|gaz|geç|gem|gen|gez|git|gol|göç|göl|gör|göz|gri|gut|gül|gün|güç|güz
+hac|haç|hak|hal|ham|han|hap|hat|haz|hep|her|hiç|his|hız|hoş|hür
+ırk|ilk|ima|iri|iki|jel|jet|jön
+kaç|kal|kan|kap|kar|kas|kaş|kat|kaz|kek|kel|kes|kez|kıl|kır|kış|kıt|kil|kim|kin|kip|kir|kod|kof|kol|kot|koy|koz|kök|köy|kör|köz|kul|kum|kur|kuş|küf|küp|kür|küs
+laf|lav|leş|lig|lor|maç|mal|mat|mil|mim|mis|mor|mum|muz|nal|nam|nar|nem|net|not|nur
+oda|org|ova|oya|öğe|ölü|örs|öte|pak|pas|pay|pek|pes|peş|pil|pop|pot|pul|put
+raf|ray|ret|rol|ruh|saç|saf|sal|sap|sat|say|saz|sel|sen|ses|set|sır|sis|som|son|sos|soy|söz|suç|sur|süs|süt|sür
+şah|şal|şan|şap|şey|şık|şiş|şov|şut|taç|tak|tam|tas|taş|tat|tay|tek|tel|ten|ter|tez|tip|tok|top|toz|tur|tuş|tuz|tül|tüp|tür|tüy
+ulu|üst|üye|ütü|var|vat|ver|vur|yağ|yak|yan|yap|yar|yas|yaş|yat|yay|yaz|yel|yem|yen|yer|yıl|yok|yol|yön|yük|yün|yüz|zam|zan|zar|zil|zor
+
+# --- Genişletme 2: 4 harfliler, A-K ---
+acun|adak|adıl|afet|ahit|akar|akım|akın|akis|akit|aksi|alan|alay|alçı|alet|alev|alıç|alım|alın|alış|amaç|aman|amca|amel|amip|anaç|anma|anot|anız|araç|arda|argo|arık|arka|arma|arpa|arsa|artı|arzu|asal|asır|asil|asit|asla|asma|aşçı|aşık|ataş|atak|ateş|atık|atış|atkı|atom|avcı|avlu|avuç|ayak|ayar|ayaz|ayet|ayin|ayla|ayıp|ayna|ayrı|ayva|azap|azar|azık|azim|azot
+baba|baca|bacı|bade|bagaj|bakı|bale|balo|bank|bant|bari|baskı|batı|bayi|bazı|bebe|beis|bela|bere|beri|beton|bıçak|bina|biraz|bluz|boğa|bora|borç|boru|boya|boza|briç|buğu|buji|buse|büro|büst|büyü|bazen|bent|beze|bilge|bina|biye|boks|bono|borsa|boyun|buket|bulut|bunak|burç|buruk|büst
+cadı|cami|cari|cefa|celp|cesur|ceza|cila|cins|cips|ciro|ciğer|cuma|cüce|civa|cilt|cömert|cüret
+çaba|çakı|çalı|çark|çatı|çavuş|çeki|çene|çeri|çile|çini|çita|çivi|çuha|çengel|çentik|çapa|çare|çatal|çeyiz|çıra|çıkı|çile|çilek|çöpçü|çuval
+dalak|dalga|dana|dans|dava|dede|defa|dere|ders|deri|deva|deve|dize|dizi|doğa|doku|dolu|dost|dört|duru|düet|düve|dert|doğu|dize|dolu|dama|dana|dara|dere|dize|duba|duka|duru|duvak|düğün|düşes|döner
+ebru|ecel|ecza|edep|efor|ekim|ekin|ekip|elçi|elek|elit|elma|emek|emir|enik|ense|erik|erim|erke|esas|eser|esin|esna|esir|eşik|eşit|eşya|etek|etki|etüt|evet|evli|ezgi|ezik|ezme|ekol|elem|emel|eren|etap|evre
+fakir|fare|faiz|fark|faul|fasıl|fatura|fayda|felç|fide|film|filo|flüt|form|fors|fren|fuar|füze|fide|fiil|fire|fiyaka|fora|fota|funda|fıçı|fıkra|fırın|fısıltı
+gaga|gaye|gazi|gebe|gece|geda|gıda|golf|gram|grup|güve|göre|gönye|gaza|gedik|gelir|gemi|genç|geri|gider|girdi|göbek|gönül|göbek|gurme|güya|güzel|güruh|güneş
+hala|hale|halı|halk|hane|harç|harf|harp|hava|hece|hedef|hela|hile|hisse|hoca|hobi|hücre|hurda|huzur|hüzün|hamur|hamle|hamsi|hasat|hatıra|hayat|haydi|hayır|hazır|helva|hemen|hesap|heves|hıyar|hikaye|hindi
+ılık|ışık|ılıca|ırmak|ısıtıcı|içki|iade|ibik|icat|iğne|ikaz|iklim|ilaç|ilan|ilgi|ilik|ilim|ilke|imam|iman|imge|imza|inci|inek|iplik|irin|isim|iskele|istek|işçi|işlem|itiş|izci|izin
+jale|jant|jest|jile|jilet|jimnastik|jips|jöle|judo|jübile|jüri
+kaba|kabuk|kaçak|kader|kadın|kafa|kafes|kağıt|kahve|kaide|kalan|kale|kalp|kama|kamu|kanal|kanat|kanca|kanun|kapak|kapı|kaplan|kapsül|kara|karar|kargo|karne|kasa|kasap|kase|kaset|kasım|katar|katkı|katma|kavak|kavga|kaya|kayak|kayık|kaymak|kayıp|kazak|kazan|kazma|kebap|kedi|kefal|kefen|kelam|kelime|kemer|kemik|kenar|kene|kepçe|kereste|kesim|kesir|keten|keyif|kılıç|kına|kına|kırık|kısa|kısım|kısır|kışla|kıyak|kıyı|kibar|kilim|kilit|kimya|kiraz|kirpi|kişi|kitap|klima|koca|kodes|koku|kolay|koltuk|koni|konu|kopya|koru|kostüm|koşu|kota|kova|koyun|kozak|köfte|köpek|köprü|kösele|köşe|kule|kulp|kumaş|kundak|kurak|kural|kurdele|kurgu|kuru|kurul|kurum|kusur|kuşak|kutu|kuzey|kuzu|küme|küpe|kürek|kürk|küskün|kütük
+
+# Genişletme 3: zincir boşluklarından ve günlük dilden
+anca|akça|ağrı|aziz|azil|edip|içli|idil|ödün|öyle|piko|sıkı|unlu|alma|dile|alık|asık|yağı|gama|kala|kapa|kana|lapa|rakı
+bura|cani|halt|maki|obur|atım|sala|kaçık|kesit|kalıt|saman|yalak|banjo|milim|gergi|yergi|kaçış|kayma|sayın|salık|sapık|yavan|aktif|alaca
+anlık|argon|artçı|asabi|atama|bağış|barış|basma|batık|besin|bölüm|cimri|civar|çabuk|çekim|dahil|davet|dikey|dikiş|direk|doğal|durum|haklı|harap
+hariç|hukuk|iddia|ihmal|imdat|iptal|işlev|kıble|kolon|konum|konut|koşul|kulis|kuzen|külçe|kümes|mahal|mertek|miras|mobil|molla|muhit|muzip|nesne
+nükte|olgu|perma|peşin|portre|potas|sancı|sesli|sevap|sıfat|sırça|sırık|sitem|somun|sönük|sözcü|sürat|süreç|şube|tabur|tamir|tarif|tayin|tekel
+terör|tesir|tonaj|tortu|tufan|tuhaf|viski|yapım|yetki|yünlü|zayıf|toprak|şimşek|buzul|körfez|mağara|merak|utanç|hızlı|hafif|kirli|çirkin|gündüz|mevsim
+balkon|garaj|sevinç|nefret
+
+# Genişletme 4: iş-oluş adları, meslek ve madde adları, sanat, doğa
+akış|satış|düşüş|kalkış|varış|bitiş|vuruş|gülüş|duruş|geçiş|oluş|biniş|kaçış|atılış|sürüş|gidiş|günlük|yıllık|darlık|yokluk|çokluk|birlik|körlük|boşluk
+iyilik|başlık|taşlık|kışlık|yazlık|kumluk|çaylık|gözcü|alıcı|atıcı|verici|kurucu|toygar|nikel|kireç|saten|kadife|mermer|granit|kauçuk|pirit|talk|melodi|güfte
+marş|tempo|çiy|gök|seher|dakika|saniye|kırağı|simge|terim|kuvvet|enerji|işaret|sembol|kavram|krema|tahin|kasaba|eczane|otogar|dükkan|market
+
+# Genişletme 5: sıfatlar, sayılar, akrabalık, ulaşım, okul, spor, sağlık, araçlar
+küt|keskin|körpe|çürük|sağlam|yırtık|yorgun|dinç|zinde|güçlü|cılız|tombul|parlak|donuk|cansız|sessiz|mayhoş|düzgün|beş|sekiz|dokuz|yirmi|altmış|yetmiş
+seksen|doksan|milyon|abi|yeğen|enişte|akraba|sülale|metro|kamyon|mezun|basket|nabız|losyon|krema|tırpan|pulluk
+
+# Genişletme 6: beş harfli kelimeler (yiyecek, hayvan, bitki, ev, giyim, kavram)
+aleni|almaç|amigo|angut|andaç|asude|aşevi|afili|hiyena|çupra|barbun|ayrım|demeç|deney|devam|fazla|keder|metot|mizah|nizam|ölçüt|sihir|takip|tevazu
+tutum|vefat|velet|abone|acemi|açlık|allık|analiz
+
+# Genişletme 7: uzun kuyruk, A-E
+sargı|çalgı|salgı|özgü|sövgü|dalgı|ahbap|akçıl|amade|aşina|ayyaş|bağıl|bahis|barem|batıl|bekar|betik|bıçkı|böğür|buçuk|bücür|bordro|bencil|berrak
+beygir|bezgin|bolluk|bozkır|buyruk|bülten|caiz|celse|cenk|cihet|cüsse|cevher|çalım|çoğul|çorak|çözgü|çiklet|davar|değer|denek|deyim|diyar|dönüm|dehliz
+derece|derman|destan|devlet|devrim|dilber|dilsiz|dinamo|direnç|doçent|dokuma|dolmuş|düzine|engin|ergen|ermiş|espri|esrar|evrak|efsane|emanet|emekli|endişe|esinti
+ecnebi
+
+# Genişletme 8: uzun kuyruk, F-Z
+fişek|fitne|forum|fıtık|falez|fersah|ferman|firma|gaile|galeri|gayret|genlik|girdap|gocuk|gölet|görgü|göçmen|gurbet|gündem|güzide|hancı|hangar
+harbi|hasıl|hatıl|hayta|hazine|helak|hevenk|hizmet|hoyrat|hudut|humma|huşu|hülya|ibret|icmal|ihsan|ikilem|imalat|imbik|irfan|iskan|islah|israf|istif
+itina|ivme|izbe|izlek|kabile|kafile|kalas|kamara|kambur|kanka|kaygan|kervan|kesat|keşif|kılık|kınama|kırat|kısmet|kıymet|kimse|kisve|kokart
+kolçak|komite|kopuz|kortej|kovuk|kümbet|küspe|lagün|lahit|lahza|latife|lehim|lifli|lojman|lonca|lugat|mahya|makbuz|malik|marina|matem|mavna|mecbur|memba
+menfez|mesafe|mesire|meşhur|mevzu|meyil|mezat|mihrap|mintan|mumya|mümkün|nasip|nebat|nemrut|nevale|nispet|nizam
+
+# Genişletme 9: uzun kuyruk, O-Z
+obruk|okka|ortam|ödünç|öşür|özne|parka|parsel|pasaj|patlak|pavyon|pazen|pelte|peşkir|pınar|piston|piyade|prova|püskül|refüj|reklam|resif|risale|rölyef
+rötar|ruhsat|safha|sanayi|sandal|sebil|servis|sıhhat|sırat|somut|söylem|sulh|sunak|şasi|şifon|şilep|şirket|takoz|taşıt|tayfa|tebrik|telef|temas|tertip
+tılsım|tıpa|tifo|torna|tutsak|tümsek|umumi|uyruk|ülser|vakur|virgül|vurgun|yafta|yağma|yamuk|yankı|yavru|yayık|yazgı|yekun|yeşim|yığın|yonga|zabıt
+zahire|zanaat|zembil|zerre|zeybek
+
+# Genişletme 10: zincirde köprü olan kelimeler
+kalış|kabar|kalım|yapak|yaran|batış|tasım|yatık|yayan|bitim|salak|talip|tabir|kargı|kalma|sabık|sudak|mamur|melik|talak|karık|kasır|camia|cıvık
+çatlak|çevik|denge|derhal|ergin|eşkal|farklı|gıpta|haraç|hayli|hüsran|ıslık|inatçı|iştah|kanaat|kudret|makbul|mantık|mesnet|mevcut|mezhep|mutena
+nadide|nebze|öksüz|ölçüm|pişman|ragbet|rahmet|saygın|sebat|sözde|sürgün|şöhret|tahrip|takdir|tasvir|tecrit|temkin|veciz|yöntem|zevzek

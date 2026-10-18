@@ -51,3 +51,6 @@ uğur böceği|uçan sincap|uçan balık|uskumru|üveyik
 vampir yarasası|vatoz|vaşak|vizon
 yalıçapkını|yaban domuzu|yaban keçisi|yaban ördeği|yılan balığı|yengeç|yarasa|yunus|yılan
 zargana|zürafa|zebra
+
+# Genişletme: daha fazla hayvan
+Solucan

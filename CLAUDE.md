@@ -20,8 +20,11 @@
   - mağaza görselleri: `npm run dev` açıkken `npx tsx scripts/store-shots.mts phone|tablet`, sonra `npx tsx scripts/store-promo.mts`
   - sözlükler: `scripts/dict-src/*.txt` düzenle → `node scripts/dict-src/build.cjs` (çıktı `src/data/dict/*.json`;
     tekrarlar atılır, '#' ile başlayan satırlar ve '?' içeren kelimeler alınmaz)
-  - Sıra Sende kelime havuzu: `scripts/dict-src/kelime.txt` (3-6 harfli genel Türkçe kelimeler, ~3.100).
+  - Sıra Sende kelime havuzu: `scripts/dict-src/kelime.txt` (3-6 harfli genel Türkçe kelimeler, ~3.900).
     Kategori sözlüklerindeki tek kelimelik adlar da buraya elle taşındı; yeni kelime eklenince build'i çalıştır.
+    Oyun yalnız 3-5 harflileri kullanır (`LENGTHS` in `src/engine/chain.ts`); 6 harfliler havuzda durur ama oynanmaz.
+    Zincirin sağlığı: 4 harflilerde ortalama 3,7 komşu (%14 çıkmaz), 5 harflilerde 1,35 (%44). 5 harfli havuz hâlâ en zayıf halka.
+    Q, W, X ile başlayan kayıt eklenmez (o harfler hiç çıkmaz).
 - **Yapı:**
   - `src/engine/`: Türkçe harf işlemleri (tr.ts), kategoriler, sözlük, puanlama (saf; testler `__tests__`)
   - **STOP kuralı (İsim Şehir):** STOP yalnızca bütün kategorilerde **geçerli** cevabı olana açılır (`isAnswer` in `src/engine/tr.ts`:
@@ -34,6 +37,10 @@
     böylece Firebase kurallarına dokunmak gerekmedi), ekranlar `screens/Turn.tsx` ve `screens/ChainFinal.tsx`,
     ayarlar `components/ChainSettings.tsx`. Oyun türü `settings.game` ('isim' | 'siram'); kurulum sayfası
     `/kur/:mode?oyun=siram`.
+  - **Ekran düzeni:** `src/styles/app.css` + `game.css` telefon dikey; `tablet.css` 700 px'ten geniş ekranlar;
+    `landscape.css` yatay tutulan telefonlar (`orientation: landscape` ve yükseklik ≤ 560 px) — yatayda telefon
+    700 px'i geçtiği için tablet ölçüleri devreye giriyor, bu dosya onları küçültüp yazı defteri ile düğmeleri
+    yan yana koyar (ekranlar: ana sayfa, lobi, kurulum, harf çevirme, yazma, Sıra Sende, değerlendirme, puanlar).
   - `src/online/`: ortak arayüz (transport.ts), botlu oyun (local.ts), Firebase (firebase.ts, config.ts); kurallar `database.rules.json`
   - `src/lib/ink.ts`: el yazısı tanıma — Android'de `android/.../InkPlugin.java` (ML Kit Digital Ink, Türkçe model),
     iOS'ta `ios/App/App/InkVision.swift` + `InkPlugin.swift` (Apple Vision, cihazda, internetsiz; denemek: `npm run ios:ink`),

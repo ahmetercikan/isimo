@@ -54,3 +54,10 @@ Vatanım Sensin|Venom|Vikings|Vuslat|Valley of Wolves?
 
 Yargı|Yasak Elma|Yaprak Dökümü|Yalı Çapkını|Yeşilçam|Yabancı Damat|Yüz Yıllık Mühür|Yeni Hayat
 Zümrüdüanka|Zoraki Koca|Zootropolis|Zeytin Ağacı|Zengin Kız Fakir Oğlan
+
+# Genişletme: yerli ve yabancı diziler
+Alf|Bitter Sweet|Black Mirror|Bones|Castle|Chernobyl|CSI|Doctor Who|Dynasty|ER|Fargo|Frasier|Fringe|Full House|Gotham|Grey's Anatomy
+Heroes|Homeland|House|How I Met Your Mother|Kim Milyoner Olmak İster|Mad Men|MacGyver|Mentalist|Mission Impossible|Mr. Robot|NCIS|Perry Mason|Rome|Scrubs|Sex and the City
+Shameless|Six Feet Under|Smallville|Spartacus|Succession|Suits|Supernatural|Sopranos|Taxi|The Boys|The Last of Us|The Mandalorian|The Pacific|The Simpsons|The Walking Dead|The Wire
+True Detective|Twin Peaks|Yellowstone|Beyaz Gelincik|En Son Babalar Duyar|Erkek Severse|Fatmagül|Kaçak|Kayıp Şehir|Mahalle|O Hayat Benim
+Yalancı|Camdaki Kız|Taşacak Bu Deniz

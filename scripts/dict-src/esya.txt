@@ -53,3 +53,6 @@ uçurtma|usturupa? |utanmaz? |uyku tulumu|ütü|ütü masası|uzatma kablosu
 vantilatör|vazo|video kamera|vida|vinç|valiz|vestiyer
 yastık|yatak|yatak örtüsü|yelek|yelpaze|yorgan|yüksük|yüzük|yangın söndürücü|yazı tahtası|yoğurt kabı|yürüteç
 zarf|zımba|zil|zincir|zımpara|ziynet
+
+# Genişletme: daha fazla eşya
+Bardaklık|Kütüphane|Masa örtüsü|Müzik seti|Şifonyer|Tartı

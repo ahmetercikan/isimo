@@ -53,3 +53,8 @@ Vestel|Volkswagen|Volvo|Vichy|Vatan Bilgisayar|Vivident|Vodafone|Vakko
 
 Yamaha|Yataş|Yudum|Yumoş|Yves Rocher|Yemeksepeti|Yapı Kredi|Yıldız Holding
 Zara|Zorlu|Zeki Triko|Ziraat|Zyxel? 
+
+# Genişletme: daha fazla marka
+Aldi|Aroma|Brita|Caterpillar|Doğadan|Energizer|Evyap|Fiskobirlik|Hisense|Hummel|Husqvarna|Ipana|İpek|Johnnie Walker
+Kafkas|Koçtaş|Luna|Makro|Mavi Jeans|Media Markt|Molped|Protex|Rinso|Roche|Tikveşli|Vatan|Vivense
+Zara Home|Ziylan

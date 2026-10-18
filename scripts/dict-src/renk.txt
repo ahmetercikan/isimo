@@ -47,3 +47,6 @@ uçuk mavi|üzüm moru|ultramarin
 vişne çürüğü|viyolet
 yavru ağzı|yeşil|yosun yeşili|yakut kırmızısı|yanık turuncu
 zeytin yeşili|zümrüt yeşili|zencefil rengi
+
+# Genişletme: daha fazla renk
+Bakır rengi|Barut mavisi|Gümüş rengi
