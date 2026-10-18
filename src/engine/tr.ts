@@ -42,6 +42,16 @@ export function startsWithLetter(answer: string, letter: string): boolean {
 }
 
 /**
+ * Bu kutu gerçekten dolduruldu mu: turun harfiyle başlayan, en az iki harfli bir cevap.
+ * Tek harf cevap olmaz (tanıyıcı düz bir çizgiyi "l"/"i" okuyabilir), yanlış harf de puan almaz;
+ * STOP hakkı ve "doldu" işaretleri buna göre verilir.
+ */
+export function isAnswer(text: string, letter: string): boolean {
+  const t = (text ?? '').trim();
+  return norm(t).length >= 2 && startsWithLetter(t, letter);
+}
+
+/**
  * Tanıyıcı ilk harfin noktasını/çengelini kaçırdıysa (C/Ç, S/Ş, I/İ, O/Ö, U/Ü) turun harfine düzeltir.
  * "cilek" + Ç → "çilek". Farklı bir harfse dokunmaz.
  */

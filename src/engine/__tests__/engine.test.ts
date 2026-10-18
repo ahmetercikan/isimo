@@ -2,7 +2,7 @@ import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { catById } from '../categories';
 import { loadDicts, lookup } from '../dict';
 import { judgeCategory, ranking, scoreRound } from '../scoring';
-import { availableLetters, capitalize, fixFirstLetter, fold, norm, startsWithLetter } from '../tr';
+import { availableLetters, capitalize, fixFirstLetter, fold, isAnswer, norm, startsWithLetter } from '../tr';
 import { newCtl, rKey, type RoomState } from '../types';
 import { LocalTransport } from '../../online/local';
 import { applyPatch } from '../../online/transport';
@@ -31,6 +31,18 @@ describe('Türkçe harfler', () => {
     expect(fixFirstLetter('Kars', 'Ç')).toBe('Kars');
     expect(fixFirstLetter('Izmir', 'İ')).toBe('İzmir');
   });
+  it('cevap sayılan kutu: harfi tutan, en az iki harfli', () => {
+    expect(isAnswer('Kars', 'K')).toBe(true);
+    expect(isAnswer('Ok', 'O')).toBe(true);
+    expect(isAnswer('Kuru fasulye', 'K')).toBe(true);
+    // düz çizgi "l"/"i" okunur: tek harf cevap sayılmaz
+    expect(isAnswer('l', 'K')).toBe(false);
+    expect(isAnswer('I', 'I')).toBe(false);
+    expect(isAnswer('', 'K')).toBe(false);
+    expect(isAnswer('  ', 'K')).toBe(false);
+    // yanlış harfle başlayan cevap puan almaz, kutuyu da doldurmaz
+    expect(isAnswer('Ankara', 'K')).toBe(false);
+  });
   it('kullanılmış ve zor harfler çıkmaz', () => {
     const a = availableLetters('AB', false);
     expect(a).not.toContain('A');
@@ -58,12 +70,25 @@ describe('Sözlük', () => {
     expect(chooseCandidate(['TOKAT'], 'T', 'sehir').text).toBe('Tokat');
     expect(chooseCandidate(['ZXQWE'], 'Z', 'sehir').text).toBe('Zxqwe');
   });
+  it('çizgi/nokta (tek harflik adaylar) cevap olarak alınmaz', () => {
+    // düz çizgi için tanıyıcının döndürdükleri
+    expect(chooseCandidate(['1', '|', 'l', 'i', 'I', "'", '.'], 'K', 'isim').text).toBe('');
+    expect(chooseCandidate(['1', '|', 'l', 'i', 'I'], 'I', 'isim').text).toBe('');
+    // gerçek kelime varsa o seçilir
+    expect(chooseCandidate(['l', 'Kars'], 'K', 'sehir').text).toBe('Kars');
+  });
 });
 
 describe('Puanlama', () => {
   const judge = (answers: Record<string, string>, votes?: Record<string, Record<string, true>>, catId = 'sehir', letter = 'K') =>
     judgeCategory({ catId, letter, pids: Object.keys(answers), answers, votes, voters: Object.keys(answers) });
 
+  it('tek harflik cevap puan almaz', () => {
+    const v = judge({ a: 'K', b: 'Kars' });
+    expect(v.a.reason).toBe('short');
+    expect(v.a.pts).toBe(0);
+    expect(v.b.pts).toBe(20);
+  });
   it('tek: 10, aynı: 5, tek geçerli: 20, boş/yanlış harf: 0', () => {
     const v = judge({ a: 'Kars', b: 'kars', c: 'Konya', d: '', e: 'Ankara' });
     expect(v.a.pts).toBe(5);

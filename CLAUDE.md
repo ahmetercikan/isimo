@@ -18,6 +18,9 @@
   - sözlükler: `scripts/dict-src/*.txt` düzenle → `node scripts/dict-src/build.cjs`
 - **Yapı:**
   - `src/engine/`: Türkçe harf işlemleri (tr.ts), kategoriler, sözlük, puanlama (saf; testler `__tests__`)
+  - **STOP kuralı:** STOP yalnızca bütün kategorilerde **geçerli** cevabı olana açılır (`isAnswer` in `src/engine/tr.ts`:
+    turun harfiyle başlayan, en az iki harfli). Tek harf cevap sayılmaz — tanıyıcı düz bir çizgiyi "l"/"i" okuyor,
+    eskiden böyle kutular "dolu" görünüp STOP'u açıyordu. Puanlamada da tek harf 0 ("tek harf").
   - `src/game/director.ts`: oyun akışı (lobi → harf → yazma → değerlendirme → puan → final); geçişleri "yöneten" oyuncu yapar
   - `src/game/bots.ts`: botlar · `src/game/screens/`: oyun ekranları
   - `src/online/`: ortak arayüz (transport.ts), botlu oyun (local.ts), Firebase (firebase.ts, config.ts); kurallar `database.rules.json`

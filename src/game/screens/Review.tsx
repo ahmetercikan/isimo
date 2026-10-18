@@ -94,7 +94,7 @@ export function Review({ t, s }: { t: Transport; s: RoomState }) {
             me={pid === t.me}
             ink={ink[pid]?.[cat.id]}
             voted={!!s.votes?.[k]?.[cat.id]?.[pid]?.[t.me]}
-            canVote={canVote && pid !== t.me && !!verdicts[pid].text && verdicts[pid].reason !== 'letter'}
+            canVote={canVote && pid !== t.me && !!verdicts[pid].text && verdicts[pid].reason !== 'letter' && verdicts[pid].reason !== 'short'}
             onVote={(on) => vote(pid, on)}
           />
         ))}
@@ -116,7 +116,7 @@ export function Review({ t, s }: { t: Transport; s: RoomState }) {
   );
 }
 
-const REASON: Record<Verdict['reason'], string> = { ok: '', empty: 'boş', letter: 'harf uymuyor', voted: 'oyla iptal' };
+const REASON: Record<Verdict['reason'], string> = { ok: '', empty: 'boş', short: 'tek harf', letter: 'harf uymuyor', voted: 'oyla iptal' };
 
 function AnswerRow({ i, v, p, me, ink, voted, canVote, onVote }: {
   i: number; v: Verdict; p: RoomState['players'][string]; me: boolean; ink?: string; voted: boolean; canVote: boolean; onVote: (on: boolean) => void;

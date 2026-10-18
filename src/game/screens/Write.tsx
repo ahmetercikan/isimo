@@ -1,6 +1,7 @@
 /**
  * Yazma: her kategori için el yazısı defteri. Yazılan okunur (chooseCandidate), cevap anında odaya yazılır.
- * Harf gösterimi ve 3-2-1 de burada (yazma startAt'te başlar). Bitiren STOP diyebilir.
+ * Harf gösterimi ve 3-2-1 de burada (yazma startAt'te başlar).
+ * STOP yalnızca bütün kategorilerde geçerli cevabı olana açıktır (isAnswer: harfi tutan, en az iki harfli).
  */
 import { ArrowLeft, ArrowRight, Check, Eraser, Keyboard, PenLine, Undo2 } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
@@ -10,7 +11,7 @@ import { InkPad } from '../../components/InkPad';
 import { Avatar, useNow } from '../../components/ui';
 import { catInfo } from '../../engine/categories';
 import { lookup } from '../../engine/dict';
-import { capitalize, fixFirstLetter, startsWithLetter } from '../../engine/tr';
+import { capitalize, fixFirstLetter, isAnswer, startsWithLetter } from '../../engine/tr';
 import { rKey, type RoomState } from '../../engine/types';
 import { buzz } from '../../lib/feel';
 import { say } from '../../lib/voice';
@@ -49,7 +50,9 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
   const cat = cats[cur];
   const slot = slots[cat.id] ?? empty();
   const info = catInfo(cat);
-  const filled = cats.filter((x) => slots[x.id]?.text.trim()).length;
+  /** Bu kategori gerçekten dolu mu (harfi tutan, en az iki harfli cevap). */
+  const ok = (id: string) => isAnswer(slots[id]?.text ?? '', letter);
+  const filled = cats.filter((x) => ok(x.id)).length;
   const allDone = filled === cats.length;
 
   // ---- Odaya yazma (her kategori ayrı, kısa gecikmeyle; süre bitmeden hepsi gönderilir) ----
@@ -126,7 +129,7 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
   const nextEmpty = () => {
     for (let k = 1; k <= cats.length; k++) {
       const i = (cur + k) % cats.length;
-      if (!slots[cats[i].id]?.text.trim()) return go(i - cur);
+      if (!ok(cats[i].id)) return go(i - cur);
     }
     go(1);
   };
@@ -199,8 +202,8 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
     return Object.entries(s.players)
       .filter(([p, v]) => p !== t.me && !v.left)
       .sort((a, b) => a[1].joined - b[1].joined)
-      .map(([p, v]) => ({ pid: p, ...v, n: Object.values(ans[p] ?? {}).filter((x) => x?.trim()).length }));
-  }, [s.answers, s.players, c.round, t.me]);
+      .map(([p, v]) => ({ pid: p, ...v, n: Object.values(ans[p] ?? {}).filter((x) => isAnswer(x ?? '', letter)).length }));
+  }, [s.answers, s.players, c.round, t.me, letter]);
 
   const stopper = c.stopBy ? s.players[c.stopBy] : null;
   const wrongLetter = !!slot.text && !startsWithLetter(slot.text, letter);
@@ -251,7 +254,7 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
 
       <nav className="cat-tabs" aria-label="Kategoriler">
         {cats.map((x, i) => {
-          const done = !!slots[x.id]?.text.trim();
+          const done = ok(x.id);
           return (
             <button key={x.id} className={`cat-tab ${i === cur ? 'is-cur' : ''} ${done ? 'is-done' : ''}`} style={{ '--c': catInfo(x).color } as CSSProperties} onClick={() => (sfx.tap(), setCur(i))}>
               <span className="cat-tab__emoji">{done ? <Check size={16} strokeWidth={3.6} /> : <CatIcon cat={x} size={22} />}</span>

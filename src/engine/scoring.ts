@@ -1,15 +1,15 @@
 /**
  * Puanlama (klasik İsim Şehir kuralları):
- *   - boş ya da yanlış harfle başlayan cevap: 0
+ *   - boş, tek harflik ya da yanlış harfle başlayan cevap: 0
  *   - oyuncuların çoğunluğu "geçersiz" dediyse: 0 (sözlükte olan cevap için en az 2 oy gerekir)
  *   - geçerli ve tek: 10, başkasıyla aynı: 5
  *   - o kategoride geçerli cevabı olan tek kişiysen: 20
  */
 import { lookup } from './dict';
-import { fold, startsWithLetter } from './tr';
+import { fold, norm, startsWithLetter } from './tr';
 import { rKey, type RoomState, type RoundResult } from './types';
 
-export type Reason = 'ok' | 'empty' | 'letter' | 'voted';
+export type Reason = 'ok' | 'empty' | 'short' | 'letter' | 'voted';
 
 export interface Verdict {
   text: string;
@@ -50,6 +50,7 @@ export function judgeCategory(o: {
     let reason: Reason = 'ok';
     if (!text) reason = 'empty';
     else if (!startsWithLetter(text, o.letter)) reason = 'letter';
+    else if (norm(text).length < 2) reason = 'short';
     else if (eligible.length >= needed && rejects >= needed) reason = 'voted';
     out[pid] = { text, valid: reason === 'ok', reason, inDict, same: 0, rejects, needed, pts: 0 };
   }

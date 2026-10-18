@@ -113,7 +113,8 @@ async function recognizeWeb(strokes: Stroke[], width: number, height: number): P
 
 /**
  * Adaylardan oyuna en uygununu seçer: önce sözlükte olan ve turun harfiyle başlayan, sonra harfi tutan, sonra ilk aday.
- * İlk harfin noktası/çengeli kaçtıysa düzeltir (cilek → çilek). Döner: seçilen ve diğer (farklı) adaylar.
+ * İlk harfin noktası/çengeli kaçtıysa düzeltir (cilek → çilek). Tek harflik adaylar (çizgi, nokta) atılır.
+ * Döner: seçilen ve diğer (farklı) adaylar.
  */
 export function chooseCandidate(cands: string[], letter: string, catId: string): { text: string; alts: string[] } {
   const seen = new Set<string>();
@@ -124,7 +125,8 @@ export function chooseCandidate(cands: string[], letter: string, catId: string):
     const canon = canonical(catId, text);
     if (canon && startsWithLetter(canon, letter)) text = canon;
     else if (text.length > 1 && text === trUpper(text)) text = trUpper(text[0]) + trLower(text.slice(1));
-    if (!text || seen.has(norm(text))) return;
+    // Tek harf cevap olmaz: düz bir çizgi "l", "i", "1" okunuyor — böyle adaylar atılır.
+    if (norm(text).length < 2 || seen.has(norm(text))) return;
     seen.add(norm(text));
     let score = -i * 0.15;
     if (startsWithLetter(text, letter)) score += 2;
