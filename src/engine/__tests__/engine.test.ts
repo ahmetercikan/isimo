@@ -1,7 +1,7 @@
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { catById } from '../categories';
 import { loadDicts, lookup } from '../dict';
-import { judgeCategory, ranking, scoreRound } from '../scoring';
+import { judgeCategory, PTS, ranking, scoreRound } from '../scoring';
 import { availableLetters, capitalize, fixFirstLetter, fold, isAnswer, locative, norm, startsWithLetter } from '../tr';
 import { newCtl, rKey, type RoomState } from '../types';
 import { LocalTransport } from '../../online/local';
@@ -105,6 +105,25 @@ describe('Puanlama', () => {
     expect(v.e.reason).toBe('letter');
     const solo = judge({ a: 'Kars', b: '', c: 'Ankara' });
     expect(solo.a.pts).toBe(20);
+  });
+  it('yanlış yazılan cevap "aynı cevap" sayılır (yazan fazladan puan almaz)', () => {
+    // Üçü doğru yazmış, biri bir harf eksik: dördü de aynı cevabı vermiştir.
+    const v = judge({ a: 'Orangutan', b: 'Orangutan', c: 'orangutan', d: 'Oranguta' }, undefined, 'hayvan', 'O');
+    expect(v.d.valid).toBe(true);
+    expect(v.d.same).toBe(4);
+    expect(v.d.pts).toBe(PTS.shared);
+    expect(v.a.pts).toBe(PTS.shared);
+    // Sözlükteki iki ayrı kelime birleşmez
+    const ayri = judge({ a: 'Kedi', b: 'Keçi' }, undefined, 'hayvan', 'K');
+    expect(ayri.a.pts).toBe(PTS.unique);
+    expect(ayri.b.pts).toBe(PTS.unique);
+    // Sözlükte olmayan uzun yazımlar da tek harf farkla birleşir (özel kategori)
+    const ozel = judge({ a: 'Kızılcıklar', b: 'Kızılcıklar', c: 'Kızılcıkler' }, undefined, 'ozelkategori', 'K');
+    expect(ozel.c.same).toBe(3);
+    expect(ozel.c.pts).toBe(PTS.shared);
+    // Kısa cevaplarda tek harf fark ayrı cevaptır
+    const kisa = judge({ a: 'Kars', b: 'Kırs' }, undefined, 'ozelkategori', 'K');
+    expect(kisa.a.same).toBe(1);
   });
   it('çoğunluk oyu iptal eder; sözlükteki cevap tek oyla iptal olmaz', () => {
     const made = judge({ a: 'Kıpkıp', b: 'Kars', c: 'Konya' }, { a: { b: true, c: true } });
