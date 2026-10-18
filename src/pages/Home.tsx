@@ -92,11 +92,11 @@ export default function Home() {
               </button>
             </div>
             <button className="mode-card__bot" onClick={() => (sfx.tap(), nav(`/kur/bot${g.q}`))}>
-              <Bot size={22} strokeWidth={2.4} /> Botlara Karşı
+              <Bot size={26} strokeWidth={2.6} /> Botlara Karşı
               <span className="mode-card__faces" aria-hidden="true">
-                <Avatar emoji="robot" color="#a5b4fc" size={26} />
-                <Avatar emoji="baykus" color="#ffc83d" size={26} />
-                <Avatar emoji="tilki" color="#ff8a3d" size={26} />
+                <Avatar emoji="robot" color="#a5b4fc" size={32} />
+                <Avatar emoji="baykus" color="#ffc83d" size={32} />
+                <Avatar emoji="tilki" color="#ff8a3d" size={32} />
               </span>
             </button>
             {!ONLINE_AVAILABLE && <p className="mode-card__note">Çevrimiçi oyun yakında açılıyor.</p>}
