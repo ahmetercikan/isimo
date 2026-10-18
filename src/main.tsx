@@ -7,6 +7,7 @@ import './styles/theme.css';
 import './styles/app.css';
 import './styles/game.css';
 import './styles/tablet.css';
+import './styles/landscape.css';
 
 // Web'de çevrimdışı çalışma ve "Ana ekrana ekle" için servis çalışanı (Android uygulamasında dosyalar zaten pakette).
 if (!Capacitor.isNativePlatform()) registerSW({ immediate: true });
