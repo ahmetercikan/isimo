@@ -27,3 +27,27 @@ vaşak|vatoz|vizon|vampir yarasa|varan|vahşi kedi?
 yılan|yarasa|yengeç|yunus|yaban domuzu|yak|yaban keçisi|yalıçapkını|yaban arısı|yaban kedisi|yağmur kurdu|yelkovan|yusufçuk|yılan balığı|yaban ördeği|yer sincabı|yaban öküzü|yaban tavşanı|yaban atı|yaban kazı|yavru? |yapağı? |yengeç örümceği
 zürafa|zebra|zargana|zebu|zerdeva|zeytin sineği|zağar
 üç parmaklı tembel hayvan|tembel hayvan|cennet balığı
+akdeniz foku|ateş karıncası|ada tavşanı|afrika fili|aslan balığı|ağustos böceği|arı kuşu|ahtapot|akrep|atmaca|alabalık|antilop|alageyik|albatros|alpaka|anakonda|aygır|ayı balığı
+bal arısı|bombus arısı|beyaz ayı|bozkurt|boa yılanı|baştankara|buzağı|bozayı|barakuda|balıkçıl|babun|bülbül|bufalo|bizon|bıldırcın|bukalemun|böcek|boğa|baykuş|balina
+camız|cennet kuşu|cırcır böceği|civciv|ceylan|ceylan kuşu|cüce papağan
+çıngıraklı yılan|çoban köpeği|çalıkuşu|çulluk|çinekop|çipura|çaylak|çıyan|çekirge|çita|çakal|çinçilla|çakır doğan|çöl tilkisi|çöl faresi|çizgili sırtlan|çamurcun
+deniz yıldızı|deniz kestanesi|deniz aslanı|deniz kaplumbağası|denizatı|denizanası|dağ keçisi|dağ sıçanı|dalgıç kuşu|danaburnu|devekuşu|dalmaçyalı|doberman|dev panda|dinozor|domuz|deve|dana
+eşek arısı|ev kedisi|ev faresi|engerek|ispinoz|emu|eşek|ejderha
+fındık faresi|fener balığı|firavun faresi|flamingo|fare|fok|fil
+gökdoğan|gri balina|guguk kuşu|gelincik|gergedan|güvercin|geyik|goril|güve|geko
+hint kobrası|hani balığı|hörgüçlü deve|hamster|hamsi|hindi|horoz|hüthüt
+ipek böceği|istiridye|ıstakoz|iguana|ibibik|inek
+jaguar|jerboa
+kutup ayısı|kutup tilkisi|komodo ejderi|kılıç balığı|köpekbalığı|kulağakaçan|kırkayak|karabatak|kırlangıç|kertenkele|köstebek|kaplumbağa|kanarya|kanguru|karınca|kelebek|kurbağa|kunduz|keklik|karides|kalkan balığı|kakadu|kivi kuşu|kısrak|katır|kumru|kefal|kirpi|kobra|koala|kartal|kaplan|keçi|kuzu|kedi|köpek|koyun|kurt|kuğu|karga|koç|kaz
+leylek|leopar|levrek|lemur|lüfer|lama
+muhabbet kuşu|mandarin ördeği|misk kedisi|mavi balina|salyangoz|mandril|mercan|mezgit|midye|martı|manda|maymun|mors
+oklu kirpi|orman tavuğu|ornitorenk|orangutan|orkinos|ördek|öküz|örümcek|oğlak
+peygamber devesi|papağan balığı|pisi balığı|pelikan|penguen|piranha|porsuk|palamut|panter|pitbull|papağan|panda|piton|pars|puma|pire
+ren geyiği|rottweiler|rakun
+sümüklüböcek|sivrisinek|su aygırı|su samuru|saka kuşu|sardalya|salyangoz|semender|sincap|sırtlan|sansar|samur|sülün|sazan|somon|serçe|sinek|sığır
+şempanze|şahin|şebek
+tavus kuşu|ton balığı|tekir kedisi|tesbih böceği|tarla faresi|tatlı su levreği|timsah|tırtıl|tosbağa|tavşan|tavuk|tilki|turna|torik|termit|tazı|teke
+uğur böceği|uçan sincap|uçan balık|uskumru|üveyik
+vampir yarasası|vatoz|vaşak|vizon
+yalıçapkını|yaban domuzu|yaban keçisi|yaban ördeği|yılan balığı|yengeç|yarasa|yunus|yılan
+zargana|zürafa|zebra

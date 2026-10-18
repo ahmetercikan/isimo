@@ -2,7 +2,7 @@ import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { catById } from '../categories';
 import { loadDicts, lookup } from '../dict';
 import { judgeCategory, ranking, scoreRound } from '../scoring';
-import { availableLetters, capitalize, fixFirstLetter, fold, isAnswer, norm, startsWithLetter } from '../tr';
+import { availableLetters, capitalize, fixFirstLetter, fold, isAnswer, locative, norm, startsWithLetter } from '../tr';
 import { newCtl, rKey, type RoomState } from '../types';
 import { LocalTransport } from '../../online/local';
 import { applyPatch } from '../../online/transport';
@@ -42,6 +42,13 @@ describe('Türkçe harfler', () => {
     expect(isAnswer('  ', 'K')).toBe(false);
     // yanlış harfle başlayan cevap puan almaz, kutuyu da doldurmaz
     expect(isAnswer('Ankara', 'K')).toBe(false);
+  });
+  it('isme -de/-da/-te/-ta eki', () => {
+    expect(locative('Ali')).toBe("Ali'de");
+    expect(locative('Bilge Baykuş')).toBe("Bilge Baykuş'ta");
+    expect(locative('Zeynep')).toBe("Zeynep'te");
+    expect(locative('Arda')).toBe("Arda'da");
+    expect(locative('Robo Ramiz')).toBe("Robo Ramiz'de");
   });
   it('kullanılmış ve zor harfler çıkmaz', () => {
     const a = availableLetters('AB', false);

@@ -26,3 +26,30 @@ uydu anteni|uçurtma|ustura|uyku tulumu|uzaktan kumanda|uzatma kablosu|urgan|uç
 vazo|valiz|vantilatör|vida|varil|vestiyer|vitrin|vantuz|vazelin|video kamera|viyolonsel|vinç|vernik|vizör? |vites?
 yastık|yatak|yorgan|yüzük|yelek|yağmurluk|yazıcı|yemek masası|yaba|yazı tahtası|yastık kılıfı|yatak örtüsü|yelpaze|yazma|yemeni|yumak|yumurtalık|yağdanlık|yangın tüpü|yapboz|yoyo|yemek kaşığı|yüzme gözlüğü|yaka kartı|yün çorap|yemek tabağı|yer minderi|yolluk|yay|yüksük|yazı masası|yer sofrası|yağmur botu|yaylı tabanca? |yatak çarşafı?
 zil|zımba|zarf|zımpara|zincir|zurna|zar|zigon sehpa|zıbın|zeytinlik|zarf açacağı|zemberek|zıpkın|zımpara kağıdı|zıpzıp|zil?
+abajur|ahşap kaşık|akıllı saat|alyans|ampul|anahtarlık|araba|askılık|aspiratör|ateş|avize|ayakkabı|ayakkabılık|ayna|ayraç|askı|aspiratör|anten|alet çantası|akvaryum
+bardak|baston|batarya|bavul|bebek arabası|beşik|bıçak|bidon|bilezik|bilgisayar|biblo|bilye|bisiklet|biberon|bluz|bone|boru|boya kalemi|boyun yastığı|bozuk para|branda|broş|buzdolabı|büro|büyüteç|bornoz|bot|battaniye
+cam|cımbız|cep telefonu|cetvel|cezve|cihaz|cüzdan|camekan|cam silecek
+çadır|çakmak|çaydanlık|çakı|çamaşır makinesi|çanta|çarşaf|çatal|çekiç|çekmece|çerçeve|çıngırak|çivi|çizme|çöp kovası|çorap|çuval|çember|çaykaşığı
+dantel|defter|dergi|deterjan|dikiş makinesi|dizüstü bilgisayar|dolap|dondurucu|dosya|duvar saati|dürbün|düdük|düğme|damacana|divan|dikiş iğnesi
+elbise|elbise askısı|eldiven|elektrik süpürgesi|el feneri|emzik|etek|etajer|ekmek kutusu|ekran|el çantası|elektrikli süpürge
+fanila|fare|fener|fırça|fırın|fincan|fotoğraf makinesi|fön makinesi|fermuar|flüt|fıçı|fileli çanta
+gazete|gitar|gömlek|göz damlası|gözlük|güneş gözlüğü|güneşlik|gardırop|galoş|gaz ocağı
+halı|hamak|havan|havlu|hesap makinesi|hırka|hortum|huni|hoparlör|hediye paketi|hırdavat
+ızgara|ısıtıcı|iğne|ip|iplik|iskemle|ispirto|izolasyon bandı|içlik|iç çamaşırı|ışık
+jaluzi|jel|jilet|jarse|jeneratör|jile
+kablo|kalem|kalemlik|kalorifer|kamera|kanepe|kap|kapı|kaplama|karyola|kasa|kaşık|kavanoz|kaykay|kemer|kep|kese|keser|kibrit|kilim|kilit|kitap|klavye|koltuk|kolye|kovan|kova|kulaklık|kumanda|kupa|kurutucu|kutu|külot|küllük|küp|kürek|küvet|kriko|kanca|kriz masası|kazak|kaban|kol saati
+lamba|lambader|lavabo|leğen|levye|limonluk|lupa|lüle|laptop
+makas|makine|maket|mandal|mangal|masa|maşa|matkap|mendil|merdiven|metre|mikrodalga|mikser|minder|mobilya|montaj|musluk|mum|mutfak robotu|mıknatıs|mikrofon|mont|maske
+nevresim|nalın|not defteri|nemlendirici|naylon poşet
+oklava|ocak|otomobil|oturak|oyuncak|oyun konsolu|ocak maşası|optik fare
+ödev defteri|örtü|örgü şişi|ölçü kabı|özel kalem
+palto|pantolon|paspas|pencere|perde|pil|pipet|piyano|plak|poşet|priz|puf|pusula|peçete|pres|poğaça kalıbı|pijama|panjur|pedal
+radyo|raf|raket|resim çerçevesi|robot süpürge|ruj|rende|rulo|römork
+saat|sabunluk|saksı|sandalye|sandık|sehpa|sepet|servis tabağı|sıcak su torbası|silgi|sırt çantası|soba|sofra|sunta|süpürge|süzgeç|şapka|saç kurutma makinesi|saç tokası|saksofon|standart lamba
+şal|şemsiye|şişe|şilte|şömine|şarj aleti|şeker kabı|şezlong
+tabak|tabure|takvim|tarak|tava|tencere|tepsi|terazi|terlik|tesbih|testere|televizyon|tişört|tornavida|torba|toz bezi|tuzluk|tüp|tükenmez kalem|termos|tabanca kurutma? |tahta kaşık
+uçurtma|usturupa? |utanmaz? |uyku tulumu|ütü|ütü masası|uzatma kablosu
+üçgen cetvel|üstlük|ürün sepeti
+vantilatör|vazo|video kamera|vida|vinç|valiz|vestiyer
+yastık|yatak|yatak örtüsü|yelek|yelpaze|yorgan|yüksük|yüzük|yangın söndürücü|yazı tahtası|yoğurt kabı|yürüteç
+zarf|zımba|zil|zincir|zımpara|ziynet

@@ -26,3 +26,30 @@ Uludağ|Uber|Under Armour|UPS|Unilever|U.S. Polo Assn.|Uniqlo|Uno|Umbro|Uzun?
 Vestel|Volkswagen|Volvo|Vodafone|Vakko|Versace|Vaillant|Vatan Bilgisayar|Vichy|Vaseline|Vans|Valentino|VakıfBank|Vileda|Viko|Vivo|Vitra|Visa|Vanish|Vernel|Victorinox|Vespa|Vivident?
 Yapı Kredi|Yörsan|Yudum|Yemeksepeti|Yataş|Yamaha|Yves Rocher|YouTube|Yahoo|Yıldız Holding|Yumoş|Yves Saint Laurent|Yayla|Yeşil?
 Zara|Ziraat Bankası|Zeki Triko|Zen Pırlanta|Zorlu|Zwilling|Zippo|Zoom|Zade|Zenith?
+Adidas|Apple|Arçelik|Aygaz|Avon|Arko|Algida|Anadolu Efes|Aytaç|Altınbaş|Acer|Asus|Audi|Alfa Romeo|Arzum|Ariel|Ayvalık Zeytin? |Alo
+Beko|Bosch|BMW|Burger King|Bellona|Bim|Boyner|Bosphorus|Banvit|Bizim Mutfak|Bauhaus|Baymak|Beymen|Bershka|Bimeks|Bridgestone
+Casper|Chevrolet|Citroen|Coca Cola|Colgate|Converse|Cornetto|Calve|Chanel|Clinique|Carrefour
+Çaykur|Çotanak|Çilek Mobilya|Çamlıca|Çetinkaya
+Danone|Defacto|Dell|Dimes|Doritos|Dove|Doğtaş|Doluca|Derby|Dyson|Domino's Pizza
+Eti|Ego? |Elidor|Ensar? |Ersağ|Estee Lauder|Eczacıbaşı|Ekol|Emsan|English Home|Eker|Erikli
+Fanta|Ferrero|Fiat|Filli Boya|Fakir|Flormar|Ford|Frito Lay|Faber Castell
+Garanti|Gillette|Gloria Jeans|Google|Gratis|Gucci|Goodyear|Grundig|Gazozcu? |Golf Gıda
+Hyundai|Honda|Huawei|Hero Baby|Head and Shoulders|Harley Davidson|Hotiç|Hugo Boss|Hacı Şakir|Hatemoğlu
+IBM|Intel|Ikea|Istikbal|İpek? |İpana|İstikbal|İkram|İnci|İsbir|İşbank? |İpragaz
+Jaguar|Jeep|Johnson|Jolly Tur|Jack Wolfskin
+Kia|Kinder|Koton|Kotonteks? |Komili|Koç|Kigılı|Kalekim|Karaca|Kelebek Mobilya|Kent|Kervan|Kinley|KitKat|Kodak|Kombassan? |Krea? |Kütahya Porselen
+LC Waikiki|Lego|Lenovo|Levis|Lipton|Loreal|Lego Duplo|Luxien? |Lassa|Lays
+Mavi|Mazda|McDonalds|Mercedes|Microsoft|Migros|Milka|Mintax|Mitsubishi|Mondelez|Mopaş? |Mudo|Mert Gıda? |Mey? |Maret|Marmarabirlik
+Nike|Nescafe|Nestle|Nissan|Nivea|Nokia|Nutella|Namet|Nurol? |Naturel? |Nuh Çimento
+Opel|Oral B|Orkid|Oreo|Omo|Ofix? |Opet|Oyak|Otokar|Oppo
+Puma|Pepsi|Peugeot|Philips|Pınar|Prada|Pril|Panasonic|Paşabahçe|Penti|Pegasus|Peros? |Popeyes|Pringles
+Renault|Rolex|Reebok|Roventa? |Rossmann|Rexona|Red Bull
+Samsung|Sony|Starbucks|Sprite|Seat|Selpak|Sek? |Siemens|Skoda|Sütaş|Simit Sarayı|Sinbo|Snickers|Sarar|Signal|Shell|Superfresh|Subaru|Sandora? |Sofra
+Şok|Şölen|Şahinler? |Şişecam|Şekerbank
+Toyota|Tefal|Tesla|Tchibo|Tat|Torku|Turkcell|Türk Telekom|Tefal|Tamek|Tukaş|Tezenis|Tommy Hilfiger|Twix|Tang? |Tariş
+Uno|Ufuk? |Ulker? |Unilever|Under Armour|Uludağ|Umpa? |Ustam? 
+Ülker|Üntel? |Ünal? 
+Vestel|Volkswagen|Volvo|Vichy|Vatan Bilgisayar|Vivident|Vodafone|Vakko
+
+Yamaha|Yataş|Yudum|Yumoş|Yves Rocher|Yemeksepeti|Yapı Kredi|Yıldız Holding
+Zara|Zorlu|Zeki Triko|Ziraat|Zyxel? 

@@ -117,3 +117,19 @@ export function Logo({ small }: { small?: boolean }) {
     </div>
   );
 }
+
+/** Daire şeklinde geri sayım (yazma ve Sıra Sende ekranlarında). */
+export function Timer({ left, total, urgent }: { left: number; total: number; urgent: boolean }) {
+  const r = 24;
+  const C = 2 * Math.PI * r;
+  const frac = Math.max(0, Math.min(1, left / Math.max(1, total)));
+  return (
+    <div className={`timer ${urgent ? 'is-urgent' : ''}`} aria-label={`${left} saniye`}>
+      <svg viewBox="0 0 60 60">
+        <circle cx="30" cy="30" r={r} className="timer__bg" />
+        <circle cx="30" cy="30" r={r} className="timer__fg" strokeDasharray={C} strokeDashoffset={C * (1 - frac)} />
+      </svg>
+      <span>{left}</span>
+    </div>
+  );
+}

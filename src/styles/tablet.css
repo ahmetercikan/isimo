@@ -225,3 +225,12 @@
   .spin > .round-label { width: 100%; }
   .alpha-strip { order: 3; width: 100%; }
 }
+
+/* Geniş ekran: ana sayfadaki iki oyun bölümü yan yana, Sıra Sende kelimesi büyür */
+@media (min-width: 700px) {
+  .home__games { flex-direction: row; align-items: stretch; }
+  .home__games > .mode-card { flex: 1; display: flex; flex-direction: column; }
+  .home__games > .mode-card .mode-card__bot { margin-top: auto; }
+  .letter-tile--word { --s: min(11vw, 96px); }
+  .turn-player { min-width: 86px; }
+}

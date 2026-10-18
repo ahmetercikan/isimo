@@ -20,6 +20,21 @@ export const DEFAULT_SETTINGS: Settings = {
   manualStop: true,
 };
 
+/** Sıra Sende varsayılanları. Firebase kuralları settings'te cats/rounds/time ister: cats tek göstermelik. */
+export const DEFAULT_CHAIN: Settings = {
+  cats: [{ id: 'kelime', label: 'Kelime', emoji: '' }],
+  rounds: 1,
+  time: 30,
+  stop: false,
+  grace: 0,
+  hard: false,
+  manualStop: false,
+  game: 'siram',
+  len: 4,
+  lives: 3,
+  free: false,
+};
+
 export interface Stats {
   games: number;
   wins: number;
@@ -37,6 +52,8 @@ interface ProfileState {
   haptics: boolean;
   /** Son oyun ayarları (bir sonraki odada aynısıyla başlar). */
   settings: Settings;
+  /** Sıra Sende'nin son ayarları. */
+  chain?: Settings;
   bots: { count: number; level: 1 | 2 | 3 };
   stats: Stats;
   /** Uygulama kapanınca geri dönülebilsin: son çevrimiçi oda. */
@@ -56,6 +73,7 @@ export const useProfile = create<ProfileState>()(
       voice: true,
       haptics: true,
       settings: DEFAULT_SETTINGS,
+      chain: DEFAULT_CHAIN,
       bots: { count: 3, level: 2 },
       stats: { games: 0, wins: 0, best: 0, points: 0 },
       lastRoom: null,

@@ -55,3 +55,27 @@ Ulan Batur|Utrecht|Uppsala|Udine
 Viyana|Varşova|Venedik|Vancouver|Vilnius|Valensiya|Vaşington|Varna|Vatikan|Verona|Valletta|Vladivostok|Volgograd|Vientiane
 Yeni Delhi|Yokohama|Yalta|Yangon|Yaunde|Yafa|Yenbu
 Zürih|Zagreb|Zanzibar|Zaragoza|Zarka
+Akçaabat|Akçakale|Akçakoca|Akhisar|Akseki|Aksu|Akyazı|Alaca|Alaçam|Alanya|Alaşehir|Aliağa|Almus|Altınova|Altınözü|Amasra|Anamur|Araban|Araklı|Arhavi|Arsin|Artova|Aşkale|Atabey|Ayancık|Aydıncık|Ayvacık|Ayvalık|Ardanuç|Araç|Avanos|Acıpayam|Ahlat|Adilcevaz|Altıntaş|Alucra|Andırın|Afşin|Ağlasun|Akdağmadeni
+Babaeski|Bafra|Bahçe|Bala|Balya|Banaz|Bandırma|Bartın|Başkale|Bayat|Bayındır|Baykan|Bayramiç|Belen|Bergama|Beşikdüzü|Beyşehir|Beypazarı|Biga|Bigadiç|Bilecik|Bismil|Bodrum|Boğazlıyan|Bolvadin|Borçka|Bornova|Bozdoğan|Boztepe|Bozüyük|Bozyazı|Buca|Bucak|Buharkent|Bulancak|Bulanık|Buldan|Burhaniye|Besni|Baskil|Beytüşşebap
+Caferiye|Cide|Cihanbeyli|Cizre|Ceyhan|Cumayeri|Çal|Çamardı|Çamaş|Çameli|Çamlıdere|Çamlıhemşin|Çan|Çandır|Çanta|Çarşamba|Çatalca|Çatalzeytin|Çay|Çaycuma|Çayeli|Çayıralan|Çelebi|Çeltik|Çerkeş|Çerkezköy|Çermik|Çeşme|Çiçekdağı|Çiftlik|Çıldır|Çine|Çivril|Çorlu|Çubuk|Çukurca|Çukurova|Çumra|Çüngüş
+Dalaman|Damal|Darende|Dargeçit|Dazkırı|Datça|Demirci|Demirköy|Derbent|Derecik|Dereli|Derik|Dernekpazarı|Develi|Devrek|Devrekani|Didim|Digor|Dikili|Dinar|Divriği|Doğanhisar|Doğanşehir|Doğubayazıt|Dörtyol|Dumlupınar|Durağan|Dursunbey|Düziçi|Düzce|Dicle
+Edremit|Eflani|Eğil|Eğirdir|Ekinözü|Elbistan|Eldivan|Eleşkirt|Elmadağ|Elmalı|Emet|Emirdağ|Erbaa|Erciş|Erdek|Erdemli|Ereğli|Ergani|Ermenek|Erzin|Esendere|Eskil|Espiye|Eşme|Eynesil|Ezine|Edremit|Elazığ
+Fatsa|Feke|Felahiye|Ferizli|Fethiye|Finike|Foça|Fındıklı
+Gazipaşa|Gebze|Gediz|Gelibolu|Gemerek|Gemlik|Genç|Gerede|Germencik|Gerze|Gevaş|Geyve|Gökçeada|Göksun|Gölbaşı|Gölcük|Gölhisar|Gölköy|Gölpazarı|Gömeç|Gönen|Gördes|Görele|Göynücek|Göynük|Gulnar|Gümüşhacıköy|Gündoğmuş|Güney|Güneysu|Günyüzü|Gürgentepe|Gürpınar|Gürsu|Güroymak|Gürün|Güzelyurt
+Hacıbektaş|Hadim|Hafik|Halfeti|Hamur|Hanak|Hani|Harran|Hasankeyf|Haskoy|Hassa|Havran|Havsa|Havza|Hayrabolu|Hazro|Hekimhan|Hendek|Hilvan|Hınıs|Hizan|Hocalar|Honaz|Hopa|Horasan|Hüyük|Hamidiye
+Idır|Ilgaz|Ilgın|Ilıca|Incesu|Isparta|İdil|İhsangazi|İhsaniye|İkizce|İkizdere|İmamoğlu|İmranlı|İnebolu|İnegöl|İnhisar|İpsala|İscehisar|İskilip|İslahiye|İspir|İvrindi|İyidere|İznik
+Kadirli|Kadınhanı|Kağızman|Kahta|Kalkan|Kaman|Kandıra|Kangal|Kapaklı|Karaburun|Karacabey|Karacasu|Karahallı|Karaisalı|Karakoçan|Karaman|Karapınar|Karasu|Karataş|Karayazı|Karkamış|Karlıova|Karpuzlu|Kartepe|Kaş|Kavak|Kaynarca|Keban|Keles|Kelkit|Kemah|Kemalpaşa|Kemer|Kepsut|Kerkük|Keskin|Keşan|Kınık|Kırkağaç|Kızılcahamam|Kızıltepe|Koçarlı|Kofçaz|Konyaaltı|Korgan|Korkuteli|Koyulhisar|Kozan|Kozluk|Köprüköy|Köşk|Kula|Kulp|Kulu|Kumluca|Kurtalan|Kurucaşile|Kuşadası|Kuyucak|Küçükkuyu|Küre|Kürtün|Kütahya
+Ladik|Lapseki|Lice|Lüleburgaz
+Malazgirt|Malkara|Manavgat|Marmaris|Masallı|Mazgirt|Mazıdağı|Mecitözü|Menderes|Menemen|Mengen|Merzifon|Mesudiye|Midyat|Mihalgazi|Mihalıççık|Milas|Mucur|Mudanya|Mudurnu|Muradiye|Mustafakemalpaşa|Mut|Marmara|Mahmudiye
+Narman|Nazilli|Nazımiye|Niksar|Nizip|Nurdağı|Nurhak|Nusaybin|Nallıhan|Noksan
+Ödemiş|Ölçek|Oğuzeli|Olur|Oltu|Ondokuzmayıs|Orhaneli|Orhangazi|Ortaca|Ortaköy|Osmancık|Osmaneli|Ovacık|Oğuzlar|Of|Oğuz
+Pamukova|Pasinler|Patnos|Pazar|Pazarcık|Pazaryeri|Perşembe|Pertek|Pervari|Pınarbaşı|Polatlı|Pozantı|Pütürge|Palu|Pamukkale
+Refahiye|Reşadiye|Rize|Ruşen|Resuloğlu
+Saimbeyli|Salihli|Samandağ|Sandıklı|Saray|Saraykent|Sarayköy|Sarayönü|Sarıcakaya|Sarıgöl|Sarıkamış|Sarıkaya|Sarıoğlan|Sarıveliler|Sarıyahşi|Sarız|Savaştepe|Savur|Saruhanlı|Şarköy|Seben|Seferihisar|Selçuk|Selendi|Senirkent|Serik|Serinhisar|Seydişehir|Sındırgı|Siirt|Silifke|Silopi|Silvan|Simav|Sinanpaşa|Sincik|Sinop|Sivaslı|Siverek|Solhan|Sorgun|Suluova|Sultanhisar|Sungurlu|Suruç|Susurluk|Suşehri|Sütçüler|Söke|Sökmen
+Şalpazarı|Şaphane|Şarkışla|Şavşat|Şebinkarahisar|Şefaatli|Şehitkamil|Şemdinli|Şenkaya|Şereflikoçhisar|Şırnak|Şile|Şiran|Şuhut|Şırnak|Şarkikaraağaç
+Tarsus|Taşköprü|Taşkent|Taşova|Tavas|Tavşanlı|Tefenni|Tekkeköy|Tercan|Terme|Tirebolu|Tomarza|Torbalı|Torul|Tosya|Trabzon|Tufanbeyli|Turgutlu|Turhal|Tut|Tutak|Tuzluca|Türkeli|Türkoğlu|Tunceli|Taşlıçay
+Ulubey|Uluborlu|Uludere|Ulukışla|Urla|Uzunköprü|Uşak|Uzundere|Ula
+Ürgüp|Ünye|Üzümlü|Ürkmez
+Vakfıkebir|Van|Varto|Vezirköprü|Viranşehir|Vize|Velimeşe
+Yahyalı|Yakakent|Yalvaç|Yapraklı|Yatağan|Yavuzeli|Yayladağı|Yazıhan|Yedisu|Yenice|Yenipazar|Yenişehir|Yeşilhisar|Yeşilova|Yeşilyurt|Yıldızeli|Yığılca|Yomra|Yumurtalık|Yunak|Yusufeli|Yüksekova|Yalova|Yahşihan
+Zara|Zile|Zonguldak|Ziyaret|Zeytinburnu

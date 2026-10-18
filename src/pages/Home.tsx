@@ -1,13 +1,20 @@
-import { Bot, CircleHelp, LogIn, Pencil, Plus, RotateCcw, Volume2, VolumeX, Wifi } from 'lucide-react';
+import { Bot, CircleHelp, LogIn, Pencil, Plus, RotateCcw, Volume2, VolumeX } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Doodles } from '../components/Doodles';
+import { Icon } from '../components/Icon';
 import { Avatar, Logo, useToast } from '../components/ui';
 import { hideBanner, showBanner } from '../lib/ads';
 import { sfx } from '../lib/sfx';
 import { ONLINE_AVAILABLE } from '../online/config';
 import { useGame } from '../store/useGame';
 import { useProfile } from '../store/useProfile';
+
+/** İki bölüm: İsim Şehir (STOP) ve Sıra Sende (harf değiştir). */
+const GAMES = [
+  { key: 'isim', icon: 'stop', title: 'İsim Şehir', tag: 'Harfi çevir, yaz, STOP de!', q: '' },
+  { key: 'siram', icon: 'harf', title: 'Sıra Sende', tag: 'Bir harf değiştir, yeni kelime!', q: '?oyun=siram' },
+] as const;
 
 export default function Home() {
   const nav = useNavigate();
@@ -53,8 +60,7 @@ export default function Home() {
       </header>
 
       <div className="home__logo pop-in">
-        <Logo />
-        <p className="home__tag">Harfi çevir, ilk sen yaz, <b>STOP</b> de!</p>
+        <Logo small />
       </div>
 
       {recent && (
@@ -67,40 +73,35 @@ export default function Home() {
         </button>
       )}
 
-      <section className="home__cards">
-        <div className="mode-card mode-card--online rise" style={{ animationDelay: '0.08s' }}>
-          <div className="mode-card__head">
-            <span className="mode-card__icon"><Wifi size={26} strokeWidth={2.6} /></span>
-            <div>
-              <h2 className="title-md">Arkadaşlarla</h2>
-              <p>Herkes kendi telefonundan · en fazla 10 kişi</p>
+      <section className="home__games">
+        {GAMES.map((g, i) => (
+          <article key={g.key} className={`mode-card mode-card--${g.key} rise`} style={{ animationDelay: `${0.08 + i * 0.08}s` }}>
+            <div className="mode-card__head">
+              <span className="mode-card__icon"><Icon name={g.icon} size={34} /></span>
+              <div>
+                <h2 className="title-md">{g.title}</h2>
+                <p>{g.tag}</p>
+              </div>
             </div>
-          </div>
-          <div className="mode-card__btns">
-            <button className="pill" disabled={!ONLINE_AVAILABLE} onClick={() => (sfx.tap(), nav('/kur/online'))}>
-              <Plus size={24} strokeWidth={3} /> Oda Kur
-            </button>
-            <button className="pill pill--teal" disabled={!ONLINE_AVAILABLE} onClick={() => (sfx.tap(), nav('/katil'))}>
-              <LogIn size={22} strokeWidth={2.8} /> Katıl
-            </button>
-          </div>
-          {!ONLINE_AVAILABLE && <p className="mode-card__note">Çevrimiçi oyun yakında açılıyor.</p>}
-        </div>
-
-        <button className="mode-card mode-card--bots rise" style={{ animationDelay: '0.16s' }} onClick={() => (sfx.tap(), nav('/kur/bot'))}>
-          <div className="mode-card__head">
-            <span className="mode-card__icon"><Bot size={28} strokeWidth={2.4} /></span>
-            <div>
-              <h2 className="title-md">Botlara Karşı</h2>
-              <p>İnternetsiz · hemen başla · ısın!</p>
+            <div className="mode-card__btns">
+              <button className="pill" disabled={!ONLINE_AVAILABLE} onClick={() => (sfx.tap(), nav(`/kur/online${g.q}`))}>
+                <Plus size={22} strokeWidth={3} /> Oda Kur
+              </button>
+              <button className="pill pill--teal" disabled={!ONLINE_AVAILABLE} onClick={() => (sfx.tap(), nav('/katil'))}>
+                <LogIn size={20} strokeWidth={2.8} /> Katıl
+              </button>
             </div>
-            <span className="mode-card__bots" aria-hidden="true">
-              <Avatar emoji="robot" color="#a5b4fc" size={38} />
-              <Avatar emoji="baykus" color="#ffc83d" size={38} />
-              <Avatar emoji="tilki" color="#ff8a3d" size={38} />
-            </span>
-          </div>
-        </button>
+            <button className="mode-card__bot" onClick={() => (sfx.tap(), nav(`/kur/bot${g.q}`))}>
+              <Bot size={22} strokeWidth={2.4} /> Botlara Karşı
+              <span className="mode-card__faces" aria-hidden="true">
+                <Avatar emoji="robot" color="#a5b4fc" size={26} />
+                <Avatar emoji="baykus" color="#ffc83d" size={26} />
+                <Avatar emoji="tilki" color="#ff8a3d" size={26} />
+              </span>
+            </button>
+            {!ONLINE_AVAILABLE && <p className="mode-card__note">Çevrimiçi oyun yakında açılıyor.</p>}
+          </article>
+        ))}
       </section>
 
       <footer className="home__foot rise" style={{ animationDelay: '0.24s' }}>

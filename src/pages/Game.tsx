@@ -5,11 +5,13 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import { Icon } from '../components/Icon';
 import { Confirm } from '../components/ui';
 import { Doodles } from '../components/Doodles';
+import { ChainFinal } from '../game/screens/ChainFinal';
 import { Final } from '../game/screens/Final';
 import { Lobby } from '../game/screens/Lobby';
 import { Review } from '../game/screens/Review';
 import { Scores } from '../game/screens/Scores';
 import { Spin } from '../game/screens/Spin';
+import { Turn } from '../game/screens/Turn';
 import { Write } from '../game/screens/Write';
 import { setMood, type Mood } from '../lib/music';
 import { preloadVoice } from '../lib/voice';
@@ -18,6 +20,7 @@ import { VOICE_LINES } from '../voice/lines';
 import { sfx } from '../lib/sfx';
 import { useNow } from '../components/ui';
 import { preloadDicts, useGame } from '../store/useGame';
+import { loadWords } from '../engine/chain';
 
 export default function Game() {
   const nav = useNavigate();
@@ -32,8 +35,9 @@ export default function Game() {
   let mood: Mood = 'off';
   if (s) {
     const c = s.ctl;
-    mood = { lobby: 'lobby', spin: 'roll', review: 'chill', scores: 'chill', final: 'off', write: 'write' }[c.phase] as Mood;
+    mood = { lobby: 'lobby', spin: 'roll', review: 'chill', scores: 'chill', final: 'off', write: 'write', turn: 'write' }[c.phase] as Mood;
     if (c.phase === 'write') mood = now < c.startAt || now >= c.endAt ? 'off' : c.endAt - now <= 10500 ? 'tension' : 'write';
+    if (c.phase === 'turn') mood = c.endAt - now <= 8000 ? 'tension' : 'write';
   }
   useEffect(() => setMood(mood), [mood]);
   useEffect(() => () => setMood('off'), []);
@@ -54,7 +58,10 @@ export default function Game() {
 
   // Sözlükler oyun başlamadan yüklensin
   const catKey = s?.settings.cats.map((c) => c.id).join(',');
-  useEffect(() => void (s && preloadDicts(s)), [catKey]);
+  const siram = s?.settings.game === 'siram';
+  useEffect(() => void (s && !siram && preloadDicts(s)), [catKey, siram]);
+  // Sıra Sende'nin kelime havuzu
+  useEffect(() => void (siram && loadWords()), [siram]);
 
   // Yeni oyuncu katılınca ses
   const count = s ? Object.values(s.players).filter((p) => !p.left).length : 0;
@@ -115,7 +122,8 @@ export default function Game() {
       {phase === 'write' && <Write key={s.ctl.round} t={t} s={s} />}
       {phase === 'review' && <Review t={t} s={s} />}
       {phase === 'scores' && <Scores t={t} s={s} />}
-      {phase === 'final' && <Final t={t} s={s} onExit={leave} />}
+      {phase === 'turn' && <Turn t={t} s={s} />}
+      {phase === 'final' && (siram ? <ChainFinal t={t} s={s} onExit={leave} /> : <Final t={t} s={s} onExit={leave} />)}
       {ask && (
         <Confirm
           title="Oyundan çıkılsın mı?"

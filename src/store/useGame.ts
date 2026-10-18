@@ -3,6 +3,7 @@
  * Ekranlar durumu buradan okur; geçişler src/game/director.ts'teki fonksiyonlarla yapılır.
  */
 import { create } from 'zustand';
+import { loadWords } from '../engine/chain';
 import { loadDicts } from '../engine/dict';
 import { newCtl, type RoomState, type Settings } from '../engine/types';
 import { BOT_PROFILES, runBots } from '../game/bots';
@@ -29,6 +30,7 @@ export const useGame = create<GameState>()((set, get) => ({
   lost: false,
 
   startBots(settings, count, level) {
+    if (settings.game === 'siram') void loadWords();
     const p = useProfile.getState();
     const now = Date.now();
     const players: RoomState['players'] = { me: { name: p.name || 'Ben', avatar: p.avatar, color: p.color, joined: now, on: true } };

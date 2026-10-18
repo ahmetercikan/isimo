@@ -4,7 +4,10 @@
  */
 import type { Category } from './categories';
 
-export type Phase = 'lobby' | 'spin' | 'write' | 'review' | 'scores' | 'final';
+export type Phase = 'lobby' | 'spin' | 'write' | 'review' | 'scores' | 'final' | 'turn';
+
+/** Hangi oyun: 'isim' İsim Şehir (STOP), 'siram' Sıra Sende (harf değiştir). Yoksa İsim Şehir. */
+export type GameKind = 'isim' | 'siram';
 
 export interface Settings {
   cats: Category[];
@@ -19,6 +22,15 @@ export interface Settings {
   hard: boolean;
   /** Harf sayacını oyuncu durdurur (kapalıysa sayaç kendi durur). */
   manualStop: boolean;
+  /** Oyun türü (yoksa İsim Şehir). */
+  game?: GameKind;
+  // ---- Yalnızca Sıra Sende ----
+  /** Kelime uzunluğu (3, 4 ya da 5 harf). */
+  len?: number;
+  /** Her oyuncunun canı. */
+  lives?: number;
+  /** Harf eklemek/çıkarmak da serbest mi (kapalıysa yalnızca değiştirme). */
+  free?: boolean;
 }
 
 export interface Player {
@@ -55,6 +67,20 @@ export interface Ctl {
   nextAt: number;
   /** Her geçişte artar: aynı geçiş iki kez yapılmaz. */
   seq: number;
+  // ---- Yalnızca Sıra Sende (hepsi ctl içinde: tek işlemde atomik değişir) ----
+  /** Masadaki kelime (küçük harf). */
+  word?: string;
+  /** Sırası gelen oyuncu. */
+  turn?: string;
+  /** Oynanmış kelimeler, virgülle ("kedi,kadı,kadın"). */
+  chain?: string;
+  /** Kalan canlar ve puanlar (oyuncu kimliğine göre). */
+  lives?: Record<string, number>;
+  pts?: Record<string, number>;
+  /** Elenme sırası, virgülle (sonda elenen en sonda). */
+  out?: string;
+  /** Son olay (ekranda duyurulur). */
+  last?: { p: string; k: 'ok' | 'time' | 'pass' | 'fresh' | 'out'; w?: string };
 }
 
 /** answers[rKey][pid][catId] = metin */

@@ -1,6 +1,9 @@
 # İsim Şehir — Claude için proje notları
 
-- **Ne:** Klasik "İsim Şehir" oyunu, en fazla 10 kişi, herkes kendi telefonundan (oda kodu) ya da botlara karşı.
+- **Ne:** İki oyun bir arada (ana sayfa ikiye bölünür):
+  1. **İsim Şehir** — klasik oyun, harf çevirip kategorileri doldurma, STOP.
+  2. **Sıra Sende** — masadaki kelimede tek harf değiştirip yeni kelime yapma (sırayla, canlı/elemeli).
+  Her ikisi de en fazla 10 kişi, herkes kendi telefonundan (oda kodu) ya da botlara karşı.
   Cevaplar parmakla yazılır; el yazısı tanınır. Tasarım Çizio (../simple-Draw) ile aynı dil.
   React 18 + TypeScript + Vite 5 (HashRouter), zustand, Capacitor 8 (Android + iOS), Firebase Realtime Database.
 - **Kullanıcı** teknik değil: her zaman **Türkçe ve sade** yaz. Mağaza/konsol adımlarını ekranda göreceği adlarla anlat.
@@ -15,14 +18,22 @@
   - sunucu sesi (Çizio ile aynı Gemini sesi, Sulafat): cümleler `src/voice/lines.ts` → `npx tsx scripts/generate-voice.mts`
     (anahtar: `.env.local` GEMINI_API_KEY); doğrulama: `python scripts/voice-verify.py`
   - mağaza görselleri: `npm run dev` açıkken `npx tsx scripts/store-shots.mts phone|tablet`, sonra `npx tsx scripts/store-promo.mts`
-  - sözlükler: `scripts/dict-src/*.txt` düzenle → `node scripts/dict-src/build.cjs`
+  - sözlükler: `scripts/dict-src/*.txt` düzenle → `node scripts/dict-src/build.cjs` (çıktı `src/data/dict/*.json`;
+    tekrarlar atılır, '#' ile başlayan satırlar ve '?' içeren kelimeler alınmaz)
+  - Sıra Sende kelime havuzu: `scripts/dict-src/kelime.txt` (3-6 harfli genel Türkçe kelimeler, ~3.100).
+    Kategori sözlüklerindeki tek kelimelik adlar da buraya elle taşındı; yeni kelime eklenince build'i çalıştır.
 - **Yapı:**
   - `src/engine/`: Türkçe harf işlemleri (tr.ts), kategoriler, sözlük, puanlama (saf; testler `__tests__`)
-  - **STOP kuralı:** STOP yalnızca bütün kategorilerde **geçerli** cevabı olana açılır (`isAnswer` in `src/engine/tr.ts`:
+  - **STOP kuralı (İsim Şehir):** STOP yalnızca bütün kategorilerde **geçerli** cevabı olana açılır (`isAnswer` in `src/engine/tr.ts`:
     turun harfiyle başlayan, en az iki harfli). Tek harf cevap sayılmaz — tanıyıcı düz bir çizgiyi "l"/"i" okuyor,
     eskiden böyle kutular "dolu" görünüp STOP'u açıyordu. Puanlamada da tek harf 0 ("tek harf").
   - `src/game/director.ts`: oyun akışı (lobi → harf → yazma → değerlendirme → puan → final); geçişleri "yöneten" oyuncu yapar
-  - `src/game/bots.ts`: botlar · `src/game/screens/`: oyun ekranları
+  - `src/game/bots.ts`: botlar (iki oyunda da) · `src/game/screens/`: oyun ekranları
+  - **Sıra Sende:** kurallar `src/engine/chain.ts` (kelime havuzu, tek harf değişimi, komşu kelime arama),
+    akış `src/game/chainDirector.ts` (sıra, can, puan — hepsi `ctl` içinde tek atomik işlemde değişir,
+    böylece Firebase kurallarına dokunmak gerekmedi), ekranlar `screens/Turn.tsx` ve `screens/ChainFinal.tsx`,
+    ayarlar `components/ChainSettings.tsx`. Oyun türü `settings.game` ('isim' | 'siram'); kurulum sayfası
+    `/kur/:mode?oyun=siram`.
   - `src/online/`: ortak arayüz (transport.ts), botlu oyun (local.ts), Firebase (firebase.ts, config.ts); kurallar `database.rules.json`
   - `src/lib/ink.ts`: el yazısı tanıma — Android'de `android/.../InkPlugin.java` (ML Kit Digital Ink, Türkçe model),
     iOS'ta `ios/App/App/InkVision.swift` + `InkPlugin.swift` (Apple Vision, cihazda, internetsiz; denemek: `npm run ios:ink`),

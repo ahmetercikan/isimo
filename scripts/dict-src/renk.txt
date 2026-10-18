@@ -22,3 +22,28 @@ ultramarin|uçuk mavi|uçuk pembe|uçuk sarı|uçuk yeşil
 vişne çürüğü|vişne rengi|vizon
 yeşil|yavruağzı|yavru ağzı|yağ yeşili|yosun yeşili|yaprak yeşili|yakut|yakut kırmızısı
 zeytin yeşili|zümrüt yeşili|zümrüt|zeytuni|zinober
+alev kırmızısı|antrasit|açık mavi|ateş rengi|altın sarısı|asker yeşili|ay beyazı
+bal rengi|bebe mavisi|bej|bordo|buz mavisi|bakır|buğday rengi|bronz|beyaz|bulut grisi
+camgöbeği|çağla yeşili|çivit mavisi|çilek kırmızısı|çikolata rengi|çimen yeşili
+deniz mavisi|duman grisi|devetüyü|dore|deri rengi
+ekru|elma yeşili|eflatun|erik moru|ekru beji
+fildişi|füme|fıstık yeşili|fuşya|firuze
+gece mavisi|gri|gül kurusu|gümüş|gök mavisi|granit grisi
+hardal sarısı|haki|hardal|hazan rengi
+ırmak mavisi|indigo|inci beyazı
+jelatin? |jeans mavisi
+kahverengi|kiremit|kirli beyaz|koyu yeşil|krem|kömür siyahı|kiraz kırmızısı|kavun içi|kızıl|karamel|kobalt mavisi
+lacivert|leylak|limon sarısı|lila|lavanta
+mavi|menekşe moru|mercan|mor|misket limonu|mürdüm|mint yeşili
+nar çiçeği|nane yeşili|nefti|neon yeşili
+okyanus mavisi|oranj|ordu yeşili|orkide moru
+ördek başı|öd rengi? |özgün? 
+pastel mavi|pembe|petrol mavisi|portakal rengi|pudra pembe|parlak sarı
+royal mavi|ruj kırmızısı|rengarenk? 
+safran sarısı|sarı|siyah|somon|sütlü kahve|su yeşili|sedef|saman sarısı
+şampanya|şarap kırmızısı|şeftali rengi
+toprak rengi|turkuaz|turuncu|tarçın rengi|tatlı pembe? 
+uçuk mavi|üzüm moru|ultramarin
+vişne çürüğü|viyolet
+yavru ağzı|yeşil|yosun yeşili|yakut kırmızısı|yanık turuncu
+zeytin yeşili|zümrüt yeşili|zencefil rengi

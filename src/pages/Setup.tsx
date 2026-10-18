@@ -1,19 +1,22 @@
 import { Minus, Plus } from 'lucide-react';
 import { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { ChainSettings } from '../components/ChainSettings';
 import { Doodles } from '../components/Doodles';
 import { SettingsForm } from '../components/SettingsForm';
 import { Avatar, TopBar, useToast } from '../components/ui';
 import { BOT_LEVELS, BOT_PROFILES } from '../game/bots';
 import { sfx } from '../lib/sfx';
+import type { Settings } from '../engine/types';
 import { useGame } from '../store/useGame';
-import { useProfile } from '../store/useProfile';
+import { DEFAULT_CHAIN, useProfile } from '../store/useProfile';
 
 export default function Setup() {
   const nav = useNavigate();
   const bots = useParams().mode === 'bot';
+  const siram = useSearchParams()[0].get('oyun') === 'siram';
   const p = useProfile();
-  const [settings, setSettings] = useState(p.settings);
+  const [settings, setSettings] = useState<Settings>(siram ? { ...DEFAULT_CHAIN, ...p.chain, game: 'siram' } : p.settings);
   const [count, setCount] = useState(p.bots.count);
   const [level, setLevel] = useState(p.bots.level);
   const [busy, setBusy] = useState(false);
@@ -22,7 +25,7 @@ export default function Setup() {
   const go = async () => {
     if (busy) return;
     sfx.pop();
-    p.set({ settings, bots: { count, level } });
+    p.set(siram ? { chain: settings, bots: { count, level } } : { settings, bots: { count, level } });
     if (bots) {
       useGame.getState().startBots(settings, count, level);
       nav('/oyun', { replace: true });
@@ -45,7 +48,7 @@ export default function Setup() {
   return (
     <main className="bg page setup">
       <Doodles variant={2} />
-      <TopBar title={bots ? 'Botlara Karşı' : 'Oda Kur'} />
+      <TopBar title={`${siram ? 'Sıra Sende' : 'İsim Şehir'} · ${bots ? 'Botlara Karşı' : 'Oda Kur'}`} />
 
       {bots && (
         <section className="paper-card setup__bots rise">
@@ -69,7 +72,7 @@ export default function Setup() {
       )}
 
       <section className="paper-card setup__card rise" style={{ animationDelay: '0.06s' }}>
-        <SettingsForm value={settings} onChange={setSettings} />
+        {siram ? <ChainSettings value={settings} onChange={setSettings} /> : <SettingsForm value={settings} onChange={setSettings} />}
       </section>
 
       <div className="page__cta page__cta--sticky">

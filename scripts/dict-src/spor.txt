@@ -26,3 +26,30 @@ voleybol|vücut geliştirme|video oyunu
 yüzme|yelken|yakan top|yürüyüş|yağlı güreş|yapboz|yoga|yamaç paraşütü|yüksek atlama|yatçılık|yat yarışı|yelken yarışı?
 zumba
 bale|alp kayağı|kayak atlama|kürek çekme|kum voleybolu|mini futbol|plaj futbolu|pist bisikleti|su sporları|slalom|sprint|sırt üstü yüzme|serbest yüzme|kelebek yüzme|kurbağalama yüzme|trap atışı|uçak modelciliği|bayrak yarışı|kısa mesafe koşusu|orta mesafe koşusu|yağ satarım bal satarım|kutu kutu pense|elim sende|uzun eşek|topaç çevirme|seksek|batak|king|konken|isim şehir|zeka küpü|nişan atma|dağ yürüyüşü|buz tırmanışı|ok ve yay? |bilardo? |kayak? 
+aikido|atletizm|atıcılık|artistik patinaj|amerikan futbolu|at yarışı|aerobik|açık su yüzme|avcılık
+badminton|basketbol|beyzbol|bilardo|binicilik|bisiklet|boks|bowling|briç|buz hokeyi|buz pateni|body board|bungee jumping|bocce
+cirit|cimnastik|curling|cambazlık|çim hokeyi|çekiç atma|çim tenisi
+dalış|dama|dart|dağcılık|disk atma|dövüş sanatları|dalgıçlık|downhill
+eskrim|engelli koşu|eğlence oyunu|e-spor|ekstrem sporlar
+futbol|futsal|free style|frizbi|fitness
+golf|güreş|gülle atma|go|gokart|güç antrenmanı|görme engelli futbolu
+halter|hentbol|hokey|hız koşusu|halat çekme|hava sporları|hokkabazlık
+izcilik|ip atlama|iskambil|işaretle oyun? |indoor futbol
+jimnastik|jet ski|judo|jokeylik
+kano|karate|kayak|kaykay|kickboks|kriket|kürek|körebe|kızak|kum voleybolu|koşu|kaleci antrenmanı|kutu oyunu|kum futbolu
+lakros|lig|langırt|lunapark oyunu
+maraton|masa tenisi|mangala|motokros|muay thai|mendil kapmaca|mancala|mini golf
+nefes egzersizi|nişan atışı|nokta atışı
+okçuluk|oryantiring|olta balıkçılığı|oyun hamuru|otomobil yarışı
+ödül maçı|örümcek adam oyunu? |özel olimpiyat
+paten|paintball|parkur|pilates|plaj voleybolu|poker|polo|puzzle|petank|pinpon|paraşüt
+ragbi|rafting|raket|ritmik jimnastik|rallicilik|roller skate
+saklambaç|satranç|seksek|skuash|snowboard|sörf|su kayağı|su topu|sutopu|sumo|sağlık yürüyüşü|sıçrama|spor tırmanış|scrabble|smaç
+şınav|şans oyunu|şişe çevirmece
+tavla|tenis|taekwondo|tırmanış|triatlon|trambolin|tombala|top sektirme|tenis topu|tek kale|tüplü dalış
+uzun atlama|uçurtma uçurma|ultra maraton|ulusal oyun
+üç adım atlama|ütopya oyunu? |üstün yetenek yarışı
+voleybol|vücut geliştirme|vale? |vatan oyunu? |video oyunu
+
+yüzme|yelken|yoga|yürüyüş|yakar top|yüksek atlama|yarış|yamaç paraşütü|yüzükoyun dalış
+zumba|zıpzıp|zıplama|zeka oyunu|zar oyunu

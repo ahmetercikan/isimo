@@ -4,6 +4,7 @@
  * Her geçiş ctl.seq ile korunur: aynı geçiş iki kez yapılmaz.
  */
 import { scoreRound } from '../engine/scoring';
+import { chainStep } from './chainDirector';
 import { availableLetters } from '../engine/tr';
 import { newCtl, rKey, type Ctl, type RoomState } from '../engine/types';
 import type { Transport } from '../online/transport';
@@ -124,6 +125,9 @@ async function step(t: Transport, s: RoomState) {
   // Eski tepkileri temizle
   const old = Object.entries(s.reactions ?? {}).filter(([, r]) => now - r.t > 12000);
   if (old.length) await t.update(Object.fromEntries(old.map(([k]) => [`reactions/${k}`, null])));
+
+  // Sıra Sende'nin akışı ayrı (src/game/chainDirector.ts).
+  if (s.settings.game === 'siram') return chainStep(t, s);
 
   switch (c.phase) {
     case 'spin': {

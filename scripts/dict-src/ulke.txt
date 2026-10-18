@@ -26,3 +26,10 @@ Uganda|Ukrayna|Uruguay
 Vanuatu|Vatikan|Venezuela|Vietnam
 Yemen|Yeni Zelanda|Yeşil Burun Adaları|Yunanistan
 Zambiya|Zimbabve
+Afganistan|Almanya|Amerika|Andorra|Angola|Arjantin|Arnavutluk|Avustralya|Avusturya|Azerbaycan|Bahreyn|Bangladeş|Belarus|Belçika|Benin|Bolivya|Bosna Hersek|Botsvana|Brezilya|Brunei|Bulgaristan|Burkina Faso|Burundi|Butan
+Cezayir|Cibuti|Çad|Çekya|Çin|Danimarka|Dominik Cumhuriyeti|Doğu Timor|Ekvador|El Salvador|Endonezya|Eritre|Ermenistan|Estonya|Esvatini|Etiyopya|Fas|Fiji|Fildişi Sahili|Filipinler|Filistin|Finlandiya|Fransa
+Gabon|Gambiya|Gana|Gine|Grenada|Guatemala|Guyana|Güney Afrika|Güney Kore|Gürcistan|Haiti|Hindistan|Hırvatistan|Hollanda|Honduras|Irak|İngiltere|İran|İrlanda|İspanya|İsrail|İsveç|İsviçre|İtalya|İzlanda
+Jamaika|Japonya|Kamboçya|Kamerun|Kanada|Karadağ|Katar|Kazakistan|Kenya|Kıbrıs|Kırgızistan|Kiribati|Kolombiya|Komorlar|Kongo|Kosova|Kosta Rika|Kuveyt|Kuzey Kore|Küba|Laos|Lesotho|Letonya|Liberya|Libya|Liechtenstein|Litvanya|Lübnan|Lüksemburg
+Macaristan|Madagaskar|Makedonya|Malavi|Maldivler|Malezya|Mali|Malta|Fas|Meksika|Mısır|Moldova|Monako|Moğolistan|Moritanya|Mozambik|Myanmar|Namibya|Nepal|Nijer|Nijerya|Nikaragua|Norveç
+Özbekistan|Pakistan|Panama|Papua Yeni Gine|Paraguay|Peru|Polonya|Portekiz|Romanya|Ruanda|Rusya|Samoa|Senegal|Seyşeller|Sırbistan|Singapur|Slovakya|Slovenya|Somali|Sri Lanka|Sudan|Suriye|Suudi Arabistan|Svaziland|Şili
+Tacikistan|Tanzanya|Tayland|Tayvan|Togo|Tonga|Trinidad ve Tobago|Tunus|Türkiye|Türkmenistan|Uganda|Ukrayna|Umman|Uruguay|Ürdün|Vanuatu|Vatikan|Venezuela|Vietnam|Yemen|Yeni Zelanda|Yunanistan|Zambiya|Zimbabve

@@ -26,3 +26,29 @@ uzman|uçuş görevlisi|uzay mühendisi|usta|ustabaşı|uzman çavuş|uçak müh
 veteriner|vali|vergi memuru|veznedar|vatman|vinççi|vaiz|vergi müfettişi|veri analisti|veri bilimci|veteriner hekim|voleybolcu|vale|vergi danışmanı|video editörü|vokalist|vinç operatörü
 yazar|yönetmen|yapımcı|yazılımcı|yazılım mühendisi|yüzücü|yargıç|yönetici|yoğurtçu|yorgancı|yayıncı|yat kaptanı|yaşlı bakıcısı|yorumcu|yatırım danışmanı|yazman|yazılım geliştirici|yönetim danışmanı|yaşam koçu|yamak|yüksek mühendis|yapı ustası|yer hostesi|yufkacı|yazı işleri müdürü
 zabıta|ziraat mühendisi|zanaatkâr|zabıt kâtibi|zoolog|zahireci|zeytinci|ziraatçı|zücaciyeci|zabıta memuru|zindancı|zanaatkar
+akademisyen|aktar|aktör|ambulans şoförü|anestezi teknisyeni|antrenör|arkeolog|armatör|aşçıbaşı|astronot|astronom|avukat|ayakkabıcı|ajans yöneticisi|araştırmacı|asker|aktüer
+bahçıvan|bakıcı|balıkçı|bankacı|barmen|basketbolcu|başhekim|bekçi|belediye başkanı|berber|besteci|bilgisayar mühendisi|bilim insanı|biyolog|borsacı|boyacı|börekçi|bulaşıkçı|büro memuru|balerin|bale dansçısı|belgeselci
+cam ustası|cerrah|ciltçi|coğrafyacı|cankurtaran|çaycı|çevirmen|çiftçi|çilingir|çoban|çöpçü|çocuk doktoru|çevre mühendisi|çatı ustası
+dadı|dalgıç|danışman|dansçı|dedektif|demirci|denetçi|denizci|dekoratör|dermatolog|diş hekimi|diyetisyen|doktor|dokumacı|dublör|dağcı|döşemeci
+ebe|eczacı|editör|eğitmen|ekonomist|elektrikçi|emlakçı|endüstri mühendisi|erbaş|eczane teknisyeni|estetisyen|eğitim koçu
+falcı|fırıncı|film yapımcısı|finansçı|fizikçi|fizyoterapist|fotoğrafçı|futbolcu|flütçü|fotomuhabiri
+garson|gazeteci|gemici|gitarist|gişe memuru|gıda mühendisi|görüntü yönetmeni|grafiker|gümrükçü|güvenlikçi|gözlükçü|gitar öğretmeni
+haberci|hakem|halkla ilişkiler uzmanı|hamal|harita mühendisi|hemşire|heykeltıraş|hostes|hukukçu|hakim|hayvan bakıcısı|hava trafik kontrolörü
+ışıkçı|iç mimar|itfaiyeci|idareci|ilahiyatçı|imam|inşaat mühendisi|istatistikçi|işletmeci|işçi|illüstratör|iletişimci
+jeolog|jeofizikçi|jokey|jandarma|jimnastikçi
+kadın doğum uzmanı|kameraman|kaptan|kasap|kasiyer|kaynakçı|kimyager|kitapçı|komedyen|komiser|kondüktör|konsolos|kuaför|kuyumcu|kütüphaneci|kalfa|karikatürist|koreograf|kurye|kontrolör|kahya
+laborant|lokantacı|lojistikçi|lehimci|lastikçi
+makinist|manav|manken|marangoz|masör|matbaacı|matematikçi|mekanik teknisyen|memur|mimar|modacı|muhabir|muhasebeci|muhtar|mühendis|müzisyen|müfettiş|müze rehberi|mobilyacı|madenci|moderatör
+nalbant|noter|nakliyeci|nörolog|nakışçı
+oyuncu|operatör|oto tamircisi|otobüs şoförü|optisyen|ormancı|organizatör|okul müdürü
+öğretmen|öğretim görevlisi|ölçü uzmanı|örgü ustası|özel güvenlik
+palyaço|pastacı|pazarlamacı|pedagog|pilot|polis|postacı|programcı|psikolog|psikiyatrist|peyzaj mimarı|prodüktör|pompacı|perukçu
+radyolog|rehber|reklamcı|ressam|restoratör|römorkçu|röntgen teknisyeni
+sanatçı|santral memuru|savcı|sekreter|senarist|ses teknisyeni|sigortacı|sinemacı|sosyolog|spiker|sporcu|su tesisatçısı|sunucu|sürücü|sütçü|saat ustası|sahne amiri|sağlık memuru
+şair|şarkıcı|şoför|şef|şekerci|şarapçı? |şehir plancısı
+tamirci|tasarımcı|taksici|tarihçi|teknisyen|teknik direktör|tercüman|terzi|tesisatçı|tornacı|turist rehberi|tüccar|tiyatrocu|tekniker|tabela ustası
+uçak mühendisi|ustabaşı|uzay mühendisi|uzman çavuş|ulaştırmacı
+ürolog|üretim müdürü|üniversite hocası
+veteriner|veznedar|vinç operatörü|vali|voleybolcu|video editörü
+yazar|yazılımcı|yayıncı|yönetmen|yönetici|yorumcu|yüzücü|yapımcı|yargıç|yer hizmetleri görevlisi|yoga eğitmeni
+zabıta|zanaatkar|ziraat mühendisi|zoolog|zücaciyeci

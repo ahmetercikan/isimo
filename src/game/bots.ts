@@ -1,12 +1,15 @@
 /**
  * Botlar (yalnızca botlu oyunda): harfi durdurur, sözlükten cevap yazar, değerlendirmede "tamam" der.
+ * Sıra Sende'de sırası gelince kelime havuzundan hamle bulur (zorluk: bulma şansı ve hız).
  * Zorluk: 1 kolay (az ve geç yazar), 2 orta, 3 zor (çok ve hızlı yazar, STOP der).
  */
+import { botMove, chainList, loadWords, ruleOf, wordsReady } from '../engine/chain';
 import { CATEGORIES, hasDict } from '../engine/categories';
 import { lookup, wordsFor } from '../engine/dict';
 import { capitalize, startsWithLetter } from '../engine/tr';
 import { rKey, type Player, type RoomState } from '../engine/types';
 import type { LocalTransport } from '../online/local';
+import { missTurn, playWord } from './chainDirector';
 import { stopLetter } from './director';
 
 export const BOT_PROFILES: Pick<Player, 'name' | 'avatar' | 'color'>[] = [
@@ -46,7 +49,8 @@ export function runBots(t: LocalTransport): () => void {
     if (!s) return;
     const c = s.ctl;
     // STOP denince (seq değişir ama tur aynı) botlar yazmayı sürdürür: yalnızca aşama/tur/kategori değişince sıfırla.
-    const key = `${c.phase}:${c.round}:${c.cat}`;
+    // Sıra Sende'de her hamle yeni bir sıra: seq ile izlenir.
+    const key = c.phase === 'turn' ? `turn:${c.seq}` : `${c.phase}:${c.round}:${c.cat}`;
     if (key === lastKey) return;
     lastKey = key;
     clear();
@@ -54,6 +58,23 @@ export function runBots(t: LocalTransport): () => void {
     if (c.phase === 'spin' && !c.letter && s.players[c.stopper]?.bot && s.settings.manualStop) {
       later(rand(1400, 3200), () => void stopLetter(t, t.peek()));
     }
+    // ---- Sıra Sende: sırası gelen bot kelime arar ----
+    if (c.phase === 'turn' && c.word && s.players[c.turn ?? '']?.bot) {
+      const pid = c.turn!;
+      const level = s.players[pid].bot ?? 2;
+      const lv = BOT_LEVELS[level - 1];
+      const rule = ruleOf(s.settings.free);
+      const span = Math.max(1500, c.endAt - now);
+      const play = () => {
+        const st = t.peek();
+        if (st.ctl.phase !== 'turn' || st.ctl.turn !== pid || st.ctl.seq !== c.seq || !st.ctl.word) return;
+        const w = Math.random() < lv.fill ? botMove(st.ctl.word, chainList(st.ctl.chain), rule, level) : null;
+        if (w) void playWord(t, st, w, pid);
+        else void missTurn(t, st, pid, 'pass');
+      };
+      later(span * rand(lv.from + 0.1, Math.min(0.85, lv.to)), () => (wordsReady() ? play() : void loadWords().then(play)));
+    }
+
     if (c.phase === 'write') {
       const span = c.endAt - c.startAt;
       for (const b of bots(s)) {

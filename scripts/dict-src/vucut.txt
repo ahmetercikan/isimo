@@ -24,3 +24,27 @@ uyluk|uyluk kemiği|uvula
 vücut|vertebra
 yüz|yanak|yemek borusu|yürek|yüzük parmağı|yutak|yağ bezi|yumruk|yağ dokusu|yanak kemiği?
 zülüf
+akciğer|alın|ayak|ayak bileği|avuç|ağız|apandis|atardamar|ayak tabanı|ağız boşluğu|akyuvar|alyuvar
+bacak|bağırsak|baldır|baş|bel|beyin|bilek|bıyık|boğaz|böbrek|burun|bademcik|bağ doku|baş parmak|beyincik|bronş
+can? |cilt|ciğer|çene|çeneyapısı? 
+damak|damar|deri|diş|diş eti|dil|diz|dirsek|dalak|dudak|duyu organı
+el|el bileği|ense|eklem|etek? |epidermis
+farinks|fıtık? 
+göz|göz kapağı|gözbebeği|göğüs|gırtlak|gözyaşı bezi|göbek
+hücre|hipofiz|hemoglobin? 
+ince bağırsak|iskelet|idrar kesesi|iç kulak|işaret parmağı
+jinekomasti? 
+kalça|kalp|kan|karaciğer|karın|kaş|kemik|kirpik|kol|kulak|kulak zarı|köprücük kemiği|kıkırdak|kas|kafatası|kalın bağırsak
+leğen kemiği|lenf|ligament
+mide|mesane|meme|mide kapağı? |mikrop? 
+nefes borusu|omuz|omurga|omurilik|oynak? |orta kulak
+öd kesesi|ön kol|öksürük? 
+pankreas|parmak|plazma|pazı
+retina|rahim|romatizma? 
+saç|sakal|serçe parmak|sinir|sırt|suratı? |sindirim sistemi|safra kesesi|soluk borusu
+şah damarı|şakak
+tırnak|topuk|toplardamar|tendon|tiroit|taş? 
+uyluk|uzuv|üst çene|ürik? 
+vücut|ven? 
+yanak|yüz|yürek|yumruk? |yutak|yemek borusu
+zar|zihin? 

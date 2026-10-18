@@ -67,6 +67,21 @@ export function fixFirstLetter(answer: string, letter: string): string {
   return t;
 }
 
+/**
+ * Ada "-de/-da/-te/-ta" ekini doğru getirir: "Ali'de", "Bilge Baykuş'ta", "Zeynep'te".
+ * Son sesliye (kalın/ince) ve son harfin sertliğine bakar.
+ */
+export function locative(name: string): string {
+  const t = (name ?? '').trim();
+  const harfler = trLower(t).replace(/[^a-zçğıiöşü]/g, '');
+  if (!t || !harfler) return t;
+  let sesli = 'e';
+  for (const c of harfler) if ('aeıioöuü'.includes(c)) sesli = c;
+  const kalin = 'aıou'.includes(sesli);
+  const sert = 'fstkçşhp'.includes(harfler[harfler.length - 1]);
+  return `${t}'${sert ? 't' : 'd'}${kalin ? 'a' : 'e'}`;
+}
+
 /** Levenshtein uzaklığı (küçük kelimeler için; erken çıkışlı). */
 export function editDistance(a: string, b: string, max = 2): number {
   if (Math.abs(a.length - b.length) > max) return max + 1;
