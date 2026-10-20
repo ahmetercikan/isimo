@@ -101,21 +101,25 @@ Sürüm → Ülkeler/bölgeler → **Türkiye** (isteğe bağlı: Kuzey Kıbrıs
 4. Mağaza görselleri değişecekse: `npm run dev` açıkken `npx tsx scripts/store-shots.mts phone` ve `tablet`,
    sonra `npx tsx scripts/store-promo.mts`.
 
-### Mac'te imzalı paket üretmek için gereken iki şey
-Bu Mac'te şu an ikisi de yok, bu yüzden `npm run android:aab` çalışmaz:
-1. **Java (JDK 21).** Android Studio kurulursa içinde gelir; ayrıca kurulacaksa Temurin 21 yeterli.
-2. **Yükleme anahtarı.** Play Uygulama İmzalama açık: Google mağaza anahtarını kendi tutuyor ama yüklediğimiz
-   paket, ilk paketi imzalayan **aynı yükleme anahtarıyla** imzalanmak zorunda. O anahtar Windows bilgisayarda:
-   `C:\Users\ahmet.ercikan\.cizio-keys\cizio-upload.jks`.
-   Dosyayı bu Mac'e kopyalayıp yanına `android/keystore.properties` yazılır (git'e girmez):
-   ```
-   storeFile=/Users/ahmetmesutercikan/.cizio-keys/cizio-upload.jks
-   storePassword=...
-   keyAlias=...
-   keyPassword=...
-   ```
-   Anahtar kaybolursa Play Console → Test et ve yayınla → Uygulama bütünlüğü → **yükleme anahtarı sıfırlama**
-   istenebilir; Google onayı birkaç iş günü sürer.
+### Mac'te derleme ortamı (20 Eki 2026'da kuruldu)
+- **Java:** Temurin JDK 21.0.12.1 → `~/Library/Java/JavaVirtualMachines/jdk-21.0.12.1+1`.
+  `~/.zshrc` içinde `JAVA_HOME` ve `ANDROID_HOME`, Gradle için `~/.gradle/gradle.properties` → `org.gradle.java.home`.
+- **Android SDK:** `~/Library/Android/sdk` (platform 36, build-tools 36) zaten kuruluydu.
+- `./gradlew bundleRelease` baştan sona denendi: 1 dk 22 sn'de 25 MB'lık paket üretti. Yani derleme zinciri çalışıyor.
+  (Deneme geçici bir anahtarla yapıldı, çıkan paket ve geçici anahtar silindi — o paket mağazaya yüklenemez.)
+
+### Eksik olan tek şey: yükleme anahtarı
+Play Uygulama İmzalama açık. Google mağaza anahtarını kendi saklıyor ama yüklediğimiz paket, ilk paketi imzalayan
+**aynı yükleme anahtarıyla** imzalanmak zorunda. O anahtar Çizio ile ortak ve Windows bilgisayarda:
+`C:\Users\ahmet.ercikan\.cizio-keys\cizio-upload.jks`. Bu Mac'te yok (her yeri arandı).
+
+Yapılacak: dosyayı Mac'e kopyala, sonra `android/keystore.properties.example` dosyasını
+`android/keystore.properties` adıyla kopyalayıp parolaları doldur (bu dosya git'e girmez). Ardından
+`npm run android:aab` imzalı paketi üretir.
+
+Anahtar tamamen kaybolduysa: Play Console → Test et ve yayınla → Uygulama imzalama → **Sıfırlama talep edin**.
+Yeni bir anahtar üretip sertifikasını yüklersin; Google'ın onayı birkaç iş günü sürer ve o süre boyunca
+yeni sürüm yayınlanamaz. Bu yüzden önce Windows'taki dosyayı aramak gerekir.
 
 ### Bekleyen uyarı
 Üretim sürüm kontrol panelinde "uçtan uca ekran" (edge-to-edge) uyarısı var: Android 15+ cihazlarda
