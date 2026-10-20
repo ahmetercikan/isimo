@@ -5,7 +5,8 @@ Bu dosya **senin yapacağın** işleri anlatır. Teknik taraf (iOS sürümü, im
 
 Apple hesabı: **ABDURRAHMAN KAAN DIKEC** (Çizio'yu da bu hesapla yayınlıyoruz).
 Mağazada hem "Satıcı" hem **telif satırı bu hesabın adını taşır: 2026 Abdurrahman Kaan Dikeç**.
-(20 Ekim 2026'da değiştirildi: Apple'ın 4.3/4.2.6 reddinden sonra satıcı ile telifin farklı isimler
+(20 Ekim 2026'da App Store Connect'te üç uygulamada da değiştirildi — alan sürüm sayfasında,
+"Version" kutusunun sağında: Apple'ın 4.3/4.2.6 reddinden sonra satıcı ile telifin farklı isimler
 olması "başkası adına yayınlanan uygulama" izlenimi verdiği için ikisi eşitlendi. Uygulamaları yazan
 Ahmet Mesut Erçıkan, hesabın ekibinde geliştirici olarak görünüyor.)
 Uygulama iPhone'da dikey, iPad'de hem dikey hem yatay çalışıyor.

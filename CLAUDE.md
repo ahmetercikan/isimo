@@ -58,5 +58,7 @@
 - **Mağaza telifi:** App Store ve Play'de telif satırı **2026 Abdurrahman Kaan Dikeç** — yani hesabın/satıcının
   adıyla aynı (20 Ekim 2026'da değişti; eskiden Ahmet Mesut Erçıkan yazıyordu). Sebep: Apple'ın 4.3/4.2.6
   reddinde satıcı ile telifin farklı isimler olması "başkası adına yayınlanan uygulama" izlenimi veriyordu.
-  Ayrıntı ve App Review'a gönderilen cevap: `store/app-review-4.3-yanit.md`.
+  Alan App Store Connect'te **sürüm sayfasında** durur (Distribution → iOS App <sürüm> → "Version" kutusunun
+  sağındaki "Copyright"), App Information'da değil. Ayrıntı ve App Review'a gönderilen cevap:
+  `store/app-review-4.3-yanit.md`.
 - **iOS imzası:** ekip **AQ2Y664A4Z** (ABDURRAHMAN KAAN DIKEC); paket kimliği Android ile aynı (`com.ahmetercikan.isimsehir`).
