@@ -4,8 +4,10 @@ Bu dosya **senin yapacağın** işleri anlatır. Teknik taraf (iOS sürümü, im
 `store/release/ios/App.ipa`. Ayrıntılar: `IOS.md`.
 
 Apple hesabı: **ABDURRAHMAN KAAN DIKEC** (Çizio'yu da bu hesapla yayınlıyoruz).
-Mağazada "Satıcı" olarak bu hesap görünür, ama **telif satırı uygulamanın sahibini yazar:
-2026 Ahmet Mesut Erçıkan**. Yeni sürümlerde de böyle kalmalı.
+Mağazada hem "Satıcı" hem **telif satırı bu hesabın adını taşır: 2026 Abdurrahman Kaan Dikeç**.
+(20 Ekim 2026'da değiştirildi: Apple'ın 4.3/4.2.6 reddinden sonra satıcı ile telifin farklı isimler
+olması "başkası adına yayınlanan uygulama" izlenimi verdiği için ikisi eşitlendi. Uygulamaları yazan
+Ahmet Mesut Erçıkan, hesabın ekibinde geliştirici olarak görünüyor.)
 Uygulama iPhone'da dikey, iPad'de hem dikey hem yatay çalışıyor.
 
 ---
@@ -38,7 +40,7 @@ Uygulama kaydı açıldı ve mağaza sayfası dolduruldu:
 | SKU | isimsehir-ios |
 | Kategori | Oyunlar → Kelime, Aile |
 | Yaş | 4+ |
-| Telif (Copyright) | 2026 Ahmet Mesut Erçıkan — **uygulamanın sahibi**, Apple hesabının sahibi değil |
+| Telif (Copyright) | 2026 Abdurrahman Kaan Dikeç — **satıcı adıyla aynı olmalı** (bkz. yukarıdaki not) |
 | Fiyat | Ücretsiz, 175 ülke |
 | Gizlilik | Form dolduruldu ve yayımlandı |
 | Ekran görüntüleri | iPhone 8 + iPad 8 (geçişli/panoramik) |

@@ -32,6 +32,6 @@ We believe this app meets guidelines 4.3(a), 4.3(b) and 4.2.6. Answers to all ni
 
 8. No. Only standard frameworks: React, Vite, Capacitor, Firebase Realtime Database, Google AdMob and Apple's Vision framework. No white-label SDK, template, generation service or licensed content library. Dictionaries, artwork and copy were made for this app.
 
-9. No. Concept, content, code and artwork are by Ahmet Mesut Erçıkan, a member of this team, named in the copyright line. Nobody commissioned it; it is not from a template or generation service. The membership is registered to Abdurrahman Kaan Dikeç and Mr. Erçıkan submits as a member of that team; that is the only reason the seller and copyright names differ. If Apple prefers these apps under an account in the author's own name, tell us and we will begin the transfer.
+9. No. The app was not commissioned by anyone, was not built for or on behalf of a third party, and is not from a commercial template or an app generation service. It was created in-house by Ahmet Mesut Erçıkan, a developer on this team, and is published under this account, which also holds the copyright. No outside party supplied content, concept or branding, and no part of it was produced by a service on our behalf.
 
 We can provide a walkthrough video or further detail.
