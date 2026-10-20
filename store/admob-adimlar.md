@@ -1,8 +1,9 @@
 # AdMob (reklam) kurulumu — adım adım
 
-Uygulamada reklam altyapısı hazır; şu an Google'ın **deneme reklamları** çıkıyor (para kazandırmaz).
-Gerçek reklam için aşağıdaki adımlarla 3 kimlik alıp bana gönderin; ben `src/lib/adsConfig.ts` ve
-`android/app/src/main/res/values/strings.xml` dosyalarına yazıp yeni paket çıkarırım.
+Reklam altyapısı hazır ve **gerçek kimliklerle** çalışıyor (yayıncı `pub-8025731390860952`).
+Aşağıdaki 1-5. adımlar tamamlandı; güncel durum ve kalan işler en altta **"Durum (20 Eki 2026)"**
+başlığında. Kimlikler `src/lib/adsConfig.ts` + `android/app/src/main/res/values/strings.xml`
+(`admob_app_id`) + `ios/App/App/Info.plist` (`GADApplicationIdentifier`) içinde.
 
 ## Reklamlar nerede çıkıyor?
 | Yer | Tür | Not |
@@ -45,9 +46,38 @@ ne zaman çıkacağı (hemen ya da 5-30 saniye sonra) reklamın türüne göre G
 **Ödemeler** → ödeme profili: ad, adres, vergi bilgisi, banka (IBAN). Kazanç belli bir eşiği geçince Google ayda bir öder.
 
 ## 6) Play'de yayınlandıktan sonra
-- AdMob → Uygulamalar → İsim Şehir → **Uygulama ayarları** → **Mağaza ekle** → Google Play'deki uygulamayı seçin
-- **app-ads.txt** (önerilir, gelir kaybını önler): AdMob → Uygulamalar → app-ads.txt → çıkan satırı bana gönderin; geliştirici web
-  sitesine ben yerleştiririm.
+- AdMob → Uygulamalar → İsim Şehir → **Mağaza ekle** → Google Play'deki uygulamayı seçin
+- **app-ads.txt** (önerilir, gelir kaybını önler): aşağıdaki duruma bakın.
+
+## Durum (20 Eki 2026)
+| Konu | Durum | Kalan iş |
+|---|---|---|
+| Reklam kimlikleri (Android + iOS) | ✅ gerçek kimlikler yerinde | — |
+| Reklam birimleri | ✅ her platformda 2 etkin (şerit + geçiş) | — |
+| Ödeme profili | ✅ AdSense (Türkiye), `pub-8025731390860952` | Kazanç ₺200 eşiğine gelince kimlik doğrulaması istenecek |
+| Politika ihlali | ✅ yok | — |
+| **Mağaza bağlantısı** | ❌ bağlı değil → **"Sınırlı reklam sunumu"** | AdMob'un Play dizini İsim Şehir'i henüz görmüyor (geliştiricinin diğer 7 uygulaması çıkıyor, bu çıkmıyor). Mağaza kaydı 16 Eki'de yayınlandı; birkaç gün içinde dizine girer, sonra AdMob → Uygulamalar → **Mağaza ekle** |
+| **Avrupa onay penceresi (GDPR)** | ⏳ taslak hazır | AdMob → Gizlilik ve mesajlaşma → Avrupa tüzükleri → "İsim Şehir – AB onayı" satırındaki **Yayınla** anahtarını aç |
+| **app-ads.txt** | ❌ yok | Aşağıya bakın |
+
+### "Sınırlı reklam sunumu" ne demek?
+Mağaza kaydı bağlanmadan AdMob uygulamanın gerçek olduğunu doğrulayamıyor ve reklam sunumunu kısıtlıyor —
+yani reklam çıkıyor ama dolum oranı ve gelir düşük kalıyor. Bağlantı kurulunca kısıtlama kalkıyor.
+**iOS için** bu ancak App Store'da yayınlandıktan sonra yapılabilir.
+
+### app-ads.txt nereye konacak
+Taranacak adres, mağaza kaydındaki **geliştirici web sitesinin kök alanı**dır. Bizim site
+`https://ahmetercikan.github.io/isimo/` olduğu için dosyanın gitmesi gereken yer:
+
+    https://ahmetercikan.github.io/app-ads.txt
+
+Bu kök adres şu an 404; GitHub Pages'te kökü yayınlamak için **`ahmetercikan.github.io` adlı ayrı bir
+depo** gerekiyor (kullanıcı sayfası deposu). İçine tek satırlık dosya konur:
+
+    google.com, pub-8025731390860952, DIRECT, f08c47fec0942fa0
+
+Bu depo bir kez kurulunca Çizio, Sayio ve diğer uygulamaları da kapsar (hepsi aynı kök alanda).
+Google'ın tarayıcısı değişikliği 24 saat - 7 gün içinde görür.
 
 ## Notlar
 - Yeni reklam birimleri ilk saatlerde boş dönebilir; bu normaldir.

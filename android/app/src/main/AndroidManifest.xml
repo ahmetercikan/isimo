@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <!-- AdMob uygulama kimliği (src/lib/adsConfig.ts ile aynı; şimdilik Google deneme kimliği) -->
+        <!-- AdMob uygulama kimliği (src/lib/adsConfig.ts ile aynı; gerçek kimlik, strings.xml → admob_app_id) -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/admob_app_id"/>
