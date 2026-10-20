@@ -58,26 +58,24 @@ ne zaman çıkacağı (hemen ya da 5-30 saniye sonra) reklamın türüne göre G
 | Politika ihlali | ✅ yok | — |
 | **Mağaza bağlantısı** | ❌ bağlı değil → **"Sınırlı reklam sunumu"** | AdMob'un Play dizini İsim Şehir'i henüz görmüyor (geliştiricinin diğer 7 uygulaması çıkıyor, bu çıkmıyor). Mağaza kaydı 16 Eki'de yayınlandı; birkaç gün içinde dizine girer, sonra AdMob → Uygulamalar → **Mağaza ekle** |
 | **Avrupa onay penceresi (GDPR)** | ⏳ taslak hazır | AdMob → Gizlilik ve mesajlaşma → Avrupa tüzükleri → "İsim Şehir – AB onayı" satırındaki **Yayınla** anahtarını aç |
-| **app-ads.txt** | ❌ yok | Aşağıya bakın |
+| **app-ads.txt** | ✅ yayında | Google'ın tarayıcısının görmesi 24 saat - 7 gün sürer; AdMob → Uygulamalar → app-ads.txt'ten durum izlenir |
 
 ### "Sınırlı reklam sunumu" ne demek?
 Mağaza kaydı bağlanmadan AdMob uygulamanın gerçek olduğunu doğrulayamıyor ve reklam sunumunu kısıtlıyor —
 yani reklam çıkıyor ama dolum oranı ve gelir düşük kalıyor. Bağlantı kurulunca kısıtlama kalkıyor.
 **iOS için** bu ancak App Store'da yayınlandıktan sonra yapılabilir.
 
-### app-ads.txt nereye konacak
-Taranacak adres, mağaza kaydındaki **geliştirici web sitesinin kök alanı**dır. Bizim site
-`https://ahmetercikan.github.io/isimo/` olduğu için dosyanın gitmesi gereken yer:
+### app-ads.txt nerede
+Taranacak adres, mağaza kaydındaki **geliştirici web sitesinin kök alanı**dır. Site
+`https://ahmetercikan.github.io/isimo/` olduğu için dosya şurada yayında:
 
     https://ahmetercikan.github.io/app-ads.txt
-
-Bu kök adres şu an 404; GitHub Pages'te kökü yayınlamak için **`ahmetercikan.github.io` adlı ayrı bir
-depo** gerekiyor (kullanıcı sayfası deposu). İçine tek satırlık dosya konur:
-
     google.com, pub-8025731390860952, DIRECT, f08c47fec0942fa0
 
-Bu depo bir kez kurulunca Çizio, Sayio ve diğer uygulamaları da kapsar (hepsi aynı kök alanda).
-Google'ın tarayıcısı değişikliği 24 saat - 7 gün içinde görür.
+GitHub Pages'te kökü yayınlamak için **`ahmetercikan.github.io`** adlı ayrı bir depo gerekti
+(kullanıcı sayfası deposu, 20 Eki 2026'da açıldı). Aynı kök alanda oldukları için bu dosya
+Çizio ve Sayio'yu da kapsar — yeni uygulama için bir şey yapmaya gerek yok.
+Yayıncı kimliği değişirse (olmaz) o depodaki dosya güncellenir.
 
 ## Notlar
 - Yeni reklam birimleri ilk saatlerde boş dönebilir; bu normaldir.
