@@ -43,6 +43,14 @@
     `landscape.css` yatay tutulan telefonlar (`orientation: landscape` ve yükseklik ≤ 560 px) — yatayda telefon
     700 px'i geçtiği için tablet ölçüleri devreye giriyor, bu dosya onları küçültüp yazı defteri ile düğmeleri
     yan yana koyar (ekranlar: ana sayfa, lobi, kurulum, harf çevirme, yazma, Sıra Sende, değerlendirme, puanlar).
+  - **Yazma defteri (performans, 20 Eki 2026):** biten çizgilerin `Path2D`'i `InkPad` içinde saklanır —
+    her karede baştan hesaplanırsa yazdıkça ekran takılıyor. `.inkpad` `contain: paint`, tuval kendi
+    katmanında (`translateZ(0)`): çizgi eklenince kart, 30 px'lik gölgesi ve zemin yeniden boyanmaz.
+    Gerçek cihazdaki "ekran titriyor, beyaz sayfa gelip gidiyor" şikâyetinin sebebi buydu.
+  - **Açılış simgesi (Android 12+):** sistem `windowSplashScreenAnimatedIcon` çizer, yaklaşık 290 dp.
+    Ana ekran ikonu (en büyüğü 192 piksel) büyütülünce bulanık kalıyordu; bunun için
+    `res/drawable-*/splash_icon.png` ayrıca üretildi (`assets/icon-foreground.png` → 288-1152 piksel).
+    Simge değişirse bu dosyalar da yenilenmeli.
   - `src/online/`: ortak arayüz (transport.ts), botlu oyun (local.ts), Firebase (firebase.ts, config.ts); kurallar `database.rules.json`
   - `src/lib/ink.ts`: el yazısı tanıma — Android'de `android/.../InkPlugin.java` (ML Kit Digital Ink, Türkçe model),
     iOS'ta `ios/App/App/InkVision.swift` + `InkPlugin.swift` (Apple Vision, cihazda, internetsiz; denemek: `npm run ios:ink`),
