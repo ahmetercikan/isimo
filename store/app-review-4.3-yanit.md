@@ -20,7 +20,7 @@ We believe this app meets guidelines 4.3(a), 4.3(b) and 4.2.6. Answers to all ni
 
 2. Turkish-speaking families and friends, ages 10 and up, who know this game from school. Everything is Turkish: letter handling (İ/I, Ç, Ş, Ğ, Ö, Ü) and fifteen dictionaries of Turkish cities, given names, dishes and series. Someone who cannot read Turkish cannot use it.
 
-3. Comparable apps are typed, mostly English Scattergories variants; Turkish ones we found are single-player and offline. None combines: finger handwriting with on-device Turkish recognition; collective voting on disputed answers, which is how the game is really played; about 12,800 curated dictionary entries that flag answers and drive the computer opponents; ten-player rooms; and an original word-ladder mode.
+3. Comparable apps are typed, mostly English Scattergories variants; Turkish ones are single-player and offline. None combines: finger handwriting with on-device Turkish recognition; collective voting on disputed answers, which is how the game is really played; about 12,800 curated dictionary entries that flag answers and drive the computer opponents; ten-player rooms; and an original word-ladder mode.
 
 4. Testing has two sides: the developer tests each build on his own device through TestFlight, and his eight-year-old daughter plays the public web build (ahmetercikan.github.io/isimo) with the family, which is how the game is really used. Feedback changed the shipped build: a straight line was read as "1" or "l", letting a player call STOP with empty boxes, so STOP now requires a valid answer in every category; the landscape layout cut off the writing pad, so it was rebuilt; the dictionaries grew to about 12,800 entries; and a misspelling ("Oranguta" against "Orangutan") scored as unique, so matching now resolves answers through the dictionary.
 
@@ -28,7 +28,7 @@ We believe this app meets guidelines 4.3(a), 4.3(b) and 4.2.6. Answers to all ni
 
 6. Çizio and Sayio are single-child learning apps with no multiplayer and no advertising. This is a competitive, timed, networked party game with advertising; merging them would mix audiences, age ratings and privacy profiles.
 
-7. Yes: the three apps share this developer's own code — a stylesheet and interface shell that give the hand-drawn look, small helpers for sound and local profiles, and the Capacitor configuration. Written only for this app: the round state machine, the room protocol, the handwriting pipeline and its Vision plugin, the dictionaries, the scoring and voting engine, the computer opponents and the word-ladder engine.
+7. Yes: the three apps share this developer's own code — a stylesheet and interface shell that give the hand-drawn look, small helpers for sound and local profiles, and the Capacitor configuration. Written only for this app: the round state machine, the room protocol, the handwriting pipeline and Vision plugin, the dictionaries, the scoring and voting engine, the computer opponents and the word-ladder engine.
 
 8. No. Only standard frameworks: React, Vite, Capacitor, Firebase Realtime Database, Google AdMob and Apple's Vision framework. No white-label SDK, template, generation service or licensed content library. Dictionaries, artwork and copy were made for this app.
 
