@@ -10,7 +10,8 @@
 - **Komutlar:**
   - geliştirme: `npm run dev` (port 5290); çevrimiçi deneme: `npm run emulators` + `VITE_FIREBASE_EMULATOR=1 npx vite --port 5291`
   - test: `npm test` · tip kontrolü + derleme: `npm run build`
-  - Android: `npm run android:apk` (debug), `npm run android:aab` (mağaza). Gradle JDK 21 ister (android/gradle.properties).
+  - Android: `npm run android:apk` (debug), `npm run android:aab` (mağaza; Windows'ta `android:aab:win`).
+    Gradle JDK 21 ister (android/gradle.properties). **Bu Mac'te JDK ve yükleme anahtarı yok**, bkz. aşağıdaki "Android imzası".
   - iOS (yalnızca Mac'te): `npm run ios:sync`, `npm run ios:open`, `npm run ios:ipa` (imzalı App Store paketi).
     Ayrıntılar ve mağaza adımları: `IOS.md`, `store/app-store-1.0.1.md`.
   - uygulama ikonu: `npx tsx scripts/make-icons.mts && npx capacitor-assets generate --android --iconBackgroundColor '#16a6c4' --splashBackgroundColor '#cfeee6'`
@@ -62,3 +63,10 @@
   sağındaki "Copyright"), App Information'da değil. Ayrıntı ve App Review'a gönderilen cevap:
   `store/app-review-4.3-yanit.md`.
 - **iOS imzası:** ekip **AQ2Y664A4Z** (ABDURRAHMAN KAAN DIKEC); paket kimliği Android ile aynı (`com.ahmetercikan.isimsehir`).
+- **Android imzası:** Play Uygulama İmzalama açık (mağaza anahtarı Google'da). Yüklenen paket, ilk paketi imzalayan
+  **aynı yükleme anahtarıyla** imzalanmak zorunda: Çizio ile ortak `cizio-upload.jks`, Windows bilgisayarda
+  (`C:\Users\ahmet.ercikan\.cizio-keys\`). Mac'te derlemek için o dosya + `android/keystore.properties` (git'te yok)
+  + bir JDK 21 gerekir. Anahtar kaybolursa Play Console → Uygulama imzalama → "Sıfırlama talep edin".
+- **Play durumu (20 Eki 2026):** üretimde **1 (1.0.0)**, tam kullanıma sunuldu, 5 ülke; Play'e yüklenmiş tek paket bu.
+  Geliştirici 6262296307859358769, uygulama 4972498643282459948. Sırada bekleyen: **sürüm kodu 2 / 1.0.2**
+  (depoda hazır, paket henüz derlenmedi). Adımlar: `store/play-console-adimlar.md`.

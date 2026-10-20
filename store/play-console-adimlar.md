@@ -1,7 +1,8 @@
 # Play Console'a yükleme — adım adım (kopyala-yapıştır cevaplarla)
 
 Dosyalar `store/` klasöründe. Yüklenecek paket: `store/release/isim-sehir-1.0.0.aab`
-(İmza: Çizio ile aynı yükleme anahtarı — `C:\Users\ahmet.ercikan\.cizio-keys\cizio-upload.jks`.)
+(İmza: Çizio ile aynı yükleme anahtarı — `C:\Users\ahmet.ercikan\.cizio-keys\cizio-upload.jks`.
+**Bu dosya Windows bilgisayarda; Mac'te yok.** Mac'te imzalı paket üretmek için aşağıdaki "Yeni sürüm çıkarmak" bölümüne bak.)
 
 ## 1) Uygulama oluştur
 Play Console → **Uygulama oluştur**
@@ -83,6 +84,39 @@ Sürüm → Ülkeler/bölgeler → **Türkiye** (isteğe bağlı: Kuzey Kıbrıs
 - "Firebase / ML Kit üçüncü taraf SDK": veri güvenliği bölümünde beyan edildi.
 
 ## 7) Yeni sürüm çıkarmak
-1. `android/app/build.gradle` içinde `versionCode` +1, `versionName` güncelle (`package.json` → `version` de)
-2. `npm run android:aab` → `android/app/build/outputs/bundle/release/app-release.aab` dosyasını yükle
-3. Mağaza görselleri: `npm run dev` açıkken `npx tsx scripts/store-shots.mts phone` ve `tablet`, sonra `npx tsx scripts/store-promo.mts`
+
+### Mağazada ne var (20 Eki 2026)
+- Üretim kanalında **1 (1.0.0)**, tam kullanıma sunuldu, 5 ülke. Play'e bugüne kadar yüklenen tek paket bu.
+- Sıradaki yükleme: **sürüm kodu 2, sürüm adı 1.0.2** (`package.json`, `android/app/build.gradle` → hazır).
+- Play Console'daki uygulama adresi:
+  `https://play.google.com/console/u/0/developers/6262296307859358769/app/4972498643282459948/tracks/production`
+
+### Adımlar
+1. `android/app/build.gradle` içinde `versionCode` +1, `versionName` güncelle (`package.json` → `version` de).
+2. `npm run android:aab` → paket `android/app/build/outputs/bundle/release/app-release.aab`.
+   (Windows'ta `npm run android:aab:win`.)
+3. Play Console → Test et ve yayınla → **Üretim** → **Yeni sürüm oluştur** → paketi sürükle →
+   sürüm notlarını `store/listing-tr.md` → "Sürüm notları" bölümünden yapıştır → Kaydet → İncele → **Yayına başla**.
+   Google incelemesi birkaç saat ile birkaç gün arası sürer.
+4. Mağaza görselleri değişecekse: `npm run dev` açıkken `npx tsx scripts/store-shots.mts phone` ve `tablet`,
+   sonra `npx tsx scripts/store-promo.mts`.
+
+### Mac'te imzalı paket üretmek için gereken iki şey
+Bu Mac'te şu an ikisi de yok, bu yüzden `npm run android:aab` çalışmaz:
+1. **Java (JDK 21).** Android Studio kurulursa içinde gelir; ayrıca kurulacaksa Temurin 21 yeterli.
+2. **Yükleme anahtarı.** Play Uygulama İmzalama açık: Google mağaza anahtarını kendi tutuyor ama yüklediğimiz
+   paket, ilk paketi imzalayan **aynı yükleme anahtarıyla** imzalanmak zorunda. O anahtar Windows bilgisayarda:
+   `C:\Users\ahmet.ercikan\.cizio-keys\cizio-upload.jks`.
+   Dosyayı bu Mac'e kopyalayıp yanına `android/keystore.properties` yazılır (git'e girmez):
+   ```
+   storeFile=/Users/ahmetmesutercikan/.cizio-keys/cizio-upload.jks
+   storePassword=...
+   keyAlias=...
+   keyPassword=...
+   ```
+   Anahtar kaybolursa Play Console → Test et ve yayınla → Uygulama bütünlüğü → **yükleme anahtarı sıfırlama**
+   istenebilir; Google onayı birkaç iş günü sürer.
+
+### Bekleyen uyarı
+Üretim sürüm kontrol panelinde "uçtan uca ekran" (edge-to-edge) uyarısı var: Android 15+ cihazlarda
+durum çubuğu/gezinme çubuğu altındaki alan. Yayını engellemiyor, sonraki sürümde ele alınacak.

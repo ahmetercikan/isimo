@@ -1,7 +1,7 @@
 {
   "name": "isim-sehir",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite --port 5290",
@@ -11,8 +11,9 @@
     "typecheck": "tsc --noEmit",
     "icons": "tsx scripts/make-icons.ts",
     "android:sync": "npm run build && npx cap sync android",
-    "android:apk": "npm run android:sync && cd android && gradlew.bat assembleDebug",
-    "android:aab": "npm run android:sync && cd android && gradlew.bat bundleRelease",
+    "android:apk": "npm run android:sync && cd android && ./gradlew assembleDebug",
+    "android:aab": "npm run android:sync && cd android && ./gradlew bundleRelease",
+    "android:aab:win": "npm run android:sync && cd android && gradlew.bat bundleRelease",
     "ios:sync": "npm run build && npx cap sync ios",
     "ios:open": "npm run ios:sync && npx cap open ios",
     "ios:ipa": "sh scripts/ios-ipa.sh",
