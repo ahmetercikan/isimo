@@ -38,6 +38,19 @@ export function InkPad({ strokes, onChange, onStart, color = '#3a2b27', disabled
   const raf = useRef(0);
   const latest = useRef(strokes);
   latest.current = strokes;
+  /**
+   * Biten çizgilerin yolu bir daha değişmez; her karede yeniden hesaplamak yerine saklanır.
+   * Yoksa her karede bütün noktalar yeniden işlenir ve yazdıkça ekran takılır.
+   */
+  const paths = useRef(new WeakMap<Stroke, Path2D>());
+  const pathOf = (s: Stroke) => {
+    let p = paths.current.get(s);
+    if (!p) {
+      p = outline(s, true);
+      paths.current.set(s, p);
+    }
+    return p;
+  };
 
   const draw = () => {
     const c = cv.current;
@@ -48,7 +61,7 @@ export function InkPad({ strokes, onChange, onStart, color = '#3a2b27', disabled
     g.clearRect(0, 0, c.width, c.height);
     g.setTransform(dpr, 0, 0, dpr, 0, 0);
     g.fillStyle = color;
-    for (const s of latest.current) g.fill(outline(s, true));
+    for (const s of latest.current) g.fill(pathOf(s));
     if (live.current) g.fill(outline(live.current, false));
   };
 

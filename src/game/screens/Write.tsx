@@ -205,6 +205,42 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
       .map(([p, v]) => ({ pid: p, ...v, n: Object.values(ans[p] ?? {}).filter((x) => isAnswer(x ?? '', letter)).length }));
   }, [s.answers, s.players, c.round, t.me, letter]);
 
+  /**
+   * Sayaç saniyede birkaç kez yenilendiği için kategori şeridi ve rakip rozetleri de her seferinde
+   * yeniden kuruluyordu. İçerikleri değişmedikçe aynı kalsınlar: yazarken boşa iş çıkmaz.
+   */
+  const doneKey = cats.map((x) => (ok(x.id) ? '1' : '0')).join('');
+  const tabs = useMemo(
+    () => (
+      <nav className="cat-tabs" aria-label="Kategoriler">
+        {cats.map((x, i) => {
+          const done = ok(x.id);
+          return (
+            <button key={x.id} className={`cat-tab ${i === cur ? 'is-cur' : ''} ${done ? 'is-done' : ''}`} style={{ '--c': catInfo(x).color } as CSSProperties} onClick={() => (sfx.tap(), setCur(i))}>
+              <span className="cat-tab__emoji">{done ? <Check size={16} strokeWidth={3.6} /> : <CatIcon cat={x} size={22} />}</span>
+              {x.label}
+            </button>
+          );
+        })}
+      </nav>
+    ),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [cats, cur, doneKey],
+  );
+  const others = useMemo(
+    () => (
+      <div className="others">
+        {progress.slice(0, 9).map((p) => (
+          <span key={p.pid} className={`other ${p.n === cats.length ? 'is-done' : ''}`} title={p.name}>
+            <Avatar emoji={p.avatar} color={p.color} size={28} off={!p.on && !p.bot} />
+            <b>{p.n}</b>
+          </span>
+        ))}
+      </div>
+    ),
+    [progress, cats.length],
+  );
+
   const stopper = c.stopBy ? s.players[c.stopBy] : null;
   const wrongLetter = !!slot.text && !startsWithLetter(slot.text, letter);
   const inDict = slot.text ? lookup(cat.id, slot.text) : null;
@@ -231,14 +267,7 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
         <div className="letter-badge" aria-label={`Harf ${letter}`}>{letter}</div>
         <div className="write__mid">
           <span className="round-label round-label--sm">Tur {c.round}/{s.settings.rounds}</span>
-          <div className="others">
-            {progress.slice(0, 9).map((p) => (
-              <span key={p.pid} className={`other ${p.n === cats.length ? 'is-done' : ''}`} title={p.name}>
-                <Avatar emoji={p.avatar} color={p.color} size={28} off={!p.on && !p.bot} />
-                <b>{p.n}</b>
-              </span>
-            ))}
-          </div>
+          {others}
         </div>
         <Timer left={left} total={c.stopBy ? s.settings.grace : total} urgent={urgent} />
       </header>
@@ -252,17 +281,7 @@ export function Write({ t, s }: { t: Transport; s: RoomState }) {
         </div>
       )}
 
-      <nav className="cat-tabs" aria-label="Kategoriler">
-        {cats.map((x, i) => {
-          const done = ok(x.id);
-          return (
-            <button key={x.id} className={`cat-tab ${i === cur ? 'is-cur' : ''} ${done ? 'is-done' : ''}`} style={{ '--c': catInfo(x).color } as CSSProperties} onClick={() => (sfx.tap(), setCur(i))}>
-              <span className="cat-tab__emoji">{done ? <Check size={16} strokeWidth={3.6} /> : <CatIcon cat={x} size={22} />}</span>
-              {x.label}
-            </button>
-          );
-        })}
-      </nav>
+      {tabs}
 
       <section className="write-card" style={{ '--c': info.color } as CSSProperties} key={cat.id}>
         <div className="write-card__top">

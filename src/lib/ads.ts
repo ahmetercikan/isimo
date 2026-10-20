@@ -2,7 +2,8 @@
  * Reklamlar (Google AdMob; Android ve iOS uygulamasında, web sürümünde reklam yok).
  *
  * Nerede:
- *   - Ana sayfa ve lobi: ekranın altında küçük şerit (banner). Oyun sırasında hiç yok.
+ *   - Yalnızca lobide: ekranın altında küçük şerit (banner). Oyun sırasında hiç yok — lobiden
+ *     çıkılırken kaldırılır, şerit geç açılırsa da hemen kapatılır (bkz. showBanner).
  *   - Oyun bitince (final ekranından çıkarken): tam ekran geçiş reklamı; en fazla 3 dakikada bir.
  * Avrupa (GDPR) için Google'ın onay penceresi (UMP) ilk açılışta gösterilir; ayarlardan değiştirilebilir.
  * iOS'ta bir de Apple'ın izleme izni penceresi çıkar (onay penceresinden sonra; izin verilmezse
@@ -74,13 +75,23 @@ async function loadInterstitial() {
   }
 }
 
-/** Alt şerit reklamı göster (birden çok ekran isteyebilir; son ekran bırakınca gizlenir). */
+/**
+ * Alt şerit reklamı göster (birden çok ekran isteyebilir; son ekran bırakınca gizlenir).
+ * initAds ilk açılışta saniyeler sürebildiği için, bu arada ekrandan çıkıldıysa şerit hiç
+ * açılmaz — yoksa oyun başladıktan sonra beliriyor ve WebView'i aşağıdan kırptığı için
+ * ekran bir anlığına boş kalıyordu.
+ */
 export async function showBanner() {
   bannerWanted++;
-  if (!(await initAds()) || bannerShown) return;
+  if (!(await initAds()) || bannerShown || bannerWanted <= 0) return;
   bannerShown = true;
   try {
     await AdMob.showBanner({ adId: ADMOB.banner, adSize: BannerAdSize.ADAPTIVE_BANNER, position: BannerAdPosition.BOTTOM_CENTER, margin: 0, isTesting: ADS_TESTING });
+    if (bannerWanted <= 0) {
+      bannerShown = false;
+      setAdHeight(0);
+      await AdMob.removeBanner().catch(() => {});
+    }
   } catch {
     bannerShown = false;
   }
