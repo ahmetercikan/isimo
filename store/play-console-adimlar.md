@@ -108,18 +108,23 @@ Sürüm → Ülkeler/bölgeler → **Türkiye** (isteğe bağlı: Kuzey Kıbrıs
 - `./gradlew bundleRelease` baştan sona denendi: 1 dk 22 sn'de 25 MB'lık paket üretti. Yani derleme zinciri çalışıyor.
   (Deneme geçici bir anahtarla yapıldı, çıkan paket ve geçici anahtar silindi — o paket mağazaya yüklenemez.)
 
-### Eksik olan tek şey: yükleme anahtarı
-Play Uygulama İmzalama açık. Google mağaza anahtarını kendi saklıyor ama yüklediğimiz paket, ilk paketi imzalayan
-**aynı yükleme anahtarıyla** imzalanmak zorunda. O anahtar Çizio ile ortak ve Windows bilgisayarda:
-`C:\Users\ahmet.ercikan\.cizio-keys\cizio-upload.jks`. Bu Mac'te yok (her yeri arandı).
+### Yükleme anahtarı (çözüldü, 20 Eki 2026)
+Play Uygulama İmzalama açık: mağaza anahtarını Google saklıyor, bizim yüklediğimiz paket ise ilk paketi
+imzalayan **aynı yükleme anahtarıyla** imzalanmak zorunda. O anahtar Çizio ile ortak. Windows'tan getirildi,
+artık bu Mac'te: `~/.cizio-keys/cizio-upload.jks` (takma ad `cizio`, sertifika sahibi `CN=Cizio, O=Ahmet Ercikan, C=TR`,
+SHA-256 `2E:93:71:35:A5:9F:84:47:E2:9A:91:6B:06:B3:52:40:D0:B1:1F:A4:BD:CD:10:61:3B:97:4A:A5:BA:A3:6A:E1`).
+Parola ve yol `android/keystore.properties` içinde (git'e girmez; örneği `.example` dosyasında).
+Bu ikisi yerinde olduğu sürece `npm run android:aab` imzalı paketi üretir, başka hazırlık gerekmez.
 
-Yapılacak: dosyayı Mac'e kopyala, sonra `android/keystore.properties.example` dosyasını
-`android/keystore.properties` adıyla kopyalayıp parolaları doldur (bu dosya git'e girmez). Ardından
-`npm run android:aab` imzalı paketi üretir.
+Anahtar tamamen kaybolursa: Play Console → Test et ve yayınla → Uygulama imzalama → **Sıfırlama talep edin**.
+Yeni anahtar üretip sertifikasını yüklersin; Google'ın onayı birkaç iş günü sürer ve o süre boyunca yeni sürüm
+yayınlanamaz. Bu yüzden anahtarı yedekli tut.
 
-Anahtar tamamen kaybolduysa: Play Console → Test et ve yayınla → Uygulama imzalama → **Sıfırlama talep edin**.
-Yeni bir anahtar üretip sertifikasını yüklersin; Google'ın onayı birkaç iş günü sürer ve o süre boyunca
-yeni sürüm yayınlanamaz. Bu yüzden önce Windows'taki dosyayı aramak gerekir.
+### Paketi Play'e yüklerken (önemli)
+Paket 25 MB; tarayıcı otomasyonunun dosya köprüsünde 10 MB sınırı var, yani AAB oradan geçmiyor. Yerel bir
+HTTP sunucusundan tarayıcıya çektirmek de işe yaramadı (Chrome yerel ağ izni beklemesinde takılıyor).
+Pratik yol: `open -R <aab yolu>` ile dosyayı Finder'da göster, kullanıcı onu Play Console'daki bırakma
+kutusuna sürüklesin. Gerisi (sürüm notları, önizleme, incelemeye gönderme) tarayıcıdan yapılabiliyor.
 
 ### Bekleyen uyarı
 Üretim sürüm kontrol panelinde "uçtan uca ekran" (edge-to-edge) uyarısı var: Android 15+ cihazlarda

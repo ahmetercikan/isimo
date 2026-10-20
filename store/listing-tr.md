@@ -65,7 +65,7 @@ Kalemini hazırla, harfi çevir ve STOP de! İsim Şehir'i şimdi indir, arkada�
 ## Sürüm notları (en fazla 500 karakter)
 
 ### 1.0.2 (Android sürüm kodu 2) — güncel
-Yeni oyun: Sıra Sende. Harfleri tek tek değiştirerek kelimeden kelimeye geçiyorsun. Kelime paketleri büyüdü, havuz yaklaşık 3.900 kelime. Telefonu yatay tutunca yazma tahtası ve düğmeler artık ekrana sığıyor. STOP yalnızca bütün kutular gerçekten doluyken açılıyor. Aynı kelimeyi yanlış yazan oyuncu artık diğerlerinden fazla puan almıyor. Ana sayfada Botlara Karşı düğmesi belirginleşti.
+Yeni oyun: Sıra Sende. Harfleri tek tek değiştirerek kelimeden kelimeye geçiyorsun. Kelime paketleri büyüdü, havuz yaklaşık 3.900 kelime. Telefonu yatay tutunca yazma tahtası ve düğmeler artık ekrana sığıyor. STOP yalnızca bütün kutular gerçekten doluyken açılıyor. Aynı kelimeyi yanlış yazan oyuncu artık diğerlerinden fazla puan almıyor. Ana sayfada Botlara Karşı düğmesi belirginleşti. Yazı tahtasına yazarken oluşan titreme giderildi, açılış logosu netleşti.
 
 ### 1.0.0 (sürüm kodu 1)
 İsim Şehir yayında! 🎉 Arkadaşlarınla online ya da botlara karşı oyna, cevaplarını parmağınla yaz, ilk sen STOP de. 14 kategori, el yazısı tanıma, otomatik puan tablosu.

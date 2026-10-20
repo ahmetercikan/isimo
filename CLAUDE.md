@@ -73,10 +73,12 @@
   `store/app-review-4.3-yanit.md`.
 - **iOS imzası:** ekip **AQ2Y664A4Z** (ABDURRAHMAN KAAN DIKEC); paket kimliği Android ile aynı (`com.ahmetercikan.isimsehir`).
 - **Android imzası:** Play Uygulama İmzalama açık (mağaza anahtarı Google'da). Yüklenen paket, ilk paketi imzalayan
-  **aynı yükleme anahtarıyla** imzalanmak zorunda: Çizio ile ortak `cizio-upload.jks`, Windows bilgisayarda
-  (`C:\Users\ahmet.ercikan\.cizio-keys\`); bu Mac'te yok. Dosya gelince `android/keystore.properties`
-  (örneği: `android/keystore.properties.example`, git'e girmez) doldurulur ve `npm run android:aab` çalışır.
-  Anahtar kaybolursa Play Console → Uygulama imzalama → "Sıfırlama talep edin" (Google onayı birkaç iş günü).
-- **Play durumu (20 Eki 2026):** üretimde **1 (1.0.0)**, tam kullanıma sunuldu, 5 ülke; Play'e yüklenmiş tek paket bu.
-  Geliştirici 6262296307859358769, uygulama 4972498643282459948. Sırada bekleyen: **sürüm kodu 2 / 1.0.2**
-  (depoda hazır, paket henüz derlenmedi). Adımlar: `store/play-console-adimlar.md`.
+  **aynı yükleme anahtarıyla** imzalanmak zorunda: Çizio ile ortak `cizio-upload.jks`, takma ad `cizio`.
+  Artık bu Mac'te: `~/.cizio-keys/cizio-upload.jks`; parola ve yol `android/keystore.properties` içinde
+  (örneği: `android/keystore.properties.example`, git'e girmez). İkisi yerinde, `npm run android:aab` doğrudan
+  imzalı paket üretiyor. Anahtar kaybolursa Play Console → Uygulama imzalama → "Sıfırlama talep edin"
+  (Google onayı birkaç iş günü). **Paketi Play'e yüklerken:** 25 MB tarayıcı köprüsünün 10 MB sınırını aşıyor,
+  AAB'yi kullanıcı sürükleyip bırakmalı (`open -R` ile Finder'da göster); gerisi tarayıcıdan yapılabiliyor.
+- **Play durumu (20 Eki 2026):** üretimde **1 (1.0.0)** canlı (tam kullanıma sunuldu, 5 ülke). **2 (1.0.2)**
+  aynı gün yüklendi ve incelemeye gönderildi (tam kullanıma sunma; Google incelemesi genelde 7 güne kadar).
+  Geliştirici 6262296307859358769, uygulama 4972498643282459948. Adımlar: `store/play-console-adimlar.md`.
