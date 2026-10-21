@@ -83,5 +83,5 @@
   AAB'yi kullanıcı sürükleyip bırakmalı (`open -R` ile Finder'da göster); gerisi tarayıcıdan yapılabiliyor.
 - **Play durumu (20 Eki 2026):** üretimde **1 (1.0.0)** canlı (tam kullanıma sunuldu, 5 ülke). **2 (1.0.2)**
   aynı gün yüklendi ve incelemeye gönderildi (tam kullanıma sunma; Google incelemesi genelde 7 güne kadar).
-  **3 (1.0.3)** 21 Eki'de derlendi (`store/release/isim-sehir-1.0.3.aab`, beyaz ekran düzeltmesi), Play'e yüklenecek.
+  **3 (1.0.3)** 21 Eki'de derlendi (`store/release/isim-sehir-1.0.3.aab`, beyaz ekran düzeltmesi); aynı gün Play'e yüklendi, tam kullanıma sunma olarak incelemeye gönderildi (1.0.2'nin yerini alır).
   Geliştirici 6262296307859358769, uygulama 4972498643282459948. Adımlar: `store/play-console-adimlar.md`.

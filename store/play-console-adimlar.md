@@ -88,7 +88,7 @@ Sürüm → Ülkeler/bölgeler → **Türkiye** (isteğe bağlı: Kuzey Kıbrıs
 ### Mağazada ne var (20 Eki 2026)
 - Üretim kanalında **1 (1.0.0)**, tam kullanıma sunuldu, 5 ülke. Play'e bugüne kadar yüklenen tek paket bu.
 - 20 Eki: **sürüm kodu 2 (1.0.2)** yüklendi, incelemeye gönderildi.
-- Sıradaki yükleme: **sürüm kodu 3, sürüm adı 1.0.3** → `store/release/isim-sehir-1.0.3.aab` (21 Eki, Windows'ta imzalandı).
+- 21 Eki: **sürüm kodu 3 (1.0.3)** `store/release/isim-sehir-1.0.3.aab` yüklendi, incelemeye gönderildi (Windows'ta imzalandı). Sıradaki yükleme: sürüm kodu 4.
 - Play Console'daki uygulama adresi:
   `https://play.google.com/console/u/0/developers/6262296307859358769/app/4972498643282459948/tracks/production`
 
