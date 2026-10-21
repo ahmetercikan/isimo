@@ -91,7 +91,7 @@
 - **Play durumu (20 Eki 2026):** üretimde **1 (1.0.0)** canlı (tam kullanıma sunuldu, 5 ülke). **2 (1.0.2)**
   aynı gün yüklendi ve incelemeye gönderildi (tam kullanıma sunma; Google incelemesi genelde 7 güne kadar).
   **3 (1.0.3)** 21 Eki'de derlendi (`store/release/isim-sehir-1.0.3.aab`, beyaz ekran düzeltmesi); aynı gün Play'e yüklendi, tam kullanıma sunma olarak incelemeye gönderildi (1.0.2'nin yerini alır); incelemeden geçip üretime çıktı.
-  **4 (1.0.4)** 21 Eki'de yüklendi ve tam kullanıma sunma olarak incelemeye gönderildi (`store/release/isim-sehir-1.0.4.aab`;
+  **4 (1.0.4)** 21 Eki'de yüklendi, incelemeden geçti ve üretimde yayında (tam kullanıma sunma; `store/release/isim-sehir-1.0.4.aab`;
   konfeti beyaz ekranı + takılan kalem sesi). Windows'ta `npm run android:aab:win` gradle adımında `gradlew.bat`'ı bulamadı;
   `android` klasöründe `.\gradlew.bat bundleRelease` doğrudan çalıştırıldı (JAVA_HOME = `~/.jdks/jdk-21.0.12.1+1`).
   Geliştirici 6262296307859358769, uygulama 4972498643282459948. Adımlar: `store/play-console-adimlar.md`.
