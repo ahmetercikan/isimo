@@ -18,7 +18,7 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
   const [kick, setKick] = useState<string | null>(null);
   const [toast, show] = useToast();
   useEffect(() => {
-    void showBanner();
+    void showBanner(false);
     return () => void hideBanner();
   }, []);
   const isHost = actingHost(s) === t.me;

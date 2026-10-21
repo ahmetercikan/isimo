@@ -2,8 +2,8 @@
  * Reklamlar (Google AdMob; Android ve iOS uygulamasında, web sürümünde reklam yok).
  *
  * Nerede:
- *   - Yalnızca lobide: ekranın altında küçük şerit (banner). Oyun sırasında hiç yok — lobiden
- *     çıkılırken kaldırılır, şerit geç açılırsa da hemen kapatılır (bkz. showBanner).
+ *   - Ana sayfada ve lobide: ekranın altında küçük şerit (banner). Oyun sırasında hiç yok — lobiden
+ *     çıkılırken gizlenir, şerit geç açılırsa da hemen gizlenir (bkz. showBanner).
  *   - Oyun bitince (final ekranından çıkarken): tam ekran geçiş reklamı; en fazla 3 dakikada bir.
  * Avrupa (GDPR) için Google'ın onay penceresi (UMP) ilk açılışta gösterilir; ayarlardan değiştirilebilir.
  * iOS'ta bir de Apple'ın izleme izni penceresi çıkar (onay penceresinden sonra; izin verilmezse
@@ -29,6 +29,8 @@ let ready: Promise<boolean> | null = null;
 let privacyRequired = false;
 let bannerWanted = 0;
 let bannerShown = false;
+/** Şerit (AdView) kuruldu ve yok edilmedi; gizliyken de durur. */
+let bannerExists = false;
 let interstitialLoaded = false;
 let lastInterstitial = 0;
 const INTERSTITIAL_GAP_MS = 3 * 60_000;
@@ -56,7 +58,11 @@ export function initAds(): Promise<boolean> {
         (s) => (s.status === 'notDetermined' ? AdMob.requestTrackingAuthorization() : undefined),
       ).catch(() => {});
       void AdMob.addListener(BannerAdPluginEvents.SizeChanged, (s) => setAdHeight(bannerShown ? s.height : 0));
-      void AdMob.addListener(BannerAdPluginEvents.FailedToLoad, () => setAdHeight(0));
+      // Reklam gelmezse eklenti şeridi kendisi yok eder; bir sonraki ana sayfada yeniden kurulur.
+      void AdMob.addListener(BannerAdPluginEvents.FailedToLoad, () => {
+        bannerExists = false;
+        setAdHeight(0);
+      });
       void AdMob.addListener(InterstitialAdPluginEvents.Dismissed, () => void loadInterstitial());
       void AdMob.addListener(InterstitialAdPluginEvents.FailedToLoad, () => (interstitialLoaded = false));
       void loadInterstitial();
@@ -80,20 +86,30 @@ async function loadInterstitial() {
  * initAds ilk açılışta saniyeler sürebildiği için, bu arada ekrandan çıkıldıysa şerit hiç
  * açılmaz — yoksa oyun başladıktan sonra beliriyor ve WebView'i aşağıdan kırptığı için
  * ekran bir anlığına boş kalıyordu.
+ *
+ * Şerit bir kez kurulur, sonra yalnızca gizlenip yeniden gösterilir: her ekran değişiminde
+ * kurup yok etmek (şeridin içinde ayrı bir WebView var) bazı telefonlarda oyun ekranının
+ * saniyelerce bembeyaz kalmasına yol açıyordu — lobiden oyuna geçerken harf çevrilirken.
+ * create=false: şerit yoksa yenisini kurma (lobi; oyuna geçişte yeni reklam isteği olmasın).
  */
-export async function showBanner() {
+export async function showBanner(create = true) {
   bannerWanted++;
-  if (!(await initAds()) || bannerShown || bannerWanted <= 0) return;
+  if (!(await initAds()) || bannerShown || bannerWanted <= 0 || (!bannerExists && !create)) return;
   bannerShown = true;
   try {
-    await AdMob.showBanner({ adId: ADMOB.banner, adSize: BannerAdSize.ADAPTIVE_BANNER, position: BannerAdPosition.BOTTOM_CENTER, margin: 0, isTesting: ADS_TESTING });
+    if (bannerExists) await AdMob.resumeBanner();
+    else {
+      bannerExists = true;
+      await AdMob.showBanner({ adId: ADMOB.banner, adSize: BannerAdSize.ADAPTIVE_BANNER, position: BannerAdPosition.BOTTOM_CENTER, margin: 0, isTesting: ADS_TESTING });
+    }
     if (bannerWanted <= 0) {
       bannerShown = false;
       setAdHeight(0);
-      await AdMob.removeBanner().catch(() => {});
+      await AdMob.hideBanner().catch(() => {});
     }
   } catch {
     bannerShown = false;
+    bannerExists = false;
   }
 }
 
@@ -102,7 +118,7 @@ export async function hideBanner() {
   if (bannerWanted > 0 || !bannerShown) return;
   bannerShown = false;
   setAdHeight(0);
-  await AdMob.removeBanner().catch(() => {});
+  await AdMob.hideBanner().catch(() => {});
 }
 
 /** Oyun bittiğinde tam ekran reklam (yüklüyse ve son reklamdan beri 3 dakika geçtiyse). Döner: reklam kapanınca. */

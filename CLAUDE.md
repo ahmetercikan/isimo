@@ -59,8 +59,10 @@
 - **Reklam:** Google AdMob (`src/lib/ads.ts`); kimlikler platform başına `src/lib/adsConfig.ts` içinde
   (Android ve iOS'un AdMob'da ayrı uygulaması var; iOS uygulama kimliği `Info.plist` → `GADApplicationIdentifier`
   ile aynı olmalı, bu anahtar boşsa uygulama açılışta çöker). İki platformda da: ana sayfa ve lobi altında şerit, oyun bitince tam ekran
-  (3 dk'da en fazla bir). Oyun sırasında reklam yok. Kimlikler `src/lib/adsConfig.ts` + `strings.xml` (admob_app_id);
-  gerçek kimlikler (AdMob yayıncı 8025731390860952). Kurulum ve güncel durum: `store/admob-adimlar.md`. **Açık iki iş (20 Eki 2026):** (1) AdMob uygulaması Play mağaza kaydına bağlı değil → "Sınırlı reklam sunumu"; AdMob'un Play dizini uygulamayı henüz görmüyor, birkaç gün sonra "Mağaza ekle" yapılacak. (2) GDPR onay penceresi taslak olarak hazır, yayınlanmayı bekliyor. app-ads.txt yayında: geliştirici sitesinin kökü için `ahmetercikan.github.io` deposu açıldı (Çizio ve Sayio'yu da kapsar). Hedef kitle: 13+ (Play: 13-15, 16-17, 18+; içerik derecelendirmesi Herkes, mağazada herkese görünür); yaş sorusu yok; reklam sınıfı en geniş (MA), yalnızca Google'ın yasakladıkları gelmez.
+  (3 dk'da en fazla bir). Oyun sırasında reklam yok. Şerit bir kez kurulur, ekran değişince yalnızca gizlenir/yeniden
+  gösterilir (`removeBanner` yok): her geçişte kurup yok etmek gerçek telefonda lobiden oyuna geçerken ekranı ~3 sn
+  bembeyaz bırakıyordu (21 Eki 2026, kullanıcı videosu; emülatörde çıkmıyor). Yeni şerit isteğini yalnız ana sayfa yapar. Kimlikler `src/lib/adsConfig.ts` + `strings.xml` (admob_app_id);
+  gerçek kimlikler (AdMob yayıncı 8025731390860952). Kurulum ve güncel durum: `store/admob-adimlar.md`. **Açık iki iş (20 Eki 2026):** (1) AdMob uygulaması Play mağaza kaydına bağlı değil → "Sınırlı reklam sunumu". 21 Eki'de "uygulama oluştur" bağlantısıyla Play'e bağlı **ikinci** bir AdMob uygulaması açıldı (…~7906996822, reklam birimi yok, kodda kullanılmıyor); asıl kayıt (…~5747527917) için "Mağaza ekle" hâlâ yapılacak. (2) GDPR onay penceresi taslak olarak hazır, yayınlanmayı bekliyor. app-ads.txt yayında: geliştirici sitesinin kökü için `ahmetercikan.github.io` deposu açıldı (Çizio ve Sayio'yu da kapsar). Hedef kitle: 13+ (Play: 13-15, 16-17, 18+; içerik derecelendirmesi Herkes, mağazada herkese görünür); yaş sorusu yok; reklam sınıfı en geniş (MA), yalnızca Google'ın yasakladıkları gelmez.
 - **Güvenlik:** anahtar, keystore ve `.env*` dosyaları asla commit edilmez. Firebase web ayarı gizli değildir.
 - **Yayın:** `main`e gönderilen her commit GitHub Pages'e yayınlanır (https://ahmetercikan.github.io/isimo/).
 - **Sürüm:** `package.json` → `version`; Android: `android/app/build.gradle` (versionCode/versionName);
@@ -81,4 +83,5 @@
   AAB'yi kullanıcı sürükleyip bırakmalı (`open -R` ile Finder'da göster); gerisi tarayıcıdan yapılabiliyor.
 - **Play durumu (20 Eki 2026):** üretimde **1 (1.0.0)** canlı (tam kullanıma sunuldu, 5 ülke). **2 (1.0.2)**
   aynı gün yüklendi ve incelemeye gönderildi (tam kullanıma sunma; Google incelemesi genelde 7 güne kadar).
+  **3 (1.0.3)** 21 Eki'de derlendi (`store/release/isim-sehir-1.0.3.aab`, beyaz ekran düzeltmesi), Play'e yüklenecek.
   Geliştirici 6262296307859358769, uygulama 4972498643282459948. Adımlar: `store/play-console-adimlar.md`.
