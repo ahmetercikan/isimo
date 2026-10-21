@@ -3,7 +3,10 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   botMove,
   canGo,
+  chainList,
+  chainSteps,
   check,
+  FRESH,
   freeMoves,
   isAddDrop,
   isMove,
@@ -29,6 +32,13 @@ describe('Sıra Sende kuralları', () => {
     expect(isSwap('kedi', 'kedi')).toBe(false);
     expect(isSwap('kedi', 'kadı')).toBe(false); // iki harf değişti
     expect(isSwap('kedi', 'kedil')).toBe(false);
+  });
+  it('iki harfi değişen kelime kabul edilmez (ezan → özen)', () => {
+    setWords(['ezan', 'ozan', 'izan', 'özen', 'özel', 'özet']);
+    expect(isMove('ezan', 'özen', 'degis')).toBe(false);
+    expect(isMove('ezan', 'özen', 'serbest')).toBe(false);
+    expect(check('ezan', 'özen', ['ezan'], 'degis').why).toBe('kural');
+    expect(check('ezan', 'ozan', ['ezan'], 'degis').why).toBe('ok');
   });
   it('harf ekleme/çıkarma', () => {
     expect(isAddDrop('kedi', 'kedim')).toBe(true);
@@ -155,5 +165,50 @@ describe('Sıra Sende akışı', () => {
     expect(s.ctl.phase).toBe('final');
     expect(s.ctl.out).toBe('you');
     expect(chainRank(s)[0].pid).toBe('me');
+  });
+
+  it('yol kalmadığında masaya gelen kelime işaretlenir ve duyurulur', async () => {
+    // masa ↔ kasa birbirinin tek komşusu; kuzu ikisinden de uzak.
+    setWords(['masa', 'kasa', 'kuzu']);
+    const t = new LocalTransport(room(), 'me');
+    let s = room();
+    t.subscribe((x) => x && (s = x));
+    const flush = () => vi.advanceTimersByTimeAsync(0);
+
+    await startChain(t, s);
+    await flush();
+    const first = s.ctl.word!;
+    const next = first === 'masa' ? 'kasa' : 'masa';
+    expect(await playWord(t, s, next)).toBe(true);
+    await flush();
+
+    // İkisi de kullanıldı: masaya ilgisiz "kuzu" gelir.
+    expect(s.ctl.word).toBe('kuzu');
+    expect(s.ctl.last?.k).toBe('ok'); // oynanan kelime duyuruda kalır
+    expect(s.ctl.last?.w).toBe(next);
+    expect(s.ctl.last?.f).toBe('kuzu'); // yeni kelime de duyurulur
+    expect(s.ctl.chain).toBe(`${first},${next},${FRESH}kuzu`);
+    expect(chainList(s.ctl.chain)).toEqual([first, next, 'kuzu']);
+    expect(chainSteps(s.ctl.chain).map((x) => x.fresh)).toEqual([false, false, true]);
+  });
+
+  it('sıra kaçınca gelen yeni kelime de duyurulur', async () => {
+    setWords(['masa', 'kuzu']); // ikisinin de komşusu yok
+    const t = new LocalTransport(room(), 'me');
+    let s = room();
+    t.subscribe((x) => x && (s = x));
+    const flush = () => vi.advanceTimersByTimeAsync(0);
+
+    await startChain(t, s);
+    await flush();
+    const first = s.ctl.word!;
+    const other = first === 'masa' ? 'kuzu' : 'masa';
+    expect(await missTurn(t, s, 'me', 'pass')).toBe(true);
+    await flush();
+
+    expect(s.ctl.word).toBe(other);
+    expect(s.ctl.last?.k).toBe('pass');
+    expect(s.ctl.last?.f).toBe(other);
+    expect(chainSteps(s.ctl.chain).map((x) => x.fresh)).toEqual([false, true]);
   });
 });

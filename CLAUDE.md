@@ -22,11 +22,19 @@
   - mağaza görselleri: `npm run dev` açıkken `npx tsx scripts/store-shots.mts phone|tablet`, sonra `npx tsx scripts/store-promo.mts`
   - sözlükler: `scripts/dict-src/*.txt` düzenle → `node scripts/dict-src/build.cjs` (çıktı `src/data/dict/*.json`;
     tekrarlar atılır, '#' ile başlayan satırlar ve '?' içeren kelimeler alınmaz)
-  - Sıra Sende kelime havuzu: `scripts/dict-src/kelime.txt` (3-6 harfli genel Türkçe kelimeler, ~3.900).
-    Kategori sözlüklerindeki tek kelimelik adlar da buraya elle taşındı; yeni kelime eklenince build'i çalıştır.
+  - Sıra Sende kelime havuzu: `scripts/dict-src/kelime.txt` (3-6 harfli genel Türkçe kelimeler, **14.057**).
+    **21 Eki 2026'da büyütüldü** (3.851 → 14.057): kaynak Zemberek kök sözlüğü (`master-dictionary.dict`) +
+    TDK türevi açık liste (`mertemin/turkish-word-list`) + eski elle derlenen havuz. Üretici:
+    `scripts/dict-src/kelime-uret.py` (indirilen iki kaynak dosya repoda tutulmaz; betiğin başında yolları yazıyor).
+    Süzgeç: özel ad, kısaltma, çok kelimeli giriş, argo/küfür (53 kelime) ve **oyunda çekilemeyen harf içerenler**
+    (q/w/x, â/î/û) elenir — o kelimelere oyunda ulaşılamaz. Yeni kelime eklenince `node scripts/dict-src/build.cjs kelime`.
     Oyun yalnız 3-5 harflileri kullanır (`LENGTHS` in `src/engine/chain.ts`); 6 harfliler havuzda durur ama oynanmaz.
-    Zincirin sağlığı: 4 harflilerde ortalama 3,7 komşu (%14 çıkmaz), 5 harflilerde 1,35 (%44). 5 harfli havuz hâlâ en zayıf halka.
-    Q, W, X ile başlayan kayıt eklenmez (o harfler hiç çıkmaz).
+    Zincirin sağlığı (çıkmaz oranı / ortalama komşu): 3 harfli %1 / 13,1 · 4 harfli %6 / 5,5 · 5 harfli %17 / 3,2 ·
+    6 harfli %41 / 1,45. Masaya yeni kelime gelme sıklığı 4 harflide ~37, 5 harflide ~17 hamlede bir
+    (eskiden 17 ve 7). 6 harfli havuz artık eski 5 harfli havuz kadar sağlam: istenirse `LENGTHS`'e eklenebilir.
+    **Uyarı:** `build.cjs` satırları önce `|` ile bölüp sonra `#` bakıyor — başlık yorumlarında `|` kullanma,
+    yoksa kelime sanılır.
+    `kelime.json` 150 KB, paketlenince 115 KB (gzip 39 KB); yalnız Sıra Sende açılınca iniyor.
 - **Yapı:**
   - `src/engine/`: Türkçe harf işlemleri (tr.ts), kategoriler, sözlük, puanlama (saf; testler `__tests__`)
   - **STOP kuralı (İsim Şehir):** STOP yalnızca bütün kategorilerde **geçerli** cevabı olana açılır (`isAnswer` in `src/engine/tr.ts`:
@@ -39,6 +47,12 @@
     böylece Firebase kurallarına dokunmak gerekmedi), ekranlar `screens/Turn.tsx` ve `screens/ChainFinal.tsx`,
     ayarlar `components/ChainSettings.tsx`. Oyun türü `settings.game` ('isim' | 'siram'); kurulum sayfası
     `/kur/:mode?oyun=siram`.
+  - **Zincirin koptuğu yer (21 Eki 2026):** masadaki kelimeden gidilecek kullanılmamış kelime kalmazsa
+    masaya **ilgisiz, yepyeni** bir kelime gelir. Bu kelime `ctl.chain` içinde `*` (`FRESH`) ile işaretlenir
+    ve `ctl.last.f` ile duyurulur; `chainList` işareti atar, `chainSteps` ekrana kopuğu söyler.
+    Eskiden işaret yoktu: sıra kaçınca (`missTurn`) gelen yeni kelime hiç duyurulmuyordu ve final ekranındaki
+    zincir "EZAN → ÖZEN" gibi kurala aykırı görünüyordu (kullanıcı şikâyeti). Sıklık: 4 harfli oyunda
+    ~17 hamlede bir, 5 harflide ~7 hamlede bir — yani 5 harfli havuz büyümeden bu ekran çok görülür.
   - **Ekran düzeni:** `src/styles/app.css` + `game.css` telefon dikey; `tablet.css` 700 px'ten geniş ekranlar;
     `landscape.css` yatay tutulan telefonlar (`orientation: landscape` ve yükseklik ≤ 560 px) — yatayda telefon
     700 px'i geçtiği için tablet ölçüleri devreye giriyor, bu dosya onları küçültüp yazı defteri ile düğmeleri
@@ -59,6 +73,22 @@
     `res/drawable-*/splash_icon.png` ayrıca üretildi (`assets/icon-foreground.png` → 288-1152 piksel).
     Simge değişirse bu dosyalar da yenilenmeli.
   - `src/online/`: ortak arayüz (transport.ts), botlu oyun (local.ts), Firebase (firebase.ts, config.ts); kurallar `database.rules.json`
+  - **Arkadaşlar (21 Eki 2026):** giriş ekranı yok — her cihaz zaten anonim bir Firebase hesabı; oyuncular
+    birbirini **6 haneli arkadaş kodu** ile bulur (oda kodu 5 hane, karışmasın diye). Veri katmanı
+    `src/online/friends.ts`, durum `src/store/useFriends.ts`, ekran `src/pages/Friends.tsx` (`/arkadaslar`),
+    ana sayfadaki giriş başlıktaki rozetli düğme. Yapı: `/{ROOT}/users/{uid}/pub` (açık kart: kod, ad,
+    avatar, renk, `on`, `seen`, `room`), `.../f/{uid}` (benim eklediklerim), `.../in/{uid}` (gelen istek /
+    "kabul etti"), `.../inv/{uid}` (oyun daveti), `/{ROOT}/codes/{KOD}` → uid.
+    **Arkadaşlık karşılıklıdır:** iki tarafın da `f` listesinde diğeri varsa arkadaşsınız. Kurallar
+    `f/{uid}` için tek çocuk okuma izni verir ("beni ekledin mi" sorulabilir, listenin tamamı okunamaz).
+    Daveti yetkilendiren **alıcının** listesidir: yalnız alıcının eklediği biri onu odaya çağırabilir.
+    Çevrimiçi durumu `onDisconnect` ile yazılır, uygulama arka plana geçince de `on: false` olur.
+  - **Kural denemesi:** `npm run emulators` + `npm run test:rules` (`scripts/kural-deneme.mjs`, 31 deneme,
+    üç oyuncu; izin verilmesi *ve* reddedilmesi gerekenleri sınar). İki tuzak: (1) kural dosyasında
+    **yorum satırı olamaz** (`"//"` çocuk adı sayılır, emülatör dosyayı hiç yüklemez); (2) veritabanı
+    emülatörü tek proje kipinde **`<projectId>-default-rtdb`** ad alanını kullanır — başka ad alanına giden
+    istek "sahip" sayılıp **kuralları atlar**. `src/online/firebase.ts`'teki emülatör adresi bu yüzden
+    düzeltildi; eskiden yerel denemede kurallar hiç çalışmıyordu.
   - `src/lib/ink.ts`: el yazısı tanıma — Android'de `android/.../InkPlugin.java` (ML Kit Digital Ink, Türkçe model),
     iOS'ta `ios/App/App/InkVision.swift` + `InkPlugin.swift` (Apple Vision, cihazda, internetsiz; denemek: `npm run ios:ink`),
     web'de Google giriş servisi
@@ -70,6 +100,16 @@
   gösterilir (`removeBanner` yok): her geçişte kurup yok etmek gerçek telefonda lobiden oyuna geçerken ekranı ~3 sn
   bembeyaz bırakıyordu (21 Eki 2026, kullanıcı videosu; emülatörde çıkmıyor). Yeni şerit isteğini yalnız ana sayfa yapar. Kimlikler `src/lib/adsConfig.ts` + `strings.xml` (admob_app_id);
   gerçek kimlikler (AdMob yayıncı 8025731390860952). Kurulum ve güncel durum: `store/admob-adimlar.md`. **Açık iki iş (20 Eki 2026):** (1) AdMob uygulaması Play mağaza kaydına bağlı değil → "Sınırlı reklam sunumu". 21 Eki'de "uygulama oluştur" bağlantısıyla Play'e bağlı **ikinci** bir AdMob uygulaması açıldı ("İsim Şehir Online Kelime Oyunu", …~7906996822); Play kaydı ona bağlandığı için eski kayda (…~5747527917) "Mağaza ekle" artık yapılamıyor ("Eklendi"). Çözüm: 1.0.3'ten itibaren Android yeni kaydı kullanıyor (birimler "Alt şerit" /9174267458, "Oyun sonu" /6319864241); eski kayıt boşta. Sınır, Google yeni kaydı onaylayınca kalkar. (2) GDPR onay penceresi taslak olarak hazır, yayınlanmayı bekliyor. app-ads.txt yayında: geliştirici sitesinin kökü için `ahmetercikan.github.io` deposu açıldı (Çizio ve Sayio'yu da kapsar). Hedef kitle: 13+ (Play: 13-15, 16-17, 18+; içerik derecelendirmesi Herkes, mağazada herkese görünür); yaş sorusu yok; reklam sınıfı en geniş (MA), yalnızca Google'ın yasakladıkları gelmez.
+- **Bildirimler:** `src/lib/notify.ts` (`@capacitor/local-notifications`). Bunlar **yerel** bildirimdir:
+  uygulama açıkken (ya da yeni arka plana atılmışken) Firebase'den gelen değişikliği görüp bildirim düşürür.
+  **Uygulama tamamen kapalıyken bildirim gelmez** — onun için Cloud Functions + Blaze paketi (kredi kartı)
+  gerekirdi, kullanıcı bilerek istemedi. İzin uygulama açılışında değil, oyuncu **Arkadaşlar ekranına
+  girince** istenir (bağlamsız izin isteğini Google ve Apple hoş karşılamıyor). Ayarlar: profil →
+  `notifyInvite` (davet + istek, varsayılan açık), `notifyOnline` (arkadaş çevrimiçi, varsayılan **kapalı** —
+  sık gelir, rahatsız eder). Eklenti manifeste `POST_NOTIFICATIONS`'ı kendisi ekler; ileri tarihli bildirim
+  için eklediği `SCHEDULE_EXACT_ALARM`, `RECEIVE_BOOT_COMPLETED` ve `WAKE_LOCK` ise
+  `AndroidManifest.xml`'de `tools:node="remove"` ile çıkarılır (anlık bildirimde gerekmiyor, Play
+  tam zamanlı alarmı hassas izin sayıyor). Zamanlanmış bildirim eklenirse o satırlar kaldırılmalı.
 - **Güvenlik:** anahtar, keystore ve `.env*` dosyaları asla commit edilmez. Firebase web ayarı gizli değildir.
 - **Yayın:** `main`e gönderilen her commit GitHub Pages'e yayınlanır (https://ahmetercikan.github.io/isimo/).
 - **Sürüm:** `package.json` → `version`; Android: `android/app/build.gradle` (versionCode/versionName);
@@ -94,4 +134,8 @@
   **4 (1.0.4)** 21 Eki'de yüklendi, incelemeden geçti ve üretimde yayında (tam kullanıma sunma; `store/release/isim-sehir-1.0.4.aab`;
   konfeti beyaz ekranı + takılan kalem sesi). Windows'ta `npm run android:aab:win` gradle adımında `gradlew.bat`'ı bulamadı;
   `android` klasöründe `.\gradlew.bat bundleRelease` doğrudan çalıştırıldı (JAVA_HOME = `~/.jdks/jdk-21.0.12.1+1`).
+  **5 (1.0.5)** Mac'te derlenip incelemeye gönderildi, sonra **geri çekildi**: 1.0.4'ün düzeltmeleri bu bilgisayara
+  çekilmemişti, paket onları geri alıyordu. Yerine **6 (1.0.6)** çıkarıldı (arkadaşlar + bildirimler + 14.057 kelimelik
+  havuz + 1.0.4'ün düzeltmeleri). **Ders: paket derlemeden önce `git pull`** — başka bilgisayardan yapılan yayınlar
+  burada görünmüyor; Play'deki sürüm kodunu da Paket Gezgini'nden doğrula, depoya güvenme.
   Geliştirici 6262296307859358769, uygulama 4972498643282459948. Adımlar: `store/play-console-adimlar.md`.

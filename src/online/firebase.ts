@@ -26,7 +26,7 @@ function init() {
   if (app) return;
   app = initializeApp(
     USE_EMULATOR
-      ? { projectId: 'demo-isimsehir', apiKey: 'demo-key', authDomain: 'localhost', databaseURL: 'http://127.0.0.1:9000?ns=demo-isimsehir' }
+      ? { projectId: 'demo-isimsehir', apiKey: 'demo-key', authDomain: 'localhost', databaseURL: 'http://127.0.0.1:9000?ns=demo-isimsehir-default-rtdb' }
       : FIREBASE_CONFIG!,
   );
   auth = initializeAuth(app, { persistence: [indexedDBLocalPersistence, browserLocalPersistence] });
@@ -217,3 +217,9 @@ export async function ping(): Promise<boolean> {
 }
 
 export { serverTimestamp };
+
+// ---- Arkadaşlar modülü (src/online/friends.ts) aynı bağlantıyı ve aynı anonim oturumu kullanır:
+// iki kez giriş yapılmaz, ikinci bir Firebase uygulaması açılmaz. ----
+export { signIn };
+/** Veritabanı (gerekirse bağlantıyı kurar). */
+export const database = (): Database => (init(), db);

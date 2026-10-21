@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -39,4 +40,18 @@
     <!-- Permissions -->
 
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+      Bildirim izni (POST_NOTIFICATIONS, Android 13+) @capacitor/local-notifications
+      eklentisinin manifestinden birleşerek gelir; burada ayrıca yazmaya gerek yok.
+
+      Aynı eklenti ileri tarihli bildirim için alarm/önyükleme izinleri de ekliyor.
+      Biz yalnız **anlık** bildirim gösteriyoruz (davet, arkadaş isteği), ileri tarihli
+      bildirim yok; dolayısıyla bunlar gereksiz. SCHEDULE_EXACT_ALARM'ı Play hassas izin
+      sayıp beyan istiyor, o yüzden üçünü de birleştirmeden çıkarıyoruz.
+      İleride zamanlanmış bildirim eklenirse bu satırlar kaldırılmalı.
+    -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" tools:node="remove" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" tools:node="remove" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" tools:node="remove" />
 </manifest>

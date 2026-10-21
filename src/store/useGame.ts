@@ -44,6 +44,8 @@ export const useGame = create<GameState>()((set, get) => ({
     stop.forEach((f) => f());
     stop = [];
     set({ t, s: null, lost: false });
+    // Arkadaşlar "Katıl" diyebilsin diye bulunduğumuz oda kartta duyurulur (yalnız çevrimiçi oda).
+    if (t.kind === 'online') void import('../online/friends').then((f) => f.setRoom(t.code)).catch(() => {});
     let seen = false;
     const off = t.subscribe((s) => {
       if (s) seen = true;
@@ -63,7 +65,10 @@ export const useGame = create<GameState>()((set, get) => ({
     stop.forEach((f) => f());
     stop = [];
     set({ t: null, s: null, lost: false });
-    if (t?.kind === 'online') useProfile.getState().set({ lastRoom: null });
+    if (t?.kind === 'online') {
+      useProfile.getState().set({ lastRoom: null });
+      void import('../online/friends').then((f) => f.setRoom(null)).catch(() => {});
+    }
     await t?.leave();
   },
 }));

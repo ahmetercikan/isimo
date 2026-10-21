@@ -3,7 +3,7 @@
  * Bütün oyun durumu ctl içinde durur (kelime, sıra, canlar, puanlar): her hamle tek bir
  * atomik işlemdir, iki cihaz aynı anda oynayamaz. Zamanı dolan sırayı "yöneten" oyuncu kapatır.
  */
-import { canGo, chainList, check, DEFAULT_LEN, ruleOf, startWord } from '../engine/chain';
+import { canGo, chainList, check, DEFAULT_LEN, FRESH, ruleOf, startWord } from '../engine/chain';
 import { newCtl, type Ctl, type RoomState } from '../engine/types';
 import type { Transport } from '../online/transport';
 
@@ -89,13 +89,14 @@ export async function playWord(t: Transport, s: RoomState, input: string, as: st
     let word = v.word;
     const chain = [...used, v.word];
     let last: Ctl['last'] = { p: as, k: 'ok', w: v.word };
-    // Bu kelimeden gidilecek yer kalmadıysa masaya yeni kelime gelir.
+    // Bu kelimeden gidilecek yer kalmadıysa masaya yeni kelime gelir (zincirde işaretlenir,
+    // oynanan kelime de duyuruda kalır: "Sen: KASA" + "Yol kalmadı, yeni kelime: ...").
     if (!canGo(word, chain, r)) {
       const fresh = startWord(len(s), r, chain);
       if (fresh) {
         word = fresh;
-        chain.push(fresh);
-        last = { p: as, k: 'fresh', w: fresh };
+        chain.push(FRESH + fresh);
+        last = { ...last, f: fresh };
       }
     }
     return {
@@ -127,15 +128,18 @@ export async function missTurn(t: Transport, s: RoomState, pid: string, kind: 't
     const dead = lives[pid] === 0;
     const next: Ctl = { ...c, lives, out: dead ? [...outList(c), pid].join(',') : c.out };
     const left = alive(s, next);
-    const last: Ctl['last'] = { p: pid, k: dead ? 'out' : kind };
+    let last: Ctl['last'] = { p: pid, k: dead ? 'out' : kind };
     if (left.length <= 1) return { ...next, phase: 'final', last, seq: c.seq + 1 };
     let word = c.word;
     const chain = chainList(c.chain);
+    // Sıra kaçınca da yol kalmamış olabilir. Yeni kelime sessizce gelmemeli: işaretlenir ve duyurulur,
+    // yoksa masadaki kelime birdenbire ilgisiz bir kelimeye dönüşmüş gibi görünür.
     if (!canGo(word, chain, r)) {
       const fresh = startWord(len(s), r, chain);
       if (fresh) {
         word = fresh;
-        chain.push(fresh);
+        chain.push(FRESH + fresh);
+        last = { ...last, f: fresh };
       }
     }
     return { ...next, word, chain: chain.join(','), turn: nextTurn(s, next, pid), endAt: now + turnMs(s), last, seq: c.seq + 1 };

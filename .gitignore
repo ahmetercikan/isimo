@@ -13,3 +13,8 @@ android/keystore.properties
 # Mağaza paketleri
 store/release/
 *.tsbuildinfo
+
+# Firebase emülatör günlükleri
+firebase-debug.log
+database-debug.log
+ui-debug.log

@@ -2,10 +2,10 @@
 import { Share } from '@capacitor/share';
 import { confetti } from '../../lib/confetti';
 import { Home, RotateCcw, Share2 } from 'lucide-react';
-import { useEffect, useRef } from 'react';
+import { Fragment, useEffect, useRef } from 'react';
 import { Icon } from '../../components/Icon';
 import { Avatar } from '../../components/ui';
-import { chainList, show } from '../../engine/chain';
+import { chainSteps, show } from '../../engine/chain';
 import type { RoomState } from '../../engine/types';
 import { buzz } from '../../lib/feel';
 import { maybeInterstitial } from '../../lib/ads';
@@ -22,7 +22,8 @@ export function ChainFinal({ t, s, onExit }: { t: Transport; s: RoomState; onExi
   const isHost = actingHost(s) === t.me;
   const me = rank.find((r) => r.pid === t.me);
   const winner = rank[0] ? s.players[rank[0].pid] : null;
-  const chain = chainList(s.ctl.chain);
+  const steps = chainSteps(s.ctl.chain);
+  const chain = steps.map((x) => x.w);
   const fired = useRef(false);
 
   useEffect(() => {
@@ -48,7 +49,9 @@ export function ChainFinal({ t, s, onExit }: { t: Transport; s: RoomState; onExi
   const share = async () => {
     sfx.tap();
     const lines = rank.slice(0, 5).map((r) => `${r.rank}. ${s.players[r.pid]?.name} — ${r.pts} puan`);
-    const text = `Sıra Sende sonuçları\n${lines.join('\n')}\n\n${chain.map(show).join(' → ')}`;
+    // Yol kalmadığı yerde zincir kopar: orada ok yerine "|" konur, yoksa kurala aykırı hamle gibi okunur.
+    const path = steps.reduce((acc, x, i) => (i ? `${acc}${x.fresh ? ' | ' : ' → '}${show(x.w)}` : show(x.w)), '');
+    const text = `Sıra Sende sonuçları\n${lines.join('\n')}\n\n${path}`;
     try {
       await Share.share({ title: 'Sıra Sende', text });
     } catch {
@@ -83,8 +86,11 @@ export function ChainFinal({ t, s, onExit }: { t: Transport; s: RoomState; onExi
       <div className="paper-card chain-card">
         <h3 className="chain-card__title">Kelime zinciri</h3>
         <div className="chain-card__words">
-          {chain.map((w, i) => (
-            <span key={`${w}-${i}`} className="chain-word">{show(w)}</span>
+          {steps.map((x, i) => (
+            <Fragment key={`${x.w}-${i}`}>
+              {x.fresh && i > 0 && <span className="chain-cut">yol kalmadı</span>}
+              <span className={`chain-word ${x.fresh ? 'is-fresh' : ''}`}>{show(x.w)}</span>
+            </Fragment>
           ))}
         </div>
       </div>

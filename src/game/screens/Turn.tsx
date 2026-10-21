@@ -3,12 +3,12 @@
  * Sırası gelen oyuncu parmağıyla ya da klavyeyle yazar; kural kontrolü anında görünür.
  */
 import { Eraser, Keyboard, PenLine, SkipForward, Undo2 } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { confetti } from '../../lib/confetti';
 import { Icon } from '../../components/Icon';
 import { InkPad } from '../../components/InkPad';
 import { Avatar, Timer, useNow } from '../../components/ui';
-import { chainList, check, pickCandidate, ruleOf, show, whyText } from '../../engine/chain';
+import { chainList, chainSteps, check, pickCandidate, ruleOf, show, whyText } from '../../engine/chain';
 import { locative } from '../../engine/tr';
 import type { RoomState } from '../../engine/types';
 import { buzz } from '../../lib/feel';
@@ -22,6 +22,7 @@ export function Turn({ t, s }: { t: Transport; s: RoomState }) {
   const c = s.ctl;
   const word = c.word ?? '';
   const used = chainList(c.chain);
+  const steps = chainSteps(c.chain);
   const rule = ruleOf(s.settings.free);
   const mine = c.turn === t.me;
   const total = s.settings.time;
@@ -122,17 +123,18 @@ export function Turn({ t, s }: { t: Transport; s: RoomState }) {
   const last = c.last;
   const lastName = last ? (last.p === t.me ? 'Sen' : s.players[last.p]?.name ?? '') : '';
   const note =
-    last?.k === 'fresh'
-      ? `Yol kalmadı! Masaya yeni kelime geldi: ${show(last.w ?? '')}`
-      : last?.k === 'ok'
-        ? `${lastName}: ${show(last.w ?? '')}`
-        : last?.k === 'pass'
-          ? `${lastName} pas geçti — bir can gitti`
-          : last?.k === 'time'
-            ? `${lastName} süreyi kaçırdı — bir can gitti`
-            : last?.k === 'out'
-              ? `${lastName} elendi!`
-              : '';
+    last?.k === 'ok'
+      ? `${lastName}: ${show(last.w ?? '')}`
+      : last?.k === 'pass'
+        ? `${lastName} pas geçti — bir can gitti`
+        : last?.k === 'time'
+          ? `${lastName} süreyi kaçırdı — bir can gitti`
+          : last?.k === 'out'
+            ? `${lastName} elendi!`
+            : '';
+  // Yol kalmadığında masaya gelen yeni kelime: hangi olayla geldiyse onunla birlikte duyurulur
+  // (hamleyle de, süre kaçırmayla da gelebilir).
+  const freshNote = last?.f ? `Yol kalmadı! Masaya yeni kelime geldi: ${show(last.f)}` : '';
 
   return (
     <div className={`turn ${urgent && mine ? 'is-urgent' : ''}`}>
@@ -173,7 +175,13 @@ export function Turn({ t, s }: { t: Transport; s: RoomState }) {
         </p>
       </section>
 
-      {note && <div className="turn-note pop-in" key={c.seq}>{note}</div>}
+      {(note || freshNote) && (
+        <div className={`turn-note pop-in ${freshNote ? 'turn-note--fresh' : ''}`} key={c.seq}>
+          {note}
+          {note && freshNote ? <br /> : null}
+          {freshNote}
+        </div>
+      )}
 
       {mine ? (
         <section className="write-card turn-card">
@@ -244,10 +252,13 @@ export function Turn({ t, s }: { t: Transport; s: RoomState }) {
         </section>
       )}
 
-      {used.length > 1 && (
+      {steps.length > 1 && (
         <div className="chain-trail" aria-label="Oynanan kelimeler">
-          {used.slice(-7, -1).map((w, i) => (
-            <span key={`${w}-${i}`} className="chain-trail__w">{show(w)}</span>
+          {steps.slice(-7, -1).map((x, i) => (
+            <Fragment key={`${x.w}-${i}`}>
+              {x.fresh && <span className="chain-trail__cut" aria-hidden="true" />}
+              <span className={`chain-trail__w ${x.fresh ? 'is-fresh' : ''}`}>{show(x.w)}</span>
+            </Fragment>
           ))}
         </div>
       )}

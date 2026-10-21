@@ -58,6 +58,12 @@ interface ProfileState {
   stats: Stats;
   /** Uygulama kapanınca geri dönülebilsin: son çevrimiçi oda. */
   lastRoom: { code: string; at: number } | null;
+  /** Oyun daveti ve arkadaş isteği bildirimleri (varsayılan açık). */
+  notifyInvite: boolean;
+  /** "Arkadaşın çevrimiçi oldu" bildirimi (varsayılan kapalı: sık gelir, rahatsız eder). */
+  notifyOnline: boolean;
+  /** Bildirim izni bir kez soruldu mu (aynı ekranda tekrar tekrar sormamak için). */
+  notifyAsked?: boolean;
   set: (p: Partial<Omit<ProfileState, 'set' | 'addGame'>>) => void;
   addGame: (points: number, won: boolean) => void;
 }
@@ -77,6 +83,8 @@ export const useProfile = create<ProfileState>()(
       bots: { count: 3, level: 2 },
       stats: { games: 0, wins: 0, best: 0, points: 0 },
       lastRoom: null,
+      notifyInvite: true,
+      notifyOnline: false,
       set: (p) => set(p),
       addGame: (points, won) =>
         set((s) => ({

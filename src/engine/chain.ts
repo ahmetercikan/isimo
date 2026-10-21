@@ -3,6 +3,8 @@
  * Genel Türkçe kelime havuzu: src/data/dict/kelime.json (kaynak: scripts/dict-src/kelime.txt).
  * Kural: masadaki kelimede tek bir harf değiştirilir (ayar açıksa harf eklemek/çıkarmak da serbest),
  * yeni kelime sözlükte olmalı ve o oyunda daha önce kullanılmamış olmalı.
+ * Masadaki kelimeden gidilecek yer kalmazsa masaya ilgisiz, yepyeni bir kelime gelir;
+ * bu kelime zincirde FRESH ile işaretlenir, yoksa ekranda kurala aykırı bir hamle gibi görünür.
  * Hepsi saf: ağ, zaman ya da ekran bilmez (testler: __tests__/chain.test.ts).
  */
 import { loadDict } from './dict';
@@ -227,5 +229,18 @@ export function pickCandidate(cands: string[], from: string, used: Iterable<stri
 /** Ekranda gösterim: kelime büyük harfle. */
 export const show = (w: string) => trUpper(w);
 
-/** Oynanmış kelimeler: ctl.chain → dizi. */
-export const chainList = (chain?: string) => (chain ? chain.split(',').filter(Boolean) : []);
+/**
+ * Yol kalmadığı için masaya yeni gelen kelimenin başına konan işaret: o kelime bir
+ * önceki kelimeden tek harf farklı **değildir**, zincir orada kopar. Kelime havuzunda
+ * yalnız harfler olduğu için (bkz. ok()) bu işaret hiçbir kelimeyle karışmaz.
+ */
+export const FRESH = '*';
+
+const split = (chain?: string) => (chain ? chain.split(',').filter(Boolean) : []);
+
+/** Oynanmış kelimeler: ctl.chain → dizi (işaretler atılır; "kullanıldı" kontrolü bununla yapılır). */
+export const chainList = (chain?: string) => split(chain).map((w) => (w.startsWith(FRESH) ? w.slice(1) : w));
+
+/** Zincir adımları: kelime + masaya yol kalmadığı için mi geldi (ekranda kopuk gösterilir). */
+export const chainSteps = (chain?: string): { w: string; fresh: boolean }[] =>
+  split(chain).map((w) => (w.startsWith(FRESH) ? { w: w.slice(1), fresh: true } : { w, fresh: false }));

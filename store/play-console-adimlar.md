@@ -89,7 +89,13 @@ Sürüm → Ülkeler/bölgeler → **Türkiye** (isteğe bağlı: Kuzey Kıbrıs
 - Üretim kanalında **1 (1.0.0)**, tam kullanıma sunuldu, 5 ülke. Play'e bugüne kadar yüklenen tek paket bu.
 - 20 Eki: **sürüm kodu 2 (1.0.2)** yüklendi, incelemeye gönderildi.
 - 21 Eki: **sürüm kodu 3 (1.0.3)** `store/release/isim-sehir-1.0.3.aab` yüklendi, incelemeye gönderildi (Windows'ta imzalandı); üretime çıktı.
-- 21 Eki: **sürüm kodu 4 (1.0.4)** `store/release/isim-sehir-1.0.4.aab` yüklendi, incelemeden geçti, üretimde yayında. Sıradaki yükleme: sürüm kodu 5.
+- 21 Eki: **sürüm kodu 4 (1.0.4)** `store/release/isim-sehir-1.0.4.aab` yüklendi, incelemeden geçti, üretimde yayında.
+- 21 Eki: **sürüm kodu 5 (1.0.5)** Mac'te derlendi ve incelemeye gönderildi, sonra **geri çekildi**. Sebep: 1.0.4
+  Windows'tan yayınlanmıştı, o commit'ler bu bilgisayara çekilmemişti; paket 1.0.4'ün konfeti/kalem sesi
+  düzeltmelerini geri alıyordu. **Derlemeden önce `git pull` yap** ve Play'deki sürüm kodunu Paket Gezgini'nden
+  doğrula (Test et ve yayınla → Paket Gezgini → Tüm uygulama paketleri) — depodaki numara eskimiş olabilir.
+- 21 Eki: **sürüm kodu 6 (1.0.6)** `store/release/isim-sehir-1.0.6.aab` — arkadaşlar, bildirimler, 14.057 kelimelik
+  havuz ve 1.0.4'ün düzeltmeleri bir arada. Sıradaki yükleme: sürüm kodu 7.
 - Play Console'daki uygulama adresi:
   `https://play.google.com/console/u/0/developers/6262296307859358769/app/4972498643282459948/tracks/production`
 

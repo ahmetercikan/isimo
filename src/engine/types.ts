@@ -79,8 +79,8 @@ export interface Ctl {
   pts?: Record<string, number>;
   /** Elenme sırası, virgülle (sonda elenen en sonda). */
   out?: string;
-  /** Son olay (ekranda duyurulur). */
-  last?: { p: string; k: 'ok' | 'time' | 'pass' | 'fresh' | 'out'; w?: string };
+  /** Son olay (ekranda duyurulur); f: bu olayla masaya gelen yeni kelime (yol kalmadı). */
+  last?: { p: string; k: 'ok' | 'time' | 'pass' | 'out'; w?: string; f?: string };
 }
 
 /** answers[rKey][pid][catId] = metin */

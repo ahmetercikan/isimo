@@ -54,6 +54,54 @@
           "$other": { ".validate": "$other === 'code' || $other === 'created'" }
         }
       },
+      "users": {
+        "$uid": {
+          "pub": {
+            ".read": "auth != null",
+            ".write": "auth != null && $uid === auth.uid",
+            "code": { ".validate": "newData.isString() && newData.val().length <= 8" },
+            "name": { ".validate": "newData.isString() && newData.val().length <= 20" },
+            "avatar": { ".validate": "newData.isString() && newData.val().length <= 16" },
+            "color": { ".validate": "newData.isString() && newData.val().length <= 9" },
+            "on": { ".validate": "newData.isBoolean()" },
+            "seen": { ".validate": "newData.isNumber()" },
+            "room": { ".validate": "newData.isString() && newData.val().length <= 8" },
+            "$other": { ".validate": false }
+          },
+          "f": {
+            ".read": "auth != null && $uid === auth.uid",
+            ".write": "auth != null && $uid === auth.uid",
+            "$other": {
+              ".read": "auth != null && ($uid === auth.uid || $other === auth.uid)",
+              ".validate": "newData.val() === true"
+            }
+          },
+          "in": {
+            ".read": "auth != null && $uid === auth.uid",
+            "$other": {
+              ".write": "auth != null && ($other === auth.uid || $uid === auth.uid)",
+              ".validate": "!newData.exists() || (newData.hasChildren(['k', 'name']) && (newData.child('k').val() === 'req' || newData.child('k').val() === 'ok') && newData.child('name').isString() && newData.child('name').val().length <= 20 && newData.child('avatar').isString() && newData.child('avatar').val().length <= 16 && newData.child('color').isString() && newData.child('color').val().length <= 9)",
+              "$f": { ".validate": "$f === 'k' || $f === 'name' || $f === 'avatar' || $f === 'color' || $f === 'at'" }
+            }
+          },
+          "inv": {
+            ".read": "auth != null && $uid === auth.uid",
+            "$other": {
+              ".write": "auth != null && (($other === auth.uid && root.child('isimsehir/users/' + $uid + '/f/' + auth.uid).exists()) || $uid === auth.uid)",
+              ".validate": "!newData.exists() || (newData.hasChildren(['code', 'name']) && newData.child('code').isString() && newData.child('code').val().length <= 8 && newData.child('name').isString() && newData.child('name').val().length <= 20)",
+              "$f": { ".validate": "$f === 'code' || $f === 'name' || $f === 'avatar' || $f === 'color' || $f === 'at'" }
+            }
+          },
+          "$other": { ".validate": false }
+        }
+      },
+      "codes": {
+        "$code": {
+          ".read": "auth != null",
+          ".write": "auth != null && (!data.exists() || data.val() === auth.uid)",
+          ".validate": "newData.isString() && newData.val() === auth.uid && $code.length <= 8"
+        }
+      },
       "ink": {
         "$code": {
           ".read": "auth != null",

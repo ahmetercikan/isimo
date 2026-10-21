@@ -562,12 +562,17 @@
 .word-card__rule { font-weight: 700; font-size: 14.5px; color: var(--ink-2); text-align: center; }
 
 .turn-note { align-self: center; background: var(--sun); box-shadow: 0 3px 0 var(--sun-dark); border-radius: 999px; padding: 6px 14px; font-weight: 800; font-size: 14px; text-align: center; }
+/* İki satır olabilir (hamle + masaya gelen yeni kelime): yuvarlak rozet dar kalıyor. */
+.turn-note--fresh { border-radius: 18px; line-height: 1.35; padding: 7px 14px; }
 .turn-card { gap: 10px; }
 .turn__play { width: 100%; margin-top: 2px; }
 .tool--pass { width: auto; padding: 0 14px; display: inline-flex; align-items: center; gap: 6px; font-family: var(--display); font-weight: 600; font-size: 17px; }
 .turn-wait { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 26px 18px; }
-.chain-trail { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+.chain-trail { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; align-items: center; }
 .chain-trail__w { background: rgba(255, 255, 255, 0.7); border-radius: 999px; padding: 3px 9px; font-weight: 800; font-size: 12.5px; color: var(--ink-2); }
+/* Yol kalmadığı için masaya gelen kelime: zincir orada kopar, kesik çizgiyle gösterilir. */
+.chain-trail__cut { width: 0; height: 15px; border-left: 2px dashed var(--line-2); }
+.chain-trail__w.is-fresh { background: #fff; border: 1.5px dashed var(--line-2); padding: 2px 8px; }
 
 .final__sub { text-align: center; font-weight: 800; color: var(--ink-2); }
 .rest__tag { background: var(--green); color: #fff; border-radius: 999px; padding: 2px 8px; font-size: 11.5px; font-weight: 800; margin-left: 6px; }
@@ -575,6 +580,10 @@
 .chain-card__title { font-family: var(--display); font-weight: 600; font-size: 18px; margin-bottom: 8px; }
 .chain-card__words { display: flex; flex-wrap: wrap; gap: 6px; }
 .chain-word { background: var(--cream); border-radius: 999px; padding: 4px 10px; font-weight: 800; font-size: 13px; }
+/* Zincirin koptuğu yer: sonraki kelime öncekinden tek harf farklı değildir. */
+.chain-word.is-fresh { background: #fff; border: 1.5px dashed var(--line-2); padding: 2.5px 8.5px; }
+.chain-cut { align-self: center; font-weight: 800; font-size: 11px; color: var(--ink-2); opacity: 0.75; padding: 0 2px; }
+.chain-cut::before { content: '|'; margin-right: 5px; opacity: 0.5; }
 
 .rules-card__head { display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--ink-2); }
 .settings__note { font-size: 13px; margin-top: 2px; }

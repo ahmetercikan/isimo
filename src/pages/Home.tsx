@@ -1,4 +1,4 @@
-import { Bot, CircleHelp, LogIn, Pencil, Plus, RotateCcw, Volume2, VolumeX } from 'lucide-react';
+import { Bot, CircleHelp, LogIn, Pencil, Plus, RotateCcw, Users, Volume2, VolumeX } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Doodles } from '../components/Doodles';
@@ -7,6 +7,7 @@ import { Avatar, Logo, useToast } from '../components/ui';
 import { hideBanner, showBanner } from '../lib/ads';
 import { sfx } from '../lib/sfx';
 import { ONLINE_AVAILABLE } from '../online/config';
+import { useFriends } from '../store/useFriends';
 import { useGame } from '../store/useGame';
 import { useProfile } from '../store/useProfile';
 
@@ -26,6 +27,9 @@ export default function Home() {
     return () => void hideBanner();
   }, []);
   const recent = p.lastRoom && Date.now() - p.lastRoom.at < 3 * 3600_000 ? p.lastRoom : null;
+  // Rozet: bekleyen davet + arkadaş isteği sayısı.
+  const waiting = useFriends((s) => s.invites.length + s.incoming.length);
+  const onlineNow = useFriends((s) => s.friends.filter((x) => x.mutual && x.on).length);
 
   const rejoin = async () => {
     if (!recent || busy) return;
@@ -54,6 +58,12 @@ export default function Home() {
           <span className="me-chip__name">{p.name}</span>
           <Pencil size={16} strokeWidth={2.6} />
         </button>
+        {ONLINE_AVAILABLE && (
+          <button className="round-btn round-btn--soft has-badge" aria-label="Arkadaşlar" onClick={() => (sfx.tap(), nav('/arkadaslar'))}>
+            <Users size={22} />
+            {waiting > 0 ? <span className="badge">{waiting}</span> : onlineNow > 0 ? <span className="badge badge--dot" aria-label={`${onlineNow} arkadaşın çevrimiçi`} /> : null}
+          </button>
+        )}
         <button className="round-btn round-btn--soft" aria-label={p.sfx ? 'Sesi kapat' : 'Sesi aç'} onClick={() => p.set({ sfx: !p.sfx, music: !p.sfx })}>
           {p.sfx ? <Volume2 size={22} /> : <VolumeX size={22} />}
         </button>

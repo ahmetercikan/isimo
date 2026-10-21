@@ -64,7 +64,12 @@ Kalemini hazırla, harfi çevir ve STOP de! İsim Şehir'i şimdi indir, arkada�
 
 ## Sürüm notları (en fazla 500 karakter)
 
-### 1.0.4 (Android sürüm kodu 4) — güncel
+### 1.0.6 (Android sürüm kodu 6) — güncel
+Arkadaş ekleyin! Arkadaşlar ekranındaki 6 haneli kodunuzu paylaşın, arkadaşınızın kodunu girin; kimin çevrimiçi olduğunu görün, tek dokunuşla oyuna davet edin. Davet ve arkadaş isteği bildirimleri eklendi, ayarlardan kapatılabilir. Sıra Sende'nin kelime havuzu 3.900'den 14.000'e çıktı. Yol kalmadığında masaya gelen yeni kelime artık ekranda belli oluyor; eskiden kural dışı bir geçiş gibi görünüyordu.
+
+(Sürüm kodu 5 aynı notlarla gönderilmişti ama 1.0.4'ün düzeltmelerini içermediği için geri çekildi; kullanıcıya hiç ulaşmadı.)
+
+### 1.0.4 (Android sürüm kodu 4)
 Harf açıklanırken bazı telefonlarda ekranın birkaç saniye bembeyaz kalması giderildi (özellikle uygulamadan çıkıp geri dönünce oluyordu). Yazarken kalem sesinin arkada takılı kalması düzeltildi.
 
 ### 1.0.3 (Android sürüm kodu 3)

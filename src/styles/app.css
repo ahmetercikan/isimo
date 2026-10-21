@@ -437,3 +437,52 @@ body.has-ad .page { padding-bottom: calc(var(--safe-bottom) + 20px + var(--ad-h,
 body.has-ad .page__cta--sticky { bottom: calc(var(--safe-bottom) + 14px + var(--ad-h, 0px)); }
 
 .howto__seg { margin-bottom: 4px; }
+
+/* ---- Arkadaşlar ekranı (kod, istekler, liste, davet) ---- */
+.friends { gap: 14px; }
+
+/* Rozetli yuvarlak düğme: ana sayfadaki "Arkadaşlar" girişi. */
+.has-badge { position: relative; overflow: visible; }
+.badge {
+  position: absolute; top: -4px; right: -4px; min-width: 20px; height: 20px; padding: 0 5px;
+  border-radius: 999px; background: var(--coral); color: #fff; border: 2px solid var(--cream);
+  font-weight: 800; font-size: 12px; line-height: 16px; text-align: center;
+}
+.badge--dot { min-width: 12px; width: 12px; height: 12px; padding: 0; background: var(--green); top: -1px; right: -1px; }
+
+.code-card, .add-card, .notify-card { display: flex; flex-direction: column; gap: 10px; padding: 16px; }
+.code-card__label { font-family: var(--display); font-weight: 600; font-size: 16px; color: var(--ink-2); }
+.code-card__row { display: flex; align-items: center; gap: 10px; }
+.code-card__code {
+  flex: 1; font-family: var(--display); font-weight: 600; font-size: 30px; letter-spacing: 5px;
+  color: var(--teal-dark); background: var(--teal-soft); border-radius: 16px; padding: 8px 14px; text-align: center;
+}
+.add-card__row { display: flex; align-items: center; gap: 10px; }
+.input--code { flex: 1; min-width: 0; text-align: center; letter-spacing: 5px; font-weight: 800; text-transform: uppercase; }
+
+.friend-group { display: flex; flex-direction: column; gap: 8px; }
+.friend-group__title { font-family: var(--display); font-weight: 600; font-size: 18px; display: flex; align-items: baseline; gap: 7px; }
+.friend-list { display: flex; flex-direction: column; gap: 8px; }
+.friend-row {
+  display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 18px;
+  background: #fff; box-shadow: 0 3px 0 var(--line-2); min-width: 0;
+}
+.friend-row__text { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.friend-row__text b { font-family: var(--display); font-weight: 600; font-size: 17px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.friend-row__text small { font-weight: 700; color: var(--muted); font-size: 13px; }
+/* Çevrimiçi: adın solunda yeşil nokta. */
+.friend-row.is-on .friend-row__text b::before {
+  content: ''; display: inline-block; width: 9px; height: 9px; border-radius: 50%;
+  background: var(--green); margin-right: 6px; vertical-align: 1px;
+}
+.friend-row.is-waiting { opacity: 0.75; box-shadow: 0 3px 0 var(--line); }
+
+.invite-card { display: flex; align-items: center; gap: 10px; padding: 12px; background: var(--sun-soft); }
+.invite-card__text { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.invite-card__text b { font-family: var(--display); font-weight: 600; font-size: 16px; }
+.invite-card__text small { font-weight: 700; color: var(--ink-2); font-size: 13px; }
+
+.empty-card { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; padding: 20px 16px; color: var(--muted); font-weight: 700; }
+.notify-card__ask { align-self: stretch; }
+.round-btn--ok { background: var(--green); color: #fff; box-shadow: 0 3px 0 #1d9359; }
+.round-btn--ok:active { box-shadow: 0 1px 0 #1d9359; }

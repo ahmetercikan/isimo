@@ -9,6 +9,7 @@ import { initAds } from './lib/ads';
 import { audio, setSfxEnabled } from './lib/sfx';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
+import { useFriends } from './store/useFriends';
 import { useGame } from './store/useGame';
 import { useProfile } from './store/useProfile';
 
@@ -17,6 +18,7 @@ const Join = lazy(() => import('./pages/Join'));
 const HowTo = lazy(() => import('./pages/HowTo'));
 const Sounds = lazy(() => import('./pages/Sounds'));
 const Game = lazy(() => import('./pages/Game'));
+const Friends = lazy(() => import('./pages/Friends'));
 
 /** Ad yoksa önce profil. */
 function NeedsName({ children }: { children: ReactNode }) {
@@ -64,6 +66,28 @@ export default function App() {
   }, []);
   // Uygulama kapanırken çevrimiçi odadan çıkmadan önce bağlantı "çevrimdışı" işaretlenir (onDisconnect).
   useEffect(() => () => void useGame.getState().leave(), []);
+  // Arkadaşlar: ad girilmişse uygulama açıkken dinlenir (davet/istek bildirimi buradan gelir).
+  // Arka plana geçince "çevrimdışı" yazılır, geri gelince yeniden "çevrimiçi".
+  const named = useProfile((s) => !!s.name);
+  useEffect(() => {
+    if (!named) return;
+    void useFriends.getState().start();
+    const h = CapApp.addListener('appStateChange', ({ isActive }) => {
+      // start() bir kez çalışır (live olunca erken döner); arka plandan dönünce "çevrimiçi"yi
+      // yeniden yazmak için doğrudan goOnline çağrılmalı, yoksa arkadaşlara çevrimdışı görünürüz.
+      const me = useProfile.getState();
+      void import('./online/friends')
+        .then(async (f) => {
+          if (isActive) await f.goOnline({ name: me.name, avatar: me.avatar, color: me.color });
+          else await f.goOffline();
+        })
+        .catch(() => {});
+    });
+    return () => {
+      void h.then((x) => x.remove()).catch(() => {});
+      useFriends.getState().stop();
+    };
+  }, [named]);
 
   return (
     <HashRouter>
@@ -74,6 +98,7 @@ export default function App() {
           <Route path="/profil" element={<Profile />} />
           <Route path="/kur/:mode" element={<NeedsName><Setup /></NeedsName>} />
           <Route path="/katil" element={<NeedsName><Join /></NeedsName>} />
+          <Route path="/arkadaslar" element={<NeedsName><Friends /></NeedsName>} />
           <Route path="/nasil" element={<HowTo />} />
           <Route path="/sesler" element={<Sounds />} />
           <Route path="/oyun" element={<NeedsName><Game /></NeedsName>} />
