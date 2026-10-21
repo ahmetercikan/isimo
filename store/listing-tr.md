@@ -64,7 +64,10 @@ Kalemini hazırla, harfi çevir ve STOP de! İsim Şehir'i şimdi indir, arkada�
 
 ## Sürüm notları (en fazla 500 karakter)
 
-### 1.0.3 (Android sürüm kodu 3) — güncel
+### 1.0.4 (Android sürüm kodu 4) — güncel
+Harf açıklanırken bazı telefonlarda ekranın birkaç saniye bembeyaz kalması giderildi (özellikle uygulamadan çıkıp geri dönünce oluyordu). Yazarken kalem sesinin arkada takılı kalması düzeltildi.
+
+### 1.0.3 (Android sürüm kodu 3)
 1.0.2 incelemedeyken yerine yüklendi; 1.0.0'dan gelen kullanıcı yalnız bu notu görür, o yüzden 1.0.2'nin özetini de taşır.
 
 Yeni oyun: Sıra Sende. Harfleri tek tek değiştirerek kelimeden kelimeye geç, yaklaşık 3.900 kelime. Telefon yatayken yazma tahtası ekrana sığıyor. STOP yalnızca bütün kutular doluyken açılıyor. Oyun başlarken bazı telefonlarda ekranın birkaç saniye beyaz kalması, yazarken oluşan titreme ve bulanık açılış logosu düzeltildi.

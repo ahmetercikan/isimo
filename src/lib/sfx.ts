@@ -392,6 +392,7 @@ export function musicLevel(v: number, time = 0.6) {
 // Kalem hışırtısı (yazarken, hıza göre)
 // ------------------------------------------------------------------------------------------------
 let scr: { g: GainNode; f: BiquadFilterNode } | null = null;
+let scrIdle = 0;
 function scribble(speed: number) {
   const a = audio();
   if (!a || (!enabled && speed > 0)) return;
@@ -416,6 +417,10 @@ function scribble(speed: number) {
   const v = Math.min(1, speed / 1.6);
   scr.g.gain.setTargetAtTime(speed > 0 ? 0.012 + v * 0.05 : 0, t, speed > 0 ? 0.015 : 0.04);
   scr.f.frequency.setTargetAtTime(2400 + v * 2600, t, 0.03);
+  // Kalem durunca ses kendiliğinden kısılsın: parmak kalktı bilgisi gelmezse (defter kapandı,
+  // süre bitti, uygulama arka plana gitti) hışırtı yoksa sonsuza kadar çalıyordu.
+  clearTimeout(scrIdle);
+  if (speed > 0) scrIdle = window.setTimeout(() => scribble(0), 200);
 }
 
 // ------------------------------------------------------------------------------------------------

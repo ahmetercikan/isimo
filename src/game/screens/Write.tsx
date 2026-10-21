@@ -5,7 +5,7 @@
  */
 import { ArrowLeft, ArrowRight, Check, Eraser, Keyboard, PenLine, Undo2 } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
-import confetti from 'canvas-confetti';
+import { confetti } from '../../lib/confetti';
 import { CatIcon } from '../../components/Icon';
 import { InkPad } from '../../components/InkPad';
 import { Avatar, Timer, useNow } from '../../components/ui';

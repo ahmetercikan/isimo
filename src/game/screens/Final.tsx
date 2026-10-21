@@ -1,6 +1,6 @@
 /** Oyun sonu: kürsü, ödüller, tekrar oyna. */
 import { Share } from '@capacitor/share';
-import confetti from 'canvas-confetti';
+import { confetti } from '../../lib/confetti';
 import { Home, RotateCcw, Share2 } from 'lucide-react';
 import { useEffect, useMemo, useRef } from 'react';
 import { Icon } from '../../components/Icon';

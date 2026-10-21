@@ -4,7 +4,7 @@
  */
 import { Eraser, Keyboard, PenLine, SkipForward, Undo2 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import confetti from 'canvas-confetti';
+import { confetti } from '../../lib/confetti';
 import { Icon } from '../../components/Icon';
 import { InkPad } from '../../components/InkPad';
 import { Avatar, Timer, useNow } from '../../components/ui';

@@ -47,6 +47,13 @@
     her karede baştan hesaplanırsa yazdıkça ekran takılıyor. `.inkpad` `contain: paint`, tuval kendi
     katmanında (`translateZ(0)`): çizgi eklenince kart, 30 px'lik gölgesi ve zemin yeniden boyanmaz.
     Gerçek cihazdaki "ekran titriyor, beyaz sayfa gelip gidiyor" şikâyetinin sebebi buydu.
+  - **Konfeti (beyaz ekran, 21 Eki 2026):** `src/lib/confetti.ts` üzerinden, Worker'sız (`useWorker: false`).
+    canvas-confetti'nin varsayılanı (Worker + OffscreenCanvas) vivo Y19s'te (Unisoc, Mali-G57) uygulama arka plana
+    gidip gelince (ör. reklama dokunup dönünce) GPU'suz çizime düşüyor, WebView tuvali koyamıyor
+    (logcat: `CanvasResourceRasterGmbMappable ... 384x857`) ve konfeti sürdükçe bütün ekran bembeyaz kalıyordu
+    ("Harfimiz" anında ~4 sn). Doğrudan `canvas-confetti` import etme.
+  - **Kalem sesi:** `sfx.scribble` sonsuz döngülü bir hışırtı; hareket 200 ms kesilince kendiliğinden susar,
+    defter kapanınca da kapatılır (yoksa parmak ekrandayken ekran değişince ses takılı kalıyordu).
   - **Açılış simgesi (Android 12+):** sistem `windowSplashScreenAnimatedIcon` çizer, yaklaşık 290 dp.
     Ana ekran ikonu (en büyüğü 192 piksel) büyütülünce bulanık kalıyordu; bunun için
     `res/drawable-*/splash_icon.png` ayrıca üretildi (`assets/icon-foreground.png` → 288-1152 piksel).

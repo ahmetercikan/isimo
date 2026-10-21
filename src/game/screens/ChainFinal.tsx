@@ -1,6 +1,6 @@
 /** Sıra Sende sonu: kazanan, sıralama, oynanan kelime zinciri ve tekrar oyna. */
 import { Share } from '@capacitor/share';
-import confetti from 'canvas-confetti';
+import { confetti } from '../../lib/confetti';
 import { Home, RotateCcw, Share2 } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 import { Icon } from '../../components/Icon';

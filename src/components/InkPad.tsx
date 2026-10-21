@@ -80,6 +80,10 @@ export function InkPad({ strokes, onChange, onStart, color = '#3a2b27', disabled
   }, []);
 
   useEffect(draw, [strokes, color]);
+  // Yazarken defter kapanırsa (kategori değişti, tur bitti) parmak kalktı bilgisi gelmez: sesi kapat.
+  useEffect(() => () => {
+    if (pointer.current !== null) sfx.scribble(0);
+  }, []);
 
   const pos = (e: { clientX: number; clientY: number }) => {
     const r = cv.current!.getBoundingClientRect();
