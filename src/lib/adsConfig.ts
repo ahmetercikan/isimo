@@ -18,11 +18,12 @@ export interface AdIds {
   interstitial: string;
 }
 
-/** Android (gerçek kimlikler, 1.0.1'den beri). */
+/** Android (gerçek kimlikler, 1.0.3'ten beri): AdMob'da Play kaydına bağlı "İsim Şehir Online Kelime Oyunu".
+ * Eski, mağazaya bağlanamayan kayıt (~5747527917, birimler /2942235321 ve /5596318824) artık kullanılmıyor. */
 export const ADMOB_ANDROID: AdIds = {
-  appId: 'ca-app-pub-8025731390860952~5747527917',
-  banner: 'ca-app-pub-8025731390860952/2942235321',
-  interstitial: 'ca-app-pub-8025731390860952/5596318824',
+  appId: 'ca-app-pub-8025731390860952~7906996822',
+  banner: 'ca-app-pub-8025731390860952/9174267458',
+  interstitial: 'ca-app-pub-8025731390860952/6319864241',
 };
 
 /** iOS (gerçek kimlikler, 17 Ekim 2026'da AdMob'da açılan iOS uygulaması). */
