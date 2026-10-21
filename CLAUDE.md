@@ -136,6 +136,7 @@
   `android` klasöründe `.\gradlew.bat bundleRelease` doğrudan çalıştırıldı (JAVA_HOME = `~/.jdks/jdk-21.0.12.1+1`).
   **5 (1.0.5)** Mac'te derlenip incelemeye gönderildi, sonra **geri çekildi**: 1.0.4'ün düzeltmeleri bu bilgisayara
   çekilmemişti, paket onları geri alıyordu. Yerine **6 (1.0.6)** çıkarıldı (arkadaşlar + bildirimler + 14.057 kelimelik
-  havuz + 1.0.4'ün düzeltmeleri). **Ders: paket derlemeden önce `git pull`** — başka bilgisayardan yapılan yayınlar
+  havuz + 1.0.4'ün düzeltmeleri), aynı akşam incelemeye gönderildi. 1.0.5 dakikalar içinde incelemeden geçip
+  yayına çıkmıştı — inceleme hızlı bittiği için yanlış paketi geri çekmeye vakit kalmayabilir. **Ders: paket derlemeden önce `git pull`** — başka bilgisayardan yapılan yayınlar
   burada görünmüyor; Play'deki sürüm kodunu da Paket Gezgini'nden doğrula, depoya güvenme.
   Geliştirici 6262296307859358769, uygulama 4972498643282459948. Adımlar: `store/play-console-adimlar.md`.

@@ -94,8 +94,11 @@ Sürüm → Ülkeler/bölgeler → **Türkiye** (isteğe bağlı: Kuzey Kıbrıs
   Windows'tan yayınlanmıştı, o commit'ler bu bilgisayara çekilmemişti; paket 1.0.4'ün konfeti/kalem sesi
   düzeltmelerini geri alıyordu. **Derlemeden önce `git pull` yap** ve Play'deki sürüm kodunu Paket Gezgini'nden
   doğrula (Test et ve yayınla → Paket Gezgini → Tüm uygulama paketleri) — depodaki numara eskimiş olabilir.
-- 21 Eki: **sürüm kodu 6 (1.0.6)** `store/release/isim-sehir-1.0.6.aab` — arkadaşlar, bildirimler, 14.057 kelimelik
-  havuz ve 1.0.4'ün düzeltmeleri bir arada. Sıradaki yükleme: sürüm kodu 7.
+- 21 Eki 23:50: **sürüm kodu 6 (1.0.6)** `store/release/isim-sehir-1.0.6.aab` yüklendi ve incelemeye gönderildi
+  (tam kullanıma sunma) — arkadaşlar, bildirimler, 14.057 kelimelik havuz ve 1.0.4'ün düzeltmeleri bir arada.
+  Sıradaki yükleme: sürüm kodu 7.
+- **Not:** 1.0.5 incelemeden dakikalar içinde geçti (23:32'de yayına çıktı). İnceleme bazen çok hızlı
+  bitiyor, yani yanlış bir paket gönderildiğinde geri çekmeye vakit kalmayabilir.
 - Play Console'daki uygulama adresi:
   `https://play.google.com/console/u/0/developers/6262296307859358769/app/4972498643282459948/tracks/production`
 
