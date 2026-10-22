@@ -96,7 +96,12 @@ Sürüm → Ülkeler/bölgeler → **Türkiye** (isteğe bağlı: Kuzey Kıbrıs
   doğrula (Test et ve yayınla → Paket Gezgini → Tüm uygulama paketleri) — depodaki numara eskimiş olabilir.
 - 21 Eki 23:50: **sürüm kodu 6 (1.0.6)** `store/release/isim-sehir-1.0.6.aab` yüklendi ve incelemeye gönderildi
   (tam kullanıma sunma) — arkadaşlar, bildirimler, 14.057 kelimelik havuz ve 1.0.4'ün düzeltmeleri bir arada.
-  Sıradaki yükleme: sürüm kodu 7.
+- 22 Eki: **sürüm kodu 7 (1.0.7)** `store/release/isim-sehir-1.0.7.aab` derlendi — Film Avı bölümü, çevrimiçi
+  odaya bot ekleme, Film Avı defterinin büyümesi, ana sayfadaki arkadaş düğmesinin sağa alınması.
+  Derlemeden önce `git pull` yapıldı (1.0.5 dersi). Paketin içi doğrulandı: sürüm kodu 7 / 1.0.7,
+  `POST_NOTIFICATIONS` var, alarm/boot/wake izinleri yok, `META-INF/CIZIO.RSA` ile imzalı, 1.0.4'ün iki
+  düzeltmesi hâlâ içinde. **Çevrimiçi botlar için veritabanı kuralları 22 Eki'de yayınlandı** — kurallar
+  yayınlanmadan bu paketteki "Bot ekle" çalışmaz. Sıradaki yükleme: sürüm kodu 8.
 - **Not:** 1.0.5 incelemeden dakikalar içinde geçti (23:32'de yayına çıktı). İnceleme bazen çok hızlı
   bitiyor, yani yanlış bir paket gönderildiğinde geri çekmeye vakit kalmayabilir.
 - Play Console'daki uygulama adresi:

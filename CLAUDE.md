@@ -159,4 +159,7 @@
   havuz + 1.0.4'ün düzeltmeleri), aynı akşam incelemeye gönderildi. 1.0.5 dakikalar içinde incelemeden geçip
   yayına çıkmıştı — inceleme hızlı bittiği için yanlış paketi geri çekmeye vakit kalmayabilir. **Ders: paket derlemeden önce `git pull`** — başka bilgisayardan yapılan yayınlar
   burada görünmüyor; Play'deki sürüm kodunu da Paket Gezgini'nden doğrula, depoya güvenme.
+  **7 (1.0.7)** 22 Eki'de derlendi (`store/release/isim-sehir-1.0.7.aab`): Film Avı bölümü, çevrimiçi odaya bot
+  ekleme, Film Avı defterinin büyümesi, arkadaş düğmesinin sağa alınması. Bu paketteki çevrimiçi botlar için
+  **veritabanı kuralları 22 Eki'de yayınlandı** (bot düğümlerine izin); kurallar yayınlanmadan "Bot ekle" çalışmaz.
   Geliştirici 6262296307859358769, uygulama 4972498643282459948. Adımlar: `store/play-console-adimlar.md`.

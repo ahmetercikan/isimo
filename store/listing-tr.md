@@ -64,7 +64,10 @@ Kalemini hazırla, harfi çevir ve STOP de! İsim Şehir'i şimdi indir, arkada�
 
 ## Sürüm notları (en fazla 500 karakter)
 
-### 1.0.6 (Android sürüm kodu 6) — güncel
+### 1.0.7 (Android sürüm kodu 7) — güncel
+Yeni bölüm: Film Avı! İpuçları birer birer açılır (tür, yönetmen, oyuncu, konu, adın iskeleti); filmi en erken bilen en çok puanı alır. 30 film; yerli, yabancı ya da karışık seçilebilir. Artık çevrimiçi odaya da bot ekleyebilirsiniz: arkadaşınız azken masayı botlarla doldurun, oda kodunuz yine açık kalsın. Film Avı'nda yazı defteri büyüdü, ana sayfadaki arkadaş düğmesi sağa alındı.
+
+### 1.0.6 (Android sürüm kodu 6)
 Arkadaş ekleyin! Arkadaşlar ekranındaki 6 haneli kodunuzu paylaşın, arkadaşınızın kodunu girin; kimin çevrimiçi olduğunu görün, tek dokunuşla oyuna davet edin. Davet ve arkadaş isteği bildirimleri eklendi, ayarlardan kapatılabilir. Sıra Sende'nin kelime havuzu 3.900'den 14.000'e çıktı. Yol kalmadığında masaya gelen yeni kelime artık ekranda belli oluyor; eskiden kural dışı bir geçiş gibi görünüyordu.
 
 (Sürüm kodu 5 aynı notlarla gönderilmişti ama 1.0.4'ün düzeltmelerini içermediği için geri çekildi; kullanıcıya hiç ulaşmadı.)
