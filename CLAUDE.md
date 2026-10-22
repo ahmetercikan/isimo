@@ -162,4 +162,6 @@
   **7 (1.0.7)** 22 Eki'de derlendi (`store/release/isim-sehir-1.0.7.aab`): Film Avı bölümü, çevrimiçi odaya bot
   ekleme, Film Avı defterinin büyümesi, arkadaş düğmesinin sağa alınması. Bu paketteki çevrimiçi botlar için
   **veritabanı kuralları 22 Eki'de yayınlandı** (bot düğümlerine izin); kurallar yayınlanmadan "Bot ekle" çalışmaz.
+  22 Eki 20:52'de incelemeye gönderildi; **mağaza metni de aynı incelemeye katıldı** (kısa ve tam açıklama
+  artık üç oyunu da anlatıyor). Mağaza metni ile paketi aynı anda göndermek tek inceleme demek.
   Geliştirici 6262296307859358769, uygulama 4972498643282459948. Adımlar: `store/play-console-adimlar.md`.

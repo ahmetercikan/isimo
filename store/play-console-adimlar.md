@@ -101,7 +101,12 @@ Sürüm → Ülkeler/bölgeler → **Türkiye** (isteğe bağlı: Kuzey Kıbrıs
   Derlemeden önce `git pull` yapıldı (1.0.5 dersi). Paketin içi doğrulandı: sürüm kodu 7 / 1.0.7,
   `POST_NOTIFICATIONS` var, alarm/boot/wake izinleri yok, `META-INF/CIZIO.RSA` ile imzalı, 1.0.4'ün iki
   düzeltmesi hâlâ içinde. **Çevrimiçi botlar için veritabanı kuralları 22 Eki'de yayınlandı** — kurallar
-  yayınlanmadan bu paketteki "Bot ekle" çalışmaz. Sıradaki yükleme: sürüm kodu 8.
+  yayınlanmadan bu paketteki "Bot ekle" çalışmaz.
+- 22 Eki 20:52: **sürüm kodu 7 (1.0.7)** yüklendi ve incelemeye gönderildi (tam kullanıma sunma).
+  Aynı incelemeye **mağaza metni de** katıldı: kısa açıklama ve tam açıklama üç oyunu da anlatacak
+  şekilde yenilendi (Yayın özeti → "3 değişikliği incelemeye gönder" — sürüm + iki metin bir arada;
+  böylece iki ayrı inceleme beklenmiyor). Uyarılar yine aynı ikisi, cihaz kaybı yok.
+  Sıradaki yükleme: sürüm kodu 8.
 - **Not:** 1.0.5 incelemeden dakikalar içinde geçti (23:32'de yayına çıktı). İnceleme bazen çok hızlı
   bitiyor, yani yanlış bir paket gönderildiğinde geri çekmeye vakit kalmayabilir.
 - Play Console'daki uygulama adresi:

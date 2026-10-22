@@ -6,24 +6,27 @@ Karakter sınırları `node scripts/check-listing.mjs` ile kontrol edilir.
 İsim Şehir Online Kelime Oyunu
 
 ## Kısa açıklama (en fazla 80 karakter)
-Arkadaşlarınla online İsim Şehir oyna: harfi çevir, elinle yaz, ilk sen STOP de!
+Online İsim Şehir, Sıra Sende ve Film Avı: harfi çevir, elinle yaz, STOP de!
 
 ## Tam açıklama (en fazla 4000 karakter)
-Çocukluğumuzun efsane oyunu İsim Şehir artık telefonunda! Kâğıt kaleme gerek yok: arkadaşlarınla, ailenle ya da botlara karşı online İsim Şehir oyna. Harfi çevir, cevapları parmağınla yaz, ilk bitiren olup STOP de!
+Çocukluğumuzun efsane oyunu İsim Şehir artık telefonunda — üstelik yanında iki oyun daha! Kâğıt kaleme gerek yok: arkadaşlarınla, ailenle ya da botlara karşı online oyna. Harfi çevir, cevaplarını parmağınla yaz, ilk bitiren olup STOP de!
 
-İsim, şehir, hayvan, bitki, eşya, ülke… Klasik İsim Şehir Hayvan Bitki Eşya oyununun bütün keyfi, otomatik puan tablosu ve el yazısı tanıma ile çok daha eğlenceli.
+Üç oyun tek uygulamada: İsim Şehir, Sıra Sende ve Film Avı. Hepsi en fazla 10 kişilik, hepsi tek bir oda koduyla, hepsi botlara karşı da oynanabilir.
 
-🔤 HARFİ ÇEVİR, DUR DE!
-Sayaç A'dan Z'ye sayar. Sırası gelen oyuncu "DUR!" düğmesine basar ve harf belli olur. Aynı oyunda bir harf iki kez çıkmaz. Zor harfleri (J, Ö, Ü, Ş, Ç…) istersen açarsın.
+🔤 İSİM ŞEHİR — HARFİ ÇEVİR, STOP DE!
+Sayaç A'dan Z'ye sayar; sırası gelen oyuncu "DUR!" der ve harf belli olur. İsim, şehir, hayvan, bitki, eşya, ülke… Klasik İsim Şehir Hayvan Bitki Eşya oyununun bütün keyfi. Aynı oyunda bir harf iki kez çıkmaz; zor harfleri (J, Ö, Ü, Ş, Ç…) istersen açarsın. Bütün kategorileri dolduran STOP diyebilir, diğerlerine yalnızca 10 saniye kalır.
+
+🅰️ SIRA SENDE — BİR HARF DEĞİŞTİR, YENİ KELİME
+Masadaki kelimede tek bir harfi değiştirip yeni bir Türkçe kelime yap: KEDİ → KADI → KADIN. Sıran gelince süren işler; bulamazsan bir can gider. 14.000 kelimelik havuz, 3, 4 ya da 5 harf, istersen harf ekleyip çıkarmak da serbest.
+
+🎬 FİLM AVI — İPUÇLARINDAN FİLMİ BİL
+İpuçları birer birer açılır: tür ve yıl, yönetmen, oyuncular, konu ve en sonunda filmin adının iskeleti. Ne kadar erken bilirsen o kadar çok puan. Yerli, yabancı ya da karışık seçebilirsin. İlk harfleri yazmaya başla, uygulama film adlarını önersin.
 
 ✍️ PARMAĞINLA YAZ, UYGULAMA OKUSUN
 Cevaplarını kâğıda yazar gibi parmağınla yaz. Türkçe el yazısı tanıma yazdığını okur ve kutuya geçirir. Yanlış okursa önerilerden doğrusunu seç ya da klavyeyle yaz. El yazısı tanıma bir kez indikten sonra internetsiz çalışır.
 
-🛑 İLK BİTİREN STOP DER
-Bütün kategorileri dolduran STOP diyebilir; diğer oyunculara yalnızca 10 saniye kalır. Hızlı ol, heyecan hiç bitmesin!
-
 👫 ARKADAŞLARINLA ONLINE OYNA (10 KİŞİYE KADAR)
-Bir oda kur, 5 haneli oda kodunu paylaş, arkadaşların kendi telefonlarından katılsın. Aynı evde, okulda, yolculukta ya da kilometrelerce uzaktan… En fazla 10 kişi aynı oyunda. Üyelik ve şifre yok, hemen başla.
+Bir oda kur, 5 haneli oda kodunu paylaş, arkadaşların kendi telefonlarından katılsın. Arkadaş listen de var: 6 haneli arkadaş kodunu ver, kimin çevrimiçi olduğunu gör, tek dokunuşla oyuna çağır. Arkadaşın azsa odana bot ekle, masa dolsun. Üyelik ve şifre yok, hemen başla.
 
 🗳️ CEVAPLAR HERKESİN ÖNÜNDE
 Tur bitince her kategoride bütün cevaplar herkesin ekranına, yazanın el yazısıyla birlikte gelir. Uydurma bir cevap mı var? 👎 ile oy verin; çoğunluk derse cevap iptal olur. Emoji tepkileriyle eğlence ikiye katlanır.
@@ -36,17 +39,13 @@ Klasik İsim Şehir kuralları:
 Puan tablosu her turdan sonra kendiliğinden güncellenir. Oyun sonunda kürsü, ödüller (Tek Kalan, STOP Ustası, Kelime Hazinesi) ve konfeti seni bekler.
 
 🤖 İNTERNET YOK MU? BOTLARA KARŞI OYNA
-Robo Ramiz, Bilge Baykuş, Kurnaz Tilki ve diğer botlara karşı internetsiz oyna. Kolay, orta ve zor seviye. Tek başına ısın, kelime hazineni geliştir!
+Robo Ramiz, Bilge Baykuş, Kurnaz Tilki ve diğer botlara karşı internetsiz oyna. Kolay, orta ve zor seviye, üç oyunun hepsinde. Tek başına ısın, kelime hazineni geliştir!
 
 📚 14 KATEGORİ + KENDİ KATEGORİN
 İsim, Şehir, Hayvan, Bitki, Eşya, Ülke, Meslek, Yemek, Ünlü, Marka, Film/Dizi, Spor/Oyun, Renk, Vücut. İstersen "Çizgi film", "Futbolcu" gibi kendi kategorini ekle. Yaklaşık 8.600 kelimelik Türkçe sözlük, cevabın doğru olup olmadığını anında gösterir.
 
 ⚙️ OYUNU SEN AYARLA
-• 3, 5, 7 ya da 10 tur
-• 60 saniyeden 3 dakikaya kadar yazma süresi
-• STOP kuralı açık/kapalı
-• Harfi oyuncular mı durdursun, sayaç mı?
-• Zor harfler açık/kapalı
+Tur sayısı, yazma süresi, STOP kuralı, harfi oyuncu mu sayaç mı durduracak, zor harfler, kelime uzunluğu, can sayısı, film sayısı ve ipuçları arası süre — hepsi senin elinde.
 
 🎵 OYUN GİBİ OYUN
 Renkli ve sevimli tasarım, akıcı animasyonlar, harf sayacının tıkırtısı, STOP düdüğü, fanfarlar ve fon müziği. Telefonda da tablette de tam ekran.
