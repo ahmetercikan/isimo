@@ -121,6 +121,8 @@ export class FirebaseTransport implements Transport {
   private offset = 0;
   private offs: (() => void)[] = [];
   private meRef: DatabaseReference;
+  /** Son gelen durum: botlar (src/game/bots.ts) aradaki anı buradan okur. */
+  private last: RoomState | null = null;
 
   constructor(readonly code: string, readonly me: string) {
     this.meRef = roomRef(code, `players/${me}`);
@@ -149,12 +151,17 @@ export class FirebaseTransport implements Transport {
         const room = s.val() as RoomState | null;
         // Çıkarılan oyuncunun bağlantı kopunca yazılan yarım kaydı ("on": false) oyuncu sayılmaz.
         if (room?.players) for (const [p, v] of Object.entries(room.players)) if (!v?.name) delete room.players[p];
-        cb(room && room.ctl && room.settings ? { ...room, players: room.players ?? {} } : null);
+        this.last = room && room.ctl && room.settings ? { ...room, players: room.players ?? {} } : null;
+        cb(this.last);
       },
       () => cb(null),
     );
     this.offs.push(off);
     return off;
+  }
+
+  peek() {
+    return this.last;
   }
 
   now() {
@@ -193,7 +200,8 @@ export class FirebaseTransport implements Transport {
       await onDisconnect(roomRef(this.code, `players/${this.me}/on`)).cancel();
       const room = (await get(roomRef(this.code))).val() as RoomState | null;
       if (!room) return;
-      const others = Object.entries(room.players ?? {}).filter(([p, v]) => p !== this.me && v.on && !v.left);
+      // Botlar oyuncu sayılmaz: son insan çıkınca oda botlarla birlikte silinir.
+      const others = Object.entries(room.players ?? {}).filter(([p, v]) => p !== this.me && v.on && !v.left && !v.bot);
       if (!others.length) {
         // Son kişi çıkınca oda ve izleri silinir.
         await remove(inkRef(this.code));

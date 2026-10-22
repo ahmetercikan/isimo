@@ -127,7 +127,8 @@
 /* ---------- Ana sayfa ---------- */
 
 .home { gap: 18px; }
-.home__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+/* Ad solda, yuvarlak düğmeler sağda yan yana (space-between olunca arkadaş düğmesi ortada kalıyordu). */
+.home__top { display: flex; align-items: center; gap: 10px; }
 .me-chip {
   display: flex;
   align-items: center;
@@ -140,6 +141,7 @@
   font-weight: 600;
   font-size: 18px;
   max-width: 70%;
+  margin-right: auto;
 }
 .me-chip__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .me-chip svg { color: var(--muted); flex: none; }
@@ -363,6 +365,9 @@
 .seg { display: flex; background: var(--cream); padding: 5px; border-radius: 18px; gap: 4px; }
 .seg__btn { flex: 1; min-height: 46px; border-radius: 14px; font-family: var(--display); font-weight: 600; font-size: 17px; color: var(--ink-2); transition: background 0.15s; }
 .seg__btn.is-on { background: #fff; color: var(--coral-dark); box-shadow: 0 3px 0 var(--line-2); }
+.seg--sm { padding: 4px; border-radius: 14px; }
+.seg--sm .seg__btn { min-height: 36px; font-size: 15px; border-radius: 11px; }
+.seg--sm .seg__btn.is-on { box-shadow: 0 2px 0 var(--line-2); }
 
 /* ---------- Katıl ---------- */
 

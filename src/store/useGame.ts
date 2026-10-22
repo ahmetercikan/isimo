@@ -7,8 +7,8 @@ import { loadWords } from '../engine/chain';
 import { loadFilms } from '../engine/film';
 import { loadDicts } from '../engine/dict';
 import { newCtl, type RoomState, type Settings } from '../engine/types';
-import { BOT_PROFILES, runBots } from '../game/bots';
-import { direct } from '../game/director';
+import { botId, BOT_PROFILES, hasBots, runBots } from '../game/bots';
+import { actingHost, direct } from '../game/director';
 import { LocalTransport } from '../online/local';
 import type { Transport } from '../online/transport';
 import { useProfile } from './useProfile';
@@ -36,10 +36,10 @@ export const useGame = create<GameState>()((set, get) => ({
     const p = useProfile.getState();
     const now = Date.now();
     const players: RoomState['players'] = { me: { name: p.name || 'Ben', avatar: p.avatar, color: p.color, joined: now, on: true } };
-    for (let i = 0; i < count; i++) players[`bot${i}`] = { ...BOT_PROFILES[i % BOT_PROFILES.length], joined: now + i + 1, on: true, bot: level };
+    for (let i = 0; i < count; i++) players[botId(i)] = { ...BOT_PROFILES[i % BOT_PROFILES.length], joined: now + i + 1, on: true, bot: level };
     const t = new LocalTransport({ code: 'BOT', host: 'me', created: now, settings, players, ctl: newCtl() }, 'me');
+    // Botları attach başlatır (çevrimiçi odada da aynı yol): burada ikinci kez başlatılmaz.
     get().attach(t);
-    stop.push(runBots(t));
   },
 
   attach(t) {
@@ -49,17 +49,27 @@ export const useGame = create<GameState>()((set, get) => ({
     // Arkadaşlar "Katıl" diyebilsin diye bulunduğumuz oda kartta duyurulur (yalnız çevrimiçi oda).
     if (t.kind === 'online') void import('../online/friends').then((f) => f.setRoom(t.code)).catch(() => {});
     let seen = false;
+    // Botlar: odada bot varsa ve bu cihaz yönetiyorsa oynatılır. Çevrimiçi odada ev sahibi
+    // ayrılıp yöneten değişince botlar kendiliğinden öteki cihaza geçer (iki cihaz aynı botu oynatmaz).
+    let bots: (() => void) | null = null;
     const off = t.subscribe((s) => {
       if (s) seen = true;
       set({ s, lost: seen && !s });
-      if (s) void direct(t, s);
+      if (!s) return;
+      void direct(t, s);
+      const mine = hasBots(s) && actingHost(s) === t.me;
+      if (mine && !bots) bots = runBots(t);
+      else if (!mine && bots) {
+        bots();
+        bots = null;
+      }
     });
     // Zamanlı geçişler için (durum değişmese de süre dolar)
     const iv = window.setInterval(() => {
       const s = get().s;
       if (s) void direct(t, s);
     }, 300);
-    stop.push(off, () => clearInterval(iv));
+    stop.push(off, () => clearInterval(iv), () => bots?.());
   },
 
   async leave() {

@@ -62,6 +62,8 @@
     ayarlar `components/FilmSettings.tsx`, aşama `'clue'`, kurulum `/kur/:mode?oyun=film`. Film listesi
     `src/data/films.ts` (şimdilik 15 yerli + 15 yabancı; `DECOYS` yalnız öneri listesinde çıkan adlar, liste cevabı
     ele vermesin). Afiş yok (telif); konu cümleleri bize ait. Yanlış tahmin 2,5 sn bekletir (yalnız cihazda).
+    Defterin üstünde **tek şerit** var (`.alts`): öneriler, okunan yazı ya da yol gösteren metin. Ayrı bir
+    cevap kutusu (`.answer`) vardı; iki şerit yazacak alanı daraltıyordu (kullanıcı şikâyeti, 22 Eki 2026).
   - **Ekran düzeni:** `src/styles/app.css` + `game.css` telefon dikey; `tablet.css` 700 px'ten geniş ekranlar;
     `landscape.css` yatay tutulan telefonlar (`orientation: landscape` ve yükseklik ≤ 560 px) — yatayda telefon
     700 px'i geçtiği için tablet ölçüleri devreye giriyor, bu dosya onları küçültüp yazı defteri ile düğmeleri
@@ -82,6 +84,15 @@
     `res/drawable-*/splash_icon.png` ayrıca üretildi (`assets/icon-foreground.png` → 288-1152 piksel).
     Simge değişirse bu dosyalar da yenilenmeli.
   - `src/online/`: ortak arayüz (transport.ts), botlu oyun (local.ts), Firebase (firebase.ts, config.ts); kurallar `database.rules.json`
+  - **Çevrimiçi odada bot (22 Eki 2026):** ev sahibi lobide "Bot ekle" ile masayı doldurur (üç oyunda da;
+    arkadaş azken iki kişi zevksiz oluyordu — kullanıcı isteği). Bot kimlikleri **`bot-0`…`bot-8`**;
+    kurallar bot düğümlerini bu **önekten** tanır ve odadaki bir oyuncunun onlar adına yazmasına izin verir
+    (`players/bot-*` kurma, `answers`/`votes`/`ready`; Sıra Sende ile Film Avı zaten `ctl` içinde). İzin
+    **ev sahibine değil odadakilere** verildi: `ctl` de zaten odadakilere açık, yani güven sınırı aynı;
+    ayrıca ev sahibi düşünce yöneten değişiyor, kural bunu hesaplayamaz. Botları **yalnızca yöneten cihaz**
+    oynatır (`src/store/useGame.ts` → `attach`: `hasBots(s) && actingHost(s) === t.me`), yoksa iki cihaz
+    aynı botu oynatır. `Transport.peek()` bunun için eklendi (botlar ara durumu ağa gitmeden okur).
+    Son **insan** çıkınca oda silinir: `firebase.ts` → `leave()` botları "başka oyuncu" saymaz.
   - **Arkadaşlar (21 Eki 2026):** giriş ekranı yok — her cihaz zaten anonim bir Firebase hesabı; oyuncular
     birbirini **6 haneli arkadaş kodu** ile bulur (oda kodu 5 hane, karışmasın diye). Veri katmanı
     `src/online/friends.ts`, durum `src/store/useFriends.ts`, ekran `src/pages/Friends.tsx` (`/arkadaslar`),
@@ -92,8 +103,8 @@
     `f/{uid}` için tek çocuk okuma izni verir ("beni ekledin mi" sorulabilir, listenin tamamı okunamaz).
     Daveti yetkilendiren **alıcının** listesidir: yalnız alıcının eklediği biri onu odaya çağırabilir.
     Çevrimiçi durumu `onDisconnect` ile yazılır, uygulama arka plana geçince de `on: false` olur.
-  - **Kural denemesi:** `npm run emulators` + `npm run test:rules` (`scripts/kural-deneme.mjs`, 31 deneme,
-    üç oyuncu; izin verilmesi *ve* reddedilmesi gerekenleri sınar). İki tuzak: (1) kural dosyasında
+  - **Kural denemesi:** `npm run emulators` + `npm run test:rules` (`scripts/kural-deneme.mjs`, 48 deneme,
+    üç oyuncu; arkadaşlar ve oda botları; izin verilmesi *ve* reddedilmesi gerekenleri sınar). İki tuzak: (1) kural dosyasında
     **yorum satırı olamaz** (`"//"` çocuk adı sayılır, emülatör dosyayı hiç yüklemez); (2) veritabanı
     emülatörü tek proje kipinde **`<projectId>-default-rtdb`** ad alanını kullanır — başka ad alanına giden
     istek "sahip" sayılıp **kuralları atlar**. `src/online/firebase.ts`'teki emülatör adresi bu yüzden

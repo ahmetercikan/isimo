@@ -1,5 +1,5 @@
 import { Share } from '@capacitor/share';
-import { Copy, Settings2, Share2, UserX } from 'lucide-react';
+import { Bot, Copy, Settings2, Share2, UserX } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { ChainSettings } from '../../components/ChainSettings';
 import { FilmSettings } from '../../components/FilmSettings';
@@ -14,10 +14,12 @@ import { useProfile } from '../../store/useProfile';
 import { startChain } from '../chainDirector';
 import { startFilm } from '../filmDirector';
 import { actingHost, startGame } from '../director';
+import { BOT_LEVELS, BOT_PROFILES, botId, freeBotSlot } from '../bots';
 
 export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
   const [edit, setEdit] = useState(false);
   const [kick, setKick] = useState<string | null>(null);
+  const [level, setLevel] = useState(useProfile.getState().bots.level);
   const [toast, show] = useToast();
   useEffect(() => {
     void showBanner(false);
@@ -30,6 +32,19 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
     .sort((a, b) => a[1].joined - b[1].joined);
   const canStart = !online || players.length >= 2;
   const st = s.settings;
+  // Çevrimiçi odaya bot: arkadaş azsa masa bot ile dolsun (botları yöneten cihaz oynatır).
+  const slot = freeBotSlot(Object.keys(s.players));
+  const canAddBot = online && isHost && slot >= 0 && players.length < MAX_PLAYERS;
+  const addBot = async () => {
+    if (!canAddBot) return;
+    sfx.pop();
+    useProfile.getState().set({ bots: { ...useProfile.getState().bots, level } });
+    try {
+      await t.update({ [`players/${botId(slot)}`]: { ...BOT_PROFILES[slot], joined: t.now(), on: true, bot: level } });
+    } catch {
+      show('Bot eklenemedi');
+    }
+  };
   const siram = st.game === 'siram';
   const film = st.game === 'film';
 
@@ -86,7 +101,11 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
               <span className="player-slot__name">{p.name}</span>
               {pid === t.me && <span className="me-tag">Sen</span>}
               {isHost && online && pid !== t.me && (
-                <button className="player-slot__kick" aria-label={`${p.name} çıkar`} onClick={() => setKick(pid)}>
+                <button
+                  className="player-slot__kick"
+                  aria-label={`${p.name} çıkar`}
+                  onClick={() => (sfx.tap(), p.bot ? void t.update({ [`players/${pid}`]: null }) : setKick(pid))}
+                >
                   <UserX size={16} strokeWidth={2.6} />
                 </button>
               )}
@@ -100,6 +119,19 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
               </li>
             ))}
         </ul>
+        {online && isHost && (
+          <div className="bot-add">
+            <button className="btn-outline btn-outline--sm" disabled={!canAddBot} onClick={() => void addBot()}>
+              <Bot size={20} strokeWidth={2.6} /> Bot ekle
+            </button>
+            <div className="seg seg--sm">
+              {BOT_LEVELS.map((l) => (
+                <button key={l.level} className={`seg__btn ${level === l.level ? 'is-on' : ''}`} onClick={() => (sfx.tap(), setLevel(l.level))}>{l.label}</button>
+              ))}
+            </div>
+            <p className="muted bot-add__note">{slot < 0 ? 'Bütün botlar masada.' : 'Arkadaş azsa masayı botlarla doldur.'}</p>
+          </div>
+        )}
       </section>
 
       <section className="paper-card rules-card rise" style={{ animationDelay: '0.08s' }}>

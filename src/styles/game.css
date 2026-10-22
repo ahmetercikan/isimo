@@ -88,6 +88,12 @@
 .player-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 16px 8px; }
 .player-slot { position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px; padding-top: 8px; }
 .player-slot__name { font-weight: 800; font-size: 14px; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* Lobide bot ekleme (çevrimiçi oda): düğme solda, zorluk sağda. */
+.bot-add { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; border-top: 2.5px dashed var(--line-2); padding-top: 12px; }
+.bot-add .btn-outline { flex: none; }
+.bot-add .seg { flex: 1; min-width: 150px; }
+.bot-add__note { flex-basis: 100%; font-size: 12.5px; font-weight: 700; margin: 0; }
+
 .player-slot__kick { position: absolute; top: 0; right: 6px; width: 28px; height: 28px; border-radius: 50%; background: #fff; color: var(--red); display: grid; place-items: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18); }
 .player-slot--empty { opacity: 0.55; }
 .empty-avatar { width: 56px; height: 56px; border-radius: 50%; border: 3px dashed var(--line-2); display: grid; place-items: center; font-family: var(--display); font-size: 24px; color: var(--muted); }
@@ -297,6 +303,9 @@
 .alts::-webkit-scrollbar { display: none; }
 .alts__label { flex: none; font-weight: 700; font-size: 13px; color: var(--muted); }
 .alts__label--idle { opacity: 0.75; }
+.alts__mine { flex: none; font-family: var(--display); font-weight: 700; font-size: 22px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.alts__wrong { flex: none; font-weight: 800; font-size: 14px; color: var(--red); display: flex; align-items: center; gap: 6px; }
+.alts__wrong b { font-family: var(--display); font-weight: 700; font-size: 20px; }
 .alt { flex: none; }
 .alt { padding: 6px 12px; border-radius: 12px; background: var(--sun-soft); box-shadow: 0 2px 0 var(--sun-dark); font-family: var(--display); font-weight: 600; font-size: 16px; }
 .alt:active { transform: translateY(2px); box-shadow: none; }
@@ -521,6 +530,7 @@
   .write-card { padding: 10px; gap: 8px; }
   .answer { height: 50px; }
   .answer__text { font-size: 26px; }
+  .film-card .pad-box { min-height: 160px; }
 }
 
 /* ---------- Sıra Sende (harf değiştir) ---------- */
@@ -649,6 +659,8 @@
 .film-card .alt { max-width: 70vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .film-card .alt:disabled { opacity: 0.5; }
 .film-card__go { min-height: 46px; min-width: 0; padding: 0 18px; font-size: 18px; border-radius: 16px; }
+/* Cevap kutusu yok: defter daha büyük. */
+.film-card .pad-box { min-height: 210px; }
 .film-wrong { color: var(--red); text-decoration: line-through; text-decoration-thickness: 3px; opacity: 0.7; animation: shake 0.45s; }
 
 .film-reveal { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 20px 16px; text-align: center; }

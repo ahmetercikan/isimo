@@ -10,6 +10,8 @@ export interface Transport {
   readonly me: string;
   readonly code: string;
   subscribe(cb: (s: RoomState | null) => void): () => void;
+  /** Botlar için son bilinen durum (ağa gitmez; henüz hiç gelmediyse null). */
+  peek(): RoomState | null;
   /** Herkeste aynı saat (sunucu saatine göre düzeltilmiş). */
   now(): number;
   /** Oda köküne göre çok yollu güncelleme ("answers/r1/pid/isim": "Ali"); null siler. */

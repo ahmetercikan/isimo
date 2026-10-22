@@ -1,5 +1,5 @@
 /**
- * database.rules.json'daki **arkadaş** kurallarını emülatörde dener (üç ayrı oyuncu: A, B, C).
+ * database.rules.json'daki **arkadaş** ve **oda botu** kurallarını emülatörde dener (üç oyuncu: A, B, C).
  * Hem izin verilmesi gerekenleri hem de reddedilmesi gerekenleri sınar.
  *
  * Çalıştırma (iki ayrı terminal):
@@ -93,6 +93,34 @@ await ok('A hâlâ B\'yi arkadaş saydığı için B çağırabilir', () =>
 await ok('A, B\'yi listesinden çıkarır', () => remove(A.r(`users/${A.uid}/f/${B.uid}`)));
 await denied('A çıkarınca B artık A\'yı çağıramaz', () =>
   set(B.r(`users/${A.uid}/inv/${B.uid}`), { code: 'ZZZ99', name: 'B', avatar: 'panda', color: '#14a89a' }));
+
+console.log('\n7) Odaya bot ekleme (çevrimiçi oda)');
+const ROOM = `R${run}77`;
+const bot = (lv) => ({ name: 'Robo Ramiz', avatar: 'robot', color: '#5b6cff', joined: Date.now(), on: true, bot: lv });
+const me = (n) => ({ name: n, avatar: 'tilki', color: '#ff6b4a', joined: Date.now(), on: true });
+const ctl = { phase: 'lobby', round: 0, letter: '', used: '', stopper: '', spinAt: 0, startAt: 0, endAt: 0, stopBy: '', cat: 0, catEndAt: 0, nextAt: 0, seq: 0 };
+const settings = { cats: [{ id: 'isim', label: 'İsim' }], rounds: 3, time: 60, stop: true, grace: 5, hard: false, manualStop: true };
+
+await ok('A odayı kurar', () =>
+  set(A.r(`rooms/${ROOM}`), { code: ROOM, host: A.uid, created: Date.now(), settings, players: { [A.uid]: me('A') }, ctl }));
+await ok('B odaya katılır', () => set(B.r(`rooms/${ROOM}/players/${B.uid}`), me('B')));
+await ok('A odaya bot ekler', () => set(A.r(`rooms/${ROOM}/players/bot-0`), bot(2)));
+await ok('B de bot ekleyebilir (yöneten değişebilir)', () => set(B.r(`rooms/${ROOM}/players/bot-1`), bot(3)));
+await ok('A, botun cevabını yazar', () => set(A.r(`rooms/${ROOM}/answers/r1/bot-0/isim`), 'Ayşe'));
+await ok('B kendi cevabını yazar', () => set(B.r(`rooms/${ROOM}/answers/r1/${B.uid}/isim`), 'Zzz'));
+await ok('A, botun itirazını yazar', () => set(A.r(`rooms/${ROOM}/votes/r1/isim/${B.uid}/bot-0`), true));
+await ok('A, botun "bitirdim"ini yazar', () => set(A.r(`rooms/${ROOM}/ready/r1/bot-0`), 0));
+await ok('A botu çıkarır', () => remove(A.r(`rooms/${ROOM}/players/bot-1`)));
+
+await denied('Bot kaydı "bot" alanı olmadan yazılamaz', () =>
+  set(A.r(`rooms/${ROOM}/players/bot-2`), { name: 'Sahte', avatar: 'robot', color: '#000', joined: Date.now(), on: true }));
+await denied('C (odada değil) bot ekleyemez', () => set(C.r(`rooms/${ROOM}/players/bot-3`), bot(1)));
+await denied('C (odada değil) bot cevabı yazamaz', () => set(C.r(`rooms/${ROOM}/answers/r1/bot-0/isim`), 'Hile'));
+await denied('A, başka bir insanın cevabını yazamaz', () => set(A.r(`rooms/${ROOM}/answers/r1/${B.uid}/isim`), 'Hile'));
+await denied('A, B adına "bitirdim" yazamaz', () => set(A.r(`rooms/${ROOM}/ready/r1/${B.uid}`), 0));
+await denied('A, B adına oy veremez', () => set(A.r(`rooms/${ROOM}/votes/r1/isim/${A.uid}/${B.uid}`), true));
+await denied('A, B\'nin kaydını değiştiremez', () => set(A.r(`rooms/${ROOM}/players/${B.uid}/name`), 'Sahte'));
+await ok('oda temizlenir', () => remove(A.r(`rooms/${ROOM}`)));
 
 console.log(`\nSONUÇ: ${pass} geçti, ${fail} kaldı`);
 process.exit(fail ? 1 : 0);

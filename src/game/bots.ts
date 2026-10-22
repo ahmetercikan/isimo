@@ -1,8 +1,12 @@
 /**
- * Botlar (yalnızca botlu oyunda): harfi durdurur, sözlükten cevap yazar, değerlendirmede "tamam" der.
+ * Botlar: harfi durdurur, sözlükten cevap yazar, değerlendirmede "tamam" der.
  * Sıra Sende'de sırası gelince kelime havuzundan hamle bulur (zorluk: bulma şansı ve hız).
  * Film Avı'nda filmi bir ipucunda bilir: zor bot erken, kolay bot geç (bazen hiç); zor filmde bir ipucu geç.
  * Zorluk: 1 kolay (az ve geç yazar), 2 orta, 3 zor (çok ve hızlı yazar, STOP der).
+ *
+ * Hem botlu oyunda (bellekteki oda) hem çevrimiçi odada çalışır. Çevrimiçi odada botları
+ * yalnızca **yöneten cihaz** oynatır (bkz. src/store/useGame.ts): iki cihaz aynı botu oynatmaz.
+ * Bot kimlikleri "bot-" ile başlar; veritabanı kuralları bot düğümlerini bu önekten tanır.
  */
 import { botMove, chainList, loadWords, ruleOf, wordsReady } from '../engine/chain';
 import { CLUES, filmById } from '../engine/film';
@@ -10,10 +14,20 @@ import { CATEGORIES, hasDict } from '../engine/categories';
 import { lookup, wordsFor } from '../engine/dict';
 import { capitalize, startsWithLetter } from '../engine/tr';
 import { rKey, type Player, type RoomState } from '../engine/types';
-import type { LocalTransport } from '../online/local';
+import type { Transport } from '../online/transport';
 import { missTurn, playWord } from './chainDirector';
 import { guessFilm, stepMs } from './filmDirector';
 import { stopLetter } from './director';
+
+/** Bot oyuncu kimliği (önek kuralların da tanıdığı "bot-"). */
+export const botId = (i: number) => `bot-${i}`;
+/** Odadaki ilk boş bot sırası (-1: bütün yüzler kullanılmış). */
+export const freeBotSlot = (taken: Iterable<string>) => {
+  const used = new Set(taken);
+  return BOT_PROFILES.findIndex((_, i) => !used.has(botId(i)));
+};
+/** Odada bot var mı. */
+export const hasBots = (s: RoomState) => Object.values(s.players).some((p) => !!p.bot);
 
 export const BOT_PROFILES: Pick<Player, 'name' | 'avatar' | 'color'>[] = [
   { name: 'Robo Ramiz', avatar: 'robot', color: '#5b6cff' },
@@ -37,8 +51,8 @@ const REACT = ['haha', 'vay', 'ates', 'kalp', 'hmm'];
 const rand = (a: number, b: number) => a + Math.random() * (b - a);
 const pick = <T,>(xs: T[]) => xs[Math.floor(Math.random() * xs.length)];
 
-/** Botları yerel odaya bağlar; döner: durdurma fonksiyonu. */
-export function runBots(t: LocalTransport): () => void {
+/** Botları odaya bağlar (yalnızca bir cihazda çağrılmalı); döner: durdurma fonksiyonu. */
+export function runBots(t: Transport): () => void {
   let timers: number[] = [];
   let lastKey = '';
   const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
@@ -60,7 +74,10 @@ export function runBots(t: LocalTransport): () => void {
     clear();
     const now = t.now();
     if (c.phase === 'spin' && !c.letter && s.players[c.stopper]?.bot && s.settings.manualStop) {
-      later(rand(1400, 3200), () => void stopLetter(t, t.peek()));
+      later(rand(1400, 3200), () => {
+        const st = t.peek();
+        if (st) void stopLetter(t, st);
+      });
     }
     // ---- Sıra Sende: sırası gelen bot kelime arar ----
     if (c.phase === 'turn' && c.word && s.players[c.turn ?? '']?.bot) {
@@ -71,7 +88,7 @@ export function runBots(t: LocalTransport): () => void {
       const span = Math.max(1500, c.endAt - now);
       const play = () => {
         const st = t.peek();
-        if (st.ctl.phase !== 'turn' || st.ctl.turn !== pid || st.ctl.seq !== c.seq || !st.ctl.word) return;
+        if (!st || st.ctl.phase !== 'turn' || st.ctl.turn !== pid || st.ctl.seq !== c.seq || !st.ctl.word) return;
         const w = Math.random() < lv.fill ? botMove(st.ctl.word, chainList(st.ctl.chain), rule, level) : null;
         if (w) void playWord(t, st, w, pid);
         else void missTurn(t, st, pid, 'pass');
@@ -93,8 +110,8 @@ export function runBots(t: LocalTransport): () => void {
         const at = c.startAt + (clue - 1 + rand(0.25, 0.9)) * step - now;
         later(Math.max(300, at), () => {
           const st = t.peek();
-          const f = filmById(st.ctl.film);
-          if (st.ctl.phase !== 'clue' || st.ctl.round !== c.round || st.ctl.nextAt || !f) return;
+          const f = st && filmById(st.ctl.film);
+          if (!st || st.ctl.phase !== 'clue' || st.ctl.round !== c.round || st.ctl.nextAt || !f) return;
           void guessFilm(t, st, f.t, b);
         });
       }
@@ -117,8 +134,8 @@ export function runBots(t: LocalTransport): () => void {
           const at = c.startAt - now + span * rand(lv.from, lv.to) * ((i + 1) / cats.length) ** 0.6;
           last = Math.max(last, at);
           later(Math.max(300, at), () => {
-            const cur = t.peek().ctl;
-            if (cur.phase !== 'write' || cur.round !== c.round || t.now() > cur.endAt) return;
+            const cur = t.peek()?.ctl;
+            if (!cur || cur.phase !== 'write' || cur.round !== c.round || t.now() > cur.endAt) return;
             void t.update({ [`answers/${rKey(c.round)}/${b}/${cat.id}`]: capitalize(w) });
           });
         });
@@ -126,6 +143,7 @@ export function runBots(t: LocalTransport): () => void {
         if (lv.level === 3 && s.settings.stop && Math.random() < 0.6) {
           later(Math.max(500, last + rand(800, 2500)), () => {
             const st = t.peek();
+            if (!st) return;
             const filled = Object.keys(st.answers?.[rKey(c.round)]?.[b] ?? {}).length;
             if (st.ctl.phase !== 'write' || st.ctl.stopBy || filled < st.settings.cats.length) return;
             void t.transactCtl((x) =>

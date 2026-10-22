@@ -230,18 +230,10 @@ export function FilmRound({ t, s }: { t: Transport; s: RoomState }) {
 
       {playing && (
         <section className="write-card turn-card film-card">
-          <div className={`answer ${text ? 'has-text' : ''} ${wrong ? 'is-wrong' : ''}`}>
-            {text ? (
-              <span className="answer__text pop-in" key={text}>{trUpper(text)}</span>
-            ) : busy ? null : wrong ? (
-              <span className="answer__text film-wrong">{wrong}</span>
-            ) : (
-              <span className="answer__ph">filmin adı…</span>
-            )}
-            {busy && <span className="answer__busy"><span className="dots"><i /><i /><i /></span></span>}
-            {wrong && !text && <span className="answer__warn">Olmadı!</span>}
-          </div>
-
+          {/*
+            Tek satır: öneriler, okunan yazı ya da yol gösteren metin. Ayrı bir cevap kutusu yok —
+            defterin üstünde iki şerit olunca yazacak alan daralıyordu (kullanıcı şikâyeti).
+          */}
           <div className="alts">
             {sugg.length > 0 ? (
               <>
@@ -250,13 +242,19 @@ export function FilmRound({ t, s }: { t: Transport; s: RoomState }) {
                   <button key={a} className="alt" disabled={locked || sent} onClick={() => (sfx.tap(), void guess(a))}>{a}</button>
                 ))}
               </>
-            ) : alts.length > 0 && !busy ? (
+            ) : busy ? (
+              <span className="alts__label alts__label--idle"><span className="dots"><i /><i /><i /></span></span>
+            ) : alts.length > 0 ? (
               <>
                 <span className="alts__label">Bunu mu yazdın?</span>
                 {alts.map((a) => (
                   <button key={a} className="alt" onClick={() => (sfx.tap(), setText(a), setAlts(alts.filter((x) => x !== a)))}>{trUpper(a)}</button>
                 ))}
               </>
+            ) : text && !kb ? (
+              <span className="alts__mine pop-in" key={text}>{trUpper(text)}</span>
+            ) : wrong ? (
+              <span className="alts__wrong"><b className="film-wrong">{wrong}</b> olmadı!</span>
             ) : (
               <span className="alts__label alts__label--idle">{locked ? 'Biraz bekle…' : kb ? 'Filmin adını yaz' : 'İlk harfleri yaz, listeden seç'}</span>
             )}

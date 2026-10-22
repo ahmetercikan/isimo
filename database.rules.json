@@ -20,15 +20,15 @@
           },
           "players": {
             "$pid": {
-              ".write": "auth != null && ($pid === auth.uid || (!newData.exists() && data.parent().parent().child('players').child(auth.uid).exists()))",
-              ".validate": "!newData.exists() || (newData.child('name').isString() && newData.child('name').val().length <= 20 && newData.child('avatar').isString() && newData.child('avatar').val().length <= 16)"
+              ".write": "auth != null && ($pid === auth.uid || ($pid.beginsWith('bot-') && root.child('isimsehir/rooms/' + $code + '/players/' + auth.uid).exists()) || (!newData.exists() && data.parent().parent().child('players').child(auth.uid).exists()))",
+              ".validate": "!newData.exists() || (newData.child('name').isString() && newData.child('name').val().length <= 20 && newData.child('avatar').isString() && newData.child('avatar').val().length <= 16 && ($pid === auth.uid || newData.child('bot').isNumber()))"
             }
           },
           "answers": {
             ".write": "auth != null && !newData.exists() && data.parent().child('players').child(auth.uid).exists()",
             "$r": {
               "$pid": {
-                ".write": "auth != null && $pid === auth.uid",
+                ".write": "auth != null && ($pid === auth.uid || ($pid.beginsWith('bot-') && root.child('isimsehir/rooms/' + $code + '/players/' + auth.uid).exists()))",
                 "$cat": { ".validate": "newData.isString() && newData.val().length <= 40" }
               }
             }
@@ -36,13 +36,13 @@
           "votes": {
             ".write": "auth != null && !newData.exists() && data.parent().child('players').child(auth.uid).exists()",
             "$r": { "$cat": { "$target": { "$voter": {
-              ".write": "auth != null && $voter === auth.uid",
+              ".write": "auth != null && ($voter === auth.uid || ($voter.beginsWith('bot-') && root.child('isimsehir/rooms/' + $code + '/players/' + auth.uid).exists()))",
               ".validate": "newData.val() === true"
             } } } }
           },
           "ready": {
             ".write": "auth != null && !newData.exists() && data.parent().child('players').child(auth.uid).exists()",
-            "$r": { "$pid": { ".write": "auth != null && $pid === auth.uid", ".validate": "newData.isNumber()" } }
+            "$r": { "$pid": { ".write": "auth != null && ($pid === auth.uid || ($pid.beginsWith('bot-') && root.child('isimsehir/rooms/' + $code + '/players/' + auth.uid).exists()))", ".validate": "newData.isNumber()" } }
           },
           "results": {
             ".write": "auth != null && data.parent().child('players').child(auth.uid).exists()"
