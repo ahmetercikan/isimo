@@ -1,9 +1,10 @@
 # İsim Şehir — Claude için proje notları
 
-- **Ne:** İki oyun bir arada (ana sayfa ikiye bölünür):
+- **Ne:** Üç oyun bir arada (ana sayfada üç kart):
   1. **İsim Şehir** — klasik oyun, harf çevirip kategorileri doldurma, STOP.
   2. **Sıra Sende** — masadaki kelimede tek harf değiştirip yeni kelime yapma (sırayla, canlı/elemeli).
-  Her ikisi de en fazla 10 kişi, herkes kendi telefonundan (oda kodu) ya da botlara karşı.
+  3. **Film Avı** — ipuçları birer birer açılır, filmi erken bilen çok puan alır (herkes aynı anda).
+  Hepsi en fazla 10 kişi, herkes kendi telefonundan (oda kodu) ya da botlara karşı.
   Cevaplar parmakla yazılır; el yazısı tanınır. Tasarım Çizio (../simple-Draw) ile aynı dil.
   React 18 + TypeScript + Vite 5 (HashRouter), zustand, Capacitor 8 (Android + iOS), Firebase Realtime Database.
 - **Kullanıcı** teknik değil: her zaman **Türkçe ve sade** yaz. Mağaza/konsol adımlarını ekranda göreceği adlarla anlat.
@@ -53,6 +54,14 @@
     Eskiden işaret yoktu: sıra kaçınca (`missTurn`) gelen yeni kelime hiç duyurulmuyordu ve final ekranındaki
     zincir "EZAN → ÖZEN" gibi kurala aykırı görünüyordu (kullanıcı şikâyeti). Sıklık: 4 harfli oyunda
     ~17 hamlede bir, 5 harflide ~7 hamlede bir — yani 5 harfli havuz büyümeden bu ekran çok görülür.
+  - **Film Avı (22 Eki 2026, deneme sürümü):** ipuçları (tür·yıl·ülke → yönetmen → oyuncu → başrol → konu →
+    adın iskeleti) `settings.time` saniyede bir açılır; erken bilen çok puan alır (`CLUE_PTS` 100…15).
+    Motor `src/engine/film.ts` (eşleştirme: Türkçe karakter/boşluk farkı yok, uzun adda 1-3 harf hata; başka filmin
+    adı tam yazılırsa o filmdir), akış `src/game/filmDirector.ts` (Sıra Sende gibi hepsi `ctl` içinde: `film`, `films`,
+    `got`, `pts`; tur kapanınca `nextAt`'e kadar film açıklanır), ekranlar `screens/FilmRound.tsx`, `FilmFinal.tsx`,
+    ayarlar `components/FilmSettings.tsx`, aşama `'clue'`, kurulum `/kur/:mode?oyun=film`. Film listesi
+    `src/data/films.ts` (şimdilik 15 yerli + 15 yabancı; `DECOYS` yalnız öneri listesinde çıkan adlar, liste cevabı
+    ele vermesin). Afiş yok (telif); konu cümleleri bize ait. Yanlış tahmin 2,5 sn bekletir (yalnız cihazda).
   - **Ekran düzeni:** `src/styles/app.css` + `game.css` telefon dikey; `tablet.css` 700 px'ten geniş ekranlar;
     `landscape.css` yatay tutulan telefonlar (`orientation: landscape` ve yükseklik ≤ 560 px) — yatayda telefon
     700 px'i geçtiği için tablet ölçüleri devreye giriyor, bu dosya onları küçültüp yazı defteri ile düğmeleri

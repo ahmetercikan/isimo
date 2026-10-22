@@ -177,6 +177,9 @@
 .mode-card--siram { background: linear-gradient(135deg, #20b9a8, #1593c9); --cd: #0d6f86; --botc: #0a6f88; --botcd: #064d60; }
 .mode-card--siram .pill:not(.pill--teal) { --c: #fff; --cd: #cfe3e6; --t: #0d6f86; }
 .mode-card--siram .pill--teal { --c: #ffd84d; --cd: #d9a400; --t: var(--ink); }
+.mode-card--film { background: linear-gradient(135deg, #9b6bff, #6a4fe0); --cd: #4b33a8; --botc: #5038b8; --botcd: #33227f; }
+.mode-card--film .pill:not(.pill--teal) { --c: #fff; --cd: #d9cff5; --t: #5038b8; }
+.mode-card--film .pill--teal { --c: #ffd84d; --cd: #d9a400; --t: var(--ink); }
 .mode-card__bot {
   margin-top: 12px;
   width: 100%;

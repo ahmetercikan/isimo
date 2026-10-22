@@ -4,6 +4,7 @@
  */
 import { create } from 'zustand';
 import { loadWords } from '../engine/chain';
+import { loadFilms } from '../engine/film';
 import { loadDicts } from '../engine/dict';
 import { newCtl, type RoomState, type Settings } from '../engine/types';
 import { BOT_PROFILES, runBots } from '../game/bots';
@@ -31,6 +32,7 @@ export const useGame = create<GameState>()((set, get) => ({
 
   startBots(settings, count, level) {
     if (settings.game === 'siram') void loadWords();
+    if (settings.game === 'film') void loadFilms();
     const p = useProfile.getState();
     const now = Date.now();
     const players: RoomState['players'] = { me: { name: p.name || 'Ben', avatar: p.avatar, color: p.color, joined: now, on: true } };

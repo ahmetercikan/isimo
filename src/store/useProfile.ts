@@ -35,6 +35,19 @@ export const DEFAULT_CHAIN: Settings = {
   free: false,
 };
 
+/** Film Avı varsayılanları (rounds: film sayısı, time: ipuçları arası saniye; cats yine göstermelik). */
+export const DEFAULT_FILM: Settings = {
+  cats: [{ id: 'film', label: 'Film', emoji: '' }],
+  rounds: 5,
+  time: 10,
+  stop: false,
+  grace: 0,
+  hard: false,
+  manualStop: false,
+  game: 'film',
+  pool: 'hepsi',
+};
+
 export interface Stats {
   games: number;
   wins: number;
@@ -54,6 +67,8 @@ interface ProfileState {
   settings: Settings;
   /** Sıra Sende'nin son ayarları. */
   chain?: Settings;
+  /** Film Avı'nın son ayarları. */
+  film?: Settings;
   bots: { count: number; level: 1 | 2 | 3 };
   stats: Stats;
   /** Uygulama kapanınca geri dönülebilsin: son çevrimiçi oda. */

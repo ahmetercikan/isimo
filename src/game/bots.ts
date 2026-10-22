@@ -1,15 +1,18 @@
 /**
  * Botlar (yalnızca botlu oyunda): harfi durdurur, sözlükten cevap yazar, değerlendirmede "tamam" der.
  * Sıra Sende'de sırası gelince kelime havuzundan hamle bulur (zorluk: bulma şansı ve hız).
+ * Film Avı'nda filmi bir ipucunda bilir: zor bot erken, kolay bot geç (bazen hiç); zor filmde bir ipucu geç.
  * Zorluk: 1 kolay (az ve geç yazar), 2 orta, 3 zor (çok ve hızlı yazar, STOP der).
  */
 import { botMove, chainList, loadWords, ruleOf, wordsReady } from '../engine/chain';
+import { CLUES, filmById } from '../engine/film';
 import { CATEGORIES, hasDict } from '../engine/categories';
 import { lookup, wordsFor } from '../engine/dict';
 import { capitalize, startsWithLetter } from '../engine/tr';
 import { rKey, type Player, type RoomState } from '../engine/types';
 import type { LocalTransport } from '../online/local';
 import { missTurn, playWord } from './chainDirector';
+import { guessFilm, stepMs } from './filmDirector';
 import { stopLetter } from './director';
 
 export const BOT_PROFILES: Pick<Player, 'name' | 'avatar' | 'color'>[] = [
@@ -50,7 +53,8 @@ export function runBots(t: LocalTransport): () => void {
     const c = s.ctl;
     // STOP denince (seq değişir ama tur aynı) botlar yazmayı sürdürür: yalnızca aşama/tur/kategori değişince sıfırla.
     // Sıra Sende'de her hamle yeni bir sıra: seq ile izlenir.
-    const key = c.phase === 'turn' ? `turn:${c.seq}` : `${c.phase}:${c.round}:${c.cat}`;
+    // Film Avı'nda başkası bilince (seq değişir) botlar beklemeyi sürdürür: tur ve açıklama değişince sıfırla.
+    const key = c.phase === 'turn' ? `turn:${c.seq}` : c.phase === 'clue' ? `clue:${c.round}:${c.nextAt ? 1 : 0}` : `${c.phase}:${c.round}:${c.cat}`;
     if (key === lastKey) return;
     lastKey = key;
     clear();
@@ -73,6 +77,27 @@ export function runBots(t: LocalTransport): () => void {
         else void missTurn(t, st, pid, 'pass');
       };
       later(span * rand(lv.from + 0.1, Math.min(0.85, lv.to)), () => (wordsReady() ? play() : void loadWords().then(play)));
+    }
+
+    // ---- Film Avı: her bot filmi bir ipucunda bilir ----
+    if (c.phase === 'clue' && c.film && !c.nextAt) {
+      const film = filmById(c.film);
+      const step = stepMs(s);
+      for (const b of bots(s)) {
+        if (c.got?.[b]) continue;
+        const level = s.players[b].bot ?? 2;
+        if (level === 1 && Math.random() < 0.15) continue;
+        // Zor bot 2-4., orta 3-5., kolay 4-6. ipucunda; zor filmde bir ipucu geç.
+        const clue = 5 - level + Math.floor(Math.random() * 3) + (film?.lv === 2 ? 1 : 0);
+        if (clue > CLUES) continue;
+        const at = c.startAt + (clue - 1 + rand(0.25, 0.9)) * step - now;
+        later(Math.max(300, at), () => {
+          const st = t.peek();
+          const f = filmById(st.ctl.film);
+          if (st.ctl.phase !== 'clue' || st.ctl.round !== c.round || st.ctl.nextAt || !f) return;
+          void guessFilm(t, st, f.t, b);
+        });
+      }
     }
 
     if (c.phase === 'write') {

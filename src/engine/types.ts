@@ -4,10 +4,10 @@
  */
 import type { Category } from './categories';
 
-export type Phase = 'lobby' | 'spin' | 'write' | 'review' | 'scores' | 'final' | 'turn';
+export type Phase = 'lobby' | 'spin' | 'write' | 'review' | 'scores' | 'final' | 'turn' | 'clue';
 
-/** Hangi oyun: 'isim' İsim Şehir (STOP), 'siram' Sıra Sende (harf değiştir). Yoksa İsim Şehir. */
-export type GameKind = 'isim' | 'siram';
+/** Hangi oyun: 'isim' İsim Şehir (STOP), 'siram' Sıra Sende (harf değiştir), 'film' Film Avı. Yoksa İsim Şehir. */
+export type GameKind = 'isim' | 'siram' | 'film';
 
 export interface Settings {
   cats: Category[];
@@ -31,6 +31,9 @@ export interface Settings {
   lives?: number;
   /** Harf eklemek/çıkarmak da serbest mi (kapalıysa yalnızca değiştirme). */
   free?: boolean;
+  // ---- Yalnızca Film Avı (rounds: film sayısı, time: ipuçları arası saniye) ----
+  /** Hangi filmler sorulsun. */
+  pool?: 'hepsi' | 'yerli' | 'yabanci';
 }
 
 export interface Player {
@@ -81,6 +84,13 @@ export interface Ctl {
   out?: string;
   /** Son olay (ekranda duyurulur); f: bu olayla masaya gelen yeni kelime (yol kalmadı). */
   last?: { p: string; k: 'ok' | 'time' | 'pass' | 'out'; w?: string; f?: string };
+  // ---- Yalnızca Film Avı (pts yukarıdaki ile ortak: toplam puan) ----
+  /** Bu turun filmi (kimlik). İpuçları startAt'ten itibaren settings.time saniyede bir açılır, endAt'te tur kapanır. */
+  film?: string;
+  /** Bu oyunda sorulan filmler, virgülle. */
+  films?: string;
+  /** Bu turda bilenler ve aldıkları puan. */
+  got?: Record<string, number>;
 }
 
 /** answers[rKey][pid][catId] = metin */

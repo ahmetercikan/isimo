@@ -2,6 +2,7 @@ import { Share } from '@capacitor/share';
 import { Copy, Settings2, Share2, UserX } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { ChainSettings } from '../../components/ChainSettings';
+import { FilmSettings } from '../../components/FilmSettings';
 import { SettingsForm } from '../../components/SettingsForm';
 import { CatIcon, Icon } from '../../components/Icon';
 import { Avatar, Confirm, Modal, useToast } from '../../components/ui';
@@ -11,6 +12,7 @@ import { sfx } from '../../lib/sfx';
 import type { Transport } from '../../online/transport';
 import { useProfile } from '../../store/useProfile';
 import { startChain } from '../chainDirector';
+import { startFilm } from '../filmDirector';
 import { actingHost, startGame } from '../director';
 
 export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
@@ -29,12 +31,15 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
   const canStart = !online || players.length >= 2;
   const st = s.settings;
   const siram = st.game === 'siram';
+  const film = st.game === 'film';
 
   const share = async () => {
     sfx.tap();
     const text = siram
       ? `Sıra Sende oynayalım! Uygulamada "Katıl"a bas ve oda kodunu yaz: ${s.code}`
-      : `İsim Şehir oynayalım! 🔤✍️ Uygulamada "Katıl"a bas ve oda kodunu yaz: ${s.code}`;
+      : film
+        ? `Film Avı oynayalım! Uygulamada "Katıl"a bas ve oda kodunu yaz: ${s.code}`
+        : `İsim Şehir oynayalım! 🔤✍️ Uygulamada "Katıl"a bas ve oda kodunu yaz: ${s.code}`;
     try {
       await Share.share({ title: 'İsim Şehir', text, dialogTitle: 'Arkadaşlarını çağır' });
     } catch {
@@ -98,7 +103,14 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
       </section>
 
       <section className="paper-card rules-card rise" style={{ animationDelay: '0.08s' }}>
-        {siram ? (
+        {film ? (
+          <>
+            <p className="rules-card__head"><Icon name="dizi" size={26} /> İpuçları birer birer açılır, filmi erken bilen çok puan alır.</p>
+            <p className="rules-card__line">
+              <b>{st.rounds}</b> film · ipuçları <b>{st.time}</b> sn arayla · {st.pool === 'yerli' ? 'yerli' : st.pool === 'yabanci' ? 'yabancı' : 'karışık'}
+            </p>
+          </>
+        ) : siram ? (
           <>
             <p className="rules-card__head"><Icon name="harf" size={26} /> Masadaki kelimede tek harf değiştir, yeni kelime yap.</p>
             <p className="rules-card__line">
@@ -127,7 +139,7 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
       <div className="page__cta page__cta--sticky">
         {isHost ? (
           <>
-            <button className="pill pill--big pulse" disabled={!canStart} onClick={() => (sfx.pop(), void (siram ? startChain(t, s) : startGame(t, s)))}>
+            <button className="pill pill--big pulse" disabled={!canStart} onClick={() => (sfx.pop(), void (siram ? startChain(t, s) : film ? startFilm(t, s) : startGame(t, s)))}>
               Oyunu Başlat
             </button>
             {!canStart && <p className="cta-note">Başlamak için en az 2 oyuncu gerekli</p>}
@@ -141,7 +153,15 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
 
       {edit && (
         <Modal onClose={() => setEdit(false)} className="modal--settings">
-          {siram ? (
+          {film ? (
+            <FilmSettings
+              value={st}
+              onChange={(v) => {
+                void t.update({ settings: v });
+                useProfile.getState().set({ film: v });
+              }}
+            />
+          ) : siram ? (
             <ChainSettings
               value={st}
               onChange={(v) => {

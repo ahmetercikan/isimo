@@ -6,6 +6,8 @@ import { Icon } from '../components/Icon';
 import { Confirm } from '../components/ui';
 import { Doodles } from '../components/Doodles';
 import { ChainFinal } from '../game/screens/ChainFinal';
+import { FilmFinal } from '../game/screens/FilmFinal';
+import { FilmRound } from '../game/screens/FilmRound';
 import { Final } from '../game/screens/Final';
 import { Lobby } from '../game/screens/Lobby';
 import { Review } from '../game/screens/Review';
@@ -21,6 +23,7 @@ import { sfx } from '../lib/sfx';
 import { useNow } from '../components/ui';
 import { preloadDicts, useGame } from '../store/useGame';
 import { loadWords } from '../engine/chain';
+import { loadFilms } from '../engine/film';
 
 export default function Game() {
   const nav = useNavigate();
@@ -35,9 +38,11 @@ export default function Game() {
   let mood: Mood = 'off';
   if (s) {
     const c = s.ctl;
-    mood = { lobby: 'lobby', spin: 'roll', review: 'chill', scores: 'chill', final: 'off', write: 'write', turn: 'write' }[c.phase] as Mood;
+    mood = { lobby: 'lobby', spin: 'roll', review: 'chill', scores: 'chill', final: 'off', write: 'write', turn: 'write', clue: 'write' }[c.phase] as Mood;
     if (c.phase === 'write') mood = now < c.startAt || now >= c.endAt ? 'off' : c.endAt - now <= 10500 ? 'tension' : 'write';
     if (c.phase === 'turn') mood = c.endAt - now <= 8000 ? 'tension' : 'write';
+    // Film Avı: film açıklanırken sakin, son ipucunda gerilim.
+    if (c.phase === 'clue') mood = c.nextAt || now < c.startAt ? 'chill' : c.endAt - now <= s.settings.time * 1000 ? 'tension' : 'write';
   }
   useEffect(() => setMood(mood), [mood]);
   useEffect(() => () => setMood('off'), []);
@@ -59,9 +64,12 @@ export default function Game() {
   // Sözlükler oyun başlamadan yüklensin
   const catKey = s?.settings.cats.map((c) => c.id).join(',');
   const siram = s?.settings.game === 'siram';
-  useEffect(() => void (s && !siram && preloadDicts(s)), [catKey, siram]);
+  const film = s?.settings.game === 'film';
+  useEffect(() => void (s && !siram && !film && preloadDicts(s)), [catKey, siram, film]);
   // Sıra Sende'nin kelime havuzu
   useEffect(() => void (siram && loadWords()), [siram]);
+  // Film Avı'nın film listesi (tahminler her cihazda kontrol edilir)
+  useEffect(() => void (film && loadFilms()), [film]);
 
   // Yeni oyuncu katılınca ses
   const count = s ? Object.values(s.players).filter((p) => !p.left).length : 0;
@@ -123,7 +131,9 @@ export default function Game() {
       {phase === 'review' && <Review t={t} s={s} />}
       {phase === 'scores' && <Scores t={t} s={s} />}
       {phase === 'turn' && <Turn t={t} s={s} />}
-      {phase === 'final' && (siram ? <ChainFinal t={t} s={s} onExit={leave} /> : <Final t={t} s={s} onExit={leave} />)}
+      {phase === 'clue' && <FilmRound t={t} s={s} />}
+      {phase === 'final' &&
+        (siram ? <ChainFinal t={t} s={s} onExit={leave} /> : film ? <FilmFinal t={t} s={s} onExit={leave} /> : <Final t={t} s={s} onExit={leave} />)}
       {ask && (
         <Confirm
           title="Oyundan çıkılsın mı?"
