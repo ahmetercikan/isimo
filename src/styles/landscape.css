@@ -43,6 +43,11 @@
   /* Üç oyun yan yana; kaplan ve selam balonu yer kaplamasın diye gizli */
   :root { --tabbar-h: 56px; }
   .home__hero { display: none; }
+  .profile__hero { display: block; height: 96px; }
+  .home__hero.profile__hero .home__mascot { width: 130px; bottom: -22px; }
+  .profile__hero .hello { top: 8px; padding: 8px 14px; }
+  .profile__hero .hello b { font-size: 17px; }
+  .profile__hero .hello span { font-size: 13px; }
   .home__games { flex-direction: row; align-items: stretch; gap: 10px; }
   .game-card { flex: 1; min-width: 0; padding: 10px 10px 10px 0; border-radius: 24px; }
   .game-card__art { width: 34%; max-width: 96px; }

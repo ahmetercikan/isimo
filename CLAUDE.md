@@ -71,6 +71,10 @@
     Kartlarda tasarımdaki taç yok (anlamı belirlenmedi). Resimler `src/assets/home/*.webp` — ayrı dosyalar
     olmadığı için **tasarım ekran görüntüsünden kesildi** (`~/Downloads/kelime-oyunlari-expo/assets/home-reference.jpg`,
     arka plan kenardan taşma ile silindi); çözünürlük düşük, asıl çizimler gelirse değiştirilmeli.
+    İsim Şehir resmindeki yeşil kutu elle "A"dan **"B"ye** çevrildi (kullanıcı isteği: kutular A, B, C).
+    Maskot `components/Mascot.tsx`: sallanır ve göz kırpar (`tiger-blink.webp` = kırpan gözün aynası,
+    açık gözün üstünde kısa süre görünür; konum yüzdeleri resmin 380×326 piksel ölçüsüne bağlı).
+    İlk açılış / profil ekranı da aynı dilde: logo yerine selam balonu + maskot.
     Beğenilmezse geri almak için bu commit'i `git revert` etmek yeter.
   - **Ekran düzeni:** `src/styles/app.css` + `game.css` telefon dikey; `tablet.css` 700 px'ten geniş ekranlar;
     `landscape.css` yatay tutulan telefonlar (`orientation: landscape` ve yükseklik ≤ 560 px) — yatayda telefon

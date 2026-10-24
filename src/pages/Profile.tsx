@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Doodles } from '../components/Doodles';
 import { Icon } from '../components/Icon';
-import { Avatar, Logo, TopBar } from '../components/ui';
+import { Mascot } from '../components/Mascot';
+import { Avatar, TopBar } from '../components/ui';
 import { avatarIcon } from '../art/icons';
 import { privacyOptionsRequired, showPrivacyOptions } from '../lib/ads';
 import { sfx } from '../lib/sfx';
@@ -40,10 +41,13 @@ export default function Profile() {
     <main className="bg page profile">
       <Doodles variant={1} />
       {first ? (
-        <div className="profile__hello pop-in">
-          <Logo small />
-          <p className="sub">Hoş geldin! Önce seni tanıyalım.</p>
-        </div>
+        <section className="home__hero profile__hero">
+          <div className="hello pop-in">
+            <b>Hoş geldin!</b>
+            <span>Önce seni tanıyalım. Adın ne?</span>
+          </div>
+          <Mascot className="home__mascot" />
+        </section>
       ) : (
         <TopBar title="Profilim" />
       )}
@@ -51,6 +55,7 @@ export default function Profile() {
       <div className="paper-card profile__card rise">
         <div className="profile__preview">
           <Avatar emoji={avatar} color={color} size={96} />
+          <b className={`profile__name ${name.trim() ? '' : 'is-empty'}`}>{name.trim() || 'Adın'}</b>
         </div>
         <label className="field">
           <span className="field__label">Adın</span>
@@ -109,7 +114,7 @@ export default function Profile() {
       </div>
 
       <div className="page__cta">
-        <button className="pill pill--big" disabled={!ok} onClick={save}>
+        <button className="pill pill--big pill--go" disabled={!ok} onClick={save}>
           {first ? 'Hadi Başlayalım!' : 'Kaydet'}
         </button>
       </div>

@@ -29,7 +29,7 @@
   :root { --tabbar-h: 88px; }
   .home__top, .home__hero, .home__games, .home > .rejoin, .stats-page > :is(.topbar, .stat-grid, .stat-total, .stat-empty, .stat-note) { width: 100%; max-width: 760px; margin-left: auto; margin-right: auto; }
   .home__hero { height: 200px; }
-  .home__mascot { width: 290px; bottom: -46px; }
+  .home__hero .home__mascot { width: 290px; bottom: -46px; }
   .hello { top: 30px; padding: 20px 26px; border-radius: 32px; }
   .hello b { font-size: 30px; }
   .hello span { font-size: 19px; }

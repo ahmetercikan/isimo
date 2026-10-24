@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import artFilm from '../assets/home/film.webp';
 import artIsim from '../assets/home/isim.webp';
 import artSiram from '../assets/home/siram.webp';
-import mascot from '../assets/home/tiger.webp';
 import { Doodles } from '../components/Doodles';
+import { Mascot } from '../components/Mascot';
 import { TabBar } from '../components/TabBar';
 import { Avatar, Modal, useToast } from '../components/ui';
 import { hideBanner, showBanner } from '../lib/ads';
@@ -97,7 +97,7 @@ export default function Home() {
           <b>Merhaba {p.name}!</b>
           <span>Bugün hangi oyunu oynayalım?</span>
         </div>
-        <img className="home__mascot" src={mascot} alt="" draggable={false} />
+        <Mascot className="home__mascot" />
       </section>
 
       <section className="home__games">
