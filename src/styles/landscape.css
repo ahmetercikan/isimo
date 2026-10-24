@@ -37,28 +37,29 @@
   .home__top { gap: 8px; }
   .me-chip { font-size: 17px; padding: 5px 12px 5px 5px; }
   .me-chip .avatar { width: 34px !important; height: 34px !important; font-size: 19px !important; }
-  .home__logo { margin: 0 0 2px; gap: 10px; }
   .logo__tile { --size: clamp(40px, 6.4vh, 56px); border-radius: 14px; }
   .logo__stop { font-size: 15px; padding: 4px 8px; right: -12px; bottom: -10px; }
-  .home__tag { font-size: 16px; }
-  /* İki oyun yatayda hep yan yana (dar telefonlarda da) */
-  .home__games { flex-direction: row; align-items: stretch; }
-  .home__games > .mode-card { flex: 1; min-width: 0; display: flex; flex-direction: column; }
-  .home__games > .mode-card .mode-card__bot { margin-top: auto; }
-  .mode-card { padding: 12px 14px; border-radius: 24px; }
-  .mode-card__head { gap: 10px; }
-  .mode-card__head .title-md { font-size: 21px; }
-  .mode-card__head p { font-size: 13.5px; }
-  .mode-card__icon { width: 46px; height: 46px; border-radius: 14px; }
-  .mode-card__icon svg { width: 24px; height: 24px; }
-  .mode-card__btns { margin-top: 10px; gap: 8px; }
-  .mode-card__btns .pill { min-height: 44px; font-size: 17px; }
-  .mode-card__bot { margin-top: 8px; min-height: 46px; font-size: 17px; border-radius: 14px; padding: 0 12px; }
-  .mode-card__faces .avatar { width: 26px !important; height: 26px !important; font-size: 15px !important; }
   .rejoin { padding: 8px 12px; }
-  .stats span { font-size: 13px; padding: 4px 10px; }
-  .home__foot { gap: 6px; }
-  .howto-link { font-size: 15px; }
+  /* Üç oyun yan yana; kaplan ve selam balonu yer kaplamasın diye gizli */
+  :root { --tabbar-h: 56px; }
+  .home__hero { display: none; }
+  .home__games { flex-direction: row; align-items: stretch; gap: 10px; }
+  .game-card { flex: 1; min-width: 0; padding: 10px 10px 10px 0; border-radius: 24px; }
+  .game-card__art { width: 34%; max-width: 96px; }
+  .game-card__body { gap: 4px; }
+  .game-card__title { font-size: 19px; }
+  .game-card__tag { font-size: 12.5px; }
+  .game-card__chips { display: none; }
+  .play-btn { min-height: 40px; font-size: 18px; gap: 6px; }
+  .play-btn svg { width: 18px; height: 18px; }
+  .game-card__more { width: 34px; height: 34px; }
+  .tabbar { width: min(calc(100% - 24px), 460px); padding: 6px; border-radius: 22px; bottom: calc(var(--safe-bottom) + 6px); }
+  .tabbar__btn { flex-direction: row; gap: 8px; border-radius: 16px; }
+  .tabbar__btn svg { width: 22px; height: 22px; }
+  .page.has-tabbar { padding-bottom: calc(var(--safe-bottom) + var(--tabbar-h) + 16px); }
+  .stat-grid { grid-template-columns: repeat(4, 1fr); }
+  .stat-tile { padding: 12px; }
+  .stat-tile b { font-size: 26px; }
 
   /* ---------- Lobi: kod solda, oyuncular sağda ---------- */
   .lobby { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 10px 14px; align-content: start; padding-top: 6px; }

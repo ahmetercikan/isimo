@@ -64,6 +64,14 @@
     ele vermesin). Afiş yok (telif); konu cümleleri bize ait. Yanlış tahmin 2,5 sn bekletir (yalnız cihazda).
     Defterin üstünde **tek şerit** var (`.alts`): öneriler, okunan yazı ya da yol gösteren metin. Ayrı bir
     cevap kutusu (`.answer`) vardı; iki şerit yazacak alanı daraltıyordu (kullanıcı şikâyeti, 22 Eki 2026).
+  - **Yeni ana sayfa (24 Eki 2026, deneme):** kullanıcının getirdiği tasarım görseline göre: selam balonu + maskot
+    kaplan, her oyuna renkli kart (resim, iki etiket, "Oyna", ">" = o oyunun "Nasıl oynanır"ı `/nasil?oyun=`),
+    "Oyna" → Oda Kur / Odaya Katıl / Botlara Karşı penceresi, alt menü `components/TabBar.tsx`
+    (Ana Sayfa · İstatistikler `/istatistik` · Ayarlar = `/profil`). Liderlik bilerek yok (ortak sunucu puanı gerekir).
+    Kartlarda tasarımdaki taç yok (anlamı belirlenmedi). Resimler `src/assets/home/*.webp` — ayrı dosyalar
+    olmadığı için **tasarım ekran görüntüsünden kesildi** (`~/Downloads/kelime-oyunlari-expo/assets/home-reference.jpg`,
+    arka plan kenardan taşma ile silindi); çözünürlük düşük, asıl çizimler gelirse değiştirilmeli.
+    Beğenilmezse geri almak için bu commit'i `git revert` etmek yeter.
   - **Ekran düzeni:** `src/styles/app.css` + `game.css` telefon dikey; `tablet.css` 700 px'ten geniş ekranlar;
     `landscape.css` yatay tutulan telefonlar (`orientation: landscape` ve yükseklik ≤ 560 px) — yatayda telefon
     700 px'i geçtiği için tablet ölçüleri devreye giriyor, bu dosya onları küçültüp yazı defteri ile düğmeleri

@@ -33,7 +33,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,png,woff2,woff}'],
+        globPatterns: ['**/*.{js,css,html,png,webp,woff2,woff}'],
         globIgnores: ['**/node_modules/**/*', 'voice/**/*'],
         runtimeCaching: [
           {

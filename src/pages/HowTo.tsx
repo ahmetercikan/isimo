@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Doodles } from '../components/Doodles';
 import { Icon } from '../components/Icon';
 import { TopBar } from '../components/ui';
@@ -38,7 +39,9 @@ const GAMES = [
 ] as const;
 
 export default function HowTo() {
-  const [game, setGame] = useState<(typeof GAMES)[number]['key']>('isim');
+  // Ana sayfadaki kartın ">" düğmesi o oyunla açar (?oyun=siram).
+  const asked = useSearchParams()[0].get('oyun');
+  const [game, setGame] = useState<(typeof GAMES)[number]['key']>(GAMES.find((x) => x.key === asked)?.key ?? 'isim');
   const g = GAMES.find((x) => x.key === game)!;
   const steps = g.steps;
   return (

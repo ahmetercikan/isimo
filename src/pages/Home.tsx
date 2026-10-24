@@ -1,9 +1,13 @@
-import { Bot, CircleHelp, LogIn, Pencil, Plus, RotateCcw, Users, Volume2, VolumeX } from 'lucide-react';
+import { Bot, Brain, ChartNoAxesColumn, ChevronRight, Lightbulb, LogIn, Pencil, Play, Plus, RotateCcw, Users, Volume2, VolumeX } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import artFilm from '../assets/home/film.webp';
+import artIsim from '../assets/home/isim.webp';
+import artSiram from '../assets/home/siram.webp';
+import mascot from '../assets/home/tiger.webp';
 import { Doodles } from '../components/Doodles';
-import { Icon } from '../components/Icon';
-import { Avatar, Logo, useToast } from '../components/ui';
+import { TabBar } from '../components/TabBar';
+import { Avatar, Modal, useToast } from '../components/ui';
 import { hideBanner, showBanner } from '../lib/ads';
 import { sfx } from '../lib/sfx';
 import { ONLINE_AVAILABLE } from '../online/config';
@@ -13,9 +17,9 @@ import { useProfile } from '../store/useProfile';
 
 /** Üç bölüm: İsim Şehir (STOP), Sıra Sende (harf değiştir) ve Film Avı (ipuçlarından film bil). */
 const GAMES = [
-  { key: 'isim', icon: 'stop', title: 'İsim Şehir', tag: 'Harfi çevir, yaz, STOP de!', q: '' },
-  { key: 'siram', icon: 'harf', title: 'Sıra Sende', tag: 'Bir harf değiştir, yeni kelime!', q: '?oyun=siram' },
-  { key: 'film', icon: 'dizi', title: 'Film Avı', tag: 'İpuçlarından filmi ilk sen bil!', q: '?oyun=film' },
+  { key: 'isim', art: artIsim, title: 'İsim Şehir', tag: 'Harf çevir, yaz, STOP de!', q: '', chip: [ChartNoAxesColumn, 'Kelime Bilgisi'] },
+  { key: 'siram', art: artSiram, title: 'Sıra Sende', tag: 'Bir harf değiştir, yeni kelime!', q: '?oyun=siram', chip: [Brain, 'Zeka Geliştirir'] },
+  { key: 'film', art: artFilm, title: 'Film Avı', tag: 'İpuçlarından filmi ilk sen bil!', q: '?oyun=film', chip: [Lightbulb, 'Film Kültürü'] },
 ] as const;
 
 export default function Home() {
@@ -23,6 +27,8 @@ export default function Home() {
   const p = useProfile();
   const [toast, show] = useToast();
   const [busy, setBusy] = useState(false);
+  // "Oyna"ya basılan oyun: oda kur / katıl / botlara karşı seçimi açılır.
+  const [pick, setPick] = useState<(typeof GAMES)[number] | null>(null);
   useEffect(() => {
     void showBanner();
     return () => void hideBanner();
@@ -50,8 +56,14 @@ export default function Home() {
     }
   };
 
+  const go = (to: string) => {
+    sfx.tap();
+    setPick(null);
+    nav(to);
+  };
+
   return (
-    <main className="bg page home">
+    <main className="bg page home has-tabbar">
       <Doodles variant={0} />
       <header className="home__top rise">
         <button className="me-chip" onClick={() => (sfx.tap(), nav('/profil'))}>
@@ -70,10 +82,6 @@ export default function Home() {
         </button>
       </header>
 
-      <div className="home__logo pop-in">
-        <Logo small />
-      </div>
-
       {recent && (
         <button className="rejoin rise" onClick={rejoin} disabled={busy}>
           <RotateCcw size={22} strokeWidth={2.6} />
@@ -84,49 +92,67 @@ export default function Home() {
         </button>
       )}
 
-      <section className="home__games">
-        {GAMES.map((g, i) => (
-          <article key={g.key} className={`mode-card mode-card--${g.key} rise`} style={{ animationDelay: `${0.08 + i * 0.08}s` }}>
-            <div className="mode-card__head">
-              <span className="mode-card__icon"><Icon name={g.icon} size={34} /></span>
-              <div>
-                <h2 className="title-md">{g.title}</h2>
-                <p>{g.tag}</p>
-              </div>
-            </div>
-            <div className="mode-card__btns">
-              <button className="pill" disabled={!ONLINE_AVAILABLE} onClick={() => (sfx.tap(), nav(`/kur/online${g.q}`))}>
-                <Plus size={22} strokeWidth={3} /> Oda Kur
-              </button>
-              <button className="pill pill--teal" disabled={!ONLINE_AVAILABLE} onClick={() => (sfx.tap(), nav('/katil'))}>
-                <LogIn size={20} strokeWidth={2.8} /> Katıl
-              </button>
-            </div>
-            <button className="mode-card__bot" onClick={() => (sfx.tap(), nav(`/kur/bot${g.q}`))}>
-              <Bot size={26} strokeWidth={2.6} /> Botlara Karşı
-              <span className="mode-card__faces" aria-hidden="true">
-                <Avatar emoji="robot" color="#a5b4fc" size={32} />
-                <Avatar emoji="baykus" color="#ffc83d" size={32} />
-                <Avatar emoji="tilki" color="#ff8a3d" size={32} />
-              </span>
-            </button>
-            {!ONLINE_AVAILABLE && <p className="mode-card__note">Çevrimiçi oyun yakında açılıyor.</p>}
-          </article>
-        ))}
+      <section className="home__hero">
+        <div className="hello pop-in">
+          <b>Merhaba {p.name}!</b>
+          <span>Bugün hangi oyunu oynayalım?</span>
+        </div>
+        <img className="home__mascot" src={mascot} alt="" draggable={false} />
       </section>
 
-      <footer className="home__foot rise" style={{ animationDelay: '0.24s' }}>
-        {p.stats.games > 0 && (
-          <div className="stats">
-            <span><b>{p.stats.games}</b> oyun</span>
-            <span><b>{p.stats.wins}</b> birincilik</span>
-            <span><b>{p.stats.best}</b> en iyi skor</span>
+      <section className="home__games">
+        {GAMES.map((g, i) => {
+          const [ChipIcon, chipText] = g.chip;
+          return (
+            <article key={g.key} className={`game-card game-card--${g.key} rise`} style={{ animationDelay: `${0.08 + i * 0.08}s` }}>
+              <img className="game-card__art" src={g.art} alt="" draggable={false} />
+              <div className="game-card__body">
+                <h2 className="game-card__title">{g.title}</h2>
+                <p className="game-card__tag">{g.tag}</p>
+                <div className="game-card__chips">
+                  <span className="chip-tag"><Users size={14} strokeWidth={2.6} /> Çok Oyunculu</span>
+                  <span className="chip-tag"><ChipIcon size={14} strokeWidth={2.6} /> {chipText}</span>
+                </div>
+                <div className="game-card__row">
+                  <button className="play-btn" onClick={() => (sfx.tap(), setPick(g))}>
+                    <Play size={24} fill="currentColor" strokeWidth={2} /> Oyna
+                  </button>
+                  <button className="game-card__more" aria-label={`${g.title} nasıl oynanır?`} onClick={() => (sfx.tap(), nav(`/nasil?oyun=${g.key}`))}>
+                    <ChevronRight size={22} strokeWidth={3} />
+                  </button>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </section>
+
+      <TabBar active="home" />
+
+      {pick && (
+        <Modal onClose={() => setPick(null)} className={`play-sheet play-sheet--${pick.key}`}>
+          <div className="play-sheet__head">
+            <img src={pick.art} alt="" />
+            <div>
+              <h2 className="title-md">{pick.title}</h2>
+              <p>Nasıl oynamak istersin?</p>
+            </div>
           </div>
-        )}
-        <button className="link-btn howto-link" onClick={() => (sfx.tap(), nav('/nasil'))}>
-          <CircleHelp size={20} strokeWidth={2.6} /> Nasıl oynanır?
-        </button>
-      </footer>
+          <div className="play-sheet__btns">
+            <button className="pill" disabled={!ONLINE_AVAILABLE} onClick={() => go(`/kur/online${pick.q}`)}>
+              <Plus size={22} strokeWidth={3} /> Oda Kur
+            </button>
+            <button className="pill pill--teal" disabled={!ONLINE_AVAILABLE} onClick={() => go('/katil')}>
+              <LogIn size={20} strokeWidth={2.8} /> Odaya Katıl
+            </button>
+            <button className="pill play-sheet__bot" onClick={() => go(`/kur/bot${pick.q}`)}>
+              <Bot size={24} strokeWidth={2.6} /> Botlara Karşı
+            </button>
+          </div>
+          {!ONLINE_AVAILABLE && <p className="cta-note">Çevrimiçi oyun yakında açılıyor.</p>}
+          <button className="link-btn" onClick={() => setPick(null)}>Vazgeç</button>
+        </Modal>
+      )}
       {toast}
     </main>
   );

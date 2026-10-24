@@ -26,26 +26,28 @@
 
   /* Ana sayfa */
   .me-chip { font-size: 22px; padding: 8px 18px 8px 8px; }
+  :root { --tabbar-h: 88px; }
+  .home__top, .home__hero, .home__games, .home > .rejoin, .stats-page > :is(.topbar, .stat-grid, .stat-total, .stat-empty, .stat-note) { width: 100%; max-width: 760px; margin-left: auto; margin-right: auto; }
+  .home__hero { height: 200px; }
+  .home__mascot { width: 290px; bottom: -46px; }
+  .hello { top: 30px; padding: 20px 26px; border-radius: 32px; }
+  .hello b { font-size: 30px; }
+  .hello span { font-size: 19px; }
+  .home__games { gap: 22px; }
+  .game-card { padding: 20px 24px 20px 10px; }
+  .game-card__art { max-width: 210px; }
+  .game-card__body { gap: 10px; }
+  .game-card__title { font-size: 38px; }
+  .game-card__tag { font-size: 19px; }
+  .chip-tag { font-size: 14.5px; padding: 6px 12px; }
+  .chip-tag svg { width: 15px; height: 15px; }
+  .play-btn { min-height: 66px; font-size: 32px; }
+  .game-card__more { width: 54px; height: 54px; }
+  .tabbar { width: min(calc(100% - 48px), 600px); border-radius: 34px; }
+  .tabbar__btn { font-size: 16px; }
+  .stat-grid { grid-template-columns: repeat(4, 1fr); }
   .logo__tile { --size: clamp(66px, 10vw, 112px); border-radius: 24px; }
   .logo__stop { font-size: 26px; padding: 8px 14px; right: -22px; bottom: -18px; }
-  .home__tag { font-size: 26px; }
-  .home__logo { margin: 18px 0 14px; gap: 22px; }
-  .home__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-  .mode-card { padding: 28px; border-radius: 36px; }
-  .mode-card__head { gap: 18px; }
-  .mode-card__head .title-md { font-size: 32px; }
-  .mode-card__head p { font-size: 18px; }
-  .mode-card__icon { width: 68px; height: 68px; border-radius: 20px; }
-  .mode-card__icon svg { width: 34px; height: 34px; }
-  .mode-card__btns { margin-top: 24px; gap: 14px; }
-  .mode-card__btns .pill { font-size: 22px; }
-  .mode-card--bots { display: flex; flex-direction: column; justify-content: center; }
-  .mode-card--bots .mode-card__head { flex-wrap: wrap; }
-  .mode-card__bots .avatar { width: 54px !important; height: 54px !important; }
-  .home__logo { margin-top: auto; }
-  .stats span { font-size: 17px; padding: 8px 16px; }
-  .stats b { font-size: 20px; }
-  .howto-link { font-size: 19px; }
 
   /* Profil */
   .profile__card { padding: 30px; gap: 16px; }
@@ -228,9 +230,6 @@
 
 /* Geniş ekran: ana sayfadaki iki oyun bölümü yan yana, Sıra Sende kelimesi büyür */
 @media (min-width: 700px) {
-  .home__games { flex-direction: row; align-items: stretch; }
-  .home__games > .mode-card { flex: 1; display: flex; flex-direction: column; }
-  .home__games > .mode-card .mode-card__bot { margin-top: auto; }
   .letter-tile--word { --s: min(11vw, 96px); }
   .turn-player { min-width: 86px; }
 }
