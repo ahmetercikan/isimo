@@ -1,6 +1,6 @@
 /**
  * Mağaza için ham ekran görüntüleri: gerçek bir oyun oynatılır, her ekran yakalanır.
- *   1) npm run dev   2) npx tsx scripts/store-shots.mts [phone|tablet|iphone|ipad]
+ *   1) npm run dev   2) npx tsx scripts/store-shots.mts [phone|tablet|iphone|ipad] [ek]
  * Çıktı:
  *   Google Play: store/screenshots/{phone|tablet}-*.png (telefon 1080×1920, tablet 1920×1200)
  *   App Store:   store/screenshots/ios/{iphone|ipad}-*.png (iPhone 1206×2622, iPad 2064×2752 — Apple'ın istediği boyutlar)
@@ -91,8 +91,13 @@ await p.evaluate(() =>
 );
 await p.goto(URL + '?r=1#/');
 await sleep(2200);
+// 3. argüman 'ek' ise yalnız Sıra Sende ve Film Avı çekilir (İsim Şehir oyunu atlanır)
+if (process.argv[3] !== 'ek') {
 await shot('01-ana-sayfa');
-await p.click('.mode-card--bots');
+await p.click('.game-card--isim .play-btn');
+await sleep(700);
+await shot('11-oyna');
+await p.click('.play-sheet__bot');
 await sleep(1200);
 await shot('02-ayarlar');
 await p.click('.page__cta .pill', { force: true });
@@ -156,5 +161,52 @@ await game(`await t.transactCtl((c) => ({ ...c, phase: 'final', seq: c.seq + 1 }
 await p.waitForSelector('.final');
 await sleep(5200);
 await shot('10-kazanan');
+}
+
+/** Ana sayfadan bir bölümü botlarla başlatır (kurulum → lobi → oyun). */
+async function startBots(game: 'siram' | 'film', screen: string, bots: number) {
+  await p.evaluate((n) => {
+    const v = JSON.parse(localStorage.getItem('isimsehir-v1') ?? '{}');
+    v.state.bots = { count: n, level: 3 };
+    localStorage.setItem('isimsehir-v1', JSON.stringify(v));
+  }, bots);
+  await p.goto(URL + '?r=' + Date.now() + '#/');
+  await sleep(1500);
+  await p.click(`.game-card--${game} .play-btn`);
+  await sleep(600);
+  await p.click('.play-sheet__bot');
+  await sleep(1200);
+  await p.click('.page__cta .pill', { force: true });
+  await p.waitForSelector('.lobby');
+  await sleep(800);
+  await p.click('.page__cta .pill', { force: true });
+  await p.waitForSelector(screen, { timeout: 30000 });
+}
+// Sıra Sende: birkaç hamle oynansın, zincir görünsün
+await startBots('siram', '.turn', 4);
+/** Sıra bendeyse geçerli bir kelimeyi klavyeyle yazar (oynamaz). */
+const typeMove = async () => {
+  await p.waitForSelector('.turn__play', { timeout: 150000 });
+  const w = await p.evaluate(`Promise.all([import('/src/store/useGame.ts'), import('/src/engine/chain.ts')]).then(([g, ch]) => { const c = g.useGame.getState().s.ctl; return ch.show(ch.botMove(c.word, ch.chainList(c.chain), 'degis', 3) ?? ''); })`);
+  if (!(await p.$('.kb-box'))) await p.click('.turn .tool[aria-label="Klavye"]');
+  await p.fill('.turn .input--answer', String(w));
+  await sleep(500);
+};
+await sleep(1500);
+for (let i = 0; i < 2; i++) {
+  await typeMove();
+  await p.click('.turn__play', { force: true });
+  await sleep(2500);
+}
+await typeMove();
+await sleep(600);
+await shot('12-sira-sende');
+// Film Avı: birkaç ipucu açılsın, klavyeden ilk harfler yazılınca öneriler çıksın
+await startBots('film', '.film', 9);
+await sleep(16000);
+await p.click('.film .tool[aria-label="Klavye"]').catch(() => {});
+await p.fill('.film .input--answer', 'Ba').catch(() => {});
+await sleep(900);
+await shot('13-film-avi');
 await b.close();
 console.log('hazır:', KIND);
