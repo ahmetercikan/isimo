@@ -20,7 +20,13 @@
   - uygulama içi simgeler: `src/art/icons.ts` (Çizio'nun el çizimi simge dili; emoji kullanılmaz)
   - sunucu sesi (Çizio ile aynı Gemini sesi, Sulafat): cümleler `src/voice/lines.ts` → `npx tsx scripts/generate-voice.mts`
     (anahtar: `.env.local` GEMINI_API_KEY); doğrulama: `python scripts/voice-verify.py`
-  - mağaza görselleri: `npm run dev` açıkken `npx tsx scripts/store-shots.mts phone|tablet`, sonra `npx tsx scripts/store-promo.mts`
+  - mağaza görselleri: `npm run dev` açıkken `npx tsx scripts/store-shots.mts phone|tablet` (sona `ek` yazılırsa yalnız
+    Sıra Sende + Film Avı çekilir), sonra **Play için** `npx tsx scripts/store-panorama.mts` → `store/promo/play-{phone,tablet}-01…08.png`
+    (Gas Story'deki gibi geçişli şerit: renk, kesik çizgili yol ve harf kutuları görselden görsele akar, her birinde eğik telefon).
+    Eski kartlı düzen `store-promo.mts` (App Store ve özellik grafiği hâlâ onunla).
+    **Play'e yüklerken sıra:** kitaplığa toplu yüklenen görseller bitiş sırasına göre dizilir; slotu boşaltıp kitaplıktan
+    01→08 sırayla "Seç" + "Ekle" yapmak gerekir. Yapay zekâ beyanı: maskot/oyun resimleri YZ üretimi (kullanıcı onayladı),
+    mağaza görselleri "YZ ile oluşturulmuş" etiketli; simge ve özellik grafiği değil.
   - sözlükler: `scripts/dict-src/*.txt` düzenle → `node scripts/dict-src/build.cjs` (çıktı `src/data/dict/*.json`;
     tekrarlar atılır, '#' ile başlayan satırlar ve '?' içeren kelimeler alınmaz)
   - Sıra Sende kelime havuzu: `scripts/dict-src/kelime.txt` (3-6 harfli genel Türkçe kelimeler, **14.057**).
@@ -176,4 +182,7 @@
   **veritabanı kuralları 22 Eki'de yayınlandı** (bot düğümlerine izin); kurallar yayınlanmadan "Bot ekle" çalışmaz.
   22 Eki 20:52'de incelemeye gönderildi; **mağaza metni de aynı incelemeye katıldı** (kısa ve tam açıklama
   artık üç oyunu da anlatıyor). Mağaza metni ile paketi aynı anda göndermek tek inceleme demek.
+  **8 (1.0.8)** 24 Eki'de derlendi (`store/release/isim-sehir-1.0.8.aab`, yeni ana sayfa); 1.0.7 o sırada üretimdeydi.
+  Paket kullanıcı tarafından sürüklendi, sürüm notları + yeni geçişli mağaza görselleri (8 telefon, 8 tablet) ile **tek incelemeye**
+  gönderildi (tam kullanıma sunma). iOS bu sürüme dahil değil (iOS hâlâ 1.0.1).
   Geliştirici 6262296307859358769, uygulama 4972498643282459948. Adımlar: `store/play-console-adimlar.md`.
