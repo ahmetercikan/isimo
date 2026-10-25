@@ -56,13 +56,13 @@ export default function Cinema() {
         </div>
         <div className="show-card__btns">
           <button className="pill pill--sm" disabled={!ONLINE_AVAILABLE} onClick={() => go('/kur/online?oyun=film')}>
-            <Plus size={18} strokeWidth={3} /> Oda Kur
+            <Plus size={18} strokeWidth={3} /> <span>Oda Kur</span>
           </button>
           <button className="pill pill--sm show-card__alt" disabled={!ONLINE_AVAILABLE} onClick={() => go('/katil')}>
-            <LogIn size={18} strokeWidth={2.8} /> Katıl
+            <LogIn size={18} strokeWidth={2.8} /> <span>Katıl</span>
           </button>
           <button className="pill pill--sm show-card__alt" onClick={() => go('/kur/bot?oyun=film')}>
-            <Bot size={20} strokeWidth={2.6} /> Botlara Karşı
+            <Bot size={20} strokeWidth={2.6} /> <span>Botlara Karşı</span>
           </button>
         </div>
       </section>

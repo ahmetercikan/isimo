@@ -330,8 +330,9 @@
 .show-card__icon--gold { background: var(--gold); color: #2a1a05; box-shadow: 0 0 18px rgba(243, 195, 91, 0.5); }
 .show-card__title { font-family: var(--cine); font-weight: 400; font-size: 30px; letter-spacing: 0.04em; line-height: 1; color: var(--ink); }
 .show-card__desc { font-weight: 700; font-size: 14px; color: var(--ink-2); margin-top: 3px; }
-.show-card__btns { display: flex; gap: 8px; }
-.show-card__btns .pill { flex: 1; min-width: 0; padding: 0 8px; font-size: 15px; gap: 5px; }
+.show-card__btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.show-card__btns .pill { flex: 1 1 120px; min-width: 0; min-height: 48px; padding: 10px 12px; font-size: 15px; line-height: 1.25; gap: 6px; white-space: normal; text-align: center; }
+.show-card__btns .pill span { min-width: 0; overflow-wrap: anywhere; }
 .game--cinema .show-card__btns .pill { --c: var(--gold); --cd: var(--gold-2); --t: #2a1a05; }
 .game--cinema .show-card__btns .show-card__alt { --c: rgba(255, 255, 255, 0.14); --cd: rgba(0, 0, 0, 0.35); --t: var(--ink); }
 .show-card--hero { border: 1.5px solid rgba(243, 195, 91, 0.7) !important; padding-right: 88px; min-height: 120px; justify-content: center; overflow: visible; }
