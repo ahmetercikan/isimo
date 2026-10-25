@@ -14,6 +14,10 @@ export interface QuizQuestion {
   /** Yanlış cevapta çıkan kısa espri. */
   oops?: string;
   src?: string;
+  /** İki bağımsız film bilgisini birleştiren soru. */
+  pair?: boolean;
+  pairFacts?: [string, string];
+  src2?: string;
 }
 
 export interface QuizTier {

@@ -20,7 +20,7 @@ Sayaç A'dan Z'ye sayar; sırası gelen oyuncu "DUR!" der ve harf belli olur. İ
 Masadaki kelimede tek bir harfi değiştirip yeni bir Türkçe kelime yap: KEDİ → KADI → KADIN. Sıran gelince süren işler; bulamazsan bir can gider. 14.000 kelimelik havuz, 3, 4 ya da 5 harf, istersen harf ekleyip çıkarmak da serbest.
 
 🎬 SİNEMA BİLMECESİ — İPUÇLARINDAN FİLMİ BİL
-Işıklar söner, geri sayım başlar, klaket vurur! İpuçları birer birer açılır: tür ve yıl, yönetmen, oyuncular, konu ve en sonunda filmin adının iskeleti. Ne kadar erken bilirsen o kadar çok puan. Yeşilçam klasiklerinden Hollywood gişe rekortmenlerine 119 film; yerli, yabancı ya da karışık seçebilirsin. İlk harfleri yazmaya başla, uygulama film adlarını önersin. Oyun sonunda "Yılın Sinemaseveri" seçilir; skor kartını hikâyende paylaş, arkadaşlarına "Sen kaç film bilirsin?" diye sor.
+Işıklar söner, geri sayım başlar, klaket vurur! İpuçları birer birer açılır: tür ve yıl, yönetmen, oyuncular, konu ve en sonunda filmin adının iskeleti. Ne kadar erken bilirsen o kadar çok puan. Yeşilçam klasiklerinden Hollywood gişe rekortmenlerine 19 evrende 9.360 soru; yerli, yabancı ya da karışık seçebilirsin. İlk harfleri yazmaya başla, uygulama film adlarını önersin. Oyun sonunda "Yılın Sinemaseveri" seçilir; skor kartını hikâyende paylaş, arkadaşlarına "Sen kaç film bilirsin?" diye sor.
 
 ✍️ PARMAĞINLA YAZ, UYGULAMA OKUSUN
 Cevaplarını kâğıda yazar gibi parmağınla yaz; Türkçe el yazısı tanıma okur ve kutuya geçirir. Yanlış okursa önerilerden seç ya da klavyeyle yaz.
@@ -62,6 +62,12 @@ Buluşmalarda, aile akşamlarında, tatilde ve yolculukta… Kelime dağarcığ�
 Kalemini hazırla, harfi çevir ve STOP de! İsim Şehir'i şimdi indir, arkadaşlarını oyuna çağır. 🎉
 
 ## Sürüm notları (en fazla 500 karakter)
+
+### 1.0.12 (Android sürüm kodu 12)
+<tr-TR>
+Sinema Bilmecesi soru havuzu 19 evrende 9.360 soruya çıktı. Serilere devam filmleri eklendi; yeni sorular iki film bilgisini birlikte sınar. Görülen sorular yeniden girişte ve arkadaş odalarında hatırlanır. Filmi Bil ve Sen Ne Kadar oyunlarının sonunda geçiş reklamı gösterilir.
+</tr-TR>
+
 
 ### 1.0.11 (Android sürüm kodu 11) — güncel
 Sinema Bilmecesi büyüdü! Yeni Sinema Salonu ve Sen Ne Kadar…? yarışmasıyla 13 film ve çizgi film evreninde 716 soruyu yanıtla. Harry Potter, Yüzüklerin Efendisi, Hababam Sınıfı, Ters Yüz ve Bluey dahil sevdiğin evrenlerde unvan kazan, sonuç kartını paylaş. Sinema müziği daha sakin bir yarışma döngüsüyle değişti. Film Tahmini butonlarındaki yazı taşması ve yarışmadaki puan/zamanlayıcı sorunları düzeltildi.

@@ -22,8 +22,8 @@ try{
  const code=(await a.locator('.code-tile').allTextContents()).join('');console.log('ROOM',code);
  if(await a.getByRole('button',{name:'Bot ekle',exact:true}).count())throw Error('Bot UI present');
  await bp.goto('http://127.0.0.1:5291/#/katil?oyun=quiz');await bp.getByLabel('Oda kodu').fill(code);await bp.waitForSelector('.lobby');
- await a.getByRole('button',{name:'Oyunu Başlat',exact:true}).click({force:true});await a.waitForSelector('.quiz-room .quiz-q__text');await bp.waitForSelector('.quiz-room .quiz-q__text');
- if(await a.locator('.quiz-q__text').innerText()!==await bp.locator('.quiz-q__text').innerText())throw Error('Question mismatch');
+ await a.getByRole('button',{name:'Oyunu Başlat',exact:true}).click({force:true});await a.waitForSelector('.quiz-room .quiz-q__text, .quiz-room .quiz-q__pair');await bp.waitForSelector('.quiz-room .quiz-q__text, .quiz-room .quiz-q__pair');
+ if(await a.locator('.quiz-q__text, .quiz-q__pair').innerText()!==await bp.locator('.quiz-q__text, .quiz-q__pair').innerText())throw Error('Question mismatch');
  if(JSON.stringify(await a.locator('.quiz-opt__text').allTextContents())!==JSON.stringify(await bp.locator('.quiz-opt__text').allTextContents()))throw Error('Option mismatch');
  await a.waitForFunction(()=>document.querySelector('.quiz-opt')?.disabled === false);
  const right=await a.evaluate(async()=>{const s=(await import('/src/store/useGame.ts')).useGame.getState().s;return s.ctl.quiz.questions[0].right;});

@@ -183,9 +183,9 @@ export default function Quiz() {
             <Timer left={Math.ceil(left / 1000)} total={QUESTION_MS / 1000} urgent={left <= 5000 && !answered} />
           </header>
 
-          <section className="paper-card quiz-q pop-in" key={`q${i}`}>
+          <section className={`paper-card quiz-q pop-in ${q?.pairFacts ? 'quiz-q--pair' : ''}`} key={`q${i}`}>
             <span className="quiz-q__level">{['', 'Kolay', 'Orta', 'Zor'][q.d]}</span>
-            <h2 className="quiz-q__text">{q.q}</h2>
+            {q.pairFacts ? <div className="quiz-q__pair"><b>İki ayrı bilgi: ikisini de hatırla</b><span>1. {q.pairFacts[0]}</span><span>2. {q.pairFacts[1]}</span><b>Yanıtları sırayla seç.</b></div> : <h2 className="quiz-q__text">{q.q}</h2>}
           </section>
 
           <div className={`quiz-opts ${q.tf ? 'quiz-opts--tf' : ''}`} key={`o${i}`}>

@@ -38,9 +38,9 @@ export function QuizRoomRound({ t, s }: { t: Transport; s: RoomState }) {
       <span className="round-label round-label--sm">Soru {c.round} / {quiz.questions.length}</span>
       <Timer left={Math.ceil(left / 1000)} total={QUESTION_MS / 1000} urgent={left <= 5000 && !revealed} />
     </header>
-    <section className="paper-card quiz-q">
+    <section className={`paper-card quiz-q ${q.pairFacts ? 'quiz-q--pair' : ''}`}>
       <span className="quiz-q__level">{['', 'Kolay', 'Orta', 'Zor'][q.d]}</span>
-      <h2 className="quiz-q__text">{q.q}</h2>
+      {q.pairFacts ? <div className="quiz-q__pair"><b>İki ayrı bilgi: ikisini de hatırla</b><span>1. {q.pairFacts[0]}</span><span>2. {q.pairFacts[1]}</span><b>Yanıtları sırayla seç.</b></div> : <h2 className="quiz-q__text">{q.q}</h2>}
     </section>
     {watching && <p className="quiz-room__status">Oyun başladı. Bu turu izleyebilir, sonraki oyuna katılabilirsin.</p>}
     {now < c.startAt && <p className="quiz-room__status">Hazırlan… {Math.ceil((c.startAt - now) / 1000)}</p>}

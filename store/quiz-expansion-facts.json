@@ -1,0 +1,99 @@
+{
+  "harrypotter": [
+    {"d":1,"q":"Newt Scamander'ın uzmanlık alanı nedir?","a":["Büyülü yaratıkbilim","Seherbazlık","İksir yapımı","Karanlık sanatlar"],"src":"https://www.fantasticbeasts.com/"},
+    {"d":1,"q":"Newt Scamander'ı Fantastic Beasts filmlerinde kim canlandırır?","a":["Eddie Redmayne","Jude Law","Dan Fogler","Callum Turner"],"src":"https://www.fantasticbeasts.com/"},
+    {"d":1,"q":"Fantastic Beasts filmlerindeki genç Albus Dumbledore'u kim canlandırır?","a":["Jude Law","Eddie Redmayne","Mads Mikkelsen","Ezra Miller"],"src":"https://www.fantasticbeasts.com/"},
+    {"d":2,"q":"Fantastic Beasts: The Secrets of Dumbledore filminde Grindelwald'ı kim canlandırır?","a":["Mads Mikkelsen","Johnny Depp","Colin Farrell","Jude Law"],"src":"https://www.fantasticbeasts.com/"},
+    {"d":1,"q":"Fantastic Beasts'te Jacob Kowalski'nin mesleği nedir?","a":["Fırıncı","Seherbaz","Öğretmen","Magizoolog"],"src":"https://www.fantasticbeasts.com/"},
+    {"d":2,"q":"Fantastic Beasts'te Newt Scamander'ın kardeşi Theseus'un nişanlısı kimdir?","a":["Leta Lestrange","Tina Goldstein","Queenie Goldstein","Nagini"],"src":"https://www.harrypotter.com/news/fantastic-beasts-film-title-revealed-the-crimes-of-grindelwald"},
+    {"d":2,"q":"Fantastic Beasts serisinin ilk filminde Newt hangi şehre gelir?","a":["New York","Londra","Paris","Hogwarts"],"src":"https://www.harrypotter.com/news/fantastic-beasts-dvd-deleted-scene"},
+    {"d":2,"q":"Dumbledore, Grindelwald'a karşı yardım etmesi için kimi görevlendirir?","a":["Newt Scamander","Harry Potter","Theseus Scamander","Jacob Kowalski"],"src":"https://www.fantasticbeasts.com/"},
+    {"d":2,"q":"Grindelwald'ın büyücülerin hangi kesimi yönetmesini savunduğu belirtilir?","a":["Büyücü olmayanların","Yalnızca Muggle doğumluların","Yalnızca seherbazların","Ev cinlerinin"],"src":"https://www.fantasticbeasts.com/"},
+    {"d":1,"q":"Fantastic Beasts'te Tina Goldstein'ı kim canlandırır?","a":["Katherine Waterston","Alison Sudol","Zoë Kravitz","Jessica Williams"],"src":"https://www.harrypotter.com/news/fantastic-beasts-film-title-revealed-the-crimes-of-grindelwald"}
+  ],
+  "yuzuklerinefendisi": [
+    {"d":1,"q":"Hobbit üçlemesinde Bilbo Baggins'i kim canlandırır?","a":["Martin Freeman","Elijah Wood","Ian McKellen","Richard Armitage"],"src":"https://en.wikipedia.org/wiki/The_Hobbit_(film_series)"},
+    {"d":1,"q":"Hobbit filmlerinde cücelerin önderi Thorin'i kim canlandırır?","a":["Richard Armitage","Martin Freeman","Andy Serkis","Lee Pace"],"src":"https://en.wikipedia.org/wiki/The_Hobbit_(film_series)"},
+    {"d":2,"q":"Bilbo'yu yolculuğa davet edip cücelere eşlik eden büyücü kimdir?","a":["Gandalf","Saruman","Radagast","Elrond"],"src":"https://en.wikipedia.org/wiki/The_Hobbit:_An_Unexpected_Journey"},
+    {"d":1,"q":"Hobbit üçlemesindeki ejderhanın adı nedir?","a":["Smaug","Glaurung","Ancalagon","Shelob"],"src":"https://en.wikipedia.org/wiki/The_Hobbit_(film_series)"},
+    {"d":2,"q":"Cüceler Hobbit filmlerinde hangi dağdaki yurtlarını geri almaya çalışır?","a":["Yalnız Dağ","Hüküm Dağı","Sisli Dağlar","Caradhras"],"src":"https://en.wikipedia.org/wiki/The_Hobbit:_An_Unexpected_Journey"},
+    {"d":2,"q":"Hobbit üçlemesinin ilk filminin adı nedir?","a":["Beklenmedik Yolculuk","Smaug'un Çorak Toprakları","Beş Ordunun Savaşı","Yüzük Kardeşliği"],"src":"https://en.wikipedia.org/wiki/The_Hobbit:_An_Unexpected_Journey"},
+    {"d":2,"q":"Hobbit üçlemesinin ikinci filminin adı nedir?","a":["Smaug'un Çorak Toprakları","Beklenmedik Yolculuk","Beş Ordunun Savaşı","İki Kule"],"src":"https://en.wikipedia.org/wiki/The_Hobbit:_The_Desolation_of_Smaug"},
+    {"d":2,"q":"Hobbit üçlemesinin son filmi hangisidir?","a":["Beş Ordunun Savaşı","Smaug'un Çorak Toprakları","Beklenmedik Yolculuk","Kralın Dönüşü"],"src":"https://en.wikipedia.org/wiki/The_Hobbit:_The_Battle_of_the_Five_Armies"},
+    {"d":2,"q":"Hobbit filmlerindeki Smaug karakterine kim ses verir ve hareket yakalama performansı sağlar?","a":["Benedict Cumberbatch","Andy Serkis","Richard Armitage","Martin Freeman"],"src":"https://en.wikipedia.org/wiki/The_Hobbit_(film_series)"},
+    {"d":2,"q":"Hobbit üçlemesinde Bard'ı hangi oyuncu canlandırır?","a":["Luke Evans","Lee Pace","Orlando Bloom","Aidan Turner"],"src":"https://en.wikipedia.org/wiki/The_Hobbit_(film_series)"}
+  ],
+  "matrix": [
+    {"d":1,"q":"Matrix serisinin dördüncü filminde Neo'yu kim canlandırır?","a":["Keanu Reeves","Yahya Abdul-Mateen II","Jonathan Groff","Laurence Fishburne"],"src":"https://www.thematrix.com/"},
+    {"d":1,"q":"Matrix Resurrections filminde Trinity rolünü kim oynar?","a":["Carrie-Anne Moss","Jessica Henwick","Priyanka Chopra Jonas","Christina Ricci"],"src":"https://www.thematrix.com/"},
+    {"d":2,"q":"Matrix Resurrections filmini hangi Wachowski yönetmiştir?","a":["Lana Wachowski","Lilly Wachowski","Andy Wachowski","James McTeigue"],"src":"https://www.thematrix.com/"},
+    {"d":2,"q":"Matrix Reloaded'da makinelerin hedef aldığı insan şehri hangisidir?","a":["Zion","Mega City","New York","Machine City"],"src":"https://thematrix101.com/reloaded/synopsis.php"},
+    {"d":2,"q":"Matrix Revolutions'ta makinelerin Zion'a saldırısı hangi tehdidi oluşturur?","a":["İnsan şehrinin düşmesi","Ay'ın parçalanması","Neo'nun çocukluğa dönmesi","Trinity'nin ajan olması"],"src":"https://sf-encyclopedia.com/entry/matrix_revolutions_the"},
+    {"d":3,"q":"Reloaded'da Neo'nun karşılaştığı ve Matrix'i yaratan programın adı nedir?","a":["Mimar","Kâhin","Anahtar Yapımcısı","Tren Adamı"],"src":"https://en.wikipedia.org/wiki/The_Matrix_Reloaded"},
+    {"d":2,"q":"Matrix Resurrections'ta Morpheus'u hangi oyuncu canlandırır?","a":["Yahya Abdul-Mateen II","Laurence Fishburne","Keanu Reeves","Jonathan Groff"],"src":"https://www.thematrix.com/"},
+    {"d":2,"q":"Matrix Reloaded ve Revolutions hangi yıl gösterime girdi?","a":["2003","1999","2001","2005"],"src":"https://en.wikipedia.org/wiki/The_Matrix_(franchise)"},
+    {"d":3,"q":"Matrix Resurrections'ın senaryosunu Lana Wachowski ile birlikte kimler yazdı?","a":["David Mitchell ve Aleksandar Hemon","Lilly Wachowski ve James McTeigue","Grant Hill ve Tom Tykwer","Keanu Reeves ve Carrie-Anne Moss"],"src":"https://www.thematrix.com/"},
+    {"d":2,"q":"Matrix Resurrections hangi iki eski başrolü Neo ve Trinity olarak yeniden buluşturur?","a":["Keanu Reeves ve Carrie-Anne Moss","Laurence Fishburne ve Jada Pinkett Smith","Yahya Abdul-Mateen II ve Jessica Henwick","Hugo Weaving ve Monica Bellucci"],"src":"https://www.thematrix.com/"}
+  ],
+  "yildizsavaslari": [
+    {"d":1,"q":"Yıldız Savaşları ön üçlemesinde genç Anakin Skywalker'ı kim canlandırır?","a":["Hayden Christensen","Ewan McGregor","Jake Lloyd","Liam Neeson"],"src":"https://www.starwars.com/databank/star-wars-prequel-trilogy-all"},
+    {"d":1,"q":"Ön üçlemede Obi-Wan Kenobi'yi kim canlandırır?","a":["Ewan McGregor","Hayden Christensen","Samuel L. Jackson","Ian McDiarmid"],"src":"https://www.starwars.com/databank/star-wars-prequel-trilogy-all"},
+    {"d":1,"q":"Padmé Amidala'yı ön üçlemede kim canlandırır?","a":["Natalie Portman","Carrie Fisher","Daisy Ridley","Keira Knightley"],"src":"https://www.starwars.com/databank/star-wars-prequel-trilogy-all"},
+    {"d":2,"q":"Anakin'in ikiz çocuklarının annesi Padmé hangi gezegenden kraliçe ve senatör olur?","a":["Naboo","Tatooine","Alderaan","Coruscant"],"src":"https://www.starwars.com/databank/star-wars-prequel-trilogy-all"},
+    {"d":2,"q":"Hayden Christensen'in canlandırdığı Anakin, karanlık tarafa geçince hangi Sith adına bürünür?","a":["Darth Vader","Darth Maul","Count Dooku","Darth Sidious"],"src":"https://www.starwars.com/databank/anakin-skywalker"},
+    {"d":2,"q":"Ön üçlemede Jango Fett'i hangi oyuncu canlandırır?","a":["Temuera Morrison","Samuel L. Jackson","Ahmed Best","Christopher Lee"],"src":"https://www.starwars.com/databank/star-wars-prequel-trilogy-all"},
+    {"d":2,"q":"General Grievous'un komuta ettiği ordu hangisidir?","a":["Droid ordusu","Ewok ordusu","Rebel Alliance","First Order"],"src":"https://www.starwars.com/databank/star-wars-prequel-trilogy-all"},
+    {"d":2,"q":"Rogue One'da İmparatorluk için çalışan mühendis Galen Erso'nun kızı kimdir?","a":["Jyn Erso","Leia Organa","Padmé Amidala","Rey"],"src":"https://www.starwars.com/databank/rogue-one-a-star-wars-story-all"},
+    {"d":1,"q":"Rogue One'da Cassian Andor'u kim canlandırır?","a":["Diego Luna","Felicity Jones","Riz Ahmed","Alan Tudyk"],"src":"https://www.starwars.com/databank/rogue-one-a-star-wars-story-all"},
+    {"d":2,"q":"Rogue One'ın ekibi Ölüm Yıldızı'nın hangi bilgisini ele geçirmeye çalışır?","a":["Planlarını","Güç kaynağını","İmparator'un günlüğünü","Jedi arşivini"],"src":"https://www.starwars.com/databank/rogue-one-a-star-wars-story-all"},
+    {"d":2,"q":"Solo filminde genç Han Solo'yu kim canlandırır?","a":["Alden Ehrenreich","Harrison Ford","Donald Glover","Diego Luna"],"src":"https://www.starwars.com/databank/solo-a-star-wars-story-all"},
+    {"d":2,"q":"Solo'da Lando Calrissian'ı kim canlandırır?","a":["Donald Glover","Alden Ehrenreich","Woody Harrelson","Paul Bettany"],"src":"https://www.starwars.com/databank/solo-a-star-wars-story-all"},
+    {"d":2,"q":"Solo'da Han Solo'nun pilotu olduğu geminin adı nedir?","a":["Millennium Falcon","Razor Crest","Ghost","Tantive IV"],"src":"https://www.starwars.com/databank/solo-a-star-wars-story-all"},
+    {"d":1,"q":"Yıldız Savaşları devam üçlemesinde Rey'i kim canlandırır?","a":["Daisy Ridley","Felicity Jones","Natalie Portman","Keri Russell"],"src":"https://www.starwars.com/databank/rey"},
+    {"d":1,"q":"Devam üçlemesindeki Finn'in eski First Order kimliği nedir?","a":["FN-2187","FN-2003","TK-421","CT-7567"],"src":"https://www.starwars.com/databank/finn"},
+    {"d":2,"q":"Ben Solo, karanlık tarafa geçtikten sonra hangi adı kullanır?","a":["Kylo Ren","Darth Maul","Supreme Leader Hux","Snoke"],"src":"https://www.starwars.com/databank/kylo-ren"},
+    {"d":2,"q":"Rey, Luke Skywalker'ı hangi gezegende bulur?","a":["Ahch-To","Jakku","Endor","Hoth"],"src":"https://www.starwars.com/databank/rey"},
+    {"d":2,"q":"Devam üçlemesinde First Order'ın Starkiller Base adlı silahı hangi gezegenin üzerine kuruludur?","a":["Ilum","Jakku","Tatooine","Naboo"],"src":"https://www.starwars.com/databank/star-wars-sequel-trilogy-all"},
+    {"d":2,"q":"The Last Jedi'da Finn'e First Order gemisinden kaçma planında kim yardım eder?","a":["Rose Tico","Jyn Erso","Holdo","Maz Kanata"],"src":"https://www.starwars.com/databank/rose-tico"},
+    {"d":2,"q":"The Rise of Skywalker'da Finn'in First Order'a karşı birlikte savaştığı eski stormtrooper kimdir?","a":["Jannah","Rose","Holdo","Qi'ra"],"src":"https://www.starwars.com/databank/finn"},
+    {"d":1,"q":"The Force Awakens'ta Poe Dameron'ın droid dostunun adı nedir?","a":["BB-8","R2-D2","D-O","K-2SO"],"src":"https://www.starwars.com/databank/star-wars-sequel-trilogy-all"},
+    {"d":2,"q":"The Last Jedi'da direnişin sığındığı ve First Order'ın saldırdığı gezegen hangisidir?","a":["Crait","Scarif","Geonosis","Mustafar"],"src":"https://www.starwars.com/databank/star-wars-sequel-trilogy-all"},
+    {"d":2,"q":"The Rise of Skywalker'da Sith filosunun toplandığı gezegenin adı nedir?","a":["Exegol","Ahch-To","Bespin","Kashyyyk"],"src":"https://www.starwars.com/databank/star-wars-sequel-trilogy-all"},
+    {"d":1,"q":"Rogue One'da K-2SO'ya kim ses verir?","a":["Alan Tudyk","Diego Luna","Ben Mendelsohn","Donnie Yen"],"src":"https://www.starwars.com/databank/rogue-one-a-star-wars-story-all"}
+  ],
+  "karayipkorsanlari": [
+    {"d":1,"q":"On Stranger Tides'ta Karasakal'ı kim canlandırır?","a":["Ian McShane","Geoffrey Rush","Bill Nighy","Javier Bardem"],"src":"https://movies.disney.com/pirates-of-the-caribbean-on-stranger-tides"},
+    {"d":1,"q":"On Stranger Tides'ta Angelica'yı hangi oyuncu canlandırır?","a":["Penélope Cruz","Keira Knightley","Naomie Harris","Zoe Saldaña"],"src":"https://movies.disney.com/pirates-of-the-caribbean-on-stranger-tides"},
+    {"d":2,"q":"On Stranger Tides'ta Jack Sparrow ve Angelica'nın peşinde olduğu efsanevi kaynak nedir?","a":["Gençlik Pınarı","Davy Jones'un sandığı","Ölüler Adası","Poseidon'un pusulası"],"src":"https://movies.disney.com/pirates-of-the-caribbean-on-stranger-tides"},
+    {"d":2,"q":"On Stranger Tides'ta Karasakal'ın gemisinin adı nedir?","a":["Queen Anne's Revenge","Black Pearl","Flying Dutchman","Interceptor"],"src":"https://movies.disney.com/pirates-of-the-caribbean-on-stranger-tides"},
+    {"d":1,"q":"Dead Men Tell No Tales filminde Kaptan Salazar'ı kim canlandırır?","a":["Javier Bardem","Ian McShane","Geoffrey Rush","Orlando Bloom"],"src":"https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean:_Dead_Men_Tell_No_Tales"},
+    {"d":2,"q":"Dead Men Tell No Tales'ta Henry Turner, babasını kurtarmak için neyi arar?","a":["Poseidon'un Üç Dişli Mızrağı'nı","Gençlik Pınarı'nı","Ölüler Sandığı'nı","Davy Jones'un haritasını"],"src":"https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean:_Dead_Men_Tell_No_Tales"},
+    {"d":2,"q":"Dead Men Tell No Tales'ta Will Turner'ın oğlunu kim canlandırır?","a":["Brenton Thwaites","Orlando Bloom","Johnny Depp","Kaya Scodelario"],"src":"https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean:_Dead_Men_Tell_No_Tales"},
+    {"d":2,"q":"Karayip Korsanları serisinin beşinci filminde Jack'e düşmanlık eden ölü korsan kaptanın adı nedir?","a":["Armando Salazar","Davy Jones","Hector Barbossa","Blackbeard"],"src":"https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean:_Dead_Men_Tell_No_Tales"}
+  ],
+  "aslankral": [
+    {"d":1,"q":"Mufasa: The Lion King'de genç Taka'nın yetişkin halini kim seslendirir?","a":["Kelvin Harrison Jr.","Aaron Pierre","John Kani","Seth Rogen"],"src":"https://movies.disney.com/mufasa-the-lion-king"},
+    {"d":2,"q":"Mufasa: The Lion King'de öyküyü genç Kiara'ya kim anlatır?","a":["Rafiki","Timon","Pumbaa","Zazu"],"src":"https://movies.disney.com/mufasa-the-lion-king"},
+    {"d":2,"q":"Mufasa filminin yönetmeni kimdir?","a":["Barry Jenkins","Jon Favreau","Roger Allers","Rob Minkoff"],"src":"https://movies.disney.com/mufasa-the-lion-king"},
+    {"d":1,"q":"Mufasa'nın çocukluk öyküsünü dinleyen Simba ve Nala'nın kızı kimdir?","a":["Kiara","Sarabi","Shenzi","Vitani"],"src":"https://movies.disney.com/mufasa-the-lion-king"},
+    {"d":2,"q":"Mufasa ile tanıştığında Taka hangi konumdaki bir aslandır?","a":["Kraliyet soyunun varisi","Gururun baş düşmanı","Rafiki'nin çırağı","Yabancı bir avcı"],"src":"https://movies.disney.com/mufasa-the-lion-king"},
+    {"d":1,"q":"2024 yapımı Mufasa filminde yetişkin Mufasa'yı kim seslendirir?","a":["Aaron Pierre","James Earl Jones","Kelvin Harrison Jr.","Donald Glover"],"src":"https://movies.disney.com/mufasa-the-lion-king"},
+    {"d":2,"q":"Mufasa filminde şarkıları yazan sanatçı kimdir?","a":["Lin-Manuel Miranda","Elton John","Hans Zimmer","Dave Metzger"],"src":"https://movies.disney.com/mufasa-the-lion-king"}
+  ],
+  "karlarulkesi": [
+    {"d":1,"q":"Frozen 2'de Elsa'ya ses veren oyuncu kimdir?","a":["Idina Menzel","Kristen Bell","Rachel Matthews","Martha Plimpton"],"src":"https://movies.disney.com/frozen-2"},
+    {"d":1,"q":"Frozen 2'de Anna'yı kim seslendirir?","a":["Kristen Bell","Idina Menzel","Eva Bella","Mattea Conforti"],"src":"https://movies.disney.com/frozen-2"},
+    {"d":2,"q":"Frozen 2'de Elsa'nın gizemli ormanda karşılaştığı su ruhu hangi biçimdedir?","a":["At","Kurt","Geyik","Ejderha"],"src":"https://movies.disney.com/frozen-2"},
+    {"d":2,"q":"Frozen 2'de Arendelle askerleri arasında büyülü ormanda mahsur kalan teğmen kimdir?","a":["Mattias","Hans","Oaken","Weselton"],"src":"https://movies.disney.com/frozen-2"},
+    {"d":2,"q":"Frozen 2'de Olaf'a ses veren oyuncu kimdir?","a":["Josh Gad","Jonathan Groff","Sterling K. Brown","Alfred Molina"],"src":"https://movies.disney.com/frozen-2"},
+    {"d":2,"q":"Frozen 2'de Kristoff'un evlenme teklifi etmeyi planladığı kişi kimdir?","a":["Anna","Elsa","Honeymaren","Iduna"],"src":"https://movies.disney.com/frozen-2"},
+    {"d":2,"q":"Frozen 2'yi Chris Buck ile birlikte kim yönetmiştir?","a":["Jennifer Lee","Chris Sanders","Peter Del Vecho","Kristen Anderson-Lopez"],"src":"https://movies.disney.com/frozen-2"}
+  ],
+  "shrek": [
+    {"d":1,"q":"Çizmeli Kedi filmlerinde Puss'a kim ses verir?","a":["Antonio Banderas","Mike Myers","Eddie Murphy","Walt Dohrn"],"src":"https://www.dreamworks.com/movies/puss-in-boots"},
+    {"d":2,"q":"Çizmeli Kedi: Son Dilek'te Puss kaçıncı hayatını yaşadığını fark eder?","a":["Dokuzuncu","Yedinci","Beşinci","Onuncu"],"src":"https://www.dreamworks.com/movies/puss-in-boots-the-last-wish"},
+    {"d":2,"q":"Son Dilek'te Puss kalan son dileğini bulmak için hangi efsanevi nesnenin peşine düşer?","a":["Dilek Yıldızı","Sihirli Ayna","Altın Kaz","Büyülü Fasulye"],"src":"https://www.dreamworks.com/movies/puss-in-boots-the-last-wish"},
+    {"d":2,"q":"İlk Çizmeli Kedi filminde Puss'ın yol arkadaşı Humpty Dumpty'ye kim ses verir?","a":["Zach Galifianakis","Antonio Banderas","Salma Hayek","Billy Bob Thornton"],"src":"https://www.dreamworks.com/movies/puss-in-boots"},
+    {"d":2,"q":"Son Dilek'te Kitty Softpaws'ı kim seslendirir?","a":["Salma Hayek","Florence Pugh","Constance Marie","Amy Sedaris"],"src":"https://www.dreamworks.com/movies/puss-in-boots-the-last-wish"}
+  ]
+}
