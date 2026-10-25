@@ -197,5 +197,10 @@
   artık üç oyunu da anlatıyor). Mağaza metni ile paketi aynı anda göndermek tek inceleme demek.
   **8 (1.0.8)** 24 Eki'de derlendi (`store/release/isim-sehir-1.0.8.aab`, yeni ana sayfa); 1.0.7 o sırada üretimdeydi.
   Paket kullanıcı tarafından sürüklendi, sürüm notları + yeni geçişli mağaza görselleri (8 telefon, 8 tablet) ile **tek incelemeye**
-  gönderildi (tam kullanıma sunma). iOS bu sürüme dahil değil (iOS hâlâ 1.0.1).
+  gönderildi (tam kullanıma sunma), onaylanıp yayına çıktı. iOS bu sürüme dahil değil (iOS hâlâ 1.0.1).
+  **9 (1.0.9)** 25 Eki'de derlendi (`store/release/isim-sehir-1.0.9.aab`: yeni iç ekranlar, sesler, 3B ikon);
+  paket yine kullanıcı tarafından sürüklendi; mağaza simgesi (yeni 3B ikon, YZ etiketi yok) + yeni ekranlarla çekilmiş
+  8+8 geçişli görsel (YZ etiketli) ile birlikte tek incelemeye gönderildi. Kitaplıkta ad çakışmasın diye görseller
+  `v9-phone-0N.png` / `v9-tablet-0N.png`, ikon `isim-sehir-ikon-3b.png` adıyla yüklendi; sırayla seçerken
+  seçimler arasında ~1 sn beklemek gerekiyor, yoksa sıra karışıyor.
   Geliştirici 6262296307859358769, uygulama 4972498643282459948. Adımlar: `store/play-console-adimlar.md`.
