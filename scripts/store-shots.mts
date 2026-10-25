@@ -86,7 +86,7 @@ await p.evaluate(() =>
       settings: { cats: [['isim', 'İsim', '🧒'], ['sehir', 'Şehir', '🏙️'], ['hayvan', 'Hayvan', '🦁'], ['bitki', 'Bitki', '🌿'], ['esya', 'Eşya', '🪑'], ['ulke', 'Ülke', '🌍']].map(([id, label, emoji]) => ({ id, label, emoji })), rounds: 5, time: 120, stop: true, grace: 10, hard: false, manualStop: true },
       bots: { count: 9, level: 3 }, stats: { games: 12, wins: 7, best: 190, points: 1460 }, lastRoom: null,
     },
-    version: 1,
+    version: 2,
   })),
 );
 await p.goto(URL + '?r=1#/');

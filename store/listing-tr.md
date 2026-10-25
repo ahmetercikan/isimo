@@ -6,7 +6,7 @@ Karakter sınırları `node scripts/check-listing.mjs` ile kontrol edilir.
 İsim Şehir Online Kelime Oyunu
 
 ## Kısa açıklama (en fazla 80 karakter)
-Online İsim Şehir, Sıra Sende ve Sinema Bilmecesi: harfi çevir, elinle yaz, STOP de!
+İsim Şehir, Sıra Sende ve Sinema Bilmecesi: arkadaşlarınla online kelime oyunu!
 
 ## Tam açıklama (en fazla 4000 karakter)
 Çocukluğumuzun efsane oyunu İsim Şehir artık telefonunda — üstelik yanında iki oyun daha! Kâğıt kaleme gerek yok: arkadaşlarınla, ailenle ya da botlara karşı online oyna. Harfi çevir, cevaplarını parmağınla yaz, ilk bitiren olup STOP de!
@@ -20,10 +20,10 @@ Sayaç A'dan Z'ye sayar; sırası gelen oyuncu "DUR!" der ve harf belli olur. İ
 Masadaki kelimede tek bir harfi değiştirip yeni bir Türkçe kelime yap: KEDİ → KADI → KADIN. Sıran gelince süren işler; bulamazsan bir can gider. 14.000 kelimelik havuz, 3, 4 ya da 5 harf, istersen harf ekleyip çıkarmak da serbest.
 
 🎬 SİNEMA BİLMECESİ — İPUÇLARINDAN FİLMİ BİL
-İpuçları birer birer açılır: tür ve yıl, yönetmen, oyuncular, konu ve en sonunda filmin adının iskeleti. Ne kadar erken bilirsen o kadar çok puan. Yerli, yabancı ya da karışık seçebilirsin. İlk harfleri yazmaya başla, uygulama film adlarını önersin.
+Işıklar söner, geri sayım başlar, klaket vurur! İpuçları birer birer açılır: tür ve yıl, yönetmen, oyuncular, konu ve en sonunda filmin adının iskeleti. Ne kadar erken bilirsen o kadar çok puan. Yeşilçam klasiklerinden Hollywood gişe rekortmenlerine 119 film; yerli, yabancı ya da karışık seçebilirsin. İlk harfleri yazmaya başla, uygulama film adlarını önersin. Oyun sonunda "Yılın Sinemaseveri" seçilir; skor kartını hikâyende paylaş, arkadaşlarına "Sen kaç film bilirsin?" diye sor.
 
 ✍️ PARMAĞINLA YAZ, UYGULAMA OKUSUN
-Cevaplarını kâğıda yazar gibi parmağınla yaz. Türkçe el yazısı tanıma yazdığını okur ve kutuya geçirir. Yanlış okursa önerilerden doğrusunu seç ya da klavyeyle yaz. El yazısı tanıma bir kez indikten sonra internetsiz çalışır.
+Cevaplarını kâğıda yazar gibi parmağınla yaz; Türkçe el yazısı tanıma okur ve kutuya geçirir. Yanlış okursa önerilerden seç ya da klavyeyle yaz.
 
 👫 ARKADAŞLARINLA ONLINE OYNA (10 KİŞİYE KADAR)
 Bir oda kur, 5 haneli oda kodunu paylaş, arkadaşların kendi telefonlarından katılsın. Arkadaş listen de var: 6 haneli arkadaş kodunu ver, kimin çevrimiçi olduğunu gör, tek dokunuşla oyuna çağır. Arkadaşın azsa odana bot ekle, masa dolsun. Üyelik ve şifre yok, hemen başla.
@@ -36,7 +36,7 @@ Klasik İsim Şehir kuralları:
 • Tek senin cevabınsa 10 puan
 • Başkası da aynısını yazdıysa 5 puan
 • O kategoride geçerli cevabı olan tek kişi sensen 20 puan
-Puan tablosu her turdan sonra kendiliğinden güncellenir. Oyun sonunda kürsü, ödüller (Tek Kalan, STOP Ustası, Kelime Hazinesi) ve konfeti seni bekler.
+Oyun sonunda kürsü, ödüller ve konfeti seni bekler.
 
 🤖 İNTERNET YOK MU? BOTLARA KARŞI OYNA
 Robo Ramiz, Bilge Baykuş, Kurnaz Tilki ve diğer botlara karşı internetsiz oyna. Kolay, orta ve zor seviye, üç oyunun hepsinde. Tek başına ısın, kelime hazineni geliştir!
@@ -48,10 +48,10 @@ Robo Ramiz, Bilge Baykuş, Kurnaz Tilki ve diğer botlara karşı internetsiz oy
 Tur sayısı, yazma süresi, STOP kuralı, harfi oyuncu mu sayaç mı durduracak, zor harfler, kelime uzunluğu, can sayısı, film sayısı ve ipuçları arası süre — hepsi senin elinde.
 
 🎵 OYUN GİBİ OYUN
-Renkli ve sevimli tasarım, akıcı animasyonlar, harf sayacının tıkırtısı, STOP düdüğü, fanfarlar ve fon müziği. Telefonda da tablette de tam ekran.
+Renkli ve sevimli tasarım, maskotumuz kaplan, akıcı animasyonlar, harf sayacının tıkırtısı, STOP düdüğü, fanfarlar ve gerçek stüdyo kayıtlı fon müzikleri. Sinema Bilmecesi'nde spot ışıklı, perdeli bir sinema salonu. Telefonda da tablette de tam ekran.
 
 🎉 ARKADAŞ, AİLE VE PARTİ OYUNU
-Arkadaş buluşmalarında, aile akşamlarında, ofis molalarında, tatilde ve yolculukta… İsim Şehir her toplantıyı oyuna çevirir. Kelime oyunu ve harf oyunu sevenlerin vazgeçilmezi: kelime dağarcığını geliştirir, hızlı düşündürür, bol bol güldürür.
+Buluşmalarda, aile akşamlarında, tatilde ve yolculukta… Kelime dağarcığını geliştirir, hızlı düşündürür, bol bol güldürür.
 
 🔒 KOLAY VE GÜVENLİ
 • Ücretsiz
@@ -63,7 +63,10 @@ Kalemini hazırla, harfi çevir ve STOP de! İsim Şehir'i şimdi indir, arkada�
 
 ## Sürüm notları (en fazla 500 karakter)
 
-### 1.0.7 (Android sürüm kodu 7) — güncel
+### 1.0.10 (Android sürüm kodu 10) — güncel
+Film Avı artık Sinema Bilmecesi! Sinema salonu teması, geri sayım ve klaket, 119 film, "Yılın Sinemaseveri" ve hikâyende paylaşabileceğin skor kartı. Gerçek kayıtlı fon müzikleri. Davetler ve sonuçlar artık görselli kartlarla paylaşılıyor. İkon telefonda daha büyük, açılış ekranı daha düzgün. Harfi oyuncuların durdurması artık isteğe bağlı (varsayılan kapalı).
+
+### 1.0.7 (Android sürüm kodu 7)
 Yeni bölüm: Sinema Bilmecesi! İpuçları birer birer açılır (tür, yönetmen, oyuncu, konu, adın iskeleti); filmi en erken bilen en çok puanı alır. 30 film; yerli, yabancı ya da karışık seçilebilir. Artık çevrimiçi odaya da bot ekleyebilirsiniz: arkadaşınız azken masayı botlarla doldurun, oda kodunuz yine açık kalsın. Sinema Bilmecesi'nde yazı defteri büyüdü, ana sayfadaki arkadaş düğmesi sağa alındı.
 
 ### 1.0.6 (Android sürüm kodu 6)

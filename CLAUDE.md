@@ -237,7 +237,8 @@
   (`store/promo/play-feature.png` = `store/feature-graphic.png`, `store-panorama.mts feature`; YZ etiketli) de eklendi;
   inceleme sürerken yeni değişiklik göndermek incelemeyi **baştan başlatıyor** (Play uyarıyor) — kullanıcı onayladı.
   Artık mağazada eski tasarımdan bir şey kalmadı (iOS hariç).
-  **Sıradaki iş — 1.0.10:** büyük Android ikonu (sıkı yerleşim) + açılış logosu süresi + beyaz şerit düzeltmesi
-  `main`de hazır ama paketlenmedi. Kullanıcı kararı (25 Eki): 1.0.9 incelemeden çıkıp yayına girsin, **sonra** 1.0.10
-  derlenip yüklensin (inceleme sürerken göndermek incelemeyi baştan başlatıyor).
+  1.0.9 onaylandı. **10 (1.0.10)** 25 Eki'de derlendi (`store/release/isim-sehir-1.0.10.aab`): büyük Android ikonu,
+  açılış logosu, beyaz şerit, gerçek müzikler, Sinema Bilmecesi (sinema teması, 119 film), görselli paylaşım kartları,
+  harf durdurma varsayılan kapalı. Mağaza görselleri, öne çıkan görsel, kısa/tam açıklama yeni adla yenilendi
+  (görseller `v10-*` adıyla yüklendi). Mağaza betiği profil kaydını `version: 2` yazar (yoksa geçiş harf durdurmayı kapatır, DUR çıkmaz).
   Geliştirici 6262296307859358769, uygulama 4972498643282459948. Adımlar: `store/play-console-adimlar.md`.
