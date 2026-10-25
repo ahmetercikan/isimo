@@ -91,7 +91,7 @@ await p.evaluate(() =>
 );
 await p.goto(URL + '?r=1#/');
 await sleep(2200);
-// 3. argüman 'ek' ise yalnız Sıra Sende ve Film Avı çekilir (İsim Şehir oyunu atlanır)
+// 3. argüman 'ek' ise yalnız Sıra Sende ve Sinema Bilmecesi çekilir (İsim Şehir oyunu atlanır)
 if (process.argv[3] !== 'ek') {
 await shot('01-ana-sayfa');
 await p.click('.game-card--isim .play-btn');
@@ -201,7 +201,7 @@ for (let i = 0; i < 2; i++) {
 await typeMove();
 await sleep(600);
 await shot('12-sira-sende');
-// Film Avı: birkaç ipucu açılsın, klavyeden ilk harfler yazılınca öneriler çıksın
+// Sinema Bilmecesi: birkaç ipucu açılsın, klavyeden ilk harfler yazılınca öneriler çıksın
 await startBots('film', '.film', 9);
 await sleep(16000);
 await p.click('.film .tool[aria-label="Klavye"]').catch(() => {});

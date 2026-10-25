@@ -17,7 +17,8 @@ export const DEFAULT_SETTINGS: Settings = {
   stop: true,
   grace: 10,
   hard: false,
-  manualStop: true,
+  // Harfi oyuncular durdursun: varsayılan kapalı, isteyen açar (kullanıcı isteği, 25 Eki 2026).
+  manualStop: false,
 };
 
 /** Sıra Sende varsayılanları. Firebase kuralları settings'te cats/rounds/time ister: cats tek göstermelik. */
@@ -35,7 +36,7 @@ export const DEFAULT_CHAIN: Settings = {
   free: false,
 };
 
-/** Film Avı varsayılanları (rounds: film sayısı, time: ipuçları arası saniye; cats yine göstermelik). */
+/** Sinema Bilmecesi varsayılanları (rounds: film sayısı, time: ipuçları arası saniye; cats yine göstermelik). */
 export const DEFAULT_FILM: Settings = {
   cats: [{ id: 'film', label: 'Film', emoji: '' }],
   rounds: 5,
@@ -67,7 +68,7 @@ interface ProfileState {
   settings: Settings;
   /** Sıra Sende'nin son ayarları. */
   chain?: Settings;
-  /** Film Avı'nın son ayarları. */
+  /** Sinema Bilmecesi'nin son ayarları. */
   film?: Settings;
   bots: { count: number; level: 1 | 2 | 3 };
   stats: Stats;
@@ -106,6 +107,15 @@ export const useProfile = create<ProfileState>()(
           stats: { games: s.stats.games + 1, wins: s.stats.wins + (won ? 1 : 0), best: Math.max(s.stats.best, points), points: s.stats.points + points },
         })),
     }),
-    { name: 'isimsehir-v1', version: 1 },
+    {
+      name: 'isimsehir-v1',
+      version: 2,
+      // 2: "Harfi oyuncular durdursun" artık varsayılan kapalı; eski varsayılanla kaydedilmiş ayarlar bir kez kapatılır.
+      migrate: (state, from) => {
+        const st = state as Partial<ProfileState>;
+        if (from < 2 && st.settings) st.settings = { ...st.settings, manualStop: false };
+        return st as ProfileState;
+      },
+    },
   ),
 );

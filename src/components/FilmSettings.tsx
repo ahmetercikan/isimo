@@ -1,4 +1,4 @@
-/** Film Avı ayarları: film sayısı, ipuçları arası süre ve hangi filmler (yerli/yabancı). */
+/** Sinema Bilmecesi ayarları: film sayısı, ipuçları arası süre ve hangi filmler (yerli/yabancı). */
 import { Timer } from 'lucide-react';
 import { POOLS } from '../engine/film';
 import type { Settings } from '../engine/types';

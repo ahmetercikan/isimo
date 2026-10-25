@@ -538,7 +538,7 @@ export const sfx = {
     tone({ type: 'square', f: mtof(83 + k), d: 0.06, g: 0.035, lp: 5000 });
     tone({ type: 'square', f: mtof(88 + k), t: 0.06, d: 0.35, g: 0.035, lp: 5000, send: 0.2 });
   },
-  /** Klaket: kuru tahta şaklaması + kısa oda yankısı (Film Avı'nda her film başlarken). */
+  /** Klaket: kuru tahta şaklaması + kısa oda yankısı (Sinema Bilmecesi'nde her film başlarken). */
   clap: () => {
     noise({ d: 0.05, g: 0.5, filter: 'bandpass', f: 1800, q: 1.2, send: 0.25 });
     noise({ d: 0.02, g: 0.35, filter: 'highpass', f: 4000 });

@@ -1,13 +1,11 @@
 /**
- * Film Avı skor kartı: Instagram hikâyesi boyutunda (1080×1920) görsel çizer ve paylaşır.
+ * Sinema Bilmecesi skor kartı: Instagram hikâyesi boyutunda (1080×1920) görsel çizer ve paylaşır.
  * Uygulamada (Android/iOS) dosya önbelleğe yazılıp sistem paylaşım penceresiyle gönderilir;
  * web'de destekleniyorsa Web Share ile, değilse indirme olarak verilir.
  */
-import { Capacitor } from '@capacitor/core';
-import { Directory, Filesystem } from '@capacitor/filesystem';
-import { Share } from '@capacitor/share';
 import artFilm from '../assets/home/film.webp';
 import tiger from '../assets/home/tiger.webp';
+import { shareImage } from './shareCard';
 
 export interface StoryInfo {
   name: string;
@@ -95,16 +93,18 @@ export async function drawStory(info: StoryInfo): Promise<string> {
 
   g.font = '800 44px Nunito';
   g.fillStyle = 'rgba(246,239,226,0.85)';
-  g.fillText('İSİM ŞEHİR SUNAR', W / 2, 250);
-  g.font = '400 230px "Bebas Neue"';
-  g.fillStyle = gold(270, 480);
+  g.fillText('İSİM ŞEHİR SUNAR', W / 2, 220);
+  g.font = '400 200px "Bebas Neue"';
   g.shadowColor = 'rgba(243,195,91,0.45)';
   g.shadowBlur = 40;
-  g.fillText('FİLM AVI', W / 2, 480);
+  g.fillStyle = gold(240, 420);
+  g.fillText('SİNEMA', W / 2, 410);
+  g.fillStyle = gold(420, 600);
+  g.fillText('BİLMECESİ', W / 2, 590);
   g.shadowBlur = 0;
 
   // Skor kartı
-  const cardY = 590;
+  const cardY = 650;
   g.fillStyle = 'rgba(26,22,58,0.85)';
   g.strokeStyle = 'rgba(243,195,91,0.7)';
   g.lineWidth = 4;
@@ -129,8 +129,8 @@ export async function drawStory(info: StoryInfo): Promise<string> {
   // Soru + maskot + film resmi
   g.font = '400 120px "Bebas Neue"';
   g.fillStyle = '#ffffff';
-  g.fillText('SEN KAÇ FİLM', W / 2, 1330);
-  g.fillText('BİLİRSİN?', W / 2, 1440);
+  g.fillText('SEN KAÇ FİLM', W / 2, 1360);
+  g.fillText('BİLİRSİN?', W / 2, 1465);
   try {
     const [t, f] = await Promise.all([img(tiger), img(artFilm)]);
     g.drawImage(f, 640, 1460, 300, (300 * f.height) / f.width);
@@ -142,27 +142,12 @@ export async function drawStory(info: StoryInfo): Promise<string> {
   g.fillRect(0, H - 170, W, 170);
   g.font = '800 40px Nunito';
   g.fillStyle = '#f3c35b';
-  g.fillText('Google Play\'de “İsim Şehir” · Film Avı', W / 2, H - 92);
+  g.fillText('Google Play\'de “İsim Şehir” · Sinema Bilmecesi', W / 2, H - 92);
   return c.toDataURL('image/png');
 }
 
-/** Kartı çizip paylaşır. Paylaşım iptal edilirse sessizce döner. */
+/** Kartı çizip paylaşır (metne Play bağlantısı eklenir). Paylaşım iptal edilirse sessizce döner. */
 export async function shareStory(info: StoryInfo): Promise<void> {
   const url = await drawStory(info);
-  const text = `Film Avı'nda ${info.pts} puan yaptım! Sen kaç film bilirsin? 🎬`;
-  if (Capacitor.isNativePlatform()) {
-    const w = await Filesystem.writeFile({ path: 'film-avi-skor.png', data: url.split(',')[1], directory: Directory.Cache });
-    await Share.share({ title: 'Film Avı', text, files: [w.uri], dialogTitle: 'Skorunu paylaş' });
-    return;
-  }
-  const blob = await (await fetch(url)).blob();
-  const file = new File([blob], 'film-avi-skor.png', { type: 'image/png' });
-  if (navigator.canShare?.({ files: [file] })) {
-    await navigator.share({ files: [file], text });
-    return;
-  }
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'film-avi-skor.png';
-  a.click();
+  await shareImage(url, 'sinema-bilmecesi-skor.png', `Sinema Bilmecesi'nde ${info.pts} puan yaptım! Sen kaç film bilirsin?`, 'Skorunu paylaş');
 }

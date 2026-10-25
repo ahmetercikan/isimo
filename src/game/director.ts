@@ -129,7 +129,7 @@ async function step(t: Transport, s: RoomState) {
 
   // Sıra Sende'nin akışı ayrı (src/game/chainDirector.ts).
   if (s.settings.game === 'siram') return chainStep(t, s);
-  // Film Avı da öyle (src/game/filmDirector.ts).
+  // Sinema Bilmecesi da öyle (src/game/filmDirector.ts).
   if (s.settings.game === 'film') return filmStep(t, s);
 
   switch (c.phase) {

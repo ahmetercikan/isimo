@@ -6,12 +6,12 @@ Karakter sınırları `node scripts/check-listing.mjs` ile kontrol edilir.
 İsim Şehir Online Kelime Oyunu
 
 ## Kısa açıklama (en fazla 80 karakter)
-Online İsim Şehir, Sıra Sende ve Film Avı: harfi çevir, elinle yaz, STOP de!
+Online İsim Şehir, Sıra Sende ve Sinema Bilmecesi: harfi çevir, elinle yaz, STOP de!
 
 ## Tam açıklama (en fazla 4000 karakter)
 Çocukluğumuzun efsane oyunu İsim Şehir artık telefonunda — üstelik yanında iki oyun daha! Kâğıt kaleme gerek yok: arkadaşlarınla, ailenle ya da botlara karşı online oyna. Harfi çevir, cevaplarını parmağınla yaz, ilk bitiren olup STOP de!
 
-Üç oyun tek uygulamada: İsim Şehir, Sıra Sende ve Film Avı. Hepsi en fazla 10 kişilik, hepsi tek bir oda koduyla, hepsi botlara karşı da oynanabilir.
+Üç oyun tek uygulamada: İsim Şehir, Sıra Sende ve Sinema Bilmecesi. Hepsi en fazla 10 kişilik, hepsi tek bir oda koduyla, hepsi botlara karşı da oynanabilir.
 
 🔤 İSİM ŞEHİR — HARFİ ÇEVİR, STOP DE!
 Sayaç A'dan Z'ye sayar; sırası gelen oyuncu "DUR!" der ve harf belli olur. İsim, şehir, hayvan, bitki, eşya, ülke… Klasik İsim Şehir Hayvan Bitki Eşya oyununun bütün keyfi. Aynı oyunda bir harf iki kez çıkmaz; zor harfleri (J, Ö, Ü, Ş, Ç…) istersen açarsın. Bütün kategorileri dolduran STOP diyebilir, diğerlerine yalnızca 10 saniye kalır.
@@ -19,7 +19,7 @@ Sayaç A'dan Z'ye sayar; sırası gelen oyuncu "DUR!" der ve harf belli olur. İ
 🅰️ SIRA SENDE — BİR HARF DEĞİŞTİR, YENİ KELİME
 Masadaki kelimede tek bir harfi değiştirip yeni bir Türkçe kelime yap: KEDİ → KADI → KADIN. Sıran gelince süren işler; bulamazsan bir can gider. 14.000 kelimelik havuz, 3, 4 ya da 5 harf, istersen harf ekleyip çıkarmak da serbest.
 
-🎬 FİLM AVI — İPUÇLARINDAN FİLMİ BİL
+🎬 SİNEMA BİLMECESİ — İPUÇLARINDAN FİLMİ BİL
 İpuçları birer birer açılır: tür ve yıl, yönetmen, oyuncular, konu ve en sonunda filmin adının iskeleti. Ne kadar erken bilirsen o kadar çok puan. Yerli, yabancı ya da karışık seçebilirsin. İlk harfleri yazmaya başla, uygulama film adlarını önersin.
 
 ✍️ PARMAĞINLA YAZ, UYGULAMA OKUSUN
@@ -64,7 +64,7 @@ Kalemini hazırla, harfi çevir ve STOP de! İsim Şehir'i şimdi indir, arkada�
 ## Sürüm notları (en fazla 500 karakter)
 
 ### 1.0.7 (Android sürüm kodu 7) — güncel
-Yeni bölüm: Film Avı! İpuçları birer birer açılır (tür, yönetmen, oyuncu, konu, adın iskeleti); filmi en erken bilen en çok puanı alır. 30 film; yerli, yabancı ya da karışık seçilebilir. Artık çevrimiçi odaya da bot ekleyebilirsiniz: arkadaşınız azken masayı botlarla doldurun, oda kodunuz yine açık kalsın. Film Avı'nda yazı defteri büyüdü, ana sayfadaki arkadaş düğmesi sağa alındı.
+Yeni bölüm: Sinema Bilmecesi! İpuçları birer birer açılır (tür, yönetmen, oyuncu, konu, adın iskeleti); filmi en erken bilen en çok puanı alır. 30 film; yerli, yabancı ya da karışık seçilebilir. Artık çevrimiçi odaya da bot ekleyebilirsiniz: arkadaşınız azken masayı botlarla doldurun, oda kodunuz yine açık kalsın. Sinema Bilmecesi'nde yazı defteri büyüdü, ana sayfadaki arkadaş düğmesi sağa alındı.
 
 ### 1.0.6 (Android sürüm kodu 6)
 Arkadaş ekleyin! Arkadaşlar ekranındaki 6 haneli kodunuzu paylaşın, arkadaşınızın kodunu girin; kimin çevrimiçi olduğunu görün, tek dokunuşla oyuna davet edin. Davet ve arkadaş isteği bildirimleri eklendi, ayarlardan kapatılabilir. Sıra Sende'nin kelime havuzu 3.900'den 14.000'e çıktı. Yol kalmadığında masaya gelen yeni kelime artık ekranda belli oluyor; eskiden kural dışı bir geçiş gibi görünüyordu.

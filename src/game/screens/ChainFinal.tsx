@@ -1,5 +1,4 @@
 /** Sıra Sende sonu: kazanan, sıralama, oynanan kelime zinciri ve tekrar oyna. */
-import { Share } from '@capacitor/share';
 import { confetti } from '../../lib/confetti';
 import { Home, RotateCcw, Share2 } from 'lucide-react';
 import { Fragment, useEffect, useRef } from 'react';
@@ -10,6 +9,7 @@ import type { RoomState } from '../../engine/types';
 import { buzz } from '../../lib/feel';
 import { maybeInterstitial } from '../../lib/ads';
 import { sfx } from '../../lib/sfx';
+import { drawResults, shareImage } from '../../lib/shareCard';
 import type { Transport } from '../../online/transport';
 import { useProfile } from '../../store/useProfile';
 import { chainRank } from '../chainDirector';
@@ -48,14 +48,13 @@ export function ChainFinal({ t, s, onExit }: { t: Transport; s: RoomState; onExi
 
   const share = async () => {
     sfx.tap();
-    const lines = rank.slice(0, 5).map((r) => `${r.rank}. ${s.players[r.pid]?.name} — ${r.pts} puan`);
-    // Yol kalmadığı yerde zincir kopar: orada ok yerine "|" konur, yoksa kurala aykırı hamle gibi okunur.
-    const path = steps.reduce((acc, x, i) => (i ? `${acc}${x.fresh ? ' | ' : ' → '}${show(x.w)}` : show(x.w)), '');
-    const text = `Sıra Sende sonuçları\n${lines.join('\n')}\n\n${path}`;
+    const rows = rank.map((r) => ({ name: s.players[r.pid]?.name ?? '', avatar: s.players[r.pid]?.avatar ?? '', color: s.players[r.pid]?.color ?? '#ff6b4a', pts: r.pts, rank: r.rank }));
+    const text = `Sıra Sende: ${winner?.name ?? ''} kazandı! Sen de oyna:`;
     try {
-      await Share.share({ title: 'Sıra Sende', text });
+      const img = await drawResults({ game: 'siram', rows, sub: `${steps.length} kelimelik zincir` });
+      await shareImage(img, 'siram-sonuc.png', text, 'Sonuçları paylaş');
     } catch {
-      await navigator.clipboard?.writeText(text).catch(() => {});
+      /* paylaşım iptal edildi */
     }
   };
 

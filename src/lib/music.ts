@@ -5,7 +5,7 @@
  *   write   — yazarken / sırada: neşeli bilgi yarışması müziği
  *   tension — son saniyeler: düşünme sayacı döngüsü
  *   chill   — değerlendirme ve puanlar: lo-fi
- *   film    — Film Avı ipuçları: kara film cazı (dedektif havası)
+ *   film    — Sinema Bilmecesi ipuçları: kara film cazı (dedektif havası)
  *
  * Kayıtlı parçalar (25 Eki 2026): public/music/*.m4a, Pixabay (lisans: public/music/LISANS.txt). Hepsi YouTube Content ID'ye
  * **kayıtsız** seçildi: influencer oyunun ekran kaydını paylaşınca telif uyarısı çıkmasın. Eskiden bütün müzik

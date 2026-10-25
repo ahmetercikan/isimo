@@ -602,7 +602,7 @@
 .rules-card__head { display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--ink-2); }
 .settings__note { font-size: 13px; margin-top: 2px; }
 
-/* ---------- Film Avı (ipuçlarından film bil) ---------- */
+/* ---------- Sinema Bilmecesi (ipuçlarından film bil) ---------- */
 
 .film { display: flex; flex-direction: column; gap: 10px; }
 .turn-player.is-got { background: #fff; box-shadow: 0 0 0 3px var(--green), 0 4px 0 #1f8f57; }
@@ -675,6 +675,6 @@
 .film-reveal__got li b { margin-left: auto; font-family: var(--display); color: var(--green); }
 .film-reveal__none { justify-content: center; color: var(--muted); }
 
-/* Film Avı ve Sıra Sende: sağ altta oyunun resmi (zeminin parçası, içeriğin arkasında) */
+/* Sinema Bilmecesi ve Sıra Sende: sağ altta oyunun resmi (zeminin parçası, içeriğin arkasında) */
 .game__deco { position: fixed; right: 6px; bottom: calc(var(--safe-bottom) + 6px); width: min(38vw, 170px); z-index: -1; pointer-events: none; opacity: 0.95; filter: drop-shadow(0 10px 14px rgba(30, 90, 80, 0.2)); }
 @media (orientation: landscape) and (max-height: 560px) { .game__deco { display: none; } }

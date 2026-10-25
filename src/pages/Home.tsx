@@ -15,11 +15,11 @@ import { useFriends } from '../store/useFriends';
 import { useGame } from '../store/useGame';
 import { useProfile } from '../store/useProfile';
 
-/** Üç bölüm: İsim Şehir (STOP), Sıra Sende (harf değiştir) ve Film Avı (ipuçlarından film bil). */
+/** Üç bölüm: İsim Şehir (STOP), Sıra Sende (harf değiştir) ve Sinema Bilmecesi (ipuçlarından film bil). */
 const GAMES = [
   { key: 'isim', art: artIsim, title: 'İsim Şehir', tag: 'Harf çevir, yaz, STOP de!', q: '', chip: [ChartNoAxesColumn, 'Kelime Bilgisi'] },
   { key: 'siram', art: artSiram, title: 'Sıra Sende', tag: 'Bir harf değiştir, yeni kelime!', q: '?oyun=siram', chip: [Brain, 'Zeka Geliştirir'] },
-  { key: 'film', art: artFilm, title: 'Film Avı', tag: 'İpuçlarından filmi ilk sen bil!', q: '?oyun=film', chip: [Lightbulb, 'Film Kültürü'] },
+  { key: 'film', art: artFilm, title: 'Sinema Bilmecesi', tag: 'İpuçlarından filmi ilk sen bil!', q: '?oyun=film', chip: [Lightbulb, 'Film Kültürü'] },
 ] as const;
 
 export default function Home() {

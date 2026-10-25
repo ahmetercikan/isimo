@@ -10,6 +10,7 @@ import { Avatar, Confirm, Modal, useToast } from '../../components/ui';
 import { MAX_PLAYERS, type RoomState } from '../../engine/types';
 import { hideBanner, showBanner } from '../../lib/ads';
 import { sfx } from '../../lib/sfx';
+import { drawInvite, shareImage } from '../../lib/shareCard';
 import type { Transport } from '../../online/transport';
 import { useProfile } from '../../store/useProfile';
 import { startChain } from '../chainDirector';
@@ -51,19 +52,17 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
 
   const share = async () => {
     sfx.tap();
-    const text = siram
-      ? `Sıra Sende oynayalım! Uygulamada "Katıl"a bas ve oda kodunu yaz: ${s.code}`
-      : film
-        ? `Film Avı oynayalım! Uygulamada "Katıl"a bas ve oda kodunu yaz: ${s.code}`
-        : `İsim Şehir oynayalım! 🔤✍️ Uygulamada "Katıl"a bas ve oda kodunu yaz: ${s.code}`;
+    const game = siram ? 'siram' : film ? 'film' : 'isim';
+    const name = siram ? 'Sıra Sende' : film ? 'Sinema Bilmecesi' : 'İsim Şehir';
+    const text = `${name} oynayalım! Uygulamada "Katıl"a bas ve oda kodunu yaz: ${s.code}`;
     try {
-      await Share.share({ title: 'İsim Şehir', text, dialogTitle: 'Arkadaşlarını çağır' });
+      const img = await drawInvite({ game, code: s.code, from: s.players[t.me]?.name ?? 'Arkadaşın' });
+      await shareImage(img, `davet-${s.code}.png`, text, 'Arkadaşlarını çağır');
     } catch {
       try {
-        await navigator.clipboard.writeText(text);
-        show('Davet metni kopyalandı');
+        await Share.share({ title: 'İsim Şehir', text, dialogTitle: 'Arkadaşlarını çağır' });
       } catch {
-        show(`Oda kodu: ${s.code}`);
+        await navigator.clipboard?.writeText(text).then(() => show('Davet metni kopyalandı')).catch(() => show(`Oda kodu: ${s.code}`));
       }
     }
   };

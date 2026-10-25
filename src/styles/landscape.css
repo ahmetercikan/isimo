@@ -48,7 +48,7 @@
   .profile__hero .hello { top: 8px; padding: 8px 14px; }
   .profile__hero .hello b { font-size: 17px; }
   .profile__hero .hello span { font-size: 13px; }
-  .scene__bush--side { display: none; }
+  .scene__hedge { height: 70px; }
   .scene__bush--bl, .scene__bush--br { width: min(22vw, 200px); }
   .topbar--art { min-height: 0; padding-right: 0; }
   .topbar__art, .rules-wrap__mascot { display: none; }

@@ -1,5 +1,5 @@
 /*
- * Film Avı sinema salonu teması (`.game--cinema`, src/pages/Game.tsx): Film Avı'nın lobi, tur ve final ekranları.
+ * Sinema Bilmecesi sinema salonu teması (`.game--cinema`, src/pages/Game.tsx): Sinema Bilmecesi'nin lobi, tur ve final ekranları.
  * Koyu lacivert-mor salon, spot ışıkları, kadife perde, film greni; kartlar buzlu koyu cam, vurgular altın.
  * Başlıklar Bebas Neue (sinema afişi harfleri). Defter (yazı alanı) ve açılan pencereler açık renkte kalır.
  */
@@ -220,9 +220,10 @@
 }
 .leader__rings { position: absolute; inset: 0; width: 100%; height: 100%; }
 .leader__rings circle, .leader__rings line { fill: none; stroke: rgba(255, 255, 255, 0.45); stroke-width: 2; }
-@property --a { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
-.leader__sweep { position: absolute; inset: 0; --a: 0deg; background: conic-gradient(rgba(255, 255, 255, 0.2) var(--a), transparent var(--a)); animation: leader-a 1s linear both; }
-@keyframes leader-a { to { --a: 360deg; } }
+/* İbre açısı: adı özel olmalı — `--a` ana sayfa kartlarında renk olarak kullanılıyor, kayıtlı açı türü onu bozuyordu */
+@property --leader-a { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.leader__sweep { position: absolute; inset: 0; --leader-a: 0deg; background: conic-gradient(rgba(255, 255, 255, 0.2) var(--leader-a), transparent var(--leader-a)); animation: leader-a 1s linear both; }
+@keyframes leader-a { to { --leader-a: 360deg; } }
 .leader__num {
   position: absolute;
   inset: 0;
@@ -238,7 +239,7 @@
 @keyframes leader-num { from { transform: scale(1.35); opacity: 0; } 25% { opacity: 1; } to { transform: scale(1); } }
 .leader__hint { color: var(--ink-2); font-weight: 700; max-width: 300px; }
 
-/* ---------- Final: Yılın Film Avcısı ---------- */
+/* ---------- Final: Yılın Sinemaseveri ---------- */
 .game--cinema .final__title {
   font-family: var(--cine);
   font-weight: 400;

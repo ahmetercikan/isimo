@@ -35,6 +35,40 @@ function Bush({ className, flip }: { className: string; flip?: boolean }) {
   );
 }
 
+/**
+ * Alt kenar boyunca kesintisiz çalı şeridi (ekran genişliği ne olursa olsun boşluk kalmaz: `slice` ile kenarlardan
+ * kırpılır). Köşe çalıları bunun önünde durur. Eskiden yalnız iki köşe kümesi vardı, aralarında boşluk kalıyordu.
+ */
+function Hedge() {
+  const id = useId().replace(/:/g, '');
+  const back = Array.from({ length: 14 }, (_, i) => [i * 62 + 10, 92 + ((i * 37) % 3) * 9, 44 + ((i * 53) % 3) * 6]);
+  const front = Array.from({ length: 16 }, (_, i) => [i * 54 + 24, 140 + ((i * 29) % 3) * 7, 34 + ((i * 41) % 3) * 5]);
+  // en alt sıra: tabanı da yumrulu doldurur (düz dikdörtgen bant görünmesin)
+  const base = Array.from({ length: 18 }, (_, i) => [i * 48, 205 + ((i * 17) % 2) * 6, 40]);
+  return (
+    <svg className="scene__hedge" viewBox="0 0 820 220" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <radialGradient id={`hb${id}`} cx="34%" cy="28%" r="78%">
+          <stop offset="0" stopColor="#6fd6b0" />
+          <stop offset="0.55" stopColor="#33ad8c" />
+          <stop offset="1" stopColor="#1d8a71" />
+        </radialGradient>
+        <radialGradient id={`hf${id}`} cx="34%" cy="26%" r="76%">
+          <stop offset="0" stopColor="#9eebc8" />
+          <stop offset="0.5" stopColor="#4cc69c" />
+          <stop offset="1" stopColor="#24a07f" />
+        </radialGradient>
+      </defs>
+      {back.map(([x, y, r], i) => <circle key={`b${i}`} cx={x} cy={y} r={r} fill={`url(#hb${id})`} />)}
+      {front.map(([x, y, r], i) => <circle key={`f${i}`} cx={x} cy={y} r={r} fill={`url(#hf${id})`} />)}
+      {front.map(([x, y, r], i) => (
+        <path key={`h${i}`} d={`M ${x - r * 0.62} ${y - r * 0.2} Q ${x - r * 0.5} ${y - r * 0.72} ${x + r * 0.05} ${y - r * 0.78}`} stroke="#fff" strokeOpacity="0.4" strokeWidth={r * 0.14} strokeLinecap="round" fill="none" />
+      ))}
+      {base.map(([x, y, r], i) => <circle key={`z${i}`} cx={x} cy={y} r={r} fill={`url(#hf${id})`} />)}
+    </svg>
+  );
+}
+
 function Cloud({ className }: { className: string }) {
   return (
     <svg className={`scene__cloud ${className}`} viewBox="0 0 200 80">
@@ -63,7 +97,7 @@ export function Doodles({ variant = 0 }: { variant?: number }) {
     <div className="scene" aria-hidden="true">
       <Cloud className="scene__cloud--l" />
       <Cloud className="scene__cloud--r" />
-      <Bush className="scene__bush--side" />
+      <Hedge />
       <Bush className="scene__bush--bl" />
       <Bush className="scene__bush--br" flip />
       {stars.map(([x, y, s], i) => (

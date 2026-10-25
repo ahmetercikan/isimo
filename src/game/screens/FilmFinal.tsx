@@ -1,5 +1,4 @@
-/** Film Avı sonu ("Yılın Film Avcısı" töreni): kazanan, sıralama, sorulan filmler, skor kartı paylaşımı ve tekrar oyna. */
-import { Share } from '@capacitor/share';
+/** Sinema Bilmecesi sonu ("Yılın Sinemaseveri" töreni): kazanan, sıralama, sorulan filmler, skor kartı paylaşımı ve tekrar oyna. */
 import { confetti } from '../../lib/confetti';
 import { Home, ImageUp, RotateCcw, Share2 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
@@ -9,6 +8,7 @@ import type { RoomState } from '../../engine/types';
 import { buzz } from '../../lib/feel';
 import { maybeInterstitial } from '../../lib/ads';
 import { sfx } from '../../lib/sfx';
+import { drawResults, shareImage } from '../../lib/shareCard';
 import { shareStory } from '../../lib/storyCard';
 import type { Transport } from '../../online/transport';
 import { useProfile } from '../../store/useProfile';
@@ -62,12 +62,13 @@ export function FilmFinal({ t, s, onExit }: { t: Transport; s: RoomState; onExit
 
   const share = async () => {
     sfx.tap();
-    const lines = rank.slice(0, 5).map((r) => `${r.rank}. ${s.players[r.pid]?.name} — ${r.pts} puan`);
-    const text = `Film Avı sonuçları\n${lines.join('\n')}\n\nFilmler: ${films.map((f) => f.t).join(', ')}`;
+    const rows = rank.map((r) => ({ name: s.players[r.pid]?.name ?? '', avatar: s.players[r.pid]?.avatar ?? '', color: s.players[r.pid]?.color ?? '#ff6b4a', pts: r.pts, rank: r.rank }));
+    const text = `Sinema Bilmecesi: ${winner?.name ?? ''} kazandı! Sen de oyna:`;
     try {
-      await Share.share({ title: 'Film Avı', text });
+      const img = await drawResults({ game: 'film', rows, sub: `${films.length} film soruldu` });
+      await shareImage(img, 'film-sonuc.png', text, 'Sonuçları paylaş');
     } catch {
-      await navigator.clipboard?.writeText(text).catch(() => {});
+      /* paylaşım iptal edildi */
     }
   };
 
@@ -79,7 +80,7 @@ export function FilmFinal({ t, s, onExit }: { t: Transport; s: RoomState; onExit
 
       {winner && (
         <section className="oscar pop-in">
-          <span className="oscar__label">Yılın Film Avcısı</span>
+          <span className="oscar__label">Yılın Sinemaseveri</span>
           <Avatar emoji={winner.avatar} color={winner.color} size={92} />
           <b className="oscar__name">{rank[0].pid === t.me ? 'Sen' : winner.name}</b>
           <span className="oscar__pts">{rank[0].pts} puan</span>

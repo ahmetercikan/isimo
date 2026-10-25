@@ -29,7 +29,7 @@ const PANELS: Panel[] = [
   { kicker: 'El yazısı tanıma', title: 'Parmağınla yaz, <em>o okusun!</em>', sub: 'Türkçe el yazısını tanır · istersen klavye de var', shot: '06-el-yazisi', tint: '#ffe0e6', accent: '#e33d62' },
   { kicker: 'Hakem sizsiniz', title: 'Cevaplar <em>herkesin</em> önünde', sub: 'Uydurma cevaba oy ver, emojiyle tepki göster', shot: '08-degerlendirme', tint: '#e6e0ff', accent: '#6a4fe0' },
   { kicker: 'Sıra Sende', title: 'Bir harf değiştir, <em>yeni kelime!</em>', sub: '14 bin kelimelik sözlük · süreyi kaçıran can kaybeder', shot: '12-sira-sende', tint: '#d2f1f6', accent: '#1593c9', deco: 'siram' },
-  { kicker: 'Film Avı', title: 'İpuçlarından <em>filmi bil!</em>', sub: 'Tür, yönetmen, oyuncular… erken bilen çok puan alır', shot: '13-film-avi', tint: '#ece0ff', accent: '#7d58ee', deco: 'film' },
+  { kicker: 'Sinema Bilmecesi', title: 'İpuçlarından <em>filmi bil!</em>', sub: 'Tür, yönetmen, oyuncular… erken bilen çok puan alır', shot: '13-film-avi', tint: '#ece0ff', accent: '#7d58ee', deco: 'film' },
   { kicker: 'Kürsüye çık', title: 'Kazanan <em>sen ol!</em>', sub: 'Puanları uygulama tutar · konfeti ve rövanş', shot: '10-kazanan', tint: '#ffe8c2', accent: '#f08a12', deco: 'cards' },
 ];
 
@@ -165,7 +165,7 @@ h1 em { font-style: normal; color: #f0553c; }
 <div class="kick">3 oyun bir arada</div>
 <h1>İsim <em>Şehir</em></h1>
 <div class="sub">Arkadaşlarınla ya da botlara karşı, ücretsiz kelime oyunları</div>
-<div class="chips"><span style="background:#f24d40">İsim Şehir</span><span style="background:#1fa9cf">Sıra Sende</span><span style="background:#7d58ee">Film Avı</span></div>
+<div class="chips"><span style="background:#f24d40">İsim Şehir</span><span style="background:#1fa9cf">Sıra Sende</span><span style="background:#7d58ee">Sinema Bilmecesi</span></div>
 <div class="dev"><div class="frame"><img src="${shot('phone', '01-ana-sayfa')}"><div class="island"></div></div></div>
 <img class="art" src="${art('tiger')}" style="left:724px;top:236px;width:320px">
 <img class="art" src="${art('film')}" style="left:800px;top:40px;width:170px;transform:rotate(8deg)">

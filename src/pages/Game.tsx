@@ -44,7 +44,7 @@ export default function Game() {
     mood = { lobby: 'lobby', spin: 'roll', review: 'chill', scores: 'chill', final: 'off', write: 'write', turn: 'write', clue: 'write' }[c.phase] as Mood;
     if (c.phase === 'write') mood = now < c.startAt || now >= c.endAt ? 'off' : c.endAt - now <= 10500 ? 'tension' : 'write';
     if (c.phase === 'turn') mood = c.endAt - now <= 8000 ? 'tension' : 'write';
-    // Film Avı: ipuçlarında kara film cazı, film açıklanırken sakin, son ipucunda gerilim.
+    // Sinema Bilmecesi: ipuçlarında kara film cazı, film açıklanırken sakin, son ipucunda gerilim.
     if (c.phase === 'clue') mood = c.nextAt || now < c.startAt ? 'chill' : c.endAt - now <= s.settings.time * 1000 ? 'tension' : 'film';
   }
   useEffect(() => setMood(mood), [mood]);
@@ -71,7 +71,7 @@ export default function Game() {
   useEffect(() => void (s && !siram && !film && preloadDicts(s)), [catKey, siram, film]);
   // Sıra Sende'nin kelime havuzu
   useEffect(() => void (siram && loadWords()), [siram]);
-  // Film Avı'nın film listesi (tahminler her cihazda kontrol edilir)
+  // Sinema Bilmecesi'nin film listesi (tahminler her cihazda kontrol edilir)
   useEffect(() => void (film && loadFilms()), [film]);
 
   // Yeni oyuncu katılınca ses
@@ -124,7 +124,7 @@ export default function Game() {
   const phase = s.ctl.phase;
   const cinema = film && (phase === 'lobby' || phase === 'clue' || phase === 'final');
   return (
-    // Film Avı: lobi, tur ve final sinema salonunda (src/styles/cinema.css)
+    // Sinema Bilmecesi: lobi, tur ve final sinema salonunda (src/styles/cinema.css)
     <main className={`bg page game game--${phase} ${cinema ? 'game--cinema' : ''}`}>
       {cinema ? <CinemaScene /> : <Doodles variant={s.ctl.round % 4} />}
       {(phase === 'clue' || phase === 'turn') && <img className="game__deco" src={film ? artFilm : artSiram} alt="" aria-hidden="true" draggable={false} />}

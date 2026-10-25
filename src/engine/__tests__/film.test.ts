@@ -1,4 +1,4 @@
-/** Film Avı: cevap eşleştirme, ipuçları ve oyun akışı. */
+/** Sinema Bilmecesi: cevap eşleştirme, ipuçları ve oyun akışı. */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { DECOYS, FILMS } from '../../data/films';
 import { CLUE_PTS, CLUES, clueAt, clues, filmById, isRight, matchFilm, pickCandidate, poolFilms, setFilms, skeleton, suggest } from '../film';
@@ -95,7 +95,7 @@ describe('İpuçları', () => {
   });
 });
 
-describe('Film Avı akışı', () => {
+describe('Sinema Bilmecesi akışı', () => {
   const settings = {
     cats: [{ id: 'film', label: 'Film', emoji: '' }],
     rounds: 2,

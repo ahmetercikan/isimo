@@ -1,7 +1,7 @@
 /**
  * Botlar: harfi durdurur, sözlükten cevap yazar, değerlendirmede "tamam" der.
  * Sıra Sende'de sırası gelince kelime havuzundan hamle bulur (zorluk: bulma şansı ve hız).
- * Film Avı'nda filmi bir ipucunda bilir: zor bot erken, kolay bot geç (bazen hiç); zor filmde bir ipucu geç.
+ * Sinema Bilmecesi'nde filmi bir ipucunda bilir: zor bot erken, kolay bot geç (bazen hiç); zor filmde bir ipucu geç.
  * Zorluk: 1 kolay (az ve geç yazar), 2 orta, 3 zor (çok ve hızlı yazar, STOP der).
  *
  * Hem botlu oyunda (bellekteki oda) hem çevrimiçi odada çalışır. Çevrimiçi odada botları
@@ -67,7 +67,7 @@ export function runBots(t: Transport): () => void {
     const c = s.ctl;
     // STOP denince (seq değişir ama tur aynı) botlar yazmayı sürdürür: yalnızca aşama/tur/kategori değişince sıfırla.
     // Sıra Sende'de her hamle yeni bir sıra: seq ile izlenir.
-    // Film Avı'nda başkası bilince (seq değişir) botlar beklemeyi sürdürür: tur ve açıklama değişince sıfırla.
+    // Sinema Bilmecesi'nde başkası bilince (seq değişir) botlar beklemeyi sürdürür: tur ve açıklama değişince sıfırla.
     const key = c.phase === 'turn' ? `turn:${c.seq}` : c.phase === 'clue' ? `clue:${c.round}:${c.nextAt ? 1 : 0}` : `${c.phase}:${c.round}:${c.cat}`;
     if (key === lastKey) return;
     lastKey = key;
@@ -96,7 +96,7 @@ export function runBots(t: Transport): () => void {
       later(span * rand(lv.from + 0.1, Math.min(0.85, lv.to)), () => (wordsReady() ? play() : void loadWords().then(play)));
     }
 
-    // ---- Film Avı: her bot filmi bir ipucunda bilir ----
+    // ---- Sinema Bilmecesi: her bot filmi bir ipucunda bilir ----
     if (c.phase === 'clue' && c.film && !c.nextAt) {
       const film = filmById(c.film);
       const step = stepMs(s);

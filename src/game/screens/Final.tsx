@@ -1,5 +1,4 @@
 /** Oyun sonu: kürsü, ödüller, tekrar oyna. */
-import { Share } from '@capacitor/share';
 import { confetti } from '../../lib/confetti';
 import { Home, RotateCcw, Share2 } from 'lucide-react';
 import { useEffect, useMemo, useRef } from 'react';
@@ -12,6 +11,7 @@ import { say } from '../../lib/voice';
 import { VOICE } from '../../voice/lines';
 import { maybeInterstitial } from '../../lib/ads';
 import { sfx } from '../../lib/sfx';
+import { drawResults, shareImage } from '../../lib/shareCard';
 import type { Transport } from '../../online/transport';
 import { useProfile } from '../../store/useProfile';
 import { actingHost, backToLobby } from '../director';
@@ -72,12 +72,13 @@ export function Final({ t, s, onExit }: { t: Transport; s: RoomState; onExit: ()
 
   const share = async () => {
     sfx.tap();
-    const lines = rank.slice(0, 5).map((r) => `${r.rank}. ${s.players[r.pid]?.name} — ${r.total}`);
-    const text = `İsim Şehir sonuçları 🏆\n${lines.join('\n')}`;
+    const rows = rank.map((r) => ({ name: s.players[r.pid]?.name ?? '', avatar: s.players[r.pid]?.avatar ?? '', color: s.players[r.pid]?.color ?? '#ff6b4a', pts: r.total, rank: r.rank }));
+    const text = `İsim Şehir: ${winner?.name ?? ''} kazandı! Sen de oyna:`;
     try {
-      await Share.share({ title: 'İsim Şehir', text });
+      const img = await drawResults({ game: 'isim', rows, sub: `${s.ctl.round} tur oynandı` });
+      await shareImage(img, 'isim-sonuc.png', text, 'Sonuçları paylaş');
     } catch {
-      await navigator.clipboard?.writeText(text).catch(() => {});
+      /* paylaşım iptal edildi */
     }
   };
 

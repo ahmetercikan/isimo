@@ -1,5 +1,5 @@
 /**
- * Film Avı'nın sinema salonu zemini (Doodles'ın yerine): koyu lacivert-mor salon, tepeden iki spot ışığı,
+ * Sinema Bilmecesi'nin sinema salonu zemini (Doodles'ın yerine): koyu lacivert-mor salon, tepeden iki spot ışığı,
  * kenarlarda kadife perde, uçuşan toz zerreleri ve ince film greni. İçeriğin arkasında, ekrana sabit.
  * Stiller: src/styles/cinema.css (`.game--cinema`).
  */

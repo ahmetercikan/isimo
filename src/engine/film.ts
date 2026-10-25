@@ -1,5 +1,5 @@
 /**
- * "Film Avı" motoru: ipuçları, puan, cevap eşleştirme ve öneri listesi.
+ * "Sinema Bilmecesi" motoru: ipuçları, puan, cevap eşleştirme ve öneri listesi.
  * Her turda gizli bir film var; ipuçları belli aralıkla birer birer açılır, erken bilen çok puan alır.
  * Film listesi src/data/films.ts (yalnız bu oyun açılınca iner).
  * Hepsi saf: ağ, zaman ya da ekran bilmez (testler: __tests__/film.test.ts).

@@ -56,7 +56,7 @@ export default function Setup() {
   return (
     <main className="bg page setup">
       <Doodles variant={2} />
-      <TopBar title={`${siram ? 'Sıra Sende' : film ? 'Film Avı' : 'İsim Şehir'} · ${bots ? 'Botlara Karşı' : 'Oda Kur'}`} art={siram ? artSiram : film ? artFilm : artIsim} />
+      <TopBar title={`${siram ? 'Sıra Sende' : film ? 'Sinema Bilmecesi' : 'İsim Şehir'} · ${bots ? 'Botlara Karşı' : 'Oda Kur'}`} art={siram ? artSiram : film ? artFilm : artIsim} />
 
       {bots && (
         <section className="paper-card setup__bots rise">

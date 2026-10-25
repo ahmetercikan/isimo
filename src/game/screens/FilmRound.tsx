@@ -1,5 +1,5 @@
 /**
- * Film Avı turu: ipuçları birer birer açılır, herkes istediği an filmin adını yazar.
+ * Sinema Bilmecesi turu: ipuçları birer birer açılır, herkes istediği an filmin adını yazar.
  * Uzun adları parmakla yazmak zor: ilk harflerden sonra öneri listesi çıkar, dokunmak tahmin etmektir.
  * Yanlış tahmin birkaç saniye bekletir (rastgele denemeyle kazanılmasın). Tur kapanınca film açıklanır.
  */

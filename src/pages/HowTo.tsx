@@ -35,7 +35,7 @@ const FILM = [
 const GAMES = [
   { key: 'isim', label: 'İsim Şehir', steps: ISIM, tip: 'İpucu: ✓ işareti, cevabın uygulamanın sözlüğünde olduğunu gösterir. Sözlükte olmayan cevaplar da geçerlidir; son kararı oyuncular verir.' },
   { key: 'siram', label: 'Sıra Sende', steps: SIRAM, tip: 'İpucu: Kelimeyi bulmak zorlaşınca sondaki harfi değiştirmeyi dene: KAR → KAZ → KÖZ…' },
-  { key: 'film', label: 'Film Avı', steps: FILM, tip: 'İpucu: Uzun film adlarını baştan sona yazmana gerek yok; ilk kelimeyi yaz, listeden seç.' },
+  { key: 'film', label: 'Sinema Bilmecesi', steps: FILM, tip: 'İpucu: Uzun film adlarını baştan sona yazmana gerek yok; ilk kelimeyi yaz, listeden seç.' },
 ] as const;
 
 export default function HowTo() {

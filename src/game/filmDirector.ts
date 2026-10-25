@@ -1,5 +1,5 @@
 /**
- * "Film Avı" oyun akışı (lobi → ipucu turu → film açıklanır → … → final).
+ * "Sinema Bilmecesi" oyun akışı (lobi → ipucu turu → film açıklanır → … → final).
  * Sıra Sende gibi bütün durum ctl içinde: film, sorulanlar, bu turda bilenler ve puanlar
  * tek atomik işlemde değişir (Firebase kurallarına dokunmak gerekmedi).
  * Tur kapanınca (herkes bildi ya da süre doldu) film REVEAL_MS boyunca açıklanır (ctl.nextAt),

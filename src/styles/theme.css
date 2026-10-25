@@ -106,12 +106,12 @@ img, svg { max-width: 100%; }
 .scene { position: fixed; inset: 0; pointer-events: none; z-index: -1; overflow: hidden; }
 .scene > svg { position: absolute; display: block; }
 .scene__cloud { width: min(46vw, 260px); opacity: 0.75; filter: drop-shadow(0 6px 10px rgba(40, 120, 100, 0.08)); }
-.scene__cloud--l { left: -8%; top: 7%; }
-.scene__cloud--r { right: -10%; top: 2%; width: min(40vw, 220px); opacity: 0.6; }
+.scene__cloud--l { left: 4%; top: 9%; width: min(34vw, 200px); }
+.scene__cloud--r { right: 5%; top: 3%; width: min(28vw, 170px); opacity: 0.6; }
+.scene__hedge { left: 0; bottom: 0; width: 100%; height: min(13vh, 108px); filter: drop-shadow(0 -2px 8px rgba(20, 110, 90, 0.12)); }
 .scene__bush { filter: drop-shadow(0 -2px 8px rgba(20, 110, 90, 0.12)); }
-.scene__bush--bl { left: -6%; bottom: -2%; width: min(40vw, 250px); }
-.scene__bush--br { right: -8%; bottom: -3%; width: min(46vw, 290px); }
-.scene__bush--side { left: -14%; top: 34%; width: min(26vw, 160px); opacity: 0.85; }
+.scene__bush--bl { left: -8%; bottom: -3%; width: min(36vw, 230px); }
+.scene__bush--br { right: -9%; bottom: -4%; width: min(42vw, 270px); }
 .scene__star { animation: twinkle 3.2s ease-in-out infinite; filter: drop-shadow(0 2px 2px rgba(200, 130, 0, 0.25)); }
 @keyframes twinkle { 50% { transform: scale(0.8) rotate(12deg); opacity: 0.7; } }
 

@@ -3,7 +3,7 @@
 - **Ne:** Üç oyun bir arada (ana sayfada üç kart):
   1. **İsim Şehir** — klasik oyun, harf çevirip kategorileri doldurma, STOP.
   2. **Sıra Sende** — masadaki kelimede tek harf değiştirip yeni kelime yapma (sırayla, canlı/elemeli).
-  3. **Film Avı** — ipuçları birer birer açılır, filmi erken bilen çok puan alır (herkes aynı anda).
+  3. **Sinema Bilmecesi** — ipuçları birer birer açılır, filmi erken bilen çok puan alır (herkes aynı anda).
   Hepsi en fazla 10 kişi, herkes kendi telefonundan (oda kodu) ya da botlara karşı.
   Cevaplar parmakla yazılır; el yazısı tanınır. Tasarım Çizio (../simple-Draw) ile aynı dil.
   React 18 + TypeScript + Vite 5 (HashRouter), zustand, Capacitor 8 (Android + iOS), Firebase Realtime Database.
@@ -27,7 +27,7 @@
   - sunucu sesi (Çizio ile aynı Gemini sesi, Sulafat): cümleler `src/voice/lines.ts` → `npx tsx scripts/generate-voice.mts`
     (anahtar: `.env.local` GEMINI_API_KEY); doğrulama: `python scripts/voice-verify.py`
   - mağaza görselleri: `npm run dev` açıkken `npx tsx scripts/store-shots.mts phone|tablet` (sona `ek` yazılırsa yalnız
-    Sıra Sende + Film Avı çekilir), sonra **Play için** `npx tsx scripts/store-panorama.mts` → `store/promo/play-{phone,tablet}-01…08.png`
+    Sıra Sende + Sinema Bilmecesi çekilir), sonra **Play için** `npx tsx scripts/store-panorama.mts` → `store/promo/play-{phone,tablet}-01…08.png`
     (Gas Story'deki gibi geçişli şerit: renk, kesik çizgili yol ve harf kutuları görselden görsele akar, her birinde eğik telefon).
     Eski kartlı düzen `store-promo.mts` (App Store ve özellik grafiği hâlâ onunla).
     **Play'e yüklerken sıra:** kitaplığa toplu yüklenen görseller bitiş sırasına göre dizilir; slotu boşaltıp kitaplıktan
@@ -66,7 +66,7 @@
     Eskiden işaret yoktu: sıra kaçınca (`missTurn`) gelen yeni kelime hiç duyurulmuyordu ve final ekranındaki
     zincir "EZAN → ÖZEN" gibi kurala aykırı görünüyordu (kullanıcı şikâyeti). Sıklık: 4 harfli oyunda
     ~17 hamlede bir, 5 harflide ~7 hamlede bir — yani 5 harfli havuz büyümeden bu ekran çok görülür.
-  - **Film Avı (22 Eki 2026, deneme sürümü):** ipuçları (tür·yıl·ülke → yönetmen → oyuncu → başrol → konu →
+  - **Sinema Bilmecesi (22 Eki 2026, deneme sürümü):** ipuçları (tür·yıl·ülke → yönetmen → oyuncu → başrol → konu →
     adın iskeleti) `settings.time` saniyede bir açılır; erken bilen çok puan alır (`CLUE_PTS` 100…15).
     Motor `src/engine/film.ts` (eşleştirme: Türkçe karakter/boşluk farkı yok, uzun adda 1-3 harf hata; başka filmin
     adı tam yazılırsa o filmdir), akış `src/game/filmDirector.ts` (Sıra Sende gibi hepsi `ctl` içinde: `film`, `films`,
@@ -87,25 +87,37 @@
     Maskot `components/Mascot.tsx`: sallanır ve göz kırpar (`tiger-blink.webp` = kırpan gözün aynası,
     açık gözün üstünde kısa süre görünür; konum yüzdeleri resmin 380×326 piksel ölçüsüne bağlı).
     İlk açılış / profil ekranı da aynı dilde: logo yerine selam balonu + maskot.
-  - **İç ekranlar da yeni dilde (25 Eki 2026, kullanıcının getirdiği Film Avı tasarım görseline göre):** zemin
+  - **İç ekranlar da yeni dilde (25 Eki 2026, kullanıcının getirdiği Sinema Bilmecesi tasarım görseline göre):** zemin
     `components/Doodles.tsx` artık manzara çiziyor (nane gökyüzü, bulutlar, köşelerde parlak yumrulu çalılar, sarı
     yıldızlar; `position: fixed`, içeriğin arkasında). Kartlar kenarlıksız 26 px köşe; sekmeli seçici (`.seg`) hap
     şeklinde, seçili olan beyaz + kırmızı yazı; bütün `.pill` düğmeler parlak; büyük başlat düğmesi kırmızı degrade +
     iki yanında sarı ışık çizgileri (`.page__cta--spark`) + oynat simgesi; avatarlarda camsı parlama.
     Kurulumda `TopBar art=` ile sağ üstte kaplan + oyunun resmi; lobide kurallar kartının köşesinden kaplan bakar;
-    Film Avı / Sıra Sende turunda sağ altta oyunun resmi (`.game__deco`). Yatay telefonda kaplanlar ve yan çalı gizli.
+    Sinema Bilmecesi / Sıra Sende turunda sağ altta oyunun resmi (`.game__deco`). Yatay telefonda kaplanlar ve yan çalı gizli.
   - **Fon müziği kayıtlı parçalar (25 Eki 2026):** `src/lib/music.ts` artık `public/music/*.m4a` çalıyor (Pixabay,
-    lisans `public/music/LISANS.txt`): lobi caz, oyun "Quiz Master", gerilim döngüsü, puanlar lo-fi, Film Avı kara film
+    lisans `public/music/LISANS.txt`): lobi caz, oyun "Quiz Master", gerilim döngüsü, puanlar lo-fi, Sinema Bilmecesi kara film
     cazı (`film` ruh hâli). Hepsi **YouTube Content ID'ye kayıtsız** seçildi — influencer ekran kaydı paylaşınca telif
     uyarısı çıkmasın; yeni parça eklenirse sayfada "Content ID Registered" olmamalı. Parçalar belleğe açılmaz (decode
     ~35 MB/parça), `<audio>` akışı Web Audio müzik kanalına bağlanır, döngü iki kopya arasında 2,5 sn çapraz geçişle.
     Harf rulosu ve dosya yüklenemezse yedek: eski sentez. Kesme/çevirme: afconvert → WAV, Python `wave` ile kes, afconvert AAC 80 kbps.
-  - **Film Avı sinema teması (25 Eki 2026, influencer reklamı için):** `game--cinema` (Game.tsx; Film Avı lobi/tur/final),
+  - **Sinema Bilmecesi sinema teması (25 Eki 2026, influencer reklamı için):** `game--cinema` (Game.tsx; Sinema Bilmecesi lobi/tur/final),
     zemin `components/CinemaScene.tsx` (spotlar, perde, toz, film greni), stiller `src/styles/cinema.css` (koyu cam kartlar,
     altın vurgular, Bebas Neue başlıklar — `@fontsource/bebas-neue`). Her film eski sinema geri sayımıyla (`FilmLeader`) ve
-    klaketle (`sfx.clap`) başlar; açıklama altın çerçeveli film kartı; final "Yılın Film Avcısı" + altın konfeti +
+    klaketle (`sfx.clap`) başlar; açıklama altın çerçeveli film kartı; final "Yılın Sinemaseveri" + altın konfeti +
     **skor kartı** (`src/lib/storyCard.ts`, 1080×1920 hikâye görseli; uygulamada `@capacitor/filesystem` ile önbelleğe
     yazılıp sistem paylaşımıyla gönderilir). Siluet/afiş yok (kullanıcı istemedi; afiş telifli).
+  - **Ad değişikliği (25 Eki 2026):** "Film Avı" → **"Sinema Bilmecesi"** (kullanıcı seçti; kod içi kimlikler `film`
+    olarak kaldı). Final ödülü "Yılın Sinemaseveri". Mağaza görselleri ve Play metni bir sonraki sürümde yenilenmeli
+    (`store-panorama.mts` metni güncellendi, görseller yeniden üretilmedi). Film listesi 119 film (59 yerli + 60 yabancı);
+    `film.test.ts` konu cümlesinde adın ilk kelimesi geçmesin diye denetler — yeni film eklerken çalıştır.
+  - **Görselli paylaşım (25 Eki 2026):** `src/lib/shareCard.ts` — davet kartı (lobi "Arkadaşlarını çağır": oda kodu harf
+    kutularında) ve sonuç kartı (üç final ekranında "Paylaş": avatarlı kürsü), 1080×1350; Sinema Bilmecesi kartları sinema
+    temasında. Metne Play bağlantısı eklenir (`PLAY_URL`). Uygulamada `@capacitor/filesystem` ile önbelleğe yazılır.
+  - **Zemin çalıları:** alt kenarda kesintisiz şerit (`Hedge`, `slice` ile kırpılır) + iki köşe kümesi; bulutlar ekranın
+    içinde. Eskiden köşe kümelerinin arası boş, yan çalının tabanı düz kesik görünüyordu.
+  - **CSS tuzağı:** `@property` ile kayıtlı özel değişken adları global; `--a` gibi kısa ad kaydetme (ana sayfa kartları
+    `--a`'yı renk olarak kullanıyor, açı olarak kaydedince "Oyna" yazıları kayboldu).
+  - **"Harfi oyuncular durdursun"** varsayılan kapalı; profil kaydı sürüm 2'de eski "açık" değer bir kez kapatıldı.
   - **Sesler (25 Eki 2026):** `sfx.tap` (neredeyse her düğme / ekran geçişi) cam zil notasıydı, "oyuncak gibi"
     bulundu → yumuşak, kısa, sıcak bir tık; `sfx.pop` (başlat/onay) yumuşak iki notalı çan; `sfx.whoosh` daha havalı.
     Beğenilmezse geri almak için bu commit'i `git revert` etmek yeter.
@@ -137,7 +149,7 @@
   - **Çevrimiçi odada bot (22 Eki 2026):** ev sahibi lobide "Bot ekle" ile masayı doldurur (üç oyunda da;
     arkadaş azken iki kişi zevksiz oluyordu — kullanıcı isteği). Bot kimlikleri **`bot-0`…`bot-8`**;
     kurallar bot düğümlerini bu **önekten** tanır ve odadaki bir oyuncunun onlar adına yazmasına izin verir
-    (`players/bot-*` kurma, `answers`/`votes`/`ready`; Sıra Sende ile Film Avı zaten `ctl` içinde). İzin
+    (`players/bot-*` kurma, `answers`/`votes`/`ready`; Sıra Sende ile Sinema Bilmecesi zaten `ctl` içinde). İzin
     **ev sahibine değil odadakilere** verildi: `ctl` de zaten odadakilere açık, yani güven sınırı aynı;
     ayrıca ev sahibi düşünce yöneten değişiyor, kural bunu hesaplayamaz. Botları **yalnızca yöneten cihaz**
     oynatır (`src/store/useGame.ts` → `attach`: `hasBots(s) && actingHost(s) === t.me`), yoksa iki cihaz
@@ -209,8 +221,8 @@
   havuz + 1.0.4'ün düzeltmeleri), aynı akşam incelemeye gönderildi. 1.0.5 dakikalar içinde incelemeden geçip
   yayına çıkmıştı — inceleme hızlı bittiği için yanlış paketi geri çekmeye vakit kalmayabilir. **Ders: paket derlemeden önce `git pull`** — başka bilgisayardan yapılan yayınlar
   burada görünmüyor; Play'deki sürüm kodunu da Paket Gezgini'nden doğrula, depoya güvenme.
-  **7 (1.0.7)** 22 Eki'de derlendi (`store/release/isim-sehir-1.0.7.aab`): Film Avı bölümü, çevrimiçi odaya bot
-  ekleme, Film Avı defterinin büyümesi, arkadaş düğmesinin sağa alınması. Bu paketteki çevrimiçi botlar için
+  **7 (1.0.7)** 22 Eki'de derlendi (`store/release/isim-sehir-1.0.7.aab`): Sinema Bilmecesi bölümü, çevrimiçi odaya bot
+  ekleme, Sinema Bilmecesi defterinin büyümesi, arkadaş düğmesinin sağa alınması. Bu paketteki çevrimiçi botlar için
   **veritabanı kuralları 22 Eki'de yayınlandı** (bot düğümlerine izin); kurallar yayınlanmadan "Bot ekle" çalışmaz.
   22 Eki 20:52'de incelemeye gönderildi; **mağaza metni de aynı incelemeye katıldı** (kısa ve tam açıklama
   artık üç oyunu da anlatıyor). Mağaza metni ile paketi aynı anda göndermek tek inceleme demek.
