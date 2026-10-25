@@ -112,6 +112,11 @@
     ("Harfimiz" anında ~4 sn). Doğrudan `canvas-confetti` import etme.
   - **Kalem sesi:** `sfx.scribble` sonsuz döngülü bir hışırtı; hareket 200 ms kesilince kendiliğinden susar,
     defter kapanınca da kapatılır (yoksa parmak ekrandayken ekran değişince ses takılı kalıyordu).
+  - **Açılış ekranı süresi ve beyaz şerit (25 Eki 2026):** `MainActivity` → `SplashScreen.installSplashScreen` ile logo
+    en az 1,6 sn kalır ve 320 ms'de solar (eskiden ilk karede hemen geçiyordu). Açılıştan sonra üstte bir an beyaz şerit
+    görünüyordu: durum çubuğu ancak pencere gelince gizleniyor, tema zemini açık renkti. `AppTheme.NoActionBar` artık
+    `windowFullscreen` + nane zemin (`res/values/app_colors.xml` → `app_bg`). Emülatör: `sayio_phone` (Android 16).
+    XML yorumlarında `--` yazılamaz (derleme hatası).
   - **Açılış simgesi (Android 12+):** sistem `windowSplashScreenAnimatedIcon` çizer, yaklaşık 290 dp.
     Ana ekran ikonu (en büyüğü 192 piksel) büyütülünce bulanık kalıyordu; bunun için
     `res/drawable-*/splash_icon.png` ayrıca üretildi (`assets/icon-foreground.png` → 288-1152 piksel).

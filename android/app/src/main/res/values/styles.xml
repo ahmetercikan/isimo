@@ -13,6 +13,13 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:background">@null</item>
+        <!-- Pencere baştan tam ekran ve nane zeminli açılsın: eskiden açılış ekranından sonra bir an
+             durum çubuğunun yeri beyaz bir şerit olarak görünüyordu (çubuk ancak pencere gelince gizleniyordu). -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/app_bg</item>
+        <item name="android:statusBarColor">@color/app_bg</item>
+        <item name="android:navigationBarColor">@color/app_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
 
