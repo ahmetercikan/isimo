@@ -5,7 +5,8 @@
  *   1) npm run dev  2) npx tsx scripts/store-shots.mts phone  (ve tablet)  3) npx tsx scripts/store-panorama.mts
  * Girdi: store/screenshots/{phone,tablet}-*.png, src/assets/home/*.webp (maskot ve oyun resimleri)
  * Çıktı: store/promo/play-phone-01…08.png (1080×1920), play-tablet-01…08.png (1920×1200),
- *        store/promo/play-{phone,tablet}-panorama.png (bütün şerit, önizleme)
+ *        store/promo/play-{phone,tablet}-panorama.png (bütün şerit, önizleme), play-feature.png (1024×500 öne çıkan görsel;
+ *        yalnız onu üretmek için: `npx tsx scripts/store-panorama.mts feature`)
  */
 import { chromium } from 'playwright-core';
 import { existsSync, mkdirSync, readFileSync } from 'node:fs';
@@ -127,6 +128,51 @@ ${panels}
 </body></html>`;
 }
 
+/** Öne çıkan görsel (1024×500): solda ikon + ad + slogan, ortada eğik telefon, sağda kaplan ve oyun resimleri. */
+function featurePage() {
+  const f = (p: string) => data(p, 'font/woff2');
+  return `<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face { font-family: F; font-weight: 700; src: url(${f('src/assets/fonts/fredoka-tr-700.woff2')}); }
+@font-face { font-family: N; font-weight: 800; src: url(${f('node_modules/@fontsource/nunito/files/nunito-latin-ext-800-normal.woff2')}); unicode-range: U+0100-024F; }
+@font-face { font-family: N; font-weight: 800; src: url(${f('node_modules/@fontsource/nunito/files/nunito-latin-800-normal.woff2')}); }
+* { margin: 0; box-sizing: border-box; }
+html, body { width: 1024px; height: 500px; overflow: hidden; }
+body { position: relative; color: #3a2b27; background:
+  radial-gradient(520px 300px at 18% 30%, rgba(255,255,255,.75), transparent 70%),
+  linear-gradient(100deg, #ffe3d9 0%, #fff0c4 30%, #d5f3ec 62%, #e6e0ff 100%); }
+body > * { position: absolute; }
+.dots { inset: 0; background-image: radial-gradient(rgba(255,255,255,.6) 2px, transparent 2.5px); background-size: 26px 26px; opacity: .6; }
+.path { left: 0; top: 0; }
+.icon { left: 48px; top: 58px; width: 104px; height: 104px; border-radius: 26px; box-shadow: 0 12px 24px rgba(20,80,120,.28); }
+.kick { left: 52px; top: 186px; font-family: N; font-weight: 800; font-size: 22px; color: #f0553c; letter-spacing: .3px; }
+h1 { left: 46px; top: 214px; font-family: F; font-weight: 700; font-size: 74px; line-height: 1; letter-spacing: -1px; }
+h1 em { font-style: normal; color: #f0553c; }
+.sub { left: 50px; top: 300px; width: 380px; font-family: N; font-weight: 800; font-size: 21px; line-height: 1.35; color: #6b5850; }
+.chips { left: 48px; top: 380px; display: flex; gap: 10px; }
+.chips span { padding: 8px 14px; border-radius: 999px; color: #fff; font-family: F; font-weight: 700; font-size: 17px; box-shadow: 0 4px 0 rgba(0,0,0,.12); }
+.dev { left: 470px; top: 46px; width: 250px; transform: perspective(1400px) rotateY(-14deg) rotateZ(6deg); z-index: 2; }
+.frame { position: relative; padding: 10px; border-radius: 42px; background: linear-gradient(145deg, #2c2a36, #111016); box-shadow: 0 0 0 3px #e4e1ea, 0 0 0 5px #a19cab, 18px 26px 40px rgba(80,40,20,.35); }
+.frame img { display: block; width: 100%; border-radius: 33px; }
+.island { position: absolute; left: 50%; top: 20px; width: 64px; height: 18px; margin-left: -32px; background: #07070a; border-radius: 10px; }
+.art { filter: drop-shadow(0 14px 16px rgba(80,40,20,.25)); z-index: 3; }
+.tile { display: grid; place-items: center; border-radius: 26%; font-family: F; font-weight: 700; color: #fff; box-shadow: 0 5px 0 rgba(0,0,0,.14), 0 10px 18px rgba(80,50,30,.18); }
+</style></head><body>
+<div class="dots"></div>
+<svg class="path" width="1024" height="500"><path d="M -20 470 C 200 400, 330 500, 520 450 S 860 380, 1050 440" fill="none" stroke="#ff6b4a" stroke-opacity=".45" stroke-width="6" stroke-dasharray="16 13" stroke-linecap="round"/></svg>
+<div class="tile" style="left:400px;top:40px;width:54px;height:54px;font-size:32px;background:#14a89a;transform:rotate(-12deg)">K</div>
+<div class="tile" style="left:420px;top:410px;width:46px;height:46px;font-size:28px;background:#e8a200;transform:rotate(9deg)">E</div>
+<img class="icon" src="${data('store/icon-512.png', 'image/png')}">
+<div class="kick">3 oyun bir arada</div>
+<h1>İsim <em>Şehir</em></h1>
+<div class="sub">Arkadaşlarınla ya da botlara karşı, ücretsiz kelime oyunları</div>
+<div class="chips"><span style="background:#f24d40">İsim Şehir</span><span style="background:#1fa9cf">Sıra Sende</span><span style="background:#7d58ee">Film Avı</span></div>
+<div class="dev"><div class="frame"><img src="${shot('phone', '01-ana-sayfa')}"><div class="island"></div></div></div>
+<img class="art" src="${art('tiger')}" style="left:724px;top:236px;width:320px">
+<img class="art" src="${art('film')}" style="left:800px;top:40px;width:170px;transform:rotate(8deg)">
+<script>document.fonts.ready.then(() => Promise.all([...document.images].map((i) => i.decode().catch(() => {})))).then(() => setTimeout(() => (window.done = true), 300));</script>
+</body></html>`;
+}
+
 function browserPath(): string {
   if (process.env.CHROME_PATH) return process.env.CHROME_PATH;
   const guesses = process.platform === 'darwin'
@@ -137,8 +183,20 @@ function browserPath(): string {
   return found;
 }
 
-const kinds = (process.argv[2] ? [process.argv[2]] : ['phone', 'tablet']) as ('phone' | 'tablet')[];
+const arg = process.argv[2];
+const kinds = (arg === 'feature' ? [] : arg ? [arg] : ['phone', 'tablet']) as ('phone' | 'tablet')[];
 const browser = await chromium.launch({ executablePath: browserPath() });
+if (!arg || arg === 'feature') {
+  // 2 kat çözünürlükte çizip 1024×500'e küçült (yazılar keskin kalsın)
+  const p = await browser.newPage({ viewport: { width: 1024, height: 500 }, deviceScaleFactor: 2 });
+  p.on('pageerror', (e) => console.error('hata:', e.message));
+  await p.setContent(featurePage());
+  await p.waitForFunction(() => (window as unknown as { done?: boolean }).done === true, null, { timeout: 60000 });
+  const big = await p.screenshot();
+  await p.close();
+  await sharp(big).resize(1024, 500).png({ compressionLevel: 9 }).toFile(`${OUT}/play-feature.png`);
+  console.log('✓ öne çıkan görsel');
+}
 for (const kind of kinds) {
   const PW = kind === 'phone' ? 1080 : 1920;
   const PH = kind === 'phone' ? 1920 : 1200;
