@@ -2,9 +2,11 @@ Fon müzikleri — Pixabay Content License (https://pixabay.com/service/license-
 Ticari kullanım ve uygulama içinde kullanım serbest; isim vermek gerekmez. Parçalar tek başına (müzik olarak)
 yeniden dağıtılamaz. Hepsi seçilirken YouTube Content ID'ye KAYITSIZ olanlardan seçildi (25 Ekim 2026).
 Dosyalar ilk 92-96 saniyeden kesilip 80 kbps AAC'ye çevrildi (gerilim parçası tam hâliyle).
+film-quiz.m4a: gerilim parçasının özgün WAV kaydından, atempo=0.8, highpass=65 Hz,
+lowpass=4500 Hz ile daha yavaş ve yumuşak bir sürüm üretildi (80 kbps AAC).
 
 lobby.m4a    "Smooth Jazz Restaurant" — alex-morgan        https://pixabay.com/music/modern-jazz-smooth-jazz-restaurant-568175/
 game.m4a     "Quiz Master" — backgroundmusicmaster         https://pixabay.com/music/upbeat-quiz-master-382651/
 tension.m4a  "Quiz Thinking Timer Loop" — vadim_makes_sound https://pixabay.com/music/instrumental-quiz-thinking-timer-loop-551268/
 chill.m4a    "Lofi Chill Vlog Beats" — alex-morgan          https://pixabay.com/music/lofi-lofi-chill-vlog-beats-573883/
-film.m4a     "Lo-fi Quiz" — tenzin01 (sakin bilgi yarışması; 25 Eki'de kara film cazının yerine) https://pixabay.com/music/lofi-lo-fi-quiz-581199/
+film-quiz.m4a "Quiz Thinking Timer Loop" — vadim_makes_sound (yavaşlatılmış sürüm; Lo-fi Quiz yerine) https://pixabay.com/music/instrumental-quiz-thinking-timer-loop-551268/

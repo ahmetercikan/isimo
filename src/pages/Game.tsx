@@ -44,8 +44,8 @@ export default function Game() {
     mood = { lobby: 'lobby', spin: 'roll', review: 'chill', scores: 'chill', final: 'off', write: 'write', turn: 'write', clue: 'write' }[c.phase] as Mood;
     if (c.phase === 'write') mood = now < c.startAt || now >= c.endAt ? 'off' : c.endAt - now <= 10500 ? 'tension' : 'write';
     if (c.phase === 'turn') mood = c.endAt - now <= 8000 ? 'tension' : 'write';
-    // Sinema Bilmecesi: ipuçlarında kara film cazı, film açıklanırken sakin, son ipucunda gerilim.
-    if (c.phase === 'clue') mood = c.nextAt || now < c.startAt ? 'chill' : c.endAt - now <= s.settings.time * 1000 ? 'tension' : 'film';
+    // Film boyunca aynı sakin yarışma döngüsü; son ipucunda tempo/parça değişmez.
+    if (c.phase === 'clue') mood = 'film';
   }
   useEffect(() => setMood(mood), [mood]);
   useEffect(() => () => setMood('off'), []);

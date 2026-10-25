@@ -2,7 +2,9 @@
 
 - **25 Ekim 2026, Sinema Salonu devam çalışması:** `/sinema` menüsü ve `/sinema/sen-ne-kadar` tek kişilik yarışması hazır.
   13 evren, 716 soru (Harry Potter 119); geçici örnek set kaldırıldı. Soru başına 20 sn, turda 4 kolay/3 orta/3 zor,
-  altı unvan, yerel en iyi sonuç/tekrar engeli, paylaşılabilir hikâye kartı. Müzik sakin “Lo-fi Quiz” ile değişti.
+  altı unvan, yerel en iyi sonuç/tekrar engeli, paylaşılabilir hikâye kartı. Lo-fi Quiz de kullanıcıya fazla fantezi geldi;
+  yerine “Quiz Thinking Timer Loop”un %80 tempolu, tizleri yumuşatılmış sürümü (`film-quiz.m4a`, seviye 0.28) kondu.
+  Film tahmini boyunca aynı döngü çalar; son ipucunda gerilim parçasına geçiş kaldırıldı. Kaynak: `public/music/LISANS.txt`.
   Yeni içerik sonrası `node scripts/quiz-meta.mjs`; raporlar `store/quiz-reviews/`. 61 test ve üretim derlemesi geçti.
   Bu Codex oturumunda port/Chrome kısıtlı olduğundan yeni tarayıcı kontrolü yapılamadı. GitHub terminal erişimi yok,
   bağlı araç yalnız okuma yetkili: **web yayını henüz yapılmadı**, main'e push sonrası mevcut Pages akışı yayınlar.
