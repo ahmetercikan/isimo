@@ -202,5 +202,8 @@
   paket yine kullanıcı tarafından sürüklendi; mağaza simgesi (yeni 3B ikon, YZ etiketi yok) + yeni ekranlarla çekilmiş
   8+8 geçişli görsel (YZ etiketli) ile birlikte tek incelemeye gönderildi. Kitaplıkta ad çakışmasın diye görseller
   `v9-phone-0N.png` / `v9-tablet-0N.png`, ikon `isim-sehir-ikon-3b.png` adıyla yüklendi; sırayla seçerken
-  seçimler arasında ~1 sn beklemek gerekiyor, yoksa sıra karışıyor.
+  seçimler arasında ~1 sn beklemek gerekiyor, yoksa sıra karışıyor. Aynı gün yeni öne çıkan görsel
+  (`store/promo/play-feature.png` = `store/feature-graphic.png`, `store-panorama.mts feature`; YZ etiketli) de eklendi;
+  inceleme sürerken yeni değişiklik göndermek incelemeyi **baştan başlatıyor** (Play uyarıyor) — kullanıcı onayladı.
+  Artık mağazada eski tasarımdan bir şey kalmadı (iOS hariç).
   Geliştirici 6262296307859358769, uygulama 4972498643282459948. Adımlar: `store/play-console-adimlar.md`.
