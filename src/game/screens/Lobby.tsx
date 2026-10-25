@@ -1,10 +1,11 @@
 import { Share } from '@capacitor/share';
-import { Bot, Copy, Settings2, Share2, UserX } from 'lucide-react';
+import { Bot, Copy, Play, Settings2, Share2, UserX, Users } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { ChainSettings } from '../../components/ChainSettings';
 import { FilmSettings } from '../../components/FilmSettings';
 import { SettingsForm } from '../../components/SettingsForm';
 import { CatIcon, Icon } from '../../components/Icon';
+import { Mascot } from '../../components/Mascot';
 import { Avatar, Confirm, Modal, useToast } from '../../components/ui';
 import { MAX_PLAYERS, type RoomState } from '../../engine/types';
 import { hideBanner, showBanner } from '../../lib/ads';
@@ -91,7 +92,7 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
 
       <section className="paper-card players-card rise">
         <div className="settings__title">
-          <h3>Oyuncular</h3>
+          <h3><Users className="ico-coral" strokeWidth={2.6} /> Oyuncular</h3>
           <span className="count-pill">{players.length}/{online ? MAX_PLAYERS : players.length}</span>
         </div>
         <ul className="player-grid">
@@ -134,7 +135,8 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
         )}
       </section>
 
-      <section className="paper-card rules-card rise" style={{ animationDelay: '0.08s' }}>
+      <div className="rules-wrap rise" style={{ animationDelay: '0.08s' }}>
+      <section className="paper-card rules-card">
         {film ? (
           <>
             <p className="rules-card__head"><Icon name="dizi" size={26} /> İpuçları birer birer açılır, filmi erken bilen çok puan alır.</p>
@@ -167,12 +169,14 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
           </button>
         )}
       </section>
+      <Mascot className="rules-wrap__mascot" />
+      </div>
 
-      <div className="page__cta page__cta--sticky">
+      <div className={`page__cta page__cta--sticky ${isHost ? 'page__cta--spark' : ''}`}>
         {isHost ? (
           <>
             <button className="pill pill--big pulse" disabled={!canStart} onClick={() => (sfx.pop(), void (siram ? startChain(t, s) : film ? startFilm(t, s) : startGame(t, s)))}>
-              Oyunu Başlat
+              <Play size={26} fill="currentColor" strokeWidth={2} /> Oyunu Başlat
             </button>
             {!canStart && <p className="cta-note">Başlamak için en az 2 oyuncu gerekli</p>}
           </>

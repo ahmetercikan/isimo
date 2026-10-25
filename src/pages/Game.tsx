@@ -1,4 +1,6 @@
 /** Oyun ekranı: aşamaya göre lobi, harf, yazma, değerlendirme, puanlar ve final. */
+import artFilm from '../assets/home/film.webp';
+import artSiram from '../assets/home/siram.webp';
 import { X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
@@ -122,6 +124,7 @@ export default function Game() {
   return (
     <main className={`bg page game game--${phase}`}>
       <Doodles variant={s.ctl.round % 4} />
+      {(phase === 'clue' || phase === 'turn') && <img className="game__deco" src={film ? artFilm : artSiram} alt="" aria-hidden="true" draggable={false} />}
       <button className="round-btn round-btn--soft game__exit" aria-label="Oyundan çık" onClick={() => (sfx.tap(), setAsk(true))}>
         <X size={24} strokeWidth={2.8} />
       </button>

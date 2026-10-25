@@ -1,94 +1,76 @@
 /**
- * İmza zemin (Çizio ile aynı): yumuşak suluboya lekeleri ve kenarlarda küçük kalem karalamaları
- * (yıldız, spiral, dalga, kalp). Her ekran farklı bir yerleşim kullanır; içerikle yarışmaz.
+ * Ekran zemini (yeni tasarım, 25 Eki 2026): nane gökyüzü, üstte yumuşak bulutlar, alt köşelerde ve yanlarda
+ * parlak, yuvarlak çalılar, arada sarı yıldızlar. Bütün ekranlar kullanır; `variant` yalnız yıldızların yerini değiştirir.
+ * Çalılar ekranın köşesine sabitlenir (kaydırınca yerinde durur) ve içeriğin arkasında kalır.
  */
-const BLOB = [
-  'M60,-40 C120,-60 190,-20 200,40 C212,110 150,150 90,140 C20,128 -20,80 -10,20 C-4,-12 20,-30 60,-40 Z',
-  'M40,-30 C100,-50 170,0 160,60 C150,120 90,150 30,130 C-30,110 -40,40 -20,0 C-10,-18 10,-24 40,-30 Z',
-  'M0,-50 C70,-70 150,-30 140,40 C132,100 70,140 10,120 C-50,100 -70,30 -50,-10 C-40,-30 -20,-44 0,-50 Z',
-];
+import { useId } from 'react';
 
-const DOODLES = {
-  star: 'M0,-16 L4,-5 L16,-5 L6,2 L10,14 L0,7 L-10,14 L-6,2 L-16,-5 L-4,-5 Z',
-  spiral: 'M0,0 C4,-4 10,0 8,6 C6,12 -4,12 -8,4 C-12,-6 -2,-16 10,-12 C20,-8 22,6 16,14',
-  wave: 'M-24,0 C-18,-8 -12,-8 -6,0 C0,8 6,8 12,0 C18,-8 24,-8 30,0',
-  heart: 'M0,10 C-14,0 -16,-10 -9,-14 C-4,-17 0,-12 0,-9 C0,-12 4,-17 9,-14 C16,-10 14,0 0,10 Z',
-  sparkle: 'M0,-12 Q2,-2 12,0 Q2,2 0,12 Q-2,2 -12,0 Q-2,-2 0,-12 Z',
-};
+/** Bir çalı kümesi: arkada koyu, önde açık yeşil daireler; ışık sol üstten gelir. */
+function Bush({ className, flip }: { className: string; flip?: boolean }) {
+  const id = useId().replace(/:/g, '');
+  // Yumrular: arkada büyükçe ve koyu, önde daha küçük ve açık; böylece çalı top gibi değil kabarık durur.
+  const back: [number, number, number][] = [[30, 120, 36], [70, 96, 40], [116, 84, 42], [160, 98, 38], [204, 112, 36], [236, 132, 30]];
+  const front: [number, number, number][] = [[6, 168, 34], [44, 150, 34], [84, 140, 36], [124, 146, 34], [164, 150, 36], [204, 160, 32], [238, 172, 30]];
+  return (
+    <svg className={`scene__bush ${className}`} viewBox="0 0 240 220" preserveAspectRatio="xMidYMax meet" style={flip ? { transform: 'scaleX(-1)' } : undefined}>
+      <defs>
+        <radialGradient id={`b${id}`} cx="34%" cy="28%" r="78%">
+          <stop offset="0" stopColor="#6fd6b0" />
+          <stop offset="0.55" stopColor="#33ad8c" />
+          <stop offset="1" stopColor="#1d8a71" />
+        </radialGradient>
+        <radialGradient id={`f${id}`} cx="34%" cy="26%" r="76%">
+          <stop offset="0" stopColor="#9eebc8" />
+          <stop offset="0.5" stopColor="#4cc69c" />
+          <stop offset="1" stopColor="#24a07f" />
+        </radialGradient>
+      </defs>
+      {back.map(([x, y, r], i) => <circle key={`b${i}`} cx={x} cy={y} r={r} fill={`url(#b${id})`} />)}
+      {front.map(([x, y, r], i) => <circle key={`f${i}`} cx={x} cy={y} r={r} fill={`url(#f${id})`} />)}
+      {front.map(([x, y, r], i) => (
+        <path key={`h${i}`} d={`M ${x - r * 0.62} ${y - r * 0.2} Q ${x - r * 0.5} ${y - r * 0.72} ${x + r * 0.05} ${y - r * 0.78}`} stroke="#fff" strokeOpacity="0.45" strokeWidth={r * 0.14} strokeLinecap="round" fill="none" />
+      ))}
+      <rect x="-20" y="196" width="280" height="40" fill="#24a07f" />
+    </svg>
+  );
+}
 
-type Item = { k: keyof typeof DOODLES; x: number; y: number; r?: number; s?: number; c: string };
-type Blob = { i: number; x: number; y: number; s: number; r: number; c: string };
+function Cloud({ className }: { className: string }) {
+  return (
+    <svg className={`scene__cloud ${className}`} viewBox="0 0 200 80">
+      <g fill="#fff">
+        <ellipse cx="60" cy="52" rx="52" ry="24" />
+        <circle cx="86" cy="36" r="28" />
+        <circle cx="124" cy="44" r="22" />
+        <ellipse cx="140" cy="56" rx="48" ry="18" />
+      </g>
+    </svg>
+  );
+}
 
-const LAYOUTS: { blobs: Blob[]; items: Item[] }[] = [
-  {
-    blobs: [
-      { i: 0, x: 60, y: 40, s: 1.6, r: 10, c: 'var(--blob-sun)' },
-      { i: 1, x: 880, y: 560, s: 1.9, r: -20, c: 'var(--blob-coral)' },
-      { i: 2, x: 930, y: 80, s: 0.9, r: 30, c: 'var(--blob-teal)' },
-    ],
-    items: [
-      { k: 'star', x: 190, y: 620, r: 12, c: 'var(--coral)' },
-      { k: 'spiral', x: 820, y: 210, c: 'var(--teal)' },
-      { k: 'sparkle', x: 300, y: 90, c: 'var(--sun-dark)' },
-      { k: 'wave', x: 560, y: 660, c: 'var(--teal)' },
-    ],
-  },
-  {
-    blobs: [
-      { i: 2, x: 900, y: 60, s: 1.7, r: -10, c: 'var(--blob-coral)' },
-      { i: 0, x: 20, y: 600, s: 1.8, r: 40, c: 'var(--blob-teal)' },
-      { i: 1, x: 520, y: 700, s: 1.0, r: 0, c: 'var(--blob-sun)' },
-    ],
-    items: [
-      { k: 'heart', x: 130, y: 110, r: -12, c: 'var(--coral)' },
-      { k: 'star', x: 860, y: 430, r: -8, c: 'var(--sun-dark)' },
-      { k: 'sparkle', x: 700, y: 110, c: 'var(--teal)' },
-      { k: 'spiral', x: 260, y: 520, c: 'var(--sun-dark)' },
-    ],
-  },
-  {
-    blobs: [
-      { i: 1, x: 30, y: 60, s: 1.5, r: -30, c: 'var(--blob-teal)' },
-      { i: 0, x: 900, y: 640, s: 1.6, r: 15, c: 'var(--blob-sun)' },
-      { i: 2, x: 980, y: 260, s: 0.8, r: 60, c: 'var(--blob-coral)' },
-    ],
-    items: [
-      { k: 'wave', x: 780, y: 90, c: 'var(--coral)' },
-      { k: 'star', x: 90, y: 440, r: 20, c: 'var(--teal)' },
-      { k: 'heart', x: 640, y: 640, r: 10, c: 'var(--coral)' },
-      { k: 'sparkle', x: 380, y: 60, c: 'var(--sun-dark)' },
-    ],
-  },
-  {
-    blobs: [
-      { i: 0, x: 960, y: 120, s: 1.4, r: 20, c: 'var(--blob-sun)' },
-      { i: 2, x: 40, y: 380, s: 1.3, r: -15, c: 'var(--blob-coral)' },
-      { i: 1, x: 700, y: 680, s: 1.5, r: 5, c: 'var(--blob-teal)' },
-    ],
-    items: [
-      { k: 'spiral', x: 150, y: 90, c: 'var(--coral)' },
-      { k: 'sparkle', x: 880, y: 380, c: 'var(--teal)' },
-      { k: 'star', x: 420, y: 670, r: -10, c: 'var(--sun-dark)' },
-      { k: 'heart', x: 600, y: 70, r: 8, c: 'var(--teal)' },
-    ],
-  },
+const STAR = 'M0,-12 C1.5,-4 4,-1.5 12,0 C4,1.5 1.5,4 0,12 C-1.5,4 -4,1.5 -12,0 C-4,-1.5 -1.5,-4 0,-12 Z';
+/** Yıldızların yeri (ekranın yüzdesi olarak), her yerleşim için. */
+const STARS: [number, number, number][][] = [
+  [[8, 22, 1], [90, 34, 0.8], [14, 64, 0.7]],
+  [[86, 16, 0.9], [6, 46, 0.8], [92, 70, 0.7]],
+  [[12, 14, 0.8], [88, 52, 1], [8, 78, 0.7]],
+  [[90, 24, 0.8], [10, 36, 1], [86, 82, 0.7]],
 ];
 
 export function Doodles({ variant = 0 }: { variant?: number }) {
-  const L = LAYOUTS[variant % LAYOUTS.length];
+  const stars = STARS[variant % STARS.length];
   return (
-    <svg className="doodles" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      {L.blobs.map((b, i) => (
-        <path key={`b${i}`} className="doodles__blob" d={BLOB[b.i]} fill={b.c}
-          transform={`translate(${b.x} ${b.y}) rotate(${b.r}) scale(${b.s})`} />
+    <div className="scene" aria-hidden="true">
+      <Cloud className="scene__cloud--l" />
+      <Cloud className="scene__cloud--r" />
+      <Bush className="scene__bush--side" />
+      <Bush className="scene__bush--bl" />
+      <Bush className="scene__bush--br" flip />
+      {stars.map(([x, y, s], i) => (
+        <svg key={i} className="scene__star" viewBox="-14 -14 28 28" style={{ left: `${x}%`, top: `${y}%`, width: 26 * s, height: 26 * s, animationDelay: `${i * 0.7}s` }}>
+          <path d={STAR} fill="#ffd23f" stroke="#f0a800" strokeWidth="1.2" />
+        </svg>
       ))}
-      {L.items.map((it, i) => (
-        <path key={`d${i}`} className="doodles__ink" d={DOODLES[it.k]} stroke={it.c}
-          fill={it.k === 'heart' || it.k === 'star' || it.k === 'sparkle' ? it.c : 'none'}
-          fillOpacity={0.25} strokeWidth={3} strokeLinecap="round" strokeLinejoin="round"
-          style={{ animationDelay: `${0.15 * i}s` }}
-          transform={`translate(${it.x} ${it.y}) rotate(${it.r ?? 0}) scale(${it.s ?? 1.3})`} />
-      ))}
-    </svg>
+    </div>
   );
 }

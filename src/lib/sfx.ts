@@ -427,23 +427,19 @@ function scribble(speed: number) {
 // Oyun efektleri
 // ------------------------------------------------------------------------------------------------
 
-// C majör pentatonik: art arda dokunuşlar melodi gibi ilerler
-const PENTA = [84, 86, 88, 91, 93, 96];
-let step = 0;
-let lastTap = 0;
-const nextNote = () => {
-  const now = performance.now();
-  if (now - lastTap > 1500) step = 0;
-  lastTap = now;
-  return PENTA[step++ % PENTA.length];
-};
 const rnd = (k = 0.15) => (Math.random() * 2 - 1) * k;
 
 export const sfx = {
-  /** Dokunuş: cam gibi kısa bir nota + tık. */
+  /**
+   * Dokunuş / ekran geçişi: yumuşak, sıcak, kısa bir "tık" (premium arayüz sesi).
+   * Gövde: hafifçe aşağı kayan sinüs + bir oktav üstte çok kısa parıltı; tepede incecik bir hava tıkı.
+   * Eskiden her dokunuşta perdesi değişen cam zil notasıydı; oyuncak gibi bulundu (25 Eki 2026).
+   */
   tap: () => {
-    noise({ d: 0.01, g: 0.05, filter: 'highpass', f: 6000, pan: rnd() });
-    bell(mtof(nextNote()), 0, 0.22, 0.06, { pan: rnd() });
+    const p = rnd(0.08);
+    tone({ f: 1040, to: 720, glide: 0.045, a: 0.002, d: 0.075, g: 0.075, lp: 2600, pan: p, send: 0.06 });
+    tone({ type: 'triangle', f: 2080, to: 1500, glide: 0.03, a: 0.001, d: 0.03, g: 0.012, pan: p });
+    noise({ d: 0.008, g: 0.018, filter: 'bandpass', f: 4800, q: 1.5, pan: p });
   },
   /** Harf sayacı: tahta çark tıkırtısı (tik-tak). */
   tick: (i = 0) => {
@@ -519,9 +515,12 @@ export const sfx = {
       brass(mtof(m), t, d, 0.06, { vib: i === 3 ? 7 : 0, pan: -0.1 }),
     );
   },
+  /** Onay (Oyunu Başlat, kaydet): yumuşak iki notalı çan, büyük üçlü yukarı; sıcak ve kısa. */
   pop: () => {
-    tone({ f: 380, to: 1150, glide: 0.07, d: 0.13, g: 0.16 });
-    bell(mtof(91), 0.04, 0.35, 0.03);
+    tone({ f: mtof(76), a: 0.004, d: 0.22, g: 0.07, lp: 3200, send: 0.18 });
+    tone({ f: mtof(80), t: 0.07, a: 0.004, d: 0.32, g: 0.065, lp: 3600, send: 0.22 });
+    tone({ type: 'triangle', f: mtof(92), t: 0.07, a: 0.002, d: 0.12, g: 0.01 });
+    noise({ d: 0.01, g: 0.015, filter: 'bandpass', f: 5200, q: 1.5 });
   },
   /** Oyuncu katıldı: kapı zili "ding-dong". */
   join: () => {
@@ -534,8 +533,11 @@ export const sfx = {
     tone({ type: 'square', f: mtof(83 + k), d: 0.06, g: 0.035, lp: 5000 });
     tone({ type: 'square', f: mtof(88 + k), t: 0.06, d: 0.35, g: 0.035, lp: 5000, send: 0.2 });
   },
-  /** Geçiş: soldan sağa vuuş. */
-  whoosh: () => noise({ a: 0.12, d: 0.35, g: 0.2, filter: 'bandpass', f: 2200, to: 450, q: 1.2, pan: -0.6, panTo: 0.6, send: 0.15 }),
+  /** Geçiş: yumuşak, havalı bir süzülme (soldan sağa) + altta belli belirsiz bir nota. */
+  whoosh: () => {
+    noise({ a: 0.09, d: 0.26, g: 0.09, filter: 'lowpass', f: 900, to: 4200, q: 0.8, pan: -0.5, panTo: 0.5, send: 0.2 });
+    tone({ f: mtof(79), t: 0.1, a: 0.01, d: 0.3, g: 0.025, lp: 2400, send: 0.3 });
+  },
   success: () => [72, 76, 79, 83, 84].forEach((m, i) => pluck(mtof(m), i * 0.07, 0.7, 0.07, { pan: -0.3 + i * 0.15, bright: 9 })),
   /** Final: bakır fanfar + timpani + zil. */
   fanfare: () => {

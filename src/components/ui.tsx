@@ -3,6 +3,7 @@ import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 
 import { useNavigate } from 'react-router-dom';
 import { avatarIcon, iconSvg } from '../art/icons';
 import { sfx } from '../lib/sfx';
+import { Mascot } from './Mascot';
 
 export function BackButton({ onBack }: { onBack?: () => void }) {
   const nav = useNavigate();
@@ -13,12 +14,19 @@ export function BackButton({ onBack }: { onBack?: () => void }) {
   );
 }
 
-export function TopBar({ title, onBack, right, back = true }: { title?: ReactNode; onBack?: () => void; right?: ReactNode; back?: boolean }) {
+/** Üst başlık. `art` verilirse sağ üstte maskot kaplan ve yanında o oyunun resmi durur (kurulum ekranı). */
+export function TopBar({ title, onBack, right, back = true, art }: { title?: ReactNode; onBack?: () => void; right?: ReactNode; back?: boolean; art?: string }) {
   return (
-    <div className="topbar">
+    <div className={`topbar ${art ? 'topbar--art' : ''}`}>
       {back && <BackButton onBack={onBack} />}
       <h1 className="title-lg topbar__title">{title}</h1>
       {right}
+      {art && (
+        <div className="topbar__art" aria-hidden="true">
+          <Mascot />
+          <img className="topbar__prop" src={art} alt="" draggable={false} />
+        </div>
+      )}
     </div>
   );
 }

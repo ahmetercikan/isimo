@@ -86,50 +86,79 @@ function pencil(L = 440, hw = 46): string {
     <path d="M${eras + 8},${-hw + 11} H${L - 20}" stroke="#ffd9de" stroke-width="7" stroke-linecap="round" opacity="0.8"/>`;
 }
 
-/** İkonun iç çizimi (1024'lük alanda). */
-function art(): string {
-  // El yazısı "A": iki bacak tek hamlede, sonra çapraz çizgi (kalem çapraz çizginin sonunda)
-  const legs = bezier([318, 760], [
-    [[350, 640], [420, 420], [468, 318]],
-    [[480, 300], [492, 300], [500, 322]],
-    [[548, 440], [598, 640], [628, 752]],
-  ]);
-  const bar = bezier([360, 596], [[[430, 580], [520, 572], [590, 582]]]);
-  const tip = bar[bar.length - 1];
-  const ruled = Array.from({ length: 7 }, (_, i) => `<path d="M228 ${330 + i * 76}H736" stroke="#bfe0f2" stroke-width="7" stroke-linecap="round"/>`).join('');
+/**
+ * 3B harf kutusu: gölge, kalınlık (alt yüz), parlak ön yüz, kenar ışığı, cam parlaması ve kabartma harf.
+ * cx, cy merkez; s kenar; rot derece. Renkler gradyan kimlikleri (defs içinde).
+ */
+function tile3d(o: { cx: number; cy: number; s: number; rot: number; face: string; side: string; letter: string; ink: string; inkSide: string; fs?: number }): string {
+  const { cx, cy, s, rot } = o;
+  const h = s / 2;
+  const r = s * 0.22;
+  const d = s * 0.085;
+  const fs = o.fs ?? s * 0.74;
   return `
-    <g transform="rotate(-7 480 540)">
-      <rect x="196" y="214" width="572" height="652" rx="54" fill="#08324a" opacity="0.32" filter="url(#blur18)" transform="translate(14 26)"/>
-      <rect x="196" y="214" width="572" height="652" rx="54" fill="url(#paper)"/>
-      ${ruled}
-      <path d="M290 236V844" stroke="#ff9d9d" stroke-width="7"/>
-      <path d="${ribbon(legs, 64)}" fill="#c43a22" opacity="0.25" transform="translate(6 10)" filter="url(#blur6)"/>
-      <path d="${ribbon(legs, 64)}" fill="url(#ink)"/>
-      <path d="${ribbon(bar, 56, 0.4)}" fill="url(#ink)"/>
-      <circle cx="${tip[0]}" cy="${tip[1]}" r="27" fill="url(#ink)"/>
-      <g transform="translate(${tip[0]} ${tip[1]}) rotate(38)">${pencil()}</g>
+    <g transform="translate(${cx} ${cy}) rotate(${rot})">
+      <rect x="${-h}" y="${-h}" width="${s}" height="${s}" rx="${r}" fill="#04243f" opacity="0.38" filter="url(#blur18)" transform="translate(${s * 0.05} ${s * 0.13})"/>
+      <rect x="${-h}" y="${-h + d}" width="${s}" height="${s}" rx="${r}" fill="url(#${o.side})"/>
+      <rect x="${-h}" y="${-h}" width="${s}" height="${s}" rx="${r}" fill="url(#${o.face})"/>
+      <rect x="${-h + 5}" y="${-h + 5}" width="${s - 10}" height="${s - 10}" rx="${r - 5}" fill="none" stroke="url(#rim)" stroke-width="7"/>
+      <path d="M${-h + r} ${-h + 10} H${h - r} Q${h - 12} ${-h + 10} ${h - 14} ${-h + r * 0.9} Q${h * 0.2} ${-h * 0.18} ${-h + 14} ${-h * 0.05} V${-h + r} Q${-h + 10} ${-h + 10} ${-h + r} ${-h + 10} Z" fill="url(#gloss)"/>
+      <text x="0" y="${fs * 0.36 + s * 0.035}" text-anchor="middle" font-family="F" font-weight="700" font-size="${fs}" fill="url(#${o.inkSide})">${o.letter}</text>
+      <text x="0" y="${fs * 0.36}" text-anchor="middle" font-family="F" font-weight="700" font-size="${fs}" fill="url(#${o.ink})">${o.letter}</text>
+    </g>`;
+}
+
+/** Sarı parıltı (dört köşeli yıldız) ve ışık çizgisi. */
+const sparkle = (x: number, y: number, k: number) =>
+  `<path transform="translate(${x} ${y}) scale(${k})" d="M0,-40 C5,-12 12,-5 40,0 C12,5 5,12 0,40 C-5,12 -12,5 -40,0 C-12,-5 -5,-12 0,-40 Z" fill="url(#gold)" stroke="#f3a500" stroke-width="2"/>`;
+const ray = (x: number, y: number, rot: number, len: number) =>
+  `<rect x="${x - 13}" y="${y - len}" width="26" height="${len}" rx="13" fill="url(#gold)" transform="rotate(${rot} ${x} ${y})"/>`;
+
+/** İkonun iç çizimi (1024'lük alanda): arkada beyaz "C" kutusu, önde kırmızı "A", sağ üstte STOP tabelası. */
+function art(): string {
+  const oct = (k: number) => {
+    const a = 58 * k, b = 146 * k;
+    return `M${-a},${-b} L${a},${-b} L${b},${-a} L${b},${a} L${a},${b} L${-a},${b} L${-b},${a} L${-b},${-a} Z`;
+  };
+  return `
+    ${tile3d({ cx: 286, cy: 300, s: 280, rot: -14, face: 'wFace', side: 'wSide', letter: 'C', ink: 'blueInk', inkSide: 'blueSide' })}
+    ${tile3d({ cx: 548, cy: 614, s: 452, rot: -7, face: 'rFace', side: 'rSide', letter: 'A', ink: 'wInk', inkSide: 'rInkSide' })}
+    <g transform="translate(790 262) rotate(12)">
+      <path d="${oct(1)}" fill="#04243f" opacity="0.38" filter="url(#blur12)" transform="translate(10 30)"/>
+      <path d="${oct(1)}" fill="url(#stopSide)" transform="translate(0 16)"/>
+      <path d="${oct(1)}" fill="url(#stop)"/>
+      <path d="${oct(0.85)}" fill="none" stroke="#fff" stroke-width="13"/>
+      <path d="M-120,-40 L-50,-120 L50,-120 L96,-74 Q20,-50 -120,8 Z" fill="url(#gloss)"/>
+      <text x="0" y="40" text-anchor="middle" font-family="F" font-weight="700" font-size="98" fill="#a3161f" opacity="0.5" transform="translate(0 6)">STOP</text>
+      <text x="0" y="40" text-anchor="middle" font-family="F" font-weight="700" font-size="98" fill="#fff" letter-spacing="1">STOP</text>
     </g>
-    <g transform="translate(792 246) rotate(13)">
-      <path d="M-58,-146 L58,-146 L146,-58 L146,58 L58,146 L-58,146 L-146,58 L-146,-58 Z" fill="#08324a" opacity="0.35" filter="url(#blur12)" transform="translate(10 18)"/>
-      <path d="M-58,-146 L58,-146 L146,-58 L146,58 L58,146 L-58,146 L-146,58 L-146,-58 Z" fill="url(#stop)"/>
-      <path d="M-50,-124 L50,-124 L124,-50 L124,50 L50,124 L-50,124 L-124,50 L-124,-50 Z" fill="none" stroke="#fff" stroke-width="13"/>
-      <text x="0" y="36" text-anchor="middle" font-family="F" font-weight="700" font-size="98" fill="#fff" letter-spacing="1">STOP</text>
-      <path d="M-104,-62 Q-70,-108 -20,-112" stroke="#fff" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.35"/>
-    </g>
-    <path d="M172 214 q9 30 39 39 q-30 9 -39 39 q-9 -30 -39 -39 q30 -9 39 -39 Z" fill="#fffbea"/>
-    <path d="M846 520 q7 22 29 29 q-22 7 -29 29 q-7 -22 -29 -29 q22 -7 29 -29 Z" fill="#ffffff" opacity="0.9"/>
-    <circle cx="152" cy="820" r="12" fill="#ffffff" opacity="0.7"/>`;
+    ${ray(196, 640, -62, 96)} ${ray(214, 720, -88, 74)}
+    ${ray(858, 560, 58, 90)} ${ray(842, 640, 84, 66)}
+    ${sparkle(842, 830, 1.15)} ${sparkle(520, 150, 0.7)} ${sparkle(160, 860, 0.55)}`;
 }
 
 function defs(): string {
   return `<defs>
     <style>@font-face { font-family: F; font-weight: 700; src: url(data:font/woff2;base64,${font}); }</style>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2fd6b4"/><stop offset="0.5" stop-color="#16a6c4"/><stop offset="1" stop-color="#1767c9"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#36dcc0"/><stop offset="0.45" stop-color="#14a9cc"/><stop offset="1" stop-color="#1a5fd0"/></linearGradient>
+    <linearGradient id="bgGloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.34"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="rFace" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#ff8a6c"/><stop offset="0.45" stop-color="#f6473f"/><stop offset="1" stop-color="#d9262e"/></linearGradient>
+    <linearGradient id="rSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b3141f"/><stop offset="1" stop-color="#7d0b16"/></linearGradient>
+    <linearGradient id="wFace" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe8f3"/></linearGradient>
+    <linearGradient id="wSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a9bad0"/><stop offset="1" stop-color="#7f93b0"/></linearGradient>
+    <linearGradient id="wInk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ffe9e4"/></linearGradient>
+    <linearGradient id="rInkSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a3121c"/><stop offset="1" stop-color="#8a0d18"/></linearGradient>
+    <linearGradient id="blueInk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fa0ff"/><stop offset="1" stop-color="#1b62e0"/></linearGradient>
+    <linearGradient id="blueSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f3f9e"/><stop offset="1" stop-color="#0b2f78"/></linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.7"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.55"/><stop offset="1" stop-color="#fff" stop-opacity="0.04"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3a6"/><stop offset="0.5" stop-color="#ffd23f"/><stop offset="1" stop-color="#ffb000"/></linearGradient>
+    <linearGradient id="stopSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a8121d"/><stop offset="1" stop-color="#760a14"/></linearGradient>
     <radialGradient id="glow" cx="0.25" cy="0.18" r="0.8"><stop offset="0" stop-color="#ffffff" stop-opacity="0.32"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
     <radialGradient id="vignette" cx="0.5" cy="0.45" r="0.78"><stop offset="0.6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#062a4a" stop-opacity="0.3"/></radialGradient>
     <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#fff6e3"/></linearGradient>
     <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a52"/><stop offset="1" stop-color="#ef4b5a"/></linearGradient>
-    <linearGradient id="stop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff6b6b"/><stop offset="1" stop-color="#d92b3a"/></linearGradient>
+    <linearGradient id="stop" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#ff7a6e"/><stop offset="0.5" stop-color="#f03f45"/><stop offset="1" stop-color="#cf2333"/></linearGradient>
     <linearGradient id="faceTop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe083"/><stop offset="1" stop-color="#ffc93b"/></linearGradient>
     <linearGradient id="faceMid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffbd2a"/><stop offset="1" stop-color="#f6a311"/></linearGradient>
     <linearGradient id="faceBot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8920c"/><stop offset="1" stop-color="#c97506"/></linearGradient>
@@ -144,7 +173,7 @@ function defs(): string {
   </defs>`;
 }
 
-const BG = `<rect width="${S}" height="${S}" fill="url(#bg)"/><rect width="${S}" height="${S}" fill="url(#glow)"/><rect width="${S}" height="${S}" fill="url(#vignette)"/>`;
+const BG = `<rect width="${S}" height="${S}" fill="url(#bg)"/><rect width="${S}" height="${S}" fill="url(#glow)"/><rect width="${S}" height="${S}" fill="url(#vignette)"/><path d="M0 0 H${S} V330 C${S * 0.7} 430 ${S * 0.3} 440 0 380 Z" fill="url(#bgGloss)"/>`;
 /** rounded: şeffaf köşeli · full: tam kare · maskable: tam kare, içerik güvenli alanda · fg: yalnız içerik · bg: yalnız zemin */
 function svg(kind: 'rounded' | 'full' | 'maskable' | 'fg' | 'bg'): string {
   const scale = kind === 'maskable' ? 0.78 : kind === 'fg' ? 0.64 : 0.98;
@@ -154,7 +183,7 @@ function svg(kind: 'rounded' | 'full' | 'maskable' | 'fg' | 'bg'): string {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${S}" height="${S}" viewBox="0 0 ${S} ${S}">${defs()}${body}</svg>`;
 }
 
-const b = await chromium.launch({ executablePath: process.env.CHROME_PATH ?? 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe' });
+const b = await chromium.launch({ executablePath: process.env.CHROME_PATH ?? (process.platform === 'darwin' ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe') });
 const page = await b.newPage({ viewport: { width: S, height: S } });
 const render = async (kind: Parameters<typeof svg>[0]) => {
   await page.setContent(`<html><body style="margin:0;background:transparent">${svg(kind)}</body></html>`);

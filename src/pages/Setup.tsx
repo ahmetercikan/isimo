@@ -1,4 +1,7 @@
-import { Minus, Plus } from 'lucide-react';
+import { Minus, Play, Plus, Users } from 'lucide-react';
+import artFilm from '../assets/home/film.webp';
+import artIsim from '../assets/home/isim.webp';
+import artSiram from '../assets/home/siram.webp';
 import { useState } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { ChainSettings } from '../components/ChainSettings';
@@ -53,11 +56,11 @@ export default function Setup() {
   return (
     <main className="bg page setup">
       <Doodles variant={2} />
-      <TopBar title={`${siram ? 'Sıra Sende' : film ? 'Film Avı' : 'İsim Şehir'} · ${bots ? 'Botlara Karşı' : 'Oda Kur'}`} />
+      <TopBar title={`${siram ? 'Sıra Sende' : film ? 'Film Avı' : 'İsim Şehir'} · ${bots ? 'Botlara Karşı' : 'Oda Kur'}`} art={siram ? artSiram : film ? artFilm : artIsim} />
 
       {bots && (
         <section className="paper-card setup__bots rise">
-          <div className="settings__title"><h3>Rakipler</h3></div>
+          <div className="settings__title"><h3><Users className="ico-coral" strokeWidth={2.6} /> Rakipler</h3></div>
           <div className="bot-row">
             <button className="round-btn round-btn--soft" aria-label="Azalt" disabled={count <= 1} onClick={() => (sfx.tap(), setCount(count - 1))}><Minus size={22} strokeWidth={3} /></button>
             <div className="bot-faces">
@@ -86,8 +89,9 @@ export default function Setup() {
         )}
       </section>
 
-      <div className="page__cta page__cta--sticky">
+      <div className="page__cta page__cta--sticky page__cta--spark">
         <button className="pill pill--big" onClick={go} disabled={busy}>
+          {!busy && <Play size={26} fill="currentColor" strokeWidth={2} />}
           {busy ? 'Oda kuruluyor…' : bots ? 'Oyunu Başlat' : 'Odayı Kur'}
         </button>
       </div>

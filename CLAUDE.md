@@ -17,6 +17,10 @@
   - iOS (yalnızca Mac'te): `npm run ios:sync`, `npm run ios:open`, `npm run ios:ipa` (imzalı App Store paketi).
     Ayrıntılar ve mağaza adımları: `IOS.md`, `store/app-store-1.0.1.md`.
   - uygulama ikonu: `npx tsx scripts/make-icons.mts && npx capacitor-assets generate --android --iconBackgroundColor '#16a6c4' --splashBackgroundColor '#cfeee6'`
+    (25 Eki 2026'dan beri: parlak 3B kırmızı "A" kutusu + arkada beyaz "C" kutusu + derinlikli STOP tabelası, kodla çizilir.
+    Fredoka'nın B ve Ş harfleri küçük boyutta bozuk okunuyor, kullanma.) `capacitor-assets` AndroidManifest.xml'i yeniden
+    biçimlendiriyor, `git checkout` ile geri al. Açılış simgesi `res/drawable-*/splash_icon.png` ayrıca
+    `assets/icon-foreground.png`'den 288-1152 px küçültülür (sharp ile).
   - uygulama içi simgeler: `src/art/icons.ts` (Çizio'nun el çizimi simge dili; emoji kullanılmaz)
   - sunucu sesi (Çizio ile aynı Gemini sesi, Sulafat): cümleler `src/voice/lines.ts` → `npx tsx scripts/generate-voice.mts`
     (anahtar: `.env.local` GEMINI_API_KEY); doğrulama: `python scripts/voice-verify.py`
@@ -81,6 +85,15 @@
     Maskot `components/Mascot.tsx`: sallanır ve göz kırpar (`tiger-blink.webp` = kırpan gözün aynası,
     açık gözün üstünde kısa süre görünür; konum yüzdeleri resmin 380×326 piksel ölçüsüne bağlı).
     İlk açılış / profil ekranı da aynı dilde: logo yerine selam balonu + maskot.
+  - **İç ekranlar da yeni dilde (25 Eki 2026, kullanıcının getirdiği Film Avı tasarım görseline göre):** zemin
+    `components/Doodles.tsx` artık manzara çiziyor (nane gökyüzü, bulutlar, köşelerde parlak yumrulu çalılar, sarı
+    yıldızlar; `position: fixed`, içeriğin arkasında). Kartlar kenarlıksız 26 px köşe; sekmeli seçici (`.seg`) hap
+    şeklinde, seçili olan beyaz + kırmızı yazı; bütün `.pill` düğmeler parlak; büyük başlat düğmesi kırmızı degrade +
+    iki yanında sarı ışık çizgileri (`.page__cta--spark`) + oynat simgesi; avatarlarda camsı parlama.
+    Kurulumda `TopBar art=` ile sağ üstte kaplan + oyunun resmi; lobide kurallar kartının köşesinden kaplan bakar;
+    Film Avı / Sıra Sende turunda sağ altta oyunun resmi (`.game__deco`). Yatay telefonda kaplanlar ve yan çalı gizli.
+  - **Sesler (25 Eki 2026):** `sfx.tap` (neredeyse her düğme / ekran geçişi) cam zil notasıydı, "oyuncak gibi"
+    bulundu → yumuşak, kısa, sıcak bir tık; `sfx.pop` (başlat/onay) yumuşak iki notalı çan; `sfx.whoosh` daha havalı.
     Beğenilmezse geri almak için bu commit'i `git revert` etmek yeter.
   - **Ekran düzeni:** `src/styles/app.css` + `game.css` telefon dikey; `tablet.css` 700 px'ten geniş ekranlar;
     `landscape.css` yatay tutulan telefonlar (`orientation: landscape` ve yükseklik ≤ 560 px) — yatayda telefon

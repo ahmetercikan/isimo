@@ -48,6 +48,11 @@
   .profile__hero .hello { top: 8px; padding: 8px 14px; }
   .profile__hero .hello b { font-size: 17px; }
   .profile__hero .hello span { font-size: 13px; }
+  .scene__bush--side { display: none; }
+  .scene__bush--bl, .scene__bush--br { width: min(22vw, 200px); }
+  .topbar--art { min-height: 0; padding-right: 0; }
+  .topbar__art, .rules-wrap__mascot { display: none; }
+  .rules-wrap .rules-card { padding-right: 16px; }
   .home__games { flex-direction: row; align-items: stretch; gap: 10px; }
   .game-card { flex: 1; min-width: 0; padding: 10px 10px 10px 0; border-radius: 24px; }
   .game-card__art { width: 34%; max-width: 96px; }
