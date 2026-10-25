@@ -6,8 +6,16 @@
   yerine “Quiz Thinking Timer Loop”un %80 tempolu, tizleri yumuşatılmış sürümü (`film-quiz.m4a`, seviye 0.28) kondu.
   Film tahmini boyunca aynı döngü çalar; son ipucunda gerilim parçasına geçiş kaldırıldı. Kaynak: `public/music/LISANS.txt`.
   Yeni içerik sonrası `node scripts/quiz-meta.mjs`; raporlar `store/quiz-reviews/`. 61 test ve üretim derlemesi geçti.
-  Bu Codex oturumunda port/Chrome kısıtlı olduğundan yeni tarayıcı kontrolü yapılamadı. GitHub terminal erişimi yok,
-  bağlı araç yalnız okuma yetkili: **web yayını henüz yapılmadı**, main'e push sonrası mevcut Pages akışı yayınlar.
+  İlk erişim kısıtları kullanıcı `/permissions` ile tam erişimi açınca çözüldü. Chrome ile 320/390/768 px buton
+  taşma kontrolü ve yarışma açılışı geçti. GitHub terminal erişimi çalışıyor; bağlı GitHub eklentisi farklı hesaba
+  (AliKuscu1) ait olduğundan yazma işlemlerinde yerel git/gh hesabı ahmetercikan kullanılır.
+  **1.0.11 / kod 11**, 25 Eki 2026 20:30 civarında Play Console'a yüklendi ve incelemeye gönderimi onaylandı
+  (%100 kullanıma sunum). Konsol: “İncelenmekte olan değişiklikler”; hızlı ön kontroller sürüyor, en fazla 14 dk
+  gösteriyor. Yalnız bu sürüm gönderildi. İki uyarı: R8 eşleme dosyası ve yerel hata ayıklama sembolleri eksik;
+  engelleyici hata ve cihaz kaybı yok. İndirme boyutu 17,6 MB (-630 KB).
+  Paketler: `store/release/isim-sehir-1.0.11.aab` ve `.apk`; doğru Cizio yükleme sertifikasıyla imzalı.
+  Açık Chrome, Apple Events JavaScript kapalıyken macOS erişilebilirlik arayüzüyle yönetildi; normal “Yükle”
+  dosya seçicisi AAB'yi doğrudan alabildi, kullanıcının dosyayı sürüklemesi gerekmedi. Ayrıntı: `store/release-1.0.11.md`.
 
 - **Ne:** Üç oyun bir arada (ana sayfada üç kart):
   1. **İsim Şehir** — klasik oyun, harf çevirip kategorileri doldurma, STOP.

@@ -63,7 +63,10 @@ Kalemini hazırla, harfi çevir ve STOP de! İsim Şehir'i şimdi indir, arkada�
 
 ## Sürüm notları (en fazla 500 karakter)
 
-### 1.0.10 (Android sürüm kodu 10) — güncel
+### 1.0.11 (Android sürüm kodu 11) — güncel
+Sinema Bilmecesi büyüdü! Yeni Sinema Salonu ve Sen Ne Kadar…? yarışmasıyla 13 film ve çizgi film evreninde 716 soruyu yanıtla. Harry Potter, Yüzüklerin Efendisi, Hababam Sınıfı, Ters Yüz ve Bluey dahil sevdiğin evrenlerde unvan kazan, sonuç kartını paylaş. Sinema müziği daha sakin bir yarışma döngüsüyle değişti. Film Tahmini butonlarındaki yazı taşması ve yarışmadaki puan/zamanlayıcı sorunları düzeltildi.
+
+### 1.0.10 (Android sürüm kodu 10)
 Film Avı artık Sinema Bilmecesi! Sinema salonu teması, geri sayım ve klaket, 119 film, "Yılın Sinemaseveri" ve hikâyende paylaşabileceğin skor kartı. Gerçek kayıtlı fon müzikleri. Davetler ve sonuçlar artık görselli kartlarla paylaşılıyor. İkon telefonda daha büyük, açılış ekranı daha düzgün. Harfi oyuncuların durdurması artık isteğe bağlı (varsayılan kapalı).
 
 ### 1.0.7 (Android sürüm kodu 7)
