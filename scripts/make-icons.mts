@@ -114,16 +114,25 @@ const sparkle = (x: number, y: number, k: number) =>
 const ray = (x: number, y: number, rot: number, len: number) =>
   `<rect x="${x - 13}" y="${y - len}" width="26" height="${len}" rx="13" fill="url(#gold)" transform="rotate(${rot} ${x} ${y})"/>`;
 
-/** İkonun iç çizimi (1024'lük alanda): arkada beyaz "C" kutusu, önde kırmızı "A", sağ üstte STOP tabelası. */
-function art(): string {
+/**
+ * İkonun iç çizimi (1024'lük alanda): arkada beyaz "C" kutusu, önde kırmızı "A", sağ üstte STOP tabelası.
+ * `tight`: Android uyarlanabilir ikonu ve maskable için sıkı yerleşim — ışık çizgileri yok, C ve STOP A'ya yakın,
+ * A daha büyük. Telefon ikonu daire/damla maskesiyle kestiği için geniş yerleşim orada küçük kalıyordu (25 Eki 2026).
+ */
+function art(tight = false): string {
   const oct = (k: number) => {
     const a = 58 * k, b = 146 * k;
     return `M${-a},${-b} L${a},${-b} L${b},${-a} L${b},${a} L${a},${b} L${-a},${b} L${-b},${a} L${-b},${-a} Z`;
   };
+  const stopAt = tight ? 'translate(772 318) rotate(12) scale(0.8)' : 'translate(790 262) rotate(12)';
   return `
-    ${tile3d({ cx: 286, cy: 300, s: 280, rot: -14, face: 'wFace', side: 'wSide', letter: 'C', ink: 'blueInk', inkSide: 'blueSide' })}
-    ${tile3d({ cx: 548, cy: 614, s: 452, rot: -7, face: 'rFace', side: 'rSide', letter: 'A', ink: 'wInk', inkSide: 'rInkSide' })}
-    <g transform="translate(790 262) rotate(12)">
+    ${tight
+      ? tile3d({ cx: 318, cy: 330, s: 246, rot: -14, face: 'wFace', side: 'wSide', letter: 'C', ink: 'blueInk', inkSide: 'blueSide' })
+      : tile3d({ cx: 286, cy: 300, s: 280, rot: -14, face: 'wFace', side: 'wSide', letter: 'C', ink: 'blueInk', inkSide: 'blueSide' })}
+    ${tight
+      ? tile3d({ cx: 566, cy: 616, s: 500, rot: -7, face: 'rFace', side: 'rSide', letter: 'A', ink: 'wInk', inkSide: 'rInkSide' })
+      : tile3d({ cx: 548, cy: 614, s: 452, rot: -7, face: 'rFace', side: 'rSide', letter: 'A', ink: 'wInk', inkSide: 'rInkSide' })}
+    <g transform="${stopAt}">
       <path d="${oct(1)}" fill="#04243f" opacity="0.38" filter="url(#blur12)" transform="translate(10 30)"/>
       <path d="${oct(1)}" fill="url(#stopSide)" transform="translate(0 16)"/>
       <path d="${oct(1)}" fill="url(#stop)"/>
@@ -132,9 +141,9 @@ function art(): string {
       <text x="0" y="40" text-anchor="middle" font-family="F" font-weight="700" font-size="98" fill="#a3161f" opacity="0.5" transform="translate(0 6)">STOP</text>
       <text x="0" y="40" text-anchor="middle" font-family="F" font-weight="700" font-size="98" fill="#fff" letter-spacing="1">STOP</text>
     </g>
-    ${ray(196, 640, -62, 96)} ${ray(214, 720, -88, 74)}
+    ${tight ? sparkle(860, 760, 0.8) : `${ray(196, 640, -62, 96)} ${ray(214, 720, -88, 74)}
     ${ray(858, 560, 58, 90)} ${ray(842, 640, 84, 66)}
-    ${sparkle(842, 830, 1.15)} ${sparkle(520, 150, 0.7)} ${sparkle(160, 860, 0.55)}`;
+    ${sparkle(842, 830, 1.15)} ${sparkle(520, 150, 0.7)} ${sparkle(160, 860, 0.55)}`}`;
 }
 
 function defs(): string {
@@ -176,9 +185,12 @@ function defs(): string {
 const BG = `<rect width="${S}" height="${S}" fill="url(#bg)"/><rect width="${S}" height="${S}" fill="url(#glow)"/><rect width="${S}" height="${S}" fill="url(#vignette)"/><path d="M0 0 H${S} V330 C${S * 0.7} 430 ${S * 0.3} 440 0 380 Z" fill="url(#bgGloss)"/>`;
 /** rounded: şeffaf köşeli · full: tam kare · maskable: tam kare, içerik güvenli alanda · fg: yalnız içerik · bg: yalnız zemin */
 function svg(kind: 'rounded' | 'full' | 'maskable' | 'fg' | 'bg'): string {
-  const scale = kind === 'maskable' ? 0.78 : kind === 'fg' ? 0.64 : 0.98;
-  const off = (S * (1 - scale)) / 2;
-  const content = `<g transform="translate(${off} ${off}) scale(${scale})">${art()}</g>`;
+  // fg (Android uyarlanabilir ön plan) ve maskable: sıkı yerleşim, içeriğin ortası (540, 552) merkeze gelir.
+  // Ön plan 108 dp'dir, telefon ortadaki ~72 dp'yi daire/damla maskesiyle gösterir: içerik yarıçapı ≈ 0.36 × kenar.
+  const tight = kind === 'fg' || kind === 'maskable';
+  const scale = kind === 'maskable' ? 0.84 : kind === 'fg' ? 0.74 : 0.98;
+  const [ox, oy] = tight ? [S / 2 - 540 * scale, S / 2 - 552 * scale] : [(S * (1 - scale)) / 2, (S * (1 - scale)) / 2];
+  const content = `<g transform="translate(${ox} ${oy}) scale(${scale})">${art(tight)}</g>`;
   const body = kind === 'rounded' ? `<g clip-path="url(#round)">${BG}${content}</g>` : kind === 'fg' ? content : kind === 'bg' ? BG : `${BG}${content}`;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${S}" height="${S}" viewBox="0 0 ${S} ${S}">${defs()}${body}</svg>`;
 }

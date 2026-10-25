@@ -18,7 +18,9 @@
     Ayrıntılar ve mağaza adımları: `IOS.md`, `store/app-store-1.0.1.md`.
   - uygulama ikonu: `npx tsx scripts/make-icons.mts && npx capacitor-assets generate --android --iconBackgroundColor '#16a6c4' --splashBackgroundColor '#cfeee6'`
     (25 Eki 2026'dan beri: parlak 3B kırmızı "A" kutusu + arkada beyaz "C" kutusu + derinlikli STOP tabelası, kodla çizilir.
-    Fredoka'nın B ve Ş harfleri küçük boyutta bozuk okunuyor, kullanma.) `capacitor-assets` AndroidManifest.xml'i yeniden
+    Fredoka'nın B ve Ş harfleri küçük boyutta bozuk okunuyor, kullanma.) Android uyarlanabilir ikon (`fg`) ve maskable
+    **sıkı yerleşim** kullanır (`art(true)`: ışık çizgisi yok, C/STOP A'ya yakın, ölçek 0.74): telefon ön planın yalnız
+    ortadaki ~%67'sini daire/damla maskeyle gösterdiği için geniş yerleşimde harfler masaüstünde küçük kalıyordu. `capacitor-assets` AndroidManifest.xml'i yeniden
     biçimlendiriyor, `git checkout` ile geri al. Açılış simgesi `res/drawable-*/splash_icon.png` ayrıca
     `assets/icon-foreground.png`'den 288-1152 px küçültülür (sharp ile).
   - uygulama içi simgeler: `src/art/icons.ts` (Çizio'nun el çizimi simge dili; emoji kullanılmaz)
