@@ -1,0 +1,625 @@
+{
+  "id": "gora",
+  "title": "G.O.R.A.",
+  "ask": "Sen ne kadar Goralısın?",
+  "scope": "G.O.R.A. (2004)",
+  "tiers": [
+    {
+      "name": "Plakumat",
+      "line": "Emri aldın ama neyi koruduğunu hiç bilmiyorsun."
+    },
+    {
+      "name": "Kargodaki Dünyalı",
+      "line": "Kaçırıldın ve hâlâ \"Fikir güzel ama yemezler\" diyorsun."
+    },
+    {
+      "name": "Atıkkent Sakini",
+      "line": "Gora'yı biliyorsun ama sarayın kapısından giremezsin."
+    },
+    {
+      "name": "Robot 216",
+      "line": "Duygusal, bilgili ve Türk filmlerine hayran bir robotsun."
+    },
+    {
+      "name": "Garavel Usta",
+      "line": "Gözlerin kapalı bile her şeyi koklayarak buluyorsun."
+    },
+    {
+      "name": "Arif Işık",
+      "line": "Gezegeni kurtardın: ateş, su, toprak... ve tahta!"
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Arif Işık Dünya'da ne iş yapar?",
+      "a": [
+        "Halı satar",
+        "Taksi şoförüdür",
+        "Garsonluk yapar",
+        "Gazetecidir"
+      ],
+      "tf": false,
+      "oops": "Arif Işık: her türlü halı, kilim... Unuttun mu?",
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Arif Işık'ı kim canlandırır?",
+      "a": [
+        "Cem Yılmaz",
+        "Şafak Sezer",
+        "Rasim Öztekin",
+        "Ozan Güven"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Cem Yılmaz, Arif'in yanı sıra filmin hangi kötü karakterini de oynar?",
+      "a": [
+        "Komutan Logar",
+        "Kuna",
+        "Garavel",
+        "Amir Tocha"
+      ],
+      "tf": false,
+      "oops": "Aynı yüz, iki karakter: biri iyi, biri Dünyalı düşmanı!",
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Arif hangi gezegene kaçırılır?",
+      "a": [
+        "G.O.R.A.",
+        "A.R.O.G",
+        "Mars",
+        "Anarşa"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Arif'in robot arkadaşının numarası nedir?",
+      "a": [
+        "216",
+        "211",
+        "007",
+        "112"
+      ],
+      "tf": false,
+      "oops": "211 mi? Garavel de aynı hatayı yaptı!",
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Ceku kimdir?",
+      "a": [
+        "Gora'nın prensesi",
+        "Logar'ın yardımcısı",
+        "Bir robot",
+        "Dünyalı bir mahkûm"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Arif'e göre doğadaki dört element: ateş, su, toprak ve ...?",
+      "a": [
+        "Tahta",
+        "Hava",
+        "Demir",
+        "Elektrik"
+      ],
+      "tf": false,
+      "oops": "Hava olmasın? Kardeşim, doğada bulunan diyorum!",
+      "src": "https://tr.wikiquote.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Arif para kazanmak için ne tür sahte fotoğraflar satmaya çalışır?",
+      "a": [
+        "UFO fotoğrafları",
+        "Ünlü fotoğrafları",
+        "Tarihî eser kartpostalı",
+        "Hayalet fotoğrafları"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Gora gezegenini yok olmakla tehdit eden tehlike nedir?",
+      "a": [
+        "Dev bir alev topu",
+        "Dünyalı bir ordu",
+        "Bir kara delik",
+        "Dev bir uzay böceği"
+      ],
+      "tf": false,
+      "oops": "Televizyonu açın, televizyonu! Alev topu geliyor!",
+      "src": "https://tr.wikiquote.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Komutan Logar'ın her emrini yerine getiren yardımcısı kimdir?",
+      "a": [
+        "Kuna",
+        "Rend-Roy",
+        "Garavel",
+        "Bob Marley Faruk"
+      ],
+      "tf": false,
+      "src": "https://tr.wikiquote.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Faruk lakabını hangi ünlü müzisyenden alır?",
+      "a": [
+        "Bob Marley",
+        "Elvis Presley",
+        "Barış Manço",
+        "Michael Jackson"
+      ],
+      "tf": false,
+      "oops": "Saçlarına bak, reggae'den belli!",
+      "src": "https://gora.fandom.com/tr/wiki/Bob_Marley_Faruk"
+    },
+    {
+      "d": 1,
+      "q": "Arif'in finaldeki dövüşü hangi filme gönderme yapar?",
+      "a": [
+        "Matrix",
+        "Rambo",
+        "Terminatör",
+        "Rocky"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Filmin sonunda Arif ile Ceku ne yapar?",
+      "a": [
+        "Birlikte Dünya'ya döner",
+        "Gora'da taht kurar",
+        "Ayrılır",
+        "Uzayda kaybolur"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Robot 216, Gora'da kimin en yakın dostudur?",
+      "a": [
+        "Prenses Ceku",
+        "Komutan Logar",
+        "Kuna",
+        "Amir Tocha"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "G.O.R.A.'nın senaryosunu kim yazdı?",
+      "a": [
+        "Cem Yılmaz",
+        "Ömer Faruk Sorak",
+        "Yılmaz Erdoğan",
+        "Şafak Sezer"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "G.O.R.A. hangi yıl vizyona girdi?",
+      "a": [
+        "2004",
+        "2000",
+        "2008",
+        "2012"
+      ],
+      "tf": false,
+      "oops": "2008'de A.R.O.G geldi, bu ondan önce!",
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Logar, Prenses Ceku ile neden evlenmek ister?",
+      "a": [
+        "Gezegenin yönetimini almak",
+        "Dünya'ya dönmek",
+        "Robotlarını korumak",
+        "Barışı sağlamak"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Arif kutsal taş ritüelini tamamlamak için ne yapmak zorundadır?",
+      "a": [
+        "Ceku'yu öpmek",
+        "Logar'la dövüşmek",
+        "Şarkı söylemek",
+        "Taşları kırmak"
+      ],
+      "tf": false,
+      "oops": "Ritüelin son adımı romantikti; Logar hiç sevmedi!",
+      "src": "https://en.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 1,
+      "q": "Arif, Gora'daki hapishanede hangi Dünyalıyla dost olur?",
+      "a": [
+        "Bob Marley Faruk",
+        "Erşan Kuneri",
+        "Muhittin",
+        "Tufan"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Garavel, uzay gemisindeki Arif'e ilk kez nasıl görünür?",
+      "a": [
+        "Hologram olarak",
+        "Rüyasında",
+        "Telefonda",
+        "Televizyonda"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Arif, alev topunu durdurmak için Amir Tocha'ya hangi şartı koşar?",
+      "a": [
+        "Kendisini ve dostlarını salmak",
+        "Ceku'yla evlenmek",
+        "Gora'nın kralı olmak",
+        "Logar'ı hapse atmak"
+      ],
+      "tf": false,
+      "src": "https://tr.wikiquote.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Doğru mu? Garavel Usta kördür.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "oops": "Herkesi koklayarak tanıyor, gözleriyle değil!",
+      "src": "https://tr.wikiquote.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Arif'in Japon sandığı mahkûm Mehmet aslında nerelidir?",
+      "a": [
+        "Zeytinburnu",
+        "Tokyo",
+        "Osaka",
+        "Kadıköy"
+      ],
+      "tf": false,
+      "oops": "Samuray değil, Kazlıçeşme'de deri atölyesinde çalışıyor!",
+      "src": "https://tr.wikiquote.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Amir Tocha, Ceku'yu başta kiminle evlendirmek ister?",
+      "a": [
+        "Vumar'ın oğlu Timar",
+        "Komutan Logar",
+        "Kuna",
+        "Rend-Roy"
+      ],
+      "tf": false,
+      "oops": "Timar. Hatta, Vumar'ın oğlu Timar!",
+      "src": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=g-o-r-a"
+    },
+    {
+      "d": 2,
+      "q": "Gora'ya alev topunu gizlice kim gönderir?",
+      "a": [
+        "Komutan Logar",
+        "Amir Tocha",
+        "Garavel",
+        "Rend-Roy"
+      ],
+      "tf": false,
+      "src": "https://gora.fandom.com/tr/wiki/Logar_Trihis"
+    },
+    {
+      "d": 2,
+      "q": "Ceku, annesinden öğrendiğine göre gerçek babası kimdir?",
+      "a": [
+        "Bir Dünyalı",
+        "Komutan Kubar",
+        "Garavel",
+        "Rend-Roy"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Arif'in \"Kırmızı mı, mavi mi?\" sorusuna Garavel'in cevabına göre o haplar nedir?",
+      "a": [
+        "Tansiyon hapları",
+        "Işınlanma hapları",
+        "Uyku hapları",
+        "Güç hapları"
+      ],
+      "tf": false,
+      "oops": "Matrix değil bu, Garavel'in tansiyonu var!",
+      "src": "https://tr.wikiquote.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Arif'in kutsal taşlarla yaptığı ritüel hangi filme gönderme yapar?",
+      "a": [
+        "Beşinci Element",
+        "Yıldız Savaşları",
+        "Matrix",
+        "Uzay Yolu"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Prenses Ceku'yu hangi oyuncu canlandırır?",
+      "a": [
+        "Özge Özberk",
+        "İdil Fırat",
+        "Tuğçe Güder",
+        "Dilek Serbest"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Robot 216'yı hangi oyuncu canlandırır?",
+      "a": [
+        "Ozan Güven",
+        "Şafak Sezer",
+        "Engin Günaydın",
+        "Erdal Tosun"
+      ],
+      "tf": false,
+      "oops": "216'nın içinde kimin olduğunu çözemedin!",
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Bob Marley Faruk'u hangi oyuncu canlandırır?",
+      "a": [
+        "Rasim Öztekin",
+        "Cezmi Baskın",
+        "Özkan Uğur",
+        "Şafak Sezer"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Kuna'yı hangi oyuncu canlandırır?",
+      "a": [
+        "Şafak Sezer",
+        "Ozan Güven",
+        "Rasim Öztekin",
+        "Engin Günaydın"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Garavel Usta'yı hangi oyuncu canlandırır?",
+      "a": [
+        "Özkan Uğur",
+        "Cezmi Baskın",
+        "Rasim Öztekin",
+        "Erdal Tosun"
+      ],
+      "tf": false,
+      "oops": "Garavel seni koklasa hemen tanırdı, sen onu tanımadın!",
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "G.O.R.A.'yı kim yönetti?",
+      "a": [
+        "Ömer Faruk Sorak",
+        "Cem Yılmaz",
+        "Yılmaz Erdoğan",
+        "Togan Gökbakar"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "G.O.R.A.'nın 2008'de gelen devam filminin adı nedir?",
+      "a": [
+        "A.R.O.G",
+        "Arif V 216",
+        "Gora 2",
+        "Erşan Kuneri"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Komutan Logar'ın soyadı nedir?",
+      "a": [
+        "Trihis",
+        "Lamtina",
+        "Kuneri",
+        "Işık"
+      ],
+      "tf": false,
+      "oops": "Logar kendi adını duysa hemen bir nutuk atardı!",
+      "src": "https://en.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 2,
+      "q": "Doğru mu? Logar, alev topunu durdurmak için getirttiği silahı başarıyla çalıştırır.",
+      "a": [
+        "Yanlış",
+        "Doğru"
+      ],
+      "tf": true,
+      "oops": "Silah tutukluk yaptı; kahraman başka biriydi!",
+      "src": "https://en.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 3,
+      "q": "Logar'a göre Dünyalılardan nefretinin sebebi, hangi atasının başına gelen olaydır?",
+      "a": [
+        "Komutan Kubar",
+        "Amir Tocha",
+        "Kuna",
+        "Garavel"
+      ],
+      "tf": false,
+      "src": "https://tr.wikiquote.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 3,
+      "q": "Logar'ın atası hangi yıl Dünya'ya gidip kötü karşılanmıştır?",
+      "a": [
+        "1789",
+        "1453",
+        "1923",
+        "1969"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 3,
+      "q": "Garavel'in Dünya'daki asıl adı nedir?",
+      "a": [
+        "Hurşit",
+        "Muhittin",
+        "Tufan",
+        "Mehmet"
+      ],
+      "tf": false,
+      "src": "https://tr.wikiquote.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 3,
+      "q": "Garavel, kaç yıldır Gora'da olduğunu söyler?",
+      "a": [
+        "24",
+        "10",
+        "40",
+        "8"
+      ],
+      "tf": false,
+      "src": "https://tr.wikiquote.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 3,
+      "q": "Gora görevlisinin okuduğu kayda göre Arif Işık'ın doğum tarihi nedir?",
+      "a": [
+        "8 Aralık 1968",
+        "12 Kasım 1972",
+        "1 Ocak 1970",
+        "23 Nisan 1965"
+      ],
+      "tf": false,
+      "oops": "Gora kayıtları şaşmaz, Arif'in yaşı belli!",
+      "src": "https://tr.wikiquote.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 3,
+      "q": "Amir Tocha'yı hangi oyuncu canlandırır?",
+      "a": [
+        "Cezmi Baskın",
+        "Özkan Uğur",
+        "Erdal Tosun",
+        "Rasim Öztekin"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 3,
+      "q": "Rend-Roy'u hangi oyuncu canlandırır?",
+      "a": [
+        "Erdal Tosun",
+        "Engin Günaydın",
+        "Cezmi Baskın",
+        "Ozan Güven"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 3,
+      "q": "Ceku'nun annesinin adı nedir?",
+      "a": [
+        "Mulu",
+        "Cheeba",
+        "Chepa",
+        "Enverina"
+      ],
+      "tf": false,
+      "src": "https://acikerisim.firat.edu.tr/xmlui/bitstream/handle/11508/15534/512006.pdf?isAllowed=y&sequence=1"
+    },
+    {
+      "d": 3,
+      "q": "Ceku odasında hangi Yeşilçam oyuncusunun filmini izler?",
+      "a": [
+        "Sadri Alışık",
+        "Kemal Sunal",
+        "Cüneyt Arkın",
+        "Tarık Akan"
+      ],
+      "tf": false,
+      "oops": "Bu da mı gol değil? İpucu oradaydı!",
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 3,
+      "q": "Amir Tocha \"Kimsin sen?\" diye sorunca Arif ne cevap verir?",
+      "a": [
+        "Kilimcinin kör oğlu",
+        "Dünyalı bir halıcı",
+        "Senin kurtarıcın",
+        "Kralın ta kendisi"
+      ],
+      "tf": false,
+      "oops": "Arif kendini her zaman böyle mütevazı tanıtır!",
+      "src": "https://tr.wikiquote.org/wiki/G.O.R.A."
+    },
+    {
+      "d": 3,
+      "q": "Filmin bitiş şarkısı kime aittir?",
+      "a": [
+        "Sagopa Kajmer",
+        "Ceza",
+        "Tarkan",
+        "Mor ve Ötesi"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/G.O.R.A."
+    }
+  ]
+}

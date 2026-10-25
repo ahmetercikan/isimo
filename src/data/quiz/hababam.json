@@ -1,0 +1,631 @@
+{
+  "id": "hababam",
+  "title": "Hababam Sınıfı",
+  "ask": "Sen ne kadar Hababam'sın?",
+  "scope": "Klasik seri (1975–1981), ağırlıkla ilk dört film",
+  "tiers": [
+    {
+      "name": "Yoklamada Yok",
+      "line": "Derse hiç girmemişsin, kaçak maçtan bile haberin yok."
+    },
+    {
+      "name": "Kopyacı",
+      "line": "Bildiklerin sıra arkadaşının kâğıdından."
+    },
+    {
+      "name": "Çift Dikiş",
+      "line": "Sınıfta kalmışsın ama Hababam ruhu sende var."
+    },
+    {
+      "name": "Hafize Ana'nın Kuzusu",
+      "line": "Ana seni sever; birkaç ders daha çalışırsan hoca da sever."
+    },
+    {
+      "name": "Sınıf Başkanı",
+      "line": "Tulum Hayri'yle bilek güreşine girebilirsin."
+    },
+    {
+      "name": "Kel Mahmut'un Yüz Akı",
+      "line": "Mahmut Hoca bile gözlüğünün üstünden gururla bakar."
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "İnek Şaban'ı hangi oyuncu canlandırır?",
+      "a": [
+        "Kemal Sunal",
+        "Şener Şen",
+        "Halit Akçatepe",
+        "Tarık Akan"
+      ],
+      "tf": false,
+      "oops": "Şaban duysa \"Ben bunu yapmam, abi!\" derdi.",
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_%28film%29"
+    },
+    {
+      "d": 1,
+      "q": "Mahmut Hoca'yı hangi oyuncu canlandırır?",
+      "a": [
+        "Münir Özkul",
+        "Şener Şen",
+        "Şevket Altuğ",
+        "Ahmet Arıman"
+      ],
+      "tf": false,
+      "oops": "Kel Mahmut'u tanımamak, kopya çekmekten büyük suç!",
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_%28film%29"
+    },
+    {
+      "d": 1,
+      "q": "Damat Ferit'i hangi oyuncu canlandırır?",
+      "a": [
+        "Tarık Akan",
+        "Kemal Sunal",
+        "Cem Gürdap",
+        "İlyas Salman"
+      ],
+      "tf": false,
+      "oops": "Sınıfın yakışıklısını tanımadın mı?",
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_%28film%29"
+    },
+    {
+      "d": 1,
+      "q": "Güdük Necmi'yi hangi oyuncu canlandırır?",
+      "a": [
+        "Halit Akçatepe",
+        "Feridun Şavlı",
+        "Kemal Sunal",
+        "Ahmet Sezerel"
+      ],
+      "tf": false,
+      "oops": "Güdük ama yeri büyük; yanlış sıraya baktın!",
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_%28film%29"
+    },
+    {
+      "d": 1,
+      "q": "Hafize Ana'yı hangi oyuncu canlandırır?",
+      "a": [
+        "Adile Naşit",
+        "Ayşen Gruda",
+        "Semra Özdamar",
+        "Türkan Şoray"
+      ],
+      "tf": false,
+      "oops": "Hababam'ın annesini karıştırmak olmaz!",
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_%28film%29"
+    },
+    {
+      "d": 1,
+      "q": "Badi Ekrem'i hangi oyuncu canlandırır?",
+      "a": [
+        "Şener Şen",
+        "Münir Özkul",
+        "Şevket Altuğ",
+        "Kemal Sunal"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Badi_Ekrem"
+    },
+    {
+      "d": 1,
+      "q": "Badi Ekrem okulda hangi dersin hocasıdır?",
+      "a": [
+        "Beden eğitimi",
+        "Tarih",
+        "Kimya",
+        "Edebiyat"
+      ],
+      "tf": false,
+      "oops": "Badi Ekrem'in dersinde kitap değil, koşu var!",
+      "src": "https://tr.wikipedia.org/wiki/Badi_Ekrem"
+    },
+    {
+      "d": 1,
+      "q": "Hababam Sınıfı'nın okuduğu okulun adı nedir?",
+      "a": [
+        "Özel Çamlıca Lisesi",
+        "Galatasaray Lisesi",
+        "Kadıköy Lisesi",
+        "Özel Moda Koleji"
+      ],
+      "tf": false,
+      "oops": "Okulunu bilmeyen öğrenci, yoklamada yok yazılır!",
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_%28film%29"
+    },
+    {
+      "d": 1,
+      "q": "Klasik Hababam Sınıfı filmlerinin çoğunu kim yönetti?",
+      "a": [
+        "Ertem Eğilmez",
+        "Kartal Tibet",
+        "Yavuz Turgul",
+        "Atıf Yılmaz"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1"
+    },
+    {
+      "d": 1,
+      "q": "Hababam Sınıfı, hangi yazarın eserinden uyarlanmıştır?",
+      "a": [
+        "Rıfat Ilgaz",
+        "Aziz Nesin",
+        "Orhan Kemal",
+        "Sait Faik"
+      ],
+      "tf": false,
+      "oops": "Aziz Nesin de güldürür ama bu sınıfın yazarı başka!",
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1"
+    },
+    {
+      "d": 1,
+      "q": "Mahmut Hoca'nın öğrenciler arasındaki lakabı nedir?",
+      "a": [
+        "Kel Mahmut",
+        "Deli Mahmut",
+        "Sert Mahmut",
+        "Koca Mahmut"
+      ],
+      "tf": false,
+      "oops": "Kendisi söylüyor: \"Bana Kel Mahmut derler.\"",
+      "src": "https://tr.wikiquote.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1"
+    },
+    {
+      "d": 1,
+      "q": "Damat Ferit'in okula gizlice getirdiği bebek kimdir?",
+      "a": [
+        "Kendi kızı",
+        "Hafize Ana'nın torunu",
+        "Müdürün yeğeni",
+        "Necmi'nin kardeşi"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Damat_Ferit_%28karakter%29"
+    },
+    {
+      "d": 1,
+      "q": "İnek Şaban'ın en çok şakalaştığı ufak tefek, kurnaz arkadaşı kimdir?",
+      "a": [
+        "Güdük Necmi",
+        "Domdom Ali",
+        "Tulum Hayri",
+        "Kalem Şakir"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/%C4%B0nek_%C5%9Eaban"
+    },
+    {
+      "d": 1,
+      "q": "Kemal Sunal bu rolden sonra birçok filminde hangi adla oynadı?",
+      "a": [
+        "Şaban",
+        "Necmi",
+        "Ferit",
+        "Mahmut"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/%C4%B0nek_%C5%9Eaban"
+    },
+    {
+      "d": 1,
+      "q": "Hafize Ana okulda ne iş yapar?",
+      "a": [
+        "Hizmetlidir",
+        "Müdürdür",
+        "Öğretmendir",
+        "Aşçıbaşıdır"
+      ],
+      "tf": false,
+      "oops": "Müdür mü? Hafize Ana müdür olsa herkes geçerdi!",
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_%28film%29"
+    },
+    {
+      "d": 1,
+      "q": "Hafize Ana, Hababam öğrencilerine nasıl davranır?",
+      "a": [
+        "Anne gibi şefkatle",
+        "Çok sert ve soğuk",
+        "Onları hep şikâyet eder",
+        "Hiç konuşmaz"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmin sonunda Mahmut Hoca, Ferit'i müdüre karşı savunurken ne olur?",
+      "a": [
+        "Fenalaşıp yere yığılır",
+        "Müdür olarak atanır",
+        "Ferit'i okuldan atar",
+        "Bebeği evlat edinir"
+      ],
+      "tf": false,
+      "src": "https://tr.wikiquote.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1"
+    },
+    {
+      "d": 1,
+      "q": "Hababam Sınıfı'nın okulu hangi şehirdedir?",
+      "a": [
+        "İstanbul",
+        "Ankara",
+        "İzmir",
+        "Bursa"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_%28film%29"
+    },
+    {
+      "d": 1,
+      "q": "Doğru mu? Hababam Sınıfı'nda Mahmut Hoca öğrencilerine hiç değer vermeyen, soğuk biridir.",
+      "a": [
+        "Yanlış",
+        "Doğru"
+      ],
+      "tf": true,
+      "oops": "Sert görünür ama öğrencileri için kalbini ortaya koyar!",
+      "src": "https://tr.wikipedia.org/wiki/Kel_Mahmut"
+    },
+    {
+      "d": 2,
+      "q": "Hayta İsmail'i hangi oyuncu canlandırır?",
+      "a": [
+        "Ahmet Arıman",
+        "Cem Gürdap",
+        "Feridun Şavlı",
+        "Bülent İğdiroğlu"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Hayta_%C4%B0smail"
+    },
+    {
+      "d": 2,
+      "q": "Filmlerin unutulmaz müziklerini kim besteledi?",
+      "a": [
+        "Melih Kibar",
+        "Cahit Berkay",
+        "Attila Özdemiroğlu",
+        "Zülfü Livaneli"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_%28film%29"
+    },
+    {
+      "d": 2,
+      "q": "Mahmut Hoca derslerinin yanında okulda hangi görevdedir?",
+      "a": [
+        "Müdür muavini",
+        "Okul müdürü",
+        "Okulun sahibi",
+        "Kapı görevlisi"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Kel_Mahmut"
+    },
+    {
+      "d": 2,
+      "q": "Mahmut Hoca hangi dersin öğretmenidir?",
+      "a": [
+        "Tarih",
+        "Edebiyat",
+        "Coğrafya",
+        "Kimya"
+      ],
+      "tf": false,
+      "oops": "Coğrafya mı? Mahmut Hoca'nın konusu geçmiş zamanlar!",
+      "src": "https://tr.wikipedia.org/wiki/Kel_Mahmut"
+    },
+    {
+      "d": 2,
+      "q": "Mahmut Hoca \"Neden hâlâ lisedesin?\" diye sorunca Şaban ne der?",
+      "a": [
+        "Kızlar peşimi bırakmıyor",
+        "Dersler çok zor",
+        "Okulu çok seviyorum",
+        "Babam izin vermiyor"
+      ],
+      "tf": false,
+      "oops": "Şaban'ın \"vahşi cazibesi\"ni unuttun!",
+      "src": "https://tr.wikiquote.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1"
+    },
+    {
+      "d": 2,
+      "q": "Mahmut Hoca'nın meşhur sözünü tamamla: \"Ben tüccar değilim, ...\"",
+      "a": [
+        "eğitimciyim!",
+        "öğretmenim!",
+        "babanızım!",
+        "müdürünüzüm!"
+      ],
+      "tf": false,
+      "src": "https://tr.wikiquote.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1"
+    },
+    {
+      "d": 2,
+      "q": "İlk filmdeki yıl sonu müsameresinde hangi şarkı söylenirken müdür salona girer?",
+      "a": [
+        "Çilli Bom",
+        "Ateş Böceği",
+        "Estarabim",
+        "Sevda Çiçeği"
+      ],
+      "tf": false,
+      "src": "https://tr.wikiquote.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1"
+    },
+    {
+      "d": 2,
+      "q": "Mahmut Hoca'ya kendini tanıtırken Damat Ferit'in söylediği soyadı nedir?",
+      "a": [
+        "Eken",
+        "Darsübekoğlu",
+        "Alnıgeniş",
+        "Topuz"
+      ],
+      "tf": false,
+      "oops": "\"Bendeniz Ferit ...\" diye başlamıştı, hatırla!",
+      "src": "https://tr.wikiquote.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1"
+    },
+    {
+      "d": 2,
+      "q": "Badi Ekrem seriye hangi filmle katılır?",
+      "a": [
+        "Hababam Sınıfı Sınıfta Kaldı",
+        "Hababam Sınıfı",
+        "Hababam Sınıfı Tatilde",
+        "Hababam Sınıfı Güle Güle"
+      ],
+      "tf": false,
+      "oops": "Düdüğünü ikinci filmde çaldı!",
+      "src": "https://tr.wikipedia.org/wiki/Badi_Ekrem"
+    },
+    {
+      "d": 2,
+      "q": "Sınıfta Kaldı'da okula gelen genç Semra Hoca hangi dersi verir?",
+      "a": [
+        "Edebiyat",
+        "Beden eğitimi",
+        "Kimya",
+        "Tarih"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_S%C4%B1n%C4%B1fta_Kald%C4%B1_%28film%29"
+    },
+    {
+      "d": 2,
+      "q": "Sınıfta Kaldı'da Şaban'a \"Semra Hoca'dan geldi\" denen aşk mektuplarını kim yazar?",
+      "a": [
+        "Ferit ile Necmi",
+        "Hafize Ana",
+        "Badi Ekrem",
+        "Semra Hoca"
+      ],
+      "tf": false,
+      "oops": "Semra Hoca mı? Ah Şaban, yine kandırıldın!",
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_S%C4%B1n%C4%B1fta_Kald%C4%B1_%28film%29"
+    },
+    {
+      "d": 2,
+      "q": "Sınıfta Kaldı'nın başında Hababam, Mahmut Hoca'yı neyle kandırmıştır?",
+      "a": [
+        "Sahte diplomalarla",
+        "Sahte doktor raporuyla",
+        "Sahte müfettişle",
+        "Sahte veli mektubuyla"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_S%C4%B1n%C4%B1fta_Kald%C4%B1_%28film%29"
+    },
+    {
+      "d": 2,
+      "q": "Tarık Akan, Damat Ferit olarak kaç Hababam Sınıfı filminde oynar?",
+      "a": [
+        "2",
+        "1",
+        "4",
+        "6"
+      ],
+      "tf": false,
+      "oops": "Damat erken mezun oldu!",
+      "src": "https://tr.wikipedia.org/wiki/Damat_Ferit_%28karakter%29"
+    },
+    {
+      "d": 2,
+      "q": "Hababam Sınıfı Tatilde'de okula kaç kız öğrenci kabul edilir?",
+      "a": [
+        "4",
+        "2",
+        "6",
+        "10"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_Tatilde"
+    },
+    {
+      "d": 2,
+      "q": "Tatilde'de okuldan kaçan Hababam'a Mahmut Hoca hangi cezayı verir?",
+      "a": [
+        "İzci kampına gönderir",
+        "Tatili iptal eder",
+        "Velilerini çağırır",
+        "Okuldan uzaklaştırır"
+      ],
+      "tf": false,
+      "oops": "Ceza ama biraz da tatil: çadır, ateş, göl!",
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_Tatilde"
+    },
+    {
+      "d": 2,
+      "q": "Hababam Sınıfı Uyanıyor'da sınıfa katılan çalışkan yeni öğrencinin adı nedir?",
+      "a": [
+        "Ahmet",
+        "Bilo",
+        "Mehmet",
+        "Kalem Şakir"
+      ],
+      "tf": false,
+      "oops": "Bilo mu? O kendini ağa ilan eden başka bir öğrenci!",
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_Uyan%C4%B1yor_%28film%29"
+    },
+    {
+      "d": 2,
+      "q": "Kemal Sunal'ın İnek Şaban olarak oynadığı son Hababam filmi hangisidir?",
+      "a": [
+        "Hababam Sınıfı Tatilde",
+        "Hababam Sınıfı Uyanıyor",
+        "Hababam Sınıfı Güle Güle",
+        "Hababam Sınıfı Sınıfta Kaldı"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_Tatilde"
+    },
+    {
+      "d": 2,
+      "q": "Hababam'ın oyunlarıyla rezil olan Hüseyin Şevki Topuz kimdir?",
+      "a": [
+        "Millî Eğitim müfettişi",
+        "Okul müdürü",
+        "Necmi'nin babası",
+        "Kimya öğretmeni"
+      ],
+      "tf": false,
+      "oops": "Necmi'nin babası mı? O \"karanlık işler\" çeviriyordu!",
+      "src": "https://tr.wikipedia.org/wiki/H%C3%BCseyin_%C5%9Eevki_Topuz"
+    },
+    {
+      "d": 3,
+      "q": "Tulum Hayri'yi hangi oyuncu canlandırır?",
+      "a": [
+        "Cem Gürdap",
+        "Ahmet Arıman",
+        "Feridun Şavlı",
+        "Cengiz Nezir"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Tulum_Hayri"
+    },
+    {
+      "d": 3,
+      "q": "Domdom Ali'yi hangi oyuncu canlandırır?",
+      "a": [
+        "Feridun Şavlı",
+        "Cem Gürdap",
+        "Bülent İğdiroğlu",
+        "Ahmet Arıman"
+      ],
+      "tf": false,
+      "oops": "Sınıfın tombul ikilisini karıştırdın!",
+      "src": "https://tr.wikipedia.org/wiki/Domdom_Ali"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmlerde okul binası olarak kullanılan İstanbul'daki tarihi yapı hangisidir?",
+      "a": [
+        "Adile Sultan Kasrı",
+        "Beylerbeyi Sarayı",
+        "Ihlamur Kasrı",
+        "Küçüksu Kasrı"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_%28film%29"
+    },
+    {
+      "d": 3,
+      "q": "Güdük Necmi, Mahmut Hoca'ya babasının ne iş yaptığını söyler?",
+      "a": [
+        "Karanlık işler çeviriyor",
+        "Bakkallık yapıyor",
+        "Gemi kaptanı",
+        "Belediye başkanı"
+      ],
+      "tf": false,
+      "oops": "Necmi'nin babası hakkında bildiği tek şey bu!",
+      "src": "https://tr.wikiquote.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1"
+    },
+    {
+      "d": 3,
+      "q": "Sınıfta Kaldı'da Hababam, maça kaçmak için hangi şairin anmasını bahane eder?",
+      "a": [
+        "Tevfik Fikret",
+        "Namık Kemal",
+        "Mehmet Âkif",
+        "Yahya Kemal"
+      ],
+      "tf": false,
+      "src": "https://www.sinematurk.com/film/3615-hababam-sinifi-sinifta-kaldi/"
+    },
+    {
+      "d": 3,
+      "q": "Hababam Sınıfı Güle Güle'de okula gelen edebiyat hocası Mehmet Bülbül'ü kim oynar?",
+      "a": [
+        "İlyas Salman",
+        "Şevket Altuğ",
+        "Mehmet Ali Erbil",
+        "Şener Şen"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_G%C3%BCle_G%C3%BCle"
+    },
+    {
+      "d": 3,
+      "q": "Doğru mu? Münir Özkul, Hababam Sınıfı Güle Güle filminde yer almaz.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "oops": "Klasik seride Kel Mahmut'suz tek film bu!",
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_G%C3%BCle_G%C3%BCle"
+    },
+    {
+      "d": 3,
+      "q": "Paşa Nuri'yi oynayan Sıtkı Akçatepe, hangi Hababam oyuncusunun babasıdır?",
+      "a": [
+        "Halit Akçatepe",
+        "Kemal Sunal",
+        "Tarık Akan",
+        "Ahmet Arıman"
+      ],
+      "tf": false,
+      "oops": "Soyadı ipucuydu!",
+      "src": "https://en.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1"
+    },
+    {
+      "d": 3,
+      "q": "Uyanıyor'da Tulum Hayri, Zühtü Hoca'nın eski dildeki dizesini neyle başlayan bir sözle karıştırır?",
+      "a": [
+        "Teyzesi defterdar olan...",
+        "Tez giden tez yorulur...",
+        "Dağ dağa kavuşmaz...",
+        "Damdan düşen anlar..."
+      ],
+      "tf": false,
+      "oops": "Osmanlıca zor iş; Tulum'un çevirisi daha meşhur!",
+      "src": "https://katalog.marmara.edu.tr/veriler/yordambt/cokluortam/3A/eTez023737.pdf"
+    },
+    {
+      "d": 3,
+      "q": "Sınıfta Kaldı'da öğrenciler sınıf başkanını belirlemek için nasıl yarışır?",
+      "a": [
+        "Bilek güreşiyle",
+        "Futbol maçıyla",
+        "Kura çekerek",
+        "Şiir okuyarak"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Domdom_Ali"
+    },
+    {
+      "d": 3,
+      "q": "Hababam Sınıfı Tatilde, hangi karakterin yer almadığı ilk Hababam filmidir?",
+      "a": [
+        "Güdük Necmi",
+        "İnek Şaban",
+        "Mahmut Hoca",
+        "Hafize Ana"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Hababam_S%C4%B1n%C4%B1f%C4%B1_Tatilde"
+    }
+  ]
+}

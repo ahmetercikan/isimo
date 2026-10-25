@@ -1,0 +1,639 @@
+{
+  "id": "karlarulkesi",
+  "title": "Karlar Ülkesi",
+  "ask": "Sen ne kadar Arendelle'lisin?",
+  "scope": "Karlar Ülkesi (2013) ve Karlar Ülkesi 2 (2019)",
+  "tiers": [
+    {
+      "name": "Erimiş Kardan Adam",
+      "line": "Yaz güneşi bilgilerini eritmiş!"
+    },
+    {
+      "name": "Sven'in Havucu",
+      "line": "Biraz kemirilmişsin ama hâlâ buradasın."
+    },
+    {
+      "name": "Oaken'ın Müşterisi",
+      "line": "Saunada iyice ısındın, şimdi zirveye tırman!"
+    },
+    {
+      "name": "Buz Toplayıcısı",
+      "line": "Kristoff seni kızağına seve seve alırdı."
+    },
+    {
+      "name": "Arendelle Prensesi",
+      "line": "Anna kadar cesur, Elsa kadar havalısın."
+    },
+    {
+      "name": "Karlar Kraliçesi",
+      "line": "Bilgin buz gibi sağlam; aldırma, alkışlar senin!"
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Elsa'nın sihirli gücü nedir?",
+      "a": [
+        "Buz ve kar yaratmak",
+        "Ateş yakmak",
+        "Uçmak",
+        "Görünmez olmak"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Frozen_(2013_film)"
+    },
+    {
+      "d": 1,
+      "q": "Elsa, Anna'nın nesidir?",
+      "a": [
+        "Ablası",
+        "Kuzeni",
+        "Teyzesi",
+        "Annesi"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi",
+      "oops": "Elsa abla, Anna küçük kardeş!"
+    },
+    {
+      "d": 1,
+      "q": "Konuşan kardan adam Olaf'ın en büyük hayali nedir?",
+      "a": [
+        "Yazı yaşamak",
+        "Uçmayı öğrenmek",
+        "Kral olmak",
+        "Ren geyiği olmak"
+      ],
+      "tf": false,
+      "oops": "Kardan adam ve yaz... Ne ters gidebilir ki?",
+      "src": "https://frozen.fandom.com/wiki/Olaf"
+    },
+    {
+      "d": 1,
+      "q": "Kristoff'un sadık ren geyiğinin adı nedir?",
+      "a": [
+        "Sven",
+        "Olaf",
+        "Hans",
+        "Oaken"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi",
+      "oops": "Olaf geyik değil, kardan adam!"
+    },
+    {
+      "d": 1,
+      "q": "Elsa ile Anna'nın krallığının adı nedir?",
+      "a": [
+        "Arendelle",
+        "Güney Adaları",
+        "Weselton",
+        "Corona"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi",
+      "oops": "Corona, Rapunzel'in krallığı; komşu film!"
+    },
+    {
+      "d": 1,
+      "q": "Olaf'ın burnu nedir?",
+      "a": [
+        "Havuç",
+        "Patates",
+        "Biber",
+        "Dal parçası"
+      ],
+      "tf": false,
+      "oops": "Sven'in gözü hep o havuç burunda!",
+      "src": "https://frozen.fandom.com/wiki/Olaf"
+    },
+    {
+      "d": 1,
+      "q": "Olaf kendini tanıtırken en çok neyi sevdiğini söyler?",
+      "a": [
+        "Sıcak sarılmaları",
+        "Buzlu içecekleri",
+        "Kartopu savaşını",
+        "Kayak yapmayı"
+      ],
+      "tf": false,
+      "src": "https://frozen.fandom.com/wiki/Olaf"
+    },
+    {
+      "d": 1,
+      "q": "Sırrı ortaya çıkan Elsa, dağda kendine ne yapar?",
+      "a": [
+        "Buzdan bir saray",
+        "Bir gemi",
+        "Buzdan bir köprü",
+        "Kardan bir kale duvarı"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi"
+    },
+    {
+      "d": 1,
+      "q": "Trollere göre donmakta olan Anna'yı ancak ne kurtarabilir?",
+      "a": [
+        "Gerçek bir sevgi gösterisi",
+        "Trol iksiri",
+        "Elsa'nın şarkısı",
+        "Sıcak bir çorba"
+      ],
+      "tf": false,
+      "oops": "Çorba güzel ama donmuş kalbe yetmez!",
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi"
+    },
+    {
+      "d": 1,
+      "q": "Kristoff ne iş yapar?",
+      "a": [
+        "Buz kesip satar",
+        "Balıkçıdır",
+        "Saray askeridir",
+        "Fırıncıdır"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Frozen_2"
+    },
+    {
+      "d": 1,
+      "q": "Anna, Prens Hans ile tanıştığı gün ne yapar?",
+      "a": [
+        "Onunla nişanlanır",
+        "Onu krallıktan kovar",
+        "Onunla kavga eder",
+        "Onu kral ilan eder"
+      ],
+      "tf": false,
+      "oops": "Aynı gün nişan! Elsa'nın tepkisini hatırla.",
+      "src": "https://frozen.fandom.com/wiki/Anna"
+    },
+    {
+      "d": 1,
+      "q": "Olaf'ı kim yapmıştır?",
+      "a": [
+        "Elsa",
+        "Anna",
+        "Kristoff",
+        "Troller"
+      ],
+      "tf": false,
+      "src": "https://frozen.fandom.com/wiki/Olaf",
+      "oops": "Olaf, Elsa'nın çocukluk hatırasından doğdu!"
+    },
+    {
+      "d": 1,
+      "q": "Karlar Ülkesi 2'nin sonunda Arendelle'in kraliçesi kim olur?",
+      "a": [
+        "Anna",
+        "Elsa",
+        "Iduna",
+        "Honeymaren"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Frozen_2",
+      "oops": "Elsa ormana, Anna tahta!"
+    },
+    {
+      "d": 1,
+      "q": "Kristoff, Karlar Ülkesi 2 boyunca neyi yapmaya çalışıp durur?",
+      "a": [
+        "Anna'ya evlenme teklif etmeyi",
+        "Kızağını onarmayı",
+        "Sven'e şarkı öğretmeyi",
+        "Kral olmayı"
+      ],
+      "tf": false,
+      "oops": "Zavallı Kristoff, her denemesi yarım kaldı!",
+      "src": "https://frozen.fandom.com/wiki/Kristoff"
+    },
+    {
+      "d": 1,
+      "q": "Elsa, Anna'nın kalbini nasıl dondurur?",
+      "a": [
+        "Kazara, korkup güçlerini salınca",
+        "Kasten, onu cezalandırmak için",
+        "Bir trol büyüsüyle",
+        "Bir buz kristali vererek"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi"
+    },
+    {
+      "d": 1,
+      "q": "Doğru mu, yanlış mı? Anna'nın da Elsa gibi buz güçleri vardır.",
+      "a": [
+        "Yanlış",
+        "Doğru"
+      ],
+      "tf": true,
+      "oops": "Anna'nın süper gücü cesareti, buz değil!",
+      "src": "https://en.wikipedia.org/wiki/Frozen_(2013_film)"
+    },
+    {
+      "d": 1,
+      "q": "Doğru mu, yanlış mı? Elsa, Arendelle'i kazara sonsuz bir kışa sokar.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi"
+    },
+    {
+      "d": 1,
+      "q": "Elsa, sarayını korumak ve misafirleri kovmak için ne yaratır?",
+      "a": [
+        "Dev bir kar canavarı",
+        "Buzdan bir ejderha",
+        "Bir kurt sürüsü",
+        "Buzdan askerler"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi",
+      "oops": "Dev kar canavarı Marshmallow, kapıda bekliyor!"
+    },
+    {
+      "d": 1,
+      "q": "Olaf'ın Anna'ya fark ettirdiği şey nedir?",
+      "a": [
+        "Kristoff'un ona âşık olduğunu",
+        "Hans'ın iyi biri olduğunu",
+        "Elsa'nın onu sevmediğini",
+        "Sven'in konuşabildiğini"
+      ],
+      "tf": false,
+      "src": "https://frozen.fandom.com/wiki/Olaf"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmin sonunda Anna, Kristoff'a ne hediye eder?",
+      "a": [
+        "Yepyeni bir kızak",
+        "Bir at",
+        "Bir taç",
+        "Bir ren geyiği"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi"
+    },
+    {
+      "d": 2,
+      "q": "Prens Hans nereden gelmiştir?",
+      "a": [
+        "Güney Adaları'ndan",
+        "Weselton'dan",
+        "Kuzey Dağı'ndan",
+        "Büyülü Orman'dan"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi",
+      "oops": "Güney Adaları'nın 13. prensi!"
+    },
+    {
+      "d": 2,
+      "q": "Kristoff'u küçükken kim evlat edinip büyütmüştür?",
+      "a": [
+        "Troller",
+        "Oaken",
+        "Kral ve kraliçe",
+        "Kurtlar"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi",
+      "oops": "Troller ona aile oldu; hem de şarkılı!"
+    },
+    {
+      "d": 2,
+      "q": "Elsa'nın ünlü şarkısı \"Let It Go\"nun Türkçe adı nedir?",
+      "a": [
+        "Aldırma",
+        "Buzdan Kalbim",
+        "Kar Tanesi",
+        "Özgürüm"
+      ],
+      "tf": false,
+      "src": "https://www.teknoblog.com/frozen-2-sarkisi-video/",
+      "oops": "Aldırma, aldırma! Bir dahaki sefere bilirsin."
+    },
+    {
+      "d": 2,
+      "q": "Elsa güçleri ortaya çıkınca nereye kaçar?",
+      "a": [
+        "Kuzey Dağı'na",
+        "Güney Adaları'na",
+        "Büyülü Orman'a",
+        "Trollerin vadisine"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi"
+    },
+    {
+      "d": 2,
+      "q": "Gezgin Oaken'ın dağdaki ticaret noktasında dükkânın yanında ne vardır?",
+      "a": [
+        "Bir sauna",
+        "Bir buz pateni pisti",
+        "Bir kütüphane",
+        "Bir fırın"
+      ],
+      "tf": false,
+      "oops": "Hu hu! Oaken'ın saunasını unutmak olmaz!",
+      "src": "https://frozen.fandom.com/wiki/Olaf"
+    },
+    {
+      "d": 2,
+      "q": "Elsa, çocukluğundan beri neden eldiven takar?",
+      "a": [
+        "Güçlerini saklamak için",
+        "Elleri üşüdüğü için",
+        "Moda olduğu için",
+        "Saray kuralı olduğu için"
+      ],
+      "tf": false,
+      "src": "https://frozen.fandom.com/wiki/Elsa"
+    },
+    {
+      "d": 2,
+      "q": "İlk filmin sonunda Elsa, Olaf yazın erimesin diye ona ne verir?",
+      "a": [
+        "Kendine ait bir kar bulutu",
+        "Bir şemsiyeye",
+        "Buzdolabına",
+        "Gölgede durmaya"
+      ],
+      "tf": false,
+      "src": "https://frozen.fandom.com/wiki/Olaf"
+    },
+    {
+      "d": 2,
+      "q": "Karlar Ülkesi hangi yıl vizyona girdi?",
+      "a": [
+        "2013",
+        "2010",
+        "2015",
+        "2016"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi"
+    },
+    {
+      "d": 2,
+      "q": "Karlar Ülkesi 2'de Elsa'yı çağıran gizemli ses aslında kime aittir?",
+      "a": [
+        "Annesi Iduna'nın anısına",
+        "Babası Agnarr'a",
+        "Anna'ya",
+        "Grand Pabbie'ye"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Frozen_2"
+    },
+    {
+      "d": 2,
+      "q": "Karlar Ülkesi 2'deki ateş ruhu hangi küçük hayvan şeklindedir?",
+      "a": [
+        "Semender",
+        "Sincap",
+        "Tilki",
+        "Kurbağa"
+      ],
+      "tf": false,
+      "oops": "Minik semender Bruni, Elsa'nın karına bayılır!",
+      "src": "https://en.wikipedia.org/wiki/Frozen_2"
+    },
+    {
+      "d": 2,
+      "q": "Elsa'nın evcilleştirdiği su ruhu hangi hayvan şeklindedir?",
+      "a": [
+        "At",
+        "Balina",
+        "Yunus",
+        "Kuğu"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Frozen_2",
+      "oops": "Suyun ruhu Nokk: dalgalardan bir at!"
+    },
+    {
+      "d": 2,
+      "q": "Karlar Ülkesi 2'deki toprak ruhları nasıl görünür?",
+      "a": [
+        "Kayadan devler",
+        "Ağaç cüceleri",
+        "Dev köstebekler",
+        "Taş kurtlar"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Frozen_2"
+    },
+    {
+      "d": 2,
+      "q": "Karlar Ülkesi 2'nin sonunda Elsa nerede yaşamaya başlar?",
+      "a": [
+        "Büyülü Orman'da",
+        "Kuzey Dağı'ndaki sarayında",
+        "Güney Adaları'nda",
+        "Trollerin yanında"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Frozen_2"
+    },
+    {
+      "d": 2,
+      "q": "Anna, ormanın özgür kalması için neyi yıktırır?",
+      "a": [
+        "Barajı",
+        "Kaleyi",
+        "Köprüyü",
+        "Deniz fenerini"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Frozen_2",
+      "oops": "Baraj yıkıldı, orman nefes aldı!"
+    },
+    {
+      "d": 2,
+      "q": "Karlar Ülkesi 2'de Elsa'nın aslında ne olduğu ortaya çıkar?",
+      "a": [
+        "Beşinci ruh",
+        "Bir trol prensesi",
+        "Rüzgâr ruhu",
+        "Northuldra kraliçesi"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Frozen_2",
+      "oops": "Elsa köprü oldu: beşinci ruh!"
+    },
+    {
+      "d": 2,
+      "q": "Karlar Ülkesi 2'nin ana hikâyesi hangi mevsimde geçer?",
+      "a": [
+        "Sonbahar",
+        "Kış",
+        "İlkbahar",
+        "Yaz"
+      ],
+      "tf": false,
+      "oops": "Bu sefer kış değil; yapraklar sapsarı!",
+      "src": "https://en.wikipedia.org/wiki/Frozen_2"
+    },
+    {
+      "d": 2,
+      "q": "Doğru mu, yanlış mı? Elsa ile Anna'nın anne babası bir deniz yolculuğunda fırtınaya yakalanır.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi"
+    },
+    {
+      "d": 2,
+      "q": "Elsa'nın güçlerini görünce ona \"canavar\" diyen kişi kimdir?",
+      "a": [
+        "Weselton Dükü",
+        "Prens Hans",
+        "Oaken",
+        "Grand Pabbie"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi",
+      "oops": "Dük'ün kendisi biraz canavarca davranmıyor mu?"
+    },
+    {
+      "d": 3,
+      "q": "Hans'ın kaç ağabeyi vardır?",
+      "a": [
+        "12",
+        "3",
+        "7",
+        "1"
+      ],
+      "tf": false,
+      "oops": "On iki ağabey! Tahta sırası ona hiç gelmezdi.",
+      "src": "https://frozen.fandom.com/wiki/Hans"
+    },
+    {
+      "d": 3,
+      "q": "Karlar Ülkesi hangi ünlü masaldan esinlenmiştir?",
+      "a": [
+        "Karlar Kraliçesi",
+        "Küçük Deniz Kızı",
+        "Çirkin Ördek Yavrusu",
+        "Kibritçi Kız"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Frozen_(2013_film)",
+      "oops": "Andersen'in Karlar Kraliçesi'ni hatırla!"
+    },
+    {
+      "d": 3,
+      "q": "Çocukken Elsa'nın büyüsü kafasına çarpınca Anna'nın saçında ne kalır?",
+      "a": [
+        "Beyaz bir tutam",
+        "Buzdan bir taç",
+        "Kızıl bir tutam",
+        "Kıvırcık bukleler"
+      ],
+      "tf": false,
+      "src": "https://frozen.fandom.com/wiki/Anna"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmin jenerik sonrası sahnesinde kar canavarı Marshmallow ne bulur?",
+      "a": [
+        "Elsa'nın tacını",
+        "Olaf'ın burnunu",
+        "Anna'nın eldivenini",
+        "Kristoff'un kızağını"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Karlar_Ülkesi"
+    },
+    {
+      "d": 3,
+      "q": "Karlar Ülkesi 2'nin başında arkadaşlar akşam hangi oyunu oynar?",
+      "a": [
+        "Sessiz sinema",
+        "Saklambaç",
+        "Satranç",
+        "Kartopu"
+      ],
+      "tf": false,
+      "oops": "Olaf sessiz sinemada her şeyi bilir; ya sen?",
+      "src": "https://frozen.fandom.com/wiki/Frozen_II"
+    },
+    {
+      "d": 3,
+      "q": "Elsa'nın geçmişin sırlarını bulmak için gittiği efsanevi nehrin adı nedir?",
+      "a": [
+        "Ahtohallan",
+        "Arendelle",
+        "Northuldra",
+        "Weselton"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Frozen_2"
+    },
+    {
+      "d": 3,
+      "q": "Büyülü Orman'da yaşayan halkın adı nedir?",
+      "a": [
+        "Northuldra",
+        "Güney Adalılar",
+        "Weseltonlar",
+        "Arendelleliler"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Frozen_2"
+    },
+    {
+      "d": 3,
+      "q": "Barajı yaptıran, Elsa ile Anna'nın dedesi olan kral kimdir?",
+      "a": [
+        "Kral Runeard",
+        "Kral Agnarr",
+        "Prens Hans",
+        "Teğmen Mattias"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Frozen_2"
+    },
+    {
+      "d": 3,
+      "q": "Büyülü Orman'da yıllarca mahsur kalan Arendelle askerlerinin başındaki teğmen kimdir?",
+      "a": [
+        "Mattias",
+        "Ryder",
+        "Oaken",
+        "Agnarr"
+      ],
+      "tf": false,
+      "src": "https://frozen.fandom.com/wiki/Frozen_II"
+    },
+    {
+      "d": 3,
+      "q": "Olaf'ın Karlar Ülkesi 2'deki ünlü teorisine göre suyun neyi vardır?",
+      "a": [
+        "Hafızası",
+        "Kokusu",
+        "Sesi",
+        "Rengi"
+      ],
+      "tf": false,
+      "src": "https://frozen.fandom.com/wiki/Olaf"
+    },
+    {
+      "d": 3,
+      "q": "Doğru mu, yanlış mı? İlk filmde evlenme teklifini Anna'ya Hans yapar.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://frozen.fandom.com/wiki/Anna"
+    }
+  ]
+}

@@ -72,6 +72,10 @@ interface ProfileState {
   film?: Settings;
   bots: { count: number; level: 1 | 2 | 3 };
   stats: Stats;
+  /** "Sen Ne Kadar…?": evren başına en iyi sonuç (yüzde, unvan basamağı, puan). */
+  quizBest?: Record<string, { pct: number; tier: number; pts: number; name: string }>;
+  /** Evren başına son sorulan soruların sırası (hemen tekrar gelmesin; en fazla 40). */
+  quizSeen?: Record<string, number[]>;
   /** Uygulama kapanınca geri dönülebilsin: son çevrimiçi oda. */
   lastRoom: { code: string; at: number } | null;
   /** Oyun daveti ve arkadaş isteği bildirimleri (varsayılan açık). */

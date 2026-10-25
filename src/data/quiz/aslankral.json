@@ -1,0 +1,625 @@
+{
+  "id": "aslankral",
+  "title": "Aslan Kral",
+  "ask": "Sen ne kadar Aslan Kral'sın?",
+  "scope": "Aslan Kral (1994); birkaç soru 2019 yapımı yeniden çevrimden",
+  "tiers": [
+    {
+      "name": "Kayıp Yavru",
+      "line": "Fil mezarlığında yolunu kaybetmiş gibisin."
+    },
+    {
+      "name": "Böcek Avcısı",
+      "line": "Kaygan ama doyurucu... bilgilerin de öyle."
+    },
+    {
+      "name": "Hakuna Matatacı",
+      "line": "Dert yok, tasa yok; ama biraz fazla rahatlamışsın."
+    },
+    {
+      "name": "Zazu'nun Çırağı",
+      "line": "Sabah raporlarını kaçırmıyorsun, aferin!"
+    },
+    {
+      "name": "Rafiki'nin Öğrencisi",
+      "line": "Geçmişten ders almışsın, sopaya gerek kalmadı."
+    },
+    {
+      "name": "Gurur Kayası'nın Kralı",
+      "line": "Işığın değdiği her yer senin krallığın!"
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Simba'nın babası kimdir?",
+      "a": [
+        "Mufasa",
+        "Scar",
+        "Rafiki",
+        "Zazu"
+      ],
+      "tf": false,
+      "oops": "Zazu mu? Zazu duysa tüyleri diken diken olurdu!",
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 1,
+      "q": "Scar, Mufasa'nın nesidir?",
+      "a": [
+        "Kardeşi",
+        "Babası",
+        "Kuzeni",
+        "Danışmanı"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King",
+      "oops": "Danışman Zazu'ydu; Scar ise kıskanç kardeş!"
+    },
+    {
+      "d": 1,
+      "q": "Timon hangi hayvandır?",
+      "a": [
+        "Mirket",
+        "Sincap",
+        "Gelincik",
+        "Tavşan"
+      ],
+      "tf": false,
+      "oops": "Sincap mı? Timon bunu duysa hakuna matata'yı unuturdu!",
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 1,
+      "q": "Pumbaa hangi hayvandır?",
+      "a": [
+        "Yaban domuzu",
+        "Su aygırı",
+        "Gergedan",
+        "Ayı"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King",
+      "oops": "Su aygırı mı? Pumbaa'nın burnu biraz büyük ama o kadar da değil!"
+    },
+    {
+      "d": 1,
+      "q": "Timon ile Pumbaa'nın sloganı \"Hakuna Matata\" ne demektir?",
+      "a": [
+        "Dert yok",
+        "Kral benim",
+        "Afiyet olsun",
+        "Haydi koş"
+      ],
+      "tf": false,
+      "oops": "Afiyet olsun mu? Pumbaa'nın aklı yine yemekte!",
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 1,
+      "q": "Mufasa'nın danışmanı Zazu ne tür bir hayvandır?",
+      "a": [
+        "Kuş",
+        "Maymun",
+        "Sırtlan",
+        "Fare"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 1,
+      "q": "Simba'nın çocukluk arkadaşı olup sonunda kraliçesi olan dişi aslan kimdir?",
+      "a": [
+        "Nala",
+        "Sarabi",
+        "Shenzi",
+        "Sarafina"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King",
+      "oops": "Sarabi Simba'nın annesi; karıştırma!"
+    },
+    {
+      "d": 1,
+      "q": "Scar'ın yardakçıları hangi hayvanlardır?",
+      "a": [
+        "Sırtlanlar",
+        "Akbabalar",
+        "Timsahlar",
+        "Leoparlar"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King",
+      "oops": "Akbabalar sadece çölde tur atıyordu!"
+    },
+    {
+      "d": 1,
+      "q": "Küçük Simba ile Nala, yasak olmasına rağmen gizlice nereye giderler?",
+      "a": [
+        "Fil mezarlığına",
+        "Şelaleye",
+        "Çöle",
+        "Rafiki'nin ağacına"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 1,
+      "q": "Timon ile Pumbaa, Simba'ya et yerine ne yemeyi öğretir?",
+      "a": [
+        "Böcek",
+        "Balık",
+        "Muz",
+        "Ot"
+      ],
+      "tf": false,
+      "oops": "Menü belli: kaygan ama doyurucu böcekler!",
+      "src": "https://lionking.fandom.com/wiki/Pumbaa"
+    },
+    {
+      "d": 1,
+      "q": "Bilge Rafiki ne tür bir hayvandır?",
+      "a": [
+        "Maymun",
+        "Zebra",
+        "Kaplumbağa",
+        "Zürafa"
+      ],
+      "tf": false,
+      "oops": "Zebra mı? Rafiki sopasıyla kafana vururdu!",
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 1,
+      "q": "Filmin sonunda Simba, Gurur Kayası'nın tepesine çıkınca ne yapar?",
+      "a": [
+        "Kükrer",
+        "Şarkı söyler",
+        "Uyur",
+        "Dans eder"
+      ],
+      "tf": false,
+      "src": "https://lionking.fandom.com/wiki/The_Lion_King",
+      "oops": "Dans mı? Kükreme gelir, alkış gelir!"
+    },
+    {
+      "d": 1,
+      "q": "Mufasa'nın ruhu, büyümüş Simba'ya nerede görünür?",
+      "a": [
+        "Gökyüzünde, bulutlarda",
+        "Bir mağarada",
+        "Fil mezarlığında",
+        "Bir ağacın kovuğunda"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 1,
+      "q": "Küçük Simba şarkısında neyi sabırsızlıkla beklediğini anlatır?",
+      "a": [
+        "Kral olmayı",
+        "Avlanmayı öğrenmeyi",
+        "Yağmurun yağmasını",
+        "Bir kardeşi olmasını"
+      ],
+      "tf": false,
+      "src": "https://lionking.fandom.com/wiki/The_Lion_King"
+    },
+    {
+      "d": 1,
+      "q": "Zazu'nun Mufasa'nın yanındaki görevi nedir?",
+      "a": [
+        "Kâhyası ve danışmanı",
+        "Aşçısı",
+        "Avcısı",
+        "Saray soytarısı"
+      ],
+      "tf": false,
+      "oops": "Soytarı mı? Zazu bu lafa çok bozulurdu!",
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 1,
+      "q": "Aslan Kral'ın hikâyesi hangi kıtada geçer?",
+      "a": [
+        "Afrika",
+        "Asya",
+        "Güney Amerika",
+        "Avustralya"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King",
+      "oops": "Pumbaa'ya sorsan da Afrika derdi!"
+    },
+    {
+      "d": 1,
+      "q": "Timon ile Pumbaa, küçük Simba'yı ilk kez nerede bulur?",
+      "a": [
+        "Çölde, baygın hâlde",
+        "Bir nehirde",
+        "Gurur Kayası'nda",
+        "Bir ağacın tepesinde"
+      ],
+      "tf": false,
+      "src": "https://lionking.fandom.com/wiki/Pumbaa"
+    },
+    {
+      "d": 1,
+      "q": "Filmin sonunda Rafiki, hayvanlara kimi havaya kaldırarak gösterir?",
+      "a": [
+        "Simba ile Nala'nın yavrusunu",
+        "Yetişkin Simba'yı",
+        "Timon'u",
+        "Zazu'yu"
+      ],
+      "tf": false,
+      "oops": "Timon olsa çok sevinirdi ama hayır!",
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 2,
+      "q": "Ed'i diğer iki sırtlandan ayıran özellik nedir?",
+      "a": [
+        "Hiç konuşmaz, sadece güler",
+        "En büyükleridir",
+        "Uçabilir",
+        "Şarkı söyler"
+      ],
+      "tf": false,
+      "src": "https://lionking.fandom.com/wiki/Ed"
+    },
+    {
+      "d": 2,
+      "q": "Hangisi Scar'ın üç sırtlanından biri DEĞİLDİR?",
+      "a": [
+        "Zazu",
+        "Shenzi",
+        "Banzai",
+        "Ed"
+      ],
+      "tf": false,
+      "oops": "Zazu bir kuş! Sırtlan olsa kendine şaşardı.",
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 2,
+      "q": "Simba'nın annesinin adı nedir?",
+      "a": [
+        "Sarabi",
+        "Sarafina",
+        "Shenzi",
+        "Nala"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King",
+      "oops": "Sarafina, Nala'nın annesi; aileler karıştı!"
+    },
+    {
+      "d": 2,
+      "q": "Mufasa'nın gözetiminde Simba, pusuya yatıp atılmayı kimin üzerinde dener?",
+      "a": [
+        "Zazu",
+        "Pumbaa",
+        "Rafiki",
+        "Timon"
+      ],
+      "tf": false,
+      "oops": "Zavallı Zazu, sabah raporu yarıda kaldı!",
+      "src": "https://lionking.fandom.com/wiki/Zazu"
+    },
+    {
+      "d": 2,
+      "q": "Mufasa'ya göre krallıklarının sınırı neresidir?",
+      "a": [
+        "Işığın değdiği her yer",
+        "Nehrin aktığı her yer",
+        "Ağaçların olduğu her yer",
+        "Rüzgârın estiği her yer"
+      ],
+      "tf": false,
+      "src": "https://lionking.fandom.com/wiki/The_Lion_King"
+    },
+    {
+      "d": 2,
+      "q": "Yetişkin Nala, Simba ile karşılaşmadan hemen önce kimi avlamaya çalışır?",
+      "a": [
+        "Pumbaa",
+        "Rafiki",
+        "Zazu",
+        "Bir zebra"
+      ],
+      "tf": false,
+      "oops": "Pumbaa az kalsın akşam yemeği oluyordu!",
+      "src": "https://lionking.fandom.com/wiki/Pumbaa"
+    },
+    {
+      "d": 2,
+      "q": "Rafiki, Simba'ya \"geçmiş acıtabilir\" dersini verirken ne yapar?",
+      "a": [
+        "Sopasıyla kafasına vurur",
+        "Onu suya iter",
+        "Ona şarkı söyletir",
+        "Kuyruğunu çeker"
+      ],
+      "tf": false,
+      "src": "https://lionking.fandom.com/wiki/Rafiki"
+    },
+    {
+      "d": 2,
+      "q": "Scar kral olunca Gurur Toprakları'na ne olur?",
+      "a": [
+        "Kurur, çorak kalır",
+        "Sel basar",
+        "Karla kaplanır",
+        "Çiçeklerle dolar"
+      ],
+      "tf": false,
+      "oops": "Karla kaplanmak mı? O başka bir filmin konusu!",
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 2,
+      "q": "Scar, babasını kaybeden küçük Simba'ya ne yapmasını söyler?",
+      "a": [
+        "Kaçıp bir daha dönmemesini",
+        "Hemen kral olmasını",
+        "Rafiki'ye gitmesini",
+        "Sırtlanlarla yaşamasını"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King",
+      "oops": "Scar'ın tek planı vardı: Simba'yı uzaklaştırmak!"
+    },
+    {
+      "d": 2,
+      "q": "Timon, sırtlanların dikkatini dağıtmak için ne yapar?",
+      "a": [
+        "Hula dansı yapar",
+        "Ölü taklidi yapar",
+        "Sihir gösterisi yapar",
+        "Ağaca tırmanır"
+      ],
+      "tf": false,
+      "oops": "Hula etekliğiyle Timon, sahnenin yıldızıydı!",
+      "src": "https://lionking.fandom.com/wiki/Timon"
+    },
+    {
+      "d": 2,
+      "q": "Scar'ın yelesi ne renktir?",
+      "a": [
+        "Siyah",
+        "Kızıl",
+        "Sarı",
+        "Beyaz"
+      ],
+      "tf": false,
+      "src": "https://lionking.fandom.com/wiki/Scar",
+      "oops": "Kızıl yele Mufasa'nındı!"
+    },
+    {
+      "d": 2,
+      "q": "Aslan Kral (çizgi film) hangi yıl vizyona girdi?",
+      "a": [
+        "1994",
+        "1989",
+        "1998",
+        "2001"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 2,
+      "q": "Rafiki nerede yaşar?",
+      "a": [
+        "Kocaman bir ağaçta",
+        "Bir mağarada",
+        "Gurur Kayası'nda",
+        "Şelalenin arkasında"
+      ],
+      "tf": false,
+      "src": "https://lionking.fandom.com/wiki/Rafiki"
+    },
+    {
+      "d": 2,
+      "q": "2019 yapımı Aslan Kral'ın orijinalinde Nala'yı hangi ünlü şarkıcı seslendirdi?",
+      "a": [
+        "Beyoncé",
+        "Rihanna",
+        "Adele",
+        "Lady Gaga"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King_(2019_film)"
+    },
+    {
+      "d": 2,
+      "q": "Simba ile Nala, fil mezarlığına gitmek için kimi atlatmaya çalışır?",
+      "a": [
+        "Zazu",
+        "Rafiki",
+        "Sarabi",
+        "Pumbaa"
+      ],
+      "tf": false,
+      "src": "https://lionking.fandom.com/wiki/The_Lion_King",
+      "oops": "Zazu'yu atlatmak zor değil, şarkı yeter!"
+    },
+    {
+      "d": 2,
+      "q": "Mufasa'ya göre geçmişin büyük kralları onları nereden izler?",
+      "a": [
+        "Yıldızlardan",
+        "Ağaçların tepesinden",
+        "Nehrin dibinden",
+        "Bulutların ardındaki dağdan"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 2,
+      "q": "Büyüyen Simba'yı Gurur Toprakları'na dönmeye ilk ikna etmeye çalışan kimdir?",
+      "a": [
+        "Nala",
+        "Zazu",
+        "Sarabi",
+        "Shenzi"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 3,
+      "q": "Rafiki, Simba'nın hayatta olduğunu nasıl anlar?",
+      "a": [
+        "Rüzgârla gelen tüyleri koklayıp",
+        "Zazu ona haber verir",
+        "Yıldızlarda yazılı görür",
+        "Timon ona mektup yollar"
+      ],
+      "tf": false,
+      "src": "https://lionking.fandom.com/wiki/Rafiki"
+    },
+    {
+      "d": 3,
+      "q": "\"Simba\" kelimesi Svahili dilinde ne demektir?",
+      "a": [
+        "Aslan",
+        "Kral",
+        "Cesur",
+        "Güneş"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Simba",
+      "oops": "Adı üstünde: Simba, aslan demek!"
+    },
+    {
+      "d": 3,
+      "q": "Scar'ın yüzündeki yara izi hangi gözünün üzerindedir?",
+      "a": [
+        "Sol gözünün",
+        "Sağ gözünün",
+        "İki gözünün de",
+        "Burnunun üstünde"
+      ],
+      "tf": false,
+      "src": "https://lionking.fandom.com/wiki/Scar"
+    },
+    {
+      "d": 3,
+      "q": "Scar filmde ilk göründüğünde patisinde hangi hayvanla oynamaktadır?",
+      "a": [
+        "Bir fare",
+        "Bir kertenkele",
+        "Bir böcek",
+        "Bir kurbağa"
+      ],
+      "tf": false,
+      "oops": "Fareyi kaçıran da Zazu oldu zaten!",
+      "src": "https://lionking.fandom.com/wiki/Scar"
+    },
+    {
+      "d": 3,
+      "q": "Gece gökyüzüne bakarken Pumbaa yıldızların ne olduğunu söyler?",
+      "a": [
+        "Çok uzakta yanan gaz topları",
+        "Gökyüzüne yapışmış ateşböcekleri",
+        "Geçmişin büyük kralları",
+        "Ay'ın yavruları"
+      ],
+      "tf": false,
+      "oops": "Ateşböceği diyen Timon'du, krallar diyen Simba!",
+      "src": "https://lionking.fandom.com/wiki/Pumbaa"
+    },
+    {
+      "d": 3,
+      "q": "Aslan Kral'ın şarkılarını hangi ünlü müzisyen besteledi?",
+      "a": [
+        "Elton John",
+        "Phil Collins",
+        "Freddie Mercury",
+        "Michael Jackson"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King",
+      "oops": "Phil Collins'i Tarzan'dan hatırlıyorsun galiba!"
+    },
+    {
+      "d": 3,
+      "q": "Aslan Kral'ın film müziklerini hangi besteci yaptı?",
+      "a": [
+        "Hans Zimmer",
+        "John Williams",
+        "Ennio Morricone",
+        "Alan Menken"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 3,
+      "q": "Aslan Kral'ın hikâyesi Shakespeare'in hangi oyunundan esinlenmiştir?",
+      "a": [
+        "Hamlet",
+        "Romeo ve Juliet",
+        "Othello",
+        "Bir Yaz Gecesi Rüyası"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King",
+      "oops": "Romeo ve Juliet mi? Bu filmde balkon yok!"
+    },
+    {
+      "d": 3,
+      "q": "Hem 1994 hem 2019 Aslan Kral'ın orijinalinde Mufasa'yı seslendiren oyuncu kimdir?",
+      "a": [
+        "James Earl Jones",
+        "Morgan Freeman",
+        "Jeremy Irons",
+        "Samuel L. Jackson"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King_(2019_film)"
+    },
+    {
+      "d": 3,
+      "q": "\"Rafiki\" kelimesi Svahili dilinde ne demektir?",
+      "a": [
+        "Arkadaş",
+        "Büyücü",
+        "Maymun",
+        "Bilge"
+      ],
+      "tf": false,
+      "src": "https://en.wiktionary.org/wiki/rafiki"
+    },
+    {
+      "d": 3,
+      "q": "Jenerikte adı geçen Nala'nın annesinin adı nedir?",
+      "a": [
+        "Sarafina",
+        "Sarabi",
+        "Shenzi",
+        "Kiara"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    },
+    {
+      "d": 3,
+      "q": "Aslan Kral (1994) kaç dalda Oscar kazandı?",
+      "a": [
+        "İki",
+        "Hiç",
+        "Bir",
+        "Dört"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lion_King"
+    }
+  ]
+}

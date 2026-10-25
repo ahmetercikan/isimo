@@ -1,0 +1,646 @@
+{
+  "id": "titanik",
+  "title": "Titanik",
+  "ask": "Sen ne kadar Titaniksin?",
+  "scope": "Titanik (1997, James Cameron)",
+  "tiers": [
+    {
+      "name": "Buzdağı",
+      "line": "Filme çarpıp geçmişsin, hiçbir şey hatırlamıyorsun."
+    },
+    {
+      "name": "Rıhtımda Kalan",
+      "line": "Gemi kalktı, sen hâlâ limanda el sallıyorsun."
+    },
+    {
+      "name": "Üçüncü Sınıf Yolcu",
+      "line": "Alt güvertede dans ettin ama ayrıntılar biraz bulanık."
+    },
+    {
+      "name": "Birinci Sınıf Konuk",
+      "line": "Akşam yemeğine davetlisin, hangi çatalı kullanacağını da biliyorsun."
+    },
+    {
+      "name": "Kaptan Köşkü",
+      "line": "Rotayı ezbere biliyorsun; buzdağını sen görürdün."
+    },
+    {
+      "name": "Okyanusun Kalbi",
+      "line": "84 yıl geçse de her sahneyi dün gibi hatırlıyorsun."
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Titanik filmini kim yazıp yönetti?",
+      "a": [
+        "James Cameron",
+        "Steven Spielberg",
+        "Ridley Scott",
+        "Christopher Nolan"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "oops": "Bu gemiyi beyazperdede batıran, Terminatör'ün de babası!"
+    },
+    {
+      "d": 1,
+      "q": "Jack Dawson'ı hangi oyuncu canlandırır?",
+      "a": [
+        "Leonardo DiCaprio",
+        "Brad Pitt",
+        "Matt Damon",
+        "Billy Zane"
+      ],
+      "tf": false,
+      "oops": "Billy Zane mi? O, Jack'e kelepçe taktıran adam!",
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 1,
+      "q": "Rose'u hangi oyuncu canlandırır?",
+      "a": [
+        "Kate Winslet",
+        "Gwyneth Paltrow",
+        "Kate Beckinsale",
+        "Nicole Kidman"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "oops": "Yanlış yolcu! Rose başka bir kabinde."
+    },
+    {
+      "d": 1,
+      "q": "Jack, Titanik'in biletini nasıl ele geçirir?",
+      "a": [
+        "Poker oyununda kazanır",
+        "Resim satıp alır",
+        "Gemide çalışır",
+        "Rose hediye eder"
+      ],
+      "tf": false,
+      "oops": "Jack'in o gün şansı yaver gitti, kâğıtlar açıldı!",
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 1,
+      "q": "Cal'in Rose'a hediye ettiği mavi elmaslı kolyenin adı nedir?",
+      "a": [
+        "Okyanusun Kalbi",
+        "Denizin Gözyaşı",
+        "Mavi Yıldız",
+        "Kraliçenin Gözü"
+      ],
+      "tf": false,
+      "src": "https://titanic.fandom.com/wiki/Heart_of_the_Ocean"
+    },
+    {
+      "d": 1,
+      "q": "Filmin unutulmaz şarkısı hangisidir?",
+      "a": [
+        "My Heart Will Go On",
+        "I Will Always Love You",
+        "Because You Loved Me",
+        "Unchained Melody"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 1,
+      "q": "\"My Heart Will Go On\" şarkısını kim seslendirir?",
+      "a": [
+        "Céline Dion",
+        "Whitney Houston",
+        "Mariah Carey",
+        "Tina Turner"
+      ],
+      "tf": false,
+      "oops": "Yanlış ses! O kalp başkasıyla atmaya devam ediyor.",
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 1,
+      "q": "Jack, geminin ucunda kollarını açıp ne diye bağırır?",
+      "a": [
+        "Dünyanın kralıyım!",
+        "Okyanus benim!",
+        "Amerika, geliyorum!",
+        "Ben özgürüm!"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 1,
+      "q": "Titanik hangi yıl batar?",
+      "a": [
+        "1912",
+        "1905",
+        "1921",
+        "1929"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "oops": "Takvim geminin saatinden de hızlı gitti!"
+    },
+    {
+      "d": 1,
+      "q": "Titanik hangi şehre doğru yol almaktadır?",
+      "a": [
+        "New York",
+        "Londra",
+        "Boston",
+        "Southampton"
+      ],
+      "tf": false,
+      "oops": "Southampton mı? Gemi oradan kalkıyor, oraya gitmiyor!",
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 1,
+      "q": "Jack'in en büyük yeteneği nedir?",
+      "a": [
+        "Resim çizmek",
+        "Keman çalmak",
+        "Şiir yazmak",
+        "Dans hocalığı"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 1,
+      "q": "Rose'un zengin nişanlısının adı nedir?",
+      "a": [
+        "Cal Hockley",
+        "Brock Lovett",
+        "Thomas Andrews",
+        "Spicer Lovejoy"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 1,
+      "q": "Gemi batarken bir boruya kelepçelenen Jack'i Rose neyle kurtarır?",
+      "a": [
+        "Bir yangın baltasıyla",
+        "Bir anahtar bularak",
+        "Saç tokasıyla",
+        "Bir kılıçla"
+      ],
+      "tf": false,
+      "oops": "Toka mı? Rose'un vuruşu çok daha güçlüydü!",
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 1,
+      "q": "Doğru mu? Rose, kendisini taşıyan filika aşağı inerken Jack için tekrar gemiye atlar.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 1,
+      "q": "Batıştan sonra Rose buz gibi suda neyin üstünde hayatta kalır?",
+      "a": [
+        "Yüzen tahta bir parçanın",
+        "Bir filikanın",
+        "Bir can simidinin",
+        "Bir buz kütlesinin"
+      ],
+      "tf": false,
+      "oops": "O tahtaya iki kişi sığar mıydı? Tartışma hâlâ sürüyor!",
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 1,
+      "q": "Titanik filmi dünya genelinde ilk kez hangi yıl gösterime girdi?",
+      "a": [
+        "1997",
+        "1993",
+        "2000",
+        "2003"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 1,
+      "q": "Filmin sonunda yaşlı Rose, kolyeyi ne yapar?",
+      "a": [
+        "Denize atar",
+        "Torununa verir",
+        "Müzeye bağışlar",
+        "Lovett'a satar"
+      ],
+      "tf": false,
+      "oops": "Lovett o kolyeyi hiç göremedi, üzgünüz!",
+      "src": "https://titanic.fandom.com/wiki/Heart_of_the_Ocean"
+    },
+    {
+      "d": 1,
+      "q": "Jack ile Rose'un meşhur \"uçma\" sahnesi geminin neresinde geçer?",
+      "a": [
+        "Geminin ön ucunda",
+        "Makine dairesinde",
+        "Kaptan köşkünde",
+        "Yemek salonunda"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 1,
+      "q": "Jack gemide hangi sınıfta yolculuk eder?",
+      "a": [
+        "Üçüncü sınıf",
+        "Birinci sınıf",
+        "İkinci sınıf",
+        "Mürettebat olarak"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "oops": "Birinci sınıf mı? Jack'in cebinde poker biletinden başka bir şey yok!"
+    },
+    {
+      "d": 1,
+      "q": "Titanik gece yolculuğunda neye çarpar?",
+      "a": [
+        "Bir buzdağına",
+        "Başka bir gemiye",
+        "Bir mercan resifine",
+        "Bir balinaya"
+      ],
+      "tf": false,
+      "oops": "Balina mı? Gözcüler bunu duysa dürbünü bırakırdı!",
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 2,
+      "q": "Jack'in gemiye birlikte bindiği İtalyan arkadaşının adı nedir?",
+      "a": [
+        "Fabrizio",
+        "Tommy",
+        "Giovanni",
+        "Marco"
+      ],
+      "tf": false,
+      "oops": "Tommy de arkadaşları ama İrlandalı olan o!",
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 2,
+      "q": "Birinci sınıf yemeğine davet edilen Jack'e gece kıyafetini kim ödünç verir?",
+      "a": [
+        "Molly Brown",
+        "Rose",
+        "Thomas Andrews",
+        "Fabrizio"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 2,
+      "q": "Rose'un annesi Ruth, kızının Cal'le evlenmesini neden ister?",
+      "a": [
+        "Ailenin borçları yüzünden",
+        "Cal'i çok sevdiği için",
+        "Babası vasiyet ettiği için",
+        "Cal kaptanın oğlu olduğu için"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 2,
+      "q": "Cal, Jack'i tutuklatmak için onu neyle suçlar?",
+      "a": [
+        "Kolyeyi çalmakla",
+        "Gemiye kaçak binmekle",
+        "Rose'u kaçırmakla",
+        "Kaptanı tehdit etmekle"
+      ],
+      "tf": false,
+      "oops": "Kolye Jack'in cebine nasıl girdi? Lovejoy biliyor!",
+      "src": "https://titanic.fandom.com/wiki/Heart_of_the_Ocean"
+    },
+    {
+      "d": 2,
+      "q": "Kolye sonunda Rose'a nasıl geçer?",
+      "a": [
+        "Cal'in paltosunun cebinde",
+        "Jack verir",
+        "Annesi verir",
+        "Kasadan kendisi alır"
+      ],
+      "tf": false,
+      "src": "https://titanic.fandom.com/wiki/Heart_of_the_Ocean"
+    },
+    {
+      "d": 2,
+      "q": "Rose, suda dönen filikanın dikkatini neyle çeker?",
+      "a": [
+        "Bir düdük çalarak",
+        "Fener sallayarak",
+        "Şarkı söyleyerek",
+        "İşaret fişeğiyle"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "oops": "Rose'un sesi kısılmıştı; elinde başka bir şey vardı!"
+    },
+    {
+      "d": 2,
+      "q": "Rose, New York'ta görevliye adını nasıl söyler?",
+      "a": [
+        "Rose Dawson",
+        "Rose Hockley",
+        "Rose DeWitt Bukater",
+        "Rose Calvert"
+      ],
+      "tf": false,
+      "oops": "Rose o soyadından kaçmak için bu kadar uğraştı!",
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 2,
+      "q": "Jack, güvertede Rose'a hangi \"terbiyesiz\" şeyi öğretir?",
+      "a": [
+        "Erkek gibi tükürmeyi",
+        "Kâğıt oynamayı",
+        "Puro içmeyi",
+        "Islık çalmayı"
+      ],
+      "tf": false,
+      "oops": "Ruth bunu görseydi bayılırdı!",
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 2,
+      "q": "Jack ile Rose, Cal'in adamından kaçarken yük ambarında neyin içine saklanır?",
+      "a": [
+        "Bir otomobilin",
+        "Bir piyanonun",
+        "Bir kömür vagonunun",
+        "Bir sandığın"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 2,
+      "q": "Jack, Rose'u alt güvertede nasıl bir eğlenceye götürür?",
+      "a": [
+        "İrlanda müzikli bir partiye",
+        "Bir opera gösterisine",
+        "Bir kart turnuvasına",
+        "Bir maskeli baloya"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 2,
+      "q": "Filmin müziklerini kim besteledi?",
+      "a": [
+        "James Horner",
+        "Hans Zimmer",
+        "John Williams",
+        "Howard Shore"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "oops": "Notalar doğru, besteci yanlış!"
+    },
+    {
+      "d": 2,
+      "q": "Titanik kaç dalda Oscar kazandı?",
+      "a": [
+        "11",
+        "8",
+        "9",
+        "14"
+      ],
+      "tf": false,
+      "oops": "14 adaylık sayısıydı; kazandığı rekor başka!",
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 2,
+      "q": "Yaşlı Rose'un meşhur sözü: \"... yıl oldu.\" Kaç yıl?",
+      "a": [
+        "84",
+        "64",
+        "74",
+        "94"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "oops": "Bu söz bugün internetin de en sevilen esprisi!"
+    },
+    {
+      "d": 2,
+      "q": "Cal, sonunda filikaya alınmak için yanına aldığı çocuk hakkında ne söyler?",
+      "a": [
+        "Kendi çocuğu olduğunu",
+        "Gemi kaptanının kızı olduğunu",
+        "Çocuğun doktoru olduğunu",
+        "Çocuğun yaralı olduğunu"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "oops": "Cal'in centilmenliği tam o kadardı!"
+    },
+    {
+      "d": 2,
+      "q": "Filmin son sahnesinde Jack, Rose'u nerede bekler?",
+      "a": [
+        "Büyük merdivende",
+        "Geminin ucunda",
+        "Yük ambarında",
+        "Kaptan köşkünde"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "oops": "Saat başında, o meşhur basamaklarda!"
+    },
+    {
+      "d": 2,
+      "q": "Rose, suda Jack'e verdiği sözde neyi vurgular?",
+      "a": [
+        "Sözünden asla vazgeçmeyeceğini",
+        "Onu limanda bekleyeceğini",
+        "Gemiye geri döneceğini",
+        "Onu unutacağını"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 2,
+      "q": "Yaşlı Rose gemiye kiminle gelir?",
+      "a": [
+        "Torunu Lizzy ile",
+        "Kızı Ruth ile",
+        "Oğlu Jack ile",
+        "Hizmetçisi Trudy ile"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 3,
+      "q": "Yaşlı Rose'u hangi oyuncu canlandırır?",
+      "a": [
+        "Gloria Stuart",
+        "Frances Fisher",
+        "Kathy Bates",
+        "Suzy Amis"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 3,
+      "q": "Jack, Astor'a hangi kasabalı Dawson'lardan olduğunu söyler?",
+      "a": [
+        "Chippewa Falls",
+        "Boston",
+        "Philadelphia",
+        "Pittsburgh"
+      ],
+      "tf": false,
+      "oops": "Boston Dawson'larıyla akrabalığı yok, o kasaba Wisconsin'de!",
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 3,
+      "q": "Kasadan çıkan Rose çiziminin üzerinde hangi tarih yazar?",
+      "a": [
+        "14 Nisan 1912",
+        "10 Nisan 1912",
+        "15 Nisan 1912",
+        "1 Mayıs 1912"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "oops": "Çizim, buzdağı gecesinin tarihini taşıyor!"
+    },
+    {
+      "d": 3,
+      "q": "Okyanusun Kalbi'ndeki mavi elmas kaç karattır?",
+      "a": [
+        "56",
+        "36",
+        "71",
+        "112"
+      ],
+      "tf": false,
+      "src": "https://titanic.fandom.com/wiki/Heart_of_the_Ocean",
+      "oops": "Karat hesabı şaşmış, Lovett üzülecek!"
+    },
+    {
+      "d": 3,
+      "q": "Gemiyi yapan Thomas Andrews, geminin batacağını nasıl ifade eder?",
+      "a": [
+        "Matematiksel bir kesinlik",
+        "Belki, belki değil",
+        "Ancak bir mucizeyle",
+        "Asla batmaz"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 3,
+      "q": "Doğru mu? Titanik, dünya çapında 1 milyar doları aşan ilk film oldu.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 3,
+      "q": "Batıştan kurtulanları New York'a getiren gemi hangisidir?",
+      "a": [
+        "Carpathia",
+        "Olympic",
+        "Lusitania",
+        "Californian"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "oops": "Olympic, Titanik'in kardeş gemisiydi; kurtarıcı değil!"
+    },
+    {
+      "d": 3,
+      "q": "Batıkta kolyeyi arayan hazine avcısı Brock Lovett'ı kim canlandırır?",
+      "a": [
+        "Bill Paxton",
+        "Billy Zane",
+        "Victor Garber",
+        "David Warner"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 3,
+      "q": "Titanik yolculuğuna hangi limandan başlar?",
+      "a": [
+        "Southampton",
+        "Liverpool",
+        "Dublin",
+        "Le Havre"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 3,
+      "q": "Filmde Kaptan Smith'e gemiyi daha hızlı sürmesi için baskı yapan kimdir?",
+      "a": [
+        "Bruce Ismay",
+        "Thomas Andrews",
+        "Cal Hockley",
+        "Spicer Lovejoy"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    },
+    {
+      "d": 3,
+      "q": "Gemi batarken orkestra son olarak hangi ilahiyi çalar?",
+      "a": [
+        "Nearer, My God, to Thee",
+        "Amazing Grace",
+        "Ave Maria",
+        "Abide with Me"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "oops": "Müzisyenler son ana kadar çaldı; ilahiyi hatırla!"
+    },
+    {
+      "d": 3,
+      "q": "Cal Hockley'nin ailesinin serveti nereden gelir?",
+      "a": [
+        "Pittsburgh'daki çelik işinden",
+        "New York'taki bankalardan",
+        "Teksas'taki petrolden",
+        "Gemi şirketinden"
+      ],
+      "tf": false,
+      "oops": "Çelik gibi bir servet, ama kalbi o kadar sağlam değil!",
+      "src": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+    }
+  ]
+}

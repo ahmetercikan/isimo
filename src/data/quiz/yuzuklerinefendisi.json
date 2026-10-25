@@ -1,0 +1,781 @@
+{
+  "id": "yuzuklerinefendisi",
+  "title": "Yüzüklerin Efendisi",
+  "ask": "Sen ne kadar Hobbitsin?",
+  "scope": "Film üçlemesi (2001–2003), sinema sürümleri",
+  "tiers": [
+    {
+      "name": "Shire'dan Hiç Çıkmamış",
+      "line": "Macera mı? Sen ikinci kahvaltıyı kaçırmazsın."
+    },
+    {
+      "name": "Sıçrayan Midilli Müdavimi",
+      "line": "Hikâyeleri hanın köşesinden kulak misafiri olarak dinlemişsin."
+    },
+    {
+      "name": "Rohan Atlısı",
+      "line": "Atın hazır, ama yol haritan biraz bulanık."
+    },
+    {
+      "name": "Gondor Muhafızı",
+      "line": "Minas Tirith surlarında nöbet tutabilirsin."
+    },
+    {
+      "name": "Kardeşlik Üyesi",
+      "line": "Dokuz kişilik o yolculukta yerin hazır."
+    },
+    {
+      "name": "Ak Gandalf",
+      "line": "Ne erken ne geç; her cevabı tam zamanında biliyorsun."
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Tek Yüzük nerede yok edilebilir?",
+      "a": [
+        "Hüküm Dağı'nın ateşinde",
+        "Bilbo'nun şöminesinde",
+        "Isengard'ın ocaklarında",
+        "Minas Tirith'te"
+      ],
+      "tf": false,
+      "oops": "Şöminede sadece yazısı çıkar, yüzük erimez!",
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring"
+    },
+    {
+      "d": 1,
+      "q": "Frodo Baggins'i hangi oyuncu canlandırır?",
+      "a": [
+        "Elijah Wood",
+        "Sean Astin",
+        "Dominic Monaghan",
+        "Billy Boyd"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring",
+      "oops": "O isimler de hobbit ama Yüzük taşıyıcı başka biri!"
+    },
+    {
+      "d": 1,
+      "q": "Gandalf'ı hangi oyuncu canlandırır?",
+      "a": [
+        "Ian McKellen",
+        "Christopher Lee",
+        "Ian Holm",
+        "Hugo Weaving"
+      ],
+      "tf": false,
+      "oops": "Orta Dünya büyücüleri birbirine karıştı galiba!",
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring"
+    },
+    {
+      "d": 1,
+      "q": "Üç filmi de kim yönetti?",
+      "a": [
+        "Peter Jackson",
+        "Steven Spielberg",
+        "James Cameron",
+        "Ridley Scott"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings_(film_series)",
+      "oops": "Orta Dünya'nın mimarı Yeni Zelandalı biriydi!"
+    },
+    {
+      "d": 1,
+      "q": "Legolas hangi ırktandır?",
+      "a": [
+        "Elf",
+        "Cüce",
+        "Hobbit",
+        "İnsan"
+      ],
+      "tf": false,
+      "oops": "Cüce mi? Gimli bunu duysa çok gülerdi!",
+      "src": "https://lotr.fandom.com/wiki/Legolas"
+    },
+    {
+      "d": 1,
+      "q": "Yüzük Kardeşliği yola kaç kişi olarak çıkar?",
+      "a": [
+        "9",
+        "7",
+        "5",
+        "12"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring",
+      "oops": "Dokuz Yüzüktayfına karşı dokuz yürüyücü!"
+    },
+    {
+      "d": 1,
+      "q": "Frodo, Tek Yüzük'ü kimden devralır?",
+      "a": [
+        "Bilbo",
+        "Gandalf",
+        "Aragorn",
+        "Elrond"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring"
+    },
+    {
+      "d": 1,
+      "q": "Gollum, Yüzük'ten bahsederken ona ne der?",
+      "a": [
+        "Kıymetlim",
+        "Hazinem",
+        "Biricik taşım",
+        "Altın kalbim"
+      ],
+      "tf": false,
+      "oops": "Gollum duysa \"Yalan! Yalan!\" diye bağırırdı.",
+      "src": "https://lotr.fandom.com/wiki/Gollum"
+    },
+    {
+      "d": 1,
+      "q": "Gollum'un, Yüzük onu değiştirmeden önceki adı nedir?",
+      "a": [
+        "Sméagol",
+        "Déagol",
+        "Gríma",
+        "Haldir"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Gollum"
+    },
+    {
+      "d": 1,
+      "q": "Saruman'ı hangi oyuncu canlandırır?",
+      "a": [
+        "Christopher Lee",
+        "Ian McKellen",
+        "Bernard Hill",
+        "Hugo Weaving"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Two_Towers",
+      "oops": "Ak giysili ama Gandalf değil; yanlış büyücü!"
+    },
+    {
+      "d": 1,
+      "q": "Gandalf, Moria'daki dar köprüde hangi yaratığa karşı durur?",
+      "a": [
+        "Balrog",
+        "Mağara trolü",
+        "Shelob",
+        "Ejderha"
+      ],
+      "tf": false,
+      "oops": "Trol daha önce geçti; köprüdeki ateşten gelen başka biri!",
+      "src": "https://lotr.fandom.com/wiki/Balrog"
+    },
+    {
+      "d": 1,
+      "q": "Gandalf, Moria'daki köprüde Balrog'a karşı hangi ünlü sözü haykırır?",
+      "a": [
+        "Geçemezsin!",
+        "Teslim ol!",
+        "Dur, adını söyle!",
+        "Burası benim köprüm!"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Gandalf"
+    },
+    {
+      "d": 1,
+      "q": "Yüzük Kardeşliği filminin sonunda Uruk-hai'lerle savaşırken ölen kardeşlik üyesi kimdir?",
+      "a": [
+        "Boromir",
+        "Aragorn",
+        "Gimli",
+        "Merry"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring"
+    },
+    {
+      "d": 1,
+      "q": "Saruman'ın Isengard'da yetiştirdiği güçlü ork ordusuna ne ad verilir?",
+      "a": [
+        "Uruk-hai",
+        "Rohirrim",
+        "Entler",
+        "Dúnedain"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Uruk-hai"
+    },
+    {
+      "d": 1,
+      "q": "Aragorn sonunda hangi krallığın tahtına çıkar?",
+      "a": [
+        "Gondor",
+        "Rohan",
+        "Shire",
+        "Mordor"
+      ],
+      "tf": false,
+      "oops": "Mordor mu? Tahtı Sauron'dan miras alacak hâli yok!",
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King"
+    },
+    {
+      "d": 1,
+      "q": "Konuşan, yürüyen dev ağaç benzeri yaratıklara ne denir?",
+      "a": [
+        "Ent",
+        "Trol",
+        "Ork",
+        "Warg"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Ents"
+    },
+    {
+      "d": 1,
+      "q": "Hüküm Dağı'nda Yüzük sonunda ateşe nasıl düşer?",
+      "a": [
+        "Gollum'la birlikte düşer",
+        "Frodo fırlatır",
+        "Sam fırlatır",
+        "Gandalf alıp atar"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King",
+      "oops": "Frodo son anda \"Yüzük benim!\" demişti, hatırla!"
+    },
+    {
+      "d": 1,
+      "q": "Yüzük yok edildikten sonra Frodo ile Sam'i Hüküm Dağı'ndan kimler kurtarır?",
+      "a": [
+        "Kartallar",
+        "Entler",
+        "Elfler",
+        "Rohan atlıları"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King",
+      "oops": "Entler o kadar hızlı yürüyemez!"
+    },
+    {
+      "d": 1,
+      "q": "Üçleme hangi ülkede çekildi?",
+      "a": [
+        "Yeni Zelanda",
+        "İrlanda",
+        "İskoçya",
+        "Kanada"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Y%C3%BCz%C3%BCklerin_Efendisi:_Y%C3%BCz%C3%BCk_Karde%C5%9Fli%C4%9Fi",
+      "oops": "Shire'ın yeşili tam da orada!"
+    },
+    {
+      "d": 1,
+      "q": "Bilbo, doğum günü partisinde konuşmasının sonunda nasıl ortadan kaybolur?",
+      "a": [
+        "Yüzüğü takarak",
+        "Masanın altına saklanarak",
+        "Havai fişeğin dumanında",
+        "Gandalf'ın büyüsüyle"
+      ],
+      "tf": false,
+      "oops": "Masa altı mı? Bilbo'nun sırrı daha parlak!",
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring"
+    },
+    {
+      "d": 1,
+      "q": "Filmlerde Sauron çoğunlukla nasıl görünür?",
+      "a": [
+        "Kulede ateşten bir göz",
+        "Kara bir ejderha",
+        "Dev bir örümcek",
+        "Beyaz giysili büyücü"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Eye_of_Sauron"
+    },
+    {
+      "d": 1,
+      "q": "Gollum'u (hareket yakalama ve sesiyle) kim canlandırır?",
+      "a": [
+        "Andy Serkis",
+        "Brad Dourif",
+        "Ian Holm",
+        "Elijah Wood"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Y%C3%BCz%C3%BCklerin_Efendisi:_%C4%B0ki_Kule",
+      "oops": "O sesi bir kez duyan unutmaz: \"Kıymetlim!\""
+    },
+    {
+      "d": 1,
+      "q": "Aragorn'u hangi oyuncu canlandırır?",
+      "a": [
+        "Viggo Mortensen",
+        "Sean Bean",
+        "Karl Urban",
+        "Orlando Bloom"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Y%C3%BCz%C3%BCklerin_Efendisi:_%C4%B0ki_Kule"
+    },
+    {
+      "d": 1,
+      "q": "Doğru mu? Shelob, Frodo'yu ininde yakalayan dev bir örümcektir.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://lotr.fandom.com/wiki/Shelob"
+    },
+    {
+      "d": 2,
+      "q": "Aragorn'a Bree'deki Sıçrayan Midilli hanında hangi lakapla seslenilir?",
+      "a": [
+        "Yolgezer",
+        "Ağaçsakal",
+        "Solucandil",
+        "Gölgeyele"
+      ],
+      "tf": false,
+      "oops": "Solucandil mi? Aragorn o kadar sinsi değil!",
+      "src": "https://tr.wikipedia.org/wiki/Aragorn"
+    },
+    {
+      "d": 2,
+      "q": "Gandalf'ın beyaz atının adı nedir?",
+      "a": [
+        "Gölgeyele",
+        "Brego",
+        "Bill",
+        "Hasufel"
+      ],
+      "tf": false,
+      "oops": "Bill mi? O, Sam'in yük taşıyan midillisi!",
+      "src": "https://lotr.fandom.com/wiki/Shadowfax"
+    },
+    {
+      "d": 2,
+      "q": "Kral Théoden'in kulağına fısıldayıp Saruman'a çalışan danışman kimdir?",
+      "a": [
+        "Gríma Solucandil",
+        "Éomer",
+        "Háma",
+        "Gamling"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Gr%C3%ADma_Solucandil",
+      "oops": "Adı bile ipucu: sinsi bir solucan!"
+    },
+    {
+      "d": 2,
+      "q": "Merry ile Pippin'i Fangorn Ormanı'nda bulan yaşlı Ent'in adı nedir?",
+      "a": [
+        "Ağaçsakal",
+        "Yaşlı Söğüt",
+        "Kökendil",
+        "Meşebaba"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Treebeard"
+    },
+    {
+      "d": 2,
+      "q": "Rohan halkının Saruman'ın ordusuna karşı sığındığı kale hangisidir?",
+      "a": [
+        "Miğfer Dibi",
+        "Minas Tirith",
+        "Orthanc",
+        "Osgiliath"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Mi%C4%9Ffer_Dibi"
+    },
+    {
+      "d": 2,
+      "q": "Moria'nın kapısını açan Elfçe söz nedir?",
+      "a": [
+        "Mellon (dost)",
+        "Elendil",
+        "Namárië",
+        "Andúril"
+      ],
+      "tf": false,
+      "oops": "Bilmece basitti: \"dost\" de ve gir!",
+      "src": "https://lotr.fandom.com/wiki/Doors_of_Durin"
+    },
+    {
+      "d": 2,
+      "q": "Frodo'yu Moria'da mağara trolünün mızrağından koruyan zırh gömleği hangi madendendir?",
+      "a": [
+        "Mithril",
+        "Altın",
+        "Gümüş",
+        "Demir"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Mithril"
+    },
+    {
+      "d": 2,
+      "q": "Gondor'un Rohan'dan yardım istemesi için Pippin ne yapar?",
+      "a": [
+        "İlk işaret ateşini yakar",
+        "Gondor borusunu çalar",
+        "Bir kartal çağırır",
+        "Edoras'a at sürer"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King"
+    },
+    {
+      "d": 2,
+      "q": "Pelennor Çayırları'nda Merry'nin yardımıyla Cadı-kral'a son darbeyi kim vurur?",
+      "a": [
+        "Éowyn",
+        "Aragorn",
+        "Gandalf",
+        "Legolas"
+      ],
+      "tf": false,
+      "oops": "Cadı-kral \"hiçbir erkek beni öldüremez\" demişti. İpucu buydu!",
+      "src": "https://lotr.fandom.com/wiki/Witch-king_of_Angmar"
+    },
+    {
+      "d": 2,
+      "q": "Kralın Dönüşü kaç dalda Oscar kazandı?",
+      "a": [
+        "11",
+        "9",
+        "7",
+        "13"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Y%C3%BCz%C3%BCklerin_Efendisi:_Kral%C4%B1n_D%C3%B6n%C3%BC%C5%9F%C3%BC",
+      "oops": "Aday olduğu her dalı kazandı!"
+    },
+    {
+      "d": 2,
+      "q": "Gondor'u yöneten, Boromir ile Faramir'in babası olan kâhya kimdir?",
+      "a": [
+        "Denethor",
+        "Théoden",
+        "Elrond",
+        "Isildur"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Denethor_II",
+      "oops": "Kâhya tahtta oturmaz, ama inatla korur!"
+    },
+    {
+      "d": 2,
+      "q": "Galadriel, Lothlórien'den ayrılırken Frodo'ya ne hediye eder?",
+      "a": [
+        "Eärendil'in ışığını",
+        "Mithril zırhı",
+        "Bir palantír",
+        "Narsil'in parçasını"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Phial_of_Galadriel"
+    },
+    {
+      "d": 2,
+      "q": "Sam'in Shire'daki işi nedir?",
+      "a": [
+        "Bahçıvanlık",
+        "Fırıncılık",
+        "Postacılık",
+        "Değirmencilik"
+      ],
+      "tf": false,
+      "oops": "Gandalf onu pencerenin altında çit budarken yakalamıştı!",
+      "src": "https://lotr.fandom.com/wiki/Samwise_Gamgee"
+    },
+    {
+      "d": 2,
+      "q": "Bilbo filmin başındaki partide kaçıncı doğum gününü kutlar?",
+      "a": [
+        "111.",
+        "100.",
+        "99.",
+        "120."
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Bilbo_Baggins",
+      "oops": "Hobbitçe söylersek: yüz on birinci!"
+    },
+    {
+      "d": 2,
+      "q": "Pippin'in Moria'da herkesi tehlikeye atan sakarlığı nedir?",
+      "a": [
+        "Kuyuya bir iskelet düşürür",
+        "Kapıyı çekiçle çalar",
+        "Meşaleyi yere düşürür",
+        "Balin'in kitabını yırtar"
+      ],
+      "tf": false,
+      "oops": "Moria sessizliği sever; Pippin pek değil!",
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring"
+    },
+    {
+      "d": 2,
+      "q": "Yüzüğün üzerindeki gizli yazı ne zaman ortaya çıkar?",
+      "a": [
+        "Ateşte ısıtılınca",
+        "Ay ışığı vurunca",
+        "Suya batırılınca",
+        "Elfçe şarkı söylenince"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/One_Ring"
+    },
+    {
+      "d": 2,
+      "q": "Frodo, Bilbo ve Gandalf sonunda Orta Dünya'dan nereden gemiyle ayrılır?",
+      "a": [
+        "Gri Limanlar",
+        "Ayrıkvadi",
+        "Lothlórien",
+        "Osgiliath"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Grey_Havens",
+      "oops": "Elflerin gemisi limandan kalkar, ormandan değil!"
+    },
+    {
+      "d": 2,
+      "q": "Boromir'in meşhur sözünü tamamla: \"... öylece yürüyerek girilmez.\"",
+      "a": [
+        "Mordor'a",
+        "Moria'ya",
+        "Isengard'a",
+        "Ayrıkvadi'ye"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Boromir"
+    },
+    {
+      "d": 2,
+      "q": "Üçlemenin müziklerini kim besteledi?",
+      "a": [
+        "Howard Shore",
+        "Hans Zimmer",
+        "John Williams",
+        "James Horner"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Y%C3%BCz%C3%BCklerin_Efendisi:_Y%C3%BCz%C3%BCk_Karde%C5%9Fli%C4%9Fi"
+    },
+    {
+      "d": 2,
+      "q": "Doğru mu? Saruman'ın kulesinin tepesinde tutsak kalan Gandalf, bir kartal sayesinde kaçar.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring"
+    },
+    {
+      "d": 2,
+      "q": "Pippin'in gizlice içine bakıp Sauron'u gördüğü görü taşına ne denir?",
+      "a": [
+        "Palantír",
+        "Silmaril",
+        "Arkentaşı",
+        "Elessar"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Palant%C3%ADri"
+    },
+    {
+      "d": 3,
+      "q": "Gollum, Sam'i lembas ekmeğini yemekle suçlamak için ne yapar?",
+      "a": [
+        "Üstüne ekmek kırıntısı serper",
+        "Sam'in kılıcını saklar",
+        "Sam'in mektubunu yırtar",
+        "Yüzüğü Sam'in cebine koyar"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King"
+    },
+    {
+      "d": 3,
+      "q": "Isildur, Sauron'un elinden Yüzük'ü hangi kılıcın kırık parçasıyla keser?",
+      "a": [
+        "Narsil",
+        "Glamdring",
+        "Orcrist",
+        "Herugrim"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Narsil",
+      "oops": "Glamdring Gandalf'ın kılıcı, karıştırma!"
+    },
+    {
+      "d": 3,
+      "q": "Film başındaki anlatıya göre Yüzük, Gollum'un aklını kaç yıl zehirledi?",
+      "a": [
+        "500 yıl",
+        "100 yıl",
+        "60 yıl",
+        "1000 yıl"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Gollum"
+    },
+    {
+      "d": 3,
+      "q": "Kralın Dönüşü'nün başında Yüzük'ü nehirde ilk bulan, Sméagol'ün arkadaşı kimdir?",
+      "a": [
+        "Déagol",
+        "Bilbo",
+        "Isildur",
+        "Gríma"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/D%C3%A9agol"
+    },
+    {
+      "d": 3,
+      "q": "Kardeşlik, Moria'da hangi cüce beyinin mezarını bulur?",
+      "a": [
+        "Balin",
+        "Thorin",
+        "Glóin",
+        "Dáin"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Balin",
+      "oops": "Gimli'nin gözyaşlarını hatırla!"
+    },
+    {
+      "d": 3,
+      "q": "Ağaçsakal'ı seslendiren John Rhys-Davies, kardeşlikten hangi karakteri de oynar?",
+      "a": [
+        "Gimli",
+        "Boromir",
+        "Gandalf",
+        "Legolas"
+      ],
+      "tf": false,
+      "oops": "İpucu: ikisi de sakallı, ikisi de acele etmeyi sevmez!",
+      "src": "https://tr.wikipedia.org/wiki/Y%C3%BCz%C3%BCklerin_Efendisi:_%C4%B0ki_Kule"
+    },
+    {
+      "d": 3,
+      "q": "Kralın Dönüşü'nde Pippin, Denethor yemek yerken ne yapar?",
+      "a": [
+        "Şarkı söyler",
+        "Şiir okur",
+        "Kılıç dansı yapar",
+        "Masal anlatır"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King",
+      "oops": "Hüzünlü bir şarkıydı, Faramir at sürerken..."
+    },
+    {
+      "d": 3,
+      "q": "Miğfer Dibi'ne elf okçularıyla yardıma gelen komutan kimdir?",
+      "a": [
+        "Haldir",
+        "Elrond",
+        "Celeborn",
+        "Glorfindel"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Haldir"
+    },
+    {
+      "d": 3,
+      "q": "Kral Théoden'in sarayının bulunduğu Rohan'ın başkenti hangisidir?",
+      "a": [
+        "Edoras",
+        "Minas Tirith",
+        "Osgiliath",
+        "Dol Amroth"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/Edoras"
+    },
+    {
+      "d": 3,
+      "q": "Prologa göre insan krallarına kaç güç yüzüğü verilmiştir?",
+      "a": [
+        "9",
+        "7",
+        "3",
+        "1"
+      ],
+      "tf": false,
+      "oops": "7 cücelere, 3 elflere... insanlara bir de Yüzüktayfı sayısı kadar!",
+      "src": "https://lotr.fandom.com/wiki/Rings_of_Power"
+    },
+    {
+      "d": 3,
+      "q": "Frodo'nun Sıçrayan Midilli'de yere düşünce kazara yaptığı şey nedir?",
+      "a": [
+        "Yüzük parmağına geçer",
+        "Kılıcını kırar",
+        "Bira fıçısını devirir",
+        "Gandalf'ın mektubunu kaybeder"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring"
+    },
+    {
+      "d": 3,
+      "q": "Doğru mu? Legolas, Miğfer Dibi'nde bir kalkanın üstünde merdivenlerden kayarak ok atar.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://lotr.fandom.com/wiki/Legolas"
+    },
+    {
+      "d": 3,
+      "q": "Pippin, Aragorn'a hangi hobbit öğününü sorarak meşhur olur?",
+      "a": [
+        "İkinci kahvaltı",
+        "Gece yarısı çorbası",
+        "Üçüncü akşam yemeği",
+        "Şafak tatlısı"
+      ],
+      "tf": false,
+      "oops": "Bir hobbit için o öğünü atlamak düpedüz faciadır!",
+      "src": "https://lotr.fandom.com/wiki/Peregrin_Took"
+    },
+    {
+      "d": 3,
+      "q": "Éowyn, Rohan kralı Théoden'in nesidir?",
+      "a": [
+        "Yeğeni",
+        "Kızı",
+        "Kız kardeşi",
+        "Torunu"
+      ],
+      "tf": false,
+      "src": "https://lotr.fandom.com/wiki/%C3%89owyn"
+    },
+    {
+      "d": 3,
+      "q": "Taç giyme töreninde hobbitler Aragorn'un önünde eğilmeye kalkınca ne olur?",
+      "a": [
+        "Herkes hobbitlerin önünde eğilir",
+        "Hobbitlere şövalyelik verilir",
+        "Hobbitlere taç takılır",
+        "Hobbitlere kılıç hediye edilir"
+      ],
+      "tf": false,
+      "oops": "\"Dostlarım, siz kimsenin önünde eğilmezsiniz.\"",
+      "src": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King"
+    }
+  ]
+}

@@ -1,0 +1,629 @@
+{
+  "id": "buzdevri",
+  "title": "Buz Devri",
+  "ask": "Sen ne kadar buzullusun?",
+  "scope": "Buz Devri 1-5 (2002–2016)",
+  "tiers": [
+    {
+      "name": "Eriyen Kardan Adam",
+      "line": "Bu buz devrinde biraz ısınamadın galiba."
+    },
+    {
+      "name": "Dodo Kuşu",
+      "line": "Karpuzları korudun ama cevapları kaçırdın!"
+    },
+    {
+      "name": "Opossum Kardeş",
+      "line": "Baş aşağı asıldın ama yine de idare eder."
+    },
+    {
+      "name": "Tembel Hayvan Sid",
+      "line": "Sakar ama bilgili; sürüye hoş geldin!"
+    },
+    {
+      "name": "Kılıç Dişli Diego",
+      "line": "Keskin dişler, keskin cevaplar!"
+    },
+    {
+      "name": "Sürünün Lideri Manny",
+      "line": "Koca mamut gibi her şeyi hatırlıyorsun!"
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Manny hangi hayvandır?",
+      "a": [
+        "Mamut",
+        "Fil",
+        "Gergedan",
+        "Bizon"
+      ],
+      "tf": false,
+      "oops": "Fil mi? Manny duysa hortumunu bükerdi!",
+      "src": "https://tr.wikipedia.org/wiki/Buz_Devri_(film)"
+    },
+    {
+      "d": 1,
+      "q": "Sid hangi hayvandır?",
+      "a": [
+        "Tembel hayvan",
+        "Kunduz",
+        "Rakun",
+        "Porsuk"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Buz_Devri_(film)",
+      "oops": "Kunduz mu? Sid baraj değil, sadece kaza yapar!"
+    },
+    {
+      "d": 1,
+      "q": "Diego hangi hayvandır?",
+      "a": [
+        "Kılıç dişli kaplan",
+        "Aslan",
+        "Kurt",
+        "Leopar"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Buz_Devri_(film)",
+      "oops": "Aslan mı? O dişlerle olsa olsa kılıç dişli!"
+    },
+    {
+      "d": 1,
+      "q": "Scrat bütün filmler boyunca neyin peşinden koşar?",
+      "a": [
+        "Palamut",
+        "Fındık",
+        "Ceviz",
+        "Çilek"
+      ],
+      "tf": false,
+      "oops": "Fındık mı? Scrat tek bir şeye tutkun: palamuta!",
+      "src": "https://iceage.fandom.com/wiki/Scrat"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmde Manny, Sid ve Diego kimi ailesine geri götürür?",
+      "a": [
+        "Bir insan bebeğini",
+        "Bir mamut yavrusunu",
+        "Bir dinozor yavrusunu",
+        "Bir dodo kuşunu"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age_(2002_film)"
+    },
+    {
+      "d": 1,
+      "q": "Buz Devri 2'de Ellie, Manny ile tanıştığında kendini ne sanmaktadır?",
+      "a": [
+        "Opossum",
+        "Sincap",
+        "Tavşan",
+        "Kuş"
+      ],
+      "tf": false,
+      "oops": "Koca mamut ama kalbi minik bir opossum!",
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_The_Meltdown"
+    },
+    {
+      "d": 1,
+      "q": "Buz Devri 3'te Sid'in bulup sahiplendiği üç yumurtadan ne çıkar?",
+      "a": [
+        "Dinozor yavruları",
+        "Penguen yavruları",
+        "Kaplumbağa yavruları",
+        "Dodo yavruları"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Dawn_of_the_Dinosaurs",
+      "oops": "Sid annelik yapmaya çalıştı ama bunlar dinozordu!"
+    },
+    {
+      "d": 1,
+      "q": "Buz Devri 3'te Manny ile Ellie'nin dünyaya gelen bebeği kız mı, erkek mi?",
+      "a": [
+        "Kız",
+        "Erkek",
+        "İkiz erkekler",
+        "Üçüzler"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Dawn_of_the_Dinosaurs"
+    },
+    {
+      "d": 1,
+      "q": "Buz Devri 4'te kıtaları birbirinden ayıran olayı kim başlatır?",
+      "a": [
+        "Scrat",
+        "Sid",
+        "Bir deprem tanrısı",
+        "Korsanlar"
+      ],
+      "tf": false,
+      "oops": "Tabii ki Scrat! Bir palamut, koca bir dünya...",
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Continental_Drift"
+    },
+    {
+      "d": 1,
+      "q": "Buz Devri 5'te dünyayı tehdit eden büyük tehlike nedir?",
+      "a": [
+        "Bir göktaşı",
+        "Bir sel",
+        "Bir yanardağ",
+        "Bir kasırga"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Collision_Course",
+      "oops": "Gökten taş yağıyor, sebebi yine Scrat!"
+    },
+    {
+      "d": 1,
+      "q": "Dinozorların dünyasında yaşayan maceracı gelincik Buck'ın kaç gözü görür?",
+      "a": [
+        "Bir",
+        "İki",
+        "Üç",
+        "Hiç"
+      ],
+      "tf": false,
+      "oops": "Tek göz, sıfır korku: işte Buck!",
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Dawn_of_the_Dinosaurs"
+    },
+    {
+      "d": 1,
+      "q": "Dişi kılıç dişli kaplan Shira sonunda kiminle birlikte olur?",
+      "a": [
+        "Diego",
+        "Sid",
+        "Manny",
+        "Buck"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Continental_Drift"
+    },
+    {
+      "d": 1,
+      "q": "Scrat nasıl bir hayvandır?",
+      "a": [
+        "Kılıç dişli sincap",
+        "Uçan sincap",
+        "Fare",
+        "Köstebek"
+      ],
+      "tf": false,
+      "src": "https://www.turkgun.com/televizyon-dizi-film/buz-devri-seslendirme-kadrosu-ve-karakterleri-tam-liste/382370"
+    },
+    {
+      "d": 1,
+      "q": "Buz Devri 2'de hayvanların yaşadığı vadiyi ne tehdit eder?",
+      "a": [
+        "Eriyen buzulun getireceği sel",
+        "Bir göktaşı",
+        "Bir orman yangını",
+        "Bir kasırga"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_The_Meltdown"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmin başında Sid'in ailesi göç ederken onu geride bırakır.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "oops": "Zavallı Sid, ailesi onu yine bırakıp gitmişti!",
+      "src": "https://en.wikipedia.org/wiki/Ice_Age_(2002_film)"
+    },
+    {
+      "d": 1,
+      "q": "Buz Devri 4'te Sid'in ailesi gelip yanında kimi bırakıp gider?",
+      "a": [
+        "Büyükannesini",
+        "Küçük kardeşini",
+        "Dayısını",
+        "Evcil kaplumbağasını"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Continental_Drift"
+    },
+    {
+      "d": 1,
+      "q": "Diego, ilk filmin sonunda arkadaşlarını korumak için kendi sürüsüne karşı çıkar.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age_(2002_film)"
+    },
+    {
+      "d": 1,
+      "q": "Türkçe dublajda Sid'in konuşmasının en tanıdık özelliği nedir?",
+      "a": [
+        "Peltek konuşması",
+        "Kekelemesi",
+        "Fısıldaması",
+        "Şarkıyla konuşması"
+      ],
+      "tf": false,
+      "src": "https://www.turkgun.com/televizyon-dizi-film/buz-devri-sid-hangi-hayvan-seslendirenler-kimler-yekta-kopan/386489"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmin başında hayvanlar soğuktan kaçmak için hangi yöne göç eder?",
+      "a": [
+        "Güneye",
+        "Kuzeye",
+        "Doğuya",
+        "Batıya"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age_(2002_film)"
+    },
+    {
+      "d": 1,
+      "q": "Buz Devri 3'te Sid'i yavrularıyla birlikte yer altına kim götürür?",
+      "a": [
+        "Anne dinozor",
+        "Buck",
+        "Bir kartal",
+        "Diego"
+      ],
+      "tf": false,
+      "oops": "Yavrularını geri isteyen bir anne, Sid'i de kaptı!",
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Dawn_of_the_Dinosaurs"
+    },
+    {
+      "d": 2,
+      "q": "İlk filmde Diego'nun sürüsünden aldığı gizli görev nedir?",
+      "a": [
+        "Bebeği sürüye götürmek",
+        "Sid'i korumak",
+        "Manny'ye yol göstermek",
+        "Palamut bulmak"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age_(2002_film)"
+    },
+    {
+      "d": 2,
+      "q": "İlk filmde dodo kuşları buz devri için neyi saklamaya çalışır?",
+      "a": [
+        "Karpuzları",
+        "Palamutları",
+        "Balıkları",
+        "Yumurtaları"
+      ],
+      "tf": false,
+      "oops": "Dodolar için yiyecekleri korumak hiç kolay olmadı!",
+      "src": "https://iceage.fandom.com/wiki/Dodos"
+    },
+    {
+      "d": 2,
+      "q": "Ellie'nin şakacı opossum kardeşlerinin adları nedir?",
+      "a": [
+        "Crash ve Eddie",
+        "Carl ve Frank",
+        "Buck ve Rudy",
+        "Louis ve Julian"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_The_Meltdown"
+    },
+    {
+      "d": 2,
+      "q": "Buz Devri 2'de Diego neyden korkar?",
+      "a": [
+        "Sudan",
+        "Karanlıktan",
+        "Yükseklikten",
+        "Ateşten"
+      ],
+      "tf": false,
+      "oops": "Kılıç dişli ama yüzme bilmeyen bir kaplan!",
+      "src": "https://iceage.fandom.com/wiki/Diego"
+    },
+    {
+      "d": 2,
+      "q": "Buz Devri 2'de minik tembel hayvanlar, Sid'i ne yaptığı için kral sanır?",
+      "a": [
+        "Ateş yaktığı için",
+        "Uçtuğu için",
+        "Şarkı söylediği için",
+        "Palamut bulduğu için"
+      ],
+      "tf": false,
+      "src": "https://iceage.fandom.com/wiki/Sid",
+      "oops": "Ateşi yakan Sid, kral ilan edildi... kısa süreliğine!"
+    },
+    {
+      "d": 2,
+      "q": "Buz Devri 2'nin sonunda Manny, nesli tükenmemiş başka mamutlar da olduğunu görür.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_The_Meltdown"
+    },
+    {
+      "d": 2,
+      "q": "Tek gözlü maceracı Buck hangi hayvandır?",
+      "a": [
+        "Gelincik",
+        "Sincap",
+        "Opossum",
+        "Köstebek"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Dawn_of_the_Dinosaurs"
+    },
+    {
+      "d": 2,
+      "q": "Buz Devri 3'teki dinozorların dünyası nerededir?",
+      "a": [
+        "Buzun altında, yer altında",
+        "Bir adada",
+        "Bulutların üstünde",
+        "Okyanusun dibinde"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Dawn_of_the_Dinosaurs"
+    },
+    {
+      "d": 2,
+      "q": "Buz Devri 3'te Scratte'nin Scrat'tan farklı olarak yapabildiği şey nedir?",
+      "a": [
+        "Havada süzülmek",
+        "Zamanda yolculuk yapmak",
+        "Konuşmak",
+        "Su altında nefes almak"
+      ],
+      "tf": false,
+      "src": "https://iceage.fandom.com/wiki/Scratte"
+    },
+    {
+      "d": 2,
+      "q": "Sid'in büyükannesinin herkesin 'hayali' sandığı evcil hayvanı aslında nedir?",
+      "a": [
+        "Dev bir balina",
+        "Bir kaplumbağa",
+        "Bir ahtapot",
+        "Bir fok"
+      ],
+      "tf": false,
+      "oops": "Hayali değilmiş! Hem de koca bir balina.",
+      "src": "https://iceage.fandom.com/wiki/Precious"
+    },
+    {
+      "d": 2,
+      "q": "Buz Devri 4'teki korsanların kaptanı hangi hayvandır?",
+      "a": [
+        "Dev bir maymun",
+        "Bir kutup ayısı",
+        "Bir mors",
+        "Bir köpekbalığı"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Continental_Drift",
+      "oops": "Kaptan koca bir maymun, gemisi de bir buzdağı!"
+    },
+    {
+      "d": 2,
+      "q": "Buz Devri 5'te Scrat göktaşlarını neyle yanlışlıkla harekete geçirir?",
+      "a": [
+        "Buzda bulduğu bir uzay gemisiyle",
+        "Dev bir sapanla",
+        "Bir yanardağla",
+        "Bir kartalla"
+      ],
+      "tf": false,
+      "src": "https://iceage.fandom.com/wiki/Scrat"
+    },
+    {
+      "d": 2,
+      "q": "Türkçe dublajda Sid'i hangi ünlü isim seslendirdi?",
+      "a": [
+        "Yekta Kopan",
+        "Okan Bayülgen",
+        "Cem Yılmaz",
+        "Ata Demirer"
+      ],
+      "tf": false,
+      "src": "https://www.turkgun.com/televizyon-dizi-film/buz-devri-seslendirme-kadrosu-ve-karakterleri-tam-liste/382370",
+      "oops": "O peltek ses Yekta Kopan'dan!"
+    },
+    {
+      "d": 2,
+      "q": "Türkçe dublajda Diego'yu hangi ünlü oyuncu seslendirdi?",
+      "a": [
+        "Haluk Bilginer",
+        "Yekta Kopan",
+        "Ali Poyrazoğlu",
+        "Okan Bayülgen"
+      ],
+      "tf": false,
+      "oops": "O tok ses Haluk Bilginer'in!",
+      "src": "https://www.turkgun.com/televizyon-dizi-film/buz-devri-seslendirme-kadrosu-ve-karakterleri-tam-liste/382370"
+    },
+    {
+      "d": 2,
+      "q": "Buz Devri filmlerini hangi stüdyo yaptı?",
+      "a": [
+        "Blue Sky Studios",
+        "Pixar",
+        "DreamWorks",
+        "Illumination"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age_(2002_film)",
+      "oops": "Pixar Nemo'yu yaptı; Buz Devri Blue Sky'ın!"
+    },
+    {
+      "d": 2,
+      "q": "Buz Devri 2'nin Türkçe alt başlığı nedir?",
+      "a": [
+        "Erime Başlıyor",
+        "Kıtalar Ayrılıyor",
+        "Dinozorların Şafağı",
+        "Büyük Çarpışma"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Buz_Devri_(film)"
+    },
+    {
+      "d": 2,
+      "q": "Buz Devri 2'deki ilk sahnesinde Ellie, opossum gibi nereye asılmıştır?",
+      "a": [
+        "Bir ağaç dalına",
+        "Mağara tavanına",
+        "Bir buz sarkıtına",
+        "Manny'nin hortumuna"
+      ],
+      "tf": false,
+      "oops": "Baş aşağı uyuyan bir mamut, hem de dalda!",
+      "src": "https://iceage.fandom.com/wiki/Ellie"
+    },
+    {
+      "d": 2,
+      "q": "Buz Devri 4'te sürüye katılan Shira başta kimin tayfasındadır?",
+      "a": [
+        "Korsanların",
+        "Dodoların",
+        "Buck'ın",
+        "Minik tembel hayvanların"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Continental_Drift"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmdeki kılıç dişli kaplan sürüsünün lideri kimdir?",
+      "a": [
+        "Soto",
+        "Diego",
+        "Rudy",
+        "Roshan"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Buz_Devri_(film)"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmin başında herkes göç ederken Manny hangi yöne yürür?",
+      "a": [
+        "Kuzeye",
+        "Güneye",
+        "Doğuya",
+        "Batıya"
+      ],
+      "tf": false,
+      "oops": "Herkes güneye, Manny inadına kuzeye!",
+      "src": "https://iceage.fandom.com/wiki/Manny"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmde Diego'nun taraf değiştirmesine ne yol açar?",
+      "a": [
+        "Manny'nin onu lavdan kurtarması",
+        "Sid'in ona yemek vermesi",
+        "Bebeğin ona gülmesi",
+        "Soto'nun onu kovması"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age_(2002_film)"
+    },
+    {
+      "d": 3,
+      "q": "Buz Devri 2'nin sonunda Scrat'ı palamut cennetinden geri döndüren kimdir?",
+      "a": [
+        "Sid",
+        "Manny",
+        "Diego",
+        "Ellie"
+      ],
+      "tf": false,
+      "oops": "Sid onu kurtardı ama Scrat hiç teşekkür etmedi!",
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_The_Meltdown"
+    },
+    {
+      "d": 3,
+      "q": "Buck'ın gözünü kaybetmesine sebep olan dev beyaz dinozorun adı nedir?",
+      "a": [
+        "Rudy",
+        "Soto",
+        "Gutt",
+        "Momma"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Dawn_of_the_Dinosaurs"
+    },
+    {
+      "d": 3,
+      "q": "Buck bir zamanlar neyle 'evlendiğini' anlatır?",
+      "a": [
+        "Bir ananasla",
+        "Bir kayayla",
+        "Bir palamutla",
+        "Bir kartopuyla"
+      ],
+      "tf": false,
+      "oops": "Evet, bir ananasla! Yer altında yalnızlık zor.",
+      "src": "https://iceage.fandom.com/wiki/Buck"
+    },
+    {
+      "d": 3,
+      "q": "Buz Devri 4'te kahramanları tanıdık görüntülerle kandırmaya çalışan deniz yaratıkları hangileridir?",
+      "a": [
+        "Sirenler",
+        "Dodolar",
+        "Deniz yılanları",
+        "Denizanaları"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Continental_Drift"
+    },
+    {
+      "d": 3,
+      "q": "Buz Devri 5'te Manny'nin kızı kiminle nişanlanır?",
+      "a": [
+        "Julian",
+        "Louis",
+        "Buck",
+        "Diego"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Collision_Course",
+      "oops": "Louis yalnızca en iyi arkadaştı; damat Julian!"
+    },
+    {
+      "d": 3,
+      "q": "Buz Devri 5'teki Geotopia'da yaşayanları genç tutan şey nedir?",
+      "a": [
+        "Kristaller",
+        "Bir şelale",
+        "Sihirli palamut",
+        "Bir iksir"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Collision_Course",
+      "oops": "O kristaller herkesi genç tutuyordu, Sid kırana dek!"
+    },
+    {
+      "d": 3,
+      "q": "Buz Devri 5'te Geotopia'da Sid'e ilk görüşte âşık olan tembel hayvanın adı nedir?",
+      "a": [
+        "Brooke",
+        "Shira",
+        "Ellie",
+        "Scratte"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Ice_Age:_Collision_Course"
+    }
+  ]
+}

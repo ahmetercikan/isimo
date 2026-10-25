@@ -19,7 +19,7 @@ import { useProfile } from '../store/useProfile';
 const GAMES = [
   { key: 'isim', art: artIsim, title: 'İsim Şehir', tag: 'Harf çevir, yaz, STOP de!', q: '', chip: [ChartNoAxesColumn, 'Kelime Bilgisi'] },
   { key: 'siram', art: artSiram, title: 'Sıra Sende', tag: 'Bir harf değiştir, yeni kelime!', q: '?oyun=siram', chip: [Brain, 'Zeka Geliştirir'] },
-  { key: 'film', art: artFilm, title: 'Sinema Bilmecesi', tag: 'İpuçlarından filmi ilk sen bil!', q: '?oyun=film', chip: [Lightbulb, 'Film Kültürü'] },
+  { key: 'film', art: artFilm, title: 'Sinema Bilmecesi', tag: 'Filmi bil, ne kadar hayranısın gör!', q: '?oyun=film', chip: [Lightbulb, 'Film Kültürü'] },
 ] as const;
 
 export default function Home() {
@@ -114,7 +114,7 @@ export default function Home() {
                   <span className="chip-tag"><ChipIcon size={14} strokeWidth={2.6} /> {chipText}</span>
                 </div>
                 <div className="game-card__row">
-                  <button className="play-btn" onClick={() => (sfx.tap(), setPick(g))}>
+                  <button className="play-btn" onClick={() => (sfx.tap(), g.key === 'film' ? nav('/sinema') : setPick(g))}>
                     <Play size={24} fill="currentColor" strokeWidth={2} /> Oyna
                   </button>
                   <button className="game-card__more" aria-label={`${g.title} nasıl oynanır?`} onClick={() => (sfx.tap(), nav(`/nasil?oyun=${g.key}`))}>

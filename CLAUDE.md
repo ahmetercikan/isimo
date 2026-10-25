@@ -1,5 +1,12 @@
 # İsim Şehir — Claude için proje notları
 
+- **25 Ekim 2026, Sinema Salonu devam çalışması:** `/sinema` menüsü ve `/sinema/sen-ne-kadar` tek kişilik yarışması hazır.
+  13 evren, 716 soru (Harry Potter 119); geçici örnek set kaldırıldı. Soru başına 20 sn, turda 4 kolay/3 orta/3 zor,
+  altı unvan, yerel en iyi sonuç/tekrar engeli, paylaşılabilir hikâye kartı. Müzik sakin “Lo-fi Quiz” ile değişti.
+  Yeni içerik sonrası `node scripts/quiz-meta.mjs`; raporlar `store/quiz-reviews/`. 61 test ve üretim derlemesi geçti.
+  Bu Codex oturumunda port/Chrome kısıtlı olduğundan yeni tarayıcı kontrolü yapılamadı. GitHub terminal erişimi yok,
+  bağlı araç yalnız okuma yetkili: **web yayını henüz yapılmadı**, main'e push sonrası mevcut Pages akışı yayınlar.
+
 - **Ne:** Üç oyun bir arada (ana sayfada üç kart):
   1. **İsim Şehir** — klasik oyun, harf çevirip kategorileri doldurma, STOP.
   2. **Sıra Sende** — masadaki kelimede tek harf değiştirip yeni kelime yapma (sırayla, canlı/elemeli).

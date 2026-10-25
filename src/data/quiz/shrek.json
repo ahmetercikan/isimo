@@ -1,0 +1,653 @@
+{
+  "id": "shrek",
+  "title": "Şrek",
+  "ask": "Sen ne kadar bataklıklısın?",
+  "scope": "Şrek 1-4 (2001–2010)",
+  "tiers": [
+    {
+      "name": "Duloc Turisti",
+      "line": "Bataklığı yalnızca tabeladan biliyorsun."
+    },
+    {
+      "name": "Kör Fare",
+      "line": "El yordamıyla buraya kadar geldin, helal!"
+    },
+    {
+      "name": "Kurabiye",
+      "line": "Ufaksın ama çıtır çıtır cevaplar verdin."
+    },
+    {
+      "name": "Eşek",
+      "line": "Çok konuşuyorsun ama çoğu doğru, kabul!"
+    },
+    {
+      "name": "Çizmeli Kedi",
+      "line": "Bu cevaplarla kocaman gözlere gerek yok."
+    },
+    {
+      "name": "Bataklığın Devi",
+      "line": "Katman katmansın, tıpkı bir soğan gibi!"
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Şrek nerede yaşar?",
+      "a": [
+        "Bataklıkta",
+        "Bir şatoda",
+        "Dağdaki mağarada",
+        "Ağaç evde"
+      ],
+      "tf": false,
+      "oops": "Şato mu? Şrek'e çamur ver, gerisini istemez!",
+      "src": "https://tr.wikipedia.org/wiki/Şrek"
+    },
+    {
+      "d": 1,
+      "q": "Şrek'in peşinden ayrılmayan, çok konuşan arkadaşı kimdir?",
+      "a": [
+        "Eşek",
+        "At",
+        "Köpek",
+        "Papağan"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Şrek"
+    },
+    {
+      "d": 1,
+      "q": "Şrek hangi renktir?",
+      "a": [
+        "Yeşil",
+        "Mavi",
+        "Mor",
+        "Turuncu"
+      ],
+      "tf": false,
+      "oops": "Mor mu? Bataklık çamuru bile o kadar boyamaz!",
+      "src": "https://tr.wikipedia.org/wiki/Şrek"
+    },
+    {
+      "d": 1,
+      "q": "Prenses Fiona'nın hapsedildiği şatoyu kim korur?",
+      "a": [
+        "Bir ejderha",
+        "Bir dev örümcek",
+        "Kötü kurt",
+        "Bir cadı"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek",
+      "oops": "Dev örümcek mi? O başka bir masalın kabusu!"
+    },
+    {
+      "d": 1,
+      "q": "Fiona'yı koruyan Ejderha kime âşık olur?",
+      "a": [
+        "Eşek'e",
+        "Şrek'e",
+        "Lord Farquaad'a",
+        "Pinokyo'ya"
+      ],
+      "tf": false,
+      "oops": "Ejderha'nın kalbi uzun kulaklıya ait!",
+      "src": "https://en.wikipedia.org/wiki/Shrek"
+    },
+    {
+      "d": 1,
+      "q": "Fiona'nın laneti yüzünden geceleri başına ne gelir?",
+      "a": [
+        "Dev olur",
+        "Kurbağa olur",
+        "Kuğu olur",
+        "Görünmez olur"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek"
+    },
+    {
+      "d": 1,
+      "q": "Lord Farquaad'ın en belirgin özelliği nedir?",
+      "a": [
+        "Çok kısa boylu olması",
+        "Dev gibi uzun olması",
+        "Yeşil olması",
+        "Hiç konuşmaması"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek"
+    },
+    {
+      "d": 1,
+      "q": "Şrek, devlerin katman katman olduğunu anlatırken kendini neye benzetir?",
+      "a": [
+        "Soğana",
+        "Patatese",
+        "Lahanaya",
+        "Havuca"
+      ],
+      "tf": false,
+      "oops": "Eşek pasta dedi ama doğrusu soğan!",
+      "src": "https://shrek.fandom.com/wiki/Donkey"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmde Fiona'nın lanetini ne bozabilir?",
+      "a": [
+        "Gerçek aşkın ilk öpücüğü",
+        "Sihirli bir iksir",
+        "Bir dilek yıldızı",
+        "Peri Anne'nin asası"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek",
+      "oops": "Bu masalda iksir değil, öpücük işe yarar!"
+    },
+    {
+      "d": 1,
+      "q": "Şrek 2'de Kral Harold, Şrek'ten kurtulmak için kimi tutar?",
+      "a": [
+        "Çizmeli Kedi'yi",
+        "Robin Hood'u",
+        "Kaptan Kanca'yı",
+        "Kötü Kurt'u"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Şrek_2"
+    },
+    {
+      "d": 1,
+      "q": "Çizmeli Kedi rakiplerini yumuşatmak için en çok neyi kullanır?",
+      "a": [
+        "Kocaman yalvaran gözlerini",
+        "Kuyruğunu",
+        "Şapkasını",
+        "Mırlamasını"
+      ],
+      "tf": false,
+      "oops": "O gözlere kim hayır diyebilir ki?",
+      "src": "https://shrek.fandom.com/wiki/Puss_in_Boots"
+    },
+    {
+      "d": 1,
+      "q": "Şrek 2'de iksiri içen Eşek neye dönüşür?",
+      "a": [
+        "Beyaz bir ata",
+        "Bir ejderhaya",
+        "Bir prense",
+        "Bir tek boynuzluya"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_2",
+      "oops": "Eşek bembeyaz bir ata döndü, saçları da rüzgârda!"
+    },
+    {
+      "d": 1,
+      "q": "Şrek 2'de iksiri içen Şrek neye dönüşür?",
+      "a": [
+        "Yakışıklı bir insana",
+        "Kocaman bir deve",
+        "Bir kurbağaya",
+        "Bir eşeğe"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_2"
+    },
+    {
+      "d": 1,
+      "q": "Pinokyo'nun burnu ne zaman uzar?",
+      "a": [
+        "Yalan söyleyince",
+        "Hapşırınca",
+        "Şarkı söyleyince",
+        "Uyuyunca"
+      ],
+      "tf": false,
+      "src": "https://shrek.fandom.com/wiki/Pinocchio"
+    },
+    {
+      "d": 1,
+      "q": "Şrek 3'ün sonunda Şrek ile Fiona'nın kaç bebeği olur?",
+      "a": [
+        "Üç",
+        "Bir",
+        "İki",
+        "Beş"
+      ],
+      "tf": false,
+      "oops": "Bir değil, üç! Bataklık bir anda kalabalıklaştı.",
+      "src": "https://tr.wikipedia.org/wiki/Şrek_3"
+    },
+    {
+      "d": 1,
+      "q": "Şrek 4'te Şrek kiminle sihirli bir anlaşma imzalar?",
+      "a": [
+        "Rumpelstiltskin",
+        "Peri Anne",
+        "Merlin",
+        "Lord Farquaad"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Şrek:_Sonsuza_Dek_Mutlu"
+    },
+    {
+      "d": 1,
+      "q": "Şrek 2'de Şrek ve Fiona kimi ziyarete gider?",
+      "a": [
+        "Fiona'nın ailesini",
+        "Şrek'in ailesini",
+        "Eşek'in ailesini",
+        "Lord Farquaad'ı"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_2"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmde Şrek'in bataklığını kimler basar?",
+      "a": [
+        "Sürgün edilen masal kahramanları",
+        "Duloc askerleri",
+        "Cadılar",
+        "Başka devler"
+      ],
+      "tf": false,
+      "oops": "Bataklık bir anda masal kitabına döndü!",
+      "src": "https://en.wikipedia.org/wiki/Shrek"
+    },
+    {
+      "d": 1,
+      "q": "Şrek 4'teki alternatif dünyada Eşek, Şrek'i hemen tanır.",
+      "a": [
+        "Yanlış",
+        "Doğru"
+      ],
+      "tf": true,
+      "oops": "O dünyada Şrek hiç doğmamıştı, Eşek önce çok korktu!",
+      "src": "https://en.wikipedia.org/wiki/Shrek_Forever_After"
+    },
+    {
+      "d": 1,
+      "q": "Şrek 2'de Eşek, uzun yolculuk sırasında sürekli neyi sorar?",
+      "a": [
+        "Yolculuğun bitip bitmediğini",
+        "Şrek'in aç olup olmadığını",
+        "Şrek'in uyuyup uyumadığını",
+        "Şrek'in kaç yaşında olduğunu"
+      ],
+      "tf": false,
+      "src": "https://en.wikiquote.org/wiki/Shrek_2",
+      "oops": "Eşek için yolun en zor kısmı sessiz kalmak!"
+    },
+    {
+      "d": 2,
+      "q": "Sihirli Ayna'nın Farquaad'a sunduğu üç prenses arasında hangisi YOKTUR?",
+      "a": [
+        "Uyuyan Güzel",
+        "Külkedisi",
+        "Pamuk Prenses",
+        "Fiona"
+      ],
+      "tf": false,
+      "src": "https://shrek.fandom.com/wiki/Magic_Mirror"
+    },
+    {
+      "d": 2,
+      "q": "Fiona ormanda tiz bir nota söyleyince ne olur?",
+      "a": [
+        "Kuş patlar",
+        "Ağaçlar çiçek açar",
+        "Yağmur yağar",
+        "Eşek bayılır"
+      ],
+      "tf": false,
+      "oops": "Zavallı kuş o tiz notayı kaldıramadı!",
+      "src": "https://shrek.fandom.com/wiki/Princess_Fiona"
+    },
+    {
+      "d": 2,
+      "q": "Yolda karşılarına çıkan Robin Hood ve adamlarını kim yener?",
+      "a": [
+        "Fiona",
+        "Şrek",
+        "Eşek",
+        "Ejderha"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek"
+    },
+    {
+      "d": 2,
+      "q": "Lord Farquaad'ın yönettiği krallığın adı nedir?",
+      "a": [
+        "Duloc",
+        "Camelot",
+        "Narnia",
+        "Worcestershire"
+      ],
+      "tf": false,
+      "src": "https://shrek.fandom.com/wiki/Duloc",
+      "oops": "Narnia mı? Yanlış dolaptan çıktın!"
+    },
+    {
+      "d": 2,
+      "q": "İlk filmin sonunda Lord Farquaad'ın başına ne gelir?",
+      "a": [
+        "Ejderha onu yutar",
+        "Kurbağaya dönüşür",
+        "Zindana atılır",
+        "Bataklığa sürülür"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek"
+    },
+    {
+      "d": 2,
+      "q": "Şrek 2'nin sonunda Fiona'nın babası Kral Harold'un aslında ne olduğu ortaya çıkar?",
+      "a": [
+        "Kurbağa",
+        "Dev",
+        "Ejderha",
+        "Eşek"
+      ],
+      "tf": false,
+      "oops": "Vrak! Kral eskiden bir kurbağa prensti.",
+      "src": "https://en.wikipedia.org/wiki/Shrek_2"
+    },
+    {
+      "d": 2,
+      "q": "Şrek 2'de Peri Anne, Fiona'yı kimle evlendirmek ister?",
+      "a": [
+        "Oğlu Prens Yakışıklı ile",
+        "Lord Farquaad ile",
+        "Robin Hood ile",
+        "Pinokyo ile"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_2"
+    },
+    {
+      "d": 2,
+      "q": "Şrek 2'de kahramanlar şatoya girmek için neyin yardımını alır?",
+      "a": [
+        "Dev bir kurabiye adamın",
+        "Dev bir ejderhanın",
+        "Dev bir kartalın",
+        "Dev bir aslanın"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_2"
+    },
+    {
+      "d": 2,
+      "q": "Ejderha ile Eşek'in yavruları neye benzer?",
+      "a": [
+        "Kanatlı minik eşeklere",
+        "Minik dinozorlara",
+        "Yeşil devlere",
+        "Pembe atlara"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_2"
+    },
+    {
+      "d": 2,
+      "q": "Şrek 3'te tahta geçirilmek üzere aranan Fiona'nın kuzeni kimdir?",
+      "a": [
+        "Artie",
+        "Merlin",
+        "Prens Yakışıklı",
+        "Robin Hood"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Şrek_3",
+      "oops": "Merlin onun öğretmeniydi, kuzeni değil!"
+    },
+    {
+      "d": 2,
+      "q": "Şrek 3'te ıssız adada karşılaştıkları emekli büyücü öğretmen kimdir?",
+      "a": [
+        "Merlin",
+        "Rumpelstiltskin",
+        "Peri Anne",
+        "Sihirli Ayna"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_the_Third"
+    },
+    {
+      "d": 2,
+      "q": "Şrek 3'te Merlin'in büyüsü ters gidince kimler beden değiştirir?",
+      "a": [
+        "Eşek ile Çizmeli Kedi",
+        "Şrek ile Fiona",
+        "Artie ile Merlin",
+        "Pinokyo ile Kurabiye"
+      ],
+      "tf": false,
+      "oops": "Miyavlayan eşek, anırınca kedi... tam karmaşa!",
+      "src": "https://en.wikipedia.org/wiki/Shrek_the_Third"
+    },
+    {
+      "d": 2,
+      "q": "Şrek 4'te Rumpelstiltskin, anlaşmayla Şrek'in hangi gününü siler?",
+      "a": [
+        "Doğduğu günü",
+        "Düğün gününü",
+        "Fiona'yla tanıştığı günü",
+        "Çocuklarının doğduğu günü"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_Forever_After"
+    },
+    {
+      "d": 2,
+      "q": "Şrek 4'teki alternatif dünyada Fiona ne yapmaktadır?",
+      "a": [
+        "Devlerin direnişini yönetir",
+        "Kraliçe olarak hüküm sürer",
+        "Kulede kurtarılmayı bekler",
+        "Cadılarla çalışır"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_Forever_After"
+    },
+    {
+      "d": 2,
+      "q": "Şrek 4'teki alternatif dünyada Çizmeli Kedi nasıldır?",
+      "a": [
+        "Şişman, tembel bir ev kedisi",
+        "Kralın baş muhafızı",
+        "Korkunç bir korsan",
+        "Rumpelstiltskin'in casusu"
+      ],
+      "tf": false,
+      "oops": "Çizmeler artık biraz dar geliyor!",
+      "src": "https://en.wikipedia.org/wiki/Shrek_Forever_After"
+    },
+    {
+      "d": 2,
+      "q": "Türkçe dublajda Şrek'i hangi ünlü seslendirdi?",
+      "a": [
+        "Okan Bayülgen",
+        "Cem Yılmaz",
+        "Yekta Kopan",
+        "Haluk Bilginer"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Şrek"
+    },
+    {
+      "d": 2,
+      "q": "İlk Şrek filmi, En İyi Animasyon dalında verilen ilk Oscar'ı kazandı.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://tr.wikipedia.org/wiki/Şrek"
+    },
+    {
+      "d": 2,
+      "q": "Şrek 2'nin sonunda Şrek ile Fiona insan olarak kalmayı seçer.",
+      "a": [
+        "Yanlış",
+        "Doğru"
+      ],
+      "tf": true,
+      "oops": "Fiona yeşil Şrek'ini seçti, gece yarısı eski hallerine döndüler.",
+      "src": "https://en.wikipedia.org/wiki/Shrek_2"
+    },
+    {
+      "d": 3,
+      "q": "Şrek 3'te Kraliçe Lillian zindandan nasıl kurtulur?",
+      "a": [
+        "Duvarı kafasıyla kırarak",
+        "Sihirli asasıyla",
+        "Anahtarı çalarak",
+        "Tünel kazarak"
+      ],
+      "tf": false,
+      "oops": "Kraliçe nazik görünür ama kafası taş gibi!",
+      "src": "https://en.wikipedia.org/wiki/Shrek_the_Third"
+    },
+    {
+      "d": 3,
+      "q": "Şrek 3'te Prens Yakışıklı'nın tarafına geçip Fiona'ya ihanet eden prenses kimdir?",
+      "a": [
+        "Rapunzel",
+        "Külkedisi",
+        "Pamuk Prenses",
+        "Uyuyan Güzel"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_the_Third"
+    },
+    {
+      "d": 3,
+      "q": "Rumpelstiltskin'in arabasını çeken dev evcil kuşu hangisidir?",
+      "a": [
+        "Kaz",
+        "Baykuş",
+        "Tavus kuşu",
+        "Leylek"
+      ],
+      "tf": false,
+      "src": "https://shrek.fandom.com/wiki/Rumpelstiltskin",
+      "oops": "Leylek bebek getirir, Rumpel'in arabasını değil!"
+    },
+    {
+      "d": 3,
+      "q": "Şrek 4'ün başında Şrek'in sabrını taşıran kutlama, çocukların kaçıncı doğum günüdür?",
+      "a": [
+        "Birinci",
+        "İkinci",
+        "Üçüncü",
+        "Beşinci"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_Forever_After"
+    },
+    {
+      "d": 3,
+      "q": "Rumpelstiltskin ruh haline göre neyi değiştirip durur?",
+      "a": [
+        "Peruğunu",
+        "Ayakkabısını",
+        "Asasını",
+        "Pelerinini"
+      ],
+      "tf": false,
+      "src": "https://shrek.fandom.com/wiki/Rumpelstiltskin"
+    },
+    {
+      "d": 3,
+      "q": "Şrek 4'te Rumpelstiltskin devleri yakalatmak için kimi tutar?",
+      "a": [
+        "Fareli Köyün Kavalcısı'nı",
+        "Kaptan Kanca'yı",
+        "Kötü Kurt'u",
+        "Robin Hood'u"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_Forever_After",
+      "oops": "Kaval çalınca devler dans ede ede yakalandı!"
+    },
+    {
+      "d": 3,
+      "q": "İlk Şrek filminin Türkçe dublajında Eşek'i kim seslendirdi?",
+      "a": [
+        "Mehmet Ali Erbil",
+        "Okan Bayülgen",
+        "Engin Alkan",
+        "Ata Demirer"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Şrek",
+      "oops": "O hızlı çene Mehmet Ali Erbil'indi!"
+    },
+    {
+      "d": 3,
+      "q": "Türkçe dublajda Çizmeli Kedi'yi kim seslendirdi?",
+      "a": [
+        "Engin Alkan",
+        "Mehmet Ali Erbil",
+        "Okan Bayülgen",
+        "Yılmaz Erdoğan"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Şrek_2"
+    },
+    {
+      "d": 3,
+      "q": "Şrek 2'de Şrek, Eşek ve Çizmeli Kedi iksiri nereden aşırır?",
+      "a": [
+        "Peri Anne'nin fabrikasından",
+        "Merlin'in kulesinden",
+        "Kralın mahzeninden",
+        "Bir cadı kazanından"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_2"
+    },
+    {
+      "d": 3,
+      "q": "Şrek 2'nin sonunda kendi büyüsü geri seken Peri Anne neye dönüşür?",
+      "a": [
+        "Baloncuklara",
+        "Kurbağaya",
+        "Taşa",
+        "Bir kabağa"
+      ],
+      "tf": false,
+      "oops": "Kabak Külkedisi'nin işi; Peri Anne köpük oldu!",
+      "src": "https://en.wikipedia.org/wiki/Shrek_2"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmde Fiona, Duloc'a varmadan önceki gece nerede saklanır?",
+      "a": [
+        "Bir yel değirmeninde",
+        "Bir mağarada",
+        "Bir ağaç kovuğunda",
+        "Bir kilisede"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek"
+    },
+    {
+      "d": 3,
+      "q": "Şrek 3'te Artie'nin okuduğu okulun adı nedir?",
+      "a": [
+        "Worcestershire Akademisi",
+        "Duloc Koleji",
+        "Camelot Okulu",
+        "Uzak Krallık Lisesi"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Shrek_the_Third",
+      "oops": "Artie taht yolculuğuna okul sırasından başladı!"
+    }
+  ]
+}

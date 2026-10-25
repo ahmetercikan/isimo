@@ -20,6 +20,9 @@ const Sounds = lazy(() => import('./pages/Sounds'));
 const Game = lazy(() => import('./pages/Game'));
 const Friends = lazy(() => import('./pages/Friends'));
 const Stats = lazy(() => import('./pages/Stats'));
+const Cinema = lazy(() => import('./pages/Cinema'));
+const QuizList = lazy(() => import('./pages/QuizList'));
+const Quiz = lazy(() => import('./pages/Quiz'));
 
 /** Ad yoksa önce profil. */
 function NeedsName({ children }: { children: ReactNode }) {
@@ -102,6 +105,9 @@ export default function App() {
           <Route path="/arkadaslar" element={<NeedsName><Friends /></NeedsName>} />
           <Route path="/nasil" element={<HowTo />} />
           <Route path="/istatistik" element={<Stats />} />
+          <Route path="/sinema" element={<NeedsName><Cinema /></NeedsName>} />
+          <Route path="/sinema/sen-ne-kadar" element={<NeedsName><QuizList /></NeedsName>} />
+          <Route path="/sinema/sen-ne-kadar/:id" element={<NeedsName><Quiz /></NeedsName>} />
           <Route path="/sesler" element={<Sounds />} />
           <Route path="/oyun" element={<NeedsName><Game /></NeedsName>} />
           <Route path="*" element={<Navigate to="/" replace />} />

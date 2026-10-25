@@ -1,0 +1,652 @@
+{
+  "id": "tersyuz",
+  "title": "Ters Yüz",
+  "ask": "Sen ne kadar Ters Yüz'cüsün?",
+  "scope": "Ters Yüz (2015) ve Ters Yüz 2 (2024)",
+  "tiers": [
+    {
+      "name": "Hatıra Çöplüğü",
+      "line": "Bu anılar unutulmaya yüz tutmuş!"
+    },
+    {
+      "name": "Kanepedeki Bıkkınlık",
+      "line": "Filme telefondan şöyle bir göz atmışsın galiba."
+    },
+    {
+      "name": "Kaygılı Acemi",
+      "line": "\"Ya yanlış bilirsem?\" diye diye epey bildin."
+    },
+    {
+      "name": "Hayal Diyarı Gezgini",
+      "line": "Bing Bong seninle gurur duyardı."
+    },
+    {
+      "name": "Kontrol Paneli Ustası",
+      "line": "Bütün duyguların takım gibi çalışıyor."
+    },
+    {
+      "name": "Neşe'nin Sağ Kolu",
+      "line": "Bu sonuç doğrudan altın bir anı oldu!"
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Riley'nin kafasındaki duygulara önderlik eden sarı duygu hangisidir?",
+      "a": [
+        "Neşe",
+        "Üzüntü",
+        "Korku",
+        "Kaygı"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Ters_Yüz",
+      "oops": "Sarı, ışıl ışıl, hep gülen... Neşe tabii!"
+    },
+    {
+      "d": 1,
+      "q": "Üzüntü ne renktir?",
+      "a": [
+        "Mavi",
+        "Yeşil",
+        "Mor",
+        "Sarı"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out",
+      "oops": "Üzüntü'nün rengi de kendisi gibi mavi!"
+    },
+    {
+      "d": 1,
+      "q": "Tiksinti ne renktir?",
+      "a": [
+        "Yeşil",
+        "Kırmızı",
+        "Mavi",
+        "Turuncu"
+      ],
+      "tf": false,
+      "oops": "Tiksinti'nin rengi brokoliyle aynı, bunu unutma!",
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 1,
+      "q": "Sinirlenince kafasından alevler çıkan duygu hangisidir?",
+      "a": [
+        "Öfke",
+        "Korku",
+        "Utanç",
+        "Gıpta"
+      ],
+      "tf": false,
+      "oops": "Kafası alev alan biri... Öfke'den başkası olamaz!",
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmde Riley ve ailesi nereden nereye taşınır?",
+      "a": [
+        "Minnesota'dan San Francisco'ya",
+        "San Francisco'dan Minnesota'ya",
+        "New York'tan Los Angeles'a",
+        "Teksas'tan Minnesota'ya"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out",
+      "oops": "Riley'nin kalbi hâlâ Minnesota'da!"
+    },
+    {
+      "d": 1,
+      "q": "Riley'nin çok sevdiği ve oynadığı spor hangisidir?",
+      "a": [
+        "Buz hokeyi",
+        "Basketbol",
+        "Futbol",
+        "Yüzme"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 1,
+      "q": "Bing Bong kimdir?",
+      "a": [
+        "Riley'nin hayali arkadaşı",
+        "Riley'nin köpeği",
+        "Babasının bir duygusu",
+        "Okuldaki sınıf arkadaşı"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out",
+      "oops": "Bing Bong, Bing Bong! Riley'nin hayali dostunu unuttun!"
+    },
+    {
+      "d": 1,
+      "q": "Riley'nin anıları filmde nasıl görünür?",
+      "a": [
+        "Parlayan renkli küreler",
+        "Küçük kitaplar",
+        "Fotoğraf kartları",
+        "Mektuplar"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 1,
+      "q": "Riley yeni okulundaki ilk gününde, sınıfın önünde kendini tanıtırken ne olur?",
+      "a": [
+        "Ağlamaya başlar",
+        "Şarkı söyler",
+        "Uyuyakalır",
+        "Kahkaha atar"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 1,
+      "q": "Bing Bong üzülüp ağlayınca gözlerinden ne akar?",
+      "a": [
+        "Şekerler",
+        "Su",
+        "Konfeti",
+        "Bal"
+      ],
+      "tf": false,
+      "oops": "Bing Bong'un gözyaşları bile tatlı: şeker şeker!",
+      "src": "https://insideout.fandom.com/wiki/Bing_Bong"
+    },
+    {
+      "d": 1,
+      "q": "Bing Bong'un roketli arabası nasıl çalışır?",
+      "a": [
+        "Onun şarkısını söyleyince",
+        "Pedal çevirince",
+        "Rüzgârla",
+        "Şekerle beslenince"
+      ],
+      "tf": false,
+      "oops": "Şarkıyı bilmeyen yolda kalır!",
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 1,
+      "q": "Riley'yi evden kaçma fikrine iten duygu hangisidir?",
+      "a": [
+        "Öfke",
+        "Korku",
+        "Tiksinti",
+        "Üzüntü"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out",
+      "oops": "Fikir ampulünü takan Öfke'ydi!"
+    },
+    {
+      "d": 1,
+      "q": "Ters Yüz 2'de gelen yeni duygulardan turuncu olanı hangisidir?",
+      "a": [
+        "Kaygı",
+        "Gıpta",
+        "Utanç",
+        "Bıkkınlık"
+      ],
+      "tf": false,
+      "src": "https://www.milligazete.com.tr/ters-yuz-2-turkce-seslendirme-kadrosunda-kimler-var-nese-kaygi-uzuntu-ve-ofkeyi-kim-seslendiriyor"
+    },
+    {
+      "d": 1,
+      "q": "Ters Yüz 2'de utanınca kapüşonunun içine saklanan iri, pembe duygu hangisidir?",
+      "a": [
+        "Utanç",
+        "Kaygı",
+        "Bıkkınlık",
+        "Korku"
+      ],
+      "tf": false,
+      "oops": "Kapüşonu bir çekti mi, Utanç'ı kimse göremez!",
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2"
+    },
+    {
+      "d": 1,
+      "q": "Hangisi Ters Yüz 2'de gelen yeni duygulardan biri DEĞİLDİR?",
+      "a": [
+        "Neşe",
+        "Kaygı",
+        "Gıpta",
+        "Utanç"
+      ],
+      "tf": false,
+      "oops": "Neşe ilk günden beri orada, hem de en önde!",
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2"
+    },
+    {
+      "d": 1,
+      "q": "Ters Yüz 2'de Riley arkadaşlarıyla hangi kampa gider?",
+      "a": [
+        "Hokey kampına",
+        "İzci kampına",
+        "Yüzme kampına",
+        "Müzik kampına"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2",
+      "oops": "Riley ve buz hokeyi ayrılmaz ikili!"
+    },
+    {
+      "d": 1,
+      "q": "Ters Yüz 2'de kontrol panelini ele geçirip Neşe'nin ekibini uzaklaştıran yeni duygu hangisidir?",
+      "a": [
+        "Kaygı",
+        "Gıpta",
+        "Utanç",
+        "Nostalji"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2",
+      "oops": "Kaygı bir kez panele geçti mi, bırakmaz!"
+    },
+    {
+      "d": 1,
+      "q": "Doğru mu, yanlış mı? İlk Ters Yüz filminde Riley'nin kafasında beş duygu vardır.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 1,
+      "q": "Doğru mu, yanlış mı? Riley'nin ailesi, babasının yeni işi yüzünden taşınır.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 1,
+      "q": "Doğru mu, yanlış mı? Bing Bong, Ters Yüz 2'de Riley'nin yeni hokey koçudur.",
+      "a": [
+        "Yanlış",
+        "Doğru"
+      ],
+      "tf": true,
+      "oops": "Bing Bong koç olsa antrenman pamuk şekerle biterdi!",
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2"
+    },
+    {
+      "d": 2,
+      "q": "Bing Bong çoğunlukla neden yapılmıştır?",
+      "a": [
+        "Pamuk şeker",
+        "Hamur",
+        "Dondurma",
+        "Bulut"
+      ],
+      "tf": false,
+      "src": "https://insideout.fandom.com/wiki/Bing_Bong",
+      "oops": "Pamuk şekerden bir fil-kedi-yunus. Tatlı mı tatlı!"
+    },
+    {
+      "d": 2,
+      "q": "Neşe ile Üzüntü merkezden savrulunca kontrol panelinde hangi duygular kalır?",
+      "a": [
+        "Öfke, Korku ve Tiksinti",
+        "Öfke, Kaygı ve Utanç",
+        "Korku, Gıpta ve Bıkkınlık",
+        "Kaygı, Korku ve Tiksinti"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 2,
+      "q": "Riley'nin hangi davranışı Dürüstlük Adası'nın yıkılmasına yol açar?",
+      "a": [
+        "Annesinin kredi kartını alması",
+        "Okulu asması",
+        "Ödevini kopya çekmesi",
+        "Kardeşine yalan söylemesi"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 2,
+      "q": "Sonunda kaçma fikrini panelden söküp Riley'yi otobüsten indiren duygu hangisidir?",
+      "a": [
+        "Üzüntü",
+        "Neşe",
+        "Korku",
+        "Tiksinti"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out",
+      "oops": "Bu sefer kahraman Üzüntü'ydü!"
+    },
+    {
+      "d": 2,
+      "q": "Hatıra çöplüğünden kurtulmak için Bing Bong nasıl bir fedakârlık yapar?",
+      "a": [
+        "Arabadan atlayıp Neşe'yi yollar",
+        "Roketini Üzüntü'ye verir",
+        "Şarkısını unutur",
+        "Riley'ye veda mektubu yazar"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 2,
+      "q": "İlk filmin sonunda, duyguların pek önemsemediği yeni düğmenin üstünde ne yazar?",
+      "a": [
+        "Ergenlik",
+        "Okul",
+        "Tatil",
+        "Doğum günü"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out",
+      "oops": "Ergenlik alarmı... Ters Yüz 2'nin habercisi!"
+    },
+    {
+      "d": 2,
+      "q": "Ters Yüz 2'de Riley kaç yaşındadır?",
+      "a": [
+        "13",
+        "11",
+        "16",
+        "9"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmde Riley ailesiyle taşındığında kaç yaşındadır?",
+      "a": [
+        "11",
+        "9",
+        "13",
+        "15"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 2,
+      "q": "Ters Yüz 2'de kanepede yatıp kontrol panelini cep telefonundan yöneten duygu hangisidir?",
+      "a": [
+        "Bıkkınlık",
+        "Gıpta",
+        "Kaygı",
+        "Utanç"
+      ],
+      "tf": false,
+      "oops": "Kanepe ve telefon: Bıkkınlık'ın en sevdiği ikili!",
+      "src": "https://insideout.fandom.com/wiki/Inside_Out_2"
+    },
+    {
+      "d": 2,
+      "q": "Ters Yüz 2'de, sırası daha gelmediği için kapıdan geri gönderilen yaşlı duygu hangisidir?",
+      "a": [
+        "Nostalji",
+        "Bıkkınlık",
+        "Utanç",
+        "Korku"
+      ],
+      "tf": false,
+      "src": "https://insideout.fandom.com/wiki/Inside_Out_2",
+      "oops": "Nostalji'nin sırası daha gelmedi!"
+    },
+    {
+      "d": 2,
+      "q": "Ters Yüz 2'de Riley'nin iki yakın arkadaşının adı nedir?",
+      "a": [
+        "Bree ve Grace",
+        "Val ve Grace",
+        "Bree ve Val",
+        "Jill ve Bree"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2"
+    },
+    {
+      "d": 2,
+      "q": "Riley'nin hayran olduğu, hokeyde yıldız olan büyük kız kimdir?",
+      "a": [
+        "Val",
+        "Bree",
+        "Grace",
+        "Jill"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2"
+    },
+    {
+      "d": 2,
+      "q": "Bree ve Grace, kampa giderken Riley'ye hangi haberi verir?",
+      "a": [
+        "Başka bir liseye gidecekler",
+        "Başka şehre taşınıyorlar",
+        "Hokeyi bırakıyorlar",
+        "Kampta kalmayacaklar"
+      ],
+      "tf": false,
+      "oops": "Ayrı liseler... İşte Kaygı'nın sahneye çıktığı an!",
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2"
+    },
+    {
+      "d": 2,
+      "q": "Ters Yüz 2'deki Gıpta, Riley'ye ne hissettirir?",
+      "a": [
+        "Başkalarında olana özenmeyi",
+        "Her şeyden sıkılmayı",
+        "Kızarıp utanmayı",
+        "Geleceği dert etmeyi"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2"
+    },
+    {
+      "d": 2,
+      "q": "Ters Yüz hangi dalda Oscar kazandı?",
+      "a": [
+        "En İyi Animasyon Film",
+        "En İyi Film",
+        "En İyi Şarkı",
+        "En İyi Kurgu"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out",
+      "oops": "Oscar heykelciği Neşe'nin rafında!"
+    },
+    {
+      "d": 2,
+      "q": "Neşe, Üzüntü ve Bing Bong merkeze dönmek için hangi taşıta yetişmeye çalışır?",
+      "a": [
+        "Trene",
+        "Gemiye",
+        "Uçağa",
+        "Teleferiğe"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 2,
+      "q": "Riley'nin zihninde unutulan anılar nereye gider?",
+      "a": [
+        "Hatıra çöplüğüne",
+        "Rüya stüdyosuna",
+        "Hayal diyarına",
+        "Kontrol paneline"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Ters_Yüz",
+      "oops": "Çöplükteki anılar zamanla silinip gider!"
+    },
+    {
+      "d": 2,
+      "q": "Doğru mu, yanlış mı? Ters Yüz 2'de Riley liseye başlamak üzeredir.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2"
+    },
+    {
+      "d": 3,
+      "q": "Bing Bong'un bedeni hangi hayvanların karışımıdır?",
+      "a": [
+        "Kedi, fil ve yunus",
+        "Köpek, at ve balina",
+        "Ayı, fil ve kuş",
+        "Kedi, aslan ve fok"
+      ],
+      "tf": false,
+      "src": "https://insideout.fandom.com/wiki/Bing_Bong"
+    },
+    {
+      "d": 3,
+      "q": "Akşam yemeğinde Riley'nin babasının duyguları kafasında ne izlemektedir?",
+      "a": [
+        "Bir hokey maçı",
+        "Bir korku filmi",
+        "Haber bülteni",
+        "Bir yemek programı"
+      ],
+      "tf": false,
+      "oops": "Babanın aklı yemekte değil, maçtaydı!",
+      "src": "https://insideout.fandom.com/wiki/Inside_Out"
+    },
+    {
+      "d": 3,
+      "q": "Riley'nin annesinin duyguları hangi eski hayali hatırlayıp iç çeker?",
+      "a": [
+        "Brezilyalı helikopter pilotu",
+        "İtalyan aşçı",
+        "Fransız ressam",
+        "Kanadalı hokeyci"
+      ],
+      "tf": false,
+      "oops": "Annenin duyguları hâlâ o pilotu unutamamış!",
+      "src": "https://insideout.fandom.com/wiki/Inside_Out"
+    },
+    {
+      "d": 3,
+      "q": "Hatıra çöplüğünde Neşe hangi anıyı izleyince Üzüntü'nün önemini anlar?",
+      "a": [
+        "Kaybedilen maçtan sonra teselli",
+        "Doğum günü partisi",
+        "İlk bisiklet sürüşü",
+        "Taşınma günü"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 3,
+      "q": "Riley'nin rüyaları zihnin neresinde hazırlanır?",
+      "a": [
+        "Bir film stüdyosunda",
+        "Bir mutfakta",
+        "Bir kütüphanede",
+        "Bir trende"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    },
+    {
+      "d": 3,
+      "q": "Ters Yüz 2'de Kaygı, eski duyguları nasıl yoldan çeker?",
+      "a": [
+        "Kavanoza kapatıp kasaya yollar",
+        "Hatıra çöplüğüne atar",
+        "Uykuya yatırır",
+        "Rüya stüdyosuna kilitler"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2"
+    },
+    {
+      "d": 3,
+      "q": "Ters Yüz 2'deki hokey kampını yöneten sert koçun adı nedir?",
+      "a": [
+        "Koç Roberts",
+        "Koç Carter",
+        "Koç Miller",
+        "Koç Davis"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2",
+      "oops": "Koç Roberts'ın defterine gizlice göz atmak lazım!"
+    },
+    {
+      "d": 3,
+      "q": "Ters Yüz 2'de duygular kasanın kapısını sonunda neyle açar?",
+      "a": [
+        "Dinamitle",
+        "Bir anahtarla",
+        "Bir halatla",
+        "Bir çekiçle"
+      ],
+      "tf": false,
+      "oops": "Kapıyı patlatan, Pouchy'nin çantasından çıkan dinamitti!",
+      "src": "https://insideout.fandom.com/wiki/Inside_Out_2"
+    },
+    {
+      "d": 3,
+      "q": "Ters Yüz 2'nin başında Neşe kötü anıları ne yapar?",
+      "a": [
+        "Zihnin gerisine fırlatır",
+        "Yakıp yok eder",
+        "Üzüntü'ye saklatır",
+        "Rüyaya çevirir"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2"
+    },
+    {
+      "d": 3,
+      "q": "Ters Yüz 2'nin son maçında Riley yanlışlıkla kime çarpar?",
+      "a": [
+        "Grace'e",
+        "Val'e",
+        "Bree'ye",
+        "Koç Roberts'a"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out_2"
+    },
+    {
+      "d": 3,
+      "q": "Türkçe dublajda (iki filmde de) Üzüntü'yü hangi ünlü oyuncu seslendirir?",
+      "a": [
+        "Gupse Özay",
+        "Aysun Topar",
+        "Demet Akbağ",
+        "Ezgi Mola"
+      ],
+      "tf": false,
+      "src": "https://www.milligazete.com.tr/ters-yuz-2-turkce-seslendirme-kadrosunda-kimler-var-nese-kaygi-uzuntu-ve-ofkeyi-kim-seslendiriyor"
+    },
+    {
+      "d": 3,
+      "q": "İlk Ters Yüz filminin yönetmeni kimdir?",
+      "a": [
+        "Pete Docter",
+        "John Lasseter",
+        "Brad Bird",
+        "Lee Unkrich"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Inside_Out"
+    }
+  ]
+}

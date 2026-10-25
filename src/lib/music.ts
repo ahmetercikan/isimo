@@ -5,7 +5,7 @@
  *   write   — yazarken / sırada: neşeli bilgi yarışması müziği
  *   tension — son saniyeler: düşünme sayacı döngüsü
  *   chill   — değerlendirme ve puanlar: lo-fi
- *   film    — Sinema Bilmecesi ipuçları: kara film cazı (dedektif havası)
+ *   film    — Sinema Bilmecesi: sakin lo-fi bilgi yarışması müziği (kara film cazı "fantastik" bulundu, değişti)
  *
  * Kayıtlı parçalar (25 Eki 2026): public/music/*.m4a, Pixabay (lisans: public/music/LISANS.txt). Hepsi YouTube Content ID'ye
  * **kayıtsız** seçildi: influencer oyunun ekran kaydını paylaşınca telif uyarısı çıkmasın. Eskiden bütün müzik
@@ -25,7 +25,7 @@ const TRACKS: Partial<Record<Mood, { src: string; level: number; seamless?: bool
   write: { src: 'music/game.m4a', level: 0.36 },
   tension: { src: 'music/tension.m4a', level: 0.4, seamless: true },
   chill: { src: 'music/chill.m4a', level: 0.4 },
-  film: { src: 'music/film.m4a', level: 0.42 },
+  film: { src: 'music/film.m4a', level: 0.4 },
 };
 /** Döngüde iki kopya arasındaki çapraz geçiş (sn). */
 const XF = 2.5;

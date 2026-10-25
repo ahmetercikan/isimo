@@ -1,0 +1,640 @@
+{
+  "id": "oyuncakhikayesi",
+  "title": "Oyuncak Hikâyesi",
+  "ask": "Sen ne kadar Andy'nin oyuncağısın?",
+  "scope": "Oyuncak Hikâyesi 1-4 (1995, 1999, 2010, 2019)",
+  "tiers": [
+    {
+      "name": "Çöp Kutusu Sakini",
+      "line": "Forky gibi kendini çöpe atma, bir daha dene!"
+    },
+    {
+      "name": "Kutudaki Madenci",
+      "line": "Kutundan hiç çıkmamışsın galiba."
+    },
+    {
+      "name": "Pizza Planet Uzaylısı",
+      "line": "Pençe seni seçti... ama yarı yolda bıraktı."
+    },
+    {
+      "name": "Sunnyside Kaçağı",
+      "line": "Kaçmayı başardın, eve az kaldı!"
+    },
+    {
+      "name": "Şerif Yardımcısı",
+      "line": "Woody şapkasını sana emanet ederdi."
+    },
+    {
+      "name": "Sonsuzluk ve Ötesi",
+      "line": "Çizmenin altında senin adın yazıyor olmalı!"
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "İlk üç filmde Woody'nin sahibi olan çocuk kimdir?",
+      "a": [
+        "Andy",
+        "Sid",
+        "Bonnie",
+        "Al"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story",
+      "oops": "Sid mi? Woody bunu duysa kaçacak yer arardı!"
+    },
+    {
+      "d": 1,
+      "q": "Woody nasıl bir oyuncaktır?",
+      "a": [
+        "İpli kovboy şerif bebeği",
+        "Uzay korucusu",
+        "Oyuncak dinozor",
+        "Kurmalı robot"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmde Buzz Işıkyılı başta kendisi hakkında neye inanır?",
+      "a": [
+        "Gerçek bir uzay korucusu olduğuna",
+        "Kovboy olduğuna",
+        "İnsan olduğuna",
+        "Bir uzaylı olduğuna"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story",
+      "oops": "Buzz uçtuğunu sanıyordu; aslında şık bir düşüştü!"
+    },
+    {
+      "d": 1,
+      "q": "Oyuncakları söküp tuhaf oyuncaklar yapan, Andy'nin yandaki komşusu kimdir?",
+      "a": [
+        "Sid",
+        "Al",
+        "Ken",
+        "Lotso"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story"
+    },
+    {
+      "d": 1,
+      "q": "Rex nasıl bir oyuncaktır?",
+      "a": [
+        "Dinozor",
+        "Timsah",
+        "Ejderha",
+        "Kertenkele"
+      ],
+      "tf": false,
+      "oops": "Rex bunu duysa yine panik atak geçirirdi!",
+      "src": "https://en.wikipedia.org/wiki/Toy_Story"
+    },
+    {
+      "d": 1,
+      "q": "Hamm nasıl bir oyuncaktır?",
+      "a": [
+        "Domuz kumbara",
+        "Oyuncak ayı",
+        "Tahta at",
+        "Oyuncak inek"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story",
+      "oops": "Hamm'ın içinde bozuk paralar şıngırdıyor!"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmde Woody, Andy'nin en sevdiği oyuncak olma yerini kime kaptıracağından korkar?",
+      "a": [
+        "Buzz Işıkyılı",
+        "Rex",
+        "Bay Patates Kafa",
+        "Slinky"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story"
+    },
+    {
+      "d": 1,
+      "q": "Andy'nin adı Woody'nin neresinde yazılıdır?",
+      "a": [
+        "Çizmesinin altında",
+        "Şapkasının içinde",
+        "Sırtında",
+        "Kemerinde"
+      ],
+      "tf": false,
+      "oops": "Çizmenin altına bak: A-N-D-Y!",
+      "src": "https://pixar.fandom.com/wiki/Sheriff_Woody"
+    },
+    {
+      "d": 1,
+      "q": "Bo Peep'in yanında hangi hayvanlar vardır?",
+      "a": [
+        "Koyunlar",
+        "Kediler",
+        "Atlar",
+        "Tavşanlar"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_4"
+    },
+    {
+      "d": 1,
+      "q": "İkinci filmde Woody'yi kaçıran oyuncak koleksiyoncusu kimdir?",
+      "a": [
+        "Al",
+        "Sid",
+        "Lotso",
+        "Zurg"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_2"
+    },
+    {
+      "d": 1,
+      "q": "Woody'nin ikinci filmde tanıştığı, yodel yapan kovboy kız kimdir?",
+      "a": [
+        "Jessie",
+        "Bo Peep",
+        "Barbie",
+        "Bonnie"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_2",
+      "oops": "Yii-haa! Jessie'yi nasıl unutursun?"
+    },
+    {
+      "d": 1,
+      "q": "Üçüncü filmde Andy'nin oyuncakları yanlışlıkla nereye bağışlanır?",
+      "a": [
+        "Sunnyside Kreşi'ne",
+        "Al'ın mağazasına",
+        "Pizza Planet'e",
+        "Sid'in evine"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Oyuncak_Hikâyesi_3",
+      "oops": "Sunnyside güneşli görünür ama..."
+    },
+    {
+      "d": 1,
+      "q": "Sunnyside Kreşi'ni gizlice yöneten pembe oyuncak ayının adı nedir?",
+      "a": [
+        "Lotso",
+        "Ken",
+        "Chuckles",
+        "Wheezy"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Oyuncak_Hikâyesi_3",
+      "oops": "Çilek kokulu ama kalbi pek tatlı değil!"
+    },
+    {
+      "d": 1,
+      "q": "Üçüncü filmde Ken kime ilk görüşte âşık olur?",
+      "a": [
+        "Barbie",
+        "Jessie",
+        "Bo Peep",
+        "Bayan Patates Kafa"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Oyuncak_Hikâyesi_3"
+    },
+    {
+      "d": 1,
+      "q": "Üçüncü filmin sonunda Andy oyuncaklarını kime verir?",
+      "a": [
+        "Bonnie'ye",
+        "Kardeşi Molly'ye",
+        "Sid'e",
+        "Emily'ye"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_3"
+    },
+    {
+      "d": 1,
+      "q": "Bonnie, Forky'yi neyden yapar?",
+      "a": [
+        "Plastik bir çatal-kaşıktan",
+        "Tahta bir kaşıktan",
+        "Bir pipetten",
+        "Bir diş fırçasından"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_4",
+      "oops": "Çatal-kaşık + oynar gözler = Forky!"
+    },
+    {
+      "d": 1,
+      "q": "Forky başta kendisinin ne olduğuna inanır?",
+      "a": [
+        "Çöp",
+        "Bir uzay korucusu",
+        "Bir şerif",
+        "Bir oyuncak"
+      ],
+      "tf": false,
+      "oops": "Forky'nin en sevdiği yer: çöp kutusu!",
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_4"
+    },
+    {
+      "d": 1,
+      "q": "Oyuncak Hikâyesi 4'te Woody yıllar sonra kimle yeniden karşılaşır?",
+      "a": [
+        "Bo Peep",
+        "Emily",
+        "Al",
+        "Sid"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_4"
+    },
+    {
+      "d": 1,
+      "q": "Oyuncak Hikâyesi 4'ün sonunda Woody ne yapmaya karar verir?",
+      "a": [
+        "Bo Peep ile kalmaya",
+        "Andy'nin yanına dönmeye",
+        "Japonya'ya gitmeye",
+        "Sunnyside'a dönmeye"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_4",
+      "oops": "Woody bu kez kayıp oyuncaklarla, Bo'yla kaldı."
+    },
+    {
+      "d": 1,
+      "q": "Doğru mu, yanlış mı? Rex hiçbir şeyden korkmayan, çok cesur bir dinozordur.",
+      "a": [
+        "Yanlış",
+        "Doğru"
+      ],
+      "tf": true,
+      "oops": "Rex tam bir korkak; ama kalbi kocaman!",
+      "src": "https://pixar.fandom.com/wiki/Rex"
+    },
+    {
+      "d": 2,
+      "q": "Buzz, oyuncak olduğunu neyi görünce anlar?",
+      "a": [
+        "Televizyonda kendi reklamını",
+        "Kutusunun üstündeki yazıyı",
+        "Andy'nin defterini",
+        "Aynadaki yansımasını"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story"
+    },
+    {
+      "d": 2,
+      "q": "Pizza Planet'teki küçük yeşil uzaylıların hayranlıkla bağlı olduğu şey nedir?",
+      "a": [
+        "Pençe",
+        "Buzz",
+        "Ay",
+        "Pizza"
+      ],
+      "tf": false,
+      "oops": "Ooooh! Pençe seçer, pençe karar verir!",
+      "src": "https://pixar.fandom.com/wiki/Aliens"
+    },
+    {
+      "d": 2,
+      "q": "Sid'in köpeğinin adı nedir?",
+      "a": [
+        "Scud",
+        "Buster",
+        "Bullseye",
+        "Dragon"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story",
+      "oops": "Buster, Andy'nin köpeği; Scud ise korkulu rüya!"
+    },
+    {
+      "d": 2,
+      "q": "Sid, Buzz'ı neye bantlar?",
+      "a": [
+        "Bir havai fişek roketine",
+        "Bir uçurtmaya",
+        "Bir balona",
+        "Uzaktan kumandalı arabaya"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story"
+    },
+    {
+      "d": 2,
+      "q": "İlk filmin sonunda Noel'de Andy'ye gelen ve oyuncakları tedirgin eden hediye nedir?",
+      "a": [
+        "Bir köpek yavrusu",
+        "Yeni bir Buzz",
+        "Bir dinozor",
+        "Bir bisiklet"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story"
+    },
+    {
+      "d": 2,
+      "q": "İkinci filmde Andy, Woody'nin koluna ne olmasına yol açar?",
+      "a": [
+        "Oynarken yanlışlıkla yırtar",
+        "Köpeğe ısırtır",
+        "Kapıya sıkıştırır",
+        "Boyayla boyar"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_2"
+    },
+    {
+      "d": 2,
+      "q": "Al'ın topladığı koleksiyon nereye satılacaktır?",
+      "a": [
+        "Japonya'da bir oyuncak müzesine",
+        "Paris'te bir sergiye",
+        "Londra'da bir mağazaya",
+        "New York'ta bir müzayedeye"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_2",
+      "oops": "Konnichiwa! Müze Japonya'daydı."
+    },
+    {
+      "d": 2,
+      "q": "İmparator Zurg, Buzz'a kendisinin onun nesi olduğunu söyler?",
+      "a": [
+        "Babası",
+        "Ağabeyi",
+        "Kuzeni",
+        "Dedesi"
+      ],
+      "tf": false,
+      "oops": "Uzayın en ünlü aile sırrı!",
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_2"
+    },
+    {
+      "d": 2,
+      "q": "İkinci filmde Bay Patates Kafa'ya \"sonsuza dek minnettarız\" diyen ve onun evlatlığı olanlar kimlerdir?",
+      "a": [
+        "Üç yeşil uzaylı",
+        "Yeşil askerler",
+        "Barbie'ler",
+        "Rex'in yavruları"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Mr._Potato_Head"
+    },
+    {
+      "d": 2,
+      "q": "Ses kutusu bozuk olduğu için rafa kaldırılan Wheezy nasıl bir oyuncaktır?",
+      "a": [
+        "Penguen",
+        "Ördek",
+        "Fok",
+        "Kurbağa"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_2",
+      "oops": "Wheezy, ses kutusu tamir olunca şarkıcı oldu!"
+    },
+    {
+      "d": 2,
+      "q": "Lotso'nun özelliği olan güzel koku nedir?",
+      "a": [
+        "Çilek",
+        "Çikolata",
+        "Vanilya",
+        "Nane"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Lotso"
+    },
+    {
+      "d": 2,
+      "q": "Üçüncü filmde Buzz yanlışlıkla hangi moda geçer?",
+      "a": [
+        "İspanyolca moduna",
+        "Fransızca moduna",
+        "Uyku moduna",
+        "Robot moduna"
+      ],
+      "tf": false,
+      "oops": "¡Hola! Buzz İspanyolca modda dans bile etti!",
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_3"
+    },
+    {
+      "d": 2,
+      "q": "Oyuncak Hikâyesi 3'ün Türkçe dublajında Ken'i hangi ünlü oyuncu seslendirdi?",
+      "a": [
+        "Kıvanç Tatlıtuğ",
+        "Kenan İmirzalıoğlu",
+        "Çağatay Ulusoy",
+        "Burak Özçivit"
+      ],
+      "tf": false,
+      "src": "https://www.milliyet.com.tr/kultur-sanat/beren-ve-kivanc-oyuncak-hikayesi-3te-1251971"
+    },
+    {
+      "d": 2,
+      "q": "Üçüncü filmde oyuncakları çöplükte dev bir pençeyle kurtaranlar kimlerdir?",
+      "a": [
+        "Yeşil uzaylılar",
+        "Lotso ve ekibi",
+        "Ken ile Barbie",
+        "Yeşil askerler"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_3"
+    },
+    {
+      "d": 2,
+      "q": "Gabby Gabby, Woody'den neyini almak ister?",
+      "a": [
+        "Ses kutusunu",
+        "Şapkasını",
+        "Şerif yıldızını",
+        "Çizmelerini"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_4",
+      "oops": "Gabby'nin derdi Woody'nin ses kutusuydu!"
+    },
+    {
+      "d": 2,
+      "q": "Duke Caboom nasıl bir oyuncaktır?",
+      "a": [
+        "Motosikletli dublör",
+        "Kovboy",
+        "Astronot",
+        "Polis memuru"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_4"
+    },
+    {
+      "d": 2,
+      "q": "Oyuncak Hikâyesi 4'te Woody arkadaşlarına veda ederken şerif yıldızını kime bırakır?",
+      "a": [
+        "Jessie'ye",
+        "Buzz'a",
+        "Forky'ye",
+        "Bo Peep'e"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Sheriff_Woody"
+    },
+    {
+      "d": 2,
+      "q": "Doğru mu, yanlış mı? Üçüncü filmde Andy, Woody'yi de Bonnie'ye verir.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_3"
+    },
+    {
+      "d": 3,
+      "q": "Oyuncak Hikâyesi sinema tarihinde hangi ilke imza atmıştır?",
+      "a": [
+        "Tamamen bilgisayarla ilk uzun film",
+        "İlk renkli çizgi film",
+        "İlk sesli çizgi film",
+        "İlk 3D gözlüklü film"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story"
+    },
+    {
+      "d": 3,
+      "q": "Al, kendi oyuncak mağazasının reklamlarında hangi kostümü giyer?",
+      "a": [
+        "Tavuk kostümü",
+        "Kovboy kostümü",
+        "Astronot kostümü",
+        "Ayı kostümü"
+      ],
+      "tf": false,
+      "oops": "Gıt gıdak! Al'ın tavuk kostümü unutulur mu?",
+      "src": "https://pixar.fandom.com/wiki/Toy_Story_2"
+    },
+    {
+      "d": 3,
+      "q": "Jessie'nin büyüyünce onu bağışlayan eski sahibinin adı nedir?",
+      "a": [
+        "Emily",
+        "Bonnie",
+        "Hannah",
+        "Molly"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_2"
+    },
+    {
+      "d": 3,
+      "q": "Hiç kutusundan çıkmamış madenci oyuncak, ikinci filmin sonunda nereye gider?",
+      "a": [
+        "Bir kızın sırt çantasına",
+        "Japonya'daki müzeye",
+        "Çöpe",
+        "Andy'nin odasına"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_2"
+    },
+    {
+      "d": 3,
+      "q": "Sunnyside'da güvenlik kameralarını izleyip kaçışları engelleyen oyuncak hangisidir?",
+      "a": [
+        "Zilli maymun",
+        "Big Baby",
+        "Chuckles",
+        "Ken"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Toy_Story_3"
+    },
+    {
+      "d": 3,
+      "q": "Üçüncü filmin sonunda Lotso'nun başına ne gelir?",
+      "a": [
+        "Bir çöp kamyonunun önüne bağlanır",
+        "Bonnie'nin evine gider",
+        "Müzeye satılır",
+        "Sunnyside'ın başına geçer"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_3"
+    },
+    {
+      "d": 3,
+      "q": "Bay Patates Kafa, Sunnyside'dan kaçarken parçalarını geçici olarak neye takar?",
+      "a": [
+        "Bir tortillaya",
+        "Bir elmaya",
+        "Bir çoraba",
+        "Bir simide"
+      ],
+      "tf": false,
+      "oops": "Bay Tortilla Kafa! Güvercin bile beğendi.",
+      "src": "https://pixar.fandom.com/wiki/Mr._Potato_Head"
+    },
+    {
+      "d": 3,
+      "q": "Duke Caboom hangi ülkenin dublörüdür?",
+      "a": [
+        "Kanada",
+        "Meksika",
+        "Fransa",
+        "Japonya"
+      ],
+      "tf": false,
+      "oops": "Kanada'nın en büyük dublörünü unuttun!",
+      "src": "https://pixar.fandom.com/wiki/Duke_Caboom"
+    },
+    {
+      "d": 3,
+      "q": "Oyuncak Hikâyesi 4'ün sonunda Bonnie, Forky'ye arkadaş olarak neyden oyuncak yapar?",
+      "a": [
+        "Plastik bir bıçaktan",
+        "Bir kaşıktan",
+        "Bir kalemden",
+        "Bir pipetten"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story_4"
+    },
+    {
+      "d": 3,
+      "q": "Serinin şarkılarını ve müziklerini yapan besteci kimdir?",
+      "a": [
+        "Randy Newman",
+        "Elton John",
+        "Hans Zimmer",
+        "Phil Collins"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story",
+      "oops": "\"You've Got a Friend in Me\" da onun eseri!"
+    },
+    {
+      "d": 3,
+      "q": "Doğru mu, yanlış mı? Sid, Andy'nin kuzenidir.",
+      "a": [
+        "Yanlış",
+        "Doğru"
+      ],
+      "tf": true,
+      "src": "https://en.wikipedia.org/wiki/Toy_Story",
+      "oops": "Sid kuzen değil, korkutucu komşu!"
+    }
+  ]
+}

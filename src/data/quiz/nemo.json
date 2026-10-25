@@ -1,0 +1,653 @@
+{
+  "id": "nemo",
+  "title": "Kayıp Balık Nemo ve Dori",
+  "ask": "Sen ne kadar resif balığısın?",
+  "scope": "Kayıp Balık Nemo (2003) ve Kayıp Balık Dori (2016)",
+  "tiers": [
+    {
+      "name": "Akvaryum Çakılı",
+      "line": "Camın arkasından izlemişsin galiba."
+    },
+    {
+      "name": "Aç Martı",
+      "line": "Benim! Benim! diye bağırdın ama pek tutmadı."
+    },
+    {
+      "name": "Unutkan Balık",
+      "line": "Bildiğin çok şey var, hatırlasan yeter!"
+    },
+    {
+      "name": "Akvaryum Çetesi",
+      "line": "Gill seni kaçış planına almak istiyor."
+    },
+    {
+      "name": "Akıntı Sörfçüsü",
+      "line": "Crush bile sana 'süpersin dostum' der."
+    },
+    {
+      "name": "Okyanus Efsanesi",
+      "line": "Sidney'den Kaliforniya'ya, her dalgayı biliyorsun!"
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Nemo ne tür bir balıktır?",
+      "a": [
+        "Palyaço balığı",
+        "Japon balığı",
+        "Kılıç balığı",
+        "Ton balığı"
+      ],
+      "tf": false,
+      "oops": "Ton balığı mı? Nemo konserve olmaz!",
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 1,
+      "q": "Nemo'nun babasının adı nedir?",
+      "a": [
+        "Marlin",
+        "Gill",
+        "Crush",
+        "Bruce"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Kayıp_Balık_Nemo"
+    },
+    {
+      "d": 1,
+      "q": "Dori'nin en büyük sorunu nedir?",
+      "a": [
+        "Çabuk unutması",
+        "Yüzememesi",
+        "Çok utangaç olması",
+        "Karanlıktan korkması"
+      ],
+      "tf": false,
+      "oops": "Neydi soru? Hah, unutkanlık tabii!",
+      "src": "https://en.wikipedia.org/wiki/Finding_Dory"
+    },
+    {
+      "d": 1,
+      "q": "Dori hangi renktir?",
+      "a": [
+        "Mavi",
+        "Turuncu",
+        "Kırmızı",
+        "Mor"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 1,
+      "q": "Nemo'nun yüzgeçlerinden biri diğerinden küçüktür.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 1,
+      "q": "Nemo'yu okyanustan kim yakalar?",
+      "a": [
+        "Dalgıçlar",
+        "Bir köpekbalığı",
+        "Bir pelikan",
+        "Bir balıkçı teknesi"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 1,
+      "q": "Nemo yakalandıktan sonra hangi şehre götürülür?",
+      "a": [
+        "Sidney",
+        "Londra",
+        "New York",
+        "Tokyo"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo",
+      "oops": "Tokyo mu? Nemo pasaport çıkarmadı ki!"
+    },
+    {
+      "d": 1,
+      "q": "Nemo'nun konduğu akvaryum nerededir?",
+      "a": [
+        "Diş hekiminin muayenehanesinde",
+        "Bir restoranda",
+        "Bir okulda",
+        "Bir hayvanat bahçesinde"
+      ],
+      "tf": false,
+      "oops": "Restoran mı? Aman, Nemo'yu menüye koyma!",
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 1,
+      "q": "Marlin ile Dori'yi akıntıda taşıyan Crush hangi hayvandır?",
+      "a": [
+        "Deniz kaplumbağası",
+        "Yunus",
+        "Balina",
+        "Ahtapot"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Crush"
+    },
+    {
+      "d": 1,
+      "q": "Dori hangi 'dili' konuşabildiğini söyler?",
+      "a": [
+        "Balinaca",
+        "Martıca",
+        "Yengeççe",
+        "Köpekbalığıca"
+      ],
+      "tf": false,
+      "oops": "Uuuuuuu! Balinaca konuşuyorum, anladın mı?",
+      "src": "https://pixar.fandom.com/wiki/Dory"
+    },
+    {
+      "d": 1,
+      "q": "Kızınca kocaman dikenli bir topa dönüşen akvaryum balığı Bloat nedir?",
+      "a": [
+        "Balon balığı",
+        "Deniz yıldızı",
+        "Karides",
+        "Denizatı"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Bloat",
+      "oops": "Bloat kızınca top gibi şişer, dokunma!"
+    },
+    {
+      "d": 1,
+      "q": "Limandaki martıların sürekli bağırışları ne anlama gelir?",
+      "a": [
+        "Benim!",
+        "Yemek!",
+        "İmdat!",
+        "Merhaba!"
+      ],
+      "tf": false,
+      "oops": "Benim! Benim! Benim! Martılar paylaşmayı sevmez.",
+      "src": "https://pixar.fandom.com/wiki/Seagulls"
+    },
+    {
+      "d": 1,
+      "q": "Nemo'nun okuldaki öğretmeni hangi hayvandır?",
+      "a": [
+        "Vatoz",
+        "Ahtapot",
+        "Kaplumbağa",
+        "Yengeç"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Mr._Ray"
+    },
+    {
+      "d": 1,
+      "q": "Kayıp Balık Dori'deki huysuz ahtapot Hank'in kaç kolu vardır?",
+      "a": [
+        "Yedi",
+        "Sekiz",
+        "Altı",
+        "On"
+      ],
+      "tf": false,
+      "oops": "Hank bir kolunu kaybetmiş, 'yedipus' oldu!",
+      "src": "https://pixar.fandom.com/wiki/Hank"
+    },
+    {
+      "d": 1,
+      "q": "Dori'nin şarkı gibi tekrarladığı öğüdün anlamı nedir?",
+      "a": [
+        "Yüzmeye devam et",
+        "Hemen geri dön",
+        "Bir yere saklan",
+        "Biraz uyu"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Dory"
+    },
+    {
+      "d": 1,
+      "q": "Kayıp Balık Nemo'yu hangi stüdyo yaptı?",
+      "a": [
+        "Pixar",
+        "DreamWorks",
+        "Blue Sky",
+        "Illumination"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Kayıp_Balık_Nemo",
+      "oops": "DreamWorks Şrek'in evi; Nemo bir Pixar balığı!"
+    },
+    {
+      "d": 1,
+      "q": "Marlin ile Dori'yi yutup Sidney limanına püskürten hayvan hangisidir?",
+      "a": [
+        "Balina",
+        "Köpekbalığı",
+        "Dev kalamar",
+        "Pelikan"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo",
+      "oops": "Sidney'e yolculukta beklenmedik bir yol arkadaşı!"
+    },
+    {
+      "d": 1,
+      "q": "Marlin ile Dori'nin yolda tanıştığı Bruce hangi hayvandır?",
+      "a": [
+        "Köpekbalığı",
+        "Yunus",
+        "Deniz kaplumbağası",
+        "Fok"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Bruce"
+    },
+    {
+      "d": 1,
+      "q": "Kayıp Balık Dori'de Dori kimi aramak için yola çıkar?",
+      "a": [
+        "Annesiyle babasını",
+        "Nemo'yu",
+        "Crush'ı",
+        "Kayıp yumurtasını"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Dory",
+      "oops": "Nemo zaten bulundu; bu kez sıra Dori'nin ailesinde!"
+    },
+    {
+      "d": 1,
+      "q": "Diş hekiminin, balık bakmayı hiç beceremeyen yaramaz yeğeni kimdir?",
+      "a": [
+        "Darla",
+        "Becky",
+        "Peach",
+        "Jenny"
+      ],
+      "tf": false,
+      "oops": "Darla geliyor! Herkes ölü taklidi yapsın!",
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 2,
+      "q": "Bruce'un köpekbalığı grubunun sloganı hangi düşünceyi anlatır?",
+      "a": [
+        "Balıklar dosttur, yemek değil",
+        "En güçlü olan kazanır",
+        "Okyanus bizimdir",
+        "Önce yemek, sonra uyku"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Bruce",
+      "oops": "Bruce diyete sadık... çoğu zaman!"
+    },
+    {
+      "d": 2,
+      "q": "Bruce hangi tür köpekbalığıdır?",
+      "a": [
+        "Büyük beyaz köpekbalığı",
+        "Çekiç başlı köpekbalığı",
+        "Balina köpekbalığı",
+        "Kaplan köpekbalığı"
+      ],
+      "tf": false,
+      "oops": "Çekiç başlı olan arkadaşı Anchor'dı!",
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 2,
+      "q": "Crush'ın sörfçü gibi konuşan küçük oğlunun adı nedir?",
+      "a": [
+        "Squirt",
+        "Nemo",
+        "Bloat",
+        "Hank"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Squirt"
+    },
+    {
+      "d": 2,
+      "q": "Marlin ile Dori, akıntıya kapılmadan önce hangi tehlikede bayılır?",
+      "a": [
+        "Denizanası ormanında sokulunca",
+        "Ağa takılınca",
+        "Buzda donunca",
+        "Kuma gömülünce"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo",
+      "oops": "Denizanası ormanı: dokunmak yok, zıplamak serbest!"
+    },
+    {
+      "d": 2,
+      "q": "Karanlık derinlikte Dori, adresi okumak için hangi balığın ışığını kullanır?",
+      "a": [
+        "Fener balığının",
+        "Denizanasının",
+        "Ateş böceğinin",
+        "Yıldız balığının"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 2,
+      "q": "Diş hekimindeki 'Akvaryum Çetesi'nin lideri kimdir?",
+      "a": [
+        "Gill",
+        "Bloat",
+        "Jacques",
+        "Peach"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Gill",
+      "oops": "Gill'in yara izli yüzgeci her şeyi anlatır."
+    },
+    {
+      "d": 2,
+      "q": "Akvaryumu pırıl pırıl tutmaya çalışan Jacques hangi hayvandır?",
+      "a": [
+        "Temizlikçi karides",
+        "Deniz yıldızı",
+        "Yengeç",
+        "Salyangoz"
+      ],
+      "tf": false,
+      "oops": "Jacques karidestir; temizlik onun işi, ooh la la!",
+      "src": "https://pixar.fandom.com/wiki/Jacques"
+    },
+    {
+      "d": 2,
+      "q": "Akvaryumdaki balıklarla sohbet eden, haberleri getiren pelikanın adı nedir?",
+      "a": [
+        "Nigel",
+        "Crush",
+        "Bailey",
+        "Squirt"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 2,
+      "q": "Gill'in kaçış planında Nemo neyi tıkayacaktı?",
+      "a": [
+        "Akvaryumun filtresini",
+        "Lavabonun deliğini",
+        "Hekimin çantasını",
+        "Su borusunu"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 2,
+      "q": "Nemo diş hekiminin muayenehanesinden okyanusa nasıl kaçar?",
+      "a": [
+        "Lavabonun giderinden",
+        "Pelikanın gagasında",
+        "Darla'nın çantasında",
+        "Bir kovayla"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo",
+      "oops": "Lavabodan okyanusa: bütün giderler denize çıkar!"
+    },
+    {
+      "d": 2,
+      "q": "Balıkçı ağına yakalanan balıkları Nemo nasıl kurtarır?",
+      "a": [
+        "Hep birlikte aşağı yüzdürerek",
+        "Ağı ısırarak",
+        "Ağırlık bularak",
+        "Martıları çağırarak"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 2,
+      "q": "Dori, ailesini bulmak için okyanusu geçip hangi eyalete gider?",
+      "a": [
+        "Kaliforniya",
+        "Florida",
+        "Teksas",
+        "Alaska"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Dory",
+      "oops": "Florida değil; Dori'nin yolu Kaliforniya'ya!"
+    },
+    {
+      "d": 2,
+      "q": "Dori'nin çocukluk arkadaşı Destiny hangi hayvandır?",
+      "a": [
+        "Balina köpekbalığı",
+        "Beluga balinası",
+        "Yunus",
+        "Deniz aslanı"
+      ],
+      "tf": false,
+      "oops": "Beluga olan Bailey! Destiny dev bir köpekbalığı.",
+      "src": "https://pixar.fandom.com/wiki/Destiny"
+    },
+    {
+      "d": 2,
+      "q": "Sonar yeteneğinin bozulduğunu sanan Bailey hangi hayvandır?",
+      "a": [
+        "Beluga balinası",
+        "Balina köpekbalığı",
+        "Ahtapot",
+        "Deniz kaplumbağası"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Bailey"
+    },
+    {
+      "d": 2,
+      "q": "Dori'nin annesiyle babası, kızları yolu bulsun diye ne bırakır?",
+      "a": [
+        "Deniz kabuklarından izler",
+        "Kumda ok işaretleri",
+        "Yosundan oklar",
+        "Şişe içinde mektup"
+      ],
+      "tf": false,
+      "oops": "Kabukları takip et, aileni bulursun!",
+      "src": "https://en.wikipedia.org/wiki/Finding_Dory"
+    },
+    {
+      "d": 2,
+      "q": "Kayıp Balık Dori'nin finalinde Dori ve Hank kamyonu ne yapar?",
+      "a": [
+        "Denize sürer",
+        "Uçuruma bırakır",
+        "Garaja kilitler",
+        "Ormana sürer"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Dory"
+    },
+    {
+      "d": 2,
+      "q": "Kayıp Balık Nemo'nun Türkçe dublajında Dori'yi kim seslendirdi?",
+      "a": [
+        "Tilbe Saran",
+        "Ayça Bingöl",
+        "Oya Prosçiler",
+        "Özden Ayyıldız"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Kayıp_Balık_Nemo"
+    },
+    {
+      "d": 2,
+      "q": "Kayıp Balık Nemo, En İyi Animasyon dalında Oscar kazandı.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://tr.wikipedia.org/wiki/Kayıp_Balık_Nemo"
+    },
+    {
+      "d": 3,
+      "q": "Dori'nin ezberlediği 'P. Sherman, Wallaby Yolu' adresindeki kapı numarası kaçtır?",
+      "a": [
+        "42",
+        "24",
+        "7",
+        "101"
+      ],
+      "tf": false,
+      "oops": "P. Sherman, Wallaby Yolu 42, Sidney! Dori bile hatırlıyor.",
+      "src": "https://pixar.fandom.com/wiki/Dory"
+    },
+    {
+      "d": 3,
+      "q": "Crush, Marlin'e kaç yaşında olduğunu söyler?",
+      "a": [
+        "150",
+        "50",
+        "100",
+        "300"
+      ],
+      "tf": false,
+      "oops": "150 yaşında ve hâlâ genç, dostum!",
+      "src": "https://pixar.fandom.com/wiki/Crush"
+    },
+    {
+      "d": 3,
+      "q": "Marlin ile Dori'yi Sidney'e doğru taşıyan akıntının adı nedir?",
+      "a": [
+        "Doğu Avustralya Akıntısı",
+        "Kaliforniya Akıntısı",
+        "Golf Akıntısı",
+        "Büyük Mercan Akıntısı"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 3,
+      "q": "Hank, Dori'ye yardım etmenin karşılığında nereye gitmek ister?",
+      "a": [
+        "Cleveland'daki akvaryuma",
+        "Açık okyanusa",
+        "Sidney limanına",
+        "Büyük Set Resifi'ne"
+      ],
+      "tf": false,
+      "oops": "Okyanus mu? Hank orayı hiç istemez!",
+      "src": "https://pixar.fandom.com/wiki/Hank"
+    },
+    {
+      "d": 3,
+      "q": "Destiny'nin bir türlü düzgün yüzememesinin sebebi nedir?",
+      "a": [
+        "İyi görememesi",
+        "Yüzgecinin küçük olması",
+        "Çok yaşlı olması",
+        "Suyun sığ olması"
+      ],
+      "tf": false,
+      "src": "https://pixar.fandom.com/wiki/Destiny"
+    },
+    {
+      "d": 3,
+      "q": "Küçük Dori ailesinden nasıl ayrı düşmüştü?",
+      "a": [
+        "Akıntıyla borulardan sürüklenip",
+        "Bir balıkçı ağına takılıp",
+        "Bir köpekbalığından kaçıp",
+        "Bir dalgıç yakalayıp"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Dory"
+    },
+    {
+      "d": 3,
+      "q": "Marlin ile Nemo'yu kovaya alıp enstitüye uçuran kuşun adı nedir?",
+      "a": [
+        "Becky",
+        "Nigel",
+        "Gerald",
+        "Bailey"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Dory"
+    },
+    {
+      "d": 3,
+      "q": "Kayıp Balık Dori'de batık gemide Nemo'yu kovalayan yaratık hangisidir?",
+      "a": [
+        "Dev kalamar",
+        "Fener balığı",
+        "Köpekbalığı",
+        "Dev yengeç"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Dory"
+    },
+    {
+      "d": 3,
+      "q": "Kayıp Balık Nemo'nun Türkçe dublajında Marlin'i kim seslendirdi?",
+      "a": [
+        "Naşit Özcan",
+        "Okan Bayülgen",
+        "Yekta Kopan",
+        "Haluk Bilginer"
+      ],
+      "tf": false,
+      "src": "https://tr.wikipedia.org/wiki/Kayıp_Balık_Nemo"
+    },
+    {
+      "d": 3,
+      "q": "Kayıp Balık Nemo'nun sonunda akvaryum çetesi de kaçıp limana ulaşır.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 3,
+      "q": "Gill'in planına göre balıklar muayenehaneden limana nasıl ulaşacaktı?",
+      "a": [
+        "Poşetle pencereden yuvarlanarak",
+        "Lavabodan kayarak",
+        "Pelikana binerek",
+        "Kova ile taşınarak"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Finding_Nemo"
+    },
+    {
+      "d": 3,
+      "q": "Kayalıklarını kimseyle paylaşmayan tembel ikili Fluke ile Rudder hangi hayvandır?",
+      "a": [
+        "Deniz aslanı",
+        "Mors",
+        "Penguen",
+        "Su samuru"
+      ],
+      "tf": false,
+      "oops": "Off! Off! Off! Kayaya yaklaşma, burası onların!",
+      "src": "https://pixar.fandom.com/wiki/Fluke_and_Rudder"
+    }
+  ]
+}

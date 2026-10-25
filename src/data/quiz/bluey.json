@@ -1,0 +1,644 @@
+{
+  "id": "bluey",
+  "title": "Bluey ve Bingo",
+  "ask": "Sen ne kadar Heeler'sın?",
+  "scope": "Bluey çizgi dizisi (2018–)",
+  "tiers": [
+    {
+      "name": "Kaçak Balon",
+      "line": "Oyun başlamadan yere düştün, bir tur daha!"
+    },
+    {
+      "name": "Kreş Çaylağı",
+      "line": "Bingo'nun kreşine yeni başlamış gibisin."
+    },
+    {
+      "name": "Yan Komşu",
+      "line": "Çitin üstünden arada bir bakıyorsun, fena değil."
+    },
+    {
+      "name": "Kuzen Muffin",
+      "line": "Biraz gürültülüsün ama artık ailedensin!"
+    },
+    {
+      "name": "Calypso'nun Gözdesi",
+      "line": "Öğretmen seni sınıfın yıldızı seçti."
+    },
+    {
+      "name": "Tam Bir Heeler",
+      "line": "Bandit bile yeni oyunları senden öğreniyor!"
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Bluey ve Bingo hangi hayvandır?",
+      "a": [
+        "Köpek",
+        "Kedi",
+        "Tilki",
+        "Kanguru"
+      ],
+      "tf": false,
+      "oops": "Kanguru mu? Avustralya'dalar ama zıplamıyorlar!",
+      "src": "https://bluey.fandom.com/wiki/Bluey_Heeler"
+    },
+    {
+      "d": 1,
+      "q": "Bluey ile Bingo'nun babasının adı ne?",
+      "a": [
+        "Bandit",
+        "Stripe",
+        "Pat",
+        "Rad"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Bandit_Heeler"
+    },
+    {
+      "d": 1,
+      "q": "Bluey ile Bingo'nun annesinin adı ne?",
+      "a": [
+        "Chilli",
+        "Trixie",
+        "Wendy",
+        "Calypso"
+      ],
+      "tf": false,
+      "oops": "Calypso öğretmen! Anneyle karıştırma.",
+      "src": "https://bluey.fandom.com/wiki/Chilli_Heeler"
+    },
+    {
+      "d": 1,
+      "q": "Bingo, Bluey'nin küçük kız kardeşidir.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://bluey.fandom.com/wiki/Bingo_Heeler"
+    },
+    {
+      "d": 1,
+      "q": "Bingo'nun tüyleri hangi renktir?",
+      "a": [
+        "Turuncu-kızıl",
+        "Mavi",
+        "Bembeyaz",
+        "Siyah benekli"
+      ],
+      "tf": false,
+      "oops": "Mavi olan Bluey! Adı üstünde.",
+      "src": "https://bluey.fandom.com/wiki/Bingo_Heeler"
+    },
+    {
+      "d": 1,
+      "q": "Heeler ailesinde kaç çocuk var?",
+      "a": [
+        "İki",
+        "Bir",
+        "Üç",
+        "Dört"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Bluey_(2018_TV_series)"
+    },
+    {
+      "d": 1,
+      "q": "Bluey ile Bingo'nun sihirli ksilofonu neye yarar?",
+      "a": [
+        "Birini dondurmaya",
+        "Birini görünmez yapmaya",
+        "Birini uçurmaya",
+        "Birini küçültmeye"
+      ],
+      "tf": false,
+      "oops": "Ding! Sen de olduğun yerde dondun galiba.",
+      "src": "https://bluey.fandom.com/wiki/The_Magic_Xylophone"
+    },
+    {
+      "d": 1,
+      "q": "Keepy Uppy oyununda amaç nedir?",
+      "a": [
+        "Balonu yere düşürmemek",
+        "Topu sepete atmak",
+        "En hızlı koşmak",
+        "Saklanıp bulunmamak"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Keepy_Uppy"
+    },
+    {
+      "d": 1,
+      "q": "Bluey dizisi hangi ülkede geçer?",
+      "a": [
+        "Avustralya",
+        "Yeni Zelanda",
+        "İngiltere",
+        "Kanada"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Bluey_(2018_TV_series)",
+      "oops": "Kanada mı? Orada kanguru yok ki!"
+    },
+    {
+      "d": 1,
+      "q": "Muffin ve Socks, Bluey'nin nesi olur?",
+      "a": [
+        "Kuzenleri",
+        "Sınıf arkadaşları",
+        "Yan komşuları",
+        "Teyzeleri"
+      ],
+      "tf": false,
+      "oops": "Teyze mi? Daha bebekler onlar!",
+      "src": "https://bluey.fandom.com/wiki/Muffin_Heeler"
+    },
+    {
+      "d": 1,
+      "q": "Bluey'nin arkadaşı kaniş Coco hangi renktir?",
+      "a": [
+        "Pembe",
+        "Mor",
+        "Yeşil",
+        "Sarı"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Coco"
+    },
+    {
+      "d": 1,
+      "q": "Bingo, kendi yatağında uyumaya çalıştığı gece rüyasında nereye gider?",
+      "a": [
+        "Uzaya",
+        "Denizin dibine",
+        "Dinozor ormanına",
+        "Çöle"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Sleepytime",
+      "oops": "Bingo uyurken bile Güneş Sistemi'ni geziyor!"
+    },
+    {
+      "d": 1,
+      "q": "Bluey ile Bingo dondurmalarını kimin önce yalayacağını tartışırken ne olur?",
+      "a": [
+        "Dondurmalar erir",
+        "Dondurmayı köpek kapar",
+        "Dondurmacı kapanır",
+        "Dondurma donar"
+      ],
+      "tf": false,
+      "oops": "Tartışma uzarsa dondurma beklemez!",
+      "src": "https://bluey.fandom.com/wiki/Ice_Cream"
+    },
+    {
+      "d": 1,
+      "q": "Kızların uyku öncesi tırmandığı 'Anne-Baba Dağı' aslında nedir?",
+      "a": [
+        "Kanepede yatan annesi ve babası",
+        "Yastık yığını",
+        "Bahçedeki ağaç",
+        "Oyuncak kutusu"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Mount_Mumandad"
+    },
+    {
+      "d": 1,
+      "q": "Bluey parkta neyi öğrenmeye çalışırken pes etmek üzeredir?",
+      "a": [
+        "Bisiklet sürmeyi",
+        "Yüzmeyi",
+        "İp atlamayı",
+        "Paten kaymayı"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Bike"
+    },
+    {
+      "d": 1,
+      "q": "Sofrada annesinin verdiği sihirli kuşkonmaz, Bluey'nin elinde ne yapar?",
+      "a": [
+        "Herkesi hayvana çevirir",
+        "Yemeği çikolataya çevirir",
+        "Herkesi uyutur",
+        "Bluey'yi uçurur"
+      ],
+      "tf": false,
+      "oops": "Keşke ıspanak da çikolataya dönse, ama hayır!",
+      "src": "https://bluey.fandom.com/wiki/Asparagus"
+    },
+    {
+      "d": 1,
+      "q": "Bandit ördek şeklindeki pastayı kimin doğum günü için yapar?",
+      "a": [
+        "Bingo'nun",
+        "Bluey'nin",
+        "Chilli'nin",
+        "Lucky'nin"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Duck_Cake"
+    },
+    {
+      "d": 1,
+      "q": "Bluey'nin arkadaşı Chloe hangi cins köpektir?",
+      "a": [
+        "Dalmaçyalı",
+        "Pudel",
+        "Beagle",
+        "Labrador"
+      ],
+      "tf": false,
+      "oops": "İpucu: üstü benek benek!",
+      "src": "https://bluey.fandom.com/wiki/Chloe"
+    },
+    {
+      "d": 1,
+      "q": "'Hastane' oyununda Doktor Bluey, röntgende babasının karnında ne bulur?",
+      "a": [
+        "Bir kedi",
+        "Bir balık",
+        "Bir futbol topu",
+        "Bir ayakkabı"
+      ],
+      "tf": false,
+      "oops": "Ayakkabı mı? Bandit her şeyi yer ama o kadar da değil!",
+      "src": "https://www.bluey.tv/watch/season-1/hospital/"
+    },
+    {
+      "d": 1,
+      "q": "Bluey'nin okuldaki öğretmeninin adı ne?",
+      "a": [
+        "Calypso",
+        "Chilli",
+        "Trixie",
+        "Wendy"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Calypso",
+      "oops": "Wendy yan komşu Judo'nun annesi!"
+    },
+    {
+      "d": 2,
+      "q": "Bluey'nin ailesinin soyadı nedir?",
+      "a": [
+        "Heeler",
+        "Cattle",
+        "Collie",
+        "Labrador"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Bluey_Heeler"
+    },
+    {
+      "d": 2,
+      "q": "Bluey'nin babası Bandit ne iş yapar?",
+      "a": [
+        "Arkeolog",
+        "Pilot",
+        "Diş hekimi",
+        "Aşçı"
+      ],
+      "tf": false,
+      "oops": "Aşçı mı? Ördek pastayı düşüren o değil miydi?",
+      "src": "https://bluey.fandom.com/wiki/Bandit_Heeler"
+    },
+    {
+      "d": 2,
+      "q": "Bluey'nin annesi Chilli nerede çalışır?",
+      "a": [
+        "Havalimanı güvenliğinde",
+        "Hastanede",
+        "Okulda",
+        "Süpermarkette"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Chilli_Heeler"
+    },
+    {
+      "d": 2,
+      "q": "Muffin ile Socks'un babası kimdir?",
+      "a": [
+        "Stripe Amca",
+        "Rad Amca",
+        "Lucky'nin babası",
+        "Dedeleri Bob"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Stripe_Heeler"
+    },
+    {
+      "d": 2,
+      "q": "Bebek kuzen Socks, uzun süre nasıl yürür?",
+      "a": [
+        "Dört ayak üstünde",
+        "Tek ayak üstünde",
+        "Geri geri",
+        "Paten kayarak"
+      ],
+      "tf": false,
+      "oops": "Paten mi? Socks daha emeklemeyi bile yeni bıraktı!",
+      "src": "https://bluey.fandom.com/wiki/Socks_Heeler"
+    },
+    {
+      "d": 2,
+      "q": "Bluey'nin arkadaşı Rusty'nin babası ne iş yapar?",
+      "a": [
+        "Asker",
+        "Polis",
+        "İtfaiyeci",
+        "Pilot"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Rusty"
+    },
+    {
+      "d": 2,
+      "q": "Bluey'nin yan komşusu Lucky hangi cins köpektir?",
+      "a": [
+        "Labrador",
+        "Dalmaçyalı",
+        "Çivava",
+        "Kaniş"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Lucky"
+    },
+    {
+      "d": 2,
+      "q": "Heeler ailesi evini satışa çıkarınca sonunda yeni bir eve taşınır.",
+      "a": [
+        "Yanlış",
+        "Doğru"
+      ],
+      "tf": true,
+      "oops": "Satış son anda bozuldu, Heeler'lar evlerinde kaldı!",
+      "src": "https://bluey.fandom.com/wiki/The_Sign"
+    },
+    {
+      "d": 2,
+      "q": "'Büyükanneler' oyununda Bingo hangi dansı yapmak ister?",
+      "a": [
+        "Floss",
+        "Moonwalk",
+        "Tango",
+        "Halay"
+      ],
+      "tf": false,
+      "oops": "Halay olsa Nana hemen katılırdı!",
+      "src": "https://bluey.fandom.com/wiki/Grannies"
+    },
+    {
+      "d": 2,
+      "q": "Büyükanneler dans eder mi tartışmasını çözmek için kızlar kimi görüntülü arar?",
+      "a": [
+        "Babaanneleri Nana'yı",
+        "Öğretmen Calypso'yu",
+        "Brandy Teyzeyi",
+        "Lucky'nin annesini"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Grannies"
+    },
+    {
+      "d": 2,
+      "q": "Robot Baba, kızlar odayı bir daha hiç toplamayacağını söyleyince onları nereye götürür?",
+      "a": [
+        "Çöp kutusuna",
+        "Banyoya",
+        "Bahçedeki havuza",
+        "Arabaya"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Daddy_Robot",
+      "oops": "Odayı toplamayanı çöpe atan bir robot, tam Bandit işi!"
+    },
+    {
+      "d": 2,
+      "q": "Bluey'nin kampta tanıştığı Jean-Luc hangi dili konuşur?",
+      "a": [
+        "Fransızca",
+        "İspanyolca",
+        "Japonca",
+        "Almanca"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Camping",
+      "oops": "Bonjour! Dil anlaşılmasa da oyun anlaşılır."
+    },
+    {
+      "d": 2,
+      "q": "Bluey'nin pazarda harcayacağı 5 dolar kimden gelmiştir?",
+      "a": [
+        "Diş perisinden",
+        "Babaannesinden",
+        "Noel Baba'dan",
+        "Kumbarasından"
+      ],
+      "tf": false,
+      "oops": "Diş düştü, para geldi; bu iş böyle!",
+      "src": "https://bluey.fandom.com/wiki/Markets"
+    },
+    {
+      "d": 2,
+      "q": "Partiye götürülmeyen Bingo'nun sihirli tüy asası eşyaları ne yapar?",
+      "a": [
+        "Çok ağır",
+        "Görünmez",
+        "Uçan",
+        "Minicik"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Featherwand"
+    },
+    {
+      "d": 2,
+      "q": "Piknikteki 'Gölge Ülkesi' oyununda çocuklar nereye basabilir?",
+      "a": [
+        "Yalnız gölgelere",
+        "Yalnız çimenlere",
+        "Yalnız taşlara",
+        "Her yere"
+      ],
+      "tf": false,
+      "oops": "Güneşli çimen timsahlı denizdir, dikkat!",
+      "src": "https://bluey.fandom.com/wiki/Shadowlands"
+    },
+    {
+      "d": 2,
+      "q": "Uyumak istemeyen Bluey, bütün gece uyanık kalmak için ne olmayı diler?",
+      "a": [
+        "Meyve yarasası",
+        "Baykuş",
+        "Kedi",
+        "Kanguru"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Fruitbat",
+      "oops": "Baykuş da gece uyanık ama Bluey'nin seçimi yarasa!"
+    },
+    {
+      "d": 2,
+      "q": "Bingo'nun uzay rüyasında annesi Chilli neye dönüşür?",
+      "a": [
+        "Güneşe",
+        "Aya",
+        "Bir yıldıza",
+        "Bir uzay gemisine"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Sleepytime"
+    },
+    {
+      "d": 2,
+      "q": "'Dans Modu' oyunu, Bandit Bingo'nun neyini izinsiz yiyince başlar?",
+      "a": [
+        "Son patates kızartmasını",
+        "Dondurmasını",
+        "Kurabiyesini",
+        "Doğum günü pastasını"
+      ],
+      "tf": false,
+      "oops": "Bandit o kızartmayı yemeseydi kimse dans etmeyecekti!",
+      "src": "https://bluey.fandom.com/wiki/Dance_Mode"
+    },
+    {
+      "d": 3,
+      "q": "Heeler ailesi Avustralya'nın hangi şehrinde yaşar?",
+      "a": [
+        "Brisbane",
+        "Sidney",
+        "Melbourne",
+        "Perth"
+      ],
+      "tf": false,
+      "src": "https://en.wikipedia.org/wiki/Bluey_(2018_TV_series)",
+      "oops": "Heeler ailesinin oyun dolu evi Brisbane'de!"
+    },
+    {
+      "d": 3,
+      "q": "Öğretmen Calypso hangi cins köpektir?",
+      "a": [
+        "Avustralya Çoban Köpeği",
+        "Dalmaçyalı",
+        "Afgan Tazısı",
+        "Border Collie"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Calypso"
+    },
+    {
+      "d": 3,
+      "q": "Bandit'in ağabeyi, yani üç kardeşin en büyüğü kimdir?",
+      "a": [
+        "Rad",
+        "Stripe",
+        "Mort",
+        "Pat"
+      ],
+      "tf": false,
+      "oops": "Stripe en küçükleri! Ağabey Rad.",
+      "src": "https://bluey.fandom.com/wiki/Radley_Heeler"
+    },
+    {
+      "d": 3,
+      "q": "Bluey'nin sınıf arkadaşı Mackenzie hangi ülkeden taşınmıştır?",
+      "a": [
+        "Yeni Zelanda",
+        "İngiltere",
+        "Amerika",
+        "Japonya"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Mackenzie_Border_Collie"
+    },
+    {
+      "d": 3,
+      "q": "Heeler'ların yan komşusu Judo hangi cins köpektir?",
+      "a": [
+        "Chow Chow",
+        "Pug",
+        "Kaniş",
+        "Beagle"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Judo"
+    },
+    {
+      "d": 3,
+      "q": "Bingo'nun uzay rüyasında çalan ünlü klasik müzik parçası hangisi?",
+      "a": [
+        "Holst – Jüpiter",
+        "Vivaldi – Dört Mevsim",
+        "Çaykovski – Fındıkkıran",
+        "Mozart – Küçük Gece Müziği"
+      ],
+      "tf": false,
+      "src": "https://www.classicfm.com/discover-music/periods-genres/film-tv/bluey-jupiter-classical-composer-joff-bush/"
+    },
+    {
+      "d": 3,
+      "q": "Bandit'in paket yemek siparişinde eksik çıkan yemek hangisidir?",
+      "a": [
+        "Çin böreği",
+        "Pilav",
+        "Çorba",
+        "Pizza"
+      ],
+      "tf": false,
+      "oops": "Beş dakika bekleyecekti, beş dakika!",
+      "src": "https://bluey.fandom.com/wiki/Takeaway"
+    },
+    {
+      "d": 3,
+      "q": "Bingo'nun gidemediği, Bluey'nin annesiyle gittiği doğum günü partisi kimindir?",
+      "a": [
+        "Chloe'nin",
+        "Lucky'nin",
+        "Judo'nun",
+        "Muffin'in"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Featherwand"
+    },
+    {
+      "d": 3,
+      "q": "Bandit, Lucky'nin babasının neyini kıskanıp yapı marketine gider?",
+      "a": [
+        "Pizza fırınını",
+        "Havuzunu",
+        "Arabasını",
+        "Mangalını"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Hammerbarn",
+      "oops": "Komşunun fırını hep daha sıcak görünür!"
+    },
+    {
+      "d": 3,
+      "q": "'Halı Adası' oyununda Bingo, işe giden babasına veda hediyesi olarak ne verir?",
+      "a": [
+        "Bir keçeli kalem",
+        "Bir deniz kabuğu",
+        "Bir balık",
+        "Bir taç"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Rug_Island"
+    },
+    {
+      "d": 3,
+      "q": "Kreşte Bingo'nun en yakın arkadaşı olan beyaz Malta köpeği kimdir?",
+      "a": [
+        "Lila",
+        "Chloe",
+        "Judo",
+        "Coco"
+      ],
+      "tf": false,
+      "src": "https://bluey.fandom.com/wiki/Lila"
+    }
+  ]
+}

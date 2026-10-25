@@ -1,0 +1,1508 @@
+{
+  "id": "harrypotter",
+  "title": "Harry Potter",
+  "ask": "Sen ne kadar Hogwartslısın?",
+  "scope": "8 film (2001–2011)",
+  "tiers": [
+    {
+      "name": "Muggle",
+      "line": "Hogwarts mektubun postada kaybolmuş olmalı."
+    },
+    {
+      "name": "Seçmen Şapka Kararsız",
+      "line": "Şapka hâlâ düşünüyor… biraz daha film izle."
+    },
+    {
+      "name": "Birinci Sınıf Çaylağı",
+      "line": "Leviosa'yı doğru söylüyorsun, gerisi gelir."
+    },
+    {
+      "name": "Gryffindor'a 50 Puan",
+      "line": "McGonagall bile hafifçe gülümsedi."
+    },
+    {
+      "name": "Seherbaz Adayı",
+      "line": "Deli-Göz Moody seni gözüne kestirdi."
+    },
+    {
+      "name": "Ölüm Yadigârlarının Efendisi",
+      "line": "Mürver Asa artık senin. Sakın kırma!"
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Harry'yi büyüten teyzesi ile eniştesinin soyadı nedir?",
+      "a": [
+        "Dursley",
+        "Weasley",
+        "Malfoy",
+        "Lestrange"
+      ],
+      "tf": false,
+      "oops": "Malfoy'ların yanında büyüseydi bambaşka bir film olurdu!",
+      "src": "https://harrypotter.fandom.com/wiki/Dursley_family"
+    },
+    {
+      "d": 1,
+      "q": "Hogwarts Ekspresi hangi perondan kalkar?",
+      "a": [
+        "9¾ Peronu",
+        "7½ Peronu",
+        "10¼ Peronu",
+        "13 Numaralı Peron"
+      ],
+      "tf": false,
+      "oops": "Duvara koşarken yanlış sayıyı seçme!",
+      "src": "https://harrypotter.fandom.com/wiki/Platform_Nine_and_Three-Quarters"
+    },
+    {
+      "d": 1,
+      "q": "“Sen bir büyücüsün, Harry.” sözünü kim söyler?",
+      "a": [
+        "Hagrid",
+        "Dumbledore",
+        "Ollivander",
+        "Vernon Dursley"
+      ],
+      "tf": false,
+      "oops": "Vernon Enişte bunu söyleyeceğine baykuş yer!",
+      "src": "https://harrypotter.fandom.com/wiki/Rubeus_Hagrid"
+    },
+    {
+      "d": 1,
+      "q": "Hogwarts mektubu gelmeden önce Harry Dursley'lerin evinde nerede yatar?",
+      "a": [
+        "Merdiven altındaki dolapta",
+        "Çatı katında",
+        "Bodrumda",
+        "Dudley'nin odasında"
+      ],
+      "tf": false,
+      "oops": "Dudley'nin odası mı? Orası oyuncak deposu!",
+      "src": "https://harrypotter.fandom.com/wiki/Cupboard_under_the_Stairs"
+    },
+    {
+      "d": 2,
+      "q": "Hagrid, kayalıktaki kulübede Dudley'ye sihirle ne çıkartır?",
+      "a": [
+        "Domuz kuyruğu",
+        "Eşek kulakları",
+        "Boynuz",
+        "Kedi bıyıkları"
+      ],
+      "tf": false,
+      "oops": "Eşek kulağı da yakışırdı ama Hagrid kuyrukta karar kıldı!",
+      "src": "https://harrypotter.fandom.com/wiki/Harry_Potter_and_the_Philosopher%27s_Stone_(film)"
+    },
+    {
+      "d": 3,
+      "q": "Hagrid'in Gringotts'tan aldığı gizemli paket kaç numaralı kasadaydı?",
+      "a": [
+        "713",
+        "687",
+        "394",
+        "221"
+      ],
+      "tf": false,
+      "oops": "Hagrid “çok gizli” dedi, sen de unuttun!",
+      "src": "https://harrypotter.fandom.com/wiki/Vault_713"
+    },
+    {
+      "d": 2,
+      "q": "Ollivander'a göre Harry'nin asasındaki tüy hangi canlıdan gelir?",
+      "a": [
+        "Zümrüdüanka",
+        "Hipogrif",
+        "Baykuş",
+        "Ejderha"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Harry_Potter%27s_wand"
+    },
+    {
+      "d": 1,
+      "q": "Seçme töreninde Harry, Seçmen Şapka'ya hangi binaya gitmek istemediğini fısıldar?",
+      "a": [
+        "Slytherin",
+        "Hufflepuff",
+        "Ravenclaw",
+        "Gryffindor"
+      ],
+      "tf": false,
+      "oops": "Gryffindor'u istememek mi? Şapka bile şaşırırdı!",
+      "src": "https://harrypotter.fandom.com/wiki/Sorting_Hat"
+    },
+    {
+      "d": 2,
+      "q": "Harry ilk Quidditch maçında Altın Top'u nasıl yakalar?",
+      "a": [
+        "Neredeyse yutarak, ağzıyla",
+        "Süpürgesinin sapıyla",
+        "Gözlüğüyle",
+        "Ayağıyla"
+      ],
+      "tf": false,
+      "oops": "Eldiven yerine ağız! Midesi sağlam çocuk.",
+      "src": "https://harrypotter.fandom.com/wiki/Golden_Snitch"
+    },
+    {
+      "d": 2,
+      "q": "Dev satranç tahtasında Ron hangi taşın yerine geçer?",
+      "a": [
+        "At",
+        "Kale",
+        "Fil",
+        "Şah"
+      ],
+      "tf": false,
+      "oops": "Ron şah olsaydı oyun çok kısa sürerdi!",
+      "src": "https://harrypotter.fandom.com/wiki/Wizard%27s_chess"
+    },
+    {
+      "d": 3,
+      "q": "Dumbledore yıl sonu şöleninde Neville'e kaç puan verir?",
+      "a": [
+        "10",
+        "50",
+        "60",
+        "5"
+      ],
+      "tf": false,
+      "oops": "Az ama altın değerinde: kupayı o puanlar getirdi!",
+      "src": "https://harrypotter.fandom.com/wiki/Harry_Potter_and_the_Philosopher%27s_Stone_(film)"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmde Voldemort kimin sarığının altında saklanır?",
+      "a": [
+        "Quirrell",
+        "Snape",
+        "Filch",
+        "Ollivander"
+      ],
+      "tf": false,
+      "oops": "Snape hep şüpheli ama bu sefer masum!",
+      "src": "https://harrypotter.fandom.com/wiki/Quirinus_Quirrell"
+    },
+    {
+      "d": 1,
+      "q": "Hermione tüy kaldırma dersinde Ron'un hangi büyüyü yanlış söylediğini düzeltir?",
+      "a": [
+        "Wingardium Leviosa",
+        "Lumos",
+        "Alohomora",
+        "Expelliarmus"
+      ],
+      "tf": false,
+      "oops": "Levi-O-sa, Levio-SA değil!",
+      "src": "https://harrypotter.fandom.com/wiki/Levitation_Charm"
+    },
+    {
+      "d": 2,
+      "q": "Harry'nin ilk çikolatalı kurbağasından kimin kartı çıkar?",
+      "a": [
+        "Dumbledore",
+        "Merlin",
+        "Nicolas Flamel",
+        "Voldemort"
+      ],
+      "tf": false,
+      "oops": "Voldemort kartı mı? O kurbağa çoktan kaçardı!",
+      "src": "https://harrypotter.fandom.com/wiki/Chocolate_Frog_Card"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmde Gryffindor ortak salonunun parolası nedir?",
+      "a": [
+        "Caput Draconis",
+        "Alohomora",
+        "Felix Felicis",
+        "Lumos Maxima"
+      ],
+      "tf": false,
+      "oops": "Alohomora kapı açar, Şişman Hanım'ı değil!",
+      "src": "https://harrypotter.fandom.com/wiki/Gryffindor_Tower"
+    },
+    {
+      "d": 2,
+      "q": "Hagrid'in ejderha yumurtasından çıkan yavrunun adı nedir?",
+      "a": [
+        "Norbert",
+        "Fawkes",
+        "Fang",
+        "Aragog"
+      ],
+      "tf": false,
+      "oops": "Aragog ejderha değil, sekiz bacaklı bir kabus!",
+      "src": "https://harrypotter.fandom.com/wiki/Norberta"
+    },
+    {
+      "d": 3,
+      "q": "Dumbledore'un “en derin arzumuzu gösterir” dediği aynada Ron kendini nasıl görür?",
+      "a": [
+        "Okul Başkanı ve takım kaptanı",
+        "Sihir Bakanı",
+        "Gringotts'un sahibi",
+        "Ünlü bir Seherbaz"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Mirror_of_Erised"
+    },
+    {
+      "d": 1,
+      "q": "Dobby hangi aileye hizmet eden bir ev cinidir?",
+      "a": [
+        "Malfoy",
+        "Black",
+        "Weasley",
+        "Dursley"
+      ],
+      "tf": false,
+      "oops": "Weasley'lerin ev cini olsa Molly onu çok severdi!",
+      "src": "https://harrypotter.fandom.com/wiki/Dobby"
+    },
+    {
+      "d": 1,
+      "q": "Dobby'yi özgür bırakan eşya nedir?",
+      "a": [
+        "Bir çorap",
+        "Bir eldiven",
+        "Bir atkı",
+        "Bir şapka"
+      ],
+      "tf": false,
+      "oops": "Dobby'nin en sevdiği giysi: tek bir çorap!",
+      "src": "https://harrypotter.fandom.com/wiki/Harry_Potter%27s_sock"
+    },
+    {
+      "d": 2,
+      "q": "Harry ile Ron'un Hogwarts'a uçtuğu arabanın markası nedir?",
+      "a": [
+        "Ford Anglia",
+        "Volkswagen Beetle",
+        "Mini Cooper",
+        "Murat 124"
+      ],
+      "tf": false,
+      "oops": "Murat 124 uçsaydı Şamarcı Söğüt bile şaşırırdı!",
+      "src": "https://harrypotter.fandom.com/wiki/Ford_Anglia"
+    },
+    {
+      "d": 1,
+      "q": "Uçan araba Hogwarts'ta hangi ağaca çarpar?",
+      "a": [
+        "Şamarcı Söğüt",
+        "Mürver ağacı",
+        "Yasak Orman'daki meşe",
+        "Noel ağacı"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Whomping_Willow"
+    },
+    {
+      "d": 1,
+      "q": "Gilderoy Lockhart Hogwarts'ta hangi dersi verir?",
+      "a": [
+        "Karanlık Sanatlara Karşı Savunma",
+        "İksir",
+        "Biçim Değiştirme",
+        "Bitkibilim"
+      ],
+      "tf": false,
+      "oops": "Lockhart iksir yapsa ilk iş kendi fotoğrafını kaynatırdı!",
+      "src": "https://harrypotter.fandom.com/wiki/Gilderoy_Lockhart"
+    },
+    {
+      "d": 2,
+      "q": "Tom Marvolo Riddle adının harfleri yer değiştirince hangi söz ortaya çıkar?",
+      "a": [
+        "Ben Lord Voldemort'um",
+        "Ben Slytherin'in varisiyim",
+        "Sırlar Odası açıldı",
+        "Kara Lord dönecek"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Tom_Riddle"
+    },
+    {
+      "d": 2,
+      "q": "Harry, Basilisk'i öldürdüğü kılıcı nereden çıkarır?",
+      "a": [
+        "Seçmen Şapka'nın içinden",
+        "Donmuş bir gölden",
+        "Dumbledore'un dolabından",
+        "Lockhart'ın çantasından"
+      ],
+      "tf": false,
+      "oops": "Donmuş göl başka filmde, Harry!",
+      "src": "https://harrypotter.fandom.com/wiki/Sword_of_Gryffindor"
+    },
+    {
+      "d": 2,
+      "q": "İksire yanlış tüy karışınca Hermione neye benzer?",
+      "a": [
+        "Kediye",
+        "Baykuşa",
+        "Sıçana",
+        "Tavşana"
+      ],
+      "tf": false,
+      "oops": "Miyav! Hermione bunu kimseye anlatmamanı istiyor.",
+      "src": "https://harrypotter.fandom.com/wiki/Polyjuice_Potion"
+    },
+    {
+      "d": 2,
+      "q": "Hagrid'in “örümcekleri takip edin” öğüdü Harry ile Ron'u hangi dev örümceğe götürür?",
+      "a": [
+        "Aragog",
+        "Nagini",
+        "Norbert",
+        "Grawp"
+      ],
+      "tf": false,
+      "oops": "Ron hâlâ örümcek görünce bu soruyu hatırlıyor!",
+      "src": "https://harrypotter.fandom.com/wiki/Aragog"
+    },
+    {
+      "d": 2,
+      "q": "Kırık asasıyla büyü yapan Ron'un ağzından ne çıkmaya başlar?",
+      "a": [
+        "Sümüklüböcek",
+        "Kurbağa",
+        "Sabun köpüğü",
+        "Örümcek"
+      ],
+      "tf": false,
+      "oops": "Afiyet olsun Ron!",
+      "src": "https://harrypotter.fandom.com/wiki/Slug-vomiting_Charm"
+    },
+    {
+      "d": 3,
+      "q": "Arthur Weasley Harry'ye hangi Muggle eşyasının ne işe yaradığını sorar?",
+      "a": [
+        "Lastik ördek",
+        "Uzaktan kumanda",
+        "Ütü",
+        "Şemsiye"
+      ],
+      "tf": false,
+      "oops": "Bay Weasley cevabı hâlâ merak ediyor!",
+      "src": "https://harrypotter.fandom.com/wiki/Rubber_duck"
+    },
+    {
+      "d": 3,
+      "q": "Gilderoy Lockhart'ı hangi oyuncu canlandırır?",
+      "a": [
+        "Kenneth Branagh",
+        "Hugh Grant",
+        "Jude Law",
+        "Colin Firth"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Kenneth_Branagh"
+    },
+    {
+      "d": 1,
+      "q": "Molly Weasley uçan araba yüzünden Ron'a ne gönderir?",
+      "a": [
+        "Çığırtkan",
+        "Bir hediye paketi",
+        "Uzun bir özür mektubu",
+        "Bir Altın Top"
+      ],
+      "tf": false,
+      "oops": "Hediye mi? Molly'yi hiç tanımamışsın!",
+      "src": "https://harrypotter.fandom.com/wiki/Howler"
+    },
+    {
+      "d": 1,
+      "q": "Dumbledore'un zümrüdüankasının adı nedir?",
+      "a": [
+        "Fawkes",
+        "Hedwig",
+        "Errol",
+        "Norbert"
+      ],
+      "tf": false,
+      "oops": "Hedwig baykuş, Fawkes ise küllerinden doğar!",
+      "src": "https://harrypotter.fandom.com/wiki/Fawkes"
+    },
+    {
+      "d": 2,
+      "q": "Harry, Tom Riddle'ın günlüğünü neyle yok eder?",
+      "a": [
+        "Basilisk dişiyle",
+        "Gryffindor kılıcıyla",
+        "Ateş büyüsüyle",
+        "Fawkes'un gözyaşıyla"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/T._M._Riddle%27s_Diary"
+    },
+    {
+      "d": 1,
+      "q": "Azkaban'dan kaçan ve Harry'nin peşinde olduğu sanılan kişi kimdir?",
+      "a": [
+        "Sirius Black",
+        "Peter Pettigrew",
+        "Remus Lupin",
+        "Barty Crouch Jr."
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Sirius_Black"
+    },
+    {
+      "d": 1,
+      "q": "Harry öfkelenince kimi balon gibi şişirip uçurur?",
+      "a": [
+        "Marge Hala",
+        "Petunia Teyze",
+        "Dudley",
+        "Vernon Enişte"
+      ],
+      "tf": false,
+      "oops": "Petunia Teyze bu sefer şanslıydı!",
+      "src": "https://harrypotter.fandom.com/wiki/Marjorie_Dursley"
+    },
+    {
+      "d": 2,
+      "q": "Neville'in Böcürt'ü Riddikulus'tan sonra neye dönüşür?",
+      "a": [
+        "Büyükanne kıyafetli Snape",
+        "Paten giyen örümcek",
+        "Dans eden yılan",
+        "Kocaman bir pasta"
+      ],
+      "tf": false,
+      "oops": "Snape bu sahneyi asla affetmedi!",
+      "src": "https://harrypotter.fandom.com/wiki/Boggart"
+    },
+    {
+      "d": 3,
+      "q": "Lupin'in Böcürt'ü hangi şekle girer?",
+      "a": [
+        "Dolunay",
+        "Ruh Emici",
+        "Kurt adam",
+        "Örümcek"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Boggart"
+    },
+    {
+      "d": 1,
+      "q": "Hermione aynı anda birden fazla derse girmek için ne kullanır?",
+      "a": [
+        "Zaman Döndürücü",
+        "Görünmezlik Pelerini",
+        "Çok Özlü İksir",
+        "Uçuç Tozu"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Time-Turner"
+    },
+    {
+      "d": 1,
+      "q": "Ron'un sıçanı Scabbers aslında kimdir?",
+      "a": [
+        "Peter Pettigrew",
+        "Sirius Black",
+        "Remus Lupin",
+        "Lucius Malfoy"
+      ],
+      "tf": false,
+      "oops": "Ron yıllarca Ölüm Yiyen beslemiş!",
+      "src": "https://harrypotter.fandom.com/wiki/Peter_Pettigrew"
+    },
+    {
+      "d": 1,
+      "q": "Harry'nin Patronus'u hangi hayvan biçimindedir?",
+      "a": [
+        "Geyik",
+        "Kartal",
+        "Aslan",
+        "Köpek"
+      ],
+      "tf": false,
+      "oops": "Tıpkı babası James gibi: bir geyik!",
+      "src": "https://harrypotter.fandom.com/wiki/Patronus_Charm"
+    },
+    {
+      "d": 1,
+      "q": "Azkaban Tutsağı'nda Hermione kime yumruk atar?",
+      "a": [
+        "Draco Malfoy",
+        "Ron",
+        "Crabbe",
+        "Neville"
+      ],
+      "tf": false,
+      "oops": "Draco o yumruğu hiç unutmadı!",
+      "src": "https://harrypotter.fandom.com/wiki/Draco_Malfoy"
+    },
+    {
+      "d": 2,
+      "q": "Çapulcu Haritası'nı Harry'ye kim verir?",
+      "a": [
+        "Fred ile George",
+        "Lupin",
+        "Sirius",
+        "Hagrid"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Marauder%27s_Map"
+    },
+    {
+      "d": 3,
+      "q": "Snape, Lupin'in yerine girdiği derste öğrencilere kaçıncı sayfayı açtırır?",
+      "a": [
+        "394",
+        "713",
+        "221",
+        "93"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/The_Essential_Defence_Against_the_Dark_Arts"
+    },
+    {
+      "d": 2,
+      "q": "Şahgaga nasıl bir yaratıktır?",
+      "a": [
+        "Hipogrif",
+        "Ejderha",
+        "Testral",
+        "Atadam"
+      ],
+      "tf": false,
+      "oops": "Önce eğilerek selam vermeyi unutma!",
+      "src": "https://harrypotter.fandom.com/wiki/Buckbeak"
+    },
+    {
+      "d": 2,
+      "q": "Azkaban Tutsağı'nı hangi yönetmen çekti?",
+      "a": [
+        "Alfonso Cuarón",
+        "Chris Columbus",
+        "Mike Newell",
+        "David Yates"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Alfonso_Cuar%C3%B3n"
+    },
+    {
+      "d": 2,
+      "q": "Dumbledore'u ilk iki filmde Richard Harris oynadı. Üçüncü filmden itibaren rolü kim aldı?",
+      "a": [
+        "Michael Gambon",
+        "Ian McKellen",
+        "Christopher Lee",
+        "Anthony Hopkins"
+      ],
+      "tf": false,
+      "oops": "Gandalf başka bir serinin büyücüsü!",
+      "src": "https://harrypotter.fandom.com/wiki/Michael_Gambon"
+    },
+    {
+      "d": 1,
+      "q": "Remus Lupin bir kurt adamdır.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://harrypotter.fandom.com/wiki/Remus_Lupin"
+    },
+    {
+      "d": 1,
+      "q": "Üçbüyücü Turnuvası için Hogwarts'a gelen iki okul hangisidir?",
+      "a": [
+        "Beauxbatons ile Durmstrang",
+        "Ilvermorny ile Durmstrang",
+        "Beauxbatons ile Ilvermorny",
+        "Hogsmeade ile Gringotts"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Triwizard_Tournament"
+    },
+    {
+      "d": 1,
+      "q": "Hogwarts'ın şampiyonu Cedric Diggory hangi binadandır?",
+      "a": [
+        "Hufflepuff",
+        "Ravenclaw",
+        "Gryffindor",
+        "Slytherin"
+      ],
+      "tf": false,
+      "oops": "Gryffindor'un şampiyonu zaten Harry'ydi!",
+      "src": "https://harrypotter.fandom.com/wiki/Cedric_Diggory"
+    },
+    {
+      "d": 3,
+      "q": "Filmde ikinci görevden önce Harry'ye solungaçotunu kim verir?",
+      "a": [
+        "Neville",
+        "Dobby",
+        "Hermione",
+        "Moody"
+      ],
+      "tf": false,
+      "oops": "Kitapta Dobby'ydi, filmde Neville!",
+      "src": "https://harrypotter.fandom.com/wiki/Gillyweed"
+    },
+    {
+      "d": 1,
+      "q": "Hermione Noel Balosu'na kiminle gider?",
+      "a": [
+        "Viktor Krum",
+        "Ron",
+        "Cedric Diggory",
+        "Neville"
+      ],
+      "tf": false,
+      "oops": "Ron bu cevabı da kıskandı!",
+      "src": "https://harrypotter.fandom.com/wiki/Yule_Ball"
+    },
+    {
+      "d": 2,
+      "q": "Harry Noel Balosu'na kiminle gider?",
+      "a": [
+        "Parvati Patil",
+        "Cho Chang",
+        "Ginny Weasley",
+        "Padma Patil"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Parvati_Patil"
+    },
+    {
+      "d": 2,
+      "q": "Bütün yıl Deli-Göz Moody kılığında dolaşan kimdir?",
+      "a": [
+        "Barty Crouch Jr.",
+        "Peter Pettigrew",
+        "Lucius Malfoy",
+        "Igor Karkaroff"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Bartemius_Crouch_Junior"
+    },
+    {
+      "d": 2,
+      "q": "Sahte Moody, Draco'yu cezalandırmak için neye dönüştürür?",
+      "a": [
+        "Beyaz bir gelinciğe",
+        "Sıçana",
+        "Kurbağaya",
+        "Tavşana"
+      ],
+      "tf": false,
+      "oops": "Zıp zıp zıplayan gelincik Draco, unutulmaz!",
+      "src": "https://harrypotter.fandom.com/wiki/Ferret"
+    },
+    {
+      "d": 3,
+      "q": "Filmde sahte Moody'nin gerçek kimliğini ele veren alışkanlığı nedir?",
+      "a": [
+        "Dilini şaklatması",
+        "Islık çalması",
+        "Gözünü kırpması",
+        "Parmak çıtlatması"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Harry_Potter_and_the_Goblet_of_Fire_(film)"
+    },
+    {
+      "d": 3,
+      "q": "Ateş Kadehi'nde Durmstrang'ın müdürü kimdir?",
+      "a": [
+        "Igor Karkaroff",
+        "Madame Maxime",
+        "Barty Crouch",
+        "Ludo Bagman"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Igor_Karkaroff"
+    },
+    {
+      "d": 2,
+      "q": "Ateş Kadehi'ne isim atabilmek için en az 17 yaşında olmak gerekir.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "oops": "Fred ile George yaş iksiriyle denedi, sakal bıraktılar!",
+      "src": "https://harrypotter.fandom.com/wiki/Age_Line"
+    },
+    {
+      "d": 2,
+      "q": "Umbridge'in ceza kalemi Harry'nin eline hangi cümleyi kazır?",
+      "a": [
+        "Yalan söylememeliyim",
+        "Kurallara uymalıyım",
+        "Bakanlığa saygı duymalıyım",
+        "Bir daha konuşmayacağım"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Black_Quill"
+    },
+    {
+      "d": 1,
+      "q": "Dumbledore'un Ordusu nerede gizlice çalışır?",
+      "a": [
+        "İhtiyaç Odası'nda",
+        "Bağıran Baraka'da",
+        "Astronomi Kulesi'nde",
+        "Zindanlarda"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Room_of_Requirement"
+    },
+    {
+      "d": 2,
+      "q": "Hogwarts arabalarını çeken, yalnız ölüm görmüş kişilerin görebildiği yaratık hangisidir?",
+      "a": [
+        "Testral",
+        "Hipogrif",
+        "Ejderha",
+        "Ruh Emici"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Thestral"
+    },
+    {
+      "d": 1,
+      "q": "Sirius Black'i Sihir Bakanlığı'ndaki savaşta kim öldürür?",
+      "a": [
+        "Bellatrix Lestrange",
+        "Lucius Malfoy",
+        "Voldemort",
+        "Peter Pettigrew"
+      ],
+      "tf": false,
+      "oops": "Bu acıyı unutmak zor, hele de bu cevapla!",
+      "src": "https://harrypotter.fandom.com/wiki/Bellatrix_Lestrange"
+    },
+    {
+      "d": 1,
+      "q": "Fred ile George Hogwarts'tan nasıl ayrılır?",
+      "a": [
+        "Havai fişekli bir gösteriyle",
+        "Uçan arabayla",
+        "Hızır Otobüs'le",
+        "Testrallere binerek"
+      ],
+      "tf": false,
+      "oops": "Umbridge hâlâ kulaklarını tıkıyor!",
+      "src": "https://harrypotter.fandom.com/wiki/Weasleys%27_Wildfire_Whiz-Bangs"
+    },
+    {
+      "d": 3,
+      "q": "Harry ile Cho ilk kez hangi bitkinin altında öpüşür?",
+      "a": [
+        "Ökseotu",
+        "Şamarcı Söğüt",
+        "Adamotu",
+        "Solungaçotu"
+      ],
+      "tf": false,
+      "oops": "Şamarcı Söğüt'ün altında mı? O öpücük acıtırdı!",
+      "src": "https://harrypotter.fandom.com/wiki/Mistletoe"
+    },
+    {
+      "d": 3,
+      "q": "Filmde Veritaserum içirilip Dumbledore'un Ordusu'nu ele vermeye zorlanan kimdir?",
+      "a": [
+        "Cho Chang",
+        "Luna Lovegood",
+        "Neville Longbottom",
+        "Ginny Weasley"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Cho_Chang"
+    },
+    {
+      "d": 3,
+      "q": "Luna Lovegood'u hangi oyuncu canlandırır?",
+      "a": [
+        "Evanna Lynch",
+        "Bonnie Wright",
+        "Katie Leung",
+        "Jessie Cave"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Evanna_Lynch"
+    },
+    {
+      "d": 1,
+      "q": "Zümrüdüanka Yoldaşlığı'nın başında Harry ile Dudley'ye kim saldırır?",
+      "a": [
+        "Ruh Emiciler",
+        "Ölüm Yiyenler",
+        "Kurt adamlar",
+        "Bir trol"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Harry_Potter_and_the_Order_of_the_Phoenix_(film)"
+    },
+    {
+      "d": 3,
+      "q": "Harry'nin duruşmasında Ruh Emicileri gördüğüne tanıklık eden yaşlı komşusu kimdir?",
+      "a": [
+        "Bayan Figg",
+        "Bathilda Bagshot",
+        "Marge Hala",
+        "Madam Pomfrey"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Arabella_Figg"
+    },
+    {
+      "d": 1,
+      "q": "Melez Prens aslında kimdir?",
+      "a": [
+        "Severus Snape",
+        "Tom Riddle",
+        "Horace Slughorn",
+        "James Potter"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Severus_Snape"
+    },
+    {
+      "d": 2,
+      "q": "Slughorn'un dersinde Harry ödül olarak hangi iksiri kazanır?",
+      "a": [
+        "Felix Felicis",
+        "Çok Özlü İksir",
+        "Veritaserum",
+        "Amortentia"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Felix_Felicis"
+    },
+    {
+      "d": 3,
+      "q": "Zehirli içkiyi içen Ron'u Harry neyle kurtarır?",
+      "a": [
+        "Bezoar",
+        "Adamotu",
+        "Felix Felicis",
+        "Zümrüdüanka gözyaşı"
+      ],
+      "tf": false,
+      "oops": "Zümrüdüanka gözyaşı Sırlar Odası'ndaydı!",
+      "src": "https://harrypotter.fandom.com/wiki/Bezoar"
+    },
+    {
+      "d": 3,
+      "q": "Ron'u aşk iksirine bulayan çikolatalar Harry'ye kimden gelmişti?",
+      "a": [
+        "Romilda Vane",
+        "Lavender Brown",
+        "Ginny Weasley",
+        "Cho Chang"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Romilda_Vane"
+    },
+    {
+      "d": 2,
+      "q": "Harry, Draco'yu hangi büyüyle ağır yaralar?",
+      "a": [
+        "Sectumsempra",
+        "Crucio",
+        "Expelliarmus",
+        "Stupefy"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Sectumsempra"
+    },
+    {
+      "d": 2,
+      "q": "Dumbledore hangi kulede öldürülür?",
+      "a": [
+        "Astronomi Kulesi",
+        "Gryffindor Kulesi",
+        "Ravenclaw Kulesi",
+        "Baykuşhane"
+      ],
+      "tf": false,
+      "oops": "Baykuşhane mi? Hedwig bunu duymasın.",
+      "src": "https://harrypotter.fandom.com/wiki/Astronomy_Tower"
+    },
+    {
+      "d": 3,
+      "q": "Draco, Ölüm Yiyenleri Hogwarts'a sokmak için ne kullanır?",
+      "a": [
+        "Kaybolan Dolap",
+        "Uçuç Ağı",
+        "Gizli bir geçit",
+        "Görünmezlik Pelerini"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Vanishing_Cabinet"
+    },
+    {
+      "d": 3,
+      "q": "Melez Prens'te Ölüm Yiyenler Noel'de hangi evi ateşe verir?",
+      "a": [
+        "Kovuk",
+        "Grimmauld Meydanı 12",
+        "Privet Drive 4",
+        "Bağıran Baraka"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Harry_Potter_and_the_Half-Blood_Prince_(film)"
+    },
+    {
+      "d": 2,
+      "q": "Hermione kızgınlıkla Ron'un üzerine neyi saldırtır?",
+      "a": [
+        "Kuşları",
+        "Arıları",
+        "Yarasaları",
+        "Kâğıt uçakları"
+      ],
+      "tf": false,
+      "oops": "Ron o günden beri kanaryadan korkuyor!",
+      "src": "https://harrypotter.fandom.com/wiki/Oppugno_Jinx"
+    },
+    {
+      "d": 3,
+      "q": "Mağaradaki sahte madalyonun içindeki notta hangi baş harfler vardır?",
+      "a": [
+        "R.A.B.",
+        "T.M.R.",
+        "H.J.P.",
+        "S.S."
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Regulus_Black"
+    },
+    {
+      "d": 3,
+      "q": "Melez Prens'te Hagrid'in kulübesini Ölüm Yiyenlerden biri ateşe verir.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://harrypotter.fandom.com/wiki/Harry_Potter_and_the_Half-Blood_Prince_(film)"
+    },
+    {
+      "d": 3,
+      "q": "Harry ile Ginny ilk kez İhtiyaç Odası'nda öpüşür.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://harrypotter.fandom.com/wiki/Harry_Potter_and_the_Half-Blood_Prince_(film)"
+    },
+    {
+      "d": 1,
+      "q": "Hangisi Ölüm Yadigârlarından biri DEĞİLDİR?",
+      "a": [
+        "Felsefe Taşı",
+        "Mürver Asa",
+        "Diriltme Taşı",
+        "Görünmezlik Pelerini"
+      ],
+      "tf": false,
+      "oops": "Felsefe Taşı ilk filmdeydi, yadigâr değil!",
+      "src": "https://harrypotter.fandom.com/wiki/Deathly_Hallows"
+    },
+    {
+      "d": 1,
+      "q": "Yedi Potter kaçışında Harry'nin hangi hayvanı ölür?",
+      "a": [
+        "Hedwig",
+        "Fang",
+        "Şahgaga",
+        "Scabbers"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Hedwig"
+    },
+    {
+      "d": 2,
+      "q": "Kaçış sırasında George Weasley neyini kaybeder?",
+      "a": [
+        "Bir kulağını",
+        "Bir gözünü",
+        "Asasını",
+        "Sesini"
+      ],
+      "tf": false,
+      "oops": "George bu hâlde bile kulak şakası yaptı!",
+      "src": "https://harrypotter.fandom.com/wiki/George_Weasley"
+    },
+    {
+      "d": 3,
+      "q": "Bill ile Fleur'ün düğününe “Bakanlık düştü” haberini kimin Patronus'u getirir?",
+      "a": [
+        "Kingsley Shacklebolt",
+        "Remus Lupin",
+        "Arthur Weasley",
+        "Minerva McGonagall"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Kingsley_Shacklebolt"
+    },
+    {
+      "d": 2,
+      "q": "Dumbledore vasiyetinde Harry'ye ne bırakır?",
+      "a": [
+        "İlk yakaladığı Altın Top'u",
+        "Mürver Asa'yı",
+        "Düşünseli'ni",
+        "Seçmen Şapka'yı"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Will_of_Albus_Dumbledore"
+    },
+    {
+      "d": 1,
+      "q": "Dobby kimin fırlattığı bıçakla ölür?",
+      "a": [
+        "Bellatrix Lestrange",
+        "Lucius Malfoy",
+        "Peter Pettigrew",
+        "Draco Malfoy"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Dobby"
+    },
+    {
+      "d": 3,
+      "q": "Çadırda Harry ile Hermione'nin dans ettiği şarkı kime aittir?",
+      "a": [
+        "Nick Cave and the Bad Seeds",
+        "Coldplay",
+        "Radiohead",
+        "The Weird Sisters"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/O_Children"
+    },
+    {
+      "d": 2,
+      "q": "Ron, Gryffindor kılıcıyla hangi Hortkuluk'u yok eder?",
+      "a": [
+        "Slytherin'in madalyonu",
+        "Hufflepuff'ın kupası",
+        "Ravenclaw'ın tacı",
+        "Riddle'ın günlüğü"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Slytherin%27s_Locket"
+    },
+    {
+      "d": 2,
+      "q": "Godric's Hollow'da Bathilda Bagshot'ın bedeninde saklanan kimdir?",
+      "a": [
+        "Nagini",
+        "Bellatrix",
+        "Pettigrew",
+        "Voldemort"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Bathilda_Bagshot"
+    },
+    {
+      "d": 2,
+      "q": "Gringotts'a girerken Bellatrix kılığına giren kimdir?",
+      "a": [
+        "Hermione",
+        "Ginny",
+        "Tonks",
+        "Fleur"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Hermione_Granger"
+    },
+    {
+      "d": 1,
+      "q": "Üçlü Gringotts'tan neye binerek kaçar?",
+      "a": [
+        "Bir ejderhaya",
+        "Bir hipogrife",
+        "Testrallere",
+        "Süpürgelere"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Ukrainian_Ironbelly"
+    },
+    {
+      "d": 3,
+      "q": "Ron, Sırlar Odası'nın kapısını açmak için ne yapar?",
+      "a": [
+        "Çataldilini taklit eder",
+        "Alohomora der",
+        "Kapıyı kılıçla kırar",
+        "Myrtle'dan yardım ister"
+      ],
+      "tf": false,
+      "oops": "Ron, Harry'nin uykusunda konuştuğunu dinlemiş!",
+      "src": "https://harrypotter.fandom.com/wiki/Harry_Potter_and_the_Deathly_Hallows:_Part_2"
+    },
+    {
+      "d": 2,
+      "q": "Ravenclaw'ın tacının yerini Harry'ye kim söyler?",
+      "a": [
+        "Gri Leydi",
+        "Kanlı Baron",
+        "Neredeyse Kafasız Nick",
+        "Mızmız Myrtle"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Helena_Ravenclaw"
+    },
+    {
+      "d": 3,
+      "q": "McGonagall “Bu büyüyü hep kullanmak istemiştim!” deyip hangi büyüyü yapar?",
+      "a": [
+        "Piertotum Locomotor",
+        "Wingardium Leviosa",
+        "Expecto Patronum",
+        "Reducto"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Piertotum_Locomotor"
+    },
+    {
+      "d": 1,
+      "q": "Nagini'yi Gryffindor kılıcıyla kim öldürür?",
+      "a": [
+        "Neville",
+        "Ron",
+        "Harry",
+        "Hermione"
+      ],
+      "tf": false,
+      "oops": "Neville'i küçümseyen, sonuna kadar izlememiştir!",
+      "src": "https://harrypotter.fandom.com/wiki/Nagini"
+    },
+    {
+      "d": 1,
+      "q": "Son savaşta Bellatrix'i kim yener?",
+      "a": [
+        "Molly Weasley",
+        "Ginny Weasley",
+        "Hermione",
+        "McGonagall"
+      ],
+      "tf": false,
+      "oops": "Weasley annesine bulaşan yanar!",
+      "src": "https://harrypotter.fandom.com/wiki/Molly_Weasley"
+    },
+    {
+      "d": 2,
+      "q": "Dumbledore'un “Bunca zamandan sonra mı?” sorusuna Snape ne cevap verir?",
+      "a": [
+        "Her zaman.",
+        "Asla.",
+        "Belki de.",
+        "Unuttum."
+      ],
+      "tf": false,
+      "oops": "Snape hayranları şu an mendil arıyor.",
+      "src": "https://harrypotter.fandom.com/wiki/Severus_Snape"
+    },
+    {
+      "d": 1,
+      "q": "Snape, Voldemort'un emriyle kim tarafından öldürülür?",
+      "a": [
+        "Nagini",
+        "Bellatrix",
+        "Lucius Malfoy",
+        "Fenrir Greyback"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Severus_Snape"
+    },
+    {
+      "d": 2,
+      "q": "Filmin sonunda Harry Mürver Asa'yı ne yapar?",
+      "a": [
+        "İkiye kırıp aşağı atar",
+        "Dumbledore'un mezarına koyar",
+        "Hermione'ye verir",
+        "Ollivander'a satar"
+      ],
+      "tf": false,
+      "oops": "Mezara koymak kitapta kaldı!",
+      "src": "https://harrypotter.fandom.com/wiki/Harry_Potter_and_the_Deathly_Hallows:_Part_2"
+    },
+    {
+      "d": 3,
+      "q": "Mürver Asa'nın bağlılığı, Dumbledore'u silahsızlandıran kime geçmişti?",
+      "a": [
+        "Draco Malfoy",
+        "Severus Snape",
+        "Voldemort",
+        "Gellert Grindelwald"
+      ],
+      "tf": false,
+      "oops": "Snape sandı herkes, Voldemort da dahil!",
+      "src": "https://harrypotter.fandom.com/wiki/Elder_Wand"
+    },
+    {
+      "d": 3,
+      "q": "Aberforth'un tablosundan çıkıp Neville'i getiren, Dumbledore'ların kız kardeşi kimdir?",
+      "a": [
+        "Ariana",
+        "Helena",
+        "Gabrielle",
+        "Kendra"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Ariana_Dumbledore"
+    },
+    {
+      "d": 1,
+      "q": "Hermione Granger'ı hangi oyuncu canlandırır?",
+      "a": [
+        "Emma Watson",
+        "Emma Thompson",
+        "Bonnie Wright",
+        "Evanna Lynch"
+      ],
+      "tf": false,
+      "oops": "Emma Thompson kehanet dersinde, Hermione'de değil!",
+      "src": "https://harrypotter.fandom.com/wiki/Emma_Watson"
+    },
+    {
+      "d": 1,
+      "q": "Severus Snape'i hangi oyuncu oynar?",
+      "a": [
+        "Alan Rickman",
+        "Ralph Fiennes",
+        "Gary Oldman",
+        "Jason Isaacs"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Alan_Rickman"
+    },
+    {
+      "d": 2,
+      "q": "Profesör McGonagall'ı hangi oyuncu oynar?",
+      "a": [
+        "Maggie Smith",
+        "Judi Dench",
+        "Julie Walters",
+        "Emma Thompson"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Maggie_Smith"
+    },
+    {
+      "d": 2,
+      "q": "Fred ile George Weasley'i hangi ikiz kardeşler oynar?",
+      "a": [
+        "James ve Oliver Phelps",
+        "Dan ve Mark Feehily",
+        "Tom ve Ben Jones",
+        "Ross ve Rachel Geller"
+      ],
+      "tf": false,
+      "oops": "Ross ile Rachel başka dizide, kardeş bile değiller!",
+      "src": "https://harrypotter.fandom.com/wiki/James_and_Oliver_Phelps"
+    },
+    {
+      "d": 3,
+      "q": "Hem Profesör Flitwick'i hem de cincüce Griphook'u oynayan oyuncu kimdir?",
+      "a": [
+        "Warwick Davis",
+        "Toby Jones",
+        "Timothy Spall",
+        "Mark Williams"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Warwick_Davis"
+    },
+    {
+      "d": 1,
+      "q": "Draco Malfoy'u hangi oyuncu oynar?",
+      "a": [
+        "Tom Felton",
+        "Rupert Grint",
+        "Matthew Lewis",
+        "Robert Pattinson"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Tom_Felton"
+    },
+    {
+      "d": 3,
+      "q": "Serinin ilk üç filminin müziğini kim besteledi?",
+      "a": [
+        "John Williams",
+        "Hans Zimmer",
+        "Alexandre Desplat",
+        "Patrick Doyle"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/John_Williams"
+    },
+    {
+      "d": 1,
+      "q": "Hufflepuff binasının simgesi olan hayvan hangisidir?",
+      "a": [
+        "Porsuk",
+        "Kartal",
+        "Aslan",
+        "Yılan"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Hufflepuff"
+    },
+    {
+      "d": 1,
+      "q": "Gryffindor binasının sorumlu öğretmeni kimdir?",
+      "a": [
+        "Minerva McGonagall",
+        "Severus Snape",
+        "Filius Flitwick",
+        "Pomona Sprout"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Minerva_McGonagall"
+    },
+    {
+      "d": 2,
+      "q": "Gryffindor binasının hayaleti kimdir?",
+      "a": [
+        "Neredeyse Kafasız Nick",
+        "Kanlı Baron",
+        "Gri Leydi",
+        "Şişman Keşiş"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Nearly_Headless_Nick"
+    },
+    {
+      "d": 2,
+      "q": "Hogwarts bekçisi Filch'in kedisinin adı nedir?",
+      "a": [
+        "Bayan Norris",
+        "Crookshanks",
+        "Bayan Figg",
+        "Tekir Hanım"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Mrs_Norris"
+    },
+    {
+      "d": 1,
+      "q": "Harry'nin alnındaki yara izi ne şeklindedir?",
+      "a": [
+        "Şimşek",
+        "Yıldız",
+        "Hilal",
+        "Ok"
+      ],
+      "tf": false,
+      "oops": "Yıldız mı? Harry ünlü ama o kadar da değil!",
+      "src": "https://harrypotter.fandom.com/wiki/Harry_Potter%27s_scar"
+    },
+    {
+      "d": 1,
+      "q": "Büyücülerin çoğu Voldemort'tan bahsederken ona ne der?",
+      "a": [
+        "Adı Anılmaması Gereken Kişi",
+        "Gölgelerin Efendisi",
+        "Yılan Kral",
+        "Büyük Bilinmeyen"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Tom_Riddle"
+    },
+    {
+      "d": 1,
+      "q": "Gringotts büyücü bankasını kimler işletir?",
+      "a": [
+        "Cincüceler",
+        "Ev cinleri",
+        "Atadamlar",
+        "Devler"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Gringotts_Wizarding_Bank"
+    },
+    {
+      "d": 2,
+      "q": "Weasley ailesinin evinin adı nedir?",
+      "a": [
+        "Kovuk",
+        "Bağıran Baraka",
+        "Grimmauld Meydanı 12",
+        "Domuz Ahırı"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Burrow"
+    },
+    {
+      "d": 1,
+      "q": "Kilitli kapıları açan büyü hangisidir?",
+      "a": [
+        "Alohomora",
+        "Lumos",
+        "Accio",
+        "Nox"
+      ],
+      "tf": false,
+      "oops": "Lumos ışık yakar, kapı açmaz!",
+      "src": "https://harrypotter.fandom.com/wiki/Unlocking_Charm"
+    },
+    {
+      "d": 1,
+      "q": "Harry'nin karlı beyaz baykuşunun adı nedir?",
+      "a": [
+        "Hedwig",
+        "Errol",
+        "Fawkes",
+        "Pigwidgeon"
+      ],
+      "tf": false,
+      "oops": "Errol mü? O baykuş camlara çarpmakla meşgul!",
+      "src": "https://harrypotter.fandom.com/wiki/Hedwig"
+    },
+    {
+      "d": 1,
+      "q": "Sirius Black, Harry'nin vaftiz babasıdır.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "tf": true,
+      "src": "https://harrypotter.fandom.com/wiki/Sirius_Black"
+    },
+    {
+      "d": 1,
+      "q": "Neville Longbottom bir Hufflepuff öğrencisidir.",
+      "a": [
+        "Yanlış",
+        "Doğru"
+      ],
+      "tf": true,
+      "oops": "Neville tam bir Gryffindor! Nagini'ye sor.",
+      "src": "https://harrypotter.fandom.com/wiki/Neville_Longbottom"
+    },
+    {
+      "d": 1,
+      "q": "Dobby'nin Malfoy Malikânesi'nde söylediği “Dobby'nin efendisi yok!” sözünün devamı nedir?",
+      "a": [
+        "Dobby özgür bir ev cini!",
+        "Dobby kendini cezalandıracak!",
+        "Dobby eve dönüyor!",
+        "Dobby çorap istiyor!"
+      ],
+      "tf": false,
+      "src": "https://harrypotter.fandom.com/wiki/Dobby"
+    }
+  ]
+}
