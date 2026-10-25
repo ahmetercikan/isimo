@@ -3,11 +3,12 @@
  * Tur anahtarları "r1", "r2"… (sayısal anahtarlar Realtime Database'de diziye dönüşür).
  */
 import type { Category } from './categories';
+import type { Quiz, RoundQuestion } from './quiz';
 
-export type Phase = 'lobby' | 'spin' | 'write' | 'review' | 'scores' | 'final' | 'turn' | 'clue';
+export type Phase = 'lobby' | 'spin' | 'write' | 'review' | 'scores' | 'final' | 'turn' | 'clue' | 'quiz';
 
-/** Hangi oyun: 'isim' İsim Şehir (STOP), 'siram' Sıra Sende (harf değiştir), 'film' Sinema Bilmecesi. Yoksa İsim Şehir. */
-export type GameKind = 'isim' | 'siram' | 'film';
+/** Oyun türü: quiz, Sen Ne Kadar…? arkadaş odasıdır. Yoksa İsim Şehir. */
+export type GameKind = 'isim' | 'siram' | 'film' | 'quiz';
 
 export interface Settings {
   cats: Category[];
@@ -34,6 +35,8 @@ export interface Settings {
   // ---- Yalnızca Sinema Bilmecesi (rounds: film sayısı, time: ipuçları arası saniye) ----
   /** Hangi filmler sorulsun. */
   pool?: 'hepsi' | 'yerli' | 'yabanci';
+  /** Sen Ne Kadar…? odasının evreni. */
+  quizId?: string;
 }
 
 export interface Player {
@@ -91,6 +94,10 @@ export interface Ctl {
   films?: string;
   /** Bu turda bilenler ve aldıkları puan. */
   got?: Record<string, number>;
+  /** Aynı soru ve şık sırası bütün cihazlara odadan gönderilir. */
+  quiz?: { id: string; title: string; ask: string; tiers: Quiz['tiers']; questions: RoundQuestion[]; players: string[]; run: string };
+  quizPicks?: Record<string, number>;
+  quizCorrect?: Record<string, number>;
 }
 
 /** answers[rKey][pid][catId] = metin */

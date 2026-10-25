@@ -91,5 +91,47 @@ export const QUIZZES: QuizMeta[] = [
     "ask": "Sen ne kadar buzullusun?",
     "scope": "Buz Devri 1-5 (2002–2016)",
     "count": 48
+  },
+  {
+    "id": "yildizsavaslari",
+    "title": "Yıldız Savaşları",
+    "ask": "Sen ne kadar Jedi’sın?",
+    "scope": "Orijinal üçleme: Bölüm IV–VI (1977–1983)",
+    "count": 40
+  },
+  {
+    "id": "yenilmezler",
+    "title": "Yenilmezler",
+    "ask": "Sen ne kadar Yenilmezsin?",
+    "scope": "Dört Avengers filmi (2012–2019), MCU sinema sürümleri",
+    "count": 40
+  },
+  {
+    "id": "matrix",
+    "title": "Matrix",
+    "ask": "Sen ne kadar uyanıksın?",
+    "scope": "Matrix (1999), ilk film",
+    "count": 40
+  },
+  {
+    "id": "karayipkorsanlari",
+    "title": "Karayip Korsanları",
+    "ask": "Sen ne kadar korsansın?",
+    "scope": "İlk üç film (2003–2007)",
+    "count": 40
+  },
+  {
+    "id": "recepivedik",
+    "title": "Recep İvedik",
+    "ask": "Sen ne kadar Recep’sin?",
+    "scope": "İlk üç film (2008–2010)",
+    "count": 30
+  },
+  {
+    "id": "eskiya",
+    "title": "Eşkıya",
+    "ask": "Sen ne kadar Baran’ın yol arkadaşısın?",
+    "scope": "Eşkıya (1996)",
+    "count": 30
   }
 ];

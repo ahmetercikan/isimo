@@ -1,0 +1,494 @@
+{
+  "id": "yildizsavaslari",
+  "title": "Yıldız Savaşları",
+  "ask": "Sen ne kadar Jedi’sın?",
+  "scope": "Orijinal üçleme: Bölüm IV–VI (1977–1983)",
+  "tiers": [
+    {
+      "name": "Mos Eisley Turisti",
+      "line": "Galaksiyi gezerken yolu biraz karıştırmışsın."
+    },
+    {
+      "name": "Çaylak Pilot",
+      "line": "Motorlar çalışıyor; hedef bilgisayarına biraz daha bak."
+    },
+    {
+      "name": "Padawan",
+      "line": "Işın kılıcın hazır, birkaç ders daha gerekiyor."
+    },
+    {
+      "name": "Asi Pilotu",
+      "line": "Bu filoya rahatça katılabilirsin."
+    },
+    {
+      "name": "Jedi Şövalyesi",
+      "line": "Güç seninle, cevaplar da öyle."
+    },
+    {
+      "name": "Jedi Ustası",
+      "line": "Yoda bile senden birkaç ayrıntı öğrenebilir."
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Luke Skywalker'ın büyüdüğü çöl gezegeni hangisidir?",
+      "a": [
+        "Tatooine",
+        "Hoth",
+        "Endor",
+        "Dagobah"
+      ],
+      "src": "https://www.starwars.com/databank/luke-skywalker",
+      "oops": "Güç biraz zayıf çekiyor; anteni Tatooine’ye çevir!"
+    },
+    {
+      "d": 1,
+      "q": "Luke'u ilk filmde Jedi yoluyla tanıştıran yaşlı usta kimdir?",
+      "a": [
+        "Obi-Wan Kenobi",
+        "Jabba",
+        "Lando",
+        "Tarkin"
+      ],
+      "src": "https://www.starwars.com/databank/luke-skywalker"
+    },
+    {
+      "d": 1,
+      "q": "Luke Skywalker'ı hangi oyuncu canlandırır?",
+      "a": [
+        "Mark Hamill",
+        "Harrison Ford",
+        "Billy Dee Williams",
+        "Peter Cushing"
+      ],
+      "src": "https://www.starwars.com/databank/luke-skywalker",
+      "oops": "Yoda bu cevabı duysa bir süre sessiz kalırdı."
+    },
+    {
+      "d": 1,
+      "q": "Luke'un babası olduğu ortaya çıkan karakter kimdir?",
+      "a": [
+        "Darth Vader",
+        "Han Solo",
+        "Yoda",
+        "Jabba"
+      ],
+      "src": "https://www.starwars.com/databank/luke-skywalker"
+    },
+    {
+      "d": 1,
+      "q": "Han Solo'nun meşhur gemisinin adı nedir?",
+      "a": [
+        "Millennium Falcon",
+        "Ölüm Yıldızı",
+        "Executor",
+        "Tantive IV"
+      ],
+      "src": "https://www.starwars.com/databank/han-solo",
+      "oops": "Droidler bile bazen yeniden başlatılmak ister."
+    },
+    {
+      "d": 1,
+      "q": "Han Solo'yu hangi oyuncu canlandırır?",
+      "a": [
+        "Harrison Ford",
+        "Mark Hamill",
+        "Alec Guinness",
+        "Ian McDiarmid"
+      ],
+      "src": "https://www.starwars.com/databank/han-solo"
+    },
+    {
+      "d": 1,
+      "q": "Han'ın tüylü yol arkadaşı kimdir?",
+      "a": [
+        "Chewbacca",
+        "Yoda",
+        "Wicket",
+        "Jabba"
+      ],
+      "src": "https://www.starwars.com/databank/han-solo",
+      "oops": "Bir sonraki soruda hedef bilgisayarını kontrol et!"
+    },
+    {
+      "d": 1,
+      "q": "Han Solo, İmparator filminde hangi madde içinde dondurulur?",
+      "a": [
+        "Karbonit",
+        "Buz",
+        "Kristal",
+        "Altın"
+      ],
+      "src": "https://www.starwars.com/databank/han-solo"
+    },
+    {
+      "d": 1,
+      "q": "Leia'nın yardım mesajını taşıyan küçük droid hangisidir?",
+      "a": [
+        "R2-D2",
+        "C-3PO",
+        "IG-88",
+        "4-LOM"
+      ],
+      "src": "https://www.starwars.com/databank/r2-d2",
+      "oops": "Güç biraz zayıf çekiyor; anteni Tatooine’ye çevir!"
+    },
+    {
+      "d": 1,
+      "q": "R2-D2'nin çoğunlukla altın renkli olan droid arkadaşı kimdir?",
+      "a": [
+        "C-3PO",
+        "Chewbacca",
+        "Boba Fett",
+        "Yoda"
+      ],
+      "src": "https://www.starwars.com/databank/r2-d2"
+    },
+    {
+      "d": 1,
+      "q": "Luke'a Dagobah'ta eğitim veren küçük Jedi ustası kimdir?",
+      "a": [
+        "Yoda",
+        "Palpatine",
+        "Jabba",
+        "Tarkin"
+      ],
+      "src": "https://www.starwars.com/databank/yoda",
+      "oops": "Yoda bu cevabı duysa bir süre sessiz kalırdı."
+    },
+    {
+      "d": 1,
+      "q": "Jedi'ların kullandığı enerji kılıcına ne denir?",
+      "a": [
+        "Işın kılıcı",
+        "Gök gürültüsü çekici",
+        "Lazer yayı",
+        "Plazma baltası"
+      ],
+      "src": "https://www.starwars.com/databank/yoda"
+    },
+    {
+      "d": 1,
+      "q": "Bir gezegeni yok edebilen İmparatorluk savaş istasyonu hangisidir?",
+      "a": [
+        "Ölüm Yıldızı",
+        "Bulut Şehri",
+        "Mos Eisley",
+        "Jabba'nın sarayı"
+      ],
+      "src": "https://www.starwars.com/databank/death-star",
+      "oops": "Droidler bile bazen yeniden başlatılmak ister."
+    },
+    {
+      "d": 1,
+      "q": "İlk filmde Ölüm Yıldızı'nın yok ettiği Leia'nın gezegeni hangisidir?",
+      "a": [
+        "Alderaan",
+        "Tatooine",
+        "Hoth",
+        "Endor"
+      ],
+      "src": "https://www.starwars.com/databank/death-star"
+    },
+    {
+      "d": 1,
+      "q": "Jedi'ın Dönüşü'nde ormanlık ayda yaşayan küçük tüylü topluluğun adı nedir?",
+      "a": [
+        "Ewoklar",
+        "Wookieeler",
+        "Jawalar",
+        "Tuskenler"
+      ],
+      "src": "https://www.starwars.com/databank/ewok",
+      "oops": "Bir sonraki soruda hedef bilgisayarını kontrol et!"
+    },
+    {
+      "d": 1,
+      "q": "Ewoklar son büyük savaşta hangi tarafa yardım eder?",
+      "a": [
+        "Asi İttifakı'na",
+        "İmparatorluk'a",
+        "Jabba'ya",
+        "Ödül avcılarına"
+      ],
+      "src": "https://www.starwars.com/databank/ewok"
+    },
+    {
+      "d": 2,
+      "q": "Bulut Şehri'ni yöneten, Han'ın eski dostu kimdir?",
+      "a": [
+        "Lando Calrissian",
+        "Boba Fett",
+        "Wedge Antilles",
+        "Tarkin"
+      ],
+      "src": "https://www.starwars.com/databank/lando-calrissian",
+      "oops": "Güç biraz zayıf çekiyor; anteni Tatooine’ye çevir!"
+    },
+    {
+      "d": 2,
+      "q": "Bulut Şehri hangi gezegende bulunur?",
+      "a": [
+        "Bespin",
+        "Hoth",
+        "Dagobah",
+        "Alderaan"
+      ],
+      "src": "https://www.starwars.com/databank/lando-calrissian"
+    },
+    {
+      "d": 2,
+      "q": "İmparator filminin başında Asiler hangi buz gezegeninde saklanır?",
+      "a": [
+        "Hoth",
+        "Tatooine",
+        "Mustafar",
+        "Naboo"
+      ],
+      "src": "https://www.starwars.com/databank/hoth",
+      "oops": "Yoda bu cevabı duysa bir süre sessiz kalırdı."
+    },
+    {
+      "d": 2,
+      "q": "Hoth Savaşı'nda kar araçları büyük AT-AT'leri devirmek için ne kullanır?",
+      "a": [
+        "Bacaklarına dolanan kablolar",
+        "Görünmezlik pelerini",
+        "Dev mıknatıslar",
+        "Sismik bombalar"
+      ],
+      "src": "https://www.starwars.com/databank/hoth"
+    },
+    {
+      "d": 2,
+      "q": "Darth Vader'ın Jedi olduğu dönemdeki adı nedir?",
+      "a": [
+        "Anakin Skywalker",
+        "Ben Solo",
+        "Qui-Gon Jinn",
+        "Mace Windu"
+      ],
+      "src": "https://www.starwars.com/databank/darth-vader",
+      "oops": "Droidler bile bazen yeniden başlatılmak ister."
+    },
+    {
+      "d": 2,
+      "q": "Özgün İngilizce seslendirmede Darth Vader'ın sesini kim verir?",
+      "a": [
+        "James Earl Jones",
+        "Alec Guinness",
+        "Mark Hamill",
+        "Harrison Ford"
+      ],
+      "src": "https://www.starwars.com/databank/darth-vader"
+    },
+    {
+      "d": 2,
+      "q": "Jedi'ın Dönüşü'nde Luke'u İmparator'un saldırısından kim kurtarır?",
+      "a": [
+        "Darth Vader",
+        "Boba Fett",
+        "Jabba",
+        "Tarkin"
+      ],
+      "src": "https://www.starwars.com/databank/darth-vader",
+      "oops": "Bir sonraki soruda hedef bilgisayarını kontrol et!"
+    },
+    {
+      "d": 2,
+      "q": "Leia Organa'yı hangi oyuncu canlandırır?",
+      "a": [
+        "Carrie Fisher",
+        "Natalie Portman",
+        "Daisy Ridley",
+        "Felicity Jones"
+      ],
+      "src": "https://www.starwars.com/databank/leia-organa"
+    },
+    {
+      "d": 2,
+      "q": "Jedi'ın Dönüşü'nde Leia'nın Luke ile akrabalığı ne olarak açıklanır?",
+      "a": [
+        "İkiz kardeşi",
+        "Annesi",
+        "Kuzeni",
+        "Yeğeni"
+      ],
+      "src": "https://www.starwars.com/databank/leia-organa",
+      "oops": "Güç biraz zayıf çekiyor; anteni Tatooine’ye çevir!"
+    },
+    {
+      "d": 2,
+      "q": "Leia, Jabba'nın sarayında Han'ı kurtarmaya giderken nasıl gizlenir?",
+      "a": [
+        "Ödül avcısı kılığına girer",
+        "İmparator olur",
+        "Droid kılığına girer",
+        "Pilot üniforması giyer"
+      ],
+      "src": "https://www.starwars.com/databank/leia-organa"
+    },
+    {
+      "d": 2,
+      "q": "Tatooine'de sarayı bulunan ve Han'ın kendisine borçlu olduğu suç patronu kimdir?",
+      "a": [
+        "Jabba the Hutt",
+        "Lando Calrissian",
+        "Mon Mothma",
+        "Admiral Ackbar"
+      ],
+      "src": "https://www.starwars.com/databank/jabba-the-hutt",
+      "oops": "Yoda bu cevabı duysa bir süre sessiz kalırdı."
+    },
+    {
+      "d": 2,
+      "q": "Jabba'nın, esirleri attırdığı çöl çukurundaki yaratık hangisidir?",
+      "a": [
+        "Sarlacc",
+        "Wampa",
+        "Tauntaun",
+        "Rancor"
+      ],
+      "src": "https://www.starwars.com/databank/jabba-the-hutt"
+    },
+    {
+      "d": 2,
+      "q": "Yoda, Luke'a gücünü göstermek için bataklıktan ne çıkarır?",
+      "a": [
+        "Luke'un X-wing'ini",
+        "Ölüm Yıldızı'nı",
+        "Bir AT-AT'yi",
+        "Jabba'nın gemisini"
+      ],
+      "src": "https://www.starwars.com/databank/yoda",
+      "oops": "Droidler bile bazen yeniden başlatılmak ister."
+    },
+    {
+      "d": 2,
+      "q": "Luke, Dagobah'taki karanlık mağarada kimin görüntüsüyle yüzleşir?",
+      "a": [
+        "Darth Vader'ın",
+        "Han Solo'nun",
+        "Leia'nın",
+        "Chewbacca'nın"
+      ],
+      "src": "https://www.starwars.com/databank/yoda"
+    },
+    {
+      "d": 3,
+      "q": "Alec Guinness, orijinal üçlemede hangi karakteri canlandırır?",
+      "a": [
+        "Obi-Wan Kenobi",
+        "İmparator Palpatine",
+        "Grand Moff Tarkin",
+        "Boba Fett"
+      ],
+      "src": "https://www.starwars.com/databank/obi-wan-kenobi",
+      "oops": "Bir sonraki soruda hedef bilgisayarını kontrol et!"
+    },
+    {
+      "d": 3,
+      "q": "Obi-Wan, Tatooine'de hangi ilk adı kullanarak yaşar?",
+      "a": [
+        "Ben",
+        "Owen",
+        "Bail",
+        "Wedge"
+      ],
+      "src": "https://www.starwars.com/databank/obi-wan-kenobi"
+    },
+    {
+      "d": 3,
+      "q": "İlk Ölüm Yıldızı'na son saldırı sırasında Luke'un hedef bilgisayarıyla ilgili tercihi nedir?",
+      "a": [
+        "Onu kapatıp Güç'e güvenir",
+        "Onu R2-D2'ye verir",
+        "Onu Tarkin'e bağlar",
+        "Onu gemiden atar"
+      ],
+      "src": "https://www.starwars.com/databank/death-star",
+      "oops": "Güç biraz zayıf çekiyor; anteni Tatooine’ye çevir!"
+    },
+    {
+      "d": 3,
+      "q": "İlk Ölüm Yıldızı'ndaki yüksek rütbeli komutan Tarkin'i kim oynar?",
+      "a": [
+        "Peter Cushing",
+        "Alec Guinness",
+        "David Prowse",
+        "Billy Dee Williams"
+      ],
+      "src": "https://www.starwars.com/databank/death-star"
+    },
+    {
+      "d": 3,
+      "q": "İkinci Ölüm Yıldızı'nın koruma kalkanı hangi yerdeki jeneratörden beslenir?",
+      "a": [
+        "Endor'un ormanlık ayında",
+        "Tatooine çölünde",
+        "Hoth mağarasında",
+        "Dagobah bataklığında"
+      ],
+      "src": "https://www.starwars.com/databank/endor",
+      "oops": "Yoda bu cevabı duysa bir süre sessiz kalırdı."
+    },
+    {
+      "d": 3,
+      "q": "Endor'da Leia'nın karşılaştığı genç Ewok'un adı nedir?",
+      "a": [
+        "Wicket",
+        "Wedge",
+        "Watto",
+        "Wampa"
+      ],
+      "src": "https://www.starwars.com/databank/endor"
+    },
+    {
+      "d": 3,
+      "q": "C-3PO'nun temel uzmanlığı hangi alandadır?",
+      "a": [
+        "Protokol ve tercüme",
+        "Savaş pilotluğu",
+        "Işın kılıcı yapımı",
+        "Ödül avcılığı"
+      ],
+      "src": "https://www.starwars.com/databank/c-3po",
+      "oops": "Droidler bile bazen yeniden başlatılmak ister."
+    },
+    {
+      "d": 3,
+      "q": "Ewoklar, C-3PO'yu ilk gördüklerinde ona nasıl davranır?",
+      "a": [
+        "Tanrısal bir varlık sanırlar",
+        "Hemen hapse atarlar",
+        "Onu görmezler",
+        "Bir pilot sanırlar"
+      ],
+      "src": "https://www.starwars.com/databank/c-3po"
+    },
+    {
+      "d": 3,
+      "q": "İkinci Ölüm Yıldızı'nın içine Millennium Falcon'la giren pilot kimdir?",
+      "a": [
+        "Lando Calrissian",
+        "Han Solo",
+        "Luke Skywalker",
+        "Obi-Wan Kenobi"
+      ],
+      "src": "https://www.starwars.com/databank/lando-calrissian",
+      "oops": "Bir sonraki soruda hedef bilgisayarını kontrol et!"
+    },
+    {
+      "d": 3,
+      "q": "Han, Millennium Falcon'u Lando'dan nasıl kazandığını söyler?",
+      "a": [
+        "Bir oyunda kazanarak",
+        "Onu satın alarak",
+        "Askerî ödül alarak",
+        "Hediye olarak alarak"
+      ],
+      "src": "https://www.starwars.com/databank/lando-calrissian"
+    }
+  ]
+}

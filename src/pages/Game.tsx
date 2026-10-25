@@ -11,6 +11,7 @@ import { Doodles } from '../components/Doodles';
 import { ChainFinal } from '../game/screens/ChainFinal';
 import { FilmFinal } from '../game/screens/FilmFinal';
 import { FilmRound } from '../game/screens/FilmRound';
+import { QuizRoomRound, QuizRoomFinal } from '../game/screens/QuizRoom';
 import { Final } from '../game/screens/Final';
 import { Lobby } from '../game/screens/Lobby';
 import { Review } from '../game/screens/Review';
@@ -41,7 +42,7 @@ export default function Game() {
   let mood: Mood = 'off';
   if (s) {
     const c = s.ctl;
-    mood = { lobby: 'lobby', spin: 'roll', review: 'chill', scores: 'chill', final: 'off', write: 'write', turn: 'write', clue: 'write' }[c.phase] as Mood;
+    mood = { lobby: 'lobby', spin: 'roll', review: 'chill', scores: 'chill', final: 'off', write: 'write', turn: 'write', clue: 'write', quiz: 'film' }[c.phase] as Mood;
     if (c.phase === 'write') mood = now < c.startAt || now >= c.endAt ? 'off' : c.endAt - now <= 10500 ? 'tension' : 'write';
     if (c.phase === 'turn') mood = c.endAt - now <= 8000 ? 'tension' : 'write';
     // Film boyunca aynı sakin yarışma döngüsü; son ipucunda tempo/parça değişmez.
@@ -68,7 +69,8 @@ export default function Game() {
   const catKey = s?.settings.cats.map((c) => c.id).join(',');
   const siram = s?.settings.game === 'siram';
   const film = s?.settings.game === 'film';
-  useEffect(() => void (s && !siram && !film && preloadDicts(s)), [catKey, siram, film]);
+  const quiz = s?.settings.game === 'quiz';
+  useEffect(() => void (s && !siram && !film && !quiz && preloadDicts(s)), [catKey, siram, film, quiz]);
   // Sıra Sende'nin kelime havuzu
   useEffect(() => void (siram && loadWords()), [siram]);
   // Sinema Bilmecesi'nin film listesi (tahminler her cihazda kontrol edilir)
@@ -122,7 +124,7 @@ export default function Game() {
     );
 
   const phase = s.ctl.phase;
-  const cinema = film && (phase === 'lobby' || phase === 'clue' || phase === 'final');
+  const cinema = quiz || film && (phase === 'lobby' || phase === 'clue' || phase === 'final');
   return (
     // Sinema Bilmecesi: lobi, tur ve final sinema salonunda (src/styles/cinema.css)
     <main className={`bg page game game--${phase} ${cinema ? 'game--cinema' : ''}`}>
@@ -138,8 +140,9 @@ export default function Game() {
       {phase === 'scores' && <Scores t={t} s={s} />}
       {phase === 'turn' && <Turn t={t} s={s} />}
       {phase === 'clue' && <FilmRound t={t} s={s} />}
+      {phase === 'quiz' && <QuizRoomRound key={`${s.ctl.quiz?.run}-${s.ctl.round}`} t={t} s={s} />}
       {phase === 'final' &&
-        (siram ? <ChainFinal t={t} s={s} onExit={leave} /> : film ? <FilmFinal t={t} s={s} onExit={leave} /> : <Final t={t} s={s} onExit={leave} />)}
+        (quiz ? <QuizRoomFinal t={t} s={s} onExit={leave} /> : siram ? <ChainFinal t={t} s={s} onExit={leave} /> : film ? <FilmFinal t={t} s={s} onExit={leave} /> : <Final t={t} s={s} onExit={leave} />)}
       {ask && (
         <Confirm
           title="Oyundan çıkılsın mı?"

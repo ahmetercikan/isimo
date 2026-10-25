@@ -1,0 +1,494 @@
+{
+  "id": "karayipkorsanlari",
+  "title": "Karayip Korsanları",
+  "ask": "Sen ne kadar korsansın?",
+  "scope": "İlk üç film (2003–2007)",
+  "tiers": [
+    {
+      "name": "İskele Yolcusu",
+      "line": "Gemi kalktı; sen hâlâ halatı çözüyorsun."
+    },
+    {
+      "name": "Güverte Çaylağı",
+      "line": "Pusula biraz karışık ama hevesin yerinde."
+    },
+    {
+      "name": "Tayfa",
+      "line": "Güvertede artık sana da iş düşer."
+    },
+    {
+      "name": "Birinci Zabit",
+      "line": "Fırtınada rotayı kaybetmezsin."
+    },
+    {
+      "name": "Kara İnci Kaptanı",
+      "line": "Tayfa cevaplarına güveniyor."
+    },
+    {
+      "name": "Korsanlar Konseyi Ustası",
+      "line": "Dünyanın sonunda bile ayrıntıları hatırlarsın."
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Jack Sparrow'u hangi oyuncu canlandırır?",
+      "a": [
+        "Johnny Depp",
+        "Orlando Bloom",
+        "Geoffrey Rush",
+        "Bill Nighy"
+      ],
+      "src": "https://movies.disney.com/pirates-of-the-caribbean-the-curse-of-the-black-pearl",
+      "oops": "Pusula biraz başka tarafa dönmüş galiba."
+    },
+    {
+      "d": 1,
+      "q": "Will Turner'ı hangi oyuncu canlandırır?",
+      "a": [
+        "Orlando Bloom",
+        "Johnny Depp",
+        "Jack Davenport",
+        "Jonathan Pryce"
+      ],
+      "src": "https://movies.disney.com/pirates-of-the-caribbean-the-curse-of-the-black-pearl"
+    },
+    {
+      "d": 1,
+      "q": "Elizabeth Swann'ı hangi oyuncu canlandırır?",
+      "a": [
+        "Keira Knightley",
+        "Kate Winslet",
+        "Natalie Portman",
+        "Emma Watson"
+      ],
+      "src": "https://movies.disney.com/pirates-of-the-caribbean-the-curse-of-the-black-pearl",
+      "oops": "Gibbs bu hikâyeyi bir daha anlatmalı."
+    },
+    {
+      "d": 1,
+      "q": "Jack'in geri almak istediği siyah yelkenli geminin adı nedir?",
+      "a": [
+        "Kara İnci",
+        "Uçan Hollandalı",
+        "Interceptor",
+        "Endeavour"
+      ],
+      "src": "https://movies.disney.com/pirates-of-the-caribbean-the-curse-of-the-black-pearl"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmde Kara İnci'yi Jack'in elinden alan kaptan kimdir?",
+      "a": [
+        "Barbossa",
+        "Davy Jones",
+        "Norrington",
+        "Beckett"
+      ],
+      "src": "https://movies.disney.com/pirates-of-the-caribbean-the-curse-of-the-black-pearl",
+      "oops": "Güvertede küçük bir bilgi fırtınası çıktı."
+    },
+    {
+      "d": 1,
+      "q": "İlk filmin alt başlığı nedir?",
+      "a": [
+        "Siyah İnci'nin Laneti",
+        "Gizemli Denizlerde",
+        "Salazar'ın İntikamı",
+        "Dünyanın Sonu"
+      ],
+      "src": "https://movies.disney.com/pirates-of-the-caribbean-the-curse-of-the-black-pearl"
+    },
+    {
+      "d": 1,
+      "q": "Will Turner'ın mesleği nedir?",
+      "a": [
+        "Demirci",
+        "Terzi",
+        "Doktor",
+        "Haritacı"
+      ],
+      "src": "https://movies.disney.com/pirates-of-the-caribbean-the-curse-of-the-black-pearl",
+      "oops": "Kaptanlık kolay değil; bir sonraki soru senin olsun!"
+    },
+    {
+      "d": 1,
+      "q": "Elizabeth'in babası hangi görevdedir?",
+      "a": [
+        "Vali",
+        "Korsan kaptanı",
+        "Demirci",
+        "Amiral"
+      ],
+      "src": "https://movies.disney.com/pirates-of-the-caribbean-the-curse-of-the-black-pearl"
+    },
+    {
+      "d": 1,
+      "q": "Barbossa'nın yanında dolaşan hayvan hangisidir?",
+      "a": [
+        "Maymun",
+        "Papağan",
+        "Kedi",
+        "Köpek"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Hector_Barbossa",
+      "oops": "Pusula biraz başka tarafa dönmüş galiba."
+    },
+    {
+      "d": 1,
+      "q": "İlk filmde lanetli korsanlar ay ışığında nasıl görünür?",
+      "a": [
+        "İskelet gibi",
+        "Görünmez",
+        "Taştan heykel gibi",
+        "Dev gibi"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Hector_Barbossa"
+    },
+    {
+      "d": 1,
+      "q": "İkinci filmde ahtapot benzeri yüzüyle görülen kaptan kimdir?",
+      "a": [
+        "Davy Jones",
+        "Barbossa",
+        "Beckett",
+        "Norrington"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Davy_Jones",
+      "oops": "Gibbs bu hikâyeyi bir daha anlatmalı."
+    },
+    {
+      "d": 1,
+      "q": "Davy Jones'un gemisinin adı nedir?",
+      "a": [
+        "Uçan Hollandalı",
+        "Kara İnci",
+        "Interceptor",
+        "Empress"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Davy_Jones"
+    },
+    {
+      "d": 1,
+      "q": "Davy Jones'un denizden çağırabildiği büyük yaratık hangisidir?",
+      "a": [
+        "Kraken",
+        "Ejderha",
+        "Denizkızı",
+        "Dev kaplumbağa"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Davy_Jones",
+      "oops": "Güvertede küçük bir bilgi fırtınası çıktı."
+    },
+    {
+      "d": 1,
+      "q": "Davy Jones'un göğsünden çıkardığı hangi organı sandıkta saklanır?",
+      "a": [
+        "Kalbi",
+        "Akciğeri",
+        "Böbreği",
+        "Midesi"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Davy_Jones"
+    },
+    {
+      "d": 1,
+      "q": "Jack'in pusulası normal pusulalardan nasıl ayrılır?",
+      "a": [
+        "En çok istediği şeyi gösterir",
+        "Daima güneye döner",
+        "Yalnız geceleri çalışır",
+        "Sadece hazineyi gösterir"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Jack_Sparrow",
+      "oops": "Kaptanlık kolay değil; bir sonraki soru senin olsun!"
+    },
+    {
+      "d": 1,
+      "q": "Jack'in çok sevdiği içecek hangisidir?",
+      "a": [
+        "Rom",
+        "Ayran",
+        "Kahve",
+        "Limonata"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Jack_Sparrow"
+    },
+    {
+      "d": 2,
+      "q": "İlk filmdeki laneti başlatan altınlar hangi uygarlığa aittir?",
+      "a": [
+        "Aztek",
+        "Viking",
+        "Antik Yunan",
+        "Mısır"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Aztec_gold",
+      "oops": "Pusula biraz başka tarafa dönmüş galiba."
+    },
+    {
+      "d": 2,
+      "q": "İlk filmde lanetin kalkması için altınların nereye dönmesi gerekir?",
+      "a": [
+        "Alındıkları taş sandığa",
+        "Denizin dibine",
+        "Valinin kasasına",
+        "Bir yanardağa"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Aztec_gold"
+    },
+    {
+      "d": 2,
+      "q": "İlk filmde altın madalyonu korsanlardan saklayan kişi kimdir?",
+      "a": [
+        "Elizabeth",
+        "Vali Swann",
+        "Norrington",
+        "Beckett"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Aztec_gold",
+      "oops": "Gibbs bu hikâyeyi bir daha anlatmalı."
+    },
+    {
+      "d": 2,
+      "q": "İlk filmde lanetin kaldırılmasıyla doğrudan bağlantılı Turner hangisidir?",
+      "a": [
+        "Will Turner",
+        "Jack Sparrow",
+        "James Norrington",
+        "Joshamee Gibbs"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Aztec_gold"
+    },
+    {
+      "d": 2,
+      "q": "Will'in korsan babasının lakabı nedir?",
+      "a": [
+        "Bootstrap Bill",
+        "Kara Sakal",
+        "Kızıl Kaptan",
+        "Demir Yumruk"
+      ],
+      "src": "https://pirates.fandom.com/wiki/William_Turner_Sr.",
+      "oops": "Güvertede küçük bir bilgi fırtınası çıktı."
+    },
+    {
+      "d": 2,
+      "q": "Will, babasıyla ikinci filmde hangi gemide yeniden karşılaşır?",
+      "a": [
+        "Uçan Hollandalı",
+        "Kara İnci",
+        "Interceptor",
+        "Endeavour"
+      ],
+      "src": "https://pirates.fandom.com/wiki/William_Turner_Sr."
+    },
+    {
+      "d": 2,
+      "q": "İlk filmde Elizabeth ile evlenmek isteyen deniz subayı kimdir?",
+      "a": [
+        "James Norrington",
+        "Will'in babası",
+        "Joshamee Gibbs",
+        "Sao Feng"
+      ],
+      "src": "https://pirates.fandom.com/wiki/James_Norrington",
+      "oops": "Kaptanlık kolay değil; bir sonraki soru senin olsun!"
+    },
+    {
+      "d": 2,
+      "q": "İkinci filmde Davy Jones'un kalbini ele geçirip Beckett'e götüren kimdir?",
+      "a": [
+        "Norrington",
+        "Jack",
+        "Will",
+        "Gibbs"
+      ],
+      "src": "https://pirates.fandom.com/wiki/James_Norrington"
+    },
+    {
+      "d": 2,
+      "q": "İkinci filmde kahramanların danıştığı gizemli kadın kimdir?",
+      "a": [
+        "Tia Dalma",
+        "Anamaria",
+        "Elizabeth'in annesi",
+        "Giselle"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Tia_Dalma",
+      "oops": "Pusula biraz başka tarafa dönmüş galiba."
+    },
+    {
+      "d": 2,
+      "q": "İkinci filmin sonunda geri döndüğü açıklanan korsan kaptanı kimdir?",
+      "a": [
+        "Barbossa",
+        "Kara Sakal",
+        "Salazar",
+        "Sao Feng"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Tia_Dalma"
+    },
+    {
+      "d": 2,
+      "q": "Üçüncü filmde Tia Dalma'nın hangi deniz tanrıçası olduğu açıklanır?",
+      "a": [
+        "Calypso",
+        "Athena",
+        "Hera",
+        "Artemis"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Tia_Dalma",
+      "oops": "Gibbs bu hikâyeyi bir daha anlatmalı."
+    },
+    {
+      "d": 2,
+      "q": "Üçüncü filmde Jack'i aramaya giden ekip hangi uzak limanda Sao Feng'le görüşür?",
+      "a": [
+        "Singapur",
+        "Havana",
+        "Lizbon",
+        "Londra"
+      ],
+      "src": "https://movies.disney.com/pirates-of-the-caribbean-at-worlds-end"
+    },
+    {
+      "d": 2,
+      "q": "Üçüncü filmde korsanların karşısındaki ticaret şirketini yöneten kişi kimdir?",
+      "a": [
+        "Lord Cutler Beckett",
+        "Vali Swann",
+        "Norrington",
+        "Will'in babası"
+      ],
+      "src": "https://movies.disney.com/pirates-of-the-caribbean-at-worlds-end",
+      "oops": "Güvertede küçük bir bilgi fırtınası çıktı."
+    },
+    {
+      "d": 2,
+      "q": "Üçüncü filmin sonunda Uçan Hollandalı'nın yeni kaptanı kim olur?",
+      "a": [
+        "Will Turner",
+        "Jack Sparrow",
+        "Barbossa",
+        "Gibbs"
+      ],
+      "src": "https://movies.disney.com/pirates-of-the-caribbean-at-worlds-end"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmde Jack, kendisini adaya bırakan Barbossa için sakladığı hangi silahı taşır?",
+      "a": [
+        "Tek kurşunlu tabanca",
+        "Altın hançer",
+        "Zehirli ok",
+        "Gümüş mızrak"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Jack_Sparrow",
+      "oops": "Kaptanlık kolay değil; bir sonraki soru senin olsun!"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmde Will, Jack'i hapisten kurtarmak için neyi yerinden söker?",
+      "a": [
+        "Hücrenin kapısını",
+        "Pencerenin camını",
+        "Tavanın tahtasını",
+        "Mahkemenin kapısını"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Jack_Sparrow"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmde lanetli hazinenin bulunduğu adanın adı nedir?",
+      "a": [
+        "Isla de Muerta",
+        "Isla Cruces",
+        "Tortuga",
+        "Shipwreck Cove"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Isla_de_Muerta",
+      "oops": "Pusula biraz başka tarafa dönmüş galiba."
+    },
+    {
+      "d": 3,
+      "q": "Jack ile Barbossa'nın altınlar arasındaki son düellosu nerede geçer?",
+      "a": [
+        "Mağarada",
+        "Valinin konağında",
+        "Singapur'da",
+        "Bir bataklıkta"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Isla_de_Muerta"
+    },
+    {
+      "d": 3,
+      "q": "Davy Jones'un çaldığı büyük müzik aleti hangisidir?",
+      "a": [
+        "Org",
+        "Keman",
+        "Arp",
+        "Akordeon"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Davy_Jones",
+      "oops": "Gibbs bu hikâyeyi bir daha anlatmalı."
+    },
+    {
+      "d": 3,
+      "q": "Davy Jones'un sandığının kilidini açmak için ne gerekir?",
+      "a": [
+        "Özel bir anahtar",
+        "Bir pusula",
+        "Bir altın madalyon",
+        "Bir korsan bayrağı"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Davy_Jones"
+    },
+    {
+      "d": 3,
+      "q": "Üçüncü filmde Korsan Kralı seçilen kişi kimdir?",
+      "a": [
+        "Elizabeth Swann",
+        "Jack Sparrow",
+        "Barbossa",
+        "Sao Feng"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Elizabeth_Swann",
+      "oops": "Güvertede küçük bir bilgi fırtınası çıktı."
+    },
+    {
+      "d": 3,
+      "q": "Üçüncü filmde Will ile Elizabeth'i savaş sırasında kim evlendirir?",
+      "a": [
+        "Barbossa",
+        "Jack",
+        "Beckett",
+        "Gibbs"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Elizabeth_Swann"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmin sonunda Barbossa, ölmeden önce elinde hangi meyveyi tutar?",
+      "a": [
+        "Elma",
+        "Portakal",
+        "Muz",
+        "Armut"
+      ],
+      "src": "https://pirates.fandom.com/wiki/Hector_Barbossa",
+      "oops": "Kaptanlık kolay değil; bir sonraki soru senin olsun!"
+    },
+    {
+      "d": 3,
+      "q": "Barbossa’yı hangi oyuncu canlandırır?",
+      "a": [
+        "Geoffrey Rush",
+        "Bill Nighy",
+        "Jack Davenport",
+        "Jonathan Pryce"
+      ],
+      "src": "https://movies.disney.com/pirates-of-the-caribbean-the-curse-of-the-black-pearl"
+    }
+  ]
+}

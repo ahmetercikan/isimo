@@ -1,5 +1,18 @@
 # İsim Şehir — Claude için proje notları
 
+- **25 Ekim, 1.0.11 sonrasındaki web çalışması:** “Sen Ne Kadar…?” artık ana akışta **Oda Kur / Katıl** ile açılır;
+  bot seçeneği yok. Evren biletleri `/kur/online?oyun=quiz&evren=...` kurulumuna gider. Ev sahibi evreni seçer;
+  2–10 bağlı insan, 10 ortak soru, 20 sn. Herkes yanıtlayınca veya süre bitince doğru cevap 4 sn gösterilir.
+  `src/game/quizDirector.ts` (ctl atomik geçişler), `screens/QuizRoom.tsx` (tur/final), `components/QuizSettings.tsx`.
+  Başlangıçtaki oyuncu listesi sabittir: geç katılanlar sonraki oyuna kadar izler; ev sahibi düşünce yönetim devredilir.
+  Altı “Yakında salonda” evreni tamamlandı: Yıldız Savaşları, Yenilmezler, Matrix, Karayip Korsanları (40'ar),
+  Recep İvedik ve Eşkıya (30'ar). **19 evren / 936 soru.** Kapsamlar JSON ve menüde yazıyor; kitap/çizgi roman yok.
+  Rapor: `store/quiz-reviews/arkadas-odalari-ve-alti-evren.md`. 74 birim testi, 48 Firebase kural denemesi geçti;
+  gerçek Chrome'da Firebase emülatörüyle üç ayrı oturumda tam oyun, seyirci, ev sahibi devri ve tekrar oynama geçti.
+  Kalıcı tarayıcı testi `node scripts/quiz-room-smoke.mjs`; önce emülatör ve port 5291'de VITE_FIREBASE_EMULATOR=1 Vite.
+  Mevcut Firebase kuralları kullanılır, kural değişikliği yok. **Bu yenilikler 1.0.11 Android paketinde yoktur**;
+  yeni Android sürümü için yeniden paketlemek gerekir. Eski doğrudan tek kişilik quiz bağlantıları korunur.
+
 - **25 Ekim 2026, Sinema Salonu devam çalışması:** `/sinema` menüsü ve `/sinema/sen-ne-kadar` tek kişilik yarışması hazır.
   13 evren, 716 soru (Harry Potter 119); geçici örnek set kaldırıldı. Soru başına 20 sn, turda 4 kolay/3 orta/3 zor,
   altı unvan, yerel en iyi sonuç/tekrar engeli, paylaşılabilir hikâye kartı. Lo-fi Quiz de kullanıcıya fazla fantezi geldi;

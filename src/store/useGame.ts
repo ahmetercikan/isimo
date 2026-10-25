@@ -31,6 +31,7 @@ export const useGame = create<GameState>()((set, get) => ({
   lost: false,
 
   startBots(settings, count, level) {
+    if (settings.game === 'quiz') return;
     if (settings.game === 'siram') void loadWords();
     if (settings.game === 'film') void loadFilms();
     const p = useProfile.getState();
@@ -57,7 +58,7 @@ export const useGame = create<GameState>()((set, get) => ({
       set({ s, lost: seen && !s });
       if (!s) return;
       void direct(t, s);
-      const mine = hasBots(s) && actingHost(s) === t.me;
+      const mine = s.settings.game !== 'quiz' && hasBots(s) && actingHost(s) === t.me;
       if (mine && !bots) bots = runBots(t);
       else if (!mine && bots) {
         bots();

@@ -1,0 +1,379 @@
+{
+  "id": "eskiya",
+  "title": "Eşkıya",
+  "ask": "Sen ne kadar Baran’ın yol arkadaşısın?",
+  "scope": "Eşkıya (1996)",
+  "tiers": [
+    {
+      "name": "Tren Yolcusu",
+      "line": "Hikâyeye henüz uzaktan bakıyorsun."
+    },
+    {
+      "name": "Beyoğlu Ziyaretçisi",
+      "line": "Sokakları buldun; karakterleri biraz daha tanı."
+    },
+    {
+      "name": "Otel Komşusu",
+      "line": "Hikâyenin ayrıntıları tanıdık gelmeye başladı."
+    },
+    {
+      "name": "Cumali’nin Arkadaşı",
+      "line": "Olan biteni yakından izliyorsun."
+    },
+    {
+      "name": "Baran’ın Sırdaşı",
+      "line": "Hikâyenin sessiz ayrıntılarını da hatırlıyorsun."
+    },
+    {
+      "name": "Hikâyenin Hafızası",
+      "line": "Yıllar geçse de bu filmi unutmamışsın."
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Eşkıya filminin başkahramanının adı nedir?",
+      "a": [
+        "Baran",
+        "Cumali",
+        "Berfo",
+        "Demircan"
+      ],
+      "src": "https://filmacass.com.tr/sinema/eskiya/",
+      "oops": "Bu hikâyenin ayrıntılarına bir kez daha bakalım."
+    },
+    {
+      "d": 1,
+      "q": "Baran'ı hangi oyuncu canlandırır?",
+      "a": [
+        "Şener Şen",
+        "Uğur Yücel",
+        "Kamuran Usluer",
+        "Özkan Uğur"
+      ],
+      "src": "https://filmacass.com.tr/sinema/eskiya/"
+    },
+    {
+      "d": 1,
+      "q": "Baran, hapisten çıktıktan sonra sevdiği kadını aramak için hangi şehre gider?",
+      "a": [
+        "İstanbul",
+        "Ankara",
+        "İzmir",
+        "Antalya"
+      ],
+      "src": "https://filmacass.com.tr/sinema/eskiya/",
+      "oops": "Bir sonraki durakta cevap daha net olabilir."
+    },
+    {
+      "d": 1,
+      "q": "Baran'ın sevdiği kadının adı nedir?",
+      "a": [
+        "Keje",
+        "Emel",
+        "Sibel",
+        "Zeynep"
+      ],
+      "src": "https://filmacass.com.tr/sinema/eskiya/"
+    },
+    {
+      "d": 1,
+      "q": "Eşkıya'yı yazıp yöneten kişi kimdir?",
+      "a": [
+        "Yavuz Turgul",
+        "Ertem Eğilmez",
+        "Kartal Tibet",
+        "Ömer Faruk Sorak"
+      ],
+      "src": "https://filmacass.com.tr/sinema/eskiya/",
+      "oops": "Beyoğlu sokaklarında küçük bir ayrıntı kaçmış."
+    },
+    {
+      "d": 1,
+      "q": "Eşkıya hangi yıl gösterime girdi?",
+      "a": [
+        "1996",
+        "1986",
+        "2004",
+        "2010"
+      ],
+      "src": "https://filmacass.com.tr/sinema/eskiya/"
+    },
+    {
+      "d": 1,
+      "q": "Baran'ın İstanbul yolculuğunda tanıştığı genç adam kimdir?",
+      "a": [
+        "Cumali",
+        "Demircan",
+        "Berfo",
+        "Sedat"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/",
+      "oops": "Baran’ın hikâyesini yeniden hatırlama zamanı."
+    },
+    {
+      "d": 1,
+      "q": "Cumali'yi hangi oyuncu canlandırır?",
+      "a": [
+        "Uğur Yücel",
+        "Şener Şen",
+        "Özkan Uğur",
+        "Melih Çardak"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/"
+    },
+    {
+      "d": 1,
+      "q": "Cumali'nin sevdiği kadının adı nedir?",
+      "a": [
+        "Emel",
+        "Keje",
+        "Sibel",
+        "Semra"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/",
+      "oops": "Bu hikâyenin ayrıntılarına bir kez daha bakalım."
+    },
+    {
+      "d": 1,
+      "q": "Baran'ın eski dostu ve geçmişteki ihanetle bağlantılı kişi kimdir?",
+      "a": [
+        "Berfo",
+        "Cumali",
+        "Demircan",
+        "Artist Kemal"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/"
+    },
+    {
+      "d": 1,
+      "q": "Baran'ın köyüne döndüğünde gördüğü büyük değişiklik nedir?",
+      "a": [
+        "Köyün baraj suları altında olması",
+        "Köyün bir kaleye dönüşmesi",
+        "Köyün yerinde havalimanı olması",
+        "Köyün tamamen karla kaplanması"
+      ],
+      "src": "https://dergipark.org.tr/en/download/article-file/178030",
+      "oops": "Bir sonraki durakta cevap daha net olabilir."
+    },
+    {
+      "d": 1,
+      "q": "Baran ile Cumali ilk kez hangi ulaşım aracında karşılaşır?",
+      "a": [
+        "Trende",
+        "Otobüste",
+        "Uçakta",
+        "Vapurda"
+      ],
+      "src": "https://dergipark.org.tr/en/download/article-file/178030"
+    },
+    {
+      "d": 2,
+      "q": "Baran hapiste kaç yıl geçirmiştir?",
+      "a": [
+        "35",
+        "15",
+        "25",
+        "45"
+      ],
+      "src": "https://filmacass.com.tr/sinema/eskiya/",
+      "oops": "Beyoğlu sokaklarında küçük bir ayrıntı kaçmış."
+    },
+    {
+      "d": 2,
+      "q": "Filmin başında yakalanan eşkıya grubundan yıllar sonra sağ kalan kişi kimdir?",
+      "a": [
+        "Baran",
+        "Cumali",
+        "Emel",
+        "Demircan"
+      ],
+      "src": "https://filmacass.com.tr/sinema/eskiya/"
+    },
+    {
+      "d": 2,
+      "q": "Baran'ın sevdiği kadını yanına alıp İstanbul'a giden eski dostu kimdir?",
+      "a": [
+        "Berfo",
+        "Cumali",
+        "Mustafa",
+        "Sedat"
+      ],
+      "src": "https://filmacass.com.tr/sinema/eskiya/",
+      "oops": "Baran’ın hikâyesini yeniden hatırlama zamanı."
+    },
+    {
+      "d": 2,
+      "q": "Keje'yi hangi oyuncu canlandırır?",
+      "a": [
+        "Şermin Hürmeriç",
+        "Yeşim Salkım",
+        "Güven Hokna",
+        "Ülkü Duru"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/"
+    },
+    {
+      "d": 2,
+      "q": "Emel'i hangi oyuncu canlandırır?",
+      "a": [
+        "Yeşim Salkım",
+        "Şermin Hürmeriç",
+        "Güven Hokna",
+        "Tuluğ Çizgen"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/",
+      "oops": "Bu hikâyenin ayrıntılarına bir kez daha bakalım."
+    },
+    {
+      "d": 2,
+      "q": "Berfo'yu hangi oyuncu canlandırır?",
+      "a": [
+        "Kamuran Usluer",
+        "Özkan Uğur",
+        "Uğur Yücel",
+        "Şener Şen"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/"
+    },
+    {
+      "d": 2,
+      "q": "Filmin müziklerini yapan sanatçı kimdir?",
+      "a": [
+        "Erkan Oğur",
+        "Melih Kibar",
+        "Cahit Berkay",
+        "James Horner"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/",
+      "oops": "Bir sonraki durakta cevap daha net olabilir."
+    },
+    {
+      "d": 2,
+      "q": "Eşkıya'nın görüntü yönetmeni kimdir?",
+      "a": [
+        "Uğur İçbak",
+        "Yavuz Turgul",
+        "Erkan Oğur",
+        "Mine Vargı"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/"
+    },
+    {
+      "d": 2,
+      "q": "Berfo, İstanbul'daki yeni hayatında hangi adı kullanır?",
+      "a": [
+        "Mahmut Şahoğlu",
+        "Hüseyin Şevki Topuz",
+        "Arif Işık",
+        "Thomas Anderson"
+      ],
+      "src": "https://dergipark.org.tr/en/download/article-file/178030",
+      "oops": "Beyoğlu sokaklarında küçük bir ayrıntı kaçmış."
+    },
+    {
+      "d": 2,
+      "q": "Sedat'ı hangi oyuncu canlandırır?",
+      "a": [
+        "Özkan Uğur",
+        "Şener Şen",
+        "Uğur Yücel",
+        "Kayhan Yıldızoğlu"
+      ],
+      "src": "https://dergipark.org.tr/en/download/article-file/178030"
+    },
+    {
+      "d": 3,
+      "q": "Artist Kemal'i hangi oyuncu canlandırır?",
+      "a": [
+        "Kayhan Yıldızoğlu",
+        "Necdet Mahfi Ayral",
+        "Settar Tanrıöğen",
+        "Hakan Bilgin"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/",
+      "oops": "Baran’ın hikâyesini yeniden hatırlama zamanı."
+    },
+    {
+      "d": 3,
+      "q": "Andrey Mişkin'i hangi oyuncu canlandırır?",
+      "a": [
+        "Necdet Mahfi Ayral",
+        "Kamuran Usluer",
+        "Kayhan Yıldızoğlu",
+        "Özkan Uğur"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/"
+    },
+    {
+      "d": 3,
+      "q": "Sevim Abla'yı hangi oyuncu canlandırır?",
+      "a": [
+        "Güven Hokna",
+        "Yeşim Salkım",
+        "Şermin Hürmeriç",
+        "Ülkü Duru"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/",
+      "oops": "Bu hikâyenin ayrıntılarına bir kez daha bakalım."
+    },
+    {
+      "d": 3,
+      "q": "Demircan'ı hangi oyuncu canlandırır?",
+      "a": [
+        "Melih Çardak",
+        "Hakan Bilgin",
+        "Settar Tanrıöğen",
+        "Uğur Yücel"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/"
+    },
+    {
+      "d": 3,
+      "q": "Emel'in annesini hangi oyuncu canlandırır?",
+      "a": [
+        "Ülkü Duru",
+        "Güven Hokna",
+        "Şermin Hürmeriç",
+        "Tuluğ Çizgen"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/",
+      "oops": "Bir sonraki durakta cevap daha net olabilir."
+    },
+    {
+      "d": 3,
+      "q": "Filmin yapımcıları arasında yer alan Mine'nin soyadı nedir?",
+      "a": [
+        "Vargı",
+        "Turgul",
+        "İçbak",
+        "Oğur"
+      ],
+      "src": "https://www.sinematurk.com/film/1018-eskiya/"
+    },
+    {
+      "d": 3,
+      "q": "Keje, Berfo ile yaşadığı yıllarda ona karşı nasıl bir sessiz direniş gösterir?",
+      "a": [
+        "Onunla konuşmaz",
+        "Her gün şarkı söyler",
+        "Ona mektup yazar",
+        "Onunla oyun oynar"
+      ],
+      "src": "https://dergipark.org.tr/en/download/article-file/178030",
+      "oops": "Beyoğlu sokaklarında küçük bir ayrıntı kaçmış."
+    },
+    {
+      "d": 3,
+      "q": "Eşkıya'nın yapım şirketinin adı nedir?",
+      "a": [
+        "FİLMA-CASS",
+        "Arzu Film",
+        "BKM",
+        "Çamaşırhane"
+      ],
+      "src": "https://filmacass.com.tr/sinema/eskiya/"
+    }
+  ]
+}

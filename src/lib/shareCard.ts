@@ -14,13 +14,14 @@ import artIsim from '../assets/home/isim.webp';
 import artSiram from '../assets/home/siram.webp';
 import tiger from '../assets/home/tiger.webp';
 
-export type Game = 'isim' | 'siram' | 'film';
+export type Game = 'isim' | 'siram' | 'film' | 'quiz';
 export const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.ahmetercikan.isimsehir';
 
 const GAMES: Record<Game, { name: string; color: string; art: string }> = {
   isim: { name: 'İsim Şehir', color: '#f24d40', art: artIsim },
   siram: { name: 'Sıra Sende', color: '#1fa9cf', art: artSiram },
   film: { name: 'Sinema Bilmecesi', color: '#7d58ee', art: artFilm },
+  quiz: { name: 'Sen Ne Kadar…?', color: '#7d58ee', art: artFilm },
 };
 
 const W = 1080;
@@ -190,7 +191,7 @@ async function drawArt(g: CanvasRenderingContext2D, game: Game, h: number) {
 export async function drawInvite(o: { game: Game; code: string; from: string }): Promise<string> {
   await fonts();
   const [c, g] = canvas();
-  const cinema = o.game === 'film';
+  const cinema = o.game === 'film' || o.game === 'quiz';
   (cinema ? cinemaScene : mintScene)(g, H);
   const G = GAMES[o.game];
   g.textAlign = 'center';
@@ -242,7 +243,7 @@ export interface ResultRow {
 export async function drawResults(o: { game: Game; rows: ResultRow[]; sub?: string }): Promise<string> {
   await fonts();
   const [c, g] = canvas();
-  const cinema = o.game === 'film';
+  const cinema = o.game === 'film' || o.game === 'quiz';
   (cinema ? cinemaScene : mintScene)(g, H);
   const G = GAMES[o.game];
   const ink = cinema ? '#f6efe2' : '#3a2b27';

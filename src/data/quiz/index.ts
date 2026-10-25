@@ -8,6 +8,3 @@ export async function loadQuiz(id: string): Promise<Quiz | null> {
   const f = files[`./${id}.json`];
   return f ? (await f()).default : null;
 }
-
-/** Menüde "Yakında" olarak görünen evrenler. */
-export const SOON = ['Yıldız Savaşları', 'Yenilmezler', 'Matrix', 'Karayip Korsanları', 'Recep İvedik', 'Eşkıya'];

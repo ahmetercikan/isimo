@@ -1,0 +1,494 @@
+{
+  "id": "matrix",
+  "title": "Matrix",
+  "ask": "Sen ne kadar uyanıksın?",
+  "scope": "Matrix (1999), ilk film",
+  "tiers": [
+    {
+      "name": "Mavi Hap Müdavimi",
+      "line": "Simülasyon pek rahat gelmiş galiba."
+    },
+    {
+      "name": "Terminal Çaylağı",
+      "line": "Ekrandaki kodları yeni yeni okuyorsun."
+    },
+    {
+      "name": "Beyaz Tavşan Takipçisi",
+      "line": "İşaretleri izlemeye başlamışsın."
+    },
+    {
+      "name": "Nebuchadnezzar Mürettebatı",
+      "line": "Gemide sana da bir koltuk ayrıldı."
+    },
+    {
+      "name": "Operatör",
+      "line": "Doğru çıkış hattını çoğunlukla buluyorsun."
+    },
+    {
+      "name": "Seçilmiş Kişi",
+      "line": "Kodun arkasındaki ayrıntıları görüyorsun."
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Neo'yu hangi oyuncu canlandırır?",
+      "a": [
+        "Keanu Reeves",
+        "Tom Cruise",
+        "Brad Pitt",
+        "Johnny Depp"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Matrix",
+      "oops": "Operatör hattı açık; cevabı yeniden düşün!"
+    },
+    {
+      "d": 1,
+      "q": "Morpheus'u hangi oyuncu canlandırır?",
+      "a": [
+        "Laurence Fishburne",
+        "Samuel L. Jackson",
+        "Morgan Freeman",
+        "Denzel Washington"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Matrix"
+    },
+    {
+      "d": 1,
+      "q": "Trinity'yi hangi oyuncu canlandırır?",
+      "a": [
+        "Carrie-Anne Moss",
+        "Sandra Bullock",
+        "Jada Pinkett Smith",
+        "Natalie Portman"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Matrix",
+      "oops": "Kodlarda küçük bir takılma oldu galiba."
+    },
+    {
+      "d": 1,
+      "q": "Ajan Smith'i hangi oyuncu canlandırır?",
+      "a": [
+        "Hugo Weaving",
+        "Gary Oldman",
+        "Willem Dafoe",
+        "Alan Rickman"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Matrix"
+    },
+    {
+      "d": 1,
+      "q": "İlk Matrix filmi hangi yıl gösterime girdi?",
+      "a": [
+        "1999",
+        "1995",
+        "2003",
+        "2010"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Matrix",
+      "oops": "Morpheus bunu bir eğitim turu sayardı."
+    },
+    {
+      "d": 1,
+      "q": "Matrix'i yazıp yöneten ikili kimdir?",
+      "a": [
+        "Wachowski kardeşler",
+        "Coen kardeşler",
+        "Russo kardeşler",
+        "Farrelly kardeşler"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Matrix"
+    },
+    {
+      "d": 1,
+      "q": "Neo'nun sıradan hayatındaki adı nedir?",
+      "a": [
+        "Thomas Anderson",
+        "John Wick",
+        "John Constantine",
+        "Jack Traven"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Kırmızı hap ayrıntıları da beraberinde getirir."
+    },
+    {
+      "d": 1,
+      "q": "Morpheus, Neo'ya gerçeği öğrenmesi için hangi renk hapı seçtirir?",
+      "a": [
+        "Kırmızı",
+        "Mavi",
+        "Yeşil",
+        "Sarı"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 1,
+      "q": "Morpheus'un diğer seçeneği olan hap hangi renktir?",
+      "a": [
+        "Mavi",
+        "Yeşil",
+        "Beyaz",
+        "Mor"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Operatör hattı açık; cevabı yeniden düşün!"
+    },
+    {
+      "d": 1,
+      "q": "Matrix, insanların yaşadığını sandığı dünyayı nasıl oluşturur?",
+      "a": [
+        "Bir bilgisayar simülasyonu ile",
+        "Bir uzay kolonisiyle",
+        "Bir büyülü aynayla",
+        "Bir rüya kitabıyla"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 1,
+      "q": "Neo'yu gerçek dünyaya uyandıran ekibin lideri kimdir?",
+      "a": [
+        "Morpheus",
+        "Ajan Smith",
+        "Cypher",
+        "Mouse"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Kodlarda küçük bir takılma oldu galiba."
+    },
+    {
+      "d": 1,
+      "q": "Neo'nun ekranında, takip etmesi söylenen hayvan hangisidir?",
+      "a": [
+        "Beyaz tavşan",
+        "Siyah kedi",
+        "Kırmızı tilki",
+        "Mavi kuş"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 1,
+      "q": "Neo ile Morpheus'un dövüş eğitimi yaptığı geleneksel oda neye benzer?",
+      "a": [
+        "Bir dövüş sanatları salonuna",
+        "Bir mutfağa",
+        "Bir kütüphaneye",
+        "Bir hastaneye"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Morpheus bunu bir eğitim turu sayardı."
+    },
+    {
+      "d": 1,
+      "q": "Ajanlar çoğunlukla nasıl giyinir?",
+      "a": [
+        "Koyu takım elbise ve gözlük",
+        "Uzay kıyafeti",
+        "Beyaz önlük",
+        "Orta Çağ zırhı"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 1,
+      "q": "Neo, yüklenen eğitimden sonra hangi dövüş sanatını öğrendiğini söyler?",
+      "a": [
+        "Kung fu",
+        "Sumo",
+        "Eskrim",
+        "Boks"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Kırmızı hap ayrıntıları da beraberinde getirir."
+    },
+    {
+      "d": 1,
+      "q": "İlk filmin sonunda Neo, şehir üzerinde ne yapar?",
+      "a": [
+        "Uçar",
+        "Bisiklete biner",
+        "Bir gemi sürer",
+        "Bir bina inşa eder"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 2,
+      "q": "Morpheus'un gemisinin adı nedir?",
+      "a": [
+        "Nebuchadnezzar",
+        "Nostromo",
+        "Discovery",
+        "Enterprise"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Operatör hattı açık; cevabı yeniden düşün!"
+    },
+    {
+      "d": 2,
+      "q": "İnsanların son özgür şehrinin adı nedir?",
+      "a": [
+        "Zion",
+        "Gotham",
+        "Metropolis",
+        "Atlantis"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 2,
+      "q": "Neo'yu ziyarete götürdükleri, gelecekle ilgili rehberlik eden kişi kimdir?",
+      "a": [
+        "Kâhin",
+        "Mimar",
+        "Merovingian",
+        "Anahtarcı"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Kodlarda küçük bir takılma oldu galiba."
+    },
+    {
+      "d": 2,
+      "q": "Ekibe ihanet edip Matrix'e geri dönmek isteyen kişi kimdir?",
+      "a": [
+        "Cypher",
+        "Tank",
+        "Dozer",
+        "Mouse"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 2,
+      "q": "Cypher, Smith'le anlaşırken hangi yemeği yer?",
+      "a": [
+        "Biftek",
+        "Makarna",
+        "Çorba",
+        "Pilav"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Morpheus bunu bir eğitim turu sayardı."
+    },
+    {
+      "d": 2,
+      "q": "Neo'nun vücuduna yerleştirilen takip cihazı nereden çıkarılır?",
+      "a": [
+        "Göbek deliğinden",
+        "Kulağından",
+        "Dizinden",
+        "Avucundan"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 2,
+      "q": "Matrix'ten gerçek dünyaya dönmek için genellikle hangi araç kullanılır?",
+      "a": [
+        "Sabit telefon",
+        "Cep telefonu kamerası",
+        "Televizyon kumandası",
+        "Radyo anteni"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Kırmızı hap ayrıntıları da beraberinde getirir."
+    },
+    {
+      "d": 2,
+      "q": "Bir siyah kediyi tekrar görme olayı ekip için neyi işaret eder?",
+      "a": [
+        "Matrix'te bir değişikliği",
+        "Yeni bir oyuncuyu",
+        "Elektrik kesintisini",
+        "Bir şakayı"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 2,
+      "q": "Neo'nun peşinden gittiği beyaz tavşan işareti nerede görünür?",
+      "a": [
+        "Bir kadının dövmesinde",
+        "Bir gazetenin başlığında",
+        "Bir gemi bayrağında",
+        "Bir telefon ekranında"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Operatör hattı açık; cevabı yeniden düşün!"
+    },
+    {
+      "d": 2,
+      "q": "Morpheus'u kurtarmaya giden Neo'ya kim eşlik eder?",
+      "a": [
+        "Trinity",
+        "Cypher",
+        "Mouse",
+        "Kâhin"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 2,
+      "q": "Neo, çatışmada mermilerden kaçarken bedenini nasıl kullanır?",
+      "a": [
+        "Geriye doğru eğilir",
+        "Yere tünel kazar",
+        "Duvara dönüşür",
+        "Görünmez olur"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Kodlarda küçük bir takılma oldu galiba."
+    },
+    {
+      "d": 2,
+      "q": "Morpheus'un kaçışında Trinity hangi hava aracını kullanır?",
+      "a": [
+        "Helikopter",
+        "Planör",
+        "Yolcu uçağı",
+        "Balon"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 2,
+      "q": "Morpheus'u yakalamak için kendini feda ettiği kişi kimdir?",
+      "a": [
+        "Neo",
+        "Cypher",
+        "Smith",
+        "Tank"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Morpheus bunu bir eğitim turu sayardı."
+    },
+    {
+      "d": 2,
+      "q": "Neo, kendisine uzatılan kaşığı eğmeye çalışan çocuğu nerede görür?",
+      "a": [
+        "Kâhin'in evinde",
+        "Ofisinde",
+        "Metroda",
+        "Geminin motorunda"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 3,
+      "q": "Tank ile Dozer arasındaki akrabalık nedir?",
+      "a": [
+        "Kardeştirler",
+        "Baba oğuldurlar",
+        "Kuzendirler",
+        "Amca yeğendirler"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Kırmızı hap ayrıntıları da beraberinde getirir."
+    },
+    {
+      "d": 3,
+      "q": "Cypher'ın saldırısından sağ kurtulup ona karşı koyan gemi operatörü kimdir?",
+      "a": [
+        "Tank",
+        "Dozer",
+        "Mouse",
+        "Apoc"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 3,
+      "q": "Kâhin, Neo'nun ziyaretinde hangi yiyeceği hazırlamaktadır?",
+      "a": [
+        "Kurabiye",
+        "Pizza",
+        "Krep",
+        "Sandviç"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Operatör hattı açık; cevabı yeniden düşün!"
+    },
+    {
+      "d": 3,
+      "q": "Kâhin'in evinde Neo'nun yanlışlıkla kırdığı eşya nedir?",
+      "a": [
+        "Vazo",
+        "Ayna",
+        "Saat",
+        "Televizyon"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmde kırmızı elbiseli kadını içeren eğitim programını kim tasarlamıştır?",
+      "a": [
+        "Mouse",
+        "Cypher",
+        "Morpheus",
+        "Smith"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Kodlarda küçük bir takılma oldu galiba."
+    },
+    {
+      "d": 3,
+      "q": "Neo'nun kendisine yüklenen eğitimdeki başarısını görmek isteyen Morpheus hangi programı açtırır?",
+      "a": [
+        "Dövüş eğitimi",
+        "Yemek yapma",
+        "Araba tamiri",
+        "Müzik eğitimi"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmde gemiye saldıran makineleri durdurmak için kullanılan sistem nedir?",
+      "a": [
+        "Elektromanyetik darbe",
+        "Bir nükleer füze",
+        "Bir lazer kalkanı",
+        "Bir sismik bomba"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Morpheus bunu bir eğitim turu sayardı."
+    },
+    {
+      "d": 3,
+      "q": "Ajan Smith, Morpheus'la yalnız konuşurken ajanlara özgü hangi eşyasını çıkarır?",
+      "a": [
+        "Kulaklığını",
+        "Ayakkabısını",
+        "Kravat iğnesini",
+        "Saatini"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    },
+    {
+      "d": 3,
+      "q": "Neo, finalde karşısındaki mermileri nasıl durdurur?",
+      "a": [
+        "Havada durmalarını sağlar",
+        "Bir kalkan çıkarır",
+        "Zaman makinesi açar",
+        "Suya dönüştürür"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/",
+      "oops": "Kırmızı hap ayrıntıları da beraberinde getirir."
+    },
+    {
+      "d": 3,
+      "q": "Neo, filmin sonunda insanlara seslenmek için hangi cihazı kullanır?",
+      "a": [
+        "Telefon",
+        "Radyo",
+        "Megafon",
+        "Televizyon"
+      ],
+      "src": "https://www.matrixfans.net/movies/the-matrix/transcript/"
+    }
+  ]
+}

@@ -1,0 +1,494 @@
+{
+  "id": "yenilmezler",
+  "title": "Yenilmezler",
+  "ask": "Sen ne kadar Yenilmezsin?",
+  "scope": "Dört Avengers filmi (2012–2019), MCU sinema sürümleri",
+  "tiers": [
+    {
+      "name": "Kule Ziyaretçisi",
+      "line": "Henüz ziyaretçi kartıyla geziyorsun."
+    },
+    {
+      "name": "S.H.I.E.L.D. Stajyeri",
+      "line": "Dosyaları tanıyorsun, göreve biraz daha var."
+    },
+    {
+      "name": "Takımın Yeni Üyesi",
+      "line": "Toplantıya çağrılmaya başladın."
+    },
+    {
+      "name": "New York Savunucusu",
+      "line": "Ekip seninle rahat bir nefes alır."
+    },
+    {
+      "name": "Sonsuzluk Nöbetçisi",
+      "line": "Taşların yerini, kahramanların hikâyesini biliyorsun."
+    },
+    {
+      "name": "Yenilmezler Kaptanı",
+      "line": "Bu takımın bilgi toplantısını sen yönetirsin."
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "İlk Yenilmezler filminin ana düşmanı kimdir?",
+      "a": [
+        "Loki",
+        "Ultron",
+        "Thanos",
+        "Kızıl Kafatası"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)",
+      "oops": "Kuledeki ekip toplantısını kaçırmış olabilirsin."
+    },
+    {
+      "d": 1,
+      "q": "Tony Stark'ın süper kahraman adı nedir?",
+      "a": [
+        "Iron Man",
+        "Hawkeye",
+        "Hulk",
+        "Thor"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)"
+    },
+    {
+      "d": 1,
+      "q": "Steve Rogers hangi kahramandır?",
+      "a": [
+        "Captain America",
+        "Doctor Strange",
+        "Ant-Man",
+        "Star-Lord"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)",
+      "oops": "Kalkan sağlam; cevap biraz sekmiş!"
+    },
+    {
+      "d": 1,
+      "q": "Bruce Banner hangi yeşil kahramana dönüşür?",
+      "a": [
+        "Hulk",
+        "Vision",
+        "Loki",
+        "Groot"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)"
+    },
+    {
+      "d": 1,
+      "q": "Thor'un, ilk Yenilmezler filminde kullandığı çekicin adı nedir?",
+      "a": [
+        "Mjolnir",
+        "Stormbreaker",
+        "Gungnir",
+        "Tesseract"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)",
+      "oops": "Hulk bu soruyu sakin sakin tekrar okumanı öneriyor."
+    },
+    {
+      "d": 1,
+      "q": "Clint Barton hangi kahramanın gerçek adıdır?",
+      "a": [
+        "Hawkeye",
+        "Iron Man",
+        "Hulk",
+        "Falcon"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)"
+    },
+    {
+      "d": 1,
+      "q": "Natasha Romanoff'un kahraman adı nedir?",
+      "a": [
+        "Black Widow",
+        "Scarlet Witch",
+        "Captain Marvel",
+        "Wasp"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)",
+      "oops": "Sonsuzluk Taşları bile bazen birbirine karışır."
+    },
+    {
+      "d": 1,
+      "q": "İlk Yenilmezler'in büyük final savaşı hangi şehirde geçer?",
+      "a": [
+        "New York",
+        "Londra",
+        "Paris",
+        "Tokyo"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)"
+    },
+    {
+      "d": 1,
+      "q": "Ultron Çağı filmindeki Ultron nasıl bir varlıktır?",
+      "a": [
+        "Yapay zekâ",
+        "Bir Asgard tanrısı",
+        "Bir büyücü",
+        "Bir insan askeri"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron",
+      "oops": "Kuledeki ekip toplantısını kaçırmış olabilirsin."
+    },
+    {
+      "d": 1,
+      "q": "Wanda Maximoff'un erkek kardeşinin adı nedir?",
+      "a": [
+        "Pietro",
+        "Peter",
+        "Clint",
+        "Scott"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron"
+    },
+    {
+      "d": 1,
+      "q": "Pietro'nun öne çıkan gücü nedir?",
+      "a": [
+        "Çok hızlı hareket etmek",
+        "Görünmez olmak",
+        "Zamanı durdurmak",
+        "Suya dönüşmek"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron",
+      "oops": "Kalkan sağlam; cevap biraz sekmiş!"
+    },
+    {
+      "d": 1,
+      "q": "Ultron Çağı'nda yaratılan, alnında bir taş bulunan kahraman kimdir?",
+      "a": [
+        "Vision",
+        "Falcon",
+        "War Machine",
+        "Drax"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron"
+    },
+    {
+      "d": 1,
+      "q": "Sonsuzluk Savaşı'nda kahramanların karşısındaki ana düşman kimdir?",
+      "a": [
+        "Thanos",
+        "Loki",
+        "Ultron",
+        "Hela"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War",
+      "oops": "Hulk bu soruyu sakin sakin tekrar okumanı öneriyor."
+    },
+    {
+      "d": 1,
+      "q": "Thanos'un toplamaya çalıştığı Sonsuzluk Taşı sayısı kaçtır?",
+      "a": [
+        "Altı",
+        "Dört",
+        "Yedi",
+        "Dokuz"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War"
+    },
+    {
+      "d": 1,
+      "q": "Sonsuzluk Savaşı'nın sonunda Thanos ne yaparak evrendeki yaşamın yarısını yok eder?",
+      "a": [
+        "Parmaklarını şıklatarak",
+        "Bir gezegeni üfleyerek",
+        "Asasını kırarak",
+        "Bir düğmeye basarak"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War",
+      "oops": "Sonsuzluk Taşları bile bazen birbirine karışır."
+    },
+    {
+      "d": 1,
+      "q": "Peter Parker'ın kahraman adı nedir?",
+      "a": [
+        "Spider-Man",
+        "Ant-Man",
+        "Star-Lord",
+        "Falcon"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War"
+    },
+    {
+      "d": 2,
+      "q": "Yenilmezler girişimini yöneten S.H.I.E.L.D. lideri kimdir?",
+      "a": [
+        "Nick Fury",
+        "Phil Coulson",
+        "Maria Hill",
+        "Erik Selvig"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)",
+      "oops": "Kuledeki ekip toplantısını kaçırmış olabilirsin."
+    },
+    {
+      "d": 2,
+      "q": "Loki'nin New York'a çağırdığı uzaylı ordusunun adı nedir?",
+      "a": [
+        "Chitauri",
+        "Skrull",
+        "Kree",
+        "Ewok"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)"
+    },
+    {
+      "d": 2,
+      "q": "Loki'nin asasının etkisinden çıkarmak için Natasha kime sertçe vurur?",
+      "a": [
+        "Clint Barton'a",
+        "Tony Stark'a",
+        "Thor'a",
+        "Steve Rogers'a"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)",
+      "oops": "Kalkan sağlam; cevap biraz sekmiş!"
+    },
+    {
+      "d": 2,
+      "q": "New York'a gönderilen nükleer füzeyi uzaydaki geçitten kim taşır?",
+      "a": [
+        "Iron Man",
+        "Hulk",
+        "Black Widow",
+        "Hawkeye"
+      ],
+      "src": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)"
+    },
+    {
+      "d": 2,
+      "q": "Ultron Çağı'nda uçan şehrin bulunduğu ülke hangisidir?",
+      "a": [
+        "Sokovia",
+        "Wakanda",
+        "Latveria",
+        "Genovia"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron",
+      "oops": "Hulk bu soruyu sakin sakin tekrar okumanı öneriyor."
+    },
+    {
+      "d": 2,
+      "q": "Ultron Çağı'nda Tony ve Bruce, hangi barış koruma projesini geliştirmeye çalışır?",
+      "a": [
+        "Ultron",
+        "Veronica",
+        "Insight",
+        "Pegasus"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron"
+    },
+    {
+      "d": 2,
+      "q": "Ultron Çağı'nda Vision'ın çekici kaldırması hangi karakteri özellikle şaşırtır?",
+      "a": [
+        "Thor'u",
+        "Rocket'ı",
+        "Peter Parker'ı",
+        "Scott Lang'i"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron",
+      "oops": "Sonsuzluk Taşları bile bazen birbirine karışır."
+    },
+    {
+      "d": 2,
+      "q": "Sonsuzluk Savaşı'nda Thor'un yeni silahını döven kişi kimdir?",
+      "a": [
+        "Eitri",
+        "Odin",
+        "Heimdall",
+        "Hank Pym"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War"
+    },
+    {
+      "d": 2,
+      "q": "Vision'ın alnındaki taş hangisidir?",
+      "a": [
+        "Zihin Taşı",
+        "Güç Taşı",
+        "Ruh Taşı",
+        "Gerçeklik Taşı"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War",
+      "oops": "Kuledeki ekip toplantısını kaçırmış olabilirsin."
+    },
+    {
+      "d": 2,
+      "q": "Doctor Strange'in taşıdığı zamanla ilgili taş hangisidir?",
+      "a": [
+        "Zaman Taşı",
+        "Uzay Taşı",
+        "Güç Taşı",
+        "Ruh Taşı"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War"
+    },
+    {
+      "d": 2,
+      "q": "Thanos, Ruh Taşı'nı almak için hangi gezegene gider?",
+      "a": [
+        "Vormir",
+        "Titan",
+        "Xandar",
+        "Nidavellir"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War",
+      "oops": "Kalkan sağlam; cevap biraz sekmiş!"
+    },
+    {
+      "d": 2,
+      "q": "Endgame'de kahramanların geçmişe gitme planında hangi boyut kullanılır?",
+      "a": [
+        "Kuantum Âlemi",
+        "Ayna Boyutu",
+        "Karanlık Boyut",
+        "Astral Boyut"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Endgame"
+    },
+    {
+      "d": 2,
+      "q": "Endgame'in başında uzayda kalan Tony ile Nebula'yı kim kurtarır?",
+      "a": [
+        "Captain Marvel",
+        "Thor",
+        "Doctor Strange",
+        "Valkyrie"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Endgame",
+      "oops": "Hulk bu soruyu sakin sakin tekrar okumanı öneriyor."
+    },
+    {
+      "d": 2,
+      "q": "Endgame'de kaybolanları geri getiren şıklatmayı ilk kim yapar?",
+      "a": [
+        "Hulk",
+        "Thor",
+        "Hawkeye",
+        "Ant-Man"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Endgame"
+    },
+    {
+      "d": 3,
+      "q": "Ultron Çağı'nda kahramanlar Clint'in ailesinin yaşadığı nerede saklanır?",
+      "a": [
+        "Bir çiftlikte",
+        "Bir denizaltıda",
+        "Bir şatoda",
+        "Bir uzay üssünde"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron",
+      "oops": "Sonsuzluk Taşları bile bazen birbirine karışır."
+    },
+    {
+      "d": 3,
+      "q": "Ultron Çağı'nda Iron Man'in Hulk'u durdurmak için kullandığı büyük zırh hangisidir?",
+      "a": [
+        "Hulkbuster",
+        "Mark I",
+        "Iron Patriot",
+        "Silver Centurion"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron"
+    },
+    {
+      "d": 3,
+      "q": "Sonsuzluk Savaşı'nda Doctor Strange, Tony'ye taşı kimin hayatını kurtarmak için teslim eder?",
+      "a": [
+        "Tony Stark'ın",
+        "Loki'nin",
+        "Heimdall'ın",
+        "Gamora'nın"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War",
+      "oops": "Kuledeki ekip toplantısını kaçırmış olabilirsin."
+    },
+    {
+      "d": 3,
+      "q": "Sonsuzluk Savaşı'nda Thor, Rocket ve Groot'un silah yaptırmak için gittiği yer neresidir?",
+      "a": [
+        "Nidavellir",
+        "Vormir",
+        "Knowhere",
+        "Titan"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War"
+    },
+    {
+      "d": 3,
+      "q": "Endgame'de final savaşında Thor'un çekicini kaldıran başka bir Yenilmez kimdir?",
+      "a": [
+        "Captain America",
+        "Hawkeye",
+        "Black Widow",
+        "Rocket"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Endgame",
+      "oops": "Kalkan sağlam; cevap biraz sekmiş!"
+    },
+    {
+      "d": 3,
+      "q": "Endgame'de Ruh Taşı için Vormir'e giden ikili kimdir?",
+      "a": [
+        "Natasha ve Clint",
+        "Tony ve Steve",
+        "Thor ve Rocket",
+        "Bruce ve Scott"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Endgame"
+    },
+    {
+      "d": 3,
+      "q": "Endgame'de geçmişteki New York'tan Tesseract'ı alıp kaçan kimdir?",
+      "a": [
+        "Loki",
+        "Red Skull",
+        "Ultron",
+        "Vision"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Endgame",
+      "oops": "Hulk bu soruyu sakin sakin tekrar okumanı öneriyor."
+    },
+    {
+      "d": 3,
+      "q": "Endgame'de yaşlanmış Steve, kalkanını kime teslim eder?",
+      "a": [
+        "Sam Wilson'a",
+        "Bucky Barnes'a",
+        "Peter Parker'a",
+        "Clint Barton'a"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Endgame"
+    },
+    {
+      "d": 3,
+      "q": "Endgame'de beş yıllık aradan sonra dönen Scott'ın kahraman adı nedir?",
+      "a": [
+        "Ant-Man",
+        "Hawkeye",
+        "Falcon",
+        "War Machine"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Endgame",
+      "oops": "Sonsuzluk Taşları bile bazen birbirine karışır."
+    },
+    {
+      "d": 3,
+      "q": "Endgame'deki zaman yolculuğunda Tony, 1970 yılında kiminle karşılaşır?",
+      "a": [
+        "Babası Howard Stark'la",
+        "Kızı Morgan'la",
+        "Peter Parker'la",
+        "Bruce Banner'la"
+      ],
+      "src": "https://en.wikipedia.org/wiki/Avengers:_Endgame"
+    }
+  ]
+}

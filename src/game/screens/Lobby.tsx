@@ -3,6 +3,9 @@ import { Bot, Copy, Play, Settings2, Share2, UserX, Users } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { ChainSettings } from '../../components/ChainSettings';
 import { FilmSettings } from '../../components/FilmSettings';
+import { QuizSettings } from '../../components/QuizSettings';
+import { QUIZZES } from '../../data/quiz';
+import { quizHumans, startQuiz } from '../quizDirector';
 import { SettingsForm } from '../../components/SettingsForm';
 import { CatIcon, Icon } from '../../components/Icon';
 import { Mascot } from '../../components/Mascot';
@@ -23,6 +26,7 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
   const [kick, setKick] = useState<string | null>(null);
   const [level, setLevel] = useState(useProfile.getState().bots.level);
   const [toast, show] = useToast();
+  const [starting, setStarting] = useState(false);
   useEffect(() => {
     void showBanner(false);
     return () => void hideBanner();
@@ -32,11 +36,12 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
   const players = Object.entries(s.players)
     .filter(([, p]) => !p.left)
     .sort((a, b) => a[1].joined - b[1].joined);
-  const canStart = !online || players.length >= 2;
   const st = s.settings;
+  const quiz = st.game === 'quiz';
+  const canStart = quiz ? quizHumans(s).length >= 2 : !online || players.length >= 2;
   // Çevrimiçi odaya bot: arkadaş azsa masa bot ile dolsun (botları yöneten cihaz oynatır).
   const slot = freeBotSlot(Object.keys(s.players));
-  const canAddBot = online && isHost && slot >= 0 && players.length < MAX_PLAYERS;
+  const canAddBot = !quiz && online && isHost && slot >= 0 && players.length < MAX_PLAYERS;
   const addBot = async () => {
     if (!canAddBot) return;
     sfx.pop();
@@ -52,8 +57,8 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
 
   const share = async () => {
     sfx.tap();
-    const game = siram ? 'siram' : film ? 'film' : 'isim';
-    const name = siram ? 'Sıra Sende' : film ? 'Sinema Bilmecesi' : 'İsim Şehir';
+    const game = quiz ? 'quiz' : siram ? 'siram' : film ? 'film' : 'isim';
+    const name = quiz ? 'Sen Ne Kadar…?' : siram ? 'Sıra Sende' : film ? 'Sinema Bilmecesi' : 'İsim Şehir';
     const text = `${name} oynayalım! Uygulamada "Katıl"a bas ve oda kodunu yaz: ${s.code}`;
     try {
       const img = await drawInvite({ game, code: s.code, from: s.players[t.me]?.name ?? 'Arkadaşın' });
@@ -119,7 +124,7 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
               </li>
             ))}
         </ul>
-        {online && isHost && (
+        {online && isHost && !quiz && (
           <div className="bot-add">
             <button className="btn-outline btn-outline--sm" disabled={!canAddBot} onClick={() => void addBot()}>
               <Bot size={20} strokeWidth={2.6} /> Bot ekle
@@ -136,7 +141,11 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
 
       <div className="rules-wrap rise" style={{ animationDelay: '0.08s' }}>
       <section className="paper-card rules-card">
-        {film ? (
+        {quiz ? <>
+          <p className="rules-card__head">Sen Ne Kadar…? · {QUIZZES.find((q) => q.id === st.quizId)?.title}</p>
+          <p className="rules-card__line">10 ortak soru · 20 saniye · 2–10 arkadaş</p>
+          <p className="rules-card__line">Cevaplar herkesten sonra açıklanır. Doğru ve hızlı cevap veren öne geçer.</p>
+        </> : film ? (
           <>
             <p className="rules-card__head"><Icon name="dizi" size={26} /> İpuçları birer birer açılır, filmi erken bilen çok puan alır.</p>
             <p className="rules-card__line">
@@ -174,8 +183,16 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
       <div className={`page__cta page__cta--sticky ${isHost ? 'page__cta--spark' : ''}`}>
         {isHost ? (
           <>
-            <button className="pill pill--big pulse" disabled={!canStart} onClick={() => (sfx.pop(), void (siram ? startChain(t, s) : film ? startFilm(t, s) : startGame(t, s)))}>
-              <Play size={26} fill="currentColor" strokeWidth={2} /> Oyunu Başlat
+            <button className="pill pill--big pulse" disabled={!canStart || starting} onClick={async () => {
+              if (starting) return;
+              sfx.pop(); setStarting(true);
+              try {
+                const ok = await (quiz ? startQuiz(t, s) : siram ? startChain(t, s) : film ? startFilm(t, s) : startGame(t, s));
+                if (ok === false) show('Oyun başlatılamadı. Bağlantını ve oyuncuları kontrol et.');
+              } catch { show('Oyun başlatılamadı. Tekrar dene.'); }
+              finally { setStarting(false); }
+            }}>
+              <Play size={26} fill="currentColor" strokeWidth={2} /> {starting ? 'Başlatılıyor…' : 'Oyunu Başlat'}
             </button>
             {!canStart && <p className="cta-note">Başlamak için en az 2 oyuncu gerekli</p>}
           </>
@@ -188,7 +205,7 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
 
       {edit && (
         <Modal onClose={() => setEdit(false)} className="modal--settings">
-          {film ? (
+          {quiz ? <QuizSettings value={st} onChange={(v) => void t.update({ settings: v }).catch(() => show('Ayarlar kaydedilemedi.'))} /> : film ? (
             <FilmSettings
               value={st}
               onChange={(v) => {

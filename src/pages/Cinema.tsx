@@ -67,18 +67,22 @@ export default function Cinema() {
         </div>
       </section>
 
-      <button className="paper-card show-card show-card--hero rise" style={{ animationDelay: '0.06s' }} onClick={() => go('/sinema/sen-ne-kadar')}>
+      <section className="paper-card show-card show-card--hero rise" style={{ animationDelay: '0.06s' }}>
         <span className="show-card__new">Yeni</span>
         <div className="show-card__head">
           <span className="show-card__icon show-card__icon--gold"><Sparkles size={26} strokeWidth={2.4} /></span>
           <div>
             <h2 className="show-card__title">Sen Ne Kadar…?</h2>
-            <p className="show-card__desc">Harry Potter'dan Hababam'a: en sevdiğin filme ne kadar hakimsin? {QUIZZES.length > 0 ? `${QUIZZES.length} film evreni.` : ''}</p>
+            <p className="show-card__desc">Arkadaşlarınla aynı sorularda yarış, unvanını kazan. {QUIZZES.length} film evreni.</p>
           </div>
           <ChevronRight className="show-card__go" size={28} strokeWidth={3} />
         </div>
+        <div className="show-card__btns">
+          <button className="pill pill--sm" disabled={!ONLINE_AVAILABLE} onClick={() => go('/sinema/sen-ne-kadar')}><Plus size={18} /><span>Oda Kur</span></button>
+          <button className="pill pill--sm show-card__alt" disabled={!ONLINE_AVAILABLE} onClick={() => go('/katil?oyun=quiz')}><LogIn size={18} /><span>Katıl</span></button>
+        </div>
         <Mascot className="show-card__mascot" />
-      </button>
+      </section>
 
       <div className="soon-row rise" style={{ animationDelay: '0.12s' }}>
         {['Replik Kimin?', 'Hangi Yıl?'].map((t) => (

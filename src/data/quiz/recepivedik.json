@@ -1,0 +1,378 @@
+{
+  "id": "recepivedik",
+  "title": "Recep İvedik",
+  "ask": "Sen ne kadar Recep’sin?",
+  "scope": "İlk üç film (2008–2010)",
+  "tiers": [
+    {
+      "name": "Otel Ziyaretçisi",
+      "line": "Lobiyi buldun; gerisi biraz karışmış."
+    },
+    {
+      "name": "Mahalle Çaylağı",
+      "line": "Muhabbeti duyuyorsun ama ayrıntılar uzakta."
+    },
+    {
+      "name": "Tatil Arkadaşı",
+      "line": "Otobüste yan koltuk sana ayrıldı."
+    },
+    {
+      "name": "Mahalle Müdavimi",
+      "line": "Recep’in maceralarını az çok biliyorsun."
+    },
+    {
+      "name": "Sıkı Yol Arkadaşı",
+      "line": "Olay çıkmadan ne olacağını tahmin ediyorsun."
+    },
+    {
+      "name": "Mahallenin Hafızası",
+      "line": "Bu maceraları baştan sona sen anlatırsın."
+    }
+  ],
+  "questions": [
+    {
+      "d": 1,
+      "q": "Recep İvedik karakterini kim canlandırır?",
+      "a": [
+        "Şahan Gökbakar",
+        "Cem Yılmaz",
+        "Ata Demirer",
+        "Şafak Sezer"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1",
+      "oops": "Mahallede bu soruyu bir kez daha konuşalım."
+    },
+    {
+      "d": 1,
+      "q": "İlk filmde Recep, bulduğu cüzdanı teslim etmek için hangi şehre gider?",
+      "a": [
+        "Antalya",
+        "Ankara",
+        "İzmir",
+        "Bursa"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmin yolculuğunu başlatan kayıp eşya nedir?",
+      "a": [
+        "Cüzdan",
+        "Telefon",
+        "Valiz",
+        "Saat"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1",
+      "oops": "Resepsiyon bilgi masasını işaret ediyor!"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmde Recep'in çocukluk aşkının adı nedir?",
+      "a": [
+        "Sibel",
+        "Zeynep",
+        "Emel",
+        "Ceku"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1"
+    },
+    {
+      "d": 1,
+      "q": "İlk filmde cüzdanın sahibi hangi işi yapmaktadır?",
+      "a": [
+        "Otel işletmeciliği",
+        "Balıkçılık",
+        "Doktorluk",
+        "Öğretmenlik"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1",
+      "oops": "Tatil planı tamam; ayrıntılara biraz daha bakalım."
+    },
+    {
+      "d": 1,
+      "q": "Recep, ilk filmde Sibel'i görünce ne yapmaya karar verir?",
+      "a": [
+        "Otelde kalmaya",
+        "Hemen eve dönmeye",
+        "Uçağa binmeye",
+        "Denize açılmaya"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1"
+    },
+    {
+      "d": 1,
+      "q": "İlk Recep İvedik filmi hangi yıl gösterime girdi?",
+      "a": [
+        "2008",
+        "2004",
+        "2012",
+        "2016"
+      ],
+      "src": "https://boxofficeturkiye.com/karsilastirma/recep-ivedik-serisi--141",
+      "oops": "Bu kez macera cevap şıklarında çıktı."
+    },
+    {
+      "d": 1,
+      "q": "İlk üç Recep İvedik filmi ağırlıklı olarak hangi türdedir?",
+      "a": [
+        "Komedi",
+        "Korku",
+        "Bilimkurgu",
+        "Belgesel"
+      ],
+      "src": "https://boxofficeturkiye.com/karsilastirma/recep-ivedik-serisi--141"
+    },
+    {
+      "d": 1,
+      "q": "İkinci filmde Recep'i iş ve evlilik konusunda yönlendiren aile büyüğü kimdir?",
+      "a": [
+        "Babaannesi",
+        "Dedesi",
+        "Amcası",
+        "Teyzesi"
+      ],
+      "src": "https://www.rtuk.gov.tr/UstKurulKarar/Detay/6255",
+      "oops": "Mahallede bu soruyu bir kez daha konuşalım."
+    },
+    {
+      "d": 1,
+      "q": "İkinci filmde babaannesi, Recep'in iş sahibi olmasını ister.",
+      "a": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "src": "https://www.rtuk.gov.tr/UstKurulKarar/Detay/6255",
+      "tf": true
+    },
+    {
+      "d": 1,
+      "q": "Üçüncü filmde Recep'in evine taşınan genç kızın adı nedir?",
+      "a": [
+        "Zeynep",
+        "Sibel",
+        "Emel",
+        "Semra"
+      ],
+      "src": "https://www.startv.com.tr/film/recep-ivedik-3",
+      "oops": "Resepsiyon bilgi masasını işaret ediyor!"
+    },
+    {
+      "d": 1,
+      "q": "Üçüncü filmde Zeynep hangi eğitim aşamasındadır?",
+      "a": [
+        "Üniversite öğrencisi",
+        "İlkokul öğrencisi",
+        "Lise öğrencisi",
+        "Anaokulu öğrencisi"
+      ],
+      "src": "https://www.startv.com.tr/film/recep-ivedik-3"
+    },
+    {
+      "d": 2,
+      "q": "İlk filmde Recep, cüzdanın sahibini nerede görüp tanır?",
+      "a": [
+        "Televizyonda",
+        "Bir dergide",
+        "Bir konser afişinde",
+        "Otobüs biletinde"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1",
+      "oops": "Tatil planı tamam; ayrıntılara biraz daha bakalım."
+    },
+    {
+      "d": 2,
+      "q": "İlk filmde Recep'in yola çıktığında kullandığı araç türü nedir?",
+      "a": [
+        "Otomobil",
+        "Uçak",
+        "Tren",
+        "Yelkenli"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1"
+    },
+    {
+      "d": 2,
+      "q": "İlk filmde Sibel, Recep'i otelde ilk gördüğünde tanır mı?",
+      "a": [
+        "Hayır, hatırlamaz",
+        "Evet, hemen sarılır",
+        "Onu patronu sanır",
+        "Onu öğretmeni sanır"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1",
+      "oops": "Bu kez macera cevap şıklarında çıktı."
+    },
+    {
+      "d": 2,
+      "q": "İlk filmde Sibel'i hangi oyuncu canlandırır?",
+      "a": [
+        "Fatma Toptaş",
+        "Zeynep Çamcı",
+        "Özge Özberk",
+        "Demet Evgar"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1"
+    },
+    {
+      "d": 2,
+      "q": "İlk filmde Sibel'in annesini kim canlandırır?",
+      "a": [
+        "Tuluğ Çizgen",
+        "Adile Naşit",
+        "Ayşen Gruda",
+        "Güven Hokna"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1",
+      "oops": "Mahallede bu soruyu bir kez daha konuşalım."
+    },
+    {
+      "d": 2,
+      "q": "İkinci filmde Recep, bir süre sonra kimin şirketinde işe başlar?",
+      "a": [
+        "Kuzeninin",
+        "Babasının",
+        "Dedektif arkadaşının",
+        "Otel sahibinin"
+      ],
+      "src": "https://www.rtuk.gov.tr/UstKurulKarar/Detay/6255"
+    },
+    {
+      "d": 2,
+      "q": "İkinci filmde babaannesinin iş dışında Recep için istediği şeylerden biri nedir?",
+      "a": [
+        "Evlenmesi",
+        "Uzaya gitmesi",
+        "Savaşa katılması",
+        "Korsan olması"
+      ],
+      "src": "https://www.rtuk.gov.tr/UstKurulKarar/Detay/6255",
+      "oops": "Resepsiyon bilgi masasını işaret ediyor!"
+    },
+    {
+      "d": 2,
+      "q": "Üçüncü filmde Zeynep'in Recep'in evinde kalmasının nedeni nedir?",
+      "a": [
+        "Kalacak yer bulamaması",
+        "Evi satın alması",
+        "Oteli yönetmesi",
+        "Bir yarışma kazanması"
+      ],
+      "src": "https://www.startv.com.tr/film/recep-ivedik-3"
+    },
+    {
+      "d": 2,
+      "q": "Üçüncü filmde Recep ile Zeynep'in beraber gittiği etkinliklerden biri hangisidir?",
+      "a": [
+        "Paintball",
+        "Uzay uçuşu",
+        "Buzul keşfi",
+        "Denizaltı turu"
+      ],
+      "src": "https://www.startv.com.tr/film/recep-ivedik-3",
+      "oops": "Tatil planı tamam; ayrıntılara biraz daha bakalım."
+    },
+    {
+      "d": 2,
+      "q": "Üçüncü filmde Recep, Zeynep'in okuluna gittiğinde bir günlüğüne ne olur?",
+      "a": [
+        "Üniversite öğrencisi",
+        "Okul müdürü",
+        "Dekan",
+        "Kütüphane müdürü"
+      ],
+      "src": "https://www.startv.com.tr/film/recep-ivedik-3"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmin yönetmeni kimdir?",
+      "a": [
+        "Togan Gökbakar",
+        "Şahan Gökbakar",
+        "Ömer Faruk Sorak",
+        "Yavuz Turgul"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1",
+      "oops": "Bu kez macera cevap şıklarında çıktı."
+    },
+    {
+      "d": 3,
+      "q": "İlk filmde otel müdürünü hangi oyuncu canlandırır?",
+      "a": [
+        "Hakan Bilgin",
+        "Ozan Güven",
+        "Şener Şen",
+        "Haluk Bilginer"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1"
+    },
+    {
+      "d": 3,
+      "q": "İlk filmin senaryo yazarları arasında Şahan Gökbakar dışında kim vardır?",
+      "a": [
+        "Serkan Altuniğne",
+        "Yılmaz Erdoğan",
+        "Yavuz Turgul",
+        "Sadık Şendil"
+      ],
+      "src": "https://acikerisim.msgsu.edu.tr/xmlui/bitstream/handle/20.500.14124/3689/254333.pdf?isAllowed=y&sequence=1",
+      "oops": "Mahallede bu soruyu bir kez daha konuşalım."
+    },
+    {
+      "d": 3,
+      "q": "Recep İvedik 2 hangi yıl gösterime girdi?",
+      "a": [
+        "2009",
+        "2008",
+        "2011",
+        "2014"
+      ],
+      "src": "https://boxofficeturkiye.com/karsilastirma/recep-ivedik-serisi--141"
+    },
+    {
+      "d": 3,
+      "q": "Recep İvedik 3 hangi yıl gösterime girdi?",
+      "a": [
+        "2010",
+        "2007",
+        "2013",
+        "2016"
+      ],
+      "src": "https://boxofficeturkiye.com/karsilastirma/recep-ivedik-serisi--141",
+      "oops": "Resepsiyon bilgi masasını işaret ediyor!"
+    },
+    {
+      "d": 3,
+      "q": "Üçüncü filmde Zeynep'i kim canlandırır?",
+      "a": [
+        "Zeynep Çamcı",
+        "Fatma Toptaş",
+        "Sinem Kobal",
+        "Özge Özberk"
+      ],
+      "src": "https://www.startv.com.tr/film/recep-ivedik-3"
+    },
+    {
+      "d": 3,
+      "q": "Üçüncü filmde Recep'in yakın dostu Salih'in işi nedir?",
+      "a": [
+        "Bakkallık",
+        "Terzilik",
+        "Avukatlık",
+        "Pilotluk"
+      ],
+      "src": "https://www.startv.com.tr/film/recep-ivedik-3",
+      "oops": "Tatil planı tamam; ayrıntılara biraz daha bakalım."
+    },
+    {
+      "d": 3,
+      "q": "Üçüncü filmde Recep ile Zeynep'in denediği kurslardan hangisi filmdeki etkinlikler arasındadır?",
+      "a": [
+        "Seramik",
+        "Astronotluk",
+        "Dalgıç eğitmenliği",
+        "Kutup rehberliği"
+      ],
+      "src": "https://www.startv.com.tr/film/recep-ivedik-3"
+    }
+  ]
+}

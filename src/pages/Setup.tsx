@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { ChainSettings } from '../components/ChainSettings';
 import { FilmSettings } from '../components/FilmSettings';
+import { QuizSettings } from '../components/QuizSettings';
+import { QUIZZES } from '../data/quiz';
 import { Doodles } from '../components/Doodles';
 import { SettingsForm } from '../components/SettingsForm';
 import { Avatar, TopBar, useToast } from '../components/ui';
@@ -17,13 +19,15 @@ import { DEFAULT_CHAIN, DEFAULT_FILM, useProfile } from '../store/useProfile';
 
 export default function Setup() {
   const nav = useNavigate();
-  const bots = useParams().mode === 'bot';
-  const oyun = useSearchParams()[0].get('oyun');
+  const [params] = useSearchParams();
+  const oyun = params.get('oyun');
+  const quiz = oyun === 'quiz';
+  const bots = useParams().mode === 'bot' && !quiz;
   const siram = oyun === 'siram';
   const film = oyun === 'film';
   const p = useProfile();
   const [settings, setSettings] = useState<Settings>(
-    siram ? { ...DEFAULT_CHAIN, ...p.chain, game: 'siram' } : film ? { ...DEFAULT_FILM, ...p.film, game: 'film' } : p.settings,
+    quiz ? { ...DEFAULT_FILM, game: 'quiz', rounds: 10, time: 20, quizId: QUIZZES.some((q) => q.id === params.get('evren')) ? params.get('evren')! : 'harrypotter' } : siram ? { ...DEFAULT_CHAIN, ...p.chain, game: 'siram' } : film ? { ...DEFAULT_FILM, ...p.film, game: 'film' } : p.settings,
   );
   const [count, setCount] = useState(p.bots.count);
   const [level, setLevel] = useState(p.bots.level);
@@ -33,7 +37,7 @@ export default function Setup() {
   const go = async () => {
     if (busy) return;
     sfx.pop();
-    p.set(siram ? { chain: settings, bots: { count, level } } : film ? { film: settings, bots: { count, level } } : { settings, bots: { count, level } });
+    if (!quiz) p.set(siram ? { chain: settings, bots: { count, level } } : film ? { film: settings, bots: { count, level } } : { settings, bots: { count, level } });
     if (bots) {
       useGame.getState().startBots(settings, count, level);
       nav('/oyun', { replace: true });
@@ -56,7 +60,7 @@ export default function Setup() {
   return (
     <main className="bg page setup">
       <Doodles variant={2} />
-      <TopBar title={`${siram ? 'Sıra Sende' : film ? 'Sinema Bilmecesi' : 'İsim Şehir'} · ${bots ? 'Botlara Karşı' : 'Oda Kur'}`} art={siram ? artSiram : film ? artFilm : artIsim} />
+      <TopBar title={`${quiz ? 'Sen Ne Kadar…?' : siram ? 'Sıra Sende' : film ? 'Sinema Bilmecesi' : 'İsim Şehir'} · ${bots ? 'Botlara Karşı' : 'Oda Kur'}`} art={siram ? artSiram : film || quiz ? artFilm : artIsim} />
 
       {bots && (
         <section className="paper-card setup__bots rise">
@@ -80,7 +84,7 @@ export default function Setup() {
       )}
 
       <section className="paper-card setup__card rise" style={{ animationDelay: '0.06s' }}>
-        {siram ? (
+        {quiz ? <QuizSettings value={settings} onChange={setSettings} /> : siram ? (
           <ChainSettings value={settings} onChange={setSettings} />
         ) : film ? (
           <FilmSettings value={settings} onChange={setSettings} />
