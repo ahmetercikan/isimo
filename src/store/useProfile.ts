@@ -74,7 +74,7 @@ interface ProfileState {
   stats: Stats;
   /** "Sen Ne Kadar…?": evren başına en iyi sonuç (yüzde, unvan basamağı, puan). */
   quizBest?: Record<string, { pct: number; tier: number; pts: number; name: string }>;
-  /** Evren başına son sorulan soruların sırası (hemen tekrar gelmesin; en fazla 40). */
+  /** Evren başına görülmüş soru anahtarları; en yeni önce, tüm havuz saklanır. */
   quizSeen?: Record<string, number[]>;
   /** Uygulama kapanınca geri dönülebilsin: son çevrimiçi oda. */
   lastRoom: { code: string; at: number } | null;

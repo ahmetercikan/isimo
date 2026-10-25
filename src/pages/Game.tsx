@@ -86,6 +86,7 @@ export default function Game() {
   if (!t) return <Navigate to="/" replace />;
 
   const leave = async () => {
+    if (s?.ctl.phase === 'final') await maybeInterstitial();
     await useGame.getState().leave();
     nav('/', { replace: true });
   };

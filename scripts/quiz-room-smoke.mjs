@@ -25,12 +25,15 @@ try{
  await a.getByRole('button',{name:'Oyunu Başlat',exact:true}).click({force:true});await a.waitForSelector('.quiz-room .quiz-q__text');await bp.waitForSelector('.quiz-room .quiz-q__text');
  if(await a.locator('.quiz-q__text').innerText()!==await bp.locator('.quiz-q__text').innerText())throw Error('Question mismatch');
  if(JSON.stringify(await a.locator('.quiz-opt__text').allTextContents())!==JSON.stringify(await bp.locator('.quiz-opt__text').allTextContents()))throw Error('Option mismatch');
- await a.waitForFunction(()=>!document.querySelector('.quiz-opt').disabled);
+ await a.waitForFunction(()=>document.querySelector('.quiz-opt')?.disabled === false);
  const right=await a.evaluate(async()=>{const s=(await import('/src/store/useGame.ts')).useGame.getState().s;return s.ctl.quiz.questions[0].right;});
  await a.locator('.quiz-opt').nth(right).click();await a.getByText(/Cevabın alındı/).waitFor();
  if(await bp.locator('.is-right').count())throw Error('Answer exposed before all players submit');
  await bp.locator('.quiz-opt').nth(right).click();await bp.waitForSelector('.quiz-opt.is-right');
- console.log('Shared questions, hidden feedback, first scoring OK');
+ const firstKeys = await bp.evaluate(async () => (await import('/src/store/useGame.ts')).useGame.getState().s.ctl.quiz.questions.map(q => q.key));
+ const saved = await bp.evaluate(() => JSON.parse(localStorage.getItem('isimsehir-v1')).state.quizSeen.matrix);
+ if (firstKeys.some(k => !saved.includes(k))) throw Error('Question history was not saved at start');
+ console.log('Shared questions, hidden feedback, scoring and persistent history OK');
  await a.waitForFunction(()=>document.querySelector('.round-label')?.textContent.includes('Soru 2'));
  await c.goto('http://127.0.0.1:5291/#/katil?oyun=quiz');await c.getByLabel('Oda kodu').fill(code);await c.getByText(/Bu turu izleyebilir/).waitFor();
  if(await c.locator('.quiz-opt:enabled').count())throw Error('Spectator can answer');
@@ -39,7 +42,7 @@ try{
  console.log('Late spectator and host transfer OK');
  for(let round=2;round<=10;round++){
   await bp.waitForFunction(r=>document.querySelector('.round-label')?.textContent.includes(`Soru ${r} /`),round);
-  await bp.waitForFunction(()=>!document.querySelector('.quiz-opt').disabled);
+  await bp.waitForFunction(()=>document.querySelector('.quiz-opt')?.disabled === false);
   const r=await bp.evaluate(async()=>{const s=(await import('/src/store/useGame.ts')).useGame.getState().s;return s.ctl.quiz.questions[s.ctl.round-1].right;});
   await bp.locator('.quiz-opt').nth(r).click();await bp.waitForSelector('.quiz-opt.is-right');
  }
@@ -49,8 +52,10 @@ try{
  await bp.screenshot({path:'/tmp/isimo-quiz-online-final.png'});
  await bp.getByRole('button',{name:'Tekrar Oyna',exact:true}).click();await bp.waitForSelector('.lobby');await c.waitForSelector('.lobby');
  if(await bp.getByRole('button',{name:'Bot ekle',exact:true}).count())throw Error('Replay lobby has bot');
- await bp.getByRole('button',{name:'Oyunu Başlat',exact:true}).click({force:true});await c.waitForSelector('.quiz-opt');await c.waitForFunction(()=>!document.querySelector('.quiz-opt').disabled);
- console.log('Replay includes former spectator');
+ await bp.getByRole('button',{name:'Oyunu Başlat',exact:true}).click({force:true});await c.waitForSelector('.quiz-opt');await c.waitForFunction(()=>document.querySelector('.quiz-opt')?.disabled === false);
+ const nextKeys = await bp.evaluate(async () => (await import('/src/store/useGame.ts')).useGame.getState().s.ctl.quiz.questions.map(q => q.key));
+ if (nextKeys.some(k => firstKeys.includes(k))) throw Error('Replay repeated questions despite unseen pool');
+ console.log('Replay includes former spectator; all questions fresh');
  await bp.getByRole('button',{name:'Oyundan çık',exact:true}).click();await bp.getByRole('button',{name:'Çık',exact:true}).click();
  await c.getByRole('button',{name:'Oyundan çık',exact:true}).click();await c.getByRole('button',{name:'Çık',exact:true}).click();
  if(errors.length)throw Error(errors.join('\n'));

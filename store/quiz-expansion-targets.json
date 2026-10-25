@@ -1,0 +1,120 @@
+{
+  "seriesExpansionApproved": true,
+  "totalTarget": 9360,
+  "universes": [
+    {
+      "id": "aslankral",
+      "title": "Aslan Kral",
+      "baseline": 47,
+      "target": 470
+    },
+    {
+      "id": "bluey",
+      "title": "Bluey ve Bingo",
+      "baseline": 49,
+      "target": 490
+    },
+    {
+      "id": "buzdevri",
+      "title": "Buz Devri",
+      "baseline": 48,
+      "target": 480
+    },
+    {
+      "id": "eskiya",
+      "title": "Eşkıya",
+      "baseline": 30,
+      "target": 300
+    },
+    {
+      "id": "gora",
+      "title": "G.O.R.A.",
+      "baseline": 48,
+      "target": 480
+    },
+    {
+      "id": "hababam",
+      "title": "Hababam Sınıfı",
+      "baseline": 48,
+      "target": 480
+    },
+    {
+      "id": "harrypotter",
+      "title": "Harry Potter",
+      "baseline": 119,
+      "target": 1190
+    },
+    {
+      "id": "karayipkorsanlari",
+      "title": "Karayip Korsanları",
+      "baseline": 40,
+      "target": 400
+    },
+    {
+      "id": "karlarulkesi",
+      "title": "Karlar Ülkesi",
+      "baseline": 49,
+      "target": 490
+    },
+    {
+      "id": "matrix",
+      "title": "Matrix",
+      "baseline": 40,
+      "target": 400
+    },
+    {
+      "id": "nemo",
+      "title": "Kayıp Balık Nemo ve Dori",
+      "baseline": 50,
+      "target": 500
+    },
+    {
+      "id": "oyuncakhikayesi",
+      "title": "Oyuncak Hikâyesi",
+      "baseline": 49,
+      "target": 490
+    },
+    {
+      "id": "recepivedik",
+      "title": "Recep İvedik",
+      "baseline": 30,
+      "target": 300
+    },
+    {
+      "id": "shrek",
+      "title": "Şrek",
+      "baseline": 50,
+      "target": 500
+    },
+    {
+      "id": "tersyuz",
+      "title": "Ters Yüz",
+      "baseline": 50,
+      "target": 500
+    },
+    {
+      "id": "titanik",
+      "title": "Titanik",
+      "baseline": 49,
+      "target": 490
+    },
+    {
+      "id": "yenilmezler",
+      "title": "Yenilmezler",
+      "baseline": 40,
+      "target": 400
+    },
+    {
+      "id": "yildizsavaslari",
+      "title": "Yıldız Savaşları",
+      "baseline": 40,
+      "target": 400
+    },
+    {
+      "id": "yuzuklerinefendisi",
+      "title": "Yüzüklerin Efendisi",
+      "baseline": 60,
+      "target": 600
+    }
+  ]
+}

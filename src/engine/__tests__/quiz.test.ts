@@ -24,7 +24,27 @@ describe('Sen Ne Kadar… motoru', () => {
     const second = pickRound(q, first).map((x) => x.key);
     expect(second.filter((k) => first.includes(k))).toHaveLength(0);
   });
-  it('unvan basamakları', () => {
+  it('bir zorluk tükenince diğer zorluktaki yeni sorulara geçer', () => {
+    const seen = q.questions.flatMap((x, i) => x.d === 1 ? [i] : []);
+    const round = pickRound(q, seen);
+    expect(round.every((x) => !seen.includes(x.key))).toBe(true);
+    expect(round).toHaveLength(10);
+  });
+  it('havuz bitince en eski sorular döner, son oyundakiler hemen dönmez', () => {
+    const recent = Array.from({ length: 30 }, (_, i) => i);
+    const round = pickRound(q, recent);
+    expect(round.map((x) => x.key).sort((a, b) => a - b)).toEqual(recent.slice(20));
+  });
+  it('yeniden açılmış cihazın geçmişiyle havuz bitene kadar tekrar etmez', () => {
+    let history: number[] = [];
+    for (let i = 0; i < 3; i++) {
+      const round = pickRound(q, JSON.parse(JSON.stringify(history)));
+      expect(round.every((x) => !history.includes(x.key))).toBe(true);
+      history = [...round.map((x) => x.key), ...history];
+    }
+    expect(new Set(history).size).toBe(30);
+  });
+  it('unvan basamakları' , () => {
     expect(tierIndex(0)).toBe(0);
     expect(tierIndex(3)).toBe(1);
     expect(tierIndex(5)).toBe(2);

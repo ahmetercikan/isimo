@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Avatar, Timer, useNow } from '../../components/ui';
 import { QUESTION_MS, tierIndex } from '../../engine/quiz';
 import type { RoomState } from '../../engine/types';
+import { maybeInterstitial } from '../../lib/ads';
 import { sfx } from '../../lib/sfx';
 import { shareQuizStory } from '../../lib/storyCard';
 import type { Transport } from '../../online/transport';
@@ -90,8 +91,8 @@ export function QuizRoomFinal({ t, s, onExit }: { t: Transport; s: RoomState; on
     </li>)}</ol>
     <div className="quiz-result__btns">
       {me && <button className="pill story-btn" disabled={making} onClick={() => void share()}><ImageUp size={20} />{making ? 'Hazırlanıyor…' : 'Hikâyende paylaş'}</button>}
-      {actingHost(s) === t.me ? <button className="pill" onClick={() => void backToLobby(t)}><RotateCcw size={20} />Tekrar Oyna</button> : <p>Ev sahibi yeni oyunu başlatacak.</p>}
-      <button className="btn-outline" onClick={onExit}><Home size={20} />Ana Sayfa</button>
+      {actingHost(s) === t.me ? <button className="pill" onClick={async () => { await maybeInterstitial(); await backToLobby(t); }}><RotateCcw size={20} />Tekrar Oyna</button> : <p>Ev sahibi yeni oyunu başlatacak.</p>}
+      <button className="btn-outline" onClick={async () => { await maybeInterstitial(); onExit(); }}><Home size={20} />Ana Sayfa</button>
     </div>
   </div>;
 }

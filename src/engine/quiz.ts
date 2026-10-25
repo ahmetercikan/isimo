@@ -55,22 +55,22 @@ const shuffle = <T,>(xs: T[], rnd = Math.random): T[] => {
  * Bir zorlukta yeterince soru yoksa komşu zorluktan tamamlanır.
  */
 export function pickRound(quiz: Quiz, seen: Iterable<number> = [], rnd = Math.random): RoundQuestion[] {
-  const old = new Set(seen);
+  const history = Array.from(new Set(seen));
+  const old = new Set(history);
+  const age = new Map(history.map((key, i) => [key, i]));
   const all = quiz.questions.map((q, key) => ({ ...q, key }));
   const used = new Set<number>();
   const out: (QuizQuestion & { key: number })[] = [];
-  const take = (d: number, n: number) => {
-    const fresh = shuffle(all.filter((q) => q.d === d && !used.has(q.key) && !old.has(q.key)), rnd);
-    const stale = shuffle(all.filter((q) => q.d === d && !used.has(q.key) && old.has(q.key)), rnd);
-    const got = [...fresh, ...stale].slice(0, n);
+  // Önce bütün zorluklardaki görülmemiş sorular; kota uğruna eski soru dönmez.
+  for (const [d, n] of MIX) {
+    const got = shuffle(all.filter((q) => q.d === d && !old.has(q.key)), rnd).slice(0, n);
     got.forEach((q) => used.add(q.key));
     out.push(...got);
-    return n - got.length;
-  };
-  let short = 0;
-  for (const [d, n] of MIX) short += take(d, n);
-  if (short > 0) {
-    const rest = shuffle(all.filter((q) => !used.has(q.key)), rnd).slice(0, short);
+  }
+  for (const fresh of [true, false]) {
+    const candidates = shuffle(all.filter((q) => !used.has(q.key) && (!old.has(q.key)) === fresh), rnd);
+    if (!fresh) candidates.sort((a, b) => (age.get(b.key) ?? 0) - (age.get(a.key) ?? 0));
+    const rest = candidates.slice(0, ROUND - out.length);
     rest.forEach((q) => used.add(q.key));
     out.push(...rest);
   }

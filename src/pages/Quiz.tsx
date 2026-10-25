@@ -10,6 +10,7 @@ import { Icon } from '../components/Icon';
 import { Timer, TopBar, useNow } from '../components/ui';
 import { loadQuiz, QUIZZES } from '../data/quiz';
 import { pickRound, QUESTION_MS, questionPoints, ROUND, tierIndex, type Quiz as QuizData, type RoundQuestion } from '../engine/quiz';
+import { maybeInterstitial } from '../lib/ads';
 import { confetti } from '../lib/confetti';
 import { buzz } from '../lib/feel';
 import { sfx } from '../lib/sfx';
@@ -47,7 +48,7 @@ export default function Quiz() {
     setAnswers([]);
     setStartAt(Date.now());
     const p = useProfile.getState();
-    p.set({ quizSeen: { ...p.quizSeen, [q.id]: [...r.map((x) => x.key), ...seen].slice(0, 40) } });
+    p.set({ quizSeen: { ...p.quizSeen, [q.id]: Array.from(new Set([...r.map((x) => x.key), ...seen])) } });
   };
 
   useEffect(() => {
@@ -161,10 +162,10 @@ export default function Quiz() {
             <button className="pill story-btn" onClick={() => void story()} disabled={making}>
               <ImageUp size={22} strokeWidth={2.6} /> {making ? 'Hazırlanıyor…' : 'Hikâyende paylaş'}
             </button>
-            <button className="pill pill--big" onClick={again}><RotateCcw size={22} strokeWidth={2.6} /> Tekrar Oyna</button>
+            <button className="pill pill--big" onClick={async () => { await maybeInterstitial(); again(); }}><RotateCcw size={22} strokeWidth={2.6} /> Tekrar Oyna</button>
             <div className="final__row">
-              <button className="btn-outline" onClick={() => (sfx.tap(), nav('/sinema/sen-ne-kadar'))}><Ticket size={20} /> Başka film</button>
-              <button className="btn-outline" onClick={() => (sfx.tap(), nav('/', { replace: true }))}><Home size={20} /> Ana Sayfa</button>
+              <button className="btn-outline" onClick={async () => { sfx.tap(); await maybeInterstitial(); nav('/sinema/sen-ne-kadar'); }}><Ticket size={20} /> Başka film</button>
+              <button className="btn-outline" onClick={async () => { sfx.tap(); await maybeInterstitial(); nav('/', { replace: true }); }}><Home size={20} /> Ana Sayfa</button>
             </div>
           </div>
         </section>

@@ -40,6 +40,8 @@ export interface Settings {
 }
 
 export interface Player {
+  /** Bu cihazın seçilen evrendeki kalıcı soru geçmişi. */
+  quizHistory?: { id: string; seen: number[] };
   name: string;
   avatar: string;
   color: string;

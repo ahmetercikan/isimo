@@ -7,15 +7,17 @@ import type { Transport } from '../online/transport';
 export const QUIZ_LEAD_MS = 2500;
 export const QUIZ_REVEAL_MS = 4000;
 export const quizHumans = (s: RoomState) => Object.keys(s.players).filter((p) => !s.players[p].left && !s.players[p].bot && !p.startsWith('bot-') && s.players[p].on);
+export const quizHistoryReady = (s: RoomState) => quizHumans(s).every((pid) => s.players[pid].quizHistory?.id === (s.settings.quizId ?? 'harrypotter'));
 export const currentQuizQuestion = (c: Ctl) => c.quiz?.questions[c.round - 1];
 
 export async function startQuiz(t: Transport, s: RoomState, data?: Quiz): Promise<boolean> {
   if (t.kind !== 'online' || s.settings.game !== 'quiz') return false;
   const players = quizHumans(s);
-  if (players.length < 2) return false;
+  if (players.length < 2 || !quizHistoryReady(s)) return false;
   const quiz = data ?? await loadQuiz(s.settings.quizId ?? 'harrypotter');
   if (!quiz || quiz.id !== (s.settings.quizId ?? 'harrypotter')) return false;
-  const questions = pickRound(quiz);
+  const seen = players.flatMap((pid) => s.players[pid].quizHistory?.id === quiz.id ? s.players[pid].quizHistory!.seen ?? [] : []);
+  const questions = pickRound(quiz, seen);
   if (questions.length !== ROUND) return false;
   const now = t.now();
   return t.transactCtl((c) => c.seq === s.ctl.seq && (c.phase === 'lobby' || c.phase === 'final') ? {

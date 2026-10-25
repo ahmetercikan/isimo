@@ -14,7 +14,7 @@ function player(pid: string): Transport {
 }
 beforeEach(() => {
   vi.useFakeTimers(); vi.setSystemTime(100000);
-  const p = { name: 'A', avatar: 'kaplan', color: '#123456', joined: 1, on: true };
+  const p = { name: 'A', avatar: 'kaplan', color: '#123456', joined: 1, on: true, quizHistory: { id: 't', seen: [] as number[] } };
   const s: RoomState = { code: 'TEST', host: 'a', created: 1, settings: { cats: [], rounds: 10, time: 20, stop: false, grace: 0, hard: false, manualStop: false, game: 'quiz', quizId: 't' }, players: { a: p, b: { ...p, name: 'B', joined: 2 } }, ctl: newCtl() };
   base = new LocalTransport(s, 'a');
 });
@@ -33,6 +33,17 @@ describe('Arkadaşlarla Sen Ne Kadar…?', () => {
     expect(await Promise.all([startQuiz(player('a'), s, quiz), startQuiz(player('a'), s, quiz)])).toEqual([true, false]);
     expect(snap().ctl.quiz?.questions).toHaveLength(10);
     expect(new Set(snap().ctl.quiz?.questions.map((q) => q.key)).size).toBe(10);
+  });
+  it('yeni odada bütün oyuncuların geçmişini dikkate alır', async () => {
+    base.peek().players.a.quizHistory = { id: 't', seen: [0, 1, 2, 3, 4] };
+    base.peek().players.b.quizHistory = { id: 't', seen: [5, 6, 7, 8, 9] };
+    await start();
+    expect(snap().ctl.quiz!.questions.every((q) => q.key >= 10)).toBe(true);
+  });
+  it('seçilen evrenin geçmişi eşitlenmeden oyun başlatılamaz', async () => {
+    base.peek().players.a.quizHistory = { id: 'other', seen: Array.from({ length: 30 }, (_, i) => i) };
+    expect(await startQuiz(player('a'), snap(), quiz)).toBe(false);
+    expect(snap().ctl.phase).toBe('lobby');
   });
   it('erken, geç, geçersiz ve seyirci cevapları kabul edilmez', async () => {
     await startQuiz(player('a'), snap(), quiz);

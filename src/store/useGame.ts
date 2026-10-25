@@ -50,6 +50,8 @@ export const useGame = create<GameState>()((set, get) => ({
     // Arkadaşlar "Katıl" diyebilsin diye bulunduğumuz oda kartta duyurulur (yalnız çevrimiçi oda).
     if (t.kind === 'online') void import('../online/friends').then((f) => f.setRoom(t.code)).catch(() => {});
     let seen = false;
+    let historyPublished = "";
+    let recordedRun = "";
     // Botlar: odada bot varsa ve bu cihaz yönetiyorsa oynatılır. Çevrimiçi odada ev sahibi
     // ayrılıp yöneten değişince botlar kendiliğinden öteki cihaza geçer (iki cihaz aynı botu oynatmaz).
     let bots: (() => void) | null = null;
@@ -57,6 +59,21 @@ export const useGame = create<GameState>()((set, get) => ({
       if (s) seen = true;
       set({ s, lost: seen && !s });
       if (!s) return;
+      if (s.settings.game === 'quiz' && s.players[t.me] && !s.players[t.me].left) {
+        const q = s.ctl.quiz;
+        const p = useProfile.getState();
+        if (q && q.players.includes(t.me) && recordedRun !== q.run) {
+          recordedRun = q.run;
+          p.set({ quizSeen: { ...p.quizSeen, [q.id]: Array.from(new Set([...q.questions.map((x) => x.key), ...(p.quizSeen?.[q.id] ?? [])])) } });
+        }
+        const id = s.settings.quizId ?? 'harrypotter';
+        const history = { id, seen: useProfile.getState().quizSeen?.[id] ?? [] };
+        const signature = JSON.stringify(history);
+        if (historyPublished !== signature) {
+          historyPublished = signature;
+          void t.update({ [`players/${t.me}/quizHistory`]: history }).catch(() => { historyPublished = ''; });
+        }
+      }
       void direct(t, s);
       const mine = s.settings.game !== 'quiz' && hasBots(s) && actingHost(s) === t.me;
       if (mine && !bots) bots = runBots(t);

@@ -33,6 +33,7 @@ let bannerShown = false;
 let bannerExists = false;
 let interstitialLoaded = false;
 let lastInterstitial = 0;
+let interstitialShowing: Promise<void> | null = null;
 const INTERSTITIAL_GAP_MS = 3 * 60_000;
 
 const setAdHeight = (h: number) => {
@@ -122,22 +123,30 @@ export async function hideBanner() {
 }
 
 /** Oyun bittiğinde tam ekran reklam (yüklüyse ve son reklamdan beri 3 dakika geçtiyse). Döner: reklam kapanınca. */
-export async function maybeInterstitial(): Promise<void> {
-  if (!native || !interstitialLoaded || Date.now() - lastInterstitial < INTERSTITIAL_GAP_MS) return;
+export function maybeInterstitial(): Promise<void> {
+  // Aynı sonuç ekranındaki çift dokunma/çıkış çağrıları aynı kapanışı bekler.
+  if (interstitialShowing) return interstitialShowing;
+  if (!native || !interstitialLoaded || Date.now() - lastInterstitial < INTERSTITIAL_GAP_MS) return Promise.resolve();
   lastInterstitial = Date.now();
   interstitialLoaded = false;
-  await new Promise<void>((resolve) => {
-    let done = false;
-    const finish = () => {
-      if (done) return;
-      done = true;
-      resolve();
-    };
-    void AdMob.addListener(InterstitialAdPluginEvents.Dismissed, finish).then((h) => setTimeout(() => void h.remove(), 120_000));
-    void AdMob.addListener(InterstitialAdPluginEvents.FailedToShow, finish);
-    AdMob.showInterstitial().catch(finish);
-    setTimeout(finish, 60_000);
-  });
+  interstitialShowing = (async () => {
+    const handles: { remove: () => Promise<void> }[] = [];
+    let finish = () => {};
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const closed = new Promise<void>((resolve) => { finish = resolve; });
+    try {
+      handles.push(await AdMob.addListener(InterstitialAdPluginEvents.Dismissed, finish));
+      handles.push(await AdMob.addListener(InterstitialAdPluginEvents.FailedToShow, finish));
+      timer = setTimeout(finish, 60_000);
+      await AdMob.showInterstitial().catch(finish);
+      await closed;
+    } catch { /* Reklam hatası sonuç ekranından çıkışı engellemez. */ }
+    finally {
+      clearTimeout(timer);
+      await Promise.all(handles.map((h) => h.remove().catch(() => {})));
+    }
+  })().finally(() => { interstitialShowing = null; });
+  return interstitialShowing;
 }
 
 /** Avrupa'daki kullanıcılar için "reklam gizlilik seçenekleri" düğmesi gerekli mi. */

@@ -5,7 +5,7 @@ import { ChainSettings } from '../../components/ChainSettings';
 import { FilmSettings } from '../../components/FilmSettings';
 import { QuizSettings } from '../../components/QuizSettings';
 import { QUIZZES } from '../../data/quiz';
-import { quizHumans, startQuiz } from '../quizDirector';
+import { quizHumans, quizHistoryReady, startQuiz } from '../quizDirector';
 import { SettingsForm } from '../../components/SettingsForm';
 import { CatIcon, Icon } from '../../components/Icon';
 import { Mascot } from '../../components/Mascot';
@@ -38,7 +38,7 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
     .sort((a, b) => a[1].joined - b[1].joined);
   const st = s.settings;
   const quiz = st.game === 'quiz';
-  const canStart = quiz ? quizHumans(s).length >= 2 : !online || players.length >= 2;
+  const canStart = quiz ? quizHumans(s).length >= 2 && quizHistoryReady(s) : !online || players.length >= 2;
   // Çevrimiçi odaya bot: arkadaş azsa masa bot ile dolsun (botları yöneten cihaz oynatır).
   const slot = freeBotSlot(Object.keys(s.players));
   const canAddBot = !quiz && online && isHost && slot >= 0 && players.length < MAX_PLAYERS;
@@ -194,7 +194,7 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
             }}>
               <Play size={26} fill="currentColor" strokeWidth={2} /> {starting ? 'Başlatılıyor…' : 'Oyunu Başlat'}
             </button>
-            {!canStart && <p className="cta-note">Başlamak için en az 2 oyuncu gerekli</p>}
+            {!canStart && <p className="cta-note">{quiz && quizHumans(s).length >= 2 ? 'Soru geçmişleri eşitleniyor…' : 'Başlamak için en az 2 oyuncu gerekli'}</p>}
           </>
         ) : (
           <p className="waiting">
