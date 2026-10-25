@@ -6,6 +6,7 @@
 import { Check, Eraser, Keyboard, PenLine, Undo2 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { confetti } from '../../lib/confetti';
+import { FilmLeader } from '../../components/CinemaScene';
 import { Icon } from '../../components/Icon';
 import { InkPad } from '../../components/InkPad';
 import { Avatar, Timer, useNow } from '../../components/ui';
@@ -129,6 +130,17 @@ export function FilmRound({ t, s }: { t: Transport; s: RoomState }) {
   useEffect(() => {
     if (reveal) sfx.reveal();
   }, [reveal]);
+  // Film başlarken klaket, geri sayımda tık
+  useEffect(() => {
+    if (clue === 0 && !reveal) sfx.clap();
+  }, [c.round]);
+  const lead = useRef(-1);
+  useEffect(() => {
+    if (clue === 0 && !reveal && left !== lead.current && left > 0) {
+      lead.current = left;
+      sfx.tick(left);
+    }
+  }, [left, clue, reveal]);
   const tick = useRef(-1);
   useEffect(() => {
     if (playing && lastClue && left <= 5 && left !== tick.current) {
@@ -192,11 +204,7 @@ export function FilmRound({ t, s }: { t: Transport; s: RoomState }) {
           <p className="waiting"><span className="dots"><i /><i /><i /></span> {c.round >= total ? 'Sonuçlar geliyor' : 'Sıradaki film geliyor'}</p>
         </section>
       ) : clue === 0 ? (
-        <section className="paper-card film-intro pop-in">
-          <Icon name="dizi" size={64} />
-          <h2 className="title-lg">{c.round}. film geliyor</h2>
-          <p className="muted">İpuçları birer birer açılacak. Ne kadar erken bilirsen o kadar çok puan!</p>
-        </section>
+        <FilmLeader round={c.round} left={left} />
       ) : (
         <ol className="clues">
           {list.slice(0, clue).map((x, i) => (

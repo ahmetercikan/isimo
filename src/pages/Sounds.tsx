@@ -34,6 +34,7 @@ const MUSIC: [Mood, string, string][] = [
   ['write', 'kalem', 'Yazarken'],
   ['tension', 'ates', 'Son 10 saniye'],
   ['chill', 'kupa', 'Puanlar'],
+  ['film', 'dizi', 'Film Avı'],
 ];
 
 export default function Sounds() {

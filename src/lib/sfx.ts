@@ -9,7 +9,7 @@
  *
  * Çalgılar: çan (uyumsuz kısmi tonlar), telli "pluck" (süzgeç zarflı), bakır nefesli (akortsuz testere dalgalar),
  * davul seti (kick, trampet, zil), elektrikli piyano (FM). Efektler bu çalgıların katmanlanmasıyla yapılır.
- * Müzik: src/lib/music.ts (aynı çalgılar, ayrı kanal).
+ * Müzik: src/lib/music.ts (kayıtlı parçalar + harf rulosu için aynı çalgılar, ayrı kanal).
  */
 let ctx: AudioContext | null = null;
 let master: GainNode;
@@ -381,6 +381,11 @@ export function voiceOut(seconds: number): AudioNode {
 }
 
 /** Müzik kanalının ses seviyesi (music.ts geçişleri için). */
+/** Müzik kanalının girişi (dosyadan çalınan fon müziği buraya bağlanır; kısma ve seviye ortak). */
+export function musicOut(): AudioNode | null {
+  return audio() ? musicBus : null;
+}
+
 export function musicLevel(v: number, time = 0.6) {
   const a = audio();
   if (!a) return;
@@ -532,6 +537,12 @@ export const sfx = {
     const k = (i % 5) * 2;
     tone({ type: 'square', f: mtof(83 + k), d: 0.06, g: 0.035, lp: 5000 });
     tone({ type: 'square', f: mtof(88 + k), t: 0.06, d: 0.35, g: 0.035, lp: 5000, send: 0.2 });
+  },
+  /** Klaket: kuru tahta şaklaması + kısa oda yankısı (Film Avı'nda her film başlarken). */
+  clap: () => {
+    noise({ d: 0.05, g: 0.5, filter: 'bandpass', f: 1800, q: 1.2, send: 0.25 });
+    noise({ d: 0.02, g: 0.35, filter: 'highpass', f: 4000 });
+    tone({ f: 220, to: 120, glide: 0.04, d: 0.06, g: 0.12 });
   },
   /** Geçiş: yumuşak, havalı bir süzülme (soldan sağa) + altta belli belirsiz bir nota. */
   whoosh: () => {

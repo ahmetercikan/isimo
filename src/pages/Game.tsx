@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Icon } from '../components/Icon';
 import { Confirm } from '../components/ui';
+import { CinemaScene } from '../components/CinemaScene';
 import { Doodles } from '../components/Doodles';
 import { ChainFinal } from '../game/screens/ChainFinal';
 import { FilmFinal } from '../game/screens/FilmFinal';
@@ -43,8 +44,8 @@ export default function Game() {
     mood = { lobby: 'lobby', spin: 'roll', review: 'chill', scores: 'chill', final: 'off', write: 'write', turn: 'write', clue: 'write' }[c.phase] as Mood;
     if (c.phase === 'write') mood = now < c.startAt || now >= c.endAt ? 'off' : c.endAt - now <= 10500 ? 'tension' : 'write';
     if (c.phase === 'turn') mood = c.endAt - now <= 8000 ? 'tension' : 'write';
-    // Film Avı: film açıklanırken sakin, son ipucunda gerilim.
-    if (c.phase === 'clue') mood = c.nextAt || now < c.startAt ? 'chill' : c.endAt - now <= s.settings.time * 1000 ? 'tension' : 'write';
+    // Film Avı: ipuçlarında kara film cazı, film açıklanırken sakin, son ipucunda gerilim.
+    if (c.phase === 'clue') mood = c.nextAt || now < c.startAt ? 'chill' : c.endAt - now <= s.settings.time * 1000 ? 'tension' : 'film';
   }
   useEffect(() => setMood(mood), [mood]);
   useEffect(() => () => setMood('off'), []);
@@ -121,9 +122,11 @@ export default function Game() {
     );
 
   const phase = s.ctl.phase;
+  const cinema = film && (phase === 'lobby' || phase === 'clue' || phase === 'final');
   return (
-    <main className={`bg page game game--${phase}`}>
-      <Doodles variant={s.ctl.round % 4} />
+    // Film Avı: lobi, tur ve final sinema salonunda (src/styles/cinema.css)
+    <main className={`bg page game game--${phase} ${cinema ? 'game--cinema' : ''}`}>
+      {cinema ? <CinemaScene /> : <Doodles variant={s.ctl.round % 4} />}
       {(phase === 'clue' || phase === 'turn') && <img className="game__deco" src={film ? artFilm : artSiram} alt="" aria-hidden="true" draggable={false} />}
       <button className="round-btn round-btn--soft game__exit" aria-label="Oyundan çık" onClick={() => (sfx.tap(), setAsk(true))}>
         <X size={24} strokeWidth={2.8} />

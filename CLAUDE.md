@@ -94,6 +94,18 @@
     iki yanında sarı ışık çizgileri (`.page__cta--spark`) + oynat simgesi; avatarlarda camsı parlama.
     Kurulumda `TopBar art=` ile sağ üstte kaplan + oyunun resmi; lobide kurallar kartının köşesinden kaplan bakar;
     Film Avı / Sıra Sende turunda sağ altta oyunun resmi (`.game__deco`). Yatay telefonda kaplanlar ve yan çalı gizli.
+  - **Fon müziği kayıtlı parçalar (25 Eki 2026):** `src/lib/music.ts` artık `public/music/*.m4a` çalıyor (Pixabay,
+    lisans `public/music/LISANS.txt`): lobi caz, oyun "Quiz Master", gerilim döngüsü, puanlar lo-fi, Film Avı kara film
+    cazı (`film` ruh hâli). Hepsi **YouTube Content ID'ye kayıtsız** seçildi — influencer ekran kaydı paylaşınca telif
+    uyarısı çıkmasın; yeni parça eklenirse sayfada "Content ID Registered" olmamalı. Parçalar belleğe açılmaz (decode
+    ~35 MB/parça), `<audio>` akışı Web Audio müzik kanalına bağlanır, döngü iki kopya arasında 2,5 sn çapraz geçişle.
+    Harf rulosu ve dosya yüklenemezse yedek: eski sentez. Kesme/çevirme: afconvert → WAV, Python `wave` ile kes, afconvert AAC 80 kbps.
+  - **Film Avı sinema teması (25 Eki 2026, influencer reklamı için):** `game--cinema` (Game.tsx; Film Avı lobi/tur/final),
+    zemin `components/CinemaScene.tsx` (spotlar, perde, toz, film greni), stiller `src/styles/cinema.css` (koyu cam kartlar,
+    altın vurgular, Bebas Neue başlıklar — `@fontsource/bebas-neue`). Her film eski sinema geri sayımıyla (`FilmLeader`) ve
+    klaketle (`sfx.clap`) başlar; açıklama altın çerçeveli film kartı; final "Yılın Film Avcısı" + altın konfeti +
+    **skor kartı** (`src/lib/storyCard.ts`, 1080×1920 hikâye görseli; uygulamada `@capacitor/filesystem` ile önbelleğe
+    yazılıp sistem paylaşımıyla gönderilir). Siluet/afiş yok (kullanıcı istemedi; afiş telifli).
   - **Sesler (25 Eki 2026):** `sfx.tap` (neredeyse her düğme / ekran geçişi) cam zil notasıydı, "oyuncak gibi"
     bulundu → yumuşak, kısa, sıcak bir tık; `sfx.pop` (başlat/onay) yumuşak iki notalı çan; `sfx.whoosh` daha havalı.
     Beğenilmezse geri almak için bu commit'i `git revert` etmek yeter.

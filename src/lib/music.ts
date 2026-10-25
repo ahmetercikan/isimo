@@ -1,16 +1,109 @@
 /**
- * Fon müziği: oyunun aşamasına göre değişen, cihazda üretilen kısa döngüler (dosya yok).
- *   lobby   — sakin, caz akorlu bekleme müziği
- *   roll    — harf seçilirken artan trampet rulosu
- *   write   — yazarken tempolu, enerjik ritim
- *   tension — son 10 saniye: hızlı, gerilimli
- *   chill   — değerlendirme ve puanlar: yumuşak
- * Zamanlama: ileriye bakan planlayıcı ("A Tale of Two Clocks"); ölçü başında mod değişir.
- * Çalgılar ve kanal: src/lib/sfx.ts.
+ * Fon müziği: oyunun aşamasına göre değişir.
+ *   lobby   — lobi: modern caz
+ *   roll    — harf seçilirken artan trampet rulosu (cihazda üretilir, dosya yok)
+ *   write   — yazarken / sırada: neşeli bilgi yarışması müziği
+ *   tension — son saniyeler: düşünme sayacı döngüsü
+ *   chill   — değerlendirme ve puanlar: lo-fi
+ *   film    — Film Avı ipuçları: kara film cazı (dedektif havası)
+ *
+ * Kayıtlı parçalar (25 Eki 2026): public/music/*.m4a, Pixabay (lisans: public/music/LISANS.txt). Hepsi YouTube Content ID'ye
+ * **kayıtsız** seçildi: influencer oyunun ekran kaydını paylaşınca telif uyarısı çıkmasın. Eskiden bütün müzik
+ * osilatörlerle üretiliyordu ve "yapay" duyuluyordu; o çalgılar artık yalnız rulo ve dosya yüklenemezse yedek olarak kalır.
+ *
+ * Parçalar belleğe açılmaz (decode parça başına ~35 MB tutardı), <audio> ile akış olarak çalınıp Web Audio müzik kanalına
+ * bağlanır; döngü dikişi iki öğe arasında çapraz geçişle saklanır (gerilim parçası zaten dikişsiz döngüdür).
+ * Sentez zamanlaması: ileriye bakan planlayıcı ("A Tale of Two Clocks"); ölçü başında mod değişir. Kanal: src/lib/sfx.ts.
  */
-import { audio, epiano, hat, kick, mtof, musicLevel, pluck, snare, tone, type Out } from './sfx';
+import { audio, epiano, hat, kick, mtof, musicLevel, musicOut, pluck, snare, tone, type Out } from './sfx';
 
-export type Mood = 'off' | 'lobby' | 'roll' | 'write' | 'tension' | 'chill';
+export type Mood = 'off' | 'lobby' | 'roll' | 'write' | 'tension' | 'chill' | 'film';
+
+/** Kayıtlı parçalar: dosya, ses seviyesi, dikişsiz döngü mü. */
+const TRACKS: Partial<Record<Mood, { src: string; level: number; seamless?: boolean }>> = {
+  lobby: { src: 'music/lobby.m4a', level: 0.42 },
+  write: { src: 'music/game.m4a', level: 0.36 },
+  tension: { src: 'music/tension.m4a', level: 0.4, seamless: true },
+  chill: { src: 'music/chill.m4a', level: 0.4 },
+  film: { src: 'music/film.m4a', level: 0.42 },
+};
+/** Döngüde iki kopya arasındaki çapraz geçiş (sn). */
+const XF = 2.5;
+
+interface Playing {
+  mood: Mood;
+  out: GainNode;
+  els: HTMLAudioElement[];
+  timer: number;
+}
+let playing: Playing | null = null;
+
+/** Parçanın bir kopyasını başlatır; dikişsiz değilse bitmesine XF kala bir sonrakini çapraz geçişle açar. */
+function startCopy(p: Playing, src: string, seamless: boolean, fadeIn: number) {
+  const a = audio();
+  if (!a) return;
+  const el = new Audio(src);
+  el.preload = 'auto';
+  el.loop = seamless;
+  const g = a.createGain();
+  g.gain.value = fadeIn ? 0 : 1;
+  a.createMediaElementSource(el).connect(g).connect(p.out);
+  if (fadeIn) g.gain.setTargetAtTime(1, a.currentTime, fadeIn / 3);
+  p.els.push(el);
+  el.play().catch(() => {
+    // çalınamadı (dosya yok / izin yok): yedek sentez
+    if (playing === p) fallback(p.mood);
+  });
+  if (seamless) return;
+  const check = () => {
+    if (playing !== p) return;
+    if (el.duration && el.currentTime >= el.duration - XF) {
+      g.gain.setTargetAtTime(0, a.currentTime, XF / 4);
+      setTimeout(() => {
+        el.pause();
+        p.els = p.els.filter((x) => x !== el);
+      }, XF * 1000 + 300);
+      startCopy(p, src, false, XF);
+    } else p.timer = window.setTimeout(check, 250);
+  };
+  p.timer = window.setTimeout(check, 1000);
+}
+
+function stopFile(fade = 1) {
+  const p = playing;
+  if (!p) return;
+  playing = null;
+  clearTimeout(p.timer);
+  const a = audio();
+  if (a) p.out.gain.setTargetAtTime(0, a.currentTime, fade / 3);
+  setTimeout(() => {
+    p.els.forEach((el) => el.pause());
+    p.out.disconnect();
+  }, fade * 1000 + 200);
+}
+
+function playFile(m: Mood): boolean {
+  const tr = TRACKS[m];
+  const a = audio();
+  const out = musicOut();
+  if (!tr || !a || !out) return false;
+  stopFile(1.2);
+  stopSynth();
+  musicLevel(1, 0.3);
+  const g = a.createGain();
+  g.gain.value = 0;
+  g.connect(out);
+  g.gain.setTargetAtTime(tr.level, a.currentTime, 0.35);
+  playing = { mood: m, out: g, els: [], timer: 0 };
+  startCopy(playing, tr.src, !!tr.seamless, 0);
+  return true;
+}
+
+// Uygulama arka plana geçince parçalar dursun (ses bağlamı askıya alınsa da <audio> ilerlemeye devam eder).
+if (typeof document !== 'undefined')
+  document.addEventListener('visibilitychange', () => {
+    playing?.els.forEach((el) => (document.hidden ? el.pause() : void el.play().catch(() => {})));
+  });
 
 const M: Out = { dest: 'music' };
 
@@ -32,7 +125,7 @@ const bass = (m: number, t: number, d: number, g: number) => {
   tone({ f: mtof(m - 12), t, a: 0.006, d, g: g * 0.6, ...M });
 };
 
-const STYLES: Record<Exclude<Mood, 'off'>, Style> = {
+const STYLES: Record<Exclude<Mood, 'off' | 'film'>, Style> = {
   lobby: {
     bpm: 90,
     level: 0.55,
@@ -119,12 +212,23 @@ export function setMusicEnabled(v: boolean) {
   }
 }
 
-function stop() {
+function stopSynth() {
   clearInterval(timer);
   timer = 0;
   style = null;
   pending = null;
+}
+
+function stop() {
+  stopSynth();
+  stopFile(0.4);
   musicLevel(0, 0.4);
+}
+
+/** Dosya çalınamazsa aynı ruh hâlinin sentez sürümü (film için yazarken sürümü). */
+function fallback(m: Mood) {
+  stopFile(0.3);
+  startSynth(m === 'film' ? 'write' : m);
 }
 
 /** Müziği değiştir (aynıysa bir şey yapmaz). */
@@ -136,8 +240,14 @@ export function setMood(m: Mood) {
     stop();
     return;
   }
+  if (playFile(m)) return;
+  startSynth(m);
+}
+
+function startSynth(m: Mood) {
   const a = audio();
-  if (!a) return;
+  if (!a || m === 'off' || m === 'film') return;
+  stopFile(0.8);
   const next = STYLES[m];
   if (!style || !timer) {
     style = next;
