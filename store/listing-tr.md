@@ -63,6 +63,9 @@ Kalemini hazırla, harfi çevir ve STOP de! İsim Şehir'i şimdi indir, arkada�
 
 ## Sürüm notları (en fazla 500 karakter)
 
+### 1.0.15 (Android sürüm kodu 15)
+Leyla ile Mecnun soruları sadeleştirildi. Bilgi soruları doğrudan soruluyor; yayıncı ve platform adları soru metinlerinden kaldırıldı.
+
 ### 1.0.14 (Android sürüm kodu 14)
 Sinema Bilmecesi'ne 300 Leyla ile Mecnun sorusu eklendi. Yarışmanın adı artık Sahneyi Hatırla; telefonlarda daha akıcı çalışması için görsel efektler hafifletildi.
 

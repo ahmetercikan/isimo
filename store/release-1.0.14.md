@@ -18,4 +18,4 @@
 
 ## Play Console
 
-1.0.14 App Bundle, Android Publisher API üzerinden production kanalına gönderildi ve Console düzenlemesi kaydedildi. API'nin production track yanıtı sürüm 14 için rollout durumunu `completed` gösteriyor. 26 Ekim 2026'da Play Console Yayın Özeti ayrıca “İncelenmekte olan değişiklikler” bölümünde 1.0.14'ü gösterdi ve “Değişiklikleriniz şu anda inceleniyor” mesajını verdi; Google incelemesi sürüyor.
+1.0.14 App Bundle, Android Publisher API üzerinden production kanalına gönderildi. Play Console Yayın Özeti 26 Ekim'de sürüm 14'ün incelemede olduğunu gösterdi. Leyla ile Mecnun soru metinleri sadeleştirildikten sonra, 1.0.15 aynı gün production kanalına gönderildi; yeni gönderim önceki incelemenin yerini aldı.

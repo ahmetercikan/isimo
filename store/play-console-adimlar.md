@@ -111,6 +111,8 @@ Sürüm → Ülkeler/bölgeler → **Türkiye** (isteğe bağlı: Kuzey Kıbrıs
   bitiyor, yani yanlış bir paket gönderildiğinde geri çekmeye vakit kalmayabilir.
 - 26 Eki: **sürüm kodu 14 (1.0.14)** `store/release/isim-sehir-1.0.14.aab` Android Publisher API üzerinden
   production kanalına yüklendi ve değişiklikler kaydedildi. AAB imzası mevcut yükleme anahtarıyla eşleşti.
+- 26 Eki: Leyla ile Mecnun'da yayıncı/platform adlarının soru metinlerinden çıkarılmasının ardından **sürüm kodu 15 (1.0.15)**
+  `store/release/isim-sehir-1.0.15.aab` yüklendi ve production kanalına gönderildi; 1.0.14 incelemesinin yerini aldı.
 - Play Console'daki uygulama adresi:
   `https://play.google.com/console/u/0/developers/6262296307859358769/app/4972498643282459948/tracks/production`
 

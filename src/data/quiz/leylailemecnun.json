@@ -186,7 +186,7 @@
     },
     {
       "d": 2,
-      "q": "TRT'nin dizi özetinde Şirin nasıl tanımlanır?",
+      "q": "Şirin nasıl tanımlanır?",
       "a": [
         "Kültürlü ve bilgili",
         "Kuryelik yapan",
@@ -197,7 +197,7 @@
     },
     {
       "d": 1,
-      "q": "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?",
+      "q": "Sedef ne iş yapar?",
       "a": [
         "Kuryelik",
         "Doktorluk",
@@ -241,7 +241,7 @@
     },
     {
       "d": 1,
-      "q": "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?",
+      "q": "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?",
       "a": [
         "9 Şubat 2011",
         "9 Şubat 2010",
@@ -252,7 +252,7 @@
     },
     {
       "d": 2,
-      "q": "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?",
+      "q": "Dizinin senaristi kimdir?",
       "a": [
         "Burak Aksak",
         "Onur Ünlü",
@@ -263,7 +263,7 @@
     },
     {
       "d": 2,
-      "q": "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?",
+      "q": "Dizinin yönetmenlerinden biri kimdir?",
       "a": [
         "Onur Ünlü",
         "Burak Aksak",
@@ -285,7 +285,7 @@
     },
     {
       "d": 1,
-      "q": "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?",
+      "q": "Dizinin türlerinden biri nedir?",
       "a": [
         "Komedi",
         "Belgesel",
@@ -296,7 +296,7 @@
     },
     {
       "d": 1,
-      "q": "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?",
+      "q": "Leyla ile Mecnun'un ilk bölümünün adı nedir?",
       "a": [
         "Beşik Kertmesi",
         "Abayı Yakmış",
@@ -401,9 +401,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Aynı hastanede · Komedi",
         "Aynı okulda · Komedi",
@@ -436,10 +436,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?",
+        "Sedef ne iş yapar?",
         "On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir 2) On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Sedef ne iş yapar 2) On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kuryelik · Arda'yı",
         "Doktorluk · Arda'yı",
@@ -491,9 +491,9 @@
       "pair": true,
       "pairFacts": [
         "Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Beşik kertmesi · Beşik Kertmesi",
         "Sünnet düğünü · Beşik Kertmesi",
@@ -509,9 +509,9 @@
       "pair": true,
       "pairFacts": [
         "Ak Sakallı Dede, Mecnun'un rüyalarından çıktıktan sonra ne yapar?",
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?"
+        "Şirin nasıl tanımlanır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Ak Sakallı Dede, Mecnun'un rüyalarından çıktıktan sonra ne yapar 2) TRT'nin dizi özetinde Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Ak Sakallı Dede, Mecnun'un rüyalarından çıktıktan sonra ne yapar 2) Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Mecnun'la birlikte yaşamaya başlar · Kültürlü ve bilgili",
         "Kireçburnu'ndan taşınır · Kültürlü ve bilgili",
@@ -526,10 +526,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin senaristi kimdir?",
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin senaristi kimdir 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Burak Aksak · Komedi",
         "Onur Ünlü · Komedi",
@@ -545,9 +545,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'nın peşine düşen Mecnun hangi yere gider?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın peşine düşen Mecnun hangi yere gider 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın peşine düşen Mecnun hangi yere gider 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Çöllere · Komedi",
         "Kuzey Kutbu'na · Komedi",
@@ -562,10 +562,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?",
+        "Dizinin senaristi kimdir?",
         "Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir 2) Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin senaristi kimdir 2) Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Burak Aksak · Ak Sakallı Dede'ye",
         "Onur Ünlü · Ak Sakallı Dede'ye",
@@ -634,10 +634,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?",
+        "Dizinin yönetmenlerinden biri kimdir?",
         "On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır 2) On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin yönetmenlerinden biri kimdir 2) On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Onur Ünlü · Arda'yı",
         "Burak Aksak · Arda'yı",
@@ -653,9 +653,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Bir yıl · Komedi",
         "Bir ay · Komedi",
@@ -671,9 +671,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun'un rüyasına giren bilge kişi kimdir?",
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?"
+        "Dizinin senaristi kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun'un rüyasına giren bilge kişi kimdir 2) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun'un rüyasına giren bilge kişi kimdir 2) Dizinin senaristi kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Ak Sakallı Dede · Burak Aksak",
         "Erdal Bakkal · Burak Aksak",
@@ -689,9 +689,9 @@
       "pair": true,
       "pairFacts": [
         "Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar?",
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?"
+        "Dizinin senaristi kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar 2) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar 2) Dizinin senaristi kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Beşik kertmesi · Burak Aksak",
         "Sünnet düğünü · Burak Aksak",
@@ -706,10 +706,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?",
+        "Dizinin yönetmenlerinden biri kimdir?",
         "Yedinci bölümde Ak Sakallı Dede, Mecnun'a nasıl rehberlik eder?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır 2) Yedinci bölümde Ak Sakallı Dede, Mecnun'a nasıl rehberlik eder Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin yönetmenlerinden biri kimdir 2) Yedinci bölümde Ak Sakallı Dede, Mecnun'a nasıl rehberlik eder Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Onur Ünlü · Bir dizi rüya aracılığıyla",
         "Burak Aksak · Bir dizi rüya aracılığıyla",
@@ -797,9 +797,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'nın ciğerini alan karakter kimdir?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın ciğerini alan karakter kimdir 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın ciğerini alan karakter kimdir 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Sedef · Beşik Kertmesi",
         "Şirin · Beşik Kertmesi",
@@ -832,10 +832,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?",
+        "Sedef ne iş yapar?",
         "Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir 2) Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Sedef ne iş yapar 2) Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kuryelik · Babasının eski arkadaşı Ömer'in",
         "Doktorluk · Babasının eski arkadaşı Ömer'in",
@@ -904,10 +904,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?",
+        "Dizinin yönetmenlerinden biri kimdir?",
         "Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır 2) Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin yönetmenlerinden biri kimdir 2) Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Onur Ünlü · Hafızasını geri kazandırmaya",
         "Burak Aksak · Hafızasını geri kazandırmaya",
@@ -941,9 +941,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun ilk Leyla'yı nasıl kaybeder?",
-        "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
+        "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun ilk Leyla'yı nasıl kaybeder 2) TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun ilk Leyla'yı nasıl kaybeder 2) Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Trafik kazasında · 9 Şubat 2011",
         "Yurt dışına taşınınca · 9 Şubat 2011",
@@ -976,10 +976,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?",
+        "Sedef ne iş yapar?",
         "Yedinci bölümde Ak Sakallı Dede, Mecnun'a nasıl rehberlik eder?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir 2) Yedinci bölümde Ak Sakallı Dede, Mecnun'a nasıl rehberlik eder Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Sedef ne iş yapar 2) Yedinci bölümde Ak Sakallı Dede, Mecnun'a nasıl rehberlik eder Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kuryelik · Bir dizi rüya aracılığıyla",
         "Doktorluk · Bir dizi rüya aracılığıyla",
@@ -995,9 +995,9 @@
       "pair": true,
       "pairFacts": [
         "Ailesi Mecnun'u Leyla'nın ailesinin yanına ne için götürür?",
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?"
+        "Dizinin senaristi kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Ailesi Mecnun'u Leyla'nın ailesinin yanına ne için götürür 2) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Ailesi Mecnun'u Leyla'nın ailesinin yanına ne için götürür 2) Dizinin senaristi kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Leyla'yı istemeye · Burak Aksak",
         "Bir iş teklif etmeye · Burak Aksak",
@@ -1012,10 +1012,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?",
+        "Dizinin senaristi kimdir?",
         "On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir 2) On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin senaristi kimdir 2) On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Burak Aksak · Arda'yı",
         "Onur Ünlü · Arda'yı",
@@ -1049,9 +1049,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun'la tanıştıktan sonra Sedef ve Şirin'in başına ne gelir?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun'la tanıştıktan sonra Sedef ve Şirin'in başına ne gelir 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun'la tanıştıktan sonra Sedef ve Şirin'in başına ne gelir 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Mahalleden ayrılırlar · Beşik Kertmesi",
         "Birlikte bakkal açarlar · Beşik Kertmesi",
@@ -1102,10 +1102,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?",
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?"
+        "Sedef ne iş yapar?",
+        "Dizinin senaristi kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir 2) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Sedef ne iş yapar 2) Dizinin senaristi kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kuryelik · Burak Aksak",
         "Doktorluk · Burak Aksak",
@@ -1138,10 +1138,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?",
+        "Dizinin türlerinden biri nedir?",
         "Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir 2) Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin türlerinden biri nedir 2) Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Komedi · Hafızasını geri kazandırmaya",
         "Belgesel · Hafızasını geri kazandırmaya",
@@ -1157,9 +1157,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun, Leyla'nın organlarının bağışlandığını öğrenince neyin peşine düşer?",
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?"
+        "Şirin nasıl tanımlanır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun, Leyla'nın organlarının bağışlandığını öğrenince neyin peşine düşer 2) TRT'nin dizi özetinde Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun, Leyla'nın organlarının bağışlandığını öğrenince neyin peşine düşer 2) Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Leyla'nın organlarını alan kişileri bulmanın · Kültürlü ve bilgili",
         "Kazanın tanıklarını bulmanın · Kültürlü ve bilgili",
@@ -1337,9 +1337,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'nın peşine düşen Mecnun hangi yere gider?",
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?"
+        "Dizinin yönetmenlerinden biri kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın peşine düşen Mecnun hangi yere gider 2) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın peşine düşen Mecnun hangi yere gider 2) Dizinin yönetmenlerinden biri kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Çöllere · Onur Ünlü",
         "Kuzey Kutbu'na · Onur Ünlü",
@@ -1355,9 +1355,9 @@
       "pair": true,
       "pairFacts": [
         "Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Babasının eski arkadaşı Ömer'in · Komedi",
         "Erdal Bakkal'ın · Komedi",
@@ -1373,9 +1373,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'nın kalbini alan karakter kimdir?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın kalbini alan karakter kimdir 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın kalbini alan karakter kimdir 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Şirin · Beşik Kertmesi",
         "Sedef · Beşik Kertmesi",
@@ -1426,10 +1426,10 @@
       "d": 1,
       "pair": true,
       "pairFacts": [
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Dizinin türlerinden biri nedir?",
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin türlerinden biri nedir 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Komedi · Beşik Kertmesi",
         "Belgesel · Beşik Kertmesi",
@@ -1481,9 +1481,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun'un rüyasına giren bilge kişi kimdir?",
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?"
+        "Dizinin yönetmenlerinden biri kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun'un rüyasına giren bilge kişi kimdir 2) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun'un rüyasına giren bilge kişi kimdir 2) Dizinin yönetmenlerinden biri kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Ak Sakallı Dede · Onur Ünlü",
         "Erdal Bakkal · Onur Ünlü",
@@ -1553,9 +1553,9 @@
       "pair": true,
       "pairFacts": [
         "Ak Sakallı Dede, Mecnun'un rüyalarından çıktıktan sonra ne yapar?",
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?"
+        "Sedef ne iş yapar?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Ak Sakallı Dede, Mecnun'un rüyalarından çıktıktan sonra ne yapar 2) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Ak Sakallı Dede, Mecnun'un rüyalarından çıktıktan sonra ne yapar 2) Sedef ne iş yapar Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Mecnun'la birlikte yaşamaya başlar · Kuryelik",
         "Kireçburnu'ndan taşınır · Kuryelik",
@@ -1606,10 +1606,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?",
+        "Şirin nasıl tanımlanır?",
         "Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Şirin nasıl tanımlanır 2) Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Şirin nasıl tanımlanır 2) Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kültürlü ve bilgili · Babasının eski arkadaşı Ömer'in",
         "Kuryelik yapan · Babasının eski arkadaşı Ömer'in",
@@ -1624,10 +1624,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Şirin nasıl tanımlanır?",
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Şirin nasıl tanımlanır 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Şirin nasıl tanımlanır 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kültürlü ve bilgili · Beşik Kertmesi",
         "Kuryelik yapan · Beşik Kertmesi",
@@ -1679,9 +1679,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun ilk Leyla'yı nasıl kaybeder?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun ilk Leyla'yı nasıl kaybeder 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun ilk Leyla'yı nasıl kaybeder 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Trafik kazasında · Komedi",
         "Yurt dışına taşınınca · Komedi",
@@ -1733,9 +1733,9 @@
       "pair": true,
       "pairFacts": [
         "Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır?",
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?"
+        "Dizinin senaristi kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır 2) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır 2) Dizinin senaristi kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Babasının eski arkadaşı Ömer'in · Burak Aksak",
         "Erdal Bakkal'ın · Burak Aksak",
@@ -1804,10 +1804,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?",
+        "Şirin nasıl tanımlanır?",
         "On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Şirin nasıl tanımlanır 2) On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Şirin nasıl tanımlanır 2) On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kültürlü ve bilgili · Arda'yı",
         "Kuryelik yapan · Arda'yı",
@@ -1877,9 +1877,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun ilk Leyla'yı nasıl kaybeder?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun ilk Leyla'yı nasıl kaybeder 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun ilk Leyla'yı nasıl kaybeder 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Trafik kazasında · Beşik Kertmesi",
         "Yurt dışına taşınınca · Beşik Kertmesi",
@@ -1912,10 +1912,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?",
+        "Dizinin türlerinden biri nedir?",
         "Yedinci bölümde Ak Sakallı Dede, Mecnun'a nasıl rehberlik eder?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir 2) Yedinci bölümde Ak Sakallı Dede, Mecnun'a nasıl rehberlik eder Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin türlerinden biri nedir 2) Yedinci bölümde Ak Sakallı Dede, Mecnun'a nasıl rehberlik eder Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Komedi · Bir dizi rüya aracılığıyla",
         "Belgesel · Bir dizi rüya aracılığıyla",
@@ -1931,9 +1931,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun Leyla'yı ilk gördüğünde ne hisseder?",
-        "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
+        "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun Leyla'yı ilk gördüğünde ne hisseder 2) TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun Leyla'yı ilk gördüğünde ne hisseder 2) Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Ona aşık olur · 9 Şubat 2011",
         "Ondan korkar · 9 Şubat 2011",
@@ -1967,9 +1967,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Aynı hastanede · Beşik Kertmesi",
         "Aynı okulda · Beşik Kertmesi",
@@ -2129,9 +2129,9 @@
       "pair": true,
       "pairFacts": [
         "Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar?",
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?"
+        "Dizinin yönetmenlerinden biri kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar 2) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar 2) Dizinin yönetmenlerinden biri kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Beşik kertmesi · Onur Ünlü",
         "Sünnet düğünü · Onur Ünlü",
@@ -2147,9 +2147,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz?",
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?"
+        "Dizinin yönetmenlerinden biri kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz 2) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz 2) Dizinin yönetmenlerinden biri kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Bir yıl · Onur Ünlü",
         "Bir ay · Onur Ünlü",
@@ -2182,10 +2182,10 @@
       "d": 1,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Sedef ne iş yapar?",
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Sedef ne iş yapar 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kuryelik · Beşik Kertmesi",
         "Doktorluk · Beşik Kertmesi",
@@ -2218,10 +2218,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?",
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?"
+        "Dizinin senaristi kimdir?",
+        "Dizinin yönetmenlerinden biri kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir 2) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin senaristi kimdir 2) Dizinin yönetmenlerinden biri kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Burak Aksak · Onur Ünlü",
         "Onur Ünlü · Onur Ünlü",
@@ -2236,10 +2236,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?",
+        "Şirin nasıl tanımlanır?",
         "Dizinin büyük bölümü İstanbul'un hangi semtinde çekilmiştir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Şirin nasıl tanımlanır 2) Dizinin büyük bölümü İstanbul'un hangi semtinde çekilmiştir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Şirin nasıl tanımlanır 2) Dizinin büyük bölümü İstanbul'un hangi semtinde çekilmiştir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kültürlü ve bilgili · Kireçburnu",
         "Kuryelik yapan · Kireçburnu",
@@ -2272,10 +2272,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?",
+        "Dizinin türlerinden biri nedir?",
         "On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir 2) On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin türlerinden biri nedir 2) On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Komedi · Arda'yı",
         "Belgesel · Arda'yı",
@@ -2290,10 +2290,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?",
+        "Dizinin yönetmenlerinden biri kimdir?",
         "Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır 2) Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin yönetmenlerinden biri kimdir 2) Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Onur Ünlü · Ak Sakallı Dede'ye",
         "Burak Aksak · Ak Sakallı Dede'ye",
@@ -2344,10 +2344,10 @@
       "d": 3,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?",
+        "Dizinin yönetmenlerinden biri kimdir?",
         "Yirminci bölümde Ak Sakallı Dede, Leyla'yı hangi karardan vazgeçirmeye çalışır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır 2) Yirminci bölümde Ak Sakallı Dede, Leyla'yı hangi karardan vazgeçirmeye çalışır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin yönetmenlerinden biri kimdir 2) Yirminci bölümde Ak Sakallı Dede, Leyla'yı hangi karardan vazgeçirmeye çalışır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Onur Ünlü · Amerika'ya gitmekten",
         "Burak Aksak · Amerika'ya gitmekten",
@@ -2417,9 +2417,9 @@
       "pair": true,
       "pairFacts": [
         "Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Beşik kertmesi · Komedi",
         "Sünnet düğünü · Komedi",
@@ -2489,9 +2489,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'nın ciğerini alan karakter kimdir?",
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?"
+        "Dizinin senaristi kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın ciğerini alan karakter kimdir 2) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın ciğerini alan karakter kimdir 2) Dizinin senaristi kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Sedef · Burak Aksak",
         "Şirin · Burak Aksak",
@@ -2542,10 +2542,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?",
+        "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?",
         "Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı 2) Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı 2) Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "9 Şubat 2011 · Ak Sakallı Dede'ye",
         "9 Şubat 2010 · Ak Sakallı Dede'ye",
@@ -2579,9 +2579,9 @@
       "pair": true,
       "pairFacts": [
         "Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar?",
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?"
+        "Sedef ne iş yapar?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar 2) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Aileleri bebekleri doğar doğmaz hangi gelenekle birbirine bağlar 2) Sedef ne iş yapar Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Beşik kertmesi · Kuryelik",
         "Sünnet düğünü · Kuryelik",
@@ -2615,9 +2615,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun'un rüyasına giren bilge kişi kimdir?",
-        "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
+        "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun'un rüyasına giren bilge kişi kimdir 2) TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun'un rüyasına giren bilge kişi kimdir 2) Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Ak Sakallı Dede · 9 Şubat 2011",
         "Erdal Bakkal · 9 Şubat 2011",
@@ -2633,9 +2633,9 @@
       "pair": true,
       "pairFacts": [
         "Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Babasının eski arkadaşı Ömer'in · Beşik Kertmesi",
         "Erdal Bakkal'ın · Beşik Kertmesi",
@@ -2651,9 +2651,9 @@
       "pair": true,
       "pairFacts": [
         "Ailesi Mecnun'u Leyla'nın ailesinin yanına ne için götürür?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Ailesi Mecnun'u Leyla'nın ailesinin yanına ne için götürür 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Ailesi Mecnun'u Leyla'nın ailesinin yanına ne için götürür 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Leyla'yı istemeye · Komedi",
         "Bir iş teklif etmeye · Komedi",
@@ -2687,9 +2687,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'nın ciğerini alan karakter kimdir?",
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?"
+        "Şirin nasıl tanımlanır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın ciğerini alan karakter kimdir 2) TRT'nin dizi özetinde Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın ciğerini alan karakter kimdir 2) Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Sedef · Kültürlü ve bilgili",
         "Şirin · Kültürlü ve bilgili",
@@ -2741,9 +2741,9 @@
       "pair": true,
       "pairFacts": [
         "Bebeklerin yan yana yatırılmasının sebebi nedir?",
-        "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
+        "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Bebeklerin yan yana yatırılmasının sebebi nedir 2) TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Bebeklerin yan yana yatırılmasının sebebi nedir 2) Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Hastanede yatak sayısının az olması · 9 Şubat 2011",
         "Ailelerin aynı odada kalması · 9 Şubat 2011",
@@ -2884,10 +2884,10 @@
       "d": 1,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?",
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "9 Şubat 2011 · Beşik Kertmesi",
         "9 Şubat 2010 · Beşik Kertmesi",
@@ -2938,10 +2938,10 @@
       "d": 1,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?",
-        "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
+        "Sedef ne iş yapar?",
+        "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir 2) TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Sedef ne iş yapar 2) Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kuryelik · 9 Şubat 2011",
         "Doktorluk · 9 Şubat 2011",
@@ -2975,9 +2975,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun'la tanıştıktan sonra Sedef ve Şirin'in başına ne gelir?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun'la tanıştıktan sonra Sedef ve Şirin'in başına ne gelir 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun'la tanıştıktan sonra Sedef ve Şirin'in başına ne gelir 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Mahalleden ayrılırlar · Komedi",
         "Birlikte bakkal açarlar · Komedi",
@@ -2993,9 +2993,9 @@
       "pair": true,
       "pairFacts": [
         "Ailesi Mecnun'u Leyla'nın ailesinin yanına ne için götürür?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Ailesi Mecnun'u Leyla'nın ailesinin yanına ne için götürür 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Ailesi Mecnun'u Leyla'nın ailesinin yanına ne için götürür 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Leyla'yı istemeye · Beşik Kertmesi",
         "Bir iş teklif etmeye · Beşik Kertmesi",
@@ -3011,9 +3011,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Bir yıl · Beşik Kertmesi",
         "Bir ay · Beşik Kertmesi",
@@ -3046,10 +3046,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?",
+        "Şirin nasıl tanımlanır?",
         "Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Şirin nasıl tanımlanır 2) Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Şirin nasıl tanımlanır 2) Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kültürlü ve bilgili · Ak Sakallı Dede'ye",
         "Kuryelik yapan · Ak Sakallı Dede'ye",
@@ -3065,9 +3065,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar?",
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?"
+        "Dizinin senaristi kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar 2) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar 2) Dizinin senaristi kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Aynı hastanede · Burak Aksak",
         "Aynı okulda · Burak Aksak",
@@ -3226,10 +3226,10 @@
       "d": 1,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?",
+        "Sedef ne iş yapar?",
         "Dizinin büyük bölümü İstanbul'un hangi semtinde çekilmiştir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir 2) Dizinin büyük bölümü İstanbul'un hangi semtinde çekilmiştir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Sedef ne iş yapar 2) Dizinin büyük bölümü İstanbul'un hangi semtinde çekilmiştir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kuryelik · Kireçburnu",
         "Doktorluk · Kireçburnu",
@@ -3245,9 +3245,9 @@
       "pair": true,
       "pairFacts": [
         "Ailesi Mecnun'u Leyla'nın ailesinin yanına ne için götürür?",
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?"
+        "Sedef ne iş yapar?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Ailesi Mecnun'u Leyla'nın ailesinin yanına ne için götürür 2) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Ailesi Mecnun'u Leyla'nın ailesinin yanına ne için götürür 2) Sedef ne iş yapar Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Leyla'yı istemeye · Kuryelik",
         "Bir iş teklif etmeye · Kuryelik",
@@ -3334,10 +3334,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?",
-        "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
+        "Şirin nasıl tanımlanır?",
+        "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Şirin nasıl tanımlanır 2) TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Şirin nasıl tanımlanır 2) Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kültürlü ve bilgili · 9 Şubat 2011",
         "Kuryelik yapan · 9 Şubat 2011",
@@ -3370,10 +3370,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?",
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?"
+        "Şirin nasıl tanımlanır?",
+        "Sedef ne iş yapar?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Şirin nasıl tanımlanır 2) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Şirin nasıl tanımlanır 2) Sedef ne iş yapar Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kültürlü ve bilgili · Kuryelik",
         "Kuryelik yapan · Kuryelik",
@@ -3550,10 +3550,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?",
+        "Sedef ne iş yapar?",
         "Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir 2) Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Sedef ne iş yapar 2) Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kuryelik · Ak Sakallı Dede'ye",
         "Doktorluk · Ak Sakallı Dede'ye",
@@ -3587,9 +3587,9 @@
       "pair": true,
       "pairFacts": [
         "İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Leylâ ile Mecnûn · Komedi",
         "Kerem ile Aslı · Komedi",
@@ -3676,10 +3676,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Dizinin senaristi kimdir?",
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin senaristi kimdir 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Burak Aksak · Beşik Kertmesi",
         "Onur Ünlü · Beşik Kertmesi",
@@ -3713,9 +3713,9 @@
       "pair": true,
       "pairFacts": [
         "İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir?",
-        "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
+        "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir 2) TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir 2) Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Leylâ ile Mecnûn · 9 Şubat 2011",
         "Kerem ile Aslı · 9 Şubat 2011",
@@ -3749,9 +3749,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun Leyla'yı ilk gördüğünde ne hisseder?",
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?"
+        "Dizinin yönetmenlerinden biri kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun Leyla'yı ilk gördüğünde ne hisseder 2) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun Leyla'yı ilk gördüğünde ne hisseder 2) Dizinin yönetmenlerinden biri kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Ona aşık olur · Onur Ünlü",
         "Ondan korkar · Onur Ünlü",
@@ -3821,9 +3821,9 @@
       "pair": true,
       "pairFacts": [
         "Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır?",
-        "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
+        "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır 2) TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Daha sonra Mecnun'un aşık olduğu Leyla, kimin kızıdır 2) Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Babasının eski arkadaşı Ömer'in · 9 Şubat 2011",
         "Erdal Bakkal'ın · 9 Şubat 2011",
@@ -3892,10 +3892,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?",
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?"
+        "Sedef ne iş yapar?",
+        "Dizinin yönetmenlerinden biri kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir 2) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Sedef ne iş yapar 2) Dizinin yönetmenlerinden biri kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kuryelik · Onur Ünlü",
         "Doktorluk · Onur Ünlü",
@@ -3929,9 +3929,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun, Leyla'nın organlarının bağışlandığını öğrenince neyin peşine düşer?",
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?"
+        "Dizinin yönetmenlerinden biri kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun, Leyla'nın organlarının bağışlandığını öğrenince neyin peşine düşer 2) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun, Leyla'nın organlarının bağışlandığını öğrenince neyin peşine düşer 2) Dizinin yönetmenlerinden biri kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Leyla'nın organlarını alan kişileri bulmanın · Onur Ünlü",
         "Kazanın tanıklarını bulmanın · Onur Ünlü",
@@ -3964,10 +3964,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?",
+        "Şirin nasıl tanımlanır?",
         "Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Şirin nasıl tanımlanır 2) Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Şirin nasıl tanımlanır 2) Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kültürlü ve bilgili · Hafızasını geri kazandırmaya",
         "Kuryelik yapan · Hafızasını geri kazandırmaya",
@@ -4000,10 +4000,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?",
+        "Sedef ne iş yapar?",
         "Mecnun'la tanıştıktan sonra Sedef ve Şirin'in başına ne gelir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir 2) Mecnun'la tanıştıktan sonra Sedef ve Şirin'in başına ne gelir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Sedef ne iş yapar 2) Mecnun'la tanıştıktan sonra Sedef ve Şirin'in başına ne gelir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kuryelik · Mahalleden ayrılırlar",
         "Doktorluk · Mahalleden ayrılırlar",
@@ -4036,10 +4036,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?",
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?",
         "Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir 2) Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un ilk bölümünün adı nedir 2) Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Beşik Kertmesi · Hafızasını geri kazandırmaya",
         "Abayı Yakmış · Hafızasını geri kazandırmaya",
@@ -4055,9 +4055,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun'la tanıştıktan sonra Sedef ve Şirin'in başına ne gelir?",
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?"
+        "Dizinin senaristi kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun'la tanıştıktan sonra Sedef ve Şirin'in başına ne gelir 2) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun'la tanıştıktan sonra Sedef ve Şirin'in başına ne gelir 2) Dizinin senaristi kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Mahalleden ayrılırlar · Burak Aksak",
         "Birlikte bakkal açarlar · Burak Aksak",
@@ -4090,10 +4090,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?",
+        "Dizinin yönetmenlerinden biri kimdir?",
         "Dizinin büyük bölümü İstanbul'un hangi semtinde çekilmiştir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır 2) Dizinin büyük bölümü İstanbul'un hangi semtinde çekilmiştir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin yönetmenlerinden biri kimdir 2) Dizinin büyük bölümü İstanbul'un hangi semtinde çekilmiştir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Onur Ünlü · Kireçburnu",
         "Burak Aksak · Kireçburnu",
@@ -4181,9 +4181,9 @@
       "pair": true,
       "pairFacts": [
         "Ak Sakallı Dede, Mecnun'un rüyalarından çıktıktan sonra ne yapar?",
-        "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
+        "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Ak Sakallı Dede, Mecnun'un rüyalarından çıktıktan sonra ne yapar 2) TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Ak Sakallı Dede, Mecnun'un rüyalarından çıktıktan sonra ne yapar 2) Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Mecnun'la birlikte yaşamaya başlar · 9 Şubat 2011",
         "Kireçburnu'ndan taşınır · 9 Şubat 2011",
@@ -4217,9 +4217,9 @@
       "pair": true,
       "pairFacts": [
         "İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Leylâ ile Mecnûn · Beşik Kertmesi",
         "Kerem ile Aslı · Beşik Kertmesi",
@@ -4234,10 +4234,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?",
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?"
+        "Dizinin yönetmenlerinden biri kimdir?",
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır 2) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin yönetmenlerinden biri kimdir 2) Leyla ile Mecnun'un ilk bölümünün adı nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Onur Ünlü · Beşik Kertmesi",
         "Burak Aksak · Beşik Kertmesi",
@@ -4253,9 +4253,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar?",
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?"
+        "Dizinin yönetmenlerinden biri kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar 2) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar 2) Dizinin yönetmenlerinden biri kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Aynı hastanede · Onur Ünlü",
         "Aynı okulda · Onur Ünlü",
@@ -4270,10 +4270,10 @@
       "d": 1,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?",
+        "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?",
         "Dizinin büyük bölümü İstanbul'un hangi semtinde çekilmiştir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı 2) Dizinin büyük bölümü İstanbul'un hangi semtinde çekilmiştir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı 2) Dizinin büyük bölümü İstanbul'un hangi semtinde çekilmiştir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "9 Şubat 2011 · Kireçburnu",
         "9 Şubat 2010 · Kireçburnu",
@@ -4289,9 +4289,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'nın kalbini alan karakter kimdir?",
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?"
+        "Dizinin senaristi kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın kalbini alan karakter kimdir 2) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın kalbini alan karakter kimdir 2) Dizinin senaristi kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Şirin · Burak Aksak",
         "Sedef · Burak Aksak",
@@ -4415,9 +4415,9 @@
       "pair": true,
       "pairFacts": [
         "Ailesi Mecnun'a Leyla ile ilgili durumu kaç yıl sonra anlatır?",
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?"
+        "Sedef ne iş yapar?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Ailesi Mecnun'a Leyla ile ilgili durumu kaç yıl sonra anlatır 2) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Ailesi Mecnun'a Leyla ile ilgili durumu kaç yıl sonra anlatır 2) Sedef ne iş yapar Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "25 yıl sonra · Kuryelik",
         "18 yıl sonra · Kuryelik",
@@ -4433,9 +4433,9 @@
       "pair": true,
       "pairFacts": [
         "İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir?",
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?"
+        "Şirin nasıl tanımlanır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir 2) TRT'nin dizi özetinde Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir 2) Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Leylâ ile Mecnûn · Kültürlü ve bilgili",
         "Kerem ile Aslı · Kültürlü ve bilgili",
@@ -4468,10 +4468,10 @@
       "d": 3,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?",
+        "Şirin nasıl tanımlanır?",
         "Yirminci bölümde Ak Sakallı Dede, Leyla'yı hangi karardan vazgeçirmeye çalışır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Şirin nasıl tanımlanır 2) Yirminci bölümde Ak Sakallı Dede, Leyla'yı hangi karardan vazgeçirmeye çalışır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Şirin nasıl tanımlanır 2) Yirminci bölümde Ak Sakallı Dede, Leyla'yı hangi karardan vazgeçirmeye çalışır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kültürlü ve bilgili · Amerika'ya gitmekten",
         "Kuryelik yapan · Amerika'ya gitmekten",
@@ -4522,10 +4522,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?",
+        "Dizinin senaristi kimdir?",
         "Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir 2) Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin senaristi kimdir 2) Sekizinci bölümde Mecnun, Leyla için ne yapmaya çalışır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Burak Aksak · Hafızasını geri kazandırmaya",
         "Onur Ünlü · Hafızasını geri kazandırmaya",
@@ -4612,10 +4612,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?",
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?",
         "On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir 2) On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un ilk bölümünün adı nedir 2) On birinci bölümün özetinde Leyla, Mecnun'dan intikam almak için kimi kullanır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Beşik Kertmesi · Arda'yı",
         "Abayı Yakmış · Arda'yı",
@@ -4702,10 +4702,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?",
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?"
+        "Şirin nasıl tanımlanır?",
+        "Dizinin yönetmenlerinden biri kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Şirin nasıl tanımlanır 2) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Şirin nasıl tanımlanır 2) Dizinin yönetmenlerinden biri kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kültürlü ve bilgili · Onur Ünlü",
         "Kuryelik yapan · Onur Ünlü",
@@ -4721,9 +4721,9 @@
       "pair": true,
       "pairFacts": [
         "Ailesi Mecnun'a Leyla ile ilgili durumu kaç yıl sonra anlatır?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Ailesi Mecnun'a Leyla ile ilgili durumu kaç yıl sonra anlatır 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Ailesi Mecnun'a Leyla ile ilgili durumu kaç yıl sonra anlatır 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "25 yıl sonra · Komedi",
         "18 yıl sonra · Komedi",
@@ -4792,10 +4792,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir?",
+        "Leyla ile Mecnun'un ilk bölümünün adı nedir?",
         "Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) tabii'de listelenen Leyla ile Mecnun'un ilk bölümünün adı nedir 2) Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un ilk bölümünün adı nedir 2) Beşinci bölümde yeni kişiliğine alışamayan Leyla, akıl danışmak için kime gider Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Beşik Kertmesi · Ak Sakallı Dede'ye",
         "Abayı Yakmış · Ak Sakallı Dede'ye",
@@ -4810,10 +4810,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?",
+        "Dizinin senaristi kimdir?",
         "Yedinci bölümde Ak Sakallı Dede, Mecnun'a nasıl rehberlik eder?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir 2) Yedinci bölümde Ak Sakallı Dede, Mecnun'a nasıl rehberlik eder Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin senaristi kimdir 2) Yedinci bölümde Ak Sakallı Dede, Mecnun'a nasıl rehberlik eder Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Burak Aksak · Bir dizi rüya aracılığıyla",
         "Onur Ünlü · Bir dizi rüya aracılığıyla",
@@ -4829,9 +4829,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz?",
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?"
+        "Sedef ne iş yapar?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz 2) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz 2) Sedef ne iş yapar Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Bir yıl · Kuryelik",
         "Bir ay · Kuryelik",
@@ -4847,9 +4847,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'nın ciğerini alan karakter kimdir?",
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?"
+        "Dizinin yönetmenlerinden biri kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın ciğerini alan karakter kimdir 2) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'nın ciğerini alan karakter kimdir 2) Dizinin yönetmenlerinden biri kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Sedef · Onur Ünlü",
         "Şirin · Onur Ünlü",
@@ -4865,9 +4865,9 @@
       "pair": true,
       "pairFacts": [
         "Mecnun Leyla'yı ilk gördüğünde ne hisseder?",
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?"
+        "Şirin nasıl tanımlanır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Mecnun Leyla'yı ilk gördüğünde ne hisseder 2) TRT'nin dizi özetinde Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Mecnun Leyla'yı ilk gördüğünde ne hisseder 2) Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Ona aşık olur · Kültürlü ve bilgili",
         "Ondan korkar · Kültürlü ve bilgili",
@@ -4901,9 +4901,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz?",
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?"
+        "Dizinin senaristi kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz 2) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz 2) Dizinin senaristi kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Bir yıl · Burak Aksak",
         "Bir ay · Burak Aksak",
@@ -4919,9 +4919,9 @@
       "pair": true,
       "pairFacts": [
         "İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir?",
-        "TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir?"
+        "Dizinin senaristi kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir 2) TRT'nin tanıtım yazısında dizinin senaristi olarak kim belirtilir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) İki bebeğe isimleri hangi efsane aşıkların hikâyesinden esinlenerek verilir 2) Dizinin senaristi kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Leylâ ile Mecnûn · Burak Aksak",
         "Kerem ile Aslı · Burak Aksak",
@@ -4972,10 +4972,10 @@
       "d": 2,
       "pair": true,
       "pairFacts": [
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin yönetmenlerinden biri kimdir?",
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Dizinin yönetmenlerinden biri kimdir 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Onur Ünlü · Komedi",
         "Burak Aksak · Komedi",
@@ -4991,9 +4991,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar?",
-        "TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
+        "Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar 2) TRT'nin tabii tanıtımına göre Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla ile Mecnun'un hikâyesi aynı gün ve nerede dünyaya gelen iki bebekle başlar 2) Leyla ile Mecnun'un ilk bölümü hangi tarihte yayımlandı Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Aynı hastanede · 9 Şubat 2011",
         "Aynı okulda · 9 Şubat 2011",
@@ -5045,9 +5045,9 @@
       "pair": true,
       "pairFacts": [
         "Bebeklerin yan yana yatırılmasının sebebi nedir?",
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?"
+        "Şirin nasıl tanımlanır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Bebeklerin yan yana yatırılmasının sebebi nedir 2) TRT'nin dizi özetinde Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Bebeklerin yan yana yatırılmasının sebebi nedir 2) Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Hastanede yatak sayısının az olması · Kültürlü ve bilgili",
         "Ailelerin aynı odada kalması · Kültürlü ve bilgili",
@@ -5081,9 +5081,9 @@
       "pair": true,
       "pairFacts": [
         "Ak Sakallı Dede, Mecnun'un rüyalarından çıktıktan sonra ne yapar?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Ak Sakallı Dede, Mecnun'un rüyalarından çıktıktan sonra ne yapar 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Ak Sakallı Dede, Mecnun'un rüyalarından çıktıktan sonra ne yapar 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Mecnun'la birlikte yaşamaya başlar · Komedi",
         "Kireçburnu'ndan taşınır · Komedi",
@@ -5099,9 +5099,9 @@
       "pair": true,
       "pairFacts": [
         "Bebeklerin yan yana yatırılmasının sebebi nedir?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Bebeklerin yan yana yatırılmasının sebebi nedir 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Bebeklerin yan yana yatırılmasının sebebi nedir 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Hastanede yatak sayısının az olması · Komedi",
         "Ailelerin aynı odada kalması · Komedi",
@@ -5153,9 +5153,9 @@
       "pair": true,
       "pairFacts": [
         "Bebeklerin yan yana yatırılmasının sebebi nedir?",
-        "TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır?"
+        "Dizinin yönetmenlerinden biri kimdir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Bebeklerin yan yana yatırılmasının sebebi nedir 2) TRT'nin tanıtım yazısında dizinin yönetmenlerinden biri olarak kim anılır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Bebeklerin yan yana yatırılmasının sebebi nedir 2) Dizinin yönetmenlerinden biri kimdir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Hastanede yatak sayısının az olması · Onur Ünlü",
         "Ailelerin aynı odada kalması · Onur Ünlü",
@@ -5170,10 +5170,10 @@
       "d": 1,
       "pair": true,
       "pairFacts": [
-        "TRT'nin dizi özetinde Sedef'in yaptığı iş nedir?",
-        "tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir?"
+        "Sedef ne iş yapar?",
+        "Dizinin türlerinden biri nedir?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) TRT'nin dizi özetinde Sedef'in yaptığı iş nedir 2) tabii'deki Leyla ile Mecnun sayfasında dizinin türlerinden biri nasıl listelenir Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Sedef ne iş yapar 2) Dizinin türlerinden biri nedir Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Kuryelik · Komedi",
         "Doktorluk · Komedi",
@@ -5189,9 +5189,9 @@
       "pair": true,
       "pairFacts": [
         "Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz?",
-        "TRT'nin dizi özetinde Şirin nasıl tanımlanır?"
+        "Şirin nasıl tanımlanır?"
       ],
-      "q": "İki dizi bilgisini yanıtla. 1) Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz 2) TRT'nin dizi özetinde Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
+      "q": "İki dizi bilgisini yanıtla. 1) Leyla'yı kaybettikten sonra Mecnun ne kadar süre kimseyle konuşmaz 2) Şirin nasıl tanımlanır Yanıtlar sırasıyla hangi seçenekte?",
       "a": [
         "Bir yıl · Kültürlü ve bilgili",
         "Bir ay · Kültürlü ve bilgili",
