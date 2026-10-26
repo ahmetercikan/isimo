@@ -30,4 +30,4 @@
 
 ## Play Console
 
-1.0.12 üretim sürümü Google Play Console'da oluşturuldu; App Bundle 12 (1.0.12) seçildi, sürüm notları eklendi ve taslak kaydedildi. Console değişiklikleri 25 Ekim 2026 tarihinde Google incelemesine gönderdi. Son durum: “İncelenmekte olan değişiklikler”. Console'da iki engelleyici olmayan uyarı vardı; engelleyici hata yoktu. İnceleme sonucu henüz bekleniyor.
+1.0.12 üretim sürümü Google Play Console'da oluşturulup incelemeye gönderildi. Kullanıcı 26 Ekim 2026'da sürümün incelemeden geçtiğini ve mağazada yayımlandığını bildirdi. Yeni 1.0.13 sürümü ayrı bir inceleme olarak gönderildi.

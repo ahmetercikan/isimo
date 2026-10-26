@@ -3,7 +3,7 @@
  * Bölümler: Film Tahmini (oda kur / katıl / botlara karşı) · Sen Ne Kadar…? (film bilgi yarışması) · yakında gelenler.
  * Sinema teması (`.game--cinema`, src/styles/cinema.css); müzik sayfalar arasında kesilmez (useCinemaMusic).
  */
-import { Bot, ChevronRight, Clapperboard, LogIn, Plus, Sparkles } from 'lucide-react';
+import { Bot, ChevronRight, Clapperboard, LogIn, Play, Plus, Sparkles } from 'lucide-react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import artFilm from '../assets/home/film.webp';
@@ -80,6 +80,7 @@ export default function Cinema() {
         <div className="show-card__btns">
           <button className="pill pill--sm" disabled={!ONLINE_AVAILABLE} onClick={() => go('/sinema/sen-ne-kadar')}><Plus size={18} /><span>Oda Kur</span></button>
           <button className="pill pill--sm show-card__alt" disabled={!ONLINE_AVAILABLE} onClick={() => go('/katil?oyun=quiz')}><LogIn size={18} /><span>Katıl</span></button>
+          <button className="pill pill--sm show-card__solo" onClick={() => go('/sinema/sen-ne-kadar?solo=1')}><Play size={18} fill="currentColor" /><span>Oyna</span></button>
         </div>
         <Mascot className="show-card__mascot" />
       </section>

@@ -63,13 +63,16 @@ Kalemini hazırla, harfi çevir ve STOP de! İsim Şehir'i şimdi indir, arkada�
 
 ## Sürüm notları (en fazla 500 karakter)
 
+### 1.0.13 (Android sürüm kodu 13)
+Sen Ne Kadar…? artık tek başına da oynanabiliyor! Oyna düğmesine dokun, film evrenini seç ve 10 soruluk yarışmaya başla. Oda kurma ve arkadaşlarınla oynama seçenekleri de yerinde.
+
 ### 1.0.12 (Android sürüm kodu 12)
 <tr-TR>
 Sinema Bilmecesi soru havuzu 19 evrende 9.360 soruya çıktı. Serilere devam filmleri eklendi; yeni sorular iki film bilgisini birlikte sınar. Görülen sorular yeniden girişte ve arkadaş odalarında hatırlanır. Filmi Bil ve Sen Ne Kadar oyunlarının sonunda geçiş reklamı gösterilir.
 </tr-TR>
 
 
-### 1.0.11 (Android sürüm kodu 11) — güncel
+### 1.0.11 (Android sürüm kodu 11)
 Sinema Bilmecesi büyüdü! Yeni Sinema Salonu ve Sen Ne Kadar…? yarışmasıyla 13 film ve çizgi film evreninde 716 soruyu yanıtla. Harry Potter, Yüzüklerin Efendisi, Hababam Sınıfı, Ters Yüz ve Bluey dahil sevdiğin evrenlerde unvan kazan, sonuç kartını paylaş. Sinema müziği daha sakin bir yarışma döngüsüyle değişti. Film Tahmini butonlarındaki yazı taşması ve yarışmadaki puan/zamanlayıcı sorunları düzeltildi.
 
 ### 1.0.10 (Android sürüm kodu 10)

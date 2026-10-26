@@ -335,6 +335,7 @@
 .show-card__btns .pill span { min-width: 0; overflow-wrap: anywhere; }
 .game--cinema .show-card__btns .pill { --c: var(--gold); --cd: var(--gold-2); --t: #2a1a05; }
 .game--cinema .show-card__btns .show-card__alt { --c: rgba(255, 255, 255, 0.14); --cd: rgba(0, 0, 0, 0.35); --t: var(--ink); }
+.game--cinema .show-card__btns .show-card__solo { flex-basis: 100%; }
 .show-card--hero { border: 1.5px solid rgba(243, 195, 91, 0.7) !important; min-height: 120px; justify-content: center; overflow: visible; }
 .show-card--hero .show-card__head { padding-right: 64px; }
 .show-card--hero:active { transform: scale(0.98); }
