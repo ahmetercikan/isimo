@@ -109,6 +109,8 @@ Sürüm → Ülkeler/bölgeler → **Türkiye** (isteğe bağlı: Kuzey Kıbrıs
   Sıradaki yükleme: sürüm kodu 8.
 - **Not:** 1.0.5 incelemeden dakikalar içinde geçti (23:32'de yayına çıktı). İnceleme bazen çok hızlı
   bitiyor, yani yanlış bir paket gönderildiğinde geri çekmeye vakit kalmayabilir.
+- 26 Eki: **sürüm kodu 14 (1.0.14)** `store/release/isim-sehir-1.0.14.aab` Android Publisher API üzerinden
+  production kanalına yüklendi ve değişiklikler kaydedildi. AAB imzası mevcut yükleme anahtarıyla eşleşti.
 - Play Console'daki uygulama adresi:
   `https://play.google.com/console/u/0/developers/6262296307859358769/app/4972498643282459948/tracks/production`
 

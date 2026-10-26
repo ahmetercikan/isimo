@@ -63,6 +63,9 @@ Kalemini hazırla, harfi çevir ve STOP de! İsim Şehir'i şimdi indir, arkada�
 
 ## Sürüm notları (en fazla 500 karakter)
 
+### 1.0.14 (Android sürüm kodu 14)
+Sinema Bilmecesi'ne 300 Leyla ile Mecnun sorusu eklendi. Yarışmanın adı artık Sahneyi Hatırla; telefonlarda daha akıcı çalışması için görsel efektler hafifletildi.
+
 ### 1.0.13 (Android sürüm kodu 13)
 Sen Ne Kadar…? artık tek başına da oynanabiliyor! Oyna düğmesine dokun, film evrenini seç ve 10 soruluk yarışmaya başla. Oda kurma ve arkadaşlarınla oynama seçenekleri de yerinde.
 
