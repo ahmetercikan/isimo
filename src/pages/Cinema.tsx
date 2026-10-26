@@ -72,7 +72,7 @@ export default function Cinema() {
         <div className="show-card__head">
           <span className="show-card__icon show-card__icon--gold"><Sparkles size={26} strokeWidth={2.4} /></span>
           <div>
-            <h2 className="show-card__title">Sen Ne Kadar…?</h2>
+            <h2 className="show-card__title">Sahneyi Hatırla</h2>
             <p className="show-card__desc">Arkadaşlarınla aynı sorularda yarış, unvanını kazan. {QUIZZES.length} film evreni.</p>
           </div>
           <ChevronRight className="show-card__go" size={28} strokeWidth={3} />

@@ -161,7 +161,7 @@ export interface QuizStoryInfo {
   name: string;
 }
 
-/** "Sen Ne Kadar…?" sonuç hikâyesi: soru başlığı, büyük yüzde, unvan, espri cümlesi. */
+/** "Sahneyi Hatırla" sonuç hikâyesi: soru başlığı, büyük yüzde, unvan, espri cümlesi. */
 export async function drawQuizStory(o: QuizStoryInfo): Promise<string> {
   const { c, g, gold } = await stage();
   g.textAlign = 'center';
@@ -228,7 +228,7 @@ export async function drawQuizStory(o: QuizStoryInfo): Promise<string> {
 
 export async function shareQuizStory(o: QuizStoryInfo): Promise<void> {
   const url = await drawQuizStory(o);
-  await shareImage(url, `sen-ne-kadar-${o.pct}.png`, `${o.ask} Ben %${o.pct} çıktım: ${o.tier}! Sen ne kadarsın?`, 'Sonucunu paylaş');
+  await shareImage(url, `sahneyi-hatirla-${o.pct}.png`, `${o.ask} Ben %${o.pct} çıktım: ${o.tier}! Sahneyi sen de hatırlayabilir misin?`, 'Sonucunu paylaş');
 }
 
 /** Kartı çizip paylaşır (metne Play bağlantısı eklenir). Paylaşım iptal edilirse sessizce döner. */

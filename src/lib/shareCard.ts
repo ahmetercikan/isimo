@@ -21,7 +21,7 @@ const GAMES: Record<Game, { name: string; color: string; art: string }> = {
   isim: { name: 'İsim Şehir', color: '#f24d40', art: artIsim },
   siram: { name: 'Sıra Sende', color: '#1fa9cf', art: artSiram },
   film: { name: 'Sinema Bilmecesi', color: '#7d58ee', art: artFilm },
-  quiz: { name: 'Sen Ne Kadar…?', color: '#7d58ee', art: artFilm },
+  quiz: { name: 'Sahneyi Hatırla', color: '#7d58ee', art: artFilm },
 };
 
 const W = 1080;

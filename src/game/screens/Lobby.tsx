@@ -58,7 +58,7 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
   const share = async () => {
     sfx.tap();
     const game = quiz ? 'quiz' : siram ? 'siram' : film ? 'film' : 'isim';
-    const name = quiz ? 'Sen Ne Kadar…?' : siram ? 'Sıra Sende' : film ? 'Sinema Bilmecesi' : 'İsim Şehir';
+    const name = quiz ? 'Sahneyi Hatırla' : siram ? 'Sıra Sende' : film ? 'Sinema Bilmecesi' : 'İsim Şehir';
     const text = `${name} oynayalım! Uygulamada "Katıl"a bas ve oda kodunu yaz: ${s.code}`;
     try {
       const img = await drawInvite({ game, code: s.code, from: s.players[t.me]?.name ?? 'Arkadaşın' });
@@ -142,7 +142,7 @@ export function Lobby({ t, s }: { t: Transport; s: RoomState }) {
       <div className="rules-wrap rise" style={{ animationDelay: '0.08s' }}>
       <section className="paper-card rules-card">
         {quiz ? <>
-          <p className="rules-card__head">Sen Ne Kadar…? · {QUIZZES.find((q) => q.id === st.quizId)?.title}</p>
+          <p className="rules-card__head">Sahneyi Hatırla · {QUIZZES.find((q) => q.id === st.quizId)?.title}</p>
           <p className="rules-card__line">10 ortak soru · 20 saniye · 2–10 arkadaş</p>
           <p className="rules-card__line">Cevaplar herkesten sonra açıklanır. Doğru ve hızlı cevap veren öne geçer.</p>
         </> : film ? (

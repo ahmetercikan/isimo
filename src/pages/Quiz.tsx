@@ -1,5 +1,5 @@
 /**
- * "Sen Ne Kadar…?" yarışması: 10 soru (kolaydan zora), soru başına 20 sn. Bilince altın parıltı, bilemeyince
+ * "Sahneyi Hatırla" yarışması: 10 soru (kolaydan zora), soru başına 20 sn. Bilince altın parıltı, bilemeyince
  * doğru cevap + filme özgü küçük bir espri. Sonda unvan, yüzde, puan ve hikâye kartı paylaşımı.
  */
 import { Home, ImageUp, RotateCcw, Ticket } from 'lucide-react';
@@ -32,7 +32,8 @@ export default function Quiz() {
   const [startAt, setStartAt] = useState(0);
   const [making, setMaking] = useState(false);
   const [loadError, setLoadError] = useState(false);
-  const now = useNow(() => Date.now(), 200);
+  // Geri sayım saniye hassasiyetinde görünüyor; 200 ms'de bir tüm soru ekranını yenilemeye gerek yok.
+  const now = useNow(() => Date.now(), 1000);
   const nextTimer = useRef(0);
   const locked = useRef(true);
   const saved = useRef(false);

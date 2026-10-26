@@ -1,4 +1,4 @@
-/** "Sen Ne Kadar…?" evrenleri: sinema bileti görünümünde liste; her bilette o filmdeki en iyi unvan. */
+/** "Sahneyi Hatırla" evrenleri: sinema bileti görünümünde liste; her bilette o filmdeki en iyi unvan. */
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { CinemaScene } from '../components/CinemaScene';
 import { TopBar } from '../components/ui';
@@ -21,7 +21,7 @@ export default function QuizList() {
   return (
     <main className="bg page game--cinema quiz-list">
       <CinemaScene />
-      <TopBar title="Sen Ne Kadar…?" />
+      <TopBar title="Sahneyi Hatırla" />
       <p className="quiz-list__intro rise">{solo ? 'Tek başına oynamak için bir film evreni seç.' : 'Bir evren seçip odanı kur veya arkadaşının koduyla katıl. Hepiniz aynı 10 soruda yarışın!'}</p>
       {!solo && <div className="show-card__btns">
         <button className="pill pill--sm" disabled={!ONLINE_AVAILABLE} onClick={() => nav('/kur/online?oyun=quiz')}><Plus size={18} /><span>Oda Kur</span></button>
