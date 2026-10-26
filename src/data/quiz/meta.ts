@@ -121,10 +121,10 @@ export const QUIZZES: QuizMeta[] = [
     "count": 400
   },
   {
-    "id": "recepivedik",
-    "title": "Recep İvedik",
-    "ask": "Sen ne kadar Recep’sin?",
-    "scope": "İlk üç film (2008–2010)",
+    "id": "leylailemecnun",
+    "title": "Leyla ile Mecnun",
+    "ask": "Sen ne kadar Kireçburnulusun?",
+    "scope": "TRT 1’de yayımlanan ilk üç sezon; Kireçburnu, aileler ve efsane aşıkların çevresinde gelişen maceralar",
     "count": 300
   },
   {

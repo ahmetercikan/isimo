@@ -75,10 +75,11 @@
       "target": 490
     },
     {
-      "id": "recepivedik",
-      "title": "Recep İvedik",
+      "id": "leylailemecnun",
+      "title": "Leyla ile Mecnun",
       "baseline": 30,
-      "target": 300
+      "target": 300,
+      "contentType": "series"
     },
     {
       "id": "shrek",

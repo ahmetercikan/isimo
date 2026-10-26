@@ -1,8 +1,8 @@
-# Sinema Bilmecesi: 10 kat soru havuzu — 25 Ekim 2026
+# Sinema Bilmecesi: 10 kat soru havuzu — 26 Ekim 2026
 
-Her evrenin soru sayısı ilk sayı × 10 olarak tamamlandı; toplam 9.360. İlk 936 soru ve sıra numaraları aynı kaldı. Bu, daha önce kaydedilmiş soru geçmişlerinin anlamını korur.
+Her evrenin soru sayısı başlangıç sayısının 10 katına tamamlandı; toplam 9.360. 18 mevcut evrendeki özgün soruların sırası korundu. Recep İvedik'in 300 soruluk evreni 300 soruluk Leyla ile Mecnun evreniyle değiştirildi.
 
-Yeni kartların çoğu iki ayrı, mevcut bir film bilgisini tek soruda eşleştirir. Doğru seçenek iki yanıtı sırayla verir; üç yanlış seçenek, her parçanın kaynak sorusundaki yanlış seçeneklerden oluşturulur. Her iki kaynak ayrı ayrı `src` ve `src2` alanında durur. Bu yapı aynı soruyu yalnızca başka kelimelerle kopyalamaz; oyuncunun iki ayrıntıyı birlikte hatırlamasını ister. Ekranda iki bilgi ayrı satırda görünür. Bir turda 4 kolay/3 orta/3 zor kuralı korunur; eşleştirme sorusunun zorluğu iki parçanın zor olanına göre belirlenir.
+Yeni kartların çoğu iki ayrı, mevcut bir film veya dizi bilgisini tek soruda eşleştirir. Doğru seçenek iki yanıtı sırayla verir; üç yanlış seçenek, her parçanın kaynak sorusundaki yanlış seçeneklerden oluşturulur. Her iki kaynak ayrı ayrı `src` ve `src2` alanında durur. Bu yapı aynı soruyu yalnızca başka kelimelerle kopyalamaz; oyuncunun iki ayrıntıyı birlikte hatırlamasını ister. Ekranda iki bilgi ayrı satırda görünür. Bir turda 4 kolay/3 orta/3 zor kuralı korunur; eşleştirme sorusunun zorluğu iki parçanın zor olanına göre belirlenir.
 
 | Evren | Eski | Yeni seri bilgisi | Eşleştirme | Son |
 |---|---:|---:|---:|---:|
@@ -18,7 +18,7 @@ Yeni kartların çoğu iki ayrı, mevcut bir film bilgisini tek soruda eşleşti
 | Matrix | 40 | 10 | 350 | 400 |
 | Kayıp Balık Nemo ve Dori | 50 | 0 | 450 | 500 |
 | Oyuncak Hikâyesi | 49 | 0 | 441 | 490 |
-| Recep İvedik | 30 | 0 | 270 | 300 |
+| Leyla ile Mecnun | 32 | 0 | 268 | 300 |
 | Şrek | 50 | 5 | 445 | 500 |
 | Ters Yüz | 50 | 0 | 450 | 500 |
 | Titanik | 49 | 0 | 441 | 490 |
@@ -35,6 +35,9 @@ Yeni kartların çoğu iki ayrı, mevcut bir film bilgisini tek soruda eşleşti
 - Karayip Korsanları: ilk beş film.
 - Aslan Kral: 1994 ve 2019 filmleri ile 2024 Mufasa.
 - Şrek: dört Şrek ve iki Çizmeli Kedi filmi.
+- Leyla ile Mecnun: tabii'de listelenen ilk üç sezon; 30 doğrulanmış tekil bilgi, 270 iki bilgili eşleştirme sorusu. Kaynaklar: [TRT 1 dizi ve bölüm özetleri](https://www.trt1.com.tr/diziler/leyla-ile-mecnun), [TRT/tabii dizi tanıtımı](https://www.trt.net.tr/tabii/efsane-asiklarin-dizisi-leyla-ile-mecnunun-tum-bolumleri-tabiide-21001483), [tabii bölüm kayıtları](https://www.tabii.com/tr/detail/6080/leyla-ile-mecnun).
+
+Recep İvedik evreni kaldırıldı; 300 soruluk hedefi Leyla ile Mecnun aldı. Evren sayısı 19 ve toplam soru sayısı 9.360 olarak kaldı.
 
 Yeni tekil bilgiler birincil/resmî sayfalardan ve mevcut araştırma notlarından yazıldı. Bunlara örnek olarak StarWars.com Databank'ın devam/ön üçleme kayıtları; FantasticBeasts.com; TheMatrix.com; Disney'in Mufasa, Frozen 2, Nemo/Dori ve Pirates sayfaları; DreamWorks'ün Puss in Boots film sayfaları kullanıldı. Her yeni bilgi sorusunda ilgili URL bulunur. Eşleştirme sorusunda iki bilgi için de URL saklanır. Wikipedia bağlantılı kaynaklar, ilgili resmî sayfada ayrıntı bulunmayan Hobbit, Matrix olay örgüsü ve Pirates devam filmi ayrıntılarında kullanıldı.
 

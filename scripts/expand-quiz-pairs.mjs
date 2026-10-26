@@ -32,7 +32,7 @@ for(const item of manifest.universes){
   if(new Set(options).size!==4)throw Error(`${item.id}: repeated answer pair at ${a}/${b}`);
   return {
    d:Math.max(x.d,y.d), pair:true, pairFacts:[x.q,y.q],
-   q:`İki film bilgisini yanıtla. 1) ${x.q.replace(/[?？]+$/,'')} 2) ${y.q.replace(/[?？]+$/,'')} Yanıtlar sırasıyla hangi seçenekte?`,
+   q:`İki ${item.contentType==='series'?'dizi':'film'} bilgisini yanıtla. 1) ${x.q.replace(/[?？]+$/,'')} 2) ${y.q.replace(/[?？]+$/,'')} Yanıtlar sırasıyla hangi seçenekte?`,
    a:options,src:x.src,src2:y.src,
    oops:'İki ayrıntıyı da hatırlamaya çalış; sonraki soru geliyor!',
   };
